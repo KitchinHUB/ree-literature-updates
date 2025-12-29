@@ -1,7 +1,7 @@
 # Rare Earth Separation Literature Update
 
 **Report Period:** 2025-12-22 to 2025-12-29
-**Generated:** 2025-12-29 09:36
+**Generated:** 2025-12-29 09:49
 **Total Publications Found:** 26
 
 ---
