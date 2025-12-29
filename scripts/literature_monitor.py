@@ -63,6 +63,9 @@ SEARCH_TOPICS = [
     "critical minerals separation",
 ]
 
+# GitHub repository for report hosting
+GITHUB_REPO_URL = "https://github.com/KitchinHUB/ree-literature-updates"
+
 # OpenAlex concepts for filtering
 OPENALEX_CONCEPTS = [
     "C185592680",  # Rare earth element
@@ -427,15 +430,14 @@ def create_slack_summary(
 
     # Add report link/note if available
     if report_path:
+        github_link = f"{GITHUB_REPO_URL}/blob/main/{report_path}"
         blocks.append({"type": "divider"})
         blocks.append({
-            "type": "context",
-            "elements": [
-                {
-                    "type": "mrkdwn",
-                    "text": f"📎 Full report: `{report_path}`"
-                }
-            ]
+            "type": "section",
+            "text": {
+                "type": "mrkdwn",
+                "text": f"📎 <{github_link}|View full report on GitHub>"
+            }
         })
 
     return fallback, blocks
