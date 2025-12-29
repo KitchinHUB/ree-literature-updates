@@ -1,0 +1,109 @@
+# Rare Earth Literature Monitor Configuration
+
+# Search topics for OpenAlex academic literature
+academic_topics:
+  # Core separation technologies
+  - "rare earth separation"
+  - "rare earth extraction"
+  - "lanthanide separation"
+  - "REE solvent extraction"
+  - "rare earth ion exchange"
+
+  # Specific techniques
+  - "rare earth membrane separation"
+  - "rare earth electrochemical separation"
+  - "rare earth precipitation"
+  - "rare earth chromatography"
+
+  # Extractants and materials
+  - "rare earth extractant"
+  - "ionic liquid rare earth"
+  - "deep eutectic solvent rare earth"
+  - "phosphoric acid extractant lanthanide"
+
+  # Applications and sources
+  - "rare earth recycling"
+  - "rare earth urban mining"
+  - "rare earth permanent magnet recycling"
+  - "NdFeB magnet recycling"
+  - "rare earth e-waste recovery"
+
+  # Environmental and sustainability
+  - "green rare earth separation"
+  - "sustainable rare earth extraction"
+  - "rare earth environmental impact"
+  - "rare earth mine tailings"
+
+  # Supply chain
+  - "rare earth supply chain"
+  - "critical minerals separation"
+
+# Web search queries for news and developments
+news_topics:
+  - "rare earth separation technology news"
+  - "rare earth recycling company"
+  - "China rare earth export restrictions"
+  - "rare earth supply chain diversification"
+  - "critical minerals policy"
+  - "rare earth mining project"
+  - "rare earth processing facility"
+  - "MP Materials"
+  - "Lynas rare earths"
+  - "Energy Fuels rare earth"
+
+# Categories for organizing results
+categories:
+  "Separation Technologies":
+    keywords:
+      - separat
+      - extract
+      - ion exchange
+      - membrane
+      - electro
+      - chromato
+
+  "Extractants & Materials":
+    keywords:
+      - extractant
+      - ionic liquid
+      - eutectic
+      - ligand
+      - complexa
+      - chelat
+
+  "Recycling & Urban Mining":
+    keywords:
+      - recycl
+      - urban mining
+      - e-waste
+      - waste
+      - secondary
+      - circular
+      - end-of-life
+
+  "Environmental & Sustainability":
+    keywords:
+      - green
+      - sustainab
+      - environment
+      - pollution
+      - toxic
+      - remediat
+
+  "Supply Chain & Policy":
+    keywords:
+      - supply chain
+      - policy
+      - critical mineral
+      - strategic
+      - china
+      - export
+      - regulat
+
+# Report settings
+report:
+  default_days: 7
+  max_results_per_topic: 15
+  include_abstracts: true
+  include_bibtex: true
+  output_dir: reports
