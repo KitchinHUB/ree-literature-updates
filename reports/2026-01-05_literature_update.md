@@ -1,16 +1,34 @@
 # Rare Earth Separation Literature Update
 
 **Report Period:** 2025-12-29 to 2026-01-05
-**Generated:** 2026-01-05 04:00
-**Total Publications Found:** 25
+**Generated:** 2026-01-05 10:27
+**Total Publications Found:** 14
 
 ---
 
 ## Executive Summary
 
-This report summarizes recent publications related to rare earth element separation
-technologies discovered through OpenAlex database searches. Publications are
-categorized by topic area for easier navigation.
+This week saw significant developments in both academic research and industry news for rare earth separation technologies.
+
+### Key Highlights
+
+**Academic Research:**
+- New work on **AI-driven extractant discovery** using large language models for f-element separation (Zhang et al.)
+- Comprehensive review of **deep eutectic solvents** as sustainable alternatives for REE separation (Khan et al.)
+- Advances in **dysprosium recovery** from secondary sources, critical for permanent magnets (Rudnik)
+- **Microscale ion exchange** methods showing promise for lanthanide separation scale-up (Angermeier et al.)
+
+**Industry Developments:**
+- **Ucore's RapidSX technology** transitioning to Louisiana facility, targeting 5,000 tpa HREE processing in 2026
+- **IonicRE-USSM partnership** announced for 1,800-acre magnet recycling facility in Missouri
+- **ORNL's DGA ligand technology** licensed to Marshallton for cost-effective REE separation
+- **Lynas halts Texas HREE facility** construction due to permitting delays
+
+**Policy Updates:**
+- China's October 2025 export controls **temporarily suspended** until November 2026
+- Earlier controls on Sm, Gd, Tb, Dy, Lu, Sc, Y **remain in effect**
+- US expanding critical minerals focus to include **antimony and tungsten**
+- USGS expanded critical minerals list from **50 to 60 materials**
 
 ### Publications by Category
 
@@ -18,10 +36,10 @@ categorized by topic area for easier navigation.
 |----------|-------|
 | Separation Technologies | 5 |
 | Extractants & Materials | 3 |
-| Recycling & Urban Mining | 2 |
-| Environmental & Sustainability | 4 |
+| Recycling & Urban Mining | 1 |
+| Environmental & Sustainability | 1 |
 | Supply Chain & Policy | 1 |
-| Other | 10 |
+| Other | 3 |
 
 ---
 
@@ -133,19 +151,7 @@ categorized by topic area for easier navigation.
 
 ## Recycling & Urban Mining
 
-### 1. Waterstofreductie van bauxietresidu voor duurzaam metaalherwinning
-
-**Authors:** Pilla, Ganesh
-
-**Published:** 2026-01-06 | **Journal:** Lirias (KU Leuven) | **Citations:** 0 | **Access:** 🔒
-
-**Abstract:** Bauxite residue (BR), a red-colored waste material from the Bayer process used for alumina extraction, poses a significant environmental challenge due to its large-scale generation and storage. Over 160-170 million tons of BR are produced annually worldwide, with global stockpiles of this material exceeding 5 billion tons. These large quantities of BR are often stored in specially designed impoundments or tailing ponds, creating significant environmental risks, including contamination of surroun...
-
-**Topics:** Bauxite, Waste management, Environmental science, Bayer process, Ecological footprint
-
----
-
-### 2. Advances in Dysprosium Recovery from Secondary Sources: A Review of Hydrometallurgical, Biohydrometallurgicaland Solvometallurgical Approaches
+### 1. Advances in Dysprosium Recovery from Secondary Sources: A Review of Hydrometallurgical, Biohydrometallurgicaland Solvometallurgical Approaches
 
 **Authors:** Ewa Rudnik
 
@@ -172,48 +178,6 @@ categorized by topic area for easier navigation.
 **Abstract:** The deep sea—dark, vast, and still largely unknown—has become the latest frontier in humanity’s search for resources. As demand for critical metals such as cobalt, nickel, and rare earth elements grows, industries are turning toward the ocean floor thousands of meters below the surface. Deep-sea mining (DSM) offers the promise of supporting renewable energy and green technologies, but it also raises urgent ecological and ethical concerns. This paper investigates DSM, its methods, its ecological ...
 
 **Topics:** Frontier, Renewable energy, Investment (military), Natural resource economics, Environmental resource management
-
----
-
-### 2. Overview of Sustainable and Circular Electronics
-
-**Authors:** Yannick Le Moullec, Alar Kuusik
-
-**Published:** 2025-12-30 | **Journal:** Zenodo (CERN European Organization for Nuclear Research) | **Citations:** 0 | **Access:** 🔓
-
-**DOI:** [https://doi.org/10.5281/zenodo.18097784](https://doi.org/10.5281/zenodo.18097784)
-
-**Abstract:** In an era where environmental consciousness is paramount, the electronics industry finds itself at a crucial crossroads. As our reliance on electronic devices grows, so does the urgency to mitigate their environmental impact. This document explores the evolution of sustainable and circular electronics, highlighting key trends, challenges, and opportunities.The journey towards sustainability in electronics began in the 1970s with a growing awareness of environmental issues. Over the decades, sign...
-
-**Topics:** Sustainability, Circular economy, Electronics, Supply chain, Engineering
-
----
-
-### 3. Overview of Sustainable and Circular Electronics
-
-**Authors:** Yannick Le Moullec, Alar Kuusik
-
-**Published:** 2025-12-30 | **Journal:** Zenodo (CERN European Organization for Nuclear Research) | **Citations:** 0 | **Access:** 🔓
-
-**DOI:** [https://doi.org/10.5281/zenodo.18097785](https://doi.org/10.5281/zenodo.18097785)
-
-**Abstract:** In an era where environmental consciousness is paramount, the electronics industry finds itself at a crucial crossroads. As our reliance on electronic devices grows, so does the urgency to mitigate their environmental impact. This document explores the evolution of sustainable and circular electronics, highlighting key trends, challenges, and opportunities.The journey towards sustainability in electronics began in the 1970s with a growing awareness of environmental issues. Over the decades, sign...
-
-**Topics:** Sustainability, Circular economy, Electronics, Supply chain, Engineering
-
----
-
-### 4. Emergent constraints on future change projections of mean and extreme temperature and precipitation in the global maize harvesting area
-
-**Authors:** Hideo Shiogama, Masashi Okada, Yuji Masutomi, Toshichika Iizumi
-
-**Published:** 2025-12-29 | **Journal:** Environmental Research Letters | **Citations:** 0 | **Access:** 🔓
-
-**DOI:** [https://doi.org/10.1088/1748-9326/ae3194](https://doi.org/10.1088/1748-9326/ae3194)
-
-**Abstract:** Abstract Maize cultivation faces increasing risks from climate change, particularly because of increasing temperatures and extreme weather events. This study investigates whether the “hot” Earth system models (ESMs) of the Coupled Model Intercomparison Project Phase 6 (CMIP6), whose past warming trends are typically greater than the observations, tend to overestimate future temperature and precipitation changes across the global maize harvesting areas. By applying an emergent constraint (EC) app...
-
-**Topics:** Environmental science, Precipitation, Coupled model intercomparison project, Climate change, Mean radiant temperature
 
 ---
 
@@ -245,31 +209,7 @@ categorized by topic area for easier navigation.
 
 ---
 
-### 2. REAL ECONOMIC METABOLISM
-
-**Authors:** Paolo SANTI
-
-**Published:** 2026-01-03 | **Journal:** Zenodo (CERN European Organization for Nuclear Research) | **Citations:** 0 | **Access:** 🔓
-
-**DOI:** [https://doi.org/10.5281/zenodo.18140315](https://doi.org/10.5281/zenodo.18140315)
-
-**Abstract:** This paper outlines a radical epistemological rupture in contemporary economic theory, proposing a shift from an economy based on abstract values and virtual credit to a "Real Economic Metabolism" founded on physical reality and thermodynamics. Modern economy is built on the illusion that value is a financial concept detached from physical constraints. However, recent systemic crises have empirically demonstrated that when virtual credit collapses, only physical assets (atoms) and energy transfo...
-
----
-
-### 3. REAL ECONOMIC METABOLISM
-
-**Authors:** Paolo SANTI
-
-**Published:** 2026-01-03 | **Journal:** Zenodo (CERN European Organization for Nuclear Research) | **Citations:** 0 | **Access:** 🔓
-
-**DOI:** [https://doi.org/10.5281/zenodo.18140314](https://doi.org/10.5281/zenodo.18140314)
-
-**Abstract:** This paper outlines a radical epistemological rupture in contemporary economic theory, proposing a shift from an economy based on abstract values and virtual credit to a "Real Economic Metabolism" founded on physical reality and thermodynamics. Modern economy is built on the illusion that value is a financial concept detached from physical constraints. However, recent systemic crises have empirically demonstrated that when virtual credit collapses, only physical assets (atoms) and energy transfo...
-
----
-
-### 4. A global asymmetric duopoly game of relatively scarce resources
+### 2. A global asymmetric duopoly game of relatively scarce resources
 
 **Authors:** Behnaz Minooei Fard, Giovanni Di Bartolomeo, Willi Semmler
 
@@ -283,61 +223,7 @@ categorized by topic area for easier navigation.
 
 ---
 
-### 5. Quasiparticle Dynamics in the 4d-4f Ising-like Double Perovskite Ba2DyRuO6 Probed by Neutron Scattering and Machine-Learning Framework
-
-**Authors:** Gourab Roy, E. Kushwaha, Mohit Kumar, Sayan Ghosh, Fabio Orlandi, et al.
-
-**Published:** 2025-12-31 | **Journal:** arXiv (Cornell University) | **Citations:** 0 | **Access:** 🔓
-
-**DOI:** [https://doi.org/10.48550/arxiv.2512.24778](https://doi.org/10.48550/arxiv.2512.24778)
-
-**Abstract:** Double perovskites containing 4d--4f interactions provide a platform to study complex magnetic phenomena in correlated systems. Here, we investigate the magnetic ground state and quasiparticle excitations of the fascinating double perovskite system, Ba$_2$DyRuO$_6$, through Time of flight (TOF) neutron diffraction (TOF), inelastic neutron scattering (INS), and theoretical modelling. The compound Ba$_2$DyRuO$_6$ is reported to exhibit a single magnetic transition, in sharp contrast to most of the...
-
-**Topics:** Condensed matter physics, Magnon, Antiferromagnetism, Neutron diffraction, Inelastic neutron scattering
-
----
-
-### 6. Quasiparticle Dynamics in the 4d-4f Ising-like Double Perovskite Ba2DyRuO6 Probed by Neutron Scattering and Machine-Learning Framework
-
-**Authors:** Gourab Roy, E. Kushwaha, Mohit Kumar, Sayan Ghosh, Fabio Orlandi, et al.
-
-**Published:** 2025-12-31 | **Journal:** arXiv (Cornell University) | **Citations:** 0 | **Access:** 🔓
-
-**Abstract:** Double perovskites containing 4d--4f interactions provide a platform to study complex magnetic phenomena in correlated systems. Here, we investigate the magnetic ground state and quasiparticle excitations of the fascinating double perovskite system, Ba$_2$DyRuO$_6$, through Time of flight (TOF) neutron diffraction (TOF), inelastic neutron scattering (INS), and theoretical modelling. The compound Ba$_2$DyRuO$_6$ is reported to exhibit a single magnetic transition, in sharp contrast to most of the...
-
-**Topics:** Condensed matter physics, Magnon, Antiferromagnetism, Neutron diffraction, Inelastic neutron scattering
-
----
-
-### 7. The Immune-Boosting Effects of Probiotics: A comprehensive systematic review
-
-**Authors:** Mirza Masroor Ali Beg, Abhishek Kumar Mishra, DHARMSHEEL SHRIVASTAV, Varun Kumar Sharma, Singara Singh, et al.
-
-**Published:** 2025-12-30 | **Journal:** Macedonian Journal of Medical Sciences (University of Skopje) | **Citations:** 0 | **Access:** 🔓
-
-**DOI:** [https://doi.org/10.62940/als.v12i4.3672](https://doi.org/10.62940/als.v12i4.3672)
-
-**Abstract:** Probiotics are live microorganisms that, when given in sufficient quantities, benefit the host's health, especially by supporting the equilibrium of the gut microbiota. These good bacteria are essential for boosting immunity, reducing inflammation, and strengthening the integrity of the gut barrier. Recent studies reveal the gut microbiome’s role in systemic inflammation. Probiotics, beneficial microorganisms, enhance immune health by strengthening gut barriers, modulating cytokine activity, and...
-
-**Topics:** Immune system, Medicine, Probiotic, Immunology, Bifidobacterium
-
----
-
-### 8. MOON EXPLORATION
-
-**Authors:** Abdulrahman Shaheen, Lamia Shaheen, Majd Alsadi
-
-**Published:** 2025-12-30 | **Journal:** Zenodo (CERN European Organization for Nuclear Research) | **Citations:** 0 | **Access:** 🔓
-
-**DOI:** [https://doi.org/10.5281/zenodo.18097143](https://doi.org/10.5281/zenodo.18097143)
-
-**Abstract:** MOON EXPLORATION{ PART 1 }Prepared by:ENG. MAJD ALSADILAMIA SHAHEENAffiliation: MENA ORG ANALOG MISSIONPresented at:International Astronautical Congress (IAC) 2025Sydney, AustraliaJuly 2025AbstractThe Moon, Earth’s closest celestial neighbor, continues to inspire scientific exploration. As a natural satellite, it offers a unique opportunity to study the formation and evolution of the solar system. This research paper highlights the importance of lunar exploration, reviewing key missions, technol...
-
-**Topics:** Space exploration, Astrobiology, Mars Exploration Program, Planetary exploration, Apollo
-
----
-
-### 9. Processing-Driven Microstructure Control in Additively Manufactured Alnico Permanent Magnets
+### 3. Processing-Driven Microstructure Control in Additively Manufactured Alnico Permanent Magnets
 
 **Authors:** A. Duong, I. Smith, O. Bishop, C. Mayer, M. Patel, et al.
 
@@ -351,83 +237,91 @@ categorized by topic area for easier navigation.
 
 ---
 
-### 10. Performance Evaluation of Engine-operated Pulse Splitting Machine
+## Industry & Policy News
 
-**Authors:** Teressa Diro, Desta Abera, Birtukan Mokinin
+### Separation Technology Developments
 
-**Published:** 2025-12-29 | **Journal:** International Journal of Industrial and Manufacturing Systems Engineering | **Citations:** 0 | **Access:** 🔓
+**Ucore RapidSX Commercialization**
+Ucore Rare Metals is transitioning its RapidSX separation technology to its under-construction Louisiana Strategic Metals Complex (SMC) in Alexandria, Louisiana. The facility will scale from 2,000 tonnes per annum in Q4-2025 to over 5,000 tpa in 2026, representing a significant step toward US domestic HREE processing capability.
+[Source](https://ucore.com/ucore-readies-for-louisiana-2026-heavy-rare-earth-element-processing/)
 
-**DOI:** [https://doi.org/10.11648/j.ijimse.20251004.11](https://doi.org/10.11648/j.ijimse.20251004.11)
+**ORNL DGA Ligand Technology Licensed**
+Oak Ridge National Laboratory's diglycolamide (DGA) ligand technology has been licensed to Marshallton Research Laboratories. Developed through DOE's Critical Materials Institute, these DGAs offer more selective separation with reduced chemical consumption and waste generation, potentially lowering both operating and capital costs.
+[Source](https://www.ornl.gov/news/game-changing-rare-earth-elements-separation-technology-licensed-marshallton)
 
-**Abstract:** Pulses are an important part of vegetarians&amp;apos; diets because the other foods they eat don&amp;apos;t include much protein, and they are the main sources of various minerals, such as calcium, iron, phosphorus, and protein. The majority of the time, pulses are eaten as dehulled splits. The pulse processing is still restricted to time-consuming, health-harming, gender-biased traditional methods that assign all food preparation and processing duties to women. Despite Ethiopia&amp;apos;s statu...
+**Liquid Membrane Research**
+A new review in the Journal of Water Process Engineering examines liquid membrane (LM) technologies as cleaner alternatives for REE processing. While showing promise for recovering REEs from wastewater and e-waste, significant technical and economic barriers remain before challenging China's industrial-scale dominance.
+
+### Recycling Initiatives
+
+**IonicRE-USSM Missouri Facility**
+Australia's Ionic Rare Earths and US Strategic Metals signed an MOU to develop a vertically integrated rare earth recycling site at a 1,800-acre facility in Missouri. Using proprietary hydro-metallurgical technology, the facility will extract REEs from end-of-life permanent magnets, producing Nd, Pr, Dy, Tb, Sm, Gd, and Ho for EVs and wind turbines.
+[Source](https://interestingengineering.com/innovation/dead-magnets-turned-into-high-purity)
+
+**DOE Funding for Recovery Projects**
+The US Department of Energy has offered $134M to boost rare earth recovery projects as part of the Rare Earth Demonstration Facility program, focusing on full-scale extraction and separation facilities for Pr, Nd, Tb, and Dy.
+[Source](https://www.wastedive.com/news/us-energy-department-134m-rare-earth-recovery/807284/)
+
+### Policy & Trade Updates
+
+**China Export Controls: Temporary Suspension**
+China has suspended implementation of its October 2025 rare earth export controls until November 2026, as part of an agreement with the US. However, earlier controls from April 2025 on seven medium- and heavy-rare-earth elements (Sm, Gd, Tb, Dy, Lu, Sc, Y) remain in effect, continuing to trigger licensing obligations.
+[Source](https://www.china-briefing.com/news/chinas-rare-earth-export-controls-impacts-on-businesses/)
+
+**New Controls on Other Critical Metals**
+China designated only 15 companies for tungsten exports, 11 for antimony, and 44 for silver through 2026-2027, establishing state-controlled whitelists. Unlike rare earths which use case-by-case licensing, these materials now operate under a fixed exporter system.
+[Source](https://rareearthexchanges.com/news/chinas-exclusive-export-list-for-critical-metals-2026-2027-whos-in-and-why-it-matters/)
+
+**US Critical Minerals Strategy Expanding**
+Federal investment is expanding beyond rare earth elements to include antimony and tungsten, which represent some of the US's most vulnerable supply chains. The USGS expanded the federal critical minerals list from 50 to 60 materials, adding copper, silver, and rhenium.
+[Source](https://www.mining.com/how-2026-will-reshape-the-us-critical-mineral-resilience/)
+
+### Challenges & Setbacks
+
+**Lynas Texas Facility Delayed**
+Lynas Rare Earths has halted construction of its planned HREE processing facility in Seadrift, Texas due to delays in securing a key wastewater disposal permit, jeopardizing its 2026 operational target.
+
+**China's Continued Dominance**
+Despite diversification efforts, China accounts for approximately 91% of global REE separation and refining, and 94% of sintered permanent magnet production—up from 50% two decades ago.
+[Source](https://www.iea.org/commentaries/with-new-export-controls-on-critical-minerals-supply-concentration-risks-become-reality)
 
 ---
 
 ## Full Bibliography
 
-1. Pilla, Ganesh (2026). Waterstofreductie van bauxietresidu voor duurzaam metaalherwinning. *Lirias (KU Leuven)*.
+1. Huma Warsi Khan, B M Negash, Nur Insyriah Zulkifly et al. (2026). Deep eutectic solvents as an emerging sustainable solvent for the separation and recovery of rare earth elements: current challenges and future prospectives. *Minerals Engineering*. [https://doi.org/10.1016/j.mineng.2025.110051](https://doi.org/10.1016/j.mineng.2025.110051)
 
-2. Huma Warsi Khan, B M Negash, Nur Insyriah Zulkifly et al. (2026). Deep eutectic solvents as an emerging sustainable solvent for the separation and recovery of rare earth elements: current challenges and future prospectives. *Minerals Engineering*. [https://doi.org/10.1016/j.mineng.2025.110051](https://doi.org/10.1016/j.mineng.2025.110051)
+2. A. Duong, I. Smith, O. Bishop et al. (2025). Processing-Driven Microstructure Control in Additively Manufactured Alnico Permanent Magnets. *JOM*. [https://doi.org/10.1007/s11837-025-08037-z](https://doi.org/10.1007/s11837-025-08037-z)
 
-3. Mirza Masroor Ali Beg, Abhishek Kumar Mishra, DHARMSHEEL SHRIVASTAV et al. (2025). The Immune-Boosting Effects of Probiotics: A comprehensive systematic review. *Macedonian Journal of Medical Sciences (University of Skopje)*. [https://doi.org/10.62940/als.v12i4.3672](https://doi.org/10.62940/als.v12i4.3672)
+3. Ewa Rudnik (2026). Advances in Dysprosium Recovery from Secondary Sources: A Review of Hydrometallurgical, Biohydrometallurgicaland Solvometallurgical Approaches. *Molecules*. [https://doi.org/10.3390/molecules31010176](https://doi.org/10.3390/molecules31010176)
 
-4. A. Duong, I. Smith, O. Bishop et al. (2025). Processing-Driven Microstructure Control in Additively Manufactured Alnico Permanent Magnets. *JOM*. [https://doi.org/10.1007/s11837-025-08037-z](https://doi.org/10.1007/s11837-025-08037-z)
+4. Behnaz Minooei Fard, Giovanni Di Bartolomeo, Willi Semmler (2026). A global asymmetric duopoly game of relatively scarce resources. *Macroeconomic Dynamics*. [https://doi.org/10.1017/s136510052510076x](https://doi.org/10.1017/s136510052510076x)
 
-5. Ewa Rudnik (2026). Advances in Dysprosium Recovery from Secondary Sources: A Review of Hydrometallurgical, Biohydrometallurgicaland Solvometallurgical Approaches. *Molecules*. [https://doi.org/10.3390/molecules31010176](https://doi.org/10.3390/molecules31010176)
+5. Bárbara da Rocha Pereira, Diego Teuber Gijon, Franco Garjulli et al. (2025). Hydrometallurgical recovery of heavy rare earth elements (HREE) from columbite leachate via aqueous complexation, solvent extraction and precipitation route. *Minerals Engineering*. [https://doi.org/10.1016/j.mineng.2025.110043](https://doi.org/10.1016/j.mineng.2025.110043)
 
-6. Behnaz Minooei Fard, Giovanni Di Bartolomeo, Willi Semmler (2026). A global asymmetric duopoly game of relatively scarce resources. *Macroeconomic Dynamics*. [https://doi.org/10.1017/s136510052510076x](https://doi.org/10.1017/s136510052510076x)
+6. Ceren Erust, Turan Uysal (2025). Solvent extraction of rare earth elements and α-alumina production from pregnant leaching solution obtained from Turkish bauxite-related ore. *Separation Science and Technology*. [https://doi.org/10.1080/01496395.2025.2611021](https://doi.org/10.1080/01496395.2025.2611021)
 
-7. Bárbara da Rocha Pereira, Diego Teuber Gijon, Franco Garjulli et al. (2025). Hydrometallurgical recovery of heavy rare earth elements (HREE) from columbite leachate via aqueous complexation, solvent extraction and precipitation route. *Minerals Engineering*. [https://doi.org/10.1016/j.mineng.2025.110043](https://doi.org/10.1016/j.mineng.2025.110043)
+7. Michie EBISAWA, Akira Ohashi, Hisanori Imura et al. (2025). Equilibrium and Mass Spectrometric Studies on the Rare-Earth Elements(III) Extraction with 4-Isopropyltropolone into Toluene. *Solvent Extraction and Ion Exchange*. [https://doi.org/10.1080/07366299.2025.2607534](https://doi.org/10.1080/07366299.2025.2607534)
 
-8. Ceren Erust, Turan Uysal (2025). Solvent extraction of rare earth elements and α-alumina production from pregnant leaching solution obtained from Turkish bauxite-related ore. *Separation Science and Technology*. [https://doi.org/10.1080/01496395.2025.2611021](https://doi.org/10.1080/01496395.2025.2611021)
+8. Susanna B. Angermeier, Ashleigh Kimberlin, Miguel Toro Gonzalez et al. (2026). Optimization and scale-up of a microscale ion exchange separation for an adjacent lanthanide pair. *Separation Science and Technology*. [https://doi.org/10.1080/01496395.2025.2607657](https://doi.org/10.1080/01496395.2025.2607657)
 
-9. Michie EBISAWA, Akira Ohashi, Hisanori Imura et al. (2025). Equilibrium and Mass Spectrometric Studies on the Rare-Earth Elements(III) Extraction with 4-Isopropyltropolone into Toluene. *Solvent Extraction and Ion Exchange*. [https://doi.org/10.1080/07366299.2025.2607534](https://doi.org/10.1080/07366299.2025.2607534)
+9. Susanna B. Angermeier, Ashleigh Kimberlin, Miguel Toro Gonzalez et al. (2026). Optimization and scale-up of a microscale ion exchange separation for an adjacent lanthanide pair. *Unknown Source*. [https://doi.org/10.6084/m9.figshare.30988359](https://doi.org/10.6084/m9.figshare.30988359)
 
-10. Susanna B. Angermeier, Ashleigh Kimberlin, Miguel Toro Gonzalez et al. (2026). Optimization and scale-up of a microscale ion exchange separation for an adjacent lanthanide pair. *Separation Science and Technology*. [https://doi.org/10.1080/01496395.2025.2607657](https://doi.org/10.1080/01496395.2025.2607657)
+10. Susanna B. Angermeier, Ashleigh Kimberlin, Miguel Toro Gonzalez et al. (2026). Optimization and scale-up of a microscale ion exchange separation for an adjacent lanthanide pair. *Unknown Source*. [https://doi.org/10.6084/m9.figshare.30988359.v1](https://doi.org/10.6084/m9.figshare.30988359.v1)
 
-11. Susanna B. Angermeier, Ashleigh Kimberlin, Miguel Toro Gonzalez et al. (2026). Optimization and scale-up of a microscale ion exchange separation for an adjacent lanthanide pair. *Unknown Source*. [https://doi.org/10.6084/m9.figshare.30988359](https://doi.org/10.6084/m9.figshare.30988359)
+11. B. Y. Zhang, Thomas J. Summers, Logan J. Augustine et al. (2025). Augmenting Large Language Models for Automated Discovery of f-Element Extractants. *Unknown Source*. [https://doi.org/10.26434/chemrxiv-2025-b1m2q-v2](https://doi.org/10.26434/chemrxiv-2025-b1m2q-v2)
 
-12. Susanna B. Angermeier, Ashleigh Kimberlin, Miguel Toro Gonzalez et al. (2026). Optimization and scale-up of a microscale ion exchange separation for an adjacent lanthanide pair. *Unknown Source*. [https://doi.org/10.6084/m9.figshare.30988359.v1](https://doi.org/10.6084/m9.figshare.30988359.v1)
+12. Elizabeth R. Pugliese, Saroshan Deshapriya, Mackenzie Meyer et al. (2026). Inverse-Sandwich Rare Earth Metal Complexes Comprising a Planar Toluene Dianion. *Inorganic Chemistry*. [https://doi.org/10.1021/acs.inorgchem.5c04418](https://doi.org/10.1021/acs.inorgchem.5c04418)
 
-13. B. Y. Zhang, Thomas J. Summers, Logan J. Augustine et al. (2025). Augmenting Large Language Models for Automated Discovery of f-Element Extractants. *Unknown Source*. [https://doi.org/10.26434/chemrxiv-2025-b1m2q-v2](https://doi.org/10.26434/chemrxiv-2025-b1m2q-v2)
+13. Madhiha . (2026). Exploring the Depths: The Effects of Deep-Sea Mining on Marine Diversity. *International Journal of Innovative Science and Research Technology (IJISRT)*. [https://doi.org/10.38124/ijisrt/25dec1274](https://doi.org/10.38124/ijisrt/25dec1274)
 
-14. Elizabeth R. Pugliese, Saroshan Deshapriya, Mackenzie Meyer et al. (2026). Inverse-Sandwich Rare Earth Metal Complexes Comprising a Planar Toluene Dianion. *Inorganic Chemistry*. [https://doi.org/10.1021/acs.inorgchem.5c04418](https://doi.org/10.1021/acs.inorgchem.5c04418)
-
-15. Gourab Roy, E. Kushwaha, Mohit Kumar et al. (2025). Quasiparticle Dynamics in the 4d-4f Ising-like Double Perovskite Ba2DyRuO6 Probed by Neutron Scattering and Machine-Learning Framework. *arXiv (Cornell University)*. [https://doi.org/10.48550/arxiv.2512.24778](https://doi.org/10.48550/arxiv.2512.24778)
-
-16. Gourab Roy, E. Kushwaha, Mohit Kumar et al. (2025). Quasiparticle Dynamics in the 4d-4f Ising-like Double Perovskite Ba2DyRuO6 Probed by Neutron Scattering and Machine-Learning Framework. *arXiv (Cornell University)*.
-
-17. Hideo Shiogama, Masashi Okada, Yuji Masutomi et al. (2025). Emergent constraints on future change projections of mean and extreme temperature and precipitation in the global maize harvesting area. *Environmental Research Letters*. [https://doi.org/10.1088/1748-9326/ae3194](https://doi.org/10.1088/1748-9326/ae3194)
-
-18. Paolo SANTI (2026). REAL ECONOMIC METABOLISM. *Zenodo (CERN European Organization for Nuclear Research)*. [https://doi.org/10.5281/zenodo.18140315](https://doi.org/10.5281/zenodo.18140315)
-
-19. Paolo SANTI (2026). REAL ECONOMIC METABOLISM. *Zenodo (CERN European Organization for Nuclear Research)*. [https://doi.org/10.5281/zenodo.18140314](https://doi.org/10.5281/zenodo.18140314)
-
-20. Madhiha . (2026). Exploring the Depths: The Effects of Deep-Sea Mining on Marine Diversity. *International Journal of Innovative Science and Research Technology (IJISRT)*. [https://doi.org/10.38124/ijisrt/25dec1274](https://doi.org/10.38124/ijisrt/25dec1274)
-
-21. Yannick Le Moullec, Alar Kuusik (2025). Overview of Sustainable and Circular Electronics. *Zenodo (CERN European Organization for Nuclear Research)*. [https://doi.org/10.5281/zenodo.18097784](https://doi.org/10.5281/zenodo.18097784)
-
-22. Yannick Le Moullec, Alar Kuusik (2025). Overview of Sustainable and Circular Electronics. *Zenodo (CERN European Organization for Nuclear Research)*. [https://doi.org/10.5281/zenodo.18097785](https://doi.org/10.5281/zenodo.18097785)
-
-23. Abdulrahman Shaheen, Lamia Shaheen, Majd Alsadi (2025). MOON EXPLORATION. *Zenodo (CERN European Organization for Nuclear Research)*. [https://doi.org/10.5281/zenodo.18097143](https://doi.org/10.5281/zenodo.18097143)
-
-24. Younkyoo Kim, Sujin Kang (2025). The Reality and Challenges of Building a Global Rare Earth Supply Chain Beyond China. *International Area Studies Review*. [https://doi.org/10.21212/iasr.29.4.6](https://doi.org/10.21212/iasr.29.4.6)
-
-25. Teressa Diro, Desta Abera, Birtukan Mokinin (2025). Performance Evaluation of Engine-operated Pulse Splitting Machine. *International Journal of Industrial and Manufacturing Systems Engineering*. [https://doi.org/10.11648/j.ijimse.20251004.11](https://doi.org/10.11648/j.ijimse.20251004.11)
+14. Younkyoo Kim, Sujin Kang (2025). The Reality and Challenges of Building a Global Rare Earth Supply Chain Beyond China. *International Area Studies Review*. [https://doi.org/10.21212/iasr.29.4.6](https://doi.org/10.21212/iasr.29.4.6)
 
 
 ## BibTeX Entries
 
 ```bibtex
-@article{ganesh2026_1,
-  author = {Pilla, Ganesh},
-  title = {{Waterstofreductie van bauxietresidu voor duurzaam metaalherwinning}},
-  journal = {Lirias (KU Leuven)},
-  year = {2026},
-  doi = {},
-  url = {https://openalex.org/works/W7112627682},
-}
-@article{khan2026_2,
+@article{khan2026_1,
   author = {Huma Warsi Khan and B M Negash and Nur Insyriah Zulkifly and Mohd Dzul Hakim Wizral and Ainul Hakeem Abdul Jamil and et al.},
   title = {{Deep eutectic solvents as an emerging sustainable solvent for the separation and recovery of rare earth elements: current challenges and future prospectives}},
   journal = {Minerals Engineering},
@@ -435,15 +329,7 @@ categorized by topic area for easier navigation.
   doi = {10.1016/j.mineng.2025.110051},
   url = {https://openalex.org/works/W7118079173},
 }
-@article{beg2025_3,
-  author = {Mirza Masroor Ali Beg and Abhishek Kumar Mishra and DHARMSHEEL SHRIVASTAV and Varun Kumar Sharma and Singara Singh and et al.},
-  title = {{The Immune-Boosting Effects of Probiotics: A comprehensive systematic review}},
-  journal = {Macedonian Journal of Medical Sciences (University of Skopje)},
-  year = {2025},
-  doi = {10.62940/als.v12i4.3672},
-  url = {https://openalex.org/works/W7117870307},
-}
-@article{duong2025_4,
+@article{duong2025_2,
   author = {A. Duong and I. Smith and O. Bishop and C. Mayer and M. Patel and et al.},
   title = {{Processing-Driven Microstructure Control in Additively Manufactured Alnico Permanent Magnets}},
   journal = {JOM},
@@ -451,7 +337,7 @@ categorized by topic area for easier navigation.
   doi = {10.1007/s11837-025-08037-z},
   url = {https://openalex.org/works/W7117457612},
 }
-@article{rudnik2026_5,
+@article{rudnik2026_3,
   author = {Ewa Rudnik},
   title = {{Advances in Dysprosium Recovery from Secondary Sources: A Review of Hydrometallurgical, Biohydrometallurgicaland Solvometallurgical Approaches}},
   journal = {Molecules},
@@ -459,7 +345,7 @@ categorized by topic area for easier navigation.
   doi = {10.3390/molecules31010176},
   url = {https://openalex.org/works/W7117961739},
 }
-@article{fard2026_6,
+@article{fard2026_4,
   author = {Behnaz Minooei Fard and Giovanni Di Bartolomeo and Willi Semmler},
   title = {{A global asymmetric duopoly game of relatively scarce resources}},
   journal = {Macroeconomic Dynamics},
@@ -467,7 +353,7 @@ categorized by topic area for easier navigation.
   doi = {10.1017/s136510052510076x},
   url = {https://openalex.org/works/W7118015258},
 }
-@article{pereira2025_7,
+@article{pereira2025_5,
   author = {Bárbara da Rocha Pereira and Diego Teuber Gijon and Franco Garjulli and Denise Crocce Romano Espinosa and Jorge Alberto Soares Tenório},
   title = {{Hydrometallurgical recovery of heavy rare earth elements (HREE) from columbite leachate via aqueous complexation, solvent extraction and precipitation route}},
   journal = {Minerals Engineering},
@@ -475,7 +361,7 @@ categorized by topic area for easier navigation.
   doi = {10.1016/j.mineng.2025.110043},
   url = {https://openalex.org/works/W7117736704},
 }
-@article{erust2025_8,
+@article{erust2025_6,
   author = {Ceren Erust and Turan Uysal},
   title = {{Solvent extraction of rare earth elements and α-alumina production from pregnant leaching solution obtained from Turkish bauxite-related ore}},
   journal = {Separation Science and Technology},
@@ -483,7 +369,7 @@ categorized by topic area for easier navigation.
   doi = {10.1080/01496395.2025.2611021},
   url = {https://openalex.org/works/W7117697069},
 }
-@article{ebisawa2025_9,
+@article{ebisawa2025_7,
   author = {Michie EBISAWA and Akira Ohashi and Hisanori Imura and Kousaburo OHASHI},
   title = {{Equilibrium and Mass Spectrometric Studies on the Rare-Earth Elements(III) Extraction with 4-Isopropyltropolone into Toluene}},
   journal = {Solvent Extraction and Ion Exchange},
@@ -491,7 +377,7 @@ categorized by topic area for easier navigation.
   doi = {10.1080/07366299.2025.2607534},
   url = {https://openalex.org/works/W7117505503},
 }
-@article{angermeier2026_10,
+@article{angermeier2026_8,
   author = {Susanna B. Angermeier and Ashleigh Kimberlin and Miguel Toro Gonzalez and Kevin Gaddis and Sandra Davern and et al.},
   title = {{Optimization and scale-up of a microscale ion exchange separation for an adjacent lanthanide pair}},
   journal = {Separation Science and Technology},
@@ -499,7 +385,7 @@ categorized by topic area for easier navigation.
   doi = {10.1080/01496395.2025.2607657},
   url = {https://openalex.org/works/W7117987834},
 }
-@article{angermeier2026_11,
+@article{angermeier2026_9,
   author = {Susanna B. Angermeier and Ashleigh Kimberlin and Miguel Toro Gonzalez and Kevin Gaddis and Sandra Davern and et al.},
   title = {{Optimization and scale-up of a microscale ion exchange separation for an adjacent lanthanide pair}},
   journal = {Unknown Source},
@@ -507,7 +393,7 @@ categorized by topic area for easier navigation.
   doi = {10.6084/m9.figshare.30988359},
   url = {https://openalex.org/works/W7118087205},
 }
-@article{angermeier2026_12,
+@article{angermeier2026_10,
   author = {Susanna B. Angermeier and Ashleigh Kimberlin and Miguel Toro Gonzalez and Kevin Gaddis and Sandra Davern and et al.},
   title = {{Optimization and scale-up of a microscale ion exchange separation for an adjacent lanthanide pair}},
   journal = {Unknown Source},
@@ -515,7 +401,7 @@ categorized by topic area for easier navigation.
   doi = {10.6084/m9.figshare.30988359.v1},
   url = {https://openalex.org/works/W7118088371},
 }
-@article{zhang2025_13,
+@article{zhang2025_11,
   author = {B. Y. Zhang and Thomas J. Summers and Logan J. Augustine and Michael G. Taylor and Andreas Geist and et al.},
   title = {{Augmenting Large Language Models for Automated Discovery of f-Element Extractants}},
   journal = {Unknown Source},
@@ -523,7 +409,7 @@ categorized by topic area for easier navigation.
   doi = {10.26434/chemrxiv-2025-b1m2q-v2},
   url = {https://openalex.org/works/W7117588691},
 }
-@article{pugliese2026_14,
+@article{pugliese2026_12,
   author = {Elizabeth R. Pugliese and Saroshan Deshapriya and Mackenzie Meyer and Ernesto Castellanos and Selvan Demir},
   title = {{Inverse-Sandwich Rare Earth Metal Complexes Comprising a Planar Toluene Dianion}},
   journal = {Inorganic Chemistry},
@@ -531,47 +417,7 @@ categorized by topic area for easier navigation.
   doi = {10.1021/acs.inorgchem.5c04418},
   url = {https://openalex.org/works/W7118080495},
 }
-@article{roy2025_15,
-  author = {Gourab Roy and E. Kushwaha and Mohit Kumar and Sayan Ghosh and Fabio Orlandi and et al.},
-  title = {{Quasiparticle Dynamics in the 4d-4f Ising-like Double Perovskite Ba2DyRuO6 Probed by Neutron Scattering and Machine-Learning Framework}},
-  journal = {arXiv (Cornell University)},
-  year = {2025},
-  doi = {10.48550/arxiv.2512.24778},
-  url = {https://openalex.org/works/W7117960025},
-}
-@article{roy2025_16,
-  author = {Gourab Roy and E. Kushwaha and Mohit Kumar and Sayan Ghosh and Fabio Orlandi and et al.},
-  title = {{Quasiparticle Dynamics in the 4d-4f Ising-like Double Perovskite Ba2DyRuO6 Probed by Neutron Scattering and Machine-Learning Framework}},
-  journal = {arXiv (Cornell University)},
-  year = {2025},
-  doi = {},
-  url = {https://openalex.org/works/W7118051369},
-}
-@article{shiogama2025_17,
-  author = {Hideo Shiogama and Masashi Okada and Yuji Masutomi and Toshichika Iizumi},
-  title = {{Emergent constraints on future change projections of mean and extreme temperature and precipitation in the global maize harvesting area}},
-  journal = {Environmental Research Letters},
-  year = {2025},
-  doi = {10.1088/1748-9326/ae3194},
-  url = {https://openalex.org/works/W7117564378},
-}
-@article{santi2026_18,
-  author = {Paolo SANTI},
-  title = {{REAL ECONOMIC METABOLISM}},
-  journal = {Zenodo (CERN European Organization for Nuclear Research)},
-  year = {2026},
-  doi = {10.5281/zenodo.18140315},
-  url = {https://openalex.org/works/W7118119097},
-}
-@article{santi2026_19,
-  author = {Paolo SANTI},
-  title = {{REAL ECONOMIC METABOLISM}},
-  journal = {Zenodo (CERN European Organization for Nuclear Research)},
-  year = {2026},
-  doi = {10.5281/zenodo.18140314},
-  url = {https://openalex.org/works/W7118135996},
-}
-@article{.2026_20,
+@article{.2026_13,
   author = {Madhiha .},
   title = {{Exploring the Depths: The Effects of Deep-Sea Mining on Marine Diversity}},
   journal = {International Journal of Innovative Science and Research Technology (IJISRT)},
@@ -579,44 +425,12 @@ categorized by topic area for easier navigation.
   doi = {10.38124/ijisrt/25dec1274},
   url = {https://openalex.org/works/W7117983949},
 }
-@article{moullec2025_21,
-  author = {Yannick Le Moullec and Alar Kuusik},
-  title = {{Overview of Sustainable and Circular Electronics}},
-  journal = {Zenodo (CERN European Organization for Nuclear Research)},
-  year = {2025},
-  doi = {10.5281/zenodo.18097784},
-  url = {https://openalex.org/works/W7117694836},
-}
-@article{moullec2025_22,
-  author = {Yannick Le Moullec and Alar Kuusik},
-  title = {{Overview of Sustainable and Circular Electronics}},
-  journal = {Zenodo (CERN European Organization for Nuclear Research)},
-  year = {2025},
-  doi = {10.5281/zenodo.18097785},
-  url = {https://openalex.org/works/W7117704304},
-}
-@article{shaheen2025_23,
-  author = {Abdulrahman Shaheen and Lamia Shaheen and Majd Alsadi},
-  title = {{MOON EXPLORATION}},
-  journal = {Zenodo (CERN European Organization for Nuclear Research)},
-  year = {2025},
-  doi = {10.5281/zenodo.18097143},
-  url = {https://openalex.org/works/W7117737709},
-}
-@article{kim2025_24,
+@article{kim2025_14,
   author = {Younkyoo Kim and Sujin Kang},
   title = {{The Reality and Challenges of Building a Global Rare Earth Supply Chain Beyond China}},
   journal = {International Area Studies Review},
   year = {2025},
   doi = {10.21212/iasr.29.4.6},
   url = {https://openalex.org/works/W7117759261},
-}
-@article{diro2025_25,
-  author = {Teressa Diro and Desta Abera and Birtukan Mokinin},
-  title = {{Performance Evaluation of Engine-operated Pulse Splitting Machine}},
-  journal = {International Journal of Industrial and Manufacturing Systems Engineering},
-  year = {2025},
-  doi = {10.11648/j.ijimse.20251004.11},
-  url = {https://openalex.org/works/W7118119619},
 }
 ```

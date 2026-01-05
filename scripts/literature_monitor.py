@@ -75,6 +75,36 @@ OPENALEX_CONCEPTS = [
     "C142362112",  # Lanthanide
 ]
 
+# Terms that indicate a paper is relevant to rare earth research
+# Papers must contain at least one of these terms in title, abstract, or concepts
+RELEVANCE_TERMS = [
+    # General terms
+    "rare earth", "rare-earth", "ree ", "rees ", "rees.", "rees,",
+    "lanthanide", "lanthanoid", "actinide",
+    "critical mineral", "critical metal",
+
+    # Individual elements (lanthanides)
+    "lanthanum", "cerium", "praseodymium", "neodymium", "promethium",
+    "samarium", "europium", "gadolinium", "terbium", "dysprosium",
+    "holmium", "erbium", "thulium", "ytterbium", "lutetium",
+    "scandium", "yttrium",
+
+    # Element symbols with context (to avoid false positives)
+    " la ", " ce ", " pr ", " nd ", " pm ", " sm ", " eu ", " gd ",
+    " tb ", " dy ", " ho ", " er ", " tm ", " yb ", " lu ", " sc ", " y ",
+    "la3+", "ce3+", "ce4+", "nd3+", "eu3+", "gd3+", "tb3+", "dy3+",
+    "la(iii)", "ce(iii)", "nd(iii)", "eu(iii)", "gd(iii)", "dy(iii)",
+
+    # Common REE materials and applications
+    "ndfeb", "nd-fe-b", "nd2fe14b", "neodymium magnet",
+    "bastnäsite", "bastnasite", "monazite", "xenotime", "ion-adsorption",
+    "f-element", "f-block", "4f electron",
+
+    # REE-specific separation terms
+    "lanthanide separation", "ree separation", "ree extraction",
+    "rare earth recycl", "magnet recycl",
+]
+
 
 def query_openalex(
     query: str,
@@ -185,6 +215,57 @@ def extract_work_info(work: dict) -> dict:
         "type": work.get("type", "unknown"),
         "open_access": work.get("open_access", {}).get("is_oa", False),
     }
+
+
+def is_relevant_to_ree(work: dict) -> bool:
+    """
+    Check if a work is actually relevant to rare earth element research.
+
+    Filters out false positives from broad OpenAlex searches by requiring
+    at least one REE-related term in the title, abstract, or concepts.
+
+    Args:
+        work: Processed work dictionary
+
+    Returns:
+        True if the work appears relevant to REE research
+    """
+    # Combine searchable text fields
+    title = work.get("title", "").lower()
+    abstract = work.get("abstract", "").lower()
+    concepts = " ".join(work.get("concepts", [])).lower()
+
+    # Add spaces around text to help with word boundary matching
+    searchable_text = f" {title} {abstract} {concepts} "
+
+    # Check for any relevance term
+    for term in RELEVANCE_TERMS:
+        if term.lower() in searchable_text:
+            return True
+
+    return False
+
+
+def filter_relevant_works(works: list[dict]) -> tuple[list[dict], list[dict]]:
+    """
+    Filter works to only include those relevant to REE research.
+
+    Args:
+        works: List of processed work dictionaries
+
+    Returns:
+        Tuple of (relevant_works, filtered_out_works)
+    """
+    relevant = []
+    filtered_out = []
+
+    for work in works:
+        if is_relevant_to_ree(work):
+            relevant.append(work)
+        else:
+            filtered_out.append(work)
+
+    return relevant, filtered_out
 
 
 def categorize_works(works: list[dict]) -> dict[str, list[dict]]:
@@ -679,7 +760,14 @@ def main():
     # Filter out works without titles
     processed_works = [w for w in processed_works if w["title"] != "Untitled"]
 
-    print(f"After filtering: {len(processed_works)} publications")
+    print(f"After title filtering: {len(processed_works)} publications")
+
+    # Apply relevance filtering to remove false positives
+    processed_works, filtered_out = filter_relevant_works(processed_works)
+
+    print(f"After relevance filtering: {len(processed_works)} publications")
+    if filtered_out:
+        print(f"  (Removed {len(filtered_out)} irrelevant papers)")
 
     # Categorize for reporting and Slack
     categorized = categorize_works(processed_works)
