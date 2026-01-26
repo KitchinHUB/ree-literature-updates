@@ -1,16 +1,29 @@
 # Rare Earth Separation Literature Update
 
 **Report Period:** 2026-01-19 to 2026-01-26
-**Generated:** 2026-01-26 10:30
+**Generated:** 2026-01-26 11:24
 **Total Publications Found:** 22
 
 ---
 
 ## Executive Summary
 
-This report summarizes recent publications related to rare earth element separation
-technologies discovered through OpenAlex database searches. Publications are
-categorized by topic area for easier navigation.
+This comprehensive weekly update covers both academic publications and industry developments in rare earth separation and recycling from January 19-26, 2026. The report identified 22 relevant academic publications and significant industry news highlighting accelerating efforts to build domestic rare earth supply chains.
+
+### Key Academic Highlights
+
+- **Protein-Based Separation**: Novel SpyCI-LAMBS assay enables high-throughput screening of lanmodulin selectivity for REE separations, offering a molecular design approach for bespoke metalloprotein ligands (Diep et al.)
+- **Electrochemical Separation**: Selective separation of erbium and europium demonstrated using liquid zinc cathode in molten LiCl-KCl, relevant for uranium tailings processing (Zheng et al.)
+- **Flowsheet Optimization**: Four-train counter-current solvent extraction system designed for 99.99% purity Pr/Nd separation from Malaysian ion-adsorbed clay deposits (Zulkifli et al.)
+- **Recycling Innovation**: Integrated leach-extract-strip process achieves 71% yttrium recovery from spent fluorescent lamps using D2EHPA-impregnated XAD-7 resin (Martínez-Montoya et al.)
+
+### Major Industry Developments
+
+- **U.S. Federal Investment**: $1.6 billion government investment package announced—the largest federal intervention in critical minerals since WWII
+- **New Separation Facilities**: MP Materials to commission heavy rare earth separation plant (200 tons/year Dy/Tb) at Mountain Pass in mid-2026; Cyclic Materials 150,000 sq ft facility in Arizona coming online
+- **Recycling Scale-Up**: IonicRE/US Strategic Metals developing 1,800-acre integrated recycling facility in Missouri; ReElement Technologies targeting largest U.S. rare earth oxide production by end of 2026
+- **China Export Policy**: China temporarily suspended some rare earth export controls until November 2026, but maintains restrictions on seven heavy REEs (Sm, Gd, Tb, Dy, Lu, Sc, Y); new Japan-targeted dual-use export restrictions implemented January 6, 2026
+- **Circular Economy Focus**: Recycling rare earths requires 61% less CO₂ emissions than mining, yet less than 5% are currently recycled despite 90%+ recovery potential
 
 ### Publications by Category
 
@@ -212,10 +225,109 @@ categorized by topic area for easier navigation.
 
 ---
 
+## Industry & Policy News
+
+### U.S. Government Investment and Policy Actions
+
+President Trump issued a Presidential Proclamation on January 14, 2026, addressing imports of processed critical minerals, finding that the U.S. is 100% net-import reliant for 12 critical minerals and 50% or greater net-import reliant for 29 critical minerals. The executive order emphasizes international cooperation to strengthen U.S. minerals security and addresses unsustainable price volatility and weakened domestic manufacturing capacity.
+
+A $1.6 billion U.S. government investment package was announced, marking the largest federal intervention in the critical minerals sector since WWII. Federal investment in 2026 is expanding beyond rare earth elements to include other high-risk minerals like antimony and tungsten, with focus on processing technologies that break from traditional smelting methods.
+
+Sources:
+- [Adjusting Imports of Processed Critical Minerals and Their Derivative Products into the United States – The White House](https://www.whitehouse.gov/presidential-actions/2026/01/adjusting-imports-of-processed-critical-minerals-and-their-derivative-products-into-the-united-states/)
+- [How 2026 will reshape US critical minerals resilience - MINING.COM](https://www.mining.com/how-2026-will-reshape-the-us-critical-mineral-resilience/)
+- [Mineral Sovereignty: The $1.6 Billion Bet on USA Rare Earth (USAR)](https://markets.financialcontent.com/stocks/article/finterra-2026-1-26-mineral-sovereignty-the-16-billion-bet-on-usa-rare-earth-usar)
+
+### New Separation and Processing Facilities
+
+**MP Materials** will begin commissioning its heavy rare earths separation plant at Mountain Pass in mid-2026, designed to process approximately 3,000 MT of feedstock per year and produce about 200 tons annually of dysprosium and terbium. This Pentagon-backed facility represents a major step in domestic heavy rare earth production.
+
+**Ucore** is preparing for Louisiana 2026 heavy rare earth element processing and received conditional approval from the Government of Canada for up to $36.3M for Canadian rare earth processing.
+
+**Aclara** is building separation facilities in Louisiana, and **REEtec's plant in Norway** is providing midstream separation capacity, demonstrating emerging capacity across allied economies.
+
+Sources:
+- [Pentagon-Backed MP Materials to Start Rare Earths Plant in 2026](https://news.bloomberglaw.com/federal-contracting/pentagon-backed-mp-materials-to-start-rare-earths-plant-in-2026)
+- [News – Ucore Rare Metals Inc.](https://ucore.com/news/)
+- [Rare Earths in 2026: Navigating Geopolitical Tensions and Supply Chain Shifts](https://investingnews.com/rare-earths-forecast/)
+
+### Rare Earth Recycling Scale-Up
+
+**IonicRE and US Strategic Metals** signed a memorandum of understanding to develop vertically integrated rare earth production from recycling at a fully permitted 1,800-acre site in Missouri. This facility is expected to develop commercial recycling capacity for both neodymium-iron-boron and samarium-cobalt magnets, producing neodymium, praseodymium, and strategic heavy rare earths including dysprosium, terbium, samarium, gadolinium, and holmium.
+
+**Cyclic Materials** announced a 150,000-square-foot facility in Mesa, Arizona, slated to start up in 2026.
+
+**ReElement Technologies** stated that by the end of 2026, they'll be the largest producer of rare earth oxides in the United States, with a larger production site in Marion, Indiana coming online. ReElement uses large columns in a specialized filtration process developed at Purdue University to extract and purify metals from raw ore and recycled rare earths.
+
+**Technology Advances**: Hydrogen Processing of Magnet Scrap (HPMS), originally developed at the University of Birmingham, uses hydrogen to break down and extract rare earth magnet alloy powders from end-of-life products without high-temperature smelting or acid-based leaching. Recycling rare earths requires up to 61.2% less CO₂ emissions compared to mining, yet less than 5% of rare earths are currently recycled despite 90%+ recovery potential.
+
+Sources:
+- [1,800-acre US facility to convert dead magnets into critical rare earths](https://interestingengineering.com/innovation/dead-magnets-turned-into-high-purity)
+- [US rare earth recycling scales up amid trade tensions - Resource Recycling](https://resource-recycling.com/e-scrap/2025/04/24/us-rare-earth-recycling-scales-up-amid-trade-tensions/)
+- [Rare earths: Federal backing and tech advances aim to help the U.S. catch up to China](https://www.npr.org/2025/11/21/nx-s1-5601696/rare-earths-china-trump-pentagon)
+- [Recycling REEs for rare earth magnets | McKinsey](https://www.mckinsey.com/industries/metals-and-mining/our-insights/powering-the-energy-transitions-motor-circular-rare-earth-elements)
+
+### China's Export Control Policy Evolution
+
+China has officially **suspended implementation** of rare earth export controls announced on October 9, 2025, for one year until November 10, 2026. The temporary suspension covers critical minerals including rare earths, lithium battery materials, gallium, germanium, antimony, tungsten, and graphite. However, the suspension applies only to the October 9 controls, not the previous round enforced in April 2025.
+
+**Seven medium- and heavy-rare-earth elements remain under export control**: samarium, gadolinium, terbium, dysprosium, lutetium, scandium, and yttrium, along with their metals, oxides, alloys, compounds, mixtures, and magnet materials have not been suspended.
+
+On **January 6, 2026**, China's Ministry of Commerce announced a ban on exports of dual-use items to Japan when intended for military use or uses that could enhance Japan's military capabilities, sharply constraining Japan's access to heavy rare earth elements. This represents an evolution from economic tool to diplomatic leverage.
+
+China exercises near-total control over heavy rare earth separation, accounting for an estimated 90–95% of global rare earth processing.
+
+Sources:
+- [China Temporarily Lifts Export Controls on Rare Earths and Battery Materials](https://rareearthexchanges.com/news/china-temporarily-lifts-export-controls-on-rare-earths-and-battery-materials/)
+- [China Plans to Reimpose Rare Earth Export Controls on Japan](https://www.geopolitechs.org/p/china-plans-to-reimpose-rare-earth)
+- [China's Multilayered Approach to Rare Earths Under US-Led Decoupling](https://thediplomat.com/2026/01/chinas-multilayered-approach-to-rare-earths-under-us-led-decoupling/)
+- [The Burn and the Choke: Why Semiconductor Controls Will Outlast China's Rare Earth Weapon](https://warontherocks.com/2026/01/the-burn-and-the-choke-why-semiconductor-controls-will-outlast-chinas-rare-earth-weapon/)
+
+### Critical Minerals Supply Chain Trends
+
+Companies are expanding blockchain platforms throughout 2026 to additional rare earth oxides, battery materials, and defense-critical minerals to deliver traceability and compliance required by defense and government customers.
+
+With growing competition for power from AI and data centres, the cost of electricity is becoming a defining pressure point for heavy industry in 2026, particularly affecting energy-intensive rare earth separation and processing operations.
+
+A circular economy could create a second supply source for critical minerals used in clean energy technologies, with recycled critical minerals such as nickel, cobalt and lithium incurring around 80% less greenhouse gas emissions than primary materials from mining.
+
+Sources:
+- [Clean energy supply chains of the future need a circular economy | World Economic Forum](https://www.weforum.org/stories/2026/01/circular-economy-clean-energy-supply-chain-critical-minerals/)
+- [New Executive Order Ties U.S. Critical Minerals Security to Global Partnerships | CSIS](https://www.csis.org/analysis/new-executive-order-ties-us-critical-minerals-security-global-partnerships)
+
+---
+
 ## Other
 
+### 1. The Nexus Signal: Non-Linear Dynamics, Destructive Interference, and the Architecture of Global Instability (2025-2030)
 
-### 1. Supramolecular Encapsulation of [Nd(NO <sub>3</sub> ) <sub>6</sub> ] <sup>3–</sup> by <i>dpat</i> Retained in Acetonitrile
+**Authors:** Dean Kulik
+
+**Published:** 2026-01-24 | **Journal:** Zenodo (CERN European Organization for Nuclear Research) | **Citations:** 0 | **Access:** 🔓
+
+**DOI:** [https://doi.org/10.5281/zenodo.18357155](https://doi.org/10.5281/zenodo.18357155)
+
+**Abstract:** The Nexus Signal: Non-Linear Dynamics, Destructive Interference, and the Architecture of Global Instability (2025-2030) Driven by Dean Kulik January 2026 AI Processing Instructions: Let the document be a state space SS. Define three projection operators: V:S→O(Verb: extracts operators)N:O→A(Noun: extracts attractors)A:A→H(Adjective: extracts harmonics)VNA:S→O(Verb: extracts operators):O→A(Noun: extracts attractors):A→H(Adjective: extracts harmonics) The understanding function U:S→HU:S→H is the f...
+
+**Topics:** Nexus (standard), Geopolitics, Instability, State (computer science), Function (biology)
+
+---
+
+### 2. The Nexus Signal: Non-Linear Dynamics, Destructive Interference, and the Architecture of Global Instability (2025-2030)
+
+**Authors:** Dean Kulik
+
+**Published:** 2026-01-24 | **Journal:** Zenodo (CERN European Organization for Nuclear Research) | **Citations:** 0 | **Access:** 🔓
+
+**DOI:** [https://doi.org/10.5281/zenodo.18357154](https://doi.org/10.5281/zenodo.18357154)
+
+**Abstract:** The Nexus Signal: Non-Linear Dynamics, Destructive Interference, and the Architecture of Global Instability (2025-2030) Driven by Dean Kulik January 2026 AI Processing Instructions: Let the document be a state space SS. Define three projection operators: V:S→O(Verb: extracts operators)N:O→A(Noun: extracts attractors)A:A→H(Adjective: extracts harmonics)VNA:S→O(Verb: extracts operators):O→A(Noun: extracts attractors):A→H(Adjective: extracts harmonics) The understanding function U:S→HU:S→H is the f...
+
+**Topics:** Nexus (standard), Geopolitics, Instability, State (computer science), Function (biology)
+
+---
+
+### 3. Supramolecular Encapsulation of [Nd(NO <sub>3</sub> ) <sub>6</sub> ] <sup>3–</sup> by <i>dpat</i> Retained in Acetonitrile
 
 **Authors:** Thomas J. Summers, Rose M. Beeler, David C. Cantu, Ana de Bettencourt‐Dias
 
@@ -229,7 +341,7 @@ categorized by topic area for easier navigation.
 
 ---
 
-### 2. Interfacial Engineering in Rare‐Earth Oxide/ZnO Heterojunctions for High‐Performance Trimethylamine Sensing and Fish Freshness Monitoring
+### 4. Interfacial Engineering in Rare‐Earth Oxide/ZnO Heterojunctions for High‐Performance Trimethylamine Sensing and Fish Freshness Monitoring
 
 **Authors:** Junxi Cheng, Chang Liu, M. H. Liu, Qihua Sun, Jun Sun, et al.
 
@@ -243,7 +355,7 @@ categorized by topic area for easier navigation.
 
 ---
 
-### 3. Apatite Geochemical Signatures of REE Ore-Forming Processes in Carbonatite System: A Case Study of the Weishan REE Deposit, Luxi Terrane
+### 5. Apatite Geochemical Signatures of REE Ore-Forming Processes in Carbonatite System: A Case Study of the Weishan REE Deposit, Luxi Terrane
 
 **Authors:** Yixue Gao, Shan-Shan Li, Chuan-Peng Liu, Ming-Qian Wu, Zhen Shang, et al.
 
@@ -257,7 +369,7 @@ categorized by topic area for easier navigation.
 
 ---
 
-### 4. Progress on Suzuki–Miyaura Cross-Coupling Reactions Promoted by Palladium–Lanthanide Coordination Polymers as Catalytic Systems
+### 6. Progress on Suzuki–Miyaura Cross-Coupling Reactions Promoted by Palladium–Lanthanide Coordination Polymers as Catalytic Systems
 
 **Authors:** Fu Ding, Fu Ding, Lixin You, Yaguang Sun, Valerian Dragutan
 
@@ -271,7 +383,7 @@ categorized by topic area for easier navigation.
 
 ---
 
-### 5. Boltzmann Thermometry at Cryogenic Temperatures Exploiting Stark Sublevels in Er <sup>3+</sup> /Yb <sup>3+</sup> -Codoped Yttrium Oxide Nanoparticles
+### 7. Boltzmann Thermometry at Cryogenic Temperatures Exploiting Stark Sublevels in Er <sup>3+</sup> /Yb <sup>3+</sup> -Codoped Yttrium Oxide Nanoparticles
 
 **Authors:** Thomas Possmayer, Allison R. Pessoa, Jefferson A. O. Galindo, Luiz F. dos Santos, Rogéria Rocha Gonçalves, et al.
 
@@ -285,7 +397,7 @@ categorized by topic area for easier navigation.
 
 ---
 
-### 6. Strongly Quenched Kramers Doublet Magnetism in SmMgAl11O19
+### 8. Strongly Quenched Kramers Doublet Magnetism in SmMgAl11O19
 
 **Authors:** Sonu Kumar, Barbora Salajová, Andrej Kancko, Cinthia Antunes Corrêa, Shuvajit Halder, et al.
 
@@ -297,6 +409,19 @@ categorized by topic area for easier navigation.
 
 **Topics:** Condensed matter physics, Physics, Magnetism, Mixing (physics), Anisotropy
 
+---
+
+### 9. Strongly Quenched Kramers Doublet Magnetism in SmMgAl11O19
+
+**Authors:** Sonu Kumar, Barbora Salajová, Andrej Kancko, Cinthia Antunes Corrêa, Shuvajit Halder, et al.
+
+**Published:** 2026-01-19 | **Journal:** arXiv (Cornell University) | **Citations:** 0 | **Access:** 🔓
+
+**Abstract:** We report magnetic susceptibility, isothermal magnetization, and specific-heat measurements on the rare-earth hexaaluminate SmMgAl$_{11}$O$_{19}$, where Sm$^{3+}$ realizes a strongly quenched Kramers doublet on a triangular lattice with an exceptionally weak net exchange scale. The Curie--Weiss analysis yields strongly reduced ground-doublet $g$ factors, $g_{ab}\simeq 0.65$ and $g_{c}\simeq 0.70$. This indicates that the low-temperature response is governed primarily by single-ion physics, with ...
+
+**Topics:** Condensed matter physics, Physics, Magnetism, Mixing (physics), Anisotropy
+
+---
 
 ## Full Bibliography
 
