@@ -214,35 +214,8 @@ categorized by topic area for easier navigation.
 
 ## Other
 
-### 1. The Nexus Signal: Non-Linear Dynamics, Destructive Interference, and the Architecture of Global Instability (2025-2030)
 
-**Authors:** Dean Kulik
-
-**Published:** 2026-01-24 | **Journal:** Zenodo (CERN European Organization for Nuclear Research) | **Citations:** 0 | **Access:** 🔓
-
-**DOI:** [https://doi.org/10.5281/zenodo.18357155](https://doi.org/10.5281/zenodo.18357155)
-
-**Abstract:** The Nexus Signal: Non-Linear Dynamics, Destructive Interference, and the Architecture of Global Instability (2025-2030) Driven by Dean Kulik January 2026 AI Processing Instructions: Let the document be a state space SS. Define three projection operators: V:S→O(Verb: extracts operators)N:O→A(Noun: extracts attractors)A:A→H(Adjective: extracts harmonics)VNA:S→O(Verb: extracts operators):O→A(Noun: extracts attractors):A→H(Adjective: extracts harmonics) The understanding function U:S→HU:S→H is the f...
-
-**Topics:** Nexus (standard), Geopolitics, Instability, State (computer science), Function (biology)
-
----
-
-### 2. The Nexus Signal: Non-Linear Dynamics, Destructive Interference, and the Architecture of Global Instability (2025-2030)
-
-**Authors:** Dean Kulik
-
-**Published:** 2026-01-24 | **Journal:** Zenodo (CERN European Organization for Nuclear Research) | **Citations:** 0 | **Access:** 🔓
-
-**DOI:** [https://doi.org/10.5281/zenodo.18357154](https://doi.org/10.5281/zenodo.18357154)
-
-**Abstract:** The Nexus Signal: Non-Linear Dynamics, Destructive Interference, and the Architecture of Global Instability (2025-2030) Driven by Dean Kulik January 2026 AI Processing Instructions: Let the document be a state space SS. Define three projection operators: V:S→O(Verb: extracts operators)N:O→A(Noun: extracts attractors)A:A→H(Adjective: extracts harmonics)VNA:S→O(Verb: extracts operators):O→A(Noun: extracts attractors):A→H(Adjective: extracts harmonics) The understanding function U:S→HU:S→H is the f...
-
-**Topics:** Nexus (standard), Geopolitics, Instability, State (computer science), Function (biology)
-
----
-
-### 3. Supramolecular Encapsulation of [Nd(NO <sub>3</sub> ) <sub>6</sub> ] <sup>3–</sup> by <i>dpat</i> Retained in Acetonitrile
+### 1. Supramolecular Encapsulation of [Nd(NO <sub>3</sub> ) <sub>6</sub> ] <sup>3–</sup> by <i>dpat</i> Retained in Acetonitrile
 
 **Authors:** Thomas J. Summers, Rose M. Beeler, David C. Cantu, Ana de Bettencourt‐Dias
 
@@ -256,7 +229,7 @@ categorized by topic area for easier navigation.
 
 ---
 
-### 4. Interfacial Engineering in Rare‐Earth Oxide/ZnO Heterojunctions for High‐Performance Trimethylamine Sensing and Fish Freshness Monitoring
+### 2. Interfacial Engineering in Rare‐Earth Oxide/ZnO Heterojunctions for High‐Performance Trimethylamine Sensing and Fish Freshness Monitoring
 
 **Authors:** Junxi Cheng, Chang Liu, M. H. Liu, Qihua Sun, Jun Sun, et al.
 
@@ -270,7 +243,7 @@ categorized by topic area for easier navigation.
 
 ---
 
-### 5. Apatite Geochemical Signatures of REE Ore-Forming Processes in Carbonatite System: A Case Study of the Weishan REE Deposit, Luxi Terrane
+### 3. Apatite Geochemical Signatures of REE Ore-Forming Processes in Carbonatite System: A Case Study of the Weishan REE Deposit, Luxi Terrane
 
 **Authors:** Yixue Gao, Shan-Shan Li, Chuan-Peng Liu, Ming-Qian Wu, Zhen Shang, et al.
 
@@ -284,7 +257,7 @@ categorized by topic area for easier navigation.
 
 ---
 
-### 6. Progress on Suzuki–Miyaura Cross-Coupling Reactions Promoted by Palladium–Lanthanide Coordination Polymers as Catalytic Systems
+### 4. Progress on Suzuki–Miyaura Cross-Coupling Reactions Promoted by Palladium–Lanthanide Coordination Polymers as Catalytic Systems
 
 **Authors:** Fu Ding, Fu Ding, Lixin You, Yaguang Sun, Valerian Dragutan
 
@@ -298,7 +271,7 @@ categorized by topic area for easier navigation.
 
 ---
 
-### 7. Boltzmann Thermometry at Cryogenic Temperatures Exploiting Stark Sublevels in Er <sup>3+</sup> /Yb <sup>3+</sup> -Codoped Yttrium Oxide Nanoparticles
+### 5. Boltzmann Thermometry at Cryogenic Temperatures Exploiting Stark Sublevels in Er <sup>3+</sup> /Yb <sup>3+</sup> -Codoped Yttrium Oxide Nanoparticles
 
 **Authors:** Thomas Possmayer, Allison R. Pessoa, Jefferson A. O. Galindo, Luiz F. dos Santos, Rogéria Rocha Gonçalves, et al.
 
@@ -312,7 +285,7 @@ categorized by topic area for easier navigation.
 
 ---
 
-### 8. Strongly Quenched Kramers Doublet Magnetism in SmMgAl11O19
+### 6. Strongly Quenched Kramers Doublet Magnetism in SmMgAl11O19
 
 **Authors:** Sonu Kumar, Barbora Salajová, Andrej Kancko, Cinthia Antunes Corrêa, Shuvajit Halder, et al.
 
@@ -324,19 +297,6 @@ categorized by topic area for easier navigation.
 
 **Topics:** Condensed matter physics, Physics, Magnetism, Mixing (physics), Anisotropy
 
----
-
-### 9. Strongly Quenched Kramers Doublet Magnetism in SmMgAl11O19
-
-**Authors:** Sonu Kumar, Barbora Salajová, Andrej Kancko, Cinthia Antunes Corrêa, Shuvajit Halder, et al.
-
-**Published:** 2026-01-19 | **Journal:** arXiv (Cornell University) | **Citations:** 0 | **Access:** 🔓
-
-**Abstract:** We report magnetic susceptibility, isothermal magnetization, and specific-heat measurements on the rare-earth hexaaluminate SmMgAl$_{11}$O$_{19}$, where Sm$^{3+}$ realizes a strongly quenched Kramers doublet on a triangular lattice with an exceptionally weak net exchange scale. The Curie--Weiss analysis yields strongly reduced ground-doublet $g$ factors, $g_{ab}\simeq 0.65$ and $g_{c}\simeq 0.70$. This indicates that the low-temperature response is governed primarily by single-ion physics, with ...
-
-**Topics:** Condensed matter physics, Physics, Magnetism, Mixing (physics), Anisotropy
-
----
 
 ## Full Bibliography
 

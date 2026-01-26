@@ -1,34 +1,16 @@
 # Rare Earth Separation Literature Update
 
 **Report Period:** 2025-12-29 to 2026-01-05
-**Generated:** 2026-01-05 10:27
+**Generated:** 2026-01-05 10:44
 **Total Publications Found:** 14
 
 ---
 
 ## Executive Summary
 
-This week saw significant developments in both academic research and industry news for rare earth separation technologies.
-
-### Key Highlights
-
-**Academic Research:**
-- New work on **AI-driven extractant discovery** using large language models for f-element separation (Zhang et al.)
-- Comprehensive review of **deep eutectic solvents** as sustainable alternatives for REE separation (Khan et al.)
-- Advances in **dysprosium recovery** from secondary sources, critical for permanent magnets (Rudnik)
-- **Microscale ion exchange** methods showing promise for lanthanide separation scale-up (Angermeier et al.)
-
-**Industry Developments:**
-- **Ucore's RapidSX technology** transitioning to Louisiana facility, targeting 5,000 tpa HREE processing in 2026
-- **IonicRE-USSM partnership** announced for 1,800-acre magnet recycling facility in Missouri
-- **ORNL's DGA ligand technology** licensed to Marshallton for cost-effective REE separation
-- **Lynas halts Texas HREE facility** construction due to permitting delays
-
-**Policy Updates:**
-- China's October 2025 export controls **temporarily suspended** until November 2026
-- Earlier controls on Sm, Gd, Tb, Dy, Lu, Sc, Y **remain in effect**
-- US expanding critical minerals focus to include **antimony and tungsten**
-- USGS expanded critical minerals list from **50 to 60 materials**
+This report summarizes recent publications related to rare earth element separation
+technologies discovered through OpenAlex database searches. Publications are
+categorized by topic area for easier navigation.
 
 ### Publications by Category
 
@@ -234,56 +216,6 @@ This week saw significant developments in both academic research and industry ne
 **Abstract:** Abstract This work investigates the process–structure–property relationships in cobalt-free Alnico-3 permanent magnets fabricated using directed energy deposition (DED), a laser-based additive manufacturing technique. Systematic variation of laser power, scan speed, and powder mass flow rate is considered through the framework of global energy deposition (GED), a derived parameter that consolidates energy input across operating conditions. Microstructural characterization reveals that as-deposit...
 
 **Topics:** Coercivity, Alnico, Materials science, Remanence, Microstructure
-
----
-
-## Industry & Policy News
-
-### Separation Technology Developments
-
-**Ucore RapidSX Commercialization**
-Ucore Rare Metals is transitioning its RapidSX separation technology to its under-construction Louisiana Strategic Metals Complex (SMC) in Alexandria, Louisiana. The facility will scale from 2,000 tonnes per annum in Q4-2025 to over 5,000 tpa in 2026, representing a significant step toward US domestic HREE processing capability.
-[Source](https://ucore.com/ucore-readies-for-louisiana-2026-heavy-rare-earth-element-processing/)
-
-**ORNL DGA Ligand Technology Licensed**
-Oak Ridge National Laboratory's diglycolamide (DGA) ligand technology has been licensed to Marshallton Research Laboratories. Developed through DOE's Critical Materials Institute, these DGAs offer more selective separation with reduced chemical consumption and waste generation, potentially lowering both operating and capital costs.
-[Source](https://www.ornl.gov/news/game-changing-rare-earth-elements-separation-technology-licensed-marshallton)
-
-**Liquid Membrane Research**
-A new review in the Journal of Water Process Engineering examines liquid membrane (LM) technologies as cleaner alternatives for REE processing. While showing promise for recovering REEs from wastewater and e-waste, significant technical and economic barriers remain before challenging China's industrial-scale dominance.
-
-### Recycling Initiatives
-
-**IonicRE-USSM Missouri Facility**
-Australia's Ionic Rare Earths and US Strategic Metals signed an MOU to develop a vertically integrated rare earth recycling site at a 1,800-acre facility in Missouri. Using proprietary hydro-metallurgical technology, the facility will extract REEs from end-of-life permanent magnets, producing Nd, Pr, Dy, Tb, Sm, Gd, and Ho for EVs and wind turbines.
-[Source](https://interestingengineering.com/innovation/dead-magnets-turned-into-high-purity)
-
-**DOE Funding for Recovery Projects**
-The US Department of Energy has offered $134M to boost rare earth recovery projects as part of the Rare Earth Demonstration Facility program, focusing on full-scale extraction and separation facilities for Pr, Nd, Tb, and Dy.
-[Source](https://www.wastedive.com/news/us-energy-department-134m-rare-earth-recovery/807284/)
-
-### Policy & Trade Updates
-
-**China Export Controls: Temporary Suspension**
-China has suspended implementation of its October 2025 rare earth export controls until November 2026, as part of an agreement with the US. However, earlier controls from April 2025 on seven medium- and heavy-rare-earth elements (Sm, Gd, Tb, Dy, Lu, Sc, Y) remain in effect, continuing to trigger licensing obligations.
-[Source](https://www.china-briefing.com/news/chinas-rare-earth-export-controls-impacts-on-businesses/)
-
-**New Controls on Other Critical Metals**
-China designated only 15 companies for tungsten exports, 11 for antimony, and 44 for silver through 2026-2027, establishing state-controlled whitelists. Unlike rare earths which use case-by-case licensing, these materials now operate under a fixed exporter system.
-[Source](https://rareearthexchanges.com/news/chinas-exclusive-export-list-for-critical-metals-2026-2027-whos-in-and-why-it-matters/)
-
-**US Critical Minerals Strategy Expanding**
-Federal investment is expanding beyond rare earth elements to include antimony and tungsten, which represent some of the US's most vulnerable supply chains. The USGS expanded the federal critical minerals list from 50 to 60 materials, adding copper, silver, and rhenium.
-[Source](https://www.mining.com/how-2026-will-reshape-the-us-critical-mineral-resilience/)
-
-### Challenges & Setbacks
-
-**Lynas Texas Facility Delayed**
-Lynas Rare Earths has halted construction of its planned HREE processing facility in Seadrift, Texas due to delays in securing a key wastewater disposal permit, jeopardizing its 2026 operational target.
-
-**China's Continued Dominance**
-Despite diversification efforts, China accounts for approximately 91% of global REE separation and refining, and 94% of sintered permanent magnet production—up from 50% two decades ago.
-[Source](https://www.iea.org/commentaries/with-new-export-controls-on-critical-minerals-supply-concentration-risks-become-reality)
 
 ---
 
