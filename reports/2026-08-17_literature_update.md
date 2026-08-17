@@ -1,8 +1,8 @@
 # Rare Earth Separation Literature Update
 
-**Report Period:** 2026-08-10 to 2026-08-17
-**Generated:** 2026-08-17 18:20
-**Total Publications Found:** 27
+**Report Period:** 2026-07-13 to 2026-08-17
+**Generated:** 2026-08-17 18:21
+**Total Publications Found:** 43
 
 ---
 
@@ -16,12 +16,12 @@ categorized by topic area for easier navigation.
 
 | Category | Count |
 |----------|-------|
-| Separation Technologies | 7 |
-| Extractants & Materials | 2 |
-| Recycling & Urban Mining | 1 |
-| Environmental & Sustainability | 2 |
+| Separation Technologies | 11 |
+| Extractants & Materials | 5 |
+| Recycling & Urban Mining | 3 |
+| Environmental & Sustainability | 3 |
 | Supply Chain & Policy | 4 |
-| Other | 11 |
+| Other | 17 |
 
 ---
 
@@ -123,6 +123,60 @@ categorized by topic area for easier navigation.
 
 ---
 
+### 8. Selective extraction of thorium from rare earth elements using natural amphiphilic polyphenols at the air-aqueous interface
+
+**Authors:** Yongming Zhao, Wenlong Sun, Pengfei Shi, Boxiao Wang, Xufeng Chen, et al.
+
+**Published:** 2026-08-07 | **Journal:** Desalination | **Citations:** 0 | **Access:** 🔒
+
+**DOI:** [https://doi.org/10.1016/j.desal.2026.120649](https://doi.org/10.1016/j.desal.2026.120649)
+
+**Topics:** Thorium, Chemistry, Rare earth, Amphiphile, Extraction (chemistry)
+
+---
+
+### 9. Electrocatalytic Molecular Editing as a New Paradigm for Rare‐Earth Separation
+
+**Authors:** Yichen Luo, Xun Zhang, Qishun Wang, Zhaomin Hao, Wuping Liao
+
+**Published:** 2026-08-06 | **Journal:** Small | **Citations:** 0 | **Access:** 🔒
+
+**DOI:** [https://doi.org/10.1002/smll.75134](https://doi.org/10.1002/smll.75134)
+
+**Abstract:** ABSTRACT Efficient separation of yttrium from lanthanides remains a persistent challenge due to the limited intrinsic selectivity of molecular extractants. Here, we report an electrocatalytic approach for site‐selective functionalization of a high‐performance extractant via in situ generated reactive oxygen species. An oxygen‐vacancy‐rich hollow Bi 2 O 3 (S) catalyst selectively produces *OOH intermediates through the two‐electron oxygen reduction reaction under mild conditions. These interfacia...
+
+**Topics:** Selectivity, Electrocatalyst, Catalysis, Combinatorial chemistry, Chemistry
+
+---
+
+### 10. Praseodymium Without a Licence: Recovery of the Nd/Pr Pair from Magnet Leachates, Magnet-Plant Effluent and Phosphogypsum by Deep-Vacuum Phase Separation
+
+**Authors:** Michael Vischmidt
+
+**Published:** 2026-08-05 | **Journal:** Zenodo (CERN European Organization for Nuclear Research) | **Citations:** 0 | **Access:** 🔓
+
+**DOI:** [https://doi.org/10.5281/zenodo.21806467](https://doi.org/10.5281/zenodo.21806467)
+
+**Abstract:** Praseodymium is almost never sold as praseodymium. It leaves the refinery bound to neodymium as the NdPr alloy known as didymium, because praseodymium and neodymium are adjacent lanthanides whose separation factor in solvent extraction is close to unity, and splitting them demands hundreds to thousands of counter-current stages. That single fact — not ore, not geology — is the structure of the market. Whoever holds the Nd/Pr separation train holds the permanent-magnet industry. Approximately 85%...
+
+**Topics:** Praseodymium, Neodymium, Neodymium magnet, Effluent, Materials science
+
+---
+
+### 11. Praseodymium Without a Licence: Recovery of the Nd/Pr Pair from Magnet Leachates, Magnet-Plant Effluent and Phosphogypsum by Deep-Vacuum Phase Separation
+
+**Authors:** Michael Vischmidt
+
+**Published:** 2026-08-05 | **Journal:** Zenodo (CERN European Organization for Nuclear Research) | **Citations:** 0 | **Access:** 🔓
+
+**DOI:** [https://doi.org/10.5281/zenodo.21806468](https://doi.org/10.5281/zenodo.21806468)
+
+**Abstract:** Praseodymium is almost never sold as praseodymium. It leaves the refinery bound to neodymium as the NdPr alloy known as didymium, because praseodymium and neodymium are adjacent lanthanides whose separation factor in solvent extraction is close to unity, and splitting them demands hundreds to thousands of counter-current stages. That single fact — not ore, not geology — is the structure of the market. Whoever holds the Nd/Pr separation train holds the permanent-magnet industry. Approximately 85%...
+
+**Topics:** Praseodymium, Neodymium, Neodymium magnet, Effluent, Materials science
+
+---
+
 ## Extractants & Materials
 
 ### 1. Ontwikkeling van nieuwe liganden voor de selectieve scheiding van americium
@@ -151,6 +205,46 @@ categorized by topic area for easier navigation.
 
 ---
 
+### 3. Upcycling Rare Earth Elements from Leached Phosphor Fractions (YOX, LAP) Utilizing α-Aminobis(phosphonates) as Precipitants and Antenna Ligands
+
+**Authors:** Krista Oikarinen, Esa Kukkonen, Minnea Tuomisto, Janne Yliharju, Arttu Miettinen, et al.
+
+**Published:** 2026-08-07 | **Journal:** ChemRxiv | **Citations:** 0 | **Access:** 🔓
+
+**DOI:** [https://doi.org/10.26434/chemrxiv-2025-wt323/v2](https://doi.org/10.26434/chemrxiv-2025-wt323/v2)
+
+**Abstract:** In this study, an efficient three‑phase process was developed to upcycle rare earth elements (REEs) from spent fluorescent lamp phosphor. The method enables recovery of high‑value emitting materials without relying on conventional oxalate precipitation or high‑temperature calcination. Using methanesulfonic acid (MSA) as the lixiviant, the halophosphonate (HALO), yttrium‑oxide (YOX), and lanthanum‑phosphate (LAP) fractions were selectively leached into separate solutions. The YOX and LAP leachate...
+
+**Topics:** Phosphor, Europium, Impurity, Materials science, Luminescence
+
+---
+
+### 4. Comparison of the effectiveness of various extraction agents for separating europium into ionic liquids
+
+**Authors:** Daria Matějková, Kateřina Čubová, Miroslava Semelová
+
+**Published:** 2026-08-07 | **Journal:** Research Square | **Citations:** 0 | **Access:** 🔓
+
+**DOI:** [https://doi.org/10.21203/rs.3.rs-10545593/v1](https://doi.org/10.21203/rs.3.rs-10545593/v1)
+
+**Topics:** Ionic liquid, Extraction (chemistry), Organic solvent, Nuclear decommissioning, Volume (thermodynamics)
+
+---
+
+### 5. Separation and Recovery of High-Purity Dysprosium from Electric Vehicle Scrap Permanent Magnets Using Cyanex 572, a Cationic Extractant in a Membrane Solvent Extraction Process
+
+**Authors:** Syed Z. Islam, Shailesh Dangwal, Priyesh Wagh, Vishwanath G. Deshmane, P. R. Yasasvi Gangavarapu, et al.
+
+**Published:** 2026-08-04 | **Journal:** ACS Sustainable Resource Management | **Citations:** 0 | **Access:** 🔓
+
+**DOI:** [https://doi.org/10.1021/acssusresmgt.5c00559](https://doi.org/10.1021/acssusresmgt.5c00559)
+
+**Abstract:** Abstract Rare earth elements (REEs), especially heavy rare earth elements such as dysprosium (Dy), have gained immense attention globally due to their widespread use in many state-of-the-art technologies. Consequently, demand for REEs is increasing rapidly in comparison to their supply. Recycling of REEs from end-of-life (EoL) electronic waste (e-waste) can help to mitigate the increasing gap between the demand and supply of REEs. This study reports the separation and recovery of high-purity Dy ...
+
+**Topics:** Dysprosium, Scrap, Neodymium, Materials science, Neodymium magnet
+
+---
+
 ## Recycling & Urban Mining
 
 ### 1. Subsidies, Environmental Taxes, and Rare Earth Recycling: A Game-Theoretical Analysis of Reverse Supply Chain Equilibrium
@@ -164,6 +258,34 @@ categorized by topic area for easier navigation.
 **Abstract:** Rare earths are a strategically vital mineral resource on a global scale; the security of their supply chain and their recycling face severe challenges amid dual pressures of resource scarcity and environmental protection. This study focuses on the reverse supply chain for rare earth permanent magnet materials—specifically those based on praseodymium and neodymium—constructing a two-level game model comprising a rare earth oligopoly (Stackelberg leader) and two recyclers (Cournot followers). It ...
 
 **Topics:** Supply chain, Remanufacturing, Incentive, Business, Oligopoly
+
+---
+
+### 2. Upcycling of NdFeB Permanent Magnets for Green Applications
+
+**Authors:** Sandra Pavón, Sebastian Hippmann, Hawi L. Challa, Clemens Rogoll, Peter J. Fröhlich, et al.
+
+**Published:** 2026-08-07 | **Journal:** Waste and Biomass Valorization | **Citations:** 0 | **Access:** 🔓
+
+**DOI:** [https://doi.org/10.1007/s12649-026-03754-1](https://doi.org/10.1007/s12649-026-03754-1)
+
+**Abstract:** The increasing demand for rare earth elements (REEs), particularly neodymium is driving the search for sustainable recovery pathways within Europe’s green transition. This study presents an integrated upcycling strategy for neodymium-iron-boron (NdFeB) permanent magnets, combining solid-state chlorination with selective separation techniques to efficiently recover neodymium, iron, and boron. The process achieves a REE recovery yield of 99.8 ± 0.1%, producing oxalates with a purity of up to 98.2%...
+
+**Topics:** Valorisation, Raw material, Circular economy, Waste management, Neodymium magnet
+
+---
+
+### 3. Metal adsorption from acidic wastewater using a novel radiografted adsorbent with a focus on rare earth element (REE) recovery
+
+**Authors:** Đani Škalamera, Jelena Petrović, Xiaohan Pan, Đorđe Cvjetinović
+
+**Published:** 2026-08-06 | **Journal:** Results in Chemistry | **Citations:** 0 | **Access:** 🔓
+
+**DOI:** [https://doi.org/10.1016/j.rechem.2026.103726](https://doi.org/10.1016/j.rechem.2026.103726)
+
+**Abstract:** Developing efficient, inexpensive and sustainable metal recovery methods from wastewater reduces the global reliance on primary mining that causes increased energy and chemical consumption, waste generation and environmental degradation. Currently a special focus is given to recovery of Rare Earth Elements (REEs) due to their global importance. Therefore, in this study we aimed to produce a simple and efficient material capable of recovering and concentrating REEs, even at low concentrations and...
+
+**Topics:** Adsorption, Wastewater, Chemistry, Leachate, Rare earth
 
 ---
 
@@ -192,6 +314,20 @@ categorized by topic area for easier navigation.
 **Abstract:** ABSTRACT Soil contamination from smelter emissions, including heavy metals (HM), rare earth elements (REEs), and sulfur, poses a significant threat to soil ecosystems. In the immediate vicinity of the Głogów Copper Smelter, HM concentrations were several times higher than in more distant forest stands. This study assessed the impact of pollutants on soil fauna in single‐aged pine forests, with detailed analyses for Mesostigmata, Oribatida, and Collembola, and broader soil arthropod communities e...
 
 **Topics:** Environmental science, Bioindicator, Environmental chemistry, Pollutant, Smelting
+
+---
+
+### 3. Biological strategies for the recovery and separation of rare earth elements
+
+**Authors:** Fiona Bunn
+
+**Published:** 2026-08-07 | **Journal:** ERA | **Citations:** 0 | **Access:** 🔓
+
+**DOI:** [https://doi.org/10.7488/era/7554](https://doi.org/10.7488/era/7554)
+
+**Abstract:** Rare Earth elements (REEs) are critical metals for the green and digital transitions, with key applications in technologies such as wind turbines, electric vehicles and electronics. However existing extraction and separation methods, such as acid roasting/leaching and solvent extraction, have high environmental costs. Biotechnology can offer benefits over traditional hydrometallurgy, especially if facilitating greater selectivity for trace elements, requiring lower energy and chemical inputs and...
+
+**Topics:** Bioleaching, Leaching (pedology), Oxalic acid, Chemistry, Environmental chemistry
 
 ---
 
@@ -405,6 +541,88 @@ categorized by topic area for easier navigation.
 
 ---
 
+### 12. Fluorite‐Type Silsesquioxane‐Protected Cerium Cluster as Molecular Analog of Highly Reduced Nanoceria Fragment for Efficient Photocatalysis
+
+**Authors:** Kai Sheng, Qi Shen, Xianqiang Huang, Rakesh Kumar Gupta, Mohammad Azam, et al.
+
+**Published:** 2026-08-08 | **Journal:** Small | **Citations:** 0 | **Access:** 🔓
+
+**DOI:** [https://doi.org/10.1002/smll.75013](https://doi.org/10.1002/smll.75013)
+
+**Abstract:** ABSTRACT The surface oxygen vacancy defects generated from the abstraction of lattice oxygen atoms of bulk ceria accompanied by the reduction of Ce IV to Ce III , are considered to play a pivotal role in photocatalysis. As ideal molecular models of nanoceria, atom‐precise cerium‐oxo clusters (COCs) hold great promise in determining the accurate Ce III /Ce IV ratio and disclosing the underlying catalytic mechanism. However, the number of COCs, especially those mixed‐valent COCs with high surface ...
+
+**Topics:** Photocatalysis, Cerium, Cluster (spacecraft), Catalysis, Adsorption
+
+---
+
+### 13. Continuous Process Intensification for Rare Earth Element Adsorption
+
+**Authors:** Kyle Madill
+
+**Published:** 2026-08-07 | **Journal:** Digital Commons - Montana Tech (Montana Tech of the University of Montana) | **Citations:** 0 | **Access:** 🔒
+
+**Abstract:** A continuous flow resonant vibratory adsorption swing reactor was designed to facilitate adsorption interactions between biochar and rare earth elements in a slurry or aqueous solution. A continuous mixing vessel can allow operators to run a large quantity of material through the RVM in an automatic manner that requires little supervision. This will save the operators time and allow them to focus on other research tasks. The reactor that was built was designed to bolt into Resodyn Acoustic Mixer...
+
+**Topics:** Adsorption, Heat exchanger, Mixing (physics), Slurry, Materials science
+
+---
+
+### 14. Sorption Preconcentration of Rare Earth Elements on N-Methylpyrrolidone-Functionalized Graphene for ETV-ICP-OES Analysis of Aqueous Solutions
+
+**Authors:** N.S. Medvedev, Valeria D. Kurbatova, Victor G. Makotchenko, A. I. Saprykin, Mariya A. Gustaytis
+
+**Published:** 2026-08-05 | **Journal:** Figshare | **Citations:** 0 | **Access:** 🔓
+
+**DOI:** [https://doi.org/10.6084/m9.figshare.33162140.v1](https://doi.org/10.6084/m9.figshare.33162140.v1)
+
+**Abstract:** An advanced analytical strategy coupling inductively coupled plasma—optical emission spectrometry with electrothermal vaporization (ETV) has been established for the determination of rare earth elements (REEs) and other analytes in waters and industrial effluents, utilizing a novel graphene matrix functionalized with N-methylpyrrolidone (G-NMP) as a solid-phase extractant. Target REEs accumulated on the G-NMP phase were directly introduced into the inductively coupled plasma by ETV from sorbent ...
+
+**Topics:** Vaporization, Sorbent, Inductively coupled plasma, Volatilisation, Detection limit
+
+---
+
+### 15. Sorption Preconcentration of Rare Earth Elements on N-Methylpyrrolidone-Functionalized Graphene for ETV-ICP-OES Analysis of Aqueous Solutions
+
+**Authors:** N.S. Medvedev, Valeria D. Kurbatova, Victor G. Makotchenko, A. I. Saprykin, Mariya A. Gustaytis
+
+**Published:** 2026-08-05 | **Journal:** Analytical Letters | **Citations:** 0 | **Access:** 🔒
+
+**DOI:** [https://doi.org/10.1080/00032719.2026.2711781](https://doi.org/10.1080/00032719.2026.2711781)
+
+**Abstract:** An advanced analytical strategy coupling inductively coupled plasma—optical emission spectrometry with electrothermal vaporization (ETV) has been established for the determination of rare earth elements (REEs) and other analytes in waters and industrial effluents, utilizing a novel graphene matrix functionalized with N-methylpyrrolidone (G-NMP) as a solid-phase extractant. Target REEs accumulated on the G-NMP phase were directly introduced into the inductively coupled plasma by ETV from sorbent ...
+
+**Topics:** Chemistry, Vaporization, Sorbent, Inductively coupled plasma, Detection limit
+
+---
+
+### 16. Sorption Preconcentration of Rare Earth Elements on N-Methylpyrrolidone-Functionalized Graphene for ETV-ICP-OES Analysis of Aqueous Solutions
+
+**Authors:** N.S. Medvedev, Valeria D. Kurbatova, Victor G. Makotchenko, A. I. Saprykin, Mariya A. Gustaytis
+
+**Published:** 2026-08-05 | **Journal:** Figshare | **Citations:** 0 | **Access:** 🔓
+
+**DOI:** [https://doi.org/10.6084/m9.figshare.33162140](https://doi.org/10.6084/m9.figshare.33162140)
+
+**Abstract:** An advanced analytical strategy coupling inductively coupled plasma—optical emission spectrometry with electrothermal vaporization (ETV) has been established for the determination of rare earth elements (REEs) and other analytes in waters and industrial effluents, utilizing a novel graphene matrix functionalized with N-methylpyrrolidone (G-NMP) as a solid-phase extractant. Target REEs accumulated on the G-NMP phase were directly introduced into the inductively coupled plasma by ETV from sorbent ...
+
+**Topics:** Vaporization, Sorbent, Inductively coupled plasma, Volatilisation, Detection limit
+
+---
+
+### 17. Synergistic cation effects in oxidative–adsorptive desulfurization: Application of multi-metal ion-exchanged Y zeolite to model and real fuels
+
+**Authors:** Jafar Shafaghat, Salman Movahedirad, Mohammad Amin Sobati
+
+**Published:** 2026-08-05 | **Journal:** Results in Chemistry | **Citations:** 0 | **Access:** 🔓
+
+**DOI:** [https://doi.org/10.1016/j.rechem.2026.103720](https://doi.org/10.1016/j.rechem.2026.103720)
+
+**Abstract:** Achieving deep desulfurization requires innovative materials to capture refractory organosulfur compounds. This work presents a significant advancement through the synthesis and application of a multi-metal ion-exchanged zeolite (CeCuZnY) for the enhanced oxidative-adsorptive removal of dibenzothiophene (DBT) from model fuel. The strategic incorporation of Cu + , Zn 2+ , and Ce 3+ ions into the NaY framework created a superior adsorbent, whose properties and adsorption mechanism were extensively...
+
+**Topics:** Zeolite, Dibenzothiophene, Adsorption, Flue-gas desulfurization, Sulfur
+
+---
+
 ## Full Bibliography
 
 1. Ceyda Şavran, Esra Baştürkcü, Beril Tanç Kaya et al. (2026). Depressant-Free Selective Flotation of Barite from a Complex Rare Earth Ore: A Surface Chemistry Perspective. *JOM*. [https://doi.org/10.1007/s11837-026-08644-4](https://doi.org/10.1007/s11837-026-08644-4)
@@ -431,35 +649,67 @@ categorized by topic area for easier navigation.
 
 12. Zhenhua Feng, Wenjie Jiang, Binbin Tang et al. (2026). Selective Separation of Rare Earth Elements by Nanofiltration Membranes: Mechanisms, Performance, and Perspectives. *Membranes*. [https://doi.org/10.3390/membranes16080268](https://doi.org/10.3390/membranes16080268)
 
-13. Qinghua Deng, Husheng Tang, Yujie Qiang et al. (2026). Gradient delocalized 4f-2p-3d orbital cascade of Gd-O-Mn sites remolding interfacial electronic landscape for accelerated Li-CO <sub>2</sub> batteries redox kinetics. *Nano Research Energy*. [https://doi.org/10.26599/nre.2026.9120264](https://doi.org/10.26599/nre.2026.9120264)
+13. Yongming Zhao, Wenlong Sun, Pengfei Shi et al. (2026). Selective extraction of thorium from rare earth elements using natural amphiphilic polyphenols at the air-aqueous interface. *Desalination*. [https://doi.org/10.1016/j.desal.2026.120649](https://doi.org/10.1016/j.desal.2026.120649)
 
-14. Timothy Insoll (2026). Islamic Archaeology in Global Perspective. *Unknown Source*. [https://doi.org/10.4324/9781003036203](https://doi.org/10.4324/9781003036203)
+14. Fiona Bunn (2026). Biological strategies for the recovery and separation of rare earth elements. *ERA*. [https://doi.org/10.7488/era/7554](https://doi.org/10.7488/era/7554)
 
-15. Davide Piazza, Marco Graziano, Alessia Avesani et al. (2026). Marine holobionts: a model arena for host–microbe biology, from ecosystem function to biotechnology. *Unknown Source*. [https://doi.org/10.32942/x23d5k](https://doi.org/10.32942/x23d5k)
+15. Sandra Pavón, Sebastian Hippmann, Hawi L. Challa et al. (2026). Upcycling of NdFeB Permanent Magnets for Green Applications. *Waste and Biomass Valorization*. [https://doi.org/10.1007/s12649-026-03754-1](https://doi.org/10.1007/s12649-026-03754-1)
 
-16. Felipe S. M. Canisares, Vytor C. Oliveira, Alessandro B. S. Garcia et al. (2026). Solvent-dependent Sensitization and Photophysical Behavior of IrIII-EuIII Bimetallic Complexes. *Journal of Fluorescence*. [https://doi.org/10.1007/s10895-026-04895-1](https://doi.org/10.1007/s10895-026-04895-1)
+16. Krista Oikarinen, Esa Kukkonen, Minnea Tuomisto et al. (2026). Upcycling Rare Earth Elements from Leached Phosphor Fractions (YOX, LAP) Utilizing α-Aminobis(phosphonates) as Precipitants and Antenna Ligands. *ChemRxiv*. [https://doi.org/10.26434/chemrxiv-2025-wt323/v2](https://doi.org/10.26434/chemrxiv-2025-wt323/v2)
 
-17. Philip James (2026). Ecology the basics. *Unknown Source*. [https://doi.org/10.4324/9781003604464](https://doi.org/10.4324/9781003604464)
+17. Kyle Madill (2026). Continuous Process Intensification for Rare Earth Element Adsorption. *Digital Commons - Montana Tech (Montana Tech of the University of Montana)*.
 
-18. David L. Miller, Alexander R. Young, Arnab K. Ghosh et al. (2026). Classification of trees in New York City at the genus level from PlanetScope satellite imagery and airborne lidar. *Scientific Data*. [https://doi.org/10.1038/s41597-026-08104-3](https://doi.org/10.1038/s41597-026-08104-3)
+18. Đani Škalamera, Jelena Petrović, Xiaohan Pan et al. (2026). Metal adsorption from acidic wastewater using a novel radiografted adsorbent with a focus on rare earth element (REE) recovery. *Results in Chemistry*. [https://doi.org/10.1016/j.rechem.2026.103726](https://doi.org/10.1016/j.rechem.2026.103726)
 
-19. Md. Abdullah Al Masud, Masami Kawahara, Fatima Zahra Chafi et al. (2026). Control of angular momentum of bismuth, gallium-substituted neodymium iron garnets. *Japanese Journal of Applied Physics*. [https://doi.org/10.35848/1347-4065/ae9882](https://doi.org/10.35848/1347-4065/ae9882)
+19. Qinghua Deng, Husheng Tang, Yujie Qiang et al. (2026). Gradient delocalized 4f-2p-3d orbital cascade of Gd-O-Mn sites remolding interfacial electronic landscape for accelerated Li-CO <sub>2</sub> batteries redox kinetics. *Nano Research Energy*. [https://doi.org/10.26599/nre.2026.9120264](https://doi.org/10.26599/nre.2026.9120264)
 
-20. Jacek Malica, Cezary K. Urbanowski, Mirosław Mleczek et al. (2026). Soil Contamination Around the Copper Smelter and the Use of Soil Microarthropods as Bioindicators. *Land Degradation and Development*. [https://doi.org/10.1002/ldr.70839](https://doi.org/10.1002/ldr.70839)
+20. Timothy Insoll (2026). Islamic Archaeology in Global Perspective. *Unknown Source*. [https://doi.org/10.4324/9781003036203](https://doi.org/10.4324/9781003036203)
 
-21. Jiawen Xiao, Xiuli Wang, 稔 国岡 et al. (2026). Subsidies, Environmental Taxes, and Rare Earth Recycling: A Game-Theoretical Analysis of Reverse Supply Chain Equilibrium. *Sustainability*. [https://doi.org/10.3390/su18168281](https://doi.org/10.3390/su18168281)
+21. Davide Piazza, Marco Graziano, Alessia Avesani et al. (2026). Marine holobionts: a model arena for host–microbe biology, from ecosystem function to biotechnology. *Unknown Source*. [https://doi.org/10.32942/x23d5k](https://doi.org/10.32942/x23d5k)
 
-22. Jiachen An, Liangliang Chen (2026). More market-based tools, less supply chain vulnerability: China’s rare earths policy reforms and their impact on the global supply chain. *Frontiers in Environmental Science*. [https://doi.org/10.3389/fenvs.2026.1854509](https://doi.org/10.3389/fenvs.2026.1854509)
+22. Felipe S. M. Canisares, Vytor C. Oliveira, Alessandro B. S. Garcia et al. (2026). Solvent-dependent Sensitization and Photophysical Behavior of IrIII-EuIII Bimetallic Complexes. *Journal of Fluorescence*. [https://doi.org/10.1007/s10895-026-04895-1](https://doi.org/10.1007/s10895-026-04895-1)
 
-23. shuliu wang, Jiaman Li, sanmang wu et al. (2026). Critical Mineral Supply Restrictions and Global Technological Change: Micro-Evidence from Export Controls on Magnetic Rare Earths. *Research Square*. [https://doi.org/10.21203/rs.3.rs-10399222/v1](https://doi.org/10.21203/rs.3.rs-10399222/v1)
+23. Philip James (2026). Ecology the basics. *Unknown Source*. [https://doi.org/10.4324/9781003604464](https://doi.org/10.4324/9781003604464)
 
-24. ACHYUT Chowdhury (2027). The Structural Dependence Paradox: An RDT Analysis of Triadic Dependence in the Critical Minerals Value Chain. *Zenodo (CERN European Organization for Nuclear Research)*. [https://doi.org/10.5281/zenodo.20645228](https://doi.org/10.5281/zenodo.20645228)
+24. David L. Miller, Alexander R. Young, Arnab K. Ghosh et al. (2026). Classification of trees in New York City at the genus level from PlanetScope satellite imagery and airborne lidar. *Scientific Data*. [https://doi.org/10.1038/s41597-026-08104-3](https://doi.org/10.1038/s41597-026-08104-3)
 
-25. ACHYUT Chowdhury (2027). The Structural Dependence Paradox: An RDT Analysis of Triadic Dependence in the Critical Minerals Value Chain. *Zenodo (CERN European Organization for Nuclear Research)*. [https://doi.org/10.5281/zenodo.20645227](https://doi.org/10.5281/zenodo.20645227)
+25. Daria Matějková, Kateřina Čubová, Miroslava Semelová (2026). Comparison of the effectiveness of various extraction agents for separating europium into ionic liquids. *Research Square*. [https://doi.org/10.21203/rs.3.rs-10545593/v1](https://doi.org/10.21203/rs.3.rs-10545593/v1)
 
-26. Rishabh Tiwari, Béatrice Anne Baudet, Matthew Richard Coop (2026). Pore morphological evolution in normally and overconsolidated natural clays under one-dimensional loading: deionised and saline pore fluid conditions. *Bulletin of Engineering Geology and the Environment*. [https://doi.org/10.1007/s10064-026-05246-x](https://doi.org/10.1007/s10064-026-05246-x)
+26. Yichen Luo, Xun Zhang, Qishun Wang et al. (2026). Electrocatalytic Molecular Editing as a New Paradigm for Rare‐Earth Separation. *Small*. [https://doi.org/10.1002/smll.75134](https://doi.org/10.1002/smll.75134)
 
-27. Anissa Derder, Selma BEKKA, Najla Bentrad et al. (2026). Comparative assessment of eco-friendly priming strategies for enhancing the nutritional, phytochemical, and antioxidant properties of germinated &lt;i&gt;Moringa oleifera&lt;/i&gt; Lam. seeds. *Ecological Engineering & Environmental Technology*. [https://doi.org/10.12912/27197050/226397](https://doi.org/10.12912/27197050/226397)
+27. N.S. Medvedev, Valeria D. Kurbatova, Victor G. Makotchenko et al. (2026). Sorption Preconcentration of Rare Earth Elements on N-Methylpyrrolidone-Functionalized Graphene for ETV-ICP-OES Analysis of Aqueous Solutions. *Figshare*. [https://doi.org/10.6084/m9.figshare.33162140.v1](https://doi.org/10.6084/m9.figshare.33162140.v1)
+
+28. N.S. Medvedev, Valeria D. Kurbatova, Victor G. Makotchenko et al. (2026). Sorption Preconcentration of Rare Earth Elements on N-Methylpyrrolidone-Functionalized Graphene for ETV-ICP-OES Analysis of Aqueous Solutions. *Analytical Letters*. [https://doi.org/10.1080/00032719.2026.2711781](https://doi.org/10.1080/00032719.2026.2711781)
+
+29. N.S. Medvedev, Valeria D. Kurbatova, Victor G. Makotchenko et al. (2026). Sorption Preconcentration of Rare Earth Elements on N-Methylpyrrolidone-Functionalized Graphene for ETV-ICP-OES Analysis of Aqueous Solutions. *Figshare*. [https://doi.org/10.6084/m9.figshare.33162140](https://doi.org/10.6084/m9.figshare.33162140)
+
+30. Syed Z. Islam, Shailesh Dangwal, Priyesh Wagh et al. (2026). Separation and Recovery of High-Purity Dysprosium from Electric Vehicle Scrap Permanent Magnets Using Cyanex 572, a Cationic Extractant in a Membrane Solvent Extraction Process. *ACS Sustainable Resource Management*. [https://doi.org/10.1021/acssusresmgt.5c00559](https://doi.org/10.1021/acssusresmgt.5c00559)
+
+31. Md. Abdullah Al Masud, Masami Kawahara, Fatima Zahra Chafi et al. (2026). Control of angular momentum of bismuth, gallium-substituted neodymium iron garnets. *Japanese Journal of Applied Physics*. [https://doi.org/10.35848/1347-4065/ae9882](https://doi.org/10.35848/1347-4065/ae9882)
+
+32. Kai Sheng, Qi Shen, Xianqiang Huang et al. (2026). Fluorite‐Type Silsesquioxane‐Protected Cerium Cluster as Molecular Analog of Highly Reduced Nanoceria Fragment for Efficient Photocatalysis. *Small*. [https://doi.org/10.1002/smll.75013](https://doi.org/10.1002/smll.75013)
+
+33. Jafar Shafaghat, Salman Movahedirad, Mohammad Amin Sobati (2026). Synergistic cation effects in oxidative–adsorptive desulfurization: Application of multi-metal ion-exchanged Y zeolite to model and real fuels. *Results in Chemistry*. [https://doi.org/10.1016/j.rechem.2026.103720](https://doi.org/10.1016/j.rechem.2026.103720)
+
+34. Jacek Malica, Cezary K. Urbanowski, Mirosław Mleczek et al. (2026). Soil Contamination Around the Copper Smelter and the Use of Soil Microarthropods as Bioindicators. *Land Degradation and Development*. [https://doi.org/10.1002/ldr.70839](https://doi.org/10.1002/ldr.70839)
+
+35. Jiawen Xiao, Xiuli Wang, 稔 国岡 et al. (2026). Subsidies, Environmental Taxes, and Rare Earth Recycling: A Game-Theoretical Analysis of Reverse Supply Chain Equilibrium. *Sustainability*. [https://doi.org/10.3390/su18168281](https://doi.org/10.3390/su18168281)
+
+36. Jiachen An, Liangliang Chen (2026). More market-based tools, less supply chain vulnerability: China’s rare earths policy reforms and their impact on the global supply chain. *Frontiers in Environmental Science*. [https://doi.org/10.3389/fenvs.2026.1854509](https://doi.org/10.3389/fenvs.2026.1854509)
+
+37. shuliu wang, Jiaman Li, sanmang wu et al. (2026). Critical Mineral Supply Restrictions and Global Technological Change: Micro-Evidence from Export Controls on Magnetic Rare Earths. *Research Square*. [https://doi.org/10.21203/rs.3.rs-10399222/v1](https://doi.org/10.21203/rs.3.rs-10399222/v1)
+
+38. Michael Vischmidt (2026). Praseodymium Without a Licence: Recovery of the Nd/Pr Pair from Magnet Leachates, Magnet-Plant Effluent and Phosphogypsum by Deep-Vacuum Phase Separation. *Zenodo (CERN European Organization for Nuclear Research)*. [https://doi.org/10.5281/zenodo.21806467](https://doi.org/10.5281/zenodo.21806467)
+
+39. Michael Vischmidt (2026). Praseodymium Without a Licence: Recovery of the Nd/Pr Pair from Magnet Leachates, Magnet-Plant Effluent and Phosphogypsum by Deep-Vacuum Phase Separation. *Zenodo (CERN European Organization for Nuclear Research)*. [https://doi.org/10.5281/zenodo.21806468](https://doi.org/10.5281/zenodo.21806468)
+
+40. ACHYUT Chowdhury (2027). The Structural Dependence Paradox: An RDT Analysis of Triadic Dependence in the Critical Minerals Value Chain. *Zenodo (CERN European Organization for Nuclear Research)*. [https://doi.org/10.5281/zenodo.20645228](https://doi.org/10.5281/zenodo.20645228)
+
+41. ACHYUT Chowdhury (2027). The Structural Dependence Paradox: An RDT Analysis of Triadic Dependence in the Critical Minerals Value Chain. *Zenodo (CERN European Organization for Nuclear Research)*. [https://doi.org/10.5281/zenodo.20645227](https://doi.org/10.5281/zenodo.20645227)
+
+42. Rishabh Tiwari, Béatrice Anne Baudet, Matthew Richard Coop (2026). Pore morphological evolution in normally and overconsolidated natural clays under one-dimensional loading: deionised and saline pore fluid conditions. *Bulletin of Engineering Geology and the Environment*. [https://doi.org/10.1007/s10064-026-05246-x](https://doi.org/10.1007/s10064-026-05246-x)
+
+43. Anissa Derder, Selma BEKKA, Najla Bentrad et al. (2026). Comparative assessment of eco-friendly priming strategies for enhancing the nutritional, phytochemical, and antioxidant properties of germinated &lt;i&gt;Moringa oleifera&lt;/i&gt; Lam. seeds. *Ecological Engineering & Environmental Technology*. [https://doi.org/10.12912/27197050/226397](https://doi.org/10.12912/27197050/226397)
 
 
 ## BibTeX Entries
@@ -561,7 +811,55 @@ categorized by topic area for easier navigation.
   doi = {10.3390/membranes16080268},
   url = {https://openalex.org/works/W7202385009},
 }
-@article{deng2026_13,
+@article{zhao2026_13,
+  author = {Yongming Zhao and Wenlong Sun and Pengfei Shi and Boxiao Wang and Xufeng Chen and et al.},
+  title = {{Selective extraction of thorium from rare earth elements using natural amphiphilic polyphenols at the air-aqueous interface}},
+  journal = {Desalination},
+  year = {2026},
+  doi = {10.1016/j.desal.2026.120649},
+  url = {https://openalex.org/works/W7201830289},
+}
+@article{bunn2026_14,
+  author = {Fiona Bunn},
+  title = {{Biological strategies for the recovery and separation of rare earth elements}},
+  journal = {ERA},
+  year = {2026},
+  doi = {10.7488/era/7554},
+  url = {https://openalex.org/works/W7201835637},
+}
+@article{pavón2026_15,
+  author = {Sandra Pavón and Sebastian Hippmann and Hawi L. Challa and Clemens Rogoll and Peter J. Fröhlich and et al.},
+  title = {{Upcycling of NdFeB Permanent Magnets for Green Applications}},
+  journal = {Waste and Biomass Valorization},
+  year = {2026},
+  doi = {10.1007/s12649-026-03754-1},
+  url = {https://openalex.org/works/W7201878421},
+}
+@article{oikarinen2026_16,
+  author = {Krista Oikarinen and Esa Kukkonen and Minnea Tuomisto and Janne Yliharju and Arttu Miettinen and et al.},
+  title = {{Upcycling Rare Earth Elements from Leached Phosphor Fractions (YOX, LAP) Utilizing α-Aminobis(phosphonates) as Precipitants and Antenna Ligands}},
+  journal = {ChemRxiv},
+  year = {2026},
+  doi = {10.26434/chemrxiv-2025-wt323/v2},
+  url = {https://openalex.org/works/W7201882619},
+}
+@article{madill2026_17,
+  author = {Kyle Madill},
+  title = {{Continuous Process Intensification for Rare Earth Element Adsorption}},
+  journal = {Digital Commons - Montana Tech (Montana Tech of the University of Montana)},
+  year = {2026},
+  doi = {},
+  url = {https://openalex.org/works/W7201930072},
+}
+@article{škalamera2026_18,
+  author = {Đani Škalamera and Jelena Petrović and Xiaohan Pan and Đorđe Cvjetinović},
+  title = {{Metal adsorption from acidic wastewater using a novel radiografted adsorbent with a focus on rare earth element (REE) recovery}},
+  journal = {Results in Chemistry},
+  year = {2026},
+  doi = {10.1016/j.rechem.2026.103726},
+  url = {https://openalex.org/works/W7197015896},
+}
+@article{deng2026_19,
   author = {Qinghua Deng and Husheng Tang and Yujie Qiang and Huaqing Liu and Yahui Wu},
   title = {{Gradient delocalized 4f-2p-3d orbital cascade of Gd-O-Mn sites remolding interfacial electronic landscape for accelerated Li-CO <sub>2</sub> batteries redox kinetics}},
   journal = {Nano Research Energy},
@@ -569,7 +867,7 @@ categorized by topic area for easier navigation.
   doi = {10.26599/nre.2026.9120264},
   url = {https://openalex.org/works/W7203496000},
 }
-@article{insoll2026_14,
+@article{insoll2026_20,
   author = {Timothy Insoll},
   title = {{Islamic Archaeology in Global Perspective}},
   journal = {Unknown Source},
@@ -577,7 +875,7 @@ categorized by topic area for easier navigation.
   doi = {10.4324/9781003036203},
   url = {https://openalex.org/works/W7203496371},
 }
-@article{piazza2026_15,
+@article{piazza2026_21,
   author = {Davide Piazza and Marco Graziano and Alessia Avesani and Marco Fondi and Emanuele Bosi and et al.},
   title = {{Marine holobionts: a model arena for host–microbe biology, from ecosystem function to biotechnology}},
   journal = {Unknown Source},
@@ -585,7 +883,7 @@ categorized by topic area for easier navigation.
   doi = {10.32942/x23d5k},
   url = {https://openalex.org/works/W7203471977},
 }
-@article{canisares2026_16,
+@article{canisares2026_22,
   author = {Felipe S. M. Canisares and Vytor C. Oliveira and Alessandro B. S. Garcia and João Honorato and Javier A. Ellena and et al.},
   title = {{Solvent-dependent Sensitization and Photophysical Behavior of IrIII-EuIII Bimetallic Complexes}},
   journal = {Journal of Fluorescence},
@@ -593,7 +891,7 @@ categorized by topic area for easier navigation.
   doi = {10.1007/s10895-026-04895-1},
   url = {https://openalex.org/works/W7202174864},
 }
-@article{james2026_17,
+@article{james2026_23,
   author = {Philip James},
   title = {{Ecology the basics}},
   journal = {Unknown Source},
@@ -601,7 +899,7 @@ categorized by topic area for easier navigation.
   doi = {10.4324/9781003604464},
   url = {https://openalex.org/works/W7203441343},
 }
-@article{miller2026_18,
+@article{miller2026_24,
   author = {David L. Miller and Alexander R. Young and Arnab K. Ghosh and Aalayna Rae Green and Ghislaine Jumonville and et al.},
   title = {{Classification of trees in New York City at the genus level from PlanetScope satellite imagery and airborne lidar}},
   journal = {Scientific Data},
@@ -609,7 +907,55 @@ categorized by topic area for easier navigation.
   doi = {10.1038/s41597-026-08104-3},
   url = {https://openalex.org/works/W7203464638},
 }
-@article{masud2026_19,
+@article{matějková2026_25,
+  author = {Daria Matějková and Kateřina Čubová and Miroslava Semelová},
+  title = {{Comparison of the effectiveness of various extraction agents for separating europium into ionic liquids}},
+  journal = {Research Square},
+  year = {2026},
+  doi = {10.21203/rs.3.rs-10545593/v1},
+  url = {https://openalex.org/works/W7201870328},
+}
+@article{luo2026_26,
+  author = {Yichen Luo and Xun Zhang and Qishun Wang and Zhaomin Hao and Wuping Liao},
+  title = {{Electrocatalytic Molecular Editing as a New Paradigm for Rare‐Earth Separation}},
+  journal = {Small},
+  year = {2026},
+  doi = {10.1002/smll.75134},
+  url = {https://openalex.org/works/W7196985402},
+}
+@article{medvedev2026_27,
+  author = {N.S. Medvedev and Valeria D. Kurbatova and Victor G. Makotchenko and A. I. Saprykin and Mariya A. Gustaytis},
+  title = {{Sorption Preconcentration of Rare Earth Elements on N-Methylpyrrolidone-Functionalized Graphene for ETV-ICP-OES Analysis of Aqueous Solutions}},
+  journal = {Figshare},
+  year = {2026},
+  doi = {10.6084/m9.figshare.33162140.v1},
+  url = {https://openalex.org/works/W7172507302},
+}
+@article{medvedev2026_28,
+  author = {N.S. Medvedev and Valeria D. Kurbatova and Victor G. Makotchenko and A. I. Saprykin and Mariya A. Gustaytis},
+  title = {{Sorption Preconcentration of Rare Earth Elements on N-Methylpyrrolidone-Functionalized Graphene for ETV-ICP-OES Analysis of Aqueous Solutions}},
+  journal = {Analytical Letters},
+  year = {2026},
+  doi = {10.1080/00032719.2026.2711781},
+  url = {https://openalex.org/works/W7172523139},
+}
+@article{medvedev2026_29,
+  author = {N.S. Medvedev and Valeria D. Kurbatova and Victor G. Makotchenko and A. I. Saprykin and Mariya A. Gustaytis},
+  title = {{Sorption Preconcentration of Rare Earth Elements on N-Methylpyrrolidone-Functionalized Graphene for ETV-ICP-OES Analysis of Aqueous Solutions}},
+  journal = {Figshare},
+  year = {2026},
+  doi = {10.6084/m9.figshare.33162140},
+  url = {https://openalex.org/works/W7172534606},
+}
+@article{islam2026_30,
+  author = {Syed Z. Islam and Shailesh Dangwal and Priyesh Wagh and Vishwanath G. Deshmane and P. R. Yasasvi Gangavarapu and et al.},
+  title = {{Separation and Recovery of High-Purity Dysprosium from Electric Vehicle Scrap Permanent Magnets Using Cyanex 572, a Cationic Extractant in a Membrane Solvent Extraction Process}},
+  journal = {ACS Sustainable Resource Management},
+  year = {2026},
+  doi = {10.1021/acssusresmgt.5c00559},
+  url = {https://openalex.org/works/W7172387877},
+}
+@article{masud2026_31,
   author = {Md. Abdullah Al Masud and Masami Kawahara and Fatima Zahra Chafi and Masami Nishikawa and Takayuki ISHIBASHI},
   title = {{Control of angular momentum of bismuth, gallium-substituted neodymium iron garnets}},
   journal = {Japanese Journal of Applied Physics},
@@ -617,7 +963,23 @@ categorized by topic area for easier navigation.
   doi = {10.35848/1347-4065/ae9882},
   url = {https://openalex.org/works/W7202266380},
 }
-@article{malica2026_20,
+@article{sheng2026_32,
+  author = {Kai Sheng and Qi Shen and Xianqiang Huang and Rakesh Kumar Gupta and Mohammad Azam and et al.},
+  title = {{Fluorite‐Type Silsesquioxane‐Protected Cerium Cluster as Molecular Analog of Highly Reduced Nanoceria Fragment for Efficient Photocatalysis}},
+  journal = {Small},
+  year = {2026},
+  doi = {10.1002/smll.75013},
+  url = {https://openalex.org/works/W7201963455},
+}
+@article{shafaghat2026_33,
+  author = {Jafar Shafaghat and Salman Movahedirad and Mohammad Amin Sobati},
+  title = {{Synergistic cation effects in oxidative–adsorptive desulfurization: Application of multi-metal ion-exchanged Y zeolite to model and real fuels}},
+  journal = {Results in Chemistry},
+  year = {2026},
+  doi = {10.1016/j.rechem.2026.103720},
+  url = {https://openalex.org/works/W7172506730},
+}
+@article{malica2026_34,
   author = {Jacek Malica and Cezary K. Urbanowski and Mirosław Mleczek and Krzysztof Turczański and Przemysław Niedzielski and et al.},
   title = {{Soil Contamination Around the Copper Smelter and the Use of Soil Microarthropods as Bioindicators}},
   journal = {Land Degradation and Development},
@@ -625,7 +987,7 @@ categorized by topic area for easier navigation.
   doi = {10.1002/ldr.70839},
   url = {https://openalex.org/works/W7202363424},
 }
-@article{xiao2026_21,
+@article{xiao2026_35,
   author = {Jiawen Xiao and Xiuli Wang and 稔 国岡 and Zhiwei Zhang and Hengkai Li},
   title = {{Subsidies, Environmental Taxes, and Rare Earth Recycling: A Game-Theoretical Analysis of Reverse Supply Chain Equilibrium}},
   journal = {Sustainability},
@@ -633,7 +995,7 @@ categorized by topic area for easier navigation.
   doi = {10.3390/su18168281},
   url = {https://openalex.org/works/W7202317488},
 }
-@article{an2026_22,
+@article{an2026_36,
   author = {Jiachen An and Liangliang Chen},
   title = {{More market-based tools, less supply chain vulnerability: China’s rare earths policy reforms and their impact on the global supply chain}},
   journal = {Frontiers in Environmental Science},
@@ -641,7 +1003,7 @@ categorized by topic area for easier navigation.
   doi = {10.3389/fenvs.2026.1854509},
   url = {https://openalex.org/works/W7202191856},
 }
-@article{wang2026_23,
+@article{wang2026_37,
   author = {shuliu wang and Jiaman Li and sanmang wu and yalin lei},
   title = {{Critical Mineral Supply Restrictions and Global Technological Change: Micro-Evidence from Export Controls on Magnetic Rare Earths}},
   journal = {Research Square},
@@ -649,7 +1011,23 @@ categorized by topic area for easier navigation.
   doi = {10.21203/rs.3.rs-10399222/v1},
   url = {https://openalex.org/works/W7202079022},
 }
-@article{chowdhury2027_24,
+@article{vischmidt2026_38,
+  author = {Michael Vischmidt},
+  title = {{Praseodymium Without a Licence: Recovery of the Nd/Pr Pair from Magnet Leachates, Magnet-Plant Effluent and Phosphogypsum by Deep-Vacuum Phase Separation}},
+  journal = {Zenodo (CERN European Organization for Nuclear Research)},
+  year = {2026},
+  doi = {10.5281/zenodo.21806467},
+  url = {https://openalex.org/works/W7172489351},
+}
+@article{vischmidt2026_39,
+  author = {Michael Vischmidt},
+  title = {{Praseodymium Without a Licence: Recovery of the Nd/Pr Pair from Magnet Leachates, Magnet-Plant Effluent and Phosphogypsum by Deep-Vacuum Phase Separation}},
+  journal = {Zenodo (CERN European Organization for Nuclear Research)},
+  year = {2026},
+  doi = {10.5281/zenodo.21806468},
+  url = {https://openalex.org/works/W7172537023},
+}
+@article{chowdhury2027_40,
   author = {ACHYUT Chowdhury},
   title = {{The Structural Dependence Paradox: An RDT Analysis of Triadic Dependence in the Critical Minerals Value Chain}},
   journal = {Zenodo (CERN European Organization for Nuclear Research)},
@@ -657,7 +1035,7 @@ categorized by topic area for easier navigation.
   doi = {10.5281/zenodo.20645228},
   url = {https://openalex.org/works/W7164386719},
 }
-@article{chowdhury2027_25,
+@article{chowdhury2027_41,
   author = {ACHYUT Chowdhury},
   title = {{The Structural Dependence Paradox: An RDT Analysis of Triadic Dependence in the Critical Minerals Value Chain}},
   journal = {Zenodo (CERN European Organization for Nuclear Research)},
@@ -665,7 +1043,7 @@ categorized by topic area for easier navigation.
   doi = {10.5281/zenodo.20645227},
   url = {https://openalex.org/works/W7164389355},
 }
-@article{tiwari2026_26,
+@article{tiwari2026_42,
   author = {Rishabh Tiwari and Béatrice Anne Baudet and Matthew Richard Coop},
   title = {{Pore morphological evolution in normally and overconsolidated natural clays under one-dimensional loading: deionised and saline pore fluid conditions}},
   journal = {Bulletin of Engineering Geology and the Environment},
@@ -673,7 +1051,7 @@ categorized by topic area for easier navigation.
   doi = {10.1007/s10064-026-05246-x},
   url = {https://openalex.org/works/W7172014688},
 }
-@article{derder2026_27,
+@article{derder2026_43,
   author = {Anissa Derder and Selma BEKKA and Najla Bentrad and Moufida Saidani-Tounsi and Ahmed Debez and et al.},
   title = {{Comparative assessment of eco-friendly priming strategies for enhancing the nutritional, phytochemical, and antioxidant properties of germinated &lt;i&gt;Moringa oleifera&lt;/i&gt; Lam. seeds}},
   journal = {Ecological Engineering & Environmental Technology},
