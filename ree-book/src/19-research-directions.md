@@ -114,6 +114,15 @@ The high-throughput and computational literature has its own specific gaps
 4. **Standardized data formats.** Beyond the SAFE database, the community has
    no shared schema for extraction data, which blocks transfer learning and
    makes cross-study comparison manual.
+5. **Benchmarks on the quantity that matters.** Computational papers in this
+   field report accuracy on absolute binding or extraction energies, where the
+   errors are 25-100 kJ/mol. Selectivity between adjacent lanthanides lives at
+   1-3 kJ/mol ([](#the-energy-scale-of-selectivity)), so every useful prediction
+   is a difference in which 96-99 % of the error is assumed to cancel. No
+   published benchmark measures whether it does. A community test set of
+   *ordered series* — one extractant, the full La-to-Lu sequence, experimental
+   separation factors known — would test the assumption directly, and would be
+   more informative than any further reduction in absolute MAE.
 
 ## Priorities by Horizon
 

@@ -223,7 +223,7 @@ programme rests on error cancellation reaching ~1 kJ/mol and the book never says
 so. Add to ch. 13 Key Takeaways, ch. 14, and ch. 19's research directions, with
 a worked Nd/Pr example.
 
-- [ ] G23
+- [x] G23
 
 ## G24 — Ch. 7: the LnCl₃/LnF₃ property table
 The intro (`07:8-11,19-20`) promises separation by boiling point; LnCl₃ boil at

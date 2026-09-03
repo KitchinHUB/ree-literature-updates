@@ -287,6 +287,18 @@ The thermodynamic cycle in [](#thermodynamics-of-extraction) is where such a
 binding energy becomes a predicted extraction constant — and that chapter is
 also where the limits of the conversion are set out.
 
+It is worth putting that 6.1 kcal/mol next to the quantity it is meant to
+predict. An adjacent-pair separation factor of 1.5 corresponds to a free-energy
+difference of RT ln 1.5 ≈ 1.0 kJ/mol, or 0.24 kcal/mol; the Pr/Nd split is
+nearer 0.9 kJ/mol ([](#the-energy-scale-of-selectivity)). The model error is
+therefore about twenty-five times the signal, and screening only works because
+the error is largely *systematic across the series* — the same ligand, the same
+geometry, one substituted metal centre — and cancels in the difference. That
+cancellation is what a screening campaign is actually relying on, and it is
+testable: rank a series whose experimental order is known and check that the
+ranking survives, rather than reporting agreement on absolute binding energies.
+Nothing in a reported MAE tells you whether it does.
+
 ## Automated Process Control
 
 Modern plants incorporate [@augustine2024advancing]:

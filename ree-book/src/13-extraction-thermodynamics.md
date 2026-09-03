@@ -394,13 +394,49 @@ Instead of absolute K~ex~, predict selectivity:
 
     ΔΔG = ΔG_extraction(REE1) - ΔG_extraction(REE2)
 
-    Separation factor = K_ex(REE1) / K_ex(REE2) = exp(-ΔΔG/RT)
+    Separation factor β = K_ex(REE1) / K_ex(REE2) = exp(-ΔΔG/RT)
 
 **Why this works**:
 
 - Many systematic errors cancel (ΔG°₅ identical for both REEs)
 - ΔG₃, ΔG₄ similar (same extractant, same solvent)
 - Main difference: ΔG₁ (different ionic radii) and ΔG₂ (different binding)
+
+(the-energy-scale-of-selectivity)=
+##### The energy scale this has to reach
+
+It is worth inverting that expression and asking how large ΔΔG actually is,
+because the answer sets the accuracy target for everything in
+[](#high-throughput-and-computational-methods) and it is rarely stated.
+
+At 298 K, RT = 2.48 kJ/mol, so ΔΔG = RT ln β:
+
+| β (adjacent pair) | ΔΔG (kJ/mol) | ΔΔG (kcal/mol) |
+|-------------------|--------------|----------------|
+| 1.4               | 0.83         | 0.20           |
+| 1.5               | 1.01         | 0.24           |
+| 2.0               | 1.72         | 0.41           |
+| 3.0               | 2.72         | 0.65           |
+
+**The entire industry runs on one to three kilojoules per mole.** Take the
+Pr/Nd split, the hardest one in the light-rare-earth train
+([](#solvent-extraction-fundamentals)): β ≈ 1.4-1.5 is ΔΔG ≈ 0.9 kJ/mol, about
+a fifth of a kilocalorie, or roughly a third of the thermal energy available at
+room temperature.
+
+Now compare that against the error bars on the terms it is a difference of. A
+DFT ΔG₂ carries ±50-100 kJ/mol; a learned surrogate at 6.1 kcal/mol MAE carries
+±25 kJ/mol [@gupta2025accelerating]. Predicting the Pr/Nd separation factor to
+even a factor of two therefore requires the errors in two separate ΔG₂
+calculations to cancel to about **96 % for the surrogate and 99 % for DFT**.
+
+That is the real premise of the computational programme, and it is a defensible
+one: the two calculations differ only in which lanthanide sits at the centre of
+an otherwise identical complex, so most of the error is genuinely common and
+does cancel. But it is a premise, not a result. It should be *demonstrated* —
+by predicting a whole series and checking that the ordering and the spacing come
+out, not by reporting an absolute number to three figures. A method validated
+only on absolute K~ex~ has been validated on the quantity that does not matter.
 
 #### Approach 2: Calibrate with Experimental Data
 
@@ -486,6 +522,8 @@ Calculate:
 2.  **ΔG₂ (binding energy) is the term computed with machine learning** — this is where different REEs and extractants differ most
 
 3.  **Absolute K~ex~ prediction is out of reach** — ±60-120 kJ/mol on the sum is ±10-20 log units on a quantity whose true value spans 0-10
+
+4.  **Selectivity lives on a 1-3 kJ/mol scale** (ΔΔG = RT ln β; β = 1.5 is 1.0 kJ/mol), so every computational claim about separation rests on 96-99 % error cancellation between two nearly identical calculations — see [](#the-energy-scale-of-selectivity)
 
 4.  **Relative predictions (selectivity) are more robust** - systematic errors cancel
 
