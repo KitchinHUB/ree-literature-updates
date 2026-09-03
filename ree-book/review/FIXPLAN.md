@@ -40,7 +40,7 @@ whole lesson is that a resolving-but-wrong DOI is the most dangerous failure
 mode, so the example must be a real, checked DOI (or explicitly labelled as the
 pyrite paper to make the point).
 
-- [ ] B3
+- [x] B3
 
 ## B4 — Ch. 3: inverted extraction order and two wrong worked examples
 - `03:749` "La extracts preferentially (higher K_ex)" — inverted for D2EHPA

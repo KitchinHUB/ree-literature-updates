@@ -61,8 +61,8 @@ body:
         the verification pipeline. If a source genuinely has no DOI, give a
         stable URL and say what kind of source it is.
       placeholder: |
-        10.1016/j.mineng.2023.108234
-        10.1021/acssuschemeng.4c04103
+        10.0000/placeholder.replace.me
+        10.0000/one.doi.per.line
     validations:
       required: false
 

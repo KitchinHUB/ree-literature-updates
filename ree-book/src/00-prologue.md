@@ -219,17 +219,28 @@ do: you have read the paper, and the pipeline has not.
 currently says, say so explicitly and point at the passage. Corrections are more
 valuable than additions and are easy to miss.
 
-A good issue looks roughly like this:
+A good issue looks roughly like this. The DOI below is a deliberate
+non-resolving placeholder — `10.0000/…` belongs to no registrant — because the
+findings in the example are invented, and attaching invented findings to a real
+paper is the thing this whole section exists to prevent:
 
 > **Type:** correction
 > **Where:** Ch. 5 Hydrometallurgical Leaching, §5.2 In-Situ Leaching Process
-> **DOIs:** 10.1016/j.mineng.2023.108234
+> **DOIs:** 10.0000/placeholder.replace.me
 > **What it shows:** Reports 82% REE recovery with magnesium sulfate lixiviant
 > at pH 4.5 (Table 3), against the ~70% the chapter currently attributes to
 > ammonium sulfate. Directly relevant to the ammonia-pollution discussion.
 > **What it changes:** The chapter presents ammonium sulfate as the performance
 > benchmark. This paper suggests the ammonia-free route is no longer a recovery
 > tradeoff, which weakens the "gentle but lower-yield" framing in that section.
+
+An earlier draft of this page used a plausible-looking Elsevier DOI here instead
+of a placeholder. It resolved — to a review of pyrite flotation, which has
+nothing to do with rare earths. The template that teaches DOI hygiene shipped
+with a wrong DOI, and the verification pass that checked all 500 entries in the
+bibliography did not flag it, because it resolved. That is
+the failure mode: not a broken link, which any script catches, but a working
+link to the wrong paper, which only a reader who opens it catches. Open it.
 
 Two things that are not issues: if you have already written the prose, open a
 pull request instead; and if you are only flagging a suspect citation, say so
