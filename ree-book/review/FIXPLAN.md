@@ -251,7 +251,7 @@ the <1 % global rate with its source (UNEP 2011; Binnemans 2013), and the
 copper-salt acid-free route (Prodius 2020) now sitting uncited at `16:56`.
 Remove "rivaling ores" (`16:48`) and "50 % since 2015" (`16:44`).
 
-- [ ] G26
+- [x] G26
 
 ## G27 — Ch. 18: expand as a dated snapshot, or cut
 208 words, 2022 data, zero citations, "expected to begin in late 2025" in a book
@@ -260,7 +260,7 @@ Expand only if someone will own an annual update: a "data as of" line and one
 sourced table (operator, site, feed, product, nameplate, status). Otherwise cut
 and move the 90 % fact into ch. 1.
 
-- [ ] G27
+- [x] G27
 
 ## G28 — Glossary: ~50 missing terms, four wrong entries
 Wrong: `90:48-52` chelator ("nearly every selective REE extractant is a chelator"
