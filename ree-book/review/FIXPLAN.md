@@ -301,7 +301,10 @@ ch. 11; (i) one drawn flowsheet replacing ch. 5's three ASCII ones.
 - Numbers: China share (3 values), SX feed spec, extraction pH, Fe removal pH,
   IAC share of HREE supply (50 % vs >90 %), monazite REE profile, HREE boundary,
   bastnäsite spelling (4) and formula notation (3), carbochlorination window (5).
-- Appendices: add the citation-verification record to A; B's premise is false for
-  two of its six papers — fold into A and write a real further-reading list.
+- Appendices: DONE. A gained a "How the bibliography was checked" section and
+  absorbed B's six unsynthesized papers; B's premise was false for *three* of
+  the six (nelson2020high, chen2024continuous, maurice2021first are cited
+  nowhere, not two), and it misdated gupta2025accelerating as 2026. B is now a
+  topic-by-topic further-reading list built from existing verified keys.
 
 - [ ] P30

@@ -82,7 +82,10 @@ document changes will shift them.
   was kept and the duplicate dropped.
 - **Hand-written reference lists.** Several sources ended with a manually
   maintained list of references. These were dropped in favour of the single
-  verified bibliography; see the [](#bibliography).
+  verified bibliography; see the [](#bibliography). This was not a stylistic
+  choice: when the hand-written entries in one source were checked against
+  CrossRef, only one of twelve was correct as printed, and one was attributed
+  to the wrong authors entirely.
 - **Off-topic documents.** `notes.org` (tungsten alloys, high-entropy alloys,
   crack detection), `litdb-ree-findings.org` (a search log), and `ideas.org`
   (brainstorming) were excluded from the book.
@@ -101,3 +104,85 @@ document changes will shift them.
 - The bastnäsite dissolution framework moved to Ch. 13 rather than Ch. 5: it
   is a thermodynamic argument, and it reads better next to the extraction
   thermodynamic cycle it connects to.
+
+(bibliography-verification)=
+## How the bibliography was checked
+
+The bibliography was not inherited from the source documents. It was rebuilt
+and then verified entry by entry, because the source documents' own citations
+could not be trusted: an early pass found references whose DOIs resolved to
+unrelated papers, hand-typed entries with wrong volumes and page ranges, and at
+least one paper attributed to the wrong authors.
+
+Verification ran in two stages.
+
+**Stage 1 — does the reference exist?** Every entry was checked against
+CrossRef by DOI, or, for entries with no DOI (reports, standards, agency web
+pages), by fetching the URL. Entries that could not be resolved either way were
+removed to `references-rejected.bib` rather than left in place. Sixty-seven
+entries were removed this way. The rule that followed from that removal governs
+the rest of the book: any claim resting solely on a rejected citation had to be
+removed or rewritten, not left standing without support.
+
+Of the 500 entries that remained, all 500 verified — 435 by resolving the DOI
+and 63 by fetching a live URL. One title diverges from CrossRef's record:
+`gupta2003chemical` is catalogued by CrossRef as *Chemical Metallurgy* and
+carries the subtitle *Principles and Practice* on the book itself. The full
+record, including the rejected entries, is in `verification-report.md` at the
+root of the book source.
+
+**Stage 2 — does the reference say what the text claims?** A resolving DOI
+proves a paper exists; it proves nothing about whether that paper supports the
+sentence citing it. A chapter-by-chapter review checked cited claims against
+the cited work. It found the two failure modes that matter: citations attached
+to the wrong paper, and numbers that appear in no paper at all. Both were
+corrected in place — either by substituting what the source actually reports,
+or, where nothing in the literature supported the claim, by deleting it. More
+than a dozen data tables were deleted outright during this pass, because their
+entries could not be traced to any source.
+
+Claims that survive as numbers in this book should therefore be traceable. That
+is a lower standard than *correct*, and it is the standard this book can
+honestly claim.
+
+(sources-not-synthesized)=
+## Sources collected but not synthesized
+
+Six papers were collected during the literature review as full PDFs but never
+written up in prose, so no chapter was built from them. They are recorded here
+because a paper nobody synthesized is not the same as a paper nobody thought
+was important, and the gap is better visible than silent.
+
+Three are nonetheless cited elsewhere in the book, from summaries written at
+the time rather than from the PDFs: @augustine2024advancing (eleven times),
+@an2024agile (five), and @gupta2025accelerating (three). The other three are in
+the bibliography but are cited nowhere in the text.
+
+**Automated and machine-learning separations.** @augustine2024advancing is the
+Los Alamos platform that anchors
+[](#automated-high-throughput-platforms-for-f-element-separations), and the
+first thing to read if the automated-screening chapter is why you are here.
+@an2024agile couples ligand synthesis to screening in one loop; its life-cycle
+comparison against the prior synthetic route is the part usually missing from
+papers of this kind, and it is discussed in
+[](#high-throughput-extractant-synthesis-and-screening).
+@gupta2025accelerating is the equivariant-network surrogate for DFT binding
+energies weighed in [](#learned-binding-energies-as-a-dft-surrogate).
+@nelson2020high is an earlier and more modest screening campaign than the LANL
+work, and useful for exactly that reason: it shows what the approach looks like
+without a robotics budget. It is cited nowhere in the text.
+
+**Microfluidic extraction.** @chen2024continuous addresses phase separation at
+the viscosities typical of loaded organic phases — the step that most often
+defeats microfluidic extraction in practice, and one
+[](#microfluidic-separations) does not treat, since that chapter is about
+contacting. @maurice2021first demonstrates in-line X-ray fluorescence
+measurement of both phases during extraction, which is the kind of real-time
+analytics [](#gaps-in-automation-and-computation) identifies as the binding
+constraint on automated screening throughput. Neither is cited in the text.
+
+The review also accumulated a presentation deck and a docx duplicate of one of
+the microfluidics reports; both were judged redundant with sources already
+used. The Crucible knowledge base referenced by the ion-adsorption clay source
+(`.crucible/wiki/concepts/`) has not been surveyed and may hold further
+material.

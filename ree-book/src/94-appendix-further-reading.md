@@ -5,70 +5,122 @@ title: "Appendix B: Further Reading"
 (appendix-b-further-reading)=
 # Appendix B: Further Reading
 
-Six papers were collected during the literature review as full PDFs but never
-written up in prose, so no chapter was built from them. They are listed here
-with resolved DOIs, both because they are worth reading and so that the gap is
-visible rather than silent — a paper nobody synthesized is not the same as a
-paper nobody thought was important.
+This book is a synthesis, and a synthesis is a poor substitute for the reviews
+it was built on. What follows is a reading path: for each part of the book, the
+one or two works to go to next, and why that one. Every entry is in
+[](#bibliography) and every DOI in it has been checked
+([](#appendix-a-source-provenance)).
 
-Four of the six are cited elsewhere in the book from summaries written at the
-time; the two microfluidics papers are new to the bibliography and are cited
-nowhere else.
+Where a topic has a genuinely canonical review, it is named as such. Where it
+does not — and several of the emerging technologies do not — that is said
+plainly rather than papered over with the most recent paper available.
 
-## Automated and machine-learning separations
+## Starting anywhere
 
-**Augustine et al. (2024), *ACS Sustainable Chemistry & Engineering*** —
-"Advancing rare-earth (4f) and actinide (5f) separation through machine
-learning and automated high-throughput experiments."
-[10.1021/acssuschemeng.4c06166](https://doi.org/10.1021/acssuschemeng.4c06166).
-The Los Alamos platform that anchors
-[](#automated-high-throughput-platforms-for-f-element-separations). Read this
-first if the automated-screening chapter is the reason you are here.
+Two general reviews cover the whole field at different depths.
+@balaram2019rare is the broad one: occurrence, applications, analysis,
+recycling, and environmental impact in a single article, and the best first
+read for someone who has arrived from outside the field. @chen2021advances is
+narrower and more useful once separation itself is the question, covering the
+selective-separation technologies that Parts II and III of this book treat one
+per chapter.
 
-**An et al. (2024), *Green Chemistry*** — "Agile synthesis and automated,
-high-throughput evaluation of diglycolamides for liquid–liquid extraction of
-rare-earth elements."
-[10.1039/D4GC01146E](https://doi.org/10.1039/D4GC01146E). Couples ligand
-synthesis to screening in one loop; the life-cycle comparison against the
-prior synthetic route is the part usually missing from papers like this.
-Discussed in [](#high-throughput-extractant-synthesis-and-screening).
+For the older literature — the chemistry that everything since rests on —
+@nash1993basic remains the clearest statement of trivalent f-element separation
+principles, and @moyer2011overview places rare earth extraction inside the
+wider solvent-extraction tradition it was borrowed from.
 
-**Gupta et al. (2026), *Digital Discovery*** — "Toward accelerating rare-earth
-metal extraction using equivariant neural networks."
-[10.1039/D5DD00286A](https://doi.org/10.1039/D5DD00286A). The equivariant
-network surrogate for DFT binding energies discussed in
-[](#learned-binding-energies-as-a-dft-surrogate).
+## Ore, beneficiation, and leaching
 
-**Nelson et al. (2020), *Communications Chemistry*** — "High-throughput
-screening for discovery of benchtop separations systems for selected rare
-earth elements."
-[10.1038/s42004-019-0253-x](https://doi.org/10.1038/s42004-019-0253-x). An
-earlier and more modest screening campaign than the LANL work, and useful for
-exactly that reason: it shows what the approach looks like without a robotics
-budget.
+@jordens2013beneficiation is the reference review on beneficiating rare earth
+minerals, and the right place to understand what a concentrate actually
+contains before any chemistry starts. @sadri2017cracking covers cracking,
+baking, and leaching of concentrates — the step this book treats in
+[](#hydrometallurgical-leaching) — across the acid and alkaline routes.
+For the two ore minerals specifically: @kim2025rare on bastnäsite, from
+beneficiation through to metallurgy, and @kumari2015process on monazite,
+including the thorium problem that dominates monazite flowsheets.
 
-## Microfluidic extraction
+Ion-adsorption clays have their own literature because they have their own
+chemistry. @moldoveanu2016overview is the overview, and @wu2023rare treats
+adsorption and desorption on clay minerals at the level of mechanism.
 
-**Chen et al. (2024), *Separation and Purification Technology*** — "Continuous
-high viscosity biphasic liquid separation."
-[10.1016/j.seppur.2024.127111](https://doi.org/10.1016/j.seppur.2024.127111).
-Phase separation is the step that most often defeats microfluidic extraction
-at viscosities typical of loaded organic phases; this paper addresses it
-directly. Not discussed in [](#microfluidic-separations), which treats
-contacting in more depth than separation.
+## Solvent extraction
 
-**Maurice et al. (2021), *Nano Select*** — "First online X-ray fluorescence
-characterization of liquid-liquid extraction in microfluidics."
-[10.1002/nano.202100133](https://doi.org/10.1002/nano.202100133). In-line XRF
-measurement of both phases during extraction, which is the kind of real-time
-analytics that
-[](#gaps-in-automation-and-computation) identifies as the binding constraint
-on automated screening throughput.
+@xie2014critical is the critical review of rare earth solvent extraction and
+the natural companion to [](#solvent-extraction-fundamentals).
+@li2019development is the one to read after it: it traces the development of
+the acidic phosphorus extractants — D2EHPA, PC88A, Cyanex 272 — as a historical
+argument rather than a list, which is the best way to understand why the
+industry settled where it did.
 
-## What is not here
+For ion exchange, which this book covers only in outline,
+@elouardi2023progress is the recent survey.
 
-The review also accumulated a presentation deck and a docx duplicate of one of
-the microfluidics reports; both were judged redundant with sources already
-used. The Crucible knowledge base referenced by the ion-adsorption clay source
-(`.crucible/wiki/concepts/`) has not been surveyed and may hold further
-material.
+## Pyrometallurgy and halogenation
+
+@pereira2021panoramic is the panoramic review of chlorination and
+carbochlorination of light rare earth oxides, and the closest thing
+[](#pyrometallurgical-and-halogenation-routes) has to a single source.
+@zheng2019mechanism covers chlorination treatment of ores more generally.
+For the electrowinning end, @liao2024research reviews fluoride molten-salt
+electrolysis as practised industrially and @li2023extraction covers molten-salt
+electrolysis for critical metals more broadly.
+
+## Emerging separations
+
+This is where the reading path thins, and it is worth saying why: several of
+the technologies in Part III have no review because they have no field yet —
+a handful of groups, a decade of papers, and no independent replication of the
+headline results.
+
+Membranes have one: @chen2018overview. Functionalized porous materials,
+including the MOF work, have @oztug2024overview. For the ionic-liquid and
+aqueous-biphasic systems of [](#coacervates-and-aqueous-biphasic-systems),
+@neves2022liquid surveys the more environmentally acceptable liquid-liquid
+systems. Microfluidic extraction is reviewed as a unit operation rather than as
+a rare earth method, by @xu2017microfluidic and @wang2017microflow; the rare
+earth application has to be read from the primary literature.
+
+Bioleaching and biological separation are reviewed by @rasoulnia2020critical,
+which is the critical one — it is specific about the process parameters that
+determine whether a reported recovery means anything.
+
+## Computation and high-throughput work
+
+@augustine2024advancing is the anchor: the Los Alamos platform that couples
+automated high-throughput extraction experiments to machine learning, and the
+concrete instance of what [](#high-throughput-and-computational-methods)
+describes. @gupta2025accelerating is the surrogate-model paper whose 6.1
+kcal/mol error is weighed against the 1 kJ/mol selectivity signal in
+[](#the-energy-scale-of-selectivity) — read them together, in that order.
+
+## Characterization
+
+@balaram2019rare again, for the analytical sections; and @ali2023mineral for
+the SEM-based mineral characterization that precedes any flowsheet decision.
+
+## Recycling
+
+@binnemans2013recycling is the paper that defined the field and is still the
+one to read first; it is the source of the under-one-percent end-of-life
+recycling rate that everything since has quoted. @yang2017ree is the critical
+review specific to end-of-life NdFeB magnet scrap, and
+@zhang2020hydrometallurgical treats the hydrometallurgical routes for the same
+feed in more detail. @fujita2022recycling is the recent perspective.
+
+## Environment, economics, and life cycle
+
+@weber2012rare surveys production, processing, recycling, and the associated
+environmental issues together, which is the right framing for
+[](#environment-techno-economics-and-life-cycle). @navarro2014life and
+@zaimes2015environmental are the two life-cycle studies the chapter leans on
+most; @mugion2025systematic is the systematic review of the LCA literature and
+is the fastest way to see how little of it is comparable.
+
+## Reference works
+
+@habashi1997handbook and @gupta2003chemical are the extractive-metallurgy
+reference works. Neither is about rare earths specifically, and both are the
+better for it: much of what makes rare earth processing hard is ordinary
+hydrometallurgy operating with unusually poor selectivity.
