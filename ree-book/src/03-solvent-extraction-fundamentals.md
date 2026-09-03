@@ -434,11 +434,35 @@ At D = 1: pH₁/₂ = −(log K~ex~ + 3 log[(HL)₂]) / 3
 A *lower* pH₁/₂ means a more strongly extracted element, since it reaches
 D = 1 while the aqueous phase is still more acidic.
 
+**The order across the series.** For acidic organophosphorus extractants —
+D2EHPA, PC88A, Cyanex 272, the workhorses of the industry — the distribution
+ratio rises monotonically from La to Lu, and pH₁/₂ falls correspondingly. The
+smaller, more charge-dense heavy ion binds the phosphoryl oxygens more tightly.
+So in any cascade built on these reagents the heavies load into the organic
+phase and the lights report to the raffinate. Yttrium is the exception that
+matters industrially: it has no 4f electrons and sits by size near Ho, but its
+extraction behaviour varies with the extractant and it can fall anywhere from
+Dy to Er in the sequence, which is what makes Y/Ho separations awkward.
+
 **Selectivity**:
 
     Δ pH₁/₂(REE1-REE2) = pH₁/₂(REE1) - pH₁/₂(REE2)
 
-**Typical separation windows** [@tanaka2021revaluating]:
+Because log D moves with slope +3, the separation factor follows directly from
+the gap between two elements' half-extraction pH values:
+
+    β = 10^(3 × Δ pH₁/₂)
+
+A gap of 0.1 pH units is a separation factor of 2; a gap of 0.2 is a factor of 4.
+This is why pH control to ±0.05 units is a real engineering requirement and not
+a counsel of perfection.
+
+**Typical separation windows** [@tanaka2021revaluating]. These are at the
+optimistic end of the published range; adjacent light-lanthanide pairs are
+commonly quoted nearer β = 1.5-2 (Δ pH₁/₂ ≈ 0.05-0.10), which is the figure
+[](#why-rare-earths-are-hard-to-separate) uses and the one the stage counts in
+this chapter are built on. Treat the table as the best case a well-chosen
+extractant and diluent can reach, not as what an arbitrary circuit will deliver:
 
 | REE Pair | Δ pH₁/₂ (D2EHPA) | Separation Factor |
 |----------|------------------|-------------------|
@@ -642,20 +666,50 @@ Graphical method for determining stage requirements:
 - Each stage = 1 mixer-settler unit
 
 ### Phase Ratio and Material Balance
-**Phase ratio selection** [@rydberg2004solvent]:
+The distribution ratio alone does not tell you how much metal a stage moves.
+That depends on how much of each phase is present, and the quantity that
+combines the two is the **extraction factor** [@rydberg2004solvent]:
 
-    (O/A)_extraction × D = (A/O)_stripping × (1/D_strip)
+    E = D × (O/A)
+
+`E` is the ratio of metal in the organic phase to metal in the aqueous phase at
+equilibrium, counting volumes. The fraction of the entering metal that a single
+equilibrium stage transfers is then
+
+    fraction extracted = E / (1 + E)
+
+and the same algebra run backwards gives the stripping factor
+`S = (A/O)_strip / D_strip` with `fraction stripped = S / (1 + S)`.
+
+A large `D` bought at a small `O/A` is not a large `E`. This is the most common
+arithmetic error in reading extraction data:
 
 **Example**:
 
-- Extraction: D = 10, O/A = 1/3 → 97% extraction per stage
-- Stripping: D = 0.1 (1/D = 10), A/O = 1/5 → 95% stripping per stage
+- Extraction: D = 10 at O/A = 1/3 → E = 10/3 = 3.3 → **77% extracted per stage**
+- Stripping: D_strip = 0.1 at A/O = 1/5 → S = (1/5)/(0.1) = 2 → **67% stripped
+  per stage**
 
-**Concentration factor**:
+Neither is the ~95% a reader might assume from `D = 10` and `1/D_strip = 10`
+alone. Getting to 99%+ is what the extra stages are for.
 
-    CF = ([REE]_product) / ([REE]_feed) = (O/A)_extraction × (A/O)_stripping
+**Concentration factor**. Running the organic lean (small `O/A`) concentrates
+the metal on extraction; running the strip liquor lean (small `A/O`) concentrates
+it again. Both enrichments are capped by the fraction actually transferred:
 
-Example: (1/3) × (5/1) = 5/3 ≈ 1.7× concentration
+    CF = [REE]_product / [REE]_feed = (A/O)_extraction × (O/A)_stripping × f × g
+
+where `f` and `g` are the overall extracted and stripped fractions. For the
+numbers above, taken as single stages: 3 × 5 × 0.77 × 0.67 ≈ **7.7×**. Note the
+ratios enter inverted relative to how they are written in the extraction and
+stripping steps — a lean organic phase concentrates *because* there is little of
+it.
+
+**The ceiling on `O/A` is the extractant, not the hydraulics.** Three monomers of
+an acidic organophosphorus extractant are consumed per REE³⁺. A 30 vol% D2EHPA
+solution is about 0.9 M in monomer, so it saturates near 0.3 M REE and is run at
+half that. A phase ratio that would load the organic past saturation does not
+give the `D` the equilibrium data predict, no matter what the pH is.
 
 ### Operational Considerations
 #### Phase Continuity
@@ -752,28 +806,39 @@ Where:
 - Filter, wash
 - Result: La-Pr-Nd mixture (Ce-free)
 
-#### Step 4: Individual Separation (e.g., La from Pr-Nd)
-- Feed: 1.0 M (La+Pr+Nd), pH 2.8
+#### Step 4: Individual Separation (La from Pr-Nd)
+With acidic organophosphorus extractants the heavier lanthanides are extracted
+more strongly, so **La is the element left behind**. The split takes La out of
+the raffinate, not out of the organic phase.
 
-- Organic: 30% D2EHPA + 10% TBP in kerosene
+- Feed: 0.3 M (La+Pr+Nd), pH 2.8, diluted from Step 3
 
-- Extraction: 6 stages, O/A = 1/3, pH 3.0 (controlled)
+- Organic: 30% D2EHPA + 10% TBP in kerosene (≈0.9 M monomer, saturating near
+  0.3 M REE)
 
-  - La extracts preferentially (higher K~ex~)
-  - Raffinate: enriched in Pr, Nd
-  - Loaded organic: enriched in La
+- Extraction: 6 stages, O/A = 2/1, pH 3.0 (controlled)
 
-- Scrub: 2 stages, pH 2.5 (remove Pr, Nd contamination)
+  - Pr and Nd extract preferentially (lower pH₁/₂, higher D)
+  - Loaded organic: ≈0.15 M, enriched in Pr and Nd — about half of the
+    extractant's capacity, which is where these circuits are run
+  - Raffinate: enriched in La
 
-- Strip: 3 stages, 4 M HCl, pH 0, 50°C
+- Scrub: 2 stages, pH 2.5, with dilute strip liquor (removes co-extracted La
+  from the organic; the scrub is REE-on-REE here, not impurity removal)
 
-  - Product: 1.8 M La in HCl (95% pure)
+- Strip: 3 stages, 4 M HCl, 50°C
 
-#### Step 5: Repeat for Pr/Nd Separation
+  - Product: ≈0.45 M Pr+Nd in HCl at A/O = 1/3
 
-- Adjust raffinate to pH 2.5
-- Extraction cascade for Pr/Nd split
-- Typically requires 8-12 stages (small separation factor)
+- La product: recovered from the raffinate by oxalate precipitation and
+  calcination
+
+#### Step 5: Repeat for the Pr/Nd Separation
+
+- The Pr-Nd strip liquor becomes the feed to a second cascade
+- Pr/Nd is the hardest split in this sequence: β ≈ 1.4-1.5
+- Typically requires 8-12 stages for a bulk split, and many more for
+  99.9%-grade Nd
 
 ### Material and Energy Balance (Approximate)
 **For 1000 kg/day REO production**:

@@ -50,7 +50,7 @@ pyrite paper to make the point).
 Fix the chemistry, then state the series trend explicitly (D rises La→Lu for
 acidic organophosphorus extractants; Y falls near Ho/Er).
 
-- [ ] B4
+- [x] B4
 
 ## B5 — Ch. 13: close the thermodynamic cycle, fix the hydration energies
 - `13:71,119-121,139` ΔG₂ written `REE³⁺(g) + 3HL(g) → REEL₃(g)`: charge and
