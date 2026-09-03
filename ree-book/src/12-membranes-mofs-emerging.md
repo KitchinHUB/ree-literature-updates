@@ -51,7 +51,7 @@ NF and UF membranes are particularly effective for treating acidic streams:
 - Function effectively at very low REE concentrations
 
 ### Electrodialysis
-Recent research has explored electrodialysis for REE separation, using adjacent an{index}`ion exchange` membranes with chelating agents like EDTA. Mathematical models based on the Nernst-Planck equation have been developed to optimize Dy separation from Pr/Nd mixtures [@ding2024mathematical].
+Recent research has explored electrodialysis for REE separation, using adjacent anion exchange membranes with chelating agents like EDTA. Mathematical models based on the Nernst-Planck equation have been developed to optimize Dy separation from Pr/Nd mixtures [@ding2024mathematical].
 
 (metal-organic-framework-mof-nanotraps)=
 ## Metal-Organic Framework (MOF) Nanotraps

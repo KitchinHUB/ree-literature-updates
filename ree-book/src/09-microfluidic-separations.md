@@ -133,7 +133,7 @@ Droplet microfluidics has emerged as a powerful platform for REE separation [@zh
 
 ## Separation Mechanisms and Extractants
 
-The dominant separation mechanism employs cat{index}`ion exchange` extraction using organophosphorus extractants [@xie2014critical]. The fundamental reaction---RE³⁺(aq) + 3(HA)₂(org) → RE(A₂H)₃(org) + 3H⁺(aq)---involves each REE ion extracted in a complex with six extractant molecules arranged as dimers [@jensen2002comparison].
+The dominant separation mechanism employs cation exchange extraction using organophosphorus extractants [@xie2014critical]. The fundamental reaction---RE³⁺(aq) + 3(HA)₂(org) → RE(A₂H)₃(org) + 3H⁺(aq)---involves each REE ion extracted in a complex with six extractant molecules arranged as dimers [@jensen2002comparison].
 
 **Table 1: Common Extractants for REE Separation**
 

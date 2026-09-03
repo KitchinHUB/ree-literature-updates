@@ -671,7 +671,7 @@ In an atomistic thermodynamics framework, the free energy of dissolution can be 
 Density functional theory (DFT) provides the solid-state and surface energetics of REE release, while aqueous thermodynamics (hydration, complexation, activity coefficients) provides solution terms. This establishes the aqueous chemical potential μ_REE3+ as a function of pH, ionic strength, and ligand environment.
 
 ### Acidic Phosphate Extraction Thermodynamics
-Extraction with acidic organophosphorus extractants (HA) proceeds via cat{index}`ion exchange`. The dominant extraction reaction for trivalent REEs is:  
+Extraction with acidic organophosphorus extractants (HA) proceeds via cation exchange. The dominant extraction reaction for trivalent REEs is:  
   
 REE3+(aq) + 3HA(org) ⇌ REEA3(org) + 3H+(aq)  
   

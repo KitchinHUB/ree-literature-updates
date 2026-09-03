@@ -75,7 +75,9 @@ TERMS: list[tuple[str, str, bool]] = [
     ("NdFeB", r"NdFeB", True),
     # unit operations and technologies
     ("solvent extraction", r"solvent extraction", False),
-    ("ion exchange", r"ion[- ]exchange", False),
+    # Anchored: without \b this matched inside "cation exchange" and
+    # "anion exchange", splitting the word and inventing a false locator.
+    ("ion exchange", r"\bion[- ]exchange", False),
     ("supported liquid membrane (SLM)", r"supported liquid membranes?", False),
     ("chromatography", r"chromatograph(?:y|ic)", False),
     ("molten salt electrolysis", r"molten[- ]salt electrolysis", False),
