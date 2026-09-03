@@ -65,7 +65,7 @@ acidic organophosphorus extractants; Y falls near Ho/Er).
   Research Square preprint (`@alizadeh2023deep`).
 - `13:143-146,345` UMA/Allegro conflated; the 6.1 kcal/mol MAE is Gupta's Allegro.
 
-- [ ] B5
+- [x] B5
 
 ## B6 — Balance every reaction equation in Parts II and IV
 `02:98`; `05:251,279,299,302,319,787,788,1019`; `07:41-45,86,515-517`;

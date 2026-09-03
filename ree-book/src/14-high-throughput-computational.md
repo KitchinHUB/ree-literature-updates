@@ -313,13 +313,22 @@ DFT calculations provide atomic-level insights into metal-ligand interactions an
 
 **Key Findings from DFT Studies:**
 
-*{index}`D2EHPA` Extractant Selectivity:* DFT combined with Born-Haber thermodynamics explains heavy REE preference [@alizadeh2023deep]:
+*{index}`D2EHPA` Extractant Selectivity:* DFT combined with Born-Haber
+thermodynamics has been used to rationalise the heavy-REE preference of D2EHPA
+[@alizadeh2023deep]. The qualitative argument is the one developed in
+[](#thermodynamics-of-extraction): the smaller, more strongly hydrated ion pays
+more to leave the aqueous phase but gains more on complexation, and for acidic
+organophosphorus extractants the second term wins, so D rises from La to Lu.
 
-| Parameter           | La(III)         | Y(III)          |
-|---------------------|-----------------|-----------------|
-| Hydration energy    | -383.7 kcal/mol | -171.8 kcal/mol |
-| Complex stability   | Lower           | Higher          |
-| Extraction tendency | Lower           | Higher          |
+The hydration energies tabulated in that preprint should not be carried
+forward. They are several times smaller than the accepted single-ion values and
+they rank La³⁺ as the more strongly hydrated of the pair, which is backwards.
+Marcus gives ΔG_hyd(La³⁺) = -3145 kJ/mol [@marcus1991thermodynamics]; Y³⁺, whose
+six-coordinate radius of 0.900 Å falls between Ho³⁺ and Er³⁺
+[@shannon1976revised], interpolates to roughly -3450 kJ/mol on the same scale —
+more negative than La³⁺, not less. Use the tabulated single-ion values, and
+treat any hydration energy quoted without its extrathermodynamic convention as
+unusable.
 
 *Diglycolamide (DGA) Complexes:* Electrostatic interactions dominate Ln-DGA binding [@liu2021theoretical]:
 

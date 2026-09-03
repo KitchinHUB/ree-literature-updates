@@ -66,23 +66,35 @@ Why not?
 
 We construct a cycle where all species pass through the gas phase:
 
-``` example
-                       ΔG₂ (gas-phase complexation)
-   REE³⁺(g) + 3HL(g) ────────────────────────→ REEL₃(g)
-        ↑                                            ↓
-        │                                            │
-     ΔG₁│                                            │ΔG₃
-(dehydr)│                                            │(solvation
-        │                                            │ in org)
-        │                                            ↓
-   REE³⁺(aq) ──────────────────────────────→ REEL₃(org)
-                    Net extraction
-                (what we measure)
+The reaction we are trying to reach is
 
-   Plus separate paths for:
-   3HL(org) ──→ 3HL(g)     (ΔG₄: extractant desolvation)
-   3H⁺(g)  ──→ 3H⁺(aq)     (ΔG₅: proton solvation)
+    REE³⁺(aq) + 3 HL(org) ⇌ REEL₃(org) + 3 H⁺(aq)
+
+and the protons on the right are not optional bookkeeping: they carry three
+units of charge and are the reason the equilibrium responds to pH at all. Every
+step of the cycle has to conserve them.
+
+``` example
+                    ΔG₂ (gas-phase complexation
+                         + 3 × deprotonation)
+   REE³⁺(g) + 3HL(g) ────────────────────────→ REEL₃(g) + 3H⁺(g)
+        ↑         ↑                                 │        │
+        │         │                                 │        │
+     ΔG₁│      ΔG₄│                              ΔG₃│        │ΔG₅
+(dehydr)│   (extractant                (solvation   │        │(proton
+        │    desolvation)                 in org)   │        │hydration)
+        │         │                                 ↓        ↓
+   REE³⁺(aq) + 3HL(org) ──────────────────→ REEL₃(org) + 3H⁺(aq)
+                          Net extraction
+                        (what we measure)
 ```
+
+Read around the loop: up the two left arrows, across the top, down the two
+right arrows. Charge is +3 on both sides at every point, and three protons
+enter the top-right corner and leave at the bottom. The version of this cycle
+that omits them — writing ΔG₂ as `REE³⁺(g) + 3HL(g) → REEL₃(g)`, neutral on the
+right — is short by three gas-phase deprotonations, roughly +4,000 kJ/mol, and
+no amount of care with the other four terms will recover it.
 
 #### Step-by-Step Breakdown
 
@@ -94,7 +106,8 @@ We construct a cycle where all species pass through the gas phase:
 
 **Physical meaning**: Remove REE³⁺ from water (break ion-dipole interactions)
 
-**Always positive** (endothermic): \~1200-1500 kJ/mol for +3 ions
+**Always positive** (ΔG₁ > 0; the reverse, hydration, is what is tabulated):
+\~3100-3500 kJ/mol for lanthanide +3 ions
 
 **Computational method**:
 
@@ -108,42 +121,61 @@ We construct a cycle where all species pass through the gas phase:
 
   Where z=3, r~ion~ ≈ 1.0-1.2 Å for REE³⁺, ε~r~ = 78.4 for water
 
-**Key insight**: ΔG₁ varies slightly across the lanthanide series (ionic radius changes)
+**Key insight**: ΔG₁ varies across the lanthanide series with ionic radius.
+Experimental hydration free energies [@marcus1991thermodynamics]:
 
-- La³⁺ (larger): ΔG₁ ≈ 1250 kJ/mol
-- Gd³⁺ (smaller): ΔG₁ ≈ 1400 kJ/mol
-- This contributes to selectivity!
+- La³⁺ (largest): ΔG₁ ≈ +3145 kJ/mol
+- Gd³⁺: ΔG₁ ≈ +3375 kJ/mol
+- Lu³⁺ (smallest): ΔG₁ ≈ +3515 kJ/mol
+
+That is a 370 kJ/mol spread across the series, and it is one of the two terms
+that carries selectivity. Note that the Born expression above, with z = 3 and
+r = 1.0-1.2 Å, returns 5,000-6,000 kJ/mol: it overestimates trivalent-ion
+hydration by roughly 1.7× and is useful for trends, not for magnitudes.
 
 ##### ΔG₂: Gas-Phase Complexation (THE CRITICAL TERM)
 
-    REE³⁺(gas) + 3 HL(gas) → REEL₃(gas)
+    REE³⁺(gas) + 3 HL(gas) → REEL₃(gas) + 3 H⁺(gas)
 
-    ΔG₂ = G[REEL₃(gas)] - G[REE³⁺(gas)] - 3×G[HL(gas)]
+    ΔG₂ = G[REEL₃(g)] + 3×G[H⁺(g)] - G[REE³⁺(g)] - 3×G[HL(gas)]
 
-**Physical meaning**: Formation of REE-extractant bonds (coordination chemistry)
+**Physical meaning**: The extractant gives up three protons and its three
+conjugate bases coordinate the metal. It is useful to split this into the two
+physical processes it contains:
 
-**Always negative** (exothermic): Strong electrostatic and covalent bonding
+    ΔG₂ = 3 × ΔG_acid(HL)              gas-phase deprotonation, ≈ +1300-1400 each
+        + ΔG_assoc(REE³⁺ + 3L⁻ → REEL₃)  ion-ion association, ≈ -4200
 
-**This is the term a machine-learned binding model predicts.**
+The first piece is around +4,000 kJ/mol for three protons and the second around
+−4,200, so **ΔG₂ is a small residual between two enormous numbers**. Its sign is
+not obvious in advance and neither piece can be dropped.
+
+**This is the term a machine-learned binding model predicts** — which makes it
+essential to state which of the two reactions a published "binding energy"
+refers to. A model trained on `REE³⁺ + 3L⁻ → REEL₃` is not interchangeable with
+one trained on the proton-conserving reaction above; they differ by ~4,000
+kJ/mol, and papers are not always explicit about which they report.
 
 **Computational method**:
 
-****Phase 1 (DFT approach)****:
+The direct route is DFT: optimize the geometry of the REEL₃ complex and of each
+isolated species, then take the difference of the electronic energies with the
+appropriate thermal and entropic corrections,
 
-1.  Optimize geometry of REEL₃ complex (DFT: B3LYP-D4)
+    ΔG₂ = G[REEL₃(g)] + 3×G[H⁺(g)] - G[REE³⁺(g)] - 3×G[HL(g)]
 
-2.  Single-point energy calculation
+which for a complex of three bulky organophosphorus ligands is hours of compute
+per candidate, and more if conformers are searched properly
+([](#high-throughput-and-computational-methods) makes the case that they must be).
 
-3.  Compute binding energy:
-
-        ΔG₂ ≈ E[REEL₃] - E[REE³⁺] - 3×E[HL]
-
-****Phase 2 (UMA approach)****:
-
-- Use Fairchem UMA model (pre-trained on large dataset)
-- Direct prediction of binding energy
-- **Much faster** than DFT (seconds vs. hours)
-- Following Gupta et al. 2025: MAE ≈ 6.1 kcal/mol ≈ 25 kJ/mol
+The surrogate route replaces that calculation with a model trained on it.
+@gupta2025accelerating trained equivariant neural networks (Allegro) on 5,356
+REE-ligand complexes and predict binding energy from structure with a mean
+absolute error of 6.1 kcal/mol (\~25 kJ/mol), in seconds rather than hours.
+Universal machine-learned potentials trained on broad inorganic datasets are a
+third option, but their published errors are for structures and formation
+energies of solids, not for lanthanide-organic binding, and should not be
+assumed to transfer to this quantity without a test set of its own.
 
 **Key variations**:
 
@@ -151,11 +183,10 @@ We construct a cycle where all species pass through the gas phase:
 - Different extractants ({index}`D2EHPA` vs. {index}`PC88A` vs. {index}`TBP <TBP (tributyl phosphate)>`) give different ΔG₂
 - This is the **primary source of selectivity** in gas phase
 
-**Typical values**:
-
-- La³⁺ + 3 D2EHPA: ΔG₂ ≈ -2500 kJ/mol
-- Gd³⁺ + 3 D2EHPA: ΔG₂ ≈ -2600 kJ/mol
-- Difference drives selectivity (after all terms accounted for)
+**Magnitudes**: with the protons conserved, ΔG₂ for the lanthanides with
+acidic organophosphorus extractants is on the order of ±100 kJ/mol — a residual,
+not a large binding energy. The *difference* between two adjacent lanthanides is
+a few kJ/mol, and that difference is the entire selectivity.
 
 ##### ΔG₃: Solvation of Complex in Organic Phase
 
@@ -244,14 +275,15 @@ We construct a cycle where all species pass through the gas phase:
 
 **Standard value** (literature):
 
-- G°\[H⁺(aq)\] - G\[H⁺(gas)\] ≈ -1100 kJ/mol (single proton hydration)
+- G°[H⁺(aq)] - G[H⁺(gas)] ≈ -1104 kJ/mol (single proton hydration
+  [@tissandier1998proton])
 
 **Total for 3 protons**:
 
     ΔG₅ = 3 × [G°[H⁺(aq)] - 2.303 RT × pH - G[H⁺(gas)]]
         = 3 × G°_hydration - 3 × 2.303 RT × pH
-        ≈ -3300 kJ/mol - 5.706 × 3 × pH  kJ/mol
-        ≈ -3300 - 17.1 × pH  kJ/mol
+        ≈ -3312 kJ/mol - 5.706 × 3 × pH  kJ/mol
+        ≈ -3312 - 17.1 × pH  kJ/mol
 
 **Key insight**: The pH appears explicitly here!
 
@@ -259,112 +291,98 @@ We construct a cycle where all species pass through the gas phase:
 
 #### The Sum
 
-    ΔG_extraction = ΔG₁ + ΔG₂ + ΔG₃ + ΔG₄ + ΔG₅
+    ΔG°_extraction = ΔG₁ + ΔG₂ + ΔG₃ + ΔG₄ + ΔG°₅
 
-Let's trace the path:
+Tracing the path, with orders of magnitude for a light lanthanide and an acidic
+organophosphorus extractant:
 
-1.  REE³⁺(aq) → REE³⁺(gas): ΔG₁ (+ large, \~1300 kJ/mol)
-2.  REE³⁺(gas) + 3HL(gas) → REEL₃(gas): ΔG₂ (- large, \~-2500 kJ/mol)
-3.  REEL₃(gas) → REEL₃(org): ΔG₃ (- modest, \~-100 kJ/mol)
-4.  3HL(org) → 3HL(gas): ΔG₄ (+ modest, \~+200 kJ/mol)
-5.  3H⁺(gas) → 3H⁺(aq): ΔG₅ (- very large, \~-3300 - 17pH kJ/mol)
+1.  REE³⁺(aq) → REE³⁺(g): ΔG₁ (+ very large, \~+3150 kJ/mol)
+2.  3HL(org) → 3HL(g): ΔG₄ (+ modest, \~+200 kJ/mol)
+3.  REE³⁺(g) + 3HL(g) → REEL₃(g) + 3H⁺(g): ΔG₂ (small residual of two \~4000
+    kJ/mol terms, \~±100 kJ/mol)
+4.  REEL₃(g) → REEL₃(org): ΔG₃ (− modest, \~−120 kJ/mol)
+5.  3H⁺(g) → 3H⁺(aq): ΔG°₅ (− very large, \~−3312 kJ/mol)
 
-#### Typical Values (Example: La + D2EHPA at pH 3)
-| Term | Description            | Approximate Value |
-|------|------------------------|-------------------|
-| ΔG₁  | Dehydration            | +1250 kJ/mol      |
-| ΔG₂  | Binding (DFT/UMA)      | -2500 kJ/mol      |
-| ΔG₃  | Complex solvation      | -100 kJ/mol       |
-| ΔG₄  | Extractant desolvation | +200 kJ/mol       |
-| ΔG₅  | Proton hydration       | -3351 kJ/mol      |
-| Sum  | **ΔG~extraction~**     | **-4501 kJ/mol**  |
+Note what steps 1 and 5 do to each other. Stripping the water off a REE³⁺ ion
+costs +3150 kJ/mol; hydrating the three protons that replace it returns −3312.
+**They cancel to within about 5%**, and the residual is the same order as ΔG₂.
+The cycle is not a sum of a large term and some corrections; it is a difference
+of four large terms whose near-cancellation is the entire physical content.
+
+#### Typical Values (La + D2EHPA, standard state)
+
+| Term | Description            | Value        | Where it comes from             |
+|------|------------------------|--------------|---------------------------------|
+| ΔG₁  | Dehydration            | +3145 kJ/mol | experiment [@marcus1991thermodynamics] |
+| ΔG₄  | Extractant desolvation | +200 kJ/mol  | implicit solvation, estimated   |
+| ΔG₂  | Complexation + 3 H⁺    | *computed*   | DFT or a learned surrogate      |
+| ΔG₃  | Complex solvation      | −120 kJ/mol  | implicit solvation, estimated   |
+| ΔG°₅ | Proton hydration       | −3312 kJ/mol | experiment [@tissandier1998proton] |
+| Sum of the four known terms |         | **−87 kJ/mol** |                       |
 
 #### Converting to K~ex~
 
-    log K_ex = -ΔG_extraction / (2.303 RT)
-             = -(-4501 kJ/mol) / (5.706 kJ/mol)
-             = +788.8
+    log K_ex = -ΔG°_extraction / (2.303 RT)
 
-Wait, that can't be right! K~ex~ = 10^788^ is unphysically large!
+with 2.303 RT = 5.706 kJ/mol at 298 K.
 
-#### The pH Correction
+Now run the requirement backwards. Experimental log K~ex~ for these systems
+falls between roughly 0 and 10, so ΔG°~extraction~ must land between 0 and
+−57 kJ/mol. With the four known terms summing to −87, **ΔG₂ has to fall between
++30 and +87 kJ/mol** — a window 57 kJ/mol wide, on a quantity assembled from a
++4,000 kJ/mol deprotonation and a −4,200 kJ/mol association.
 
-The issue is that ΔG₅ includes the pH-dependent term. We need to separate the standard state from the pH dependence.
-
-The proper formulation is:
-
-    ΔG_extraction = ΔG°_extraction + 3 × RT ln[H⁺]
-                  = ΔG°_extraction - 3 × 2.303 RT × pH
-
-So we should write:
-
-    ΔG°_extraction = ΔG₁ + ΔG₂ + ΔG₃ + ΔG₄ + ΔG°₅
-
-Where ΔG°₅ is the **standard** hydration energy (at pH = 0, i.e., \[H⁺\] = 1 M).
-
-#### Corrected Calculation
-
-Using ΔG°₅ = 3 × (-1100) = -3300 kJ/mol (at standard state):
-
-| Term | Value            |
-|------|------------------|
-| ΔG₁  | +1250 kJ/mol     |
-| ΔG₂  | -2500 kJ/mol     |
-| ΔG₃  | -100 kJ/mol      |
-| ΔG₄  | +200 kJ/mol      |
-| ΔG°₅ | -3300 kJ/mol     |
-| Sum  | **-4450 kJ/mol** |
-
-    log K°_ex = -ΔG°_extraction / (2.303 RT)
-              = -(-4450) / 5.706
-              = +779.9
-
-Still huge! But now we apply the pH correction separately:
-
-    log K_ex(pH) = log K°_ex + 3 pH
-
-At pH = 3:
-
-    log K_ex(pH=3) = 779.9 + 3(3) = 788.9
-
-This is still very large, which tells us something is wrong with the absolute values...
+That is the real difficulty, and it is worth stating as a number: predicting
+log K~ex~ from first principles requires ΔG₂ to about **1% of its own
+constituents**. It has nothing to do with the chemistry being subtle and
+everything to do with the arithmetic being a difference of large numbers.
 
 ### Reality Check: Where Are the Errors?
 
-Experimental values are typically:
+Two failure modes, and it is important to keep them apart.
 
-- log K~ex~ ≈ 0 to 10 (not 788!)
+#### Failure 1: The cycle does not close (mis-specification)
 
-What's wrong?
+If the cycle is written without the three protons on ΔG₂ — as
+`REE³⁺(g) + 3HL(g) → REEL₃(g)`, neutral on the right — then the three gas-phase
+deprotonations, roughly +4,000 kJ/mol, are simply missing. The sum comes out
+near −4,450 kJ/mol and
 
-#### Issue 1: Absolute Solvation Energies are Uncertain
+    log K_ex = 4450 / 5.706 ≈ 780
 
-The absolute values of:
+which is not a large error, it is a different reaction. **A result of 10⁷⁸⁰ is
+never noise**; it is a diagnostic that a term of ~4,000 kJ/mol is absent. Check
+that charge and atom counts balance around the loop before looking anywhere
+else.
 
-- ΔG₁ (ion hydration): ±50 kJ/mol uncertainty
-- ΔG₂ (DFT binding): ±50-100 kJ/mol uncertainty (this is why UMA has MAE ≈ 25 kJ/mol)
-- ΔG°₅ (proton hydration): ±50 kJ/mol uncertainty
+#### Failure 2: The cycle closes but the terms are uncertain (numerical error)
 
-These uncertainties **add up** to ±150-200 kJ/mol, which is:
+Once the cycle balances, the honest error budget is:
 
-    Δ(log K_ex) ≈ ±200 / 5.706 ≈ ±35 log units!
+- ΔG₁ (ion hydration): ±20 kJ/mol — the tabulated values depend on the
+  extrathermodynamic split of a measured salt into single ions
+- ΔG°₅ (proton hydration): ±10 kJ/mol, and it is *common to all lanthanides*
+- ΔG₃, ΔG₄ (implicit solvation of neutrals in a hydrocarbon): ±20 kJ/mol each,
+  and partially cancelling since the same model is used for both
+- ΔG₂ (DFT): ±50-100 kJ/mol; a learned surrogate at 6.1 kcal/mol MAE adds
+  ±25 kJ/mol on top of whatever the training data inherited
 
-Huge!
+Taken in quadrature this is ±60-120 kJ/mol, or **±10-20 log units** on an
+absolute log K~ex~ whose true value is between 0 and 10. Absolute prediction is
+therefore out of reach, and saying so plainly is more useful than reporting a
+number to three figures.
 
-#### Issue 2: Standard States and Activity Coefficients
+#### Failure 3: Standard states and activity coefficients
 
-The thermodynamic formulation assumes:
+The formulation above assumes activities equal concentrations. In a real
+circuit:
 
-- Activities, not concentrations
-- Standard states properly defined
-- Activity coefficients = 1
+- ionic strength is 1-3 M and activity coefficients are not 1
+- extractant dimerization is not treated explicitly (see below)
+- the complex aggregates at high loading, and can form a third phase
 
-In reality:
-
-- High ionic strength (I = 1-3 M)
-- Activity coefficients ≠ 1
-- Extractant dimerization not explicitly treated
-- Complex may aggregate at high loading
+These are second-order next to Failure 2, but they set a floor on how well any
+calibration can transfer between systems.
 
 ### Practical Solution: Relative Predictions
 
@@ -398,8 +416,10 @@ Where C is fitted to match experimental log K~ex~ for 1-2 reference systems.
 
 Even if absolute values are off, trends should be correct:
 
-- pH dependence (slope = 3)
-- Temperature dependence (via ΔH = ∂ΔG/∂T)
+- pH dependence (slope = +3)
+- Temperature dependence, via the Gibbs-Helmholtz relation
+  `∂(ΔG/T)/∂(1/T) = ΔH` — equivalently `ΔS = −∂ΔG/∂T`, which is the identity
+  the van't Hoff analysis later in this chapter uses
 - Solvent effects (relative ΔG₃ for different solvents)
 - Extractant comparison (relative ΔG₂ for D2EHPA vs PC88A)
 
@@ -421,39 +441,32 @@ For a given system (e.g., La³⁺ + D2EHPA in kerosene at pH 3, 298 K):
 
 #### Step 3: Convert to K~ex~
 
-    log K°_ex = -ΔG°_extraction / (2.303 RT)
+    log K_ex = -ΔG°_extraction / (2.303 RT)
 
-#### Step 4: Apply pH Correction
+#### Step 4: Convert to a Distribution Ratio
 
-    log K_ex(pH) = log K°_ex + 3 pH
+There is no separate "pH correction" to apply. K~ex~ is an equilibrium constant
+and does not depend on pH; the pH dependence appears when the mass-action
+expression is rearranged for D, because H⁺ is a product of the extraction
+reaction:
 
-Or equivalently:
+    K_ex = ([REEL₃]_org × [H⁺]³_aq) / ([REE³⁺]_aq × [(HL)₂]³_org)
 
-    log K_ex = -(ΔG₁ + ΔG₂ + ΔG₃ + ΔG₄ + ΔG°₅) / (2.303RT) + 3 pH
+    D = [REEL₃]_org / [REE³⁺]_aq = K_ex × [(HL)₂]³_org / [H⁺]³_aq
 
-#### Step 5: Convert to Distribution Ratio D
+    log D = log K_ex + 3 log[(HL)₂]_org + 3 pH
 
-    log D = log K_ex + 3 log[(HL)₂]_org - 3 pH
+Substituting the result of Step 3,
 
-          = log K°_ex + 3 pH + 3 log[(HL)₂]_org - 3 pH
+    log D = -(ΔG₁ + ΔG₂ + ΔG₃ + ΔG₄ + ΔG°₅)/(2.303RT) + 3 log[(HL)₂]_org + 3 pH
 
-          = log K°_ex + 3 log[(HL)₂]_org
+One cycle calculation therefore predicts a whole family of log D values — one
+for every pH and extractant loading. Only the intercept comes from the
+calculation; the slopes are fixed by the stoichiometry, which is why they are
+the part of this expression experiment agrees with
+([](#solvent-extraction-fundamentals)).
 
-Wait, the pH cancels! That's because we already included it in the K~ex~ definition.
-
-Actually, the correct formulation is:
-
-    From the equilibrium: K_ex = ([REEL₃]_org × [H⁺]³_aq) / ([REE³⁺]_aq × [(HL)₂]³_org)
-
-    Rearranging: D = [REEL₃]_org / [REE³⁺]_aq = K_ex × [(HL)₂]³_org / [H⁺]³_aq
-
-    Therefore: log D = log K_ex + 3 log[(HL)₂]_org + 3 pH
-
-So:
-
-    log D = [-(ΔG₁ + ΔG₂ + ΔG₃ + ΔG₄ + ΔG°₅)/(2.303RT)] + 3 log[(HL)₂]_org + 3 pH
-
-#### Step 6: Compare with Experimental log D
+#### Step 5: Compare with Experimental log D
 
 A validation dataset supplies experimental log D values. Compare:
 
@@ -468,11 +481,11 @@ Calculate:
 
 ### Key Takeaways
 
-1.  **The thermodynamic cycle connects atomistic calculations (DFT/UMA) to measurable K~ex~**
+1.  **The thermodynamic cycle connects atomistic calculations (DFT, or a learned surrogate for the binding step) to measurable K~ex~**
 
 2.  **ΔG₂ (binding energy) is the term computed with machine learning** — this is where different REEs and extractants differ most
 
-3.  **Absolute K~ex~ prediction is challenging** (±150 kJ/mol errors → ±25 log units!)
+3.  **Absolute K~ex~ prediction is out of reach** — ±60-120 kJ/mol on the sum is ±10-20 log units on a quantity whose true value spans 0-10
 
 4.  **Relative predictions (selectivity) are more robust** - systematic errors cancel
 
@@ -480,12 +493,12 @@ Calculate:
 
 6.  **Focus on trends and rankings** rather than absolute values
 
-7.  **The pH dependence (+3 slope) comes from the stoichiometry**, not the cycle - it's built into the K~ex~ definition
+7.  **The pH dependence (+3 slope) comes from the stoichiometry**, not from the cycle: K~ex~ itself is pH-independent, and the slope appears only when the mass-action expression is rearranged for D
 
 The workflow is:
 
 ``` example
-DFT/UMA → ΔG₂ → Sum cycle → ΔG°_extraction → log K°_ex → Apply pH → log K_ex → Add extractant conc. → log D → Compare with expt.
+DFT or learned surrogate → ΔG₂ → sum cycle → ΔG°_extraction → log K_ex → add pH and extractant concentration → log D → compare with expt.
 ```
 
 ## Microcalorimetry for Liquid-Liquid Extraction Thermodynamics
