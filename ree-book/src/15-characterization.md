@@ -58,7 +58,7 @@ ICP-MS has become the method of choice for REE analysis due to its exceptional s
 
 | Parameter | Typical Value |
 | ----------- | --------------- |
-| Detection limits | 2-11 ng/g (ppt range) |
+| Detection limits | 2-11 ng/g in the digested solid (ppb; ppt-level in the aspirated solution) |
 | Precision (RSD) | \~2.5% |
 | Linear range | ppt to ppm |
 | Sample throughput | 10-30 samples/hour |
@@ -77,10 +77,64 @@ ICP-MS has become the method of choice for REE analysis due to its exceptional s
 |-------------------|------------------------|-----------------------------------|
 | Oxide formation   | BaO⁺ on Eu             | KED mode, mathematical correction |
 | Hydroxide         | REEOH⁺ on heavier REEs | Collision/reaction cell           |
-| Isobaric          | ¹⁴²Ce on ¹⁴²Nd         | High-resolution or MC-ICP-MS      |
+| Isobaric          | ¹⁴²Ce on ¹⁴²Nd         | Use ¹⁴³Nd, ¹⁴⁵Nd or ¹⁴⁶Nd; or correct mass 142 from ¹⁴⁰Ce |
 | Matrix effects    | High TDS samples       | Dilution, matrix matching         |
 
+**Why the ¹⁴²Ce/¹⁴²Nd isobar cannot be resolved by mass resolution.** The two
+nuclides differ by about 0.0015 u, so separating them requires a mass resolving
+power near 10⁵. Commercial sector-field ICP-MS tops out an order of magnitude
+below that, and multi-collector instruments are operated at lower resolution
+still, so no available instrument resolves this pair. There are two workable
+alternatives. The first is simply to quantify Nd on a mass Ce does not reach —
+¹⁴³Nd, ¹⁴⁵Nd or ¹⁴⁶Nd — which is what most laboratories do. The second is to
+measure ¹⁴⁰Ce, which is free of Nd, and subtract the Ce contribution to mass 142
+using the natural ¹⁴²Ce/¹⁴⁰Ce abundance ratio (≈0.126). The mathematical
+correction is only as good as the assumption of natural Ce isotopic composition
+and degrades once the Ce/Nd ratio in the sample is large, so the alternative
+isotope is preferred whenever sensitivity allows.
+
 **Kinetic Energy Discrimination (KED) Mode:** KED mode supplies non-reactive helium gas that physically collides with larger polyatomic ions, lowering their kinetic energy and decreasing detection probability. This allows analysis of higher total dissolved solids samples without large dilution factors.
+
+**Oxide interferences, element by element.** The general statement "BaO⁺ on Eu"
+is not enough to choose isotopes. Because the monoxide MO⁺ appears 16 mass units
+above its parent, and because the REEs span a contiguous block of masses, a light
+REE almost always has a monoxide sitting on a heavy REE. The table below lists
+the principal MO⁺ overlaps a separations laboratory will meet, with the
+mitigation that actually works for each [@dulski1994interferences; @balaram2019rare].
+
+| Analyte | Oxide interferent | Mitigation |
+|---------|-------------------|------------|
+| ¹⁵¹Eu | ¹³⁵Ba¹⁶O⁺ | Ba is usually the largest single problem; ¹⁵³Eu is no escape (¹³⁷Ba¹⁶O⁺ lands there). Remove Ba chromatographically, or correct mathematically from ¹³⁷Ba and a measured BaO⁺/Ba⁺ ratio |
+| ¹⁵⁷Gd | ¹⁴¹Pr¹⁶O⁺ | Mathematical correction from ¹⁴¹Pr (monoisotopic, so the correction is clean); every other Gd isotope carries a LaO⁺, CeO⁺ or NdO⁺ overlap |
+| ¹⁵⁹Tb | ¹⁴³Nd¹⁶O⁺ | Tb is monoisotopic — no alternative mass. Minimize oxide formation, then correct from ¹⁴³Nd |
+| ¹⁶³Dy | ¹⁴⁷Sm¹⁶O⁺ | Correct from ¹⁴⁷Sm; ¹⁶¹Dy and ¹⁶²Dy trade this for ¹⁴⁵Nd¹⁶O⁺ and ¹⁴⁶Nd¹⁶O⁺ |
+| ¹⁶⁵Ho | ¹⁴⁹Sm¹⁶O⁺ | Ho is monoisotopic — correct from ¹⁴⁹Sm |
+| ¹⁶⁶Er | ¹⁵⁰Nd¹⁶O⁺ (and ¹⁵⁰Sm¹⁶O⁺) | Two parents contribute at mass 166; correct from both, or use ¹⁶⁷Er and correct for ¹⁵¹Eu¹⁶O⁺ |
+| ¹⁶⁹Tm | ¹⁵³Eu¹⁶O⁺ | Tm is monoisotopic — correct from ¹⁵³Eu |
+| ¹⁷⁵Lu | ¹⁵⁹Tb¹⁶O⁺ | Correct from ¹⁵⁹Tb; ¹⁷⁶Lu is worse, carrying isobaric ¹⁷⁶Yb and ¹⁷⁶Hf |
+
+Three general remedies apply across the table. First, **tune the oxide rate
+down**: the standard figure of merit is CeO⁺/Ce⁺, measured on a Ce solution
+during setup, because Ce forms one of the most stable REE monoxides and so
+represents a near-worst case for the rest. Routine tuning targets a percent or
+two; a desolvating nebulizer or a cooled spray chamber pushes it substantially
+lower, and the correction
+residuals fall with it. Second, **correct mathematically**: aspirate a
+single-element solution of each interfering parent, measure its MO⁺/M⁺ ratio at
+the same tune, and subtract that fraction of the parent's signal from the
+analyte mass. This is reliable only while the correction is a small part of the
+analyte signal — a correction larger than the signal it corrects is not a
+measurement. Third, **remove the interferent**, either by chromatographic
+separation of the REEs upstream of the plasma (which is what the HPLC-ICP-MS and
+online-separation methods below are for) or, on a triple-quadrupole instrument,
+by reaction-cell chemistry that mass-shifts analyte and interferent to different
+product masses. Collision-cell helium with KED helps far less here than it does
+for argide interferences, because MO⁺ and M⁺ have similar collision cross
+sections. Note also that the samples most likely to defeat all of this are the
+ones a separations laboratory actually generates: a raffinate from a Nd/Sm
+system is, by construction, enormously enriched in one REE relative to its
+neighbours, which is precisely the condition that makes an oxide correction
+large.
 
 ### X-Ray Fluorescence (XRF)
 XRF enables rapid, non-destructive analysis of solid samples without digestion ([Rigaku](https://rigaku.com/products/xrf-spectrometers/wdxrf/webinars/determining-the-rare-earth-elements-using-wdxrf/summary), [Evident Scientific](https://ims.evidentscientific.com/en/applications/portable-xrf-for-rare-earth-element-identification-and-exploration)).
@@ -98,7 +152,10 @@ XRF enables rapid, non-destructive analysis of solid samples without digestion (
 - REEs have numerous K-lines (3) and L-lines (\~7) with significant overlap
 - Spectral overlap with common elements (Ge, Ni)
 - Careful selection of analytical lines and background positions required
-- Detection limits: \~5-10% for laboratory instruments (lower for trace analysis)
+- Relative uncertainty on a reported concentration: \~5-10% is typical once line
+  overlaps are deconvolved, and worse without matrix-matched standards. This is a
+  precision figure, not a detection limit; detection limits are at the ppm level
+  for WDXRF (see the comparison table at the end of this chapter)
 
 **TXRF (Total Reflection XRF):** For trace element and contamination analyses, TXRF offers improved sensitivity through sample presentation on optically flat reflectors. Neural network-based modeling has been applied to decode interfering L-lines for direct analysis of lanthanides in water samples.
 
@@ -190,13 +247,20 @@ Potentiometric titration determines pKa values, stability constants, and extract
 
 **Metal Hydrolysis Mitigation:** Metal ions in acidic solution can act as Bronsted acids, causing hydrolysis and lowering pH. This is mitigated by adding 1 M potassium oxalate (5 mL) to complex metal ions before titration.
 
-**Example pKa Values (REE-MGDA Complexes):**
-
-| Element | pKa  |
-|---------|------|
-| La      | 3.81 |
-| Nd      | 3.25 |
-| Eu      | 2.96 |
+**What the titration actually yields.** A potentiometric titration of a
+ligand alone returns the ligand's own protonation constants — for an
+aminopolycarboxylate such as {index}`MGDA <methylglycinediacetic acid>`
+(methylglycinediacetic acid) these are the pKa values of its carboxylate and
+amine groups. Repeating the titration with metal present, and fitting the
+displaced titration curve, returns the metal-ligand stability constants
+log K(ML), log K(ML₂) and, where relevant, the conditional (pH-dependent)
+constant log K′ at the working pH. A metal complex does not have a "pKa" in
+this sense; the only pKa a complex can be said to have belongs to a coordinated
+water molecule or to a protonatable site left free on the bound ligand, and
+either must be identified explicitly. Reported numbers should therefore say
+which quantity they are, at what ionic strength and temperature, because
+conditional constants are not comparable across pH and stability constants are
+not comparable across background electrolyte.
 
 ## Spectroscopic Characterization
 ### UV-Visible Absorption Spectroscopy
@@ -236,7 +300,15 @@ Vibrational spectroscopy characterizes REE-ligand bonding and complex structure 
 - Characterization of chloride and aqua ligand coordination
 - Phase identification in solid REE compounds
 
-**Raman of Dinitrogen Complexes:** In rare earth dinitrogen complexes, Raman stretching frequencies decrease regularly with decreasing atomic number and increasing Lewis acidity of the metal (Gd → Tm).
+**Sensitivity to the metal across the series:** vibrational frequencies of a
+coordinated ligand track the Lewis acidity of the metal centre, which rises
+across the series as the ionic radius contracts. In rare earth dinitrogen
+complexes, for example, the N-N Raman stretching frequency changes regularly
+from Gd to Tm — that is, with *increasing* atomic number, decreasing ionic
+radius, and increasing Lewis acidity [@fieser2016raman]. The same logic is what
+makes vibrational spectroscopy useful in extraction chemistry: the P=O
+stretching band of an organophosphorus extractant shifts on complexation, and
+the size of that shift reports on how strongly the ligand is bound.
 
 ### NMR Spectroscopy
 Paramagnetic lanthanide ions produce characteristic shifts in NMR spectra [@cockerill1973lanthanide].
@@ -447,6 +519,73 @@ Key parameters for solvent extraction process design ([@liu2022advancing], [MDPI
 - Diluent type
 - Aqueous phase composition
 
+### Measuring D
+
+D is defined in [](#solvent-extraction-fundamentals) and reported in almost
+every extraction paper, yet it is the measurement most often made badly. The
+definition involves two concentrations, and the practical question is which of
+them you actually measure.
+
+**By difference, or directly.** The cheapest protocol measures the feed and the
+raffinate — both aqueous, both compatible with the same ICP calibration — and
+infers the organic loading from the depletion:
+`[REE]_org = ([REE]_feed − [REE]_aq) × (V_aq/V_org)`. The alternative is to
+analyse the organic phase itself, either by back-extracting it into a strong
+acid or by digesting an aliquot. Direct analysis costs an extra step and an
+extra calibration; by difference costs nothing and is defensible over a
+surprisingly narrow range.
+
+**Where by difference fails.** The rule is that you must never obtain by
+difference the phase holding most of the metal. Take D = 0.01 at a phase ratio
+O/A = 1: the aqueous retains 99.0% of the feed, and the whole organic loading is
+carried by a 1.0% depletion. Propagate a 2% relative uncertainty on the feed and
+on the raffinate — optimistic for routine ICP-OES — and that 1.0% difference
+arrives with roughly 280% relative uncertainty. The reported D is
+indistinguishable from zero. Direct analysis of the organic phase turns the same
+experiment into a few-percent measurement, because the small quantity is then
+measured rather than inferred. The mirror-image failure is measuring only the
+organic and taking the raffinate by difference when D = 100, where the aqueous
+holds under 1% and the same arithmetic applies with the phases exchanged. As a
+working rule, by difference is acceptable while the depletion exceeds roughly a
+quarter of the feed, i.e. while `D × (O/A)` is of order 0.3 or larger; outside
+that window, analyse the minority phase directly. At D ≫ 1 there is a second,
+harder limit: once the raffinate approaches the detection limit, or once a
+percent of entrained organic droplets in the aqueous aliquot puts a floor under
+the apparent aqueous concentration, the experiment can only report a lower bound
+on D. Say so rather than quoting a number.
+
+**Matrix matching.** Standards must match the solution that is actually
+aspirated. Aqueous samples should be calibrated in the same acid at the same
+molarity, with the same background salt, because acid strength and total
+dissolved solids both change transport efficiency and plasma loading. Organic
+samples are the harder case: a kerosene or dodecane phase cannot be quantified
+against aqueous standards. Either back-extract quantitatively into acid and
+calibrate as an aqueous sample — the usual choice, and the one that keeps a
+single calibration — or aspirate the organic with organometallic standards in
+the same diluent, oxygen addition to the plasma, and a cooled spray chamber. An
+internal standard (In or Rh) should be present in every solution either way.
+
+**Mass balance is the check that catches the mistakes.** Measure both phases,
+not one, and close the balance:
+`[REE]_feed × V_aq = [REE]_aq × V_aq + [REE]_org × V_org`. Closure within a few
+percent is the evidence that D means what you think it means. Poor closure is
+diagnostic rather than merely annoying: metal missing from both phases points to
+third-phase formation, precipitation at the interface, or sorption on the vessel
+walls, while apparent excess usually means a dilution factor or a phase volume
+was recorded wrongly. Record the volumes actually used, not the volumes intended
+— mutual solubility and entrainment change them — since every D computed by
+difference and every mass balance depends on V_aq/V_org.
+
+**Do not assume equilibrium.** Contact times quoted in the literature are
+frequently inherited rather than measured. Establish the equilibration time once
+for each new system by sampling a time series — for example 1, 2, 5, 10, 30 and
+60 minutes at fixed temperature and agitation — and plotting D against time to
+confirm a plateau. Chelating and macrocyclic extractants, systems near their
+loading limit, and low-pH conditions where the extraction is slowest are the
+cases where an assumed contact time silently returns a kinetic rather than an
+equilibrium D. Report the contact time, the temperature, and the phase ratio
+alongside the value.
+
 ### Separation Factor (β)
 **Definition:**
 
@@ -457,14 +596,13 @@ Key parameters for solvent extraction process design ([@liu2022advancing], [MDPI
 1.  **Effective separation factor**: Function of adjacent element separation factors and component percentages
 2.  **Equivalent separation factor**: Converts all components to two-component system
 
-**Example Separation Factors (optimized system):**
-
-| Pair  | Separation Factor |
-|-------|-------------------|
-| Ce/La | 12                |
-| Nd/La | 87                |
-| Pr/La | 127               |
-| Sm/La | 3191              |
+A useful internal check on any table of separation factors: for a single
+extractant, β against a common reference element should vary monotonically with
+atomic number, because D itself varies monotonically. A tabulated set in which
+β(Pr/La) exceeds β(Nd/La) — Pr sits between Ce and Nd — is either a
+transcription error or the result of mixing systems, and should not be used.
+Representative measured separation factors for named extractant systems are
+given in [](#solvent-extraction-fundamentals).
 
 **Machine Learning Approaches:** Deep neural networks trained on experimental data can predict distribution coefficients for high-throughput ligand screening.
 

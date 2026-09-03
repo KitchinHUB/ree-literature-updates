@@ -101,7 +101,7 @@ atmospheric pressure — one number, owned by ch. 5, cross-referenced elsewhere.
 `05:583,1006` Alamine 336 is tertiary, not primary.
 `05:478-497` direct HCl digestion of monazite: delete or label laboratory-only.
 
-- [ ] M9
+- [x] M9
 
 ## M10 — Ch. 15: four analytical errors
 `15:61` ng/g is ppb, not ppt. `15:80` the ¹⁴²Ce/¹⁴²Nd isobar needs R ≈ 10⁵ and
@@ -111,7 +111,7 @@ correct from ¹⁴⁰Ce. `15:101` "5-10%" is not a detection limit. `15:193-199`
 atomic number ... (Gd → Tm)" is self-contradictory. `15:460-467` non-monotonic
 separation factors, uncited.
 
-- [ ] M10
+- [x] M10
 
 ## M11 — Ch. 9: recompute the intensification table
 `09:167` kLa 20-400×, printed 100-1000×, propagating to `09:10` and `09:425`.
@@ -120,7 +120,7 @@ separation factors, uncited.
 150× (`09:66`). `09:170` "2-6× higher separation factor" cited to two flow-pattern
 papers containing no separation factors.
 
-- [ ] M11
+- [x] M11
 
 ## M12 — Ch. 5's waste table is wrong by >10× and mixes bases
 `05:1280-1286`. At the chapter's own 0.05-0.3 % grade, one ton REO needs
@@ -128,7 +128,7 @@ papers containing no separation factors.
 concentrate, not ore. Recompute from grade and recovery, label the basis, and
 drop the `@jha2016hydrometallurgical` attribution unless the numbers are his.
 
-- [ ] M12
+- [x] M12
 
 ## M13 — Source or delete ch. 7's uncited numerical sections
 `07:199-227` (one-step clean process), `365-404` (fluorination), `406-433`
@@ -142,7 +142,7 @@ drop the `@jha2016hydrometallurgical` attribution unless the numbers are his.
 `1337-1353` (energy/CO₂), `1439-1449` (cost), `892-896` (bioleaching recoveries
 an order of magnitude above what `@brisson2015bioleaching` reports).
 
-- [ ] M14
+- [x] M14
 
 ## M15 — Source or delete ch. 17's unsourced tables
 `17:67-88` (CAPEX/OPEX shares), `106-112` (cost basis undefined, inconsistent by
@@ -151,7 +151,7 @@ an order of magnitude above what `@brisson2015bioleaching` reports).
 for which no comparable study exists), `346-354` (energy intensity).
 Resolve the in-table "MDPI 2022" pseudo-citation at `17:241-247`.
 
-- [ ] M15
+- [x] M15
 
 ## M16 — Verify and convert ch. 10's hand-written Sources list
 `10:449-473` is the only such list left in the book and contradicts the policy in
@@ -161,14 +161,14 @@ carrying every quantitative claim about borate crystallization, M₄L₄ cages,
 H₂PDA and macrophosphi — has zero inline citations. Run the twelve through the
 CrossRef pipeline, convert survivors to `[@key]`, delete the list.
 
-- [ ] M16
+- [x] M16
 
 ## M17 — Restore or remove three dangling footnotes
 `06:132` (`[^1][^2]`, carrying seven-significant-figure ammonia/uranium tonnages
 and the razorback sucker claim) and `09:79` (`[^1]`, carrying "enrichment factors
 of 200-450"). No definitions exist anywhere in either file.
 
-- [ ] M17
+- [x] M17
 
 ## M18 — Replace four placeholder-author bib entries
 `others2019characterization`, `anon2024efficienta`, `yang2022pilot`,
@@ -214,7 +214,7 @@ their principal oxide interferents (¹³⁵Ba¹⁶O→¹⁵¹Eu, ¹⁴¹Pr¹⁶O
 ¹⁴³Nd¹⁶O→¹⁵⁹Tb, ¹⁴⁷Sm¹⁶O→¹⁶³Dy, ¹⁴⁹Sm¹⁶O→¹⁶⁵Ho, ¹⁵⁰Nd¹⁶O→¹⁶⁶Er,
 ¹⁵³Eu¹⁶O→¹⁶⁹Tm, ¹⁵⁹Tb¹⁶O→¹⁷⁵Lu).
 
-- [ ] G22
+- [x] G22
 
 ## G23 — State Part IV's accuracy target and carry it through
 `ΔΔG = RT ln β`: an adjacent-pair β of 1.5-3 is **1-2.7 kJ/mol** at 298 K,
