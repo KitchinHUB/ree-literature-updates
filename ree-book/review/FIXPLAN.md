@@ -23,7 +23,7 @@ which is wrong; `03:275-280`'s table (log D rising with pH) is right.
 Fix every occurrence, keep one convention, and say explicitly which variable the
 slope is taken against.
 
-- [ ] B1
+- [x] B1
 
 ## B2 — Ch. 1 states the lanthanide contraction two ways
 `src/01-why-separation-is-hard.md:14` "roughly 0.01 Å per element" vs `:48`

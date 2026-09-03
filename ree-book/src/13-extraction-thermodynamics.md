@@ -685,7 +685,7 @@ D = C_REE,org / C_REE,aq ≈ K_ex · (a_HA\^3 / a_H+\^3)
   
 Taking logarithms gives a practical working equation:  
   
-log D ≈ log K_ex + 3 log\[HA\] − 3 pH + Δγ  
+log D ≈ log K_ex + 3 log[HA] + 3 pH + Δγ  
   
 where Δγ captures solvent and activity-coefficient effects.
 

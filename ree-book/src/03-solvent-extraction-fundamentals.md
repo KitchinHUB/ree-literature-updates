@@ -14,8 +14,11 @@ extractant dissolved in kerosene is a weak acid; when it coordinates a REE³⁺ 
 it releases three protons. That single fact makes the whole process reversible
 by pH: raise the pH and metal moves into the organic phase, drop it and the
 metal comes back out, leaving the extractant regenerated and ready to recycle.
-The "pH swing" is the entire operating principle, and the −3 slope of log D
-against pH is its signature.
+The "pH swing" is the entire operating principle, and the +3 slope of log D
+against pH is its signature — three protons released per metal ion, so a single
+pH unit moves the distribution ratio by three orders of magnitude. (The same
+stoichiometry read against log[H⁺] rather than pH gives a slope of −3; both
+appear in the literature and they describe the same experiment.)
 
 What makes rare earths hard is that this mechanism discriminates between
 adjacent lanthanides only weakly. A {index}`separation factor` near 1.5 is normal.
@@ -258,26 +261,33 @@ Where:
 
     D = [REE]ₒᵣ𝓰 / [REE]ₐ𝓆
 
-    log D = log Kₑₓ + 3 log[(HL)₂]ₒᵣ𝓰 - 3 pH
+    log D = log Kₑₓ + 3 log[(HL)₂]ₒᵣ𝓰 + 3 pH
 
 ### pH Dependence (The "pH Swing")
-**Key observation**: log D has **strong pH dependence** with slope ≈ -3 [@tanaka2021revaluating; @li2020hydration].
+**Key observation**: log D has **strong pH dependence** with slope ≈ +3 [@tanaka2021revaluating; @li2020hydration].
 
-    ∂(log D) / ∂pH ≈ -3
+    ∂(log D) / ∂pH ≈ +3          (equivalently, ∂(log D)/∂log[H⁺] ≈ -3)
 
 This means:
 
 - Increasing pH by 1 unit → D increases by \~1000×
 - Decreasing pH by 1 unit → D decreases by \~1000×
 
-**Example with D2EHPA** [@agarwal2020comparative]:
+**Illustrative slope-3 behaviour**, drawn for a lanthanide with pH₁/₂ = 2.5 at
+equal phase volumes; real D2EHPA systems sit close to this
+[@agarwal2020comparative]:
 
-| pH  | log D (La) | D (La) | % Extraction |
-|-----|------------|--------|--------------|
-| 1.0 | -1.5       | 0.03   | 3%           |
-| 2.0 | 0.0        | 1.0    | 50%          |
-| 3.0 | 1.5        | 32     | 97%          |
-| 4.0 | 3.0        | 1000   | 99.9%        |
+| pH  | log D | D     | % Extraction |
+|-----|-------|-------|--------------|
+| 1.5 | -3.0  | 0.001 | 0.1%         |
+| 2.0 | -1.5  | 0.032 | 3%           |
+| 2.5 | 0.0   | 1.0   | 50%          |
+| 3.0 | 1.5   | 32    | 97%          |
+| 3.5 | 3.0   | 1000  | 99.9%        |
+
+Half a pH unit takes the system from 3% to 97% extraction. That steepness is
+what makes the pH swing work, and it is also why pH control is the single most
+demanding part of running a cascade.
 
 ### Extraction Cycle
 #### Extraction Stage (Forward Transfer)
@@ -417,9 +427,12 @@ For 1.0 M REE feed, 90% extraction:
 
 pH₁/₂ is defined as the pH where D = 1 (50% extraction).
 
-From: log D = log K~ex~ + 3 log\[(HL)₂\] - 3 pH
+From: log D = log K~ex~ + 3 log[(HL)₂] + 3 pH
 
-At D = 1: pH₁/₂ = (log K~ex~ + 3 log\[(HL)₂\]) / 3
+At D = 1: pH₁/₂ = −(log K~ex~ + 3 log[(HL)₂]) / 3
+
+A *lower* pH₁/₂ means a more strongly extracted element, since it reaches
+D = 1 while the aqueous phase is still more acidic.
 
 **Selectivity**:
 
@@ -817,7 +830,7 @@ The fundamental principle:
              ↓
      Regenerated organic (recycle)
 
-Slope: ∂(log D)/∂pH ≈ -3 for trivalent REE with dimeric acidic extractants
+Slope: ∂(log D)/∂pH ≈ +3 for trivalent REE with dimeric acidic extractants
 
 ### Extractant Behavior
 **Throughout the cycle**:
