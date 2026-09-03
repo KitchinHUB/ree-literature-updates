@@ -334,7 +334,7 @@ Effective REE recovery requires prior removal of impurities through staged preci
 
 #### Structural Divergence Across the Lanthanide Series
 
-Different lanthanides form different crystal structures under identical conditions due to:
+Different lanthanides form different crystal structures under identical conditions [@yin2017rare; @chen2025selective] due to:
 
 - **Coordination number variations** - Larger early lanthanides (La, Ce) prefer higher coordination numbers than smaller late lanthanides
 - **Ligand polymerization diversity** - The same ligand can polymerize differently depending on the metal center
@@ -345,7 +345,7 @@ The interplay between thermodynamics and kinetics is complex:
 
 - At **lower supersaturation**: the thermodynamically stable form dominates
 - At **higher supersaturation**: kinetic effects can lead to concomitant polymorphism
-- **Reaction time** significantly affects which phase crystallizes (as seen in Nd/Dy systems)
+- **Reaction time** significantly affects which phase crystallizes (as seen in the Nd/Sm borate system) [@yin2017rare]
 - Surface thermodynamics can drive transformations between crystal structures
 
 According to the Stranski-Totomanow conjecture, polymorph selection is governed by the lowest free-energy barrier for nucleation. However, recent research shows that kinetic effects may be unable to fully explain structural transformation in all polymorphic situations.
@@ -354,36 +354,36 @@ According to the Stranski-Totomanow conjecture, polymorph selection is governed 
 
 #### Selective Borate Crystallization
 
-Research from Wang et al. demonstrated that **six distinct borate phases** form under identical conditions across the lanthanide series. The mechanism involves:
+Yin, Wang and co-workers demonstrated that **six distinct borate phases** form under identical reaction conditions across the lanthanide series [@yin2017rare]. The mechanism involves:
 
 - Ln³⁺ coordination alterations
 - Borate polymerization diversity (different fundamental building blocks)
 - Soft ligand coordination selectivity
 
-Key results:
+Key results [@yin2017rare]:
 
 - One-step quantitative separation of Nd/Dy using density-based flotation
-- Nd/Sm separation through controlled reaction kinetics
-- Rare earth borates (LnBO₃) are isomorphous with different forms of CaCO₃ depending on the radius of the rare earth ion:
-  - LaBO₃, PrBO₃, NdBO₃ crystallize in aragonite structure
-  - SmBO₃ crystallizes in H-form
-  - TbBO₃, EuBO₃, GdBO₃, DyBO₃, YBO₃ crystallize in vaterite structure
+- Enhanced Nd/Sm separation through controlled reaction kinetics
+
+The simple rare earth orthoborates LnBO₃ are themselves polymorphic across the
+series, with a vaterite-type structure adopted over part of it
+[@bradley1966vaterite]; structural divergence of this kind is what the borate
+crystallization route exploits.
 
 #### Supramolecular M₄L₄ Cage Self-Assembly
 
-Tetrahedral M₄L₄ cages assembled from tris-tridentate ligands exhibit **multivalent cooperative enhancement** of metal ion selectivity:
+Tetrahedral M₄L₄ cages assembled from tris-tridentate ligands exhibit **multivalent cooperative enhancement** of metal ion selectivity [@li2018supramolecular]:
 
 - Tiny differences in single metal-ligand interactions are **amplified** through cooperativity
-- Strong preference for incorporating **smaller lanthanide ions**
-- High-precision self-sorting during mixed-metal assembly
-- All M₄L₄ cages are stable to excess metal ions and ligands
-- Introduction of hydrophobic alkyl groups enables liquid-liquid extraction with water
+- Cages form with metal ions from across the periodic table, including Ca²⁺, Cd²⁺, and the full Ln³⁺ series
+- High-precision self-sorting during mixed-metal assembly, which the M₂L₃ analogues do not show
+- All M₄L₄ cages are stable to excess metal ions and ligands, unlike the tridentate and bis-tridentate ligands carrying the same coordination motif
 
-The advantage of such self-assembled systems lies in that the tiny differences in single metal-ligand interactions can be amplified by the multivalent cooperativity effect, which is beneficial in the separation of metal ions with similar properties.
+The advantage of such self-assembled systems lies in that the tiny differences in single metal-ligand interactions can be amplified by the multivalent cooperativity effect, which is beneficial in the separation of metal ions with similar properties; the authors put this forward as a design principle for next-generation lanthanide extractants [@li2018supramolecular].
 
 #### Phenanthroline-Dicarboxylic Acid (H₂PDA) Systems
 
-A 2025 study used 1,10-phenanthroline-2,9-dicarboxylic acid (H₂PDA) with N,N'-dimethylformamide (DMF) and its decomposition products to achieve selective crystallization separation:
+Yin and co-workers used 1,10-phenanthroline-2,9-dicarboxylic acid (H₂PDA) with N,N'-dimethylformamide (DMF) and its decomposition products to achieve selective crystallization separation, exploiting the differing crystallization periodicity of the lanthanides in a solvothermal system [@yin2025selective]:
 
 | Lanthanide Pair | Separation Factor |
 |-----------------|-------------------|
@@ -391,18 +391,18 @@ A 2025 study used 1,10-phenanthroline-2,9-dicarboxylic acid (H₂PDA) with N,N'-
 | La/Sm           | 8.9 ± 0.1         |
 | La/Lu           | 26.9 ± 3.1        |
 
-Four structurally distinct lanthanide compounds crystallize from the same DMF/H₂O/TFA solvent system depending on the lanthanide present.
+Structurally distinct lanthanide compounds crystallize from the same mixed-organic solvent system depending on which lanthanide is present [@yin2025selective].
 
 #### Cyclic Peptide Hosts (Biomimetic Approach)
 
 Inspired by natural biomineralization (such as pearl formation), lanthanide-binding cyclic peptides (Lamp) can:
 
-- Recognize Ln³⁺ through **1:1 complexation-precipitation** process
-- Form amorphous hydroxide-like precipitates
-- Show **high Lu³⁺ selectivity** when acidic amino acid positions are modified
-- Operate under ambient conditions in water without organic solvents
+- Recognize Ln³⁺ through a **1:1 complexation-precipitation** process [@hosokawa2022improved]
+- Promote hydroxide-like Ln species that bind the peptide and accumulate as insoluble precipitates [@hatanaka2017rationally]
+- Show **high Lu³⁺ selectivity** when the positions of the acidic amino acids are changed [@hosokawa2022improved]
+- Operate in water at near-neutral pH (~6) without organic solvents or additional energy input [@hatanaka2017rationally]
 
-The major driving force of Lamp1 in Ln³⁺ recognition is the electrostatic interactions from the side-chain COOH moieties of the acidic amino acids (aspartic acid and glutamic acid). The selectivity was explained by considering:
+The major driving force of Lamp1 in Ln³⁺ recognition is the electrostatic interactions from the side-chain COOH moieties of the acidic amino acids (aspartic acid and glutamic acid) [@hatanaka2017rationally]. The selectivity of the reposition variants was explained by considering [@hosokawa2022improved]:
 
 - Dipole moment
 - Lowest unoccupied molecular orbital (LUMO) energy
@@ -410,20 +410,22 @@ The major driving force of Lamp1 in Ln³⁺ recognition is the electrostatic int
 
 #### Macrocyclic Chelator Precipitation
 
-Recent work developed cyclen-based macrocyclic chelators that:
+Jones and co-workers developed cyclen-based macrocyclic chelators that [@jones2025macrocyclic]:
 
 - Induce significant **solubility differences** among REE chelates
 - Enable selective precipitation from pH-neutral aqueous solution
-- Use simple additives (acetate) to form ternary compounds with tuned solubility
+- Use simple coordinating additives (acetate) to form ternary compounds with tuned solubility
+
+Repeated precipitations separated even adjacent lanthanides, and an automotive NdFeB magnet was processed to a **99.7% pure neodymium** product without organic solvents [@jones2025macrocyclic].
 
 A fundamental challenge with this approach: while Ln chelates in solution behave as discrete, independent entities, the growth of a microcrystalline precipitate involves interactions between chelate units. Errors in crystal lattice assembly may incorporate significant amounts of the soluble Ln chelate into the matrix of the insoluble chelate.
 
 #### Reverse-Size Selective Aqueous Complexants
 
-Substitution of pyridyl-2-carboxylic acid pendant arms (macropa) with pyridyl-2-phosphinic acid arms (macrophosphi) gives rise to dramatic enhancement in discrimination between light lanthanides:
+Substitution of pyridyl-2-carboxylic acid pendant arms (macropa) with pyridyl-2-phosphinic acid arms (macrophosphi) gives rise to dramatic enhancement in discrimination between light lanthanides [@thiele2020tuning]:
 
 - Binding affinity of macrophosphi for La³⁺ is over 5 orders of magnitude higher than for Gd³⁺
-- Separation factors of up to 45 achieved for the Ce/La pair in biphasic extraction
+- Separation factors of up to 45 achieved for the Ce/La pair when macrophosphi is used as the aqueous complexant in a biphasic system with the industrial extractant bis(2-ethylhexyl)phosphoric acid (HDEHP)
 
 ### Challenges and Considerations
 
@@ -435,39 +437,13 @@ Substitution of pyridyl-2-carboxylic acid pendant arms (macropa) with pyridyl-2-
 
 4.  **Scale-up** - Most demonstrations are at proof-of-concept scale
 
-5.  **Shielded 4f orbitals** - Lanthanide separation remains challenging because the 4f orbitals are shielded, preventing bonding with ligand orbitals
+5.  **Shielded 4f orbitals** - Lanthanide separation remains challenging because the 4f orbitals are shielded, preventing bonding with ligand orbitals [@yin2025selective]
 
 ### Design Principles for New Systems
 
-Based on the literature, effective molecular crystal systems for REE separation should:
+Based on the literature reviewed above and the recent surveys of crystallization-based separation [@chen2025selective; @wang2025selective; @forsberg2024separation], effective molecular crystal systems for REE separation should:
 
 1.  **Amplify small ionic radius differences** through multivalent cooperative effects
 2.  **Provide multiple coordination modes** that favor different lanthanides
 3.  **Allow kinetic/thermodynamic control** through adjustable parameters (temperature, solvent, time, pH)
 4.  **Form crystalline products with distinct properties** (solubility, density) for physical separation
-
-## Sources
-
-1.  Wang, S. et al. "Rare earth separations by selective borate crystallization." *Nature Communications* 8, 14438 (2017). <https://www.nature.com/articles/ncomms14438>
-
-2.  Yan, L.-L. et al. "A supramolecular lanthanide separation approach based on multivalent cooperative enhancement of metal ion selectivity." *Nature Communications* 9, 3201 (2018). <https://www.nature.com/articles/s41467-018-02940-7>
-
-3.  Yin, J. et al. "Selective Crystallization Separation Driven by Structural Divergence in Lanthanide Mixed-Organic Systems." *Inorganic Chemistry* (2025). <https://pubs.acs.org/doi/10.1021/acs.inorgchem.5c00183>
-
-4.  Hatanaka, T. et al. "Improved Recovery and Selectivity of Lanthanide-Ion-Binding Cyclic Peptide Hosts by Changing the Position of Acidic Amino Acids." *Minerals* 12(2), 148 (2022). <https://www.mdpi.com/2075-163X/12/2/148>
-
-5.  "Selective crystallization strategies for lanthanides." *Chemical Communications* (2025). <https://pubs.rsc.org/en/content/articlelanding/2025/cc/d5cc03636d>
-
-6.  "Macrocyclic Chelators for Aqueous Lanthanide Separations via Precipitation: Toward Sustainable Recycling of Rare-Earths from NdFeB Magnets." *Journal of the American Chemical Society* (2025). <https://pubs.acs.org/doi/10.1021/jacs.5c04150>
-
-7.  Marsh, M. L. et al. "Rationally designed mineralization for selective recovery of the rare earth elements." *Nature Communications* 8, 15670 (2017). <https://www.nature.com/articles/ncomms15670>
-
-8.  Pramanik, S. et al. "Emerging Rare Earth Element Separation Technologies." *European Journal of Inorganic Chemistry* (2024). <https://chemistry-europe.onlinelibrary.wiley.com/doi/10.1002/ejic.202400064>
-
-9.  "Selective separation of light rare-earth elements by supramolecular encapsulation and precipitation." *Nature Communications* 13, 4590 (2022). <https://www.nature.com/articles/s41467-022-32178-3>
-
-10. Bryantsev, V. S. et al. "Tuning the Separation of Light Lanthanides Using a Reverse-Size Selective Aqueous Complexant." *Inorganic Chemistry* 60(3), 1604-1613 (2021). <https://pubs.acs.org/doi/10.1021/acs.inorgchem.0c02413>
-
-11. "Selective-crystallization strategy for the separation of rare earth elements: A minireview." *Coordination Chemistry Reviews* (2025). <https://www.sciencedirect.com/science/article/abs/pii/S0010854525002565>
-
-12. Forsberg, K. "Separation of Rare Earth Elements by Crystallization." *Special Publications*, Wiley (2024). <https://agupubs.onlinelibrary.wiley.com/doi/10.1002/9781119515005.ch6>
