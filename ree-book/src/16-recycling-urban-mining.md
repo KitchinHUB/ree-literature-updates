@@ -7,7 +7,7 @@ title: Recycling and Urban Mining
 
 End-of-life magnets, phosphors, and catalysts are a rare earth ore with an
 unusual property: the hard part of the separation has already been done. An
-NdFeB magnet is a concentrated, largely known mixture of a few elements, not a
+{index}`NdFeB` magnet is a concentrated, largely known mixture of a few elements, not a
 dilute mixture of seventeen in a silicate matrix. The chemistry of recovering
 rare earths from it is therefore closer to the chemistry of purification than
 to the chemistry of mining.
@@ -18,9 +18,9 @@ batches. Present global recycling rates for rare earths sit in the single digits
 for that reason, not because the processes do not work.
 
 Several routes covered elsewhere in this book target this feedstock directly:
-carbochlorination of magnet scrap ([](#pyrometallurgical-and-halogenation-routes)),
-flash Joule heating ([](#membranes-mofs-and-emerging-approaches)), and
-macrocyclic chelator precipitation
+{index}`carbochlorination` of magnet scrap ([](#pyrometallurgical-and-halogenation-routes)),
+{index}`flash Joule heating` ([](#membranes-mofs-and-emerging-approaches)), and
+macrocyclic chelator {index}`precipitation`
 ([](#precipitation-and-selective-crystallization)).
 
 ## Current State
@@ -51,7 +51,7 @@ Certain coal and coal ash samples contain REE concentrations rivaling traditiona
 - Research ongoing for sustainable extraction methods
 
 ## REEcover Start-up (ETH Zurich)
-A new company commercializing patented technology for europium recovery from e-waste, with adaptation underway for neodymium and dysprosium ([ETH Zurich](https://ethz.ch/en/news-and-events/eth-news/news/2024/07/mining-rare-earth-metals-from-electronic-waste.html)).
+A new company commercializing patented technology for {index}`europium` recovery from e-waste, with adaptation underway for {index}`neodymium` and {index}`dysprosium` ([ETH Zurich](https://ethz.ch/en/news-and-events/eth-news/news/2024/07/mining-rare-earth-metals-from-electronic-waste.html)).
 
 ## Acid-Free Leaching
 A straightforward, environment-friendly process using copper salts:

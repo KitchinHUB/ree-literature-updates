@@ -7,10 +7,10 @@ title: Pyrometallurgical and Halogenation Routes
 
 Everything else in this book dissolves the ore. Halogenation does not. Instead
 of leaching a mineral into an aqueous liquor and then separating ions in
-solution, carbochlorination converts rare earth oxides directly to volatile or
+solution, {index}`carbochlorination` converts rare earth oxides directly to volatile or
 low-melting chlorides in the solid state, and separates them by boiling point.
 It is a different physics of separation — vapour pressure rather than
-distribution ratio — and it therefore has a different set of strengths and a
+{index}`distribution ratio` — and it therefore has a different set of strengths and a
 different set of problems.
 
 The strengths are real: no aqueous waste stream, no solvent inventory, no acid
@@ -58,7 +58,7 @@ Each halogen offers distinct advantages and limitations for rare earth processin
 
 > Fluorine/HF:
 
-Fluorination produces rare earth fluorides essential for molten salt electrolysis. The strong RE-F bond provides high thermodynamic stability. However, fluorine and HF are highly corrosive and toxic, requiring specialized equipment and safety protocols. Anhydrous HF (AHF) is particularly hazardous, necessitating custom AHF-safe laboratories.
+Fluorination produces rare earth fluorides essential for {index}`molten salt electrolysis`. The strong RE-F bond provides high thermodynamic stability. However, fluorine and HF are highly corrosive and toxic, requiring specialized equipment and safety protocols. Anhydrous HF (AHF) is particularly hazardous, necessitating custom AHF-safe laboratories.
 
 > Chlorine:
 
@@ -75,7 +75,7 @@ Iodination is the mildest halogenation route, producing rare earth iodides at re
 ## Carbochlorination Chemistry
 
 ### Fundamental Chemistry
-The carbochlorination process converts metal oxides to chlorides through the synergistic action of carbon (reducing agent) and chlorine gas (chlorinating agent) at elevated temperatures [@anderson2015investigation]. The presence of carbon is essential because direct chlorination of many metal oxides, including rare earth oxides, is thermodynamically unfavorable at accessible temperatures without a reducing agent [@hua2014selective].
+The carbochlorination process converts metal oxides to chlorides through the synergistic action of carbon (reducing agent) and chlorine gas (chlorinating agent) at elevated temperatures [@anderson2015investigation]. The presence of carbon is essential because direct {index}`chlorination` of many metal oxides, including rare earth oxides, is thermodynamically unfavorable at accessible temperatures without a reducing agent [@hua2014selective].
 
 For rare earth oxides, the primary reactions are:
 
@@ -83,7 +83,7 @@ For rare earth oxides, the primary reactions are:
 
 - RE₂O₃ + 1.5C + 3Cl₂ → 2RECl₃ + 1.5CO₂ (at lower temperatures)
 
-- CeO₂ + 2C + 2Cl₂ → CeCl₃ + 2CO (for tetravalent cerium)
+- CeO₂ + 2C + 2Cl₂ → CeCl₃ + 2CO (for tetravalent {index}`cerium`)
 
 Research has shown that direct contact between metal oxides and carbon is not necessary for effective chlorination [@gavira2010carbochlorination]. The reaction proceeds through gaseous intermediates, with carbon providing catalytic activity sites for the formation of highly reactive species. Proposed intermediates include phosgene (COCl₂), monatomic chlorine, and carbon tetrachloride (CCl₄) [@murase1995recovery].
 
@@ -103,7 +103,7 @@ Key thermodynamic findings include:
 ### Reaction Mechanisms and Kinetics
 The carbochlorination reaction proceeds through distinct mechanisms depending on the specific rare earth element. For cerium oxide (CeO₂), phase stability diagrams show a direct boundary between the CeO₂ and CeCl₃ phases, indicating that the oxide can convert directly to the chloride without intermediate phases [@roine2019hsc].
 
-In contrast, neodymium oxide (Nd₂O₃) must convert through an intermediate oxychloride (NdOCl) phase before complete conversion to NdCl₃ [@anderson2015investigation]. This difference has important implications for process optimization, as the oxychloride plays a larger role in neodymium processing than in cerium processing.
+In contrast, {index}`neodymium` oxide (Nd₂O₃) must convert through an intermediate oxychloride (NdOCl) phase before complete conversion to NdCl₃ [@anderson2015investigation]. This difference has important implications for process optimization, as the oxychloride plays a larger role in neodymium processing than in cerium processing.
 
 Kinetic studies reveal that the carbochlorination reaction proceeds in two stages, both controlled by chemical reactions rather than diffusion [@yang2017ree]. Key kinetic parameters include:
 
@@ -121,7 +121,7 @@ Kinetic studies reveal that the carbochlorination reaction proceeds in two stage
 
 - Achievable conversion rate: \>93%
 
-For yttrium oxide (Y₂O₃), the reaction mechanism involves the initial formation of YOCl through nucleation and growth. At temperatures above 715°C, the final product is liquid YCl₃, which can evaporate from the reaction zone [@gavira2010carbochlorination].
+For {index}`yttrium` oxide (Y₂O₃), the reaction mechanism involves the initial formation of YOCl through nucleation and growth. At temperatures above 715°C, the final product is liquid YCl₃, which can evaporate from the reaction zone [@gavira2010carbochlorination].
 
 ### Kinetics and Mechanism
 Research has revealed element-specific reaction mechanisms. For cerium oxide (CeO₂), phase stability diagrams show a direct boundary between CeO₂ and CeCl₃ phases, indicating direct conversion without intermediate phases. In contrast, neodymium oxide (Nd₂O₃) converts through an intermediate oxychloride (NdOCl) phase before complete conversion to NdCl₃.
@@ -149,7 +149,7 @@ Carbochlorination has been demonstrated for multiple feedstocks:
 
 Bastnaesite \[(Ce,La)(CO₃)F\] processing requires special consideration of fluorine content. Silicon tetrachloride (SiCl₄) serves as a defluorinating agent, preventing formation of volatile fluorides. Process parameters for bastnaesite: 700°C, 12% carbon by weight, recovery rate 93-97% of rare earths.
 
-> NdFeB Magnet Recycling:
+> {index}`NdFeB` Magnet Recycling:
 
 Chlorination roasting at 300-500°C with subsequent water leaching enables REE recovery from end-of-life permanent magnets. The selective chlorination of REEs to RECl₃ enables separation from iron, which remains as oxide under appropriate conditions.
 
@@ -175,7 +175,7 @@ REE chlorides form vapor complexes with aluminum chloride: RAlₙCl₃₊₃ₙ 
 **Performance:**
 
 - **LaCl₃ and CeCl₃ purity**: \~80% achieved through selective condensation
-- **Thorium removal**: Complete (critical for monazite processing)
+- **{index}`Thorium <thorium>` removal**: Complete (critical for {index}`monazite` processing)
 - **REE recovery**: 92-99 mol% with SiCl₄ addition (vs. 56-88% without)
 
 ### Processing of Mixed Bastnaesite-Monazite Concentrates
@@ -227,10 +227,10 @@ A recent breakthrough proposes a one-step carbochlorination-washing process achi
 
 ## Application Across the Rare Earth Series
 
-Carbochlorination has been investigated for various rare earth elements with thermodynamic and experimental evidence supporting its applicability across the entire lanthanide series plus scandium and yttrium.
+Carbochlorination has been investigated for various rare earth elements with thermodynamic and experimental evidence supporting its applicability across the entire lanthanide series plus {index}`scandium` and yttrium.
 
 ### Light Rare Earth Elements
-The light rare earth elements (LREEs) comprise lanthanum (La), cerium (Ce), praseodymium (Pr), neodymium (Nd), promethium (Pm), and samarium (Sm). These elements are more abundant in the principal REE minerals bastnaesite and monazite, making them the primary targets for industrial carbochlorination [@gupta1992extractive].
+The light rare earth elements (LREEs) comprise {index}`lanthanum` (La), cerium (Ce), {index}`praseodymium` (Pr), neodymium (Nd), promethium (Pm), and {index}`samarium` (Sm). These elements are more abundant in the principal REE minerals bastnaesite and monazite, making them the primary targets for industrial carbochlorination [@gupta1992extractive].
 
 | **Element** | **Oxide** | **Chloride** | **Carbochlorination Feasibility** |
 |----|----|----|----|
@@ -244,7 +244,7 @@ The light rare earth elements (LREEs) comprise lanthanum (La), cerium (Ce), pras
 Cerium and neodymium have received the most research attention due to their industrial importance. Cerium is the most abundant REE and is used in catalysts and glass polishing, while neodymium is critical for NdFeB permanent magnets [@long2010principal]. Studies have confirmed that both oxides can be efficiently converted to anhydrous chlorides via carbochlorination at 700°C with \>93% conversion rates [@anderson2015investigation].
 
 ### Heavy Rare Earth Elements
-The heavy rare earth elements (HREEs) include europium (Eu), gadolinium (Gd), terbium (Tb), dysprosium (Dy), holmium (Ho), erbium (Er), thulium (Tm), ytterbium (Yb), and lutetium (Lu). These elements are generally less abundant but often more valuable than LREEs [@tunsu2016hydrometallurgical].
+The heavy rare earth elements (HREEs) include {index}`europium` (Eu), gadolinium (Gd), {index}`terbium` (Tb), {index}`dysprosium` (Dy), holmium (Ho), erbium (Er), thulium (Tm), ytterbium (Yb), and lutetium (Lu). These elements are generally less abundant but often more valuable than LREEs [@tunsu2016hydrometallurgical].
 
 | **Element** | **Oxide** | **Chloride** | **Carbochlorination Feasibility** |
 |----|----|----|----|
@@ -278,7 +278,7 @@ Scandium, though less studied for carbochlorination specifically, is expected to
 ## Primary Ore Processing
 
 ### Bastnaesite Processing
-Bastnaesite \[(Ce,La)(CO₃)F\] is a fluorocarbonate mineral containing approximately 70 wt% rare earth oxides, primarily light rare earths [@chi2008weathered]. The Bayan Obo deposit in China and the Mountain Pass deposit in the United States represent the world's largest bastnaesite resources [@castor2006rare].
+Bastnaesite \[(Ce,La)(CO₃)F\] is a fluorocarbonate mineral containing approximately 70 wt% rare earth oxides, primarily light rare earths [@chi2008weathered]. The {index}`Bayan Obo` deposit in China and the {index}`Mountain Pass` deposit in the United States represent the world's largest bastnaesite resources [@castor2006rare].
 
 Carbochlorination of bastnaesite requires special consideration of the fluorine content. Zhang et al. developed a carbochlorination process using carbon as the reducing agent, chlorine as the chlorinating agent, and silicon tetrachloride (SiCl₄) as a defluorinating agent [@zhang2015occurrence]. The defluorination reaction prevents formation of volatile fluorides and allows recovery of fluorine as valuable byproduct.
 
@@ -310,7 +310,7 @@ Conventional monazite processing involves either [@jordens2013beneficiation]:
 Carbochlorination may provide a cleaner alternative by avoiding the generation of large volumes of acidic or alkaline waste streams while enabling more straightforward thorium separation [@tsamis2015recovery].
 
 ### Xenotime Processing
-Xenotime \[YPO₄\] is the primary mineral source for heavy rare earths and yttrium. The mineral contains 52-62% REO with a composition heavily weighted toward HREEs and Y [@kaya2016recovery].
+{index}`Xenotime <xenotime>` \[YPO₄\] is the primary mineral source for heavy rare earths and yttrium. The mineral contains 52-62% REO with a composition heavily weighted toward HREEs and Y [@kaya2016recovery].
 
 The carbochlorination of xenotime follows similar principles to monazite, with the phosphate matrix being converted to volatile chloride products while the REE chlorides are retained. Given the higher value of HREEs, carbochlorination may offer economic advantages through reduced reagent costs and simplified product recovery [@lorenz2023recovery].
 
@@ -327,7 +327,7 @@ Multiple chlorination approaches have been investigated for NdFeB recycling [@li
 
 - Solid-state chlorination with NH₄Cl, FeCl₂, or MgCl₂-KCl
 
-- Flash Joule heating combined with chlorination (FJH-Cl₂)
+- {index}`Flash Joule heating <flash Joule heating>` combined with chlorination (FJH-Cl₂)
 
 The chlorination roasting method offers lower roasting temperatures and shorter times compared to oxidation roasting, yielding RE₂O₃ (\>99% pure) and iron oxide (\>96% pure) as valuable products [@dutta2016global]. The selective chlorination of REEs to RECls enables separation from iron, which remains as oxide under appropriate conditions.
 
@@ -354,7 +354,7 @@ Carbochlorination has also been investigated for REE recovery from [@binnemans20
 
 - Catalytic converters (La, Ce)
 
-- Coal fly ash and coal by-products
+- {index}`Coal fly ash <coal fly ash>` and coal by-products
 
 - Electronic waste (various REEs)
 
@@ -593,7 +593,7 @@ Technical advantages of carbochlorination include [@paulick2017global]:
 
 Technical limitations include:
 
-- Less established separation methods compared to solvent extraction
+- Less established separation methods compared to {index}`solvent extraction`
 
 - Chlorine gas handling requirements
 
@@ -638,7 +638,7 @@ Economic comparison between carbochlorination and conventional methods must cons
 
 - Scale Dependencies: Minimum economic scale estimated at 5,000-10,000 tonnes/year REO for concentrate production; 10,000-20,000 tonnes/year for full processing
 
-The "short-process" characteristic of carbochlorination---single chlorination step followed by water washing---offers potential for reduced capital investment compared to conventional multi-stage processing. However, detailed techno-economic analyses comparing industrial-scale carbochlorination to established hydrometallurgical routes remain limited in the open literature [@peck2015critical].
+The "short-process" characteristic of carbochlorination---single chlorination step followed by water washing---offers potential for reduced capital investment compared to conventional multi-stage processing. However, detailed {index}`techno-economic <techno-economic analysis (TEA)>` analyses comparing industrial-scale carbochlorination to established hydrometallurgical routes remain limited in the open literature [@peck2015critical].
 
 Comparison of REE extraction and processing technologies:
 
@@ -663,7 +663,7 @@ Key observations from comparative analysis:
 
 - Chloride-based electrolysis shows promise for sustainable metal production
 
-- Emerging technologies (FJH, scCO₂, bioleaching) offer significant sustainability benefits
+- Emerging technologies (FJH, scCO₂, {index}`bioleaching`) offer significant sustainability benefits
 
 - Technology selection depends on feedstock, scale, environmental regulations, and economics
 
@@ -1013,13 +1013,13 @@ This comprehensive review of carbohalogenation processes and complementary techn
 
 3\. Fluorination processes are critical for producing anhydrous REF₃ for molten salt electrolysis. Solid fluorinating agents (NH₄HF₂, ZnF₂, NaBF₄) offer safer alternatives to hazardous HF gas.
 
-4\. Hydrometallurgy remains the dominant industrial technology. Solvent extraction with D2EHPA, PC88A, and Cyanex extractants achieves \~99% recovery but generates significant acidic wastewater.
+4\. Hydrometallurgy remains the dominant industrial technology. Solvent extraction with {index}`D2EHPA`, {index}`PC88A`, and Cyanex extractants achieves \~99% recovery but generates significant acidic wastewater.
 
 5\. Molten salt electrolysis is the primary route to REE metals. Chloride-based processes offer 44-69% reduction in global warming potential compared to conventional fluoride systems.
 
 6\. Emerging technologies show transformative potential: Flash Joule heating with chlorination reduces energy consumption by 87%, supercritical CO₂ extraction minimizes waste generation, and bioleaching operates under ambient conditions without harsh chemicals.
 
-7\. Ionic liquids and deep eutectic solvents demonstrate excellent laboratory performance but face significant challenges for industrial scale-up including viscosity and stability.
+7\. {index}`Ionic liquids <ionic liquids>` and {index}`deep eutectic solvents <deep eutectic solvent>` demonstrate excellent laboratory performance but face significant challenges for industrial scale-up including viscosity and stability.
 
 > Future research priorities:
 
@@ -1039,6 +1039,6 @@ This comprehensive review of carbohalogenation processes and complementary techn
 
 - Rebuilding REE processing expertise outside China
 
-- Life cycle assessment comparing all available technologies
+- {index}`Life cycle assessment <life cycle assessment>` comparing all available technologies
 
 The rare earth industry stands at an inflection point, driven by clean energy demands, supply chain security concerns, and environmental sustainability requirements. The portfolio of halogenation, hydrometallurgical, and electrochemical technologies reviewed here provides multiple pathways to address these challenges. Success will require sustained investment in research, development, and demonstration, along with supportive policy frameworks for technology deployment.

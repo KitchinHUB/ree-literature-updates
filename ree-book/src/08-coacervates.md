@@ -9,7 +9,7 @@ Coacervates are phase-separated, polymer-rich droplets that form spontaneously
 when oppositely charged macromolecules associate in solution. They are
 interesting for rare earth separation for a reason that has little to do with
 selectivity and everything to do with the solvent: both phases are aqueous. A
-coacervate system does the job of a solvent extraction circuit without kerosene,
+coacervate system does the job of a {index}`solvent extraction` circuit without kerosene,
 without the fire risk, and without the volatile organic emissions — and the mild
 conditions leave room for biological ligands that would not survive an organic
 diluent. This chapter surveys what such systems can currently do.
@@ -19,9 +19,9 @@ The headline results:
 - Polyelectrolyte complex coacervates offer tunable selectivity through charge
   density, polymer composition, and ionic strength
   [@sing2025polyelectrolyte; @lee2025polyelectrolyte].
-- Aqueous biphasic systems built from polymers and ionic liquids give promising
-  REE separation factors [@neves2022liquid; @kumar2022separation].
-- Biomimetic approaches using lanthanide-binding proteins such as lanmodulin
+- Aqueous biphasic systems built from polymers and {index}`ionic liquids` give promising
+  REE {index}`separation factors <separation factor>` [@neves2022liquid; @kumar2022separation].
+- Biomimetic approaches using lanthanide-binding proteins such as {index}`lanmodulin`
   reach separation factors above 100 for *adjacent* lanthanides
   [@cotruvo2023enhanced] — a figure that should be read against the
   single-digit factors typical of conventional extractants.
@@ -76,7 +76,7 @@ Metal ions partition into coacervates through multiple mechanisms:
 
 1.  **Electrostatic interactions**: Multiply charged metal cations are attracted to negatively charged functional groups (carboxylates, sulfonates, phosphates) in the polymer backbone
 2.  **Coordination chemistry**: Specific ligand-metal interactions involving donor atoms (N, O, S) in the polymer or added chelating agents
-3.  **Ion exchange**: Displacement of polymer-bound counterions (Na+, K+) by metal ions with higher affinity
+3.  **{index}`Ion exchange <ion exchange>`**: Displacement of polymer-bound counterions (Na+, K+) by metal ions with higher affinity
 4.  **Hydrophobic partitioning**: Neutral metal complexes preferentially partition into the less polar coacervate interior
 
 Polyelectrolyte complex resins fabricated from PDADMAC-PSS coacervates show outstanding performance for heavy metal adsorption, with significant uptakes of Cu2+, Pb2+, and Cd2+ and easy phase separation [@kim2022facile]. PEC capsules have demonstrated selective Au(III) recovery from multimetal mixtures containing Pt, Pd, Cu, Co, and Zn [@wang2023polyelectrolyte].
@@ -86,7 +86,7 @@ Selectivity in coacervate-based separations arises from:
 
 1.  **Size-based selectivity**: The mesh size of the polymer network can exclude larger ions or complexes
 2.  **Charge density effects**: Higher charge density metals bind more strongly to polyanionic domains
-3.  **Lanthanide contraction**: The systematic decrease in ionic radius across the lanthanide series (La3+ = 1.03 Å to Lu3+ = 0.86 Å) can be exploited for selectivity
+3.  **{index}`Lanthanide contraction <lanthanide contraction>`**: The systematic decrease in ionic radius across the lanthanide series (La3+ = 1.03 Å to Lu3+ = 0.86 Å) can be exploited for selectivity
 
 For rare earth elements, the challenge is that all lanthanides exhibit similar charge (+3), coordination preferences (typically 8-9), and chemistry. The small ionic radius differences (typically 0.01-0.02 Å between adjacent elements) require highly selective ligands or separation media.
 
@@ -127,7 +127,7 @@ Short peptides (10-30 amino acids) can form coacervates and offer advantages of 
 
 #### Lanthanide Binding Tags (LBTs)
 
-Lanthanide binding tags are amphiphilic peptide sequences based on the EF-hand metal binding loops of calcium-binding proteins [@li2024lanthanide; @schmitz2022lanmodulin]. The EF-hand motif consists of two alpha helices linked by a 12-residue loop that coordinates metal ions through carboxylate-rich sidechains.
+{index}`Lanthanide binding tags <lanthanide binding tags>` are amphiphilic peptide sequences based on the EF-hand metal binding loops of calcium-binding proteins [@li2024lanthanide; @schmitz2022lanmodulin]. The EF-hand motif consists of two alpha helices linked by a 12-residue loop that coordinates metal ions through carboxylate-rich sidechains.
 
 Key characteristics:
 
@@ -206,7 +206,7 @@ Redox-responsive coacervates respond to changes in oxidation state, either throu
 
 Recent work quantified redox thermodynamics shifts within coacervates using temperature-dependent electrochemistry, extracting reaction entropy, enthalpy, and Gibbs energy for redox processes in the condensed phase [@wang2025quantification].
 
-For cerium separation specifically, the Ce3+/Ce4+ redox couple enables selective oxidation and precipitation, which could be integrated with coacervate extraction for enhanced Ce selectivity [@pramanik2024emerging].
+For {index}`cerium` separation specifically, the Ce3+/Ce4+ redox couple enables selective oxidation and {index}`precipitation`, which could be integrated with coacervate extraction for enhanced Ce selectivity [@pramanik2024emerging].
 
 ## Coacervates for Rare Earth Element Separations
 The application of coacervate-based systems specifically to REE separations is an emerging field, with most work focusing on aqueous biphasic systems, cloud point extraction, and protein-based approaches rather than classical polyelectrolyte coacervates.
@@ -235,20 +235,20 @@ PEG-salt ABS have been applied to lanthanide separation with added extractants:
 
 Ionic liquid (IL) ABS offer additional tunability through IL cation and anion selection [@kumar2022separation]:
 
-The tributyltetradecylphosphonium chloride (\[P444,14\]Cl) ABS enables separation of Sm/Co, Nd/Fe, Eu/Zn, and La/Ni pairs. A one-pot leaching-extraction process using \[P44414\]Cl-HCl ABS selectively extracts Fe (\>99%) while leaving REEs in the aqueous phase (\<10% extracted), enabling efficient REE/Fe separation from NdFeB magnets [@liu2022one].
+The tributyltetradecylphosphonium chloride (\[P444,14\]Cl) ABS enables separation of Sm/Co, Nd/Fe, Eu/Zn, and La/Ni pairs. A one-pot leaching-extraction process using \[P44414\]Cl-HCl ABS selectively extracts Fe (\>99%) while leaving REEs in the aqueous phase (\<10% extracted), enabling efficient REE/Fe separation from {index}`NdFeB` magnets [@liu2022one].
 
 #### Three-Liquid-Phase Systems (TLPS)
 
 TLPS consisting of salt-rich bottom aqueous phase, polymer-rich middle phase, and organic top phase provide gradients of hydrophobicity for enhanced selectivity [@wang2021strategy].
 
-The Cyanex272/PEG 2000/(NH4)2SO4-H2O system enables stripping of heavy rare earths with separation factors adjustable by polymer concentration, salt concentration, pH, and DTPA addition.
+The {index}`Cyanex272 <Cyanex 272>`/PEG 2000/(NH4)2SO4-H2O system enables stripping of heavy rare earths with separation factors adjustable by polymer concentration, salt concentration, pH, and DTPA addition.
 
 ### Coordination-Enhanced Coacervates
 Functionalization of coacervate-forming polymers with specific REE-binding ligands can dramatically improve selectivity:
 
 #### Phosphonate-Modified Systems
 
-Phosphonate ligands are the basis of industrial REE extractants (HDEHP, PC88A, Cyanex 272). Polymer-supported phosphonate extractants \[D201\]\[DEHP\] and \[D201\]\[C272\] show excellent scandium selectivity with maximum adsorption at pH 0.78 [@cui2016high].
+Phosphonate ligands are the basis of industrial REE extractants ({index}`HDEHP`, {index}`PC88A`, Cyanex 272). Polymer-supported phosphonate extractants \[D201\]\[DEHP\] and \[D201\]\[C272\] show excellent {index}`scandium` selectivity with maximum adsorption at pH 0.78 [@cui2016high].
 
 #### Aminocarboxylate-Modified Systems
 
@@ -256,7 +256,7 @@ DTPA, EDTA, and related ligands provide strong lanthanide binding with modest si
 
 #### Diglycolamide Systems
 
-Diglycolamides (DGA) show size-dependent lanthanide binding correlated with the "lanthanide contraction" in ionic radii.
+{index}`Diglycolamides <diglycolamide>` (DGA) show size-dependent lanthanide binding correlated with the "lanthanide contraction" in ionic radii.
 
 ### Case Studies: Specific REE Pair Separations
 #### Light REE: La/Ce and Ce/Pr Separations
@@ -296,7 +296,7 @@ Scandium is geochemically associated with REEs but has distinct chemistry: small
 Effective scandium separation methods:
 
 - Polymer-supported phosphonate extractants with SF \> 50 vs other REEs [@cui2016high]
-- Amic acid extractants (D2EHAF) in polymer inclusion membranes for complete Sc separation from transition metals [@kim2019separation]
+- Amic acid extractants (D2EHAF) in {index}`polymer inclusion membranes` for complete Sc separation from transition metals [@kim2019separation]
 - Mesoporous silica with unmodified silanols for selective Sc extraction over Fe [@ramasamy2017selective]
 - TRPO-modified resins in sulfuric and hydrochloric acid media [@hou2024adsorption]
 
@@ -356,7 +356,7 @@ Translation of coacervate-based separations from laboratory to industrial scale 
 ### Continuous Processing
 #### Flow-Based Coacervate Systems
 
-Microfluidic platforms enable precise control of coacervate formation through:
+{index}`Microfluidic <microfluidics>` platforms enable precise control of coacervate formation through:
 
 - Controlled mixing of polymer streams
 - Defined residence times and flow rates
@@ -392,7 +392,7 @@ Challenges:
 
 #### Techno-Economic Assessment
 
-Rigorous techno-economic analysis is needed comparing:
+Rigorous {index}`techno-economic <techno-economic analysis (TEA)>` analysis is needed comparing:
 
 - Capital costs (equipment, polymer inventory)
 - Operating costs (energy, chemicals, polymer replacement)
@@ -426,7 +426,7 @@ Future polymer development should focus on:
 Hybrid approaches combining coacervates with:
 
 - Membrane separations (polymer inclusion membranes)
-- Chromatographic methods (coacervate-coated stationary phases)
+- {index}`Chromatographic <chromatography>` methods (coacervate-coated stationary phases)
 - Electrochemical methods (redox-driven separations)
 - Precipitation (coacervate-assisted crystallization)
 

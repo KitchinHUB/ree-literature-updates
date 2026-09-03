@@ -5,7 +5,7 @@ title: Biological and Biomimetic Separations
 (biological-and-biomimetic-separations)=
 # Biological and Biomimetic Separations
 
-Biology solved selective lanthanide binding before chemistry did. Lanmodulin, a
+Biology solved selective lanthanide binding before chemistry did. {index}`Lanmodulin <lanmodulin>`, a
 bacterial protein discovered in methylotrophs that use lanthanides as enzyme
 cofactors, binds them with roughly a hundred-million-fold preference over
 calcium — a discrimination no synthetic extractant approaches. That single
@@ -16,7 +16,7 @@ exploit, but that the ligands in use are the wrong shape to exploit them.
 This chapter covers what has been built on that observation. Protein and peptide
 systems come first, since they carry the highest selectivities and the clearest
 mechanistic picture. Then the routes that trade selectivity for robustness and
-cost: biosurfactants, microbial biosorption, bioleaching, and phytomining. The
+cost: biosurfactants, microbial {index}`biosorption`, {index}`bioleaching`, and phytomining. The
 economics run in the opposite direction from the selectivity — the most
 selective systems are the most fragile and the most expensive to produce, and
 the least selective are the ones already operating in the field.
@@ -65,8 +65,8 @@ A breakthrough discovery revealed that lanmodulin from *Hansschlegelia quercus* 
 
 **Separation Performance:**
 
-- Achieves higher separation factors than standard lanmodulins
-- Comparable or better than common industrial extractants (e.g., HDEHP)
+- Achieves higher {index}`separation factors <separation factor>` than standard lanmodulins
+- Comparable or better than common industrial extractants (e.g., {index}`HDEHP`)
 - All-aqueous process without organic solvents
 
 ### Protein Engineering and Variants
@@ -102,7 +102,7 @@ Computational and experimental studies have revealed key engineering principles 
 
 ## Lanthanide Binding Tags and Peptide-Based Separation
 ### EF-Hand Derived Peptides
-Lanthanide binding tags (LBTs) are short peptides derived from calcium-binding EF-hand loops that selectively coordinate REE cations [@li2024lanthanide].
+{index}`Lanthanide binding tags <lanthanide binding tags>` (LBTs) are short peptides derived from calcium-binding EF-hand loops that selectively coordinate REE cations [@li2024lanthanide].
 
 **Design Principles:**
 
@@ -156,7 +156,7 @@ Microbead technology using immobilized lanthanide binding peptides (LBPs) [@sree
 
 - Selective adsorption of REEs onto functionalized microbeads
 - Gravity-based separation of bound vs. unbound REEs
-- Demonstrated enrichment of Europium and Terbium
+- Demonstrated enrichment of {index}`Europium <europium>` and {index}`Terbium <terbium>`
 
 ### Mineralization Peptides
 Lanthanide ion mineralization peptide (Lamp) enables direct extraction [@hatanaka2017rationally]:
@@ -205,7 +205,7 @@ Lanthanides can replace Ca²⁺ in EF-hand proteins isomorphously [@edington2018
 **Calmodulin-Based Systems:**
 
 - Peptide binding loop conjugated to polymer scaffold particles
-- Applied to cerium recovery from solution
+- Applied to {index}`cerium` recovery from solution
 - Exploits natural EF-hand selectivity
 
 ## Biosurfactants for REE Separation
@@ -312,7 +312,7 @@ Microorganism selection depends on mineral type:
 
 ## Microbial Biosorption
 ### Overview
-Biosorption is a physicochemical, metabolically-independent process based on absorption, adsorption, ion-exchange, surface complexation, and precipitation. It represents a cost-effective, biotechnological approach for REE recovery [@vitova2024microbial].
+Biosorption is a physicochemical, metabolically-independent process based on absorption, adsorption, {index}`ion-exchange <ion exchange>`, surface complexation, and {index}`precipitation`. It represents a cost-effective, biotechnological approach for REE recovery [@vitova2024microbial].
 
 **Advantages:**
 
@@ -404,7 +404,7 @@ A groundbreaking discovery of naturally formed REE minerals in living plants [@h
 
 **Key Findings:**
 
-- **Nanoscale monazite** crystals form within extracellular tissues
+- **Nanoscale {index}`monazite`** crystals form within extracellular tissues
 - Ambient temperature biomineralization process
 - Dendritic nanocrystal morphology
 - First discovery of REE mineral crystals in living plants
@@ -473,7 +473,7 @@ Chitosan, the second most abundant biopolymer, offers exceptional properties for
 
 **Composite Materials:**
 
-- Metal-organic frameworks (MOFs)
+- {index}`Metal-organic frameworks <metal-organic framework (MOF)>` (MOFs)
 - Layered double hydroxides
 - Carbon materials
 - Clays
@@ -540,7 +540,7 @@ Microbial synthesis systems achieve active biomanufacturing:
 
 ## Green Solvents: Deep Eutectic Solvents and Ionic Liquids
 ### Overview
-Deep eutectic solvents (DESs) and ionic liquids (ILs) represent green alternatives to conventional organic solvents for REE separation [@deng2025application].
+{index}`Deep eutectic solvents <deep eutectic solvent>` (DESs) and {index}`ionic liquids` (ILs) represent green alternatives to conventional organic solvents for REE separation [@deng2025application].
 
 **Shared Properties:**
 
@@ -592,7 +592,7 @@ Despite academic promise, commercial breakthroughs have been limited:
 - Stability issues with DESs
 - Scale-up challenges
 - Toxicity concerns with some formulations
-- Need for life cycle assessments
+- Need for {index}`life cycle assessment`s
 
 ## Comparison of Biological Separation Technologies
 | Technology | Selectivity | Scalability | Cost | Environmental Impact | TRL |

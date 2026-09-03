@@ -6,8 +6,8 @@ title: Membranes, MOFs, and Emerging Approaches
 # Membranes, MOFs, and Emerging Approaches
 
 This chapter is a survey of the approaches that do not yet have chapters of
-their own: membranes, metal-organic frameworks, supramolecular hosts, flash
-Joule heating, diglycolamide ligands, and supercritical CO₂. They have little in
+their own: membranes, {index}`metal-organic frameworks <metal-organic framework (MOF)>`, supramolecular hosts, flash
+Joule heating, {index}`diglycolamide` ligands, and supercritical CO₂. They have little in
 common as chemistry. What they share is a position on the development curve —
 most sit between TRL 3 and TRL 7, with laboratory results that are genuinely
 striking and scale-up records that are thin or absent.
@@ -20,7 +20,7 @@ and the chapters that follow on process economics
 ([](#environment-techno-economics-and-life-cycle)) and industrial status
 ([](#the-industrial-landscape)) are the place to calibrate expectations.
 
-Microfluidic separation, which the source review treated as one more emerging
+{index}`Microfluidic <microfluidics>` separation, which the source review treated as one more emerging
 technology, has grown enough to warrant its own chapter —
 [](#microfluidic-separations).
 
@@ -33,13 +33,13 @@ Membrane separation technology (MST) has emerged as an environmentally friendly 
 
 - Bulk Liquid Membranes (BLMs)
 - Emulsion Liquid Membranes (ELMs)
-- Supported Liquid Membranes (SLMs)
+- {index}`Supported Liquid Membranes <supported liquid membrane (SLM)>` (SLMs)
 - Hollow Fiber Supported Liquid Membranes (HFSLMs)
 - Electrostatic Pseudo Liquid Membranes (ESPLMs)
 
 **Non-Liquid Membranes:**
 
-- Polymer Inclusion Membranes (PIMs)
+- {index}`Polymer Inclusion Membranes <polymer inclusion membranes>` (PIMs)
 - Molecular Imprinted Membranes (MIMs)
 - Ion Imprinted Membranes (IIMs)
 
@@ -51,7 +51,7 @@ NF and UF membranes are particularly effective for treating acidic streams:
 - Function effectively at very low REE concentrations
 
 ### Electrodialysis
-Recent research has explored electrodialysis for REE separation, using adjacent anion exchange membranes with chelating agents like EDTA. Mathematical models based on the Nernst-Planck equation have been developed to optimize Dy separation from Pr/Nd mixtures [@ding2024mathematical].
+Recent research has explored electrodialysis for REE separation, using adjacent an{index}`ion exchange` membranes with chelating agents like EDTA. Mathematical models based on the Nernst-Planck equation have been developed to optimize Dy separation from Pr/Nd mixtures [@ding2024mathematical].
 
 (metal-organic-framework-mof-nanotraps)=
 ## Metal-Organic Framework (MOF) Nanotraps
@@ -64,7 +64,7 @@ A breakthrough approach using rationally designed MOF structures has demonstrate
 
 ### Performance
 
-- **Pr/Lu separation factor: 796**
+- **Pr/Lu {index}`separation factor`: 796**
 - **Nd/Er separation factor: 273**
 - Achieves high separation in a **single step**
 
@@ -72,7 +72,7 @@ A breakthrough approach using rationally designed MOF structures has demonstrate
 Supramolecular strategies amplify small property differences across the lanthanide series to achieve selective separation [@oconnelldanes2022selective].
 
 ### Triamidoarene Platform
-- Selective precipitation of light REE nitratometalates as supramolecular capsules
+- Selective {index}`precipitation` of light REE nitratometalates as supramolecular capsules
 - Works under acidic, biphasic conditions
 - Near-quantitative recovery of Nd/Pr directly from magnet scrap without pH adjustment
 - Receptor can be recycled for further use
@@ -83,14 +83,14 @@ Self-assembled metal-organic cages exhibit high-precision metal ion self-sorting
 ## Brief Overview of Bioseparation
 Bioseparation technologies offer high selectivity with minimal environmental impact, and are treated in full in [](#biological-and-biomimetic-separations). In outline:
 
-- **Lanmodulin proteins**: 100 million-fold selectivity for lanthanides over calcium
+- **{index}`Lanmodulin <lanmodulin>` proteins**: 100 million-fold selectivity for lanthanides over calcium
 - **Lanthanide binding peptides**: Interfacial separation at air-water interfaces
 - **Biosurfactants**: Rhamnolipid complexation with REEs
-- **Microbial biosorption**: Bacteria, yeast, and algae for REE recovery
+- **Microbial {index}`biosorption`**: Bacteria, yeast, and algae for REE recovery
 - **Phytomining**: Hyperaccumulator ferns for sustainable extraction
 
 ## Flash Joule Heating with Chlorination (FJH-Cl₂)
-A 2025 result combines flash Joule heating with chlorination for e-waste processing [@tour2025sustainable]. The chemistry is chlorination, so the full treatment sits in [](#flash-joule-heating-with-chlorination); the reported performance is repeated here for comparison against the other technologies in this chapter.
+A 2025 result combines {index}`flash Joule heating` with {index}`chlorination` for e-waste processing [@tour2025sustainable]. The chemistry is chlorination, so the full treatment sits in [](#flash-joule-heating-with-chlorination); the reported performance is repeated here for comparison against the other technologies in this chapter.
 
 **Performance vs. Traditional Hydrometallurgy:**
 
@@ -106,8 +106,8 @@ Researchers at IOCB Prague developed a novel aqueous recycling method ([Metal Te
 
 - Uses only water and a specially designed chelating molecule
 - Bypasses hazardous acids, organic solvents, and high-temperature treatments
-- Achieves separation factors comparable to industrial solvent extraction
-- Selectively binds neodymium, causing precipitation while dysprosium remains dissolved
+- Achieves separation factors comparable to industrial {index}`solvent extraction`
+- Selectively binds {index}`neodymium`, causing precipitation while {index}`dysprosium` remains dissolved
 
 ## DGA Ligand Technology
 Developed by Oak Ridge National Laboratory and Idaho National Laboratory ([ORNL](https://www.ornl.gov/news/game-changing-rare-earth-elements-separation-technology-licensed-marshallton)):
@@ -151,7 +151,7 @@ Direct extraction of charged REE³⁺ ions by sc-CO₂ is inefficient because CO
 ### Chelating Agents and Extractant Systems
 Several extractant systems have been developed for REE extraction in sc-CO₂ ([OSTI 1995](https://www.osti.gov/biblio/7243167)):
 
-**TBP-HNO₃ Adduct System:** The tributyl phosphate-nitric acid system is the most extensively studied ([INL 2017](https://inldigitallibrary.inl.gov/sites/sti/sti/Sort_7228.pdf)):
+**{index}`TBP <TBP (tributyl phosphate)>`-HNO₃ Adduct System:** The tributyl phosphate-nitric acid system is the most extensively studied ([INL 2017](https://inldigitallibrary.inl.gov/sites/sti/sti/Sort_7228.pdf)):
 
 - Nitrate anions bond with Ln³⁺ to form nitrate salts
 - TBP molecules substitute coordinated water
@@ -188,7 +188,7 @@ Several extractant systems have been developed for REE extraction in sc-CO₂ ([
 - Research ongoing for REE applications
 
 ### Ore Processing Applications
-**Bastnäsite Extraction:** Pretreatment is essential for efficient REE dissolution [@sinclair2017rare]:
+**{index}`Bastnäsite <bastnäsite>` Extraction:** Pretreatment is essential for efficient REE dissolution [@sinclair2017rare]:
 
 *Roasted Bastnäsite (500°C calcination):*
 
@@ -290,7 +290,7 @@ The NaOH digestion route achieves near-complete extraction in shorter times due 
 
 - Batch extraction vessels (lab to pilot scale)
 - Semi-continuous with CO₂ recirculation
-- Counter-current multi-stage extraction
+- {index}`Counter-current <countercurrent cascade>` multi-stage extraction
 
 **Industrial-Scale Design (2025 TEA Study):** Technoeconomic analysis of a 4000 L reactor facility in Ontario, Canada [@azimi2025technoeconomic]:
 

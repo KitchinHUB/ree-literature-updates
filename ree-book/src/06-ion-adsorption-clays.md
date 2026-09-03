@@ -5,7 +5,7 @@ title: Ion-Adsorption Clays
 (ion-adsorption-clays)=
 # Ion-Adsorption Clays
 
-Ion-adsorption clays are the odd deposit type in rare earth processing, and the
+{index}`Ion-adsorption clays <ion-adsorption clay>` are the odd deposit type in rare earth processing, and the
 questions they raise are as much chemical-engineering questions as geological
 ones: where are these clays mined, how are they processed, can they be bought on
 the open market, what chemistry makes them work, and are they recyclable? This
@@ -17,14 +17,14 @@ The starting point is the thermodynamic-screening work of
 [@borst2020adsorption; @zhou2020genesis; @moldoveanu2016overview; @luo2022development; @wu2023rare; @alshameri2019understanding]. Leaching
 of these ores is also treated from the flowsheet side in
 [](#ion-adsorption-clay-leaching-the-gentle-approach); this chapter takes the
-deposit and the ion-exchange chemistry as its subject.
+deposit and the {index}`ion-exchange <ion exchange>` chemistry as its subject.
 
 ## Summary
 
 - Ion-adsorption clays (IAC) -- also "ion-adsorption deposits," "regolith-hosted REE deposits," or "weathered-crust elution-deposited ores" -- are the dominant global source of the **heavy** rare earths (Dy, Tb, Y). Their value is that the REE are held as loosely bound, hydrated, **exchangeable** ions on clay surfaces, so they can be recovered by a simple salt solution at room temperature -- no roasting or strong-acid cracking [@borst2020adsorption].
 - The clay is **not** an open-market commodity: it is low-grade, processed near-source, and supply is dominated by China and Myanmar. The host minerals (kaolinite, halloysite) are cheap industrial clays, but those are sold **without** the adsorbed REE.
-- The chemical-engineering pain is dilute, high-volume hydrometallurgy with impurity co-extraction (Al, Fe), speciation/precipitation yield losses, and reagent-driven pollution. The Sobri paper is one response: use thermodynamics to pick a reagent (MgSO4) and conditions (ambient, acidic) that keep REE soluble [@mohamadsobri2025enhancing].
-- The most interesting forward direction is to use **clay/ion exchange itself as a separation technology** -- as a preconcentrator ahead of solvent extraction, and (with imported selectivity) as a partial replacement for it.
+- The chemical-engineering pain is dilute, high-volume hydrometallurgy with impurity co-extraction (Al, Fe), speciation/{index}`precipitation` yield losses, and reagent-driven pollution. The Sobri paper is one response: use thermodynamics to pick a reagent (MgSO4) and conditions (ambient, acidic) that keep REE soluble [@mohamadsobri2025enhancing].
+- The most interesting forward direction is to use **clay/ion exchange itself as a separation technology** -- as a preconcentrator ahead of {index}`solvent extraction`, and (with imported selectivity) as a partial replacement for it.
 - The headline environmental issue is ammonia-nitrogen pollution from in-situ ammonium-sulfate leaching, plus landscape destruction and a large spent-clay residue stream whose fate (reuse vs landfill) is unresolved.
 
 ## What the clays are and the chemistry that makes them work
@@ -37,7 +37,7 @@ The clay surface carries net negative charge (isomorphic substitution plus pH-de
 2 Clay-REE + 3 M2SO4  ->  2 Clay-M3 + REE2(SO4)3      (M = NH4+, ½ Mg2+, ...)
 ```
 
-Because the REE is exchangeable and hydrated, a salt solution at ambient temperature liberates it with fast kinetics and no acid attack on the mineral [@borst2020adsorption; @moldoveanu2016overview]. This is the entire economic basis of the deposit type, and what distinguishes it from hard-rock bastnaesite/monazite.
+Because the REE is exchangeable and hydrated, a salt solution at ambient temperature liberates it with fast kinetics and no acid attack on the mineral [@borst2020adsorption; @moldoveanu2016overview]. This is the entire economic basis of the deposit type, and what distinguishes it from hard-rock bastnaesite/{index}`monazite`.
 
 A crucial subtlety for everything downstream: REE attach to clay by **two mechanisms with opposite consequences** [@wu2023rare]:
 
@@ -92,9 +92,9 @@ The field is actively moving off ammonium sulfate. Magnesium sulfate gives compa
 Beyond primary leaching, clay/IX can act as a **separation** unit operation. Its competitiveness depends entirely on the job:
 
 - **Group separation / preconcentration** (pull REE-as-a-block out of a dilute, dirty stream; reject Na/K/Ca/Mg/Al/Fe): driven by **charge** selectivity -- strong. Natural clays are explicitly proposed as adsorbents/recovery media for REE from solution [@alshameri2019understanding].
-- **Individual-element separation** (resolve adjacent lanthanides): bare clay is intrinsically weak (adjacent separation factors \~1.0-1.3 vs \~1.5-4 per stage for tailored solvent-extraction reagents). Adjacent selectivity must be **imported** -- from surface-complexation sites [@wu2023rare] a complexing eluent, or a grafted ligand.
+- **Individual-element separation** (resolve adjacent lanthanides): bare clay is intrinsically weak (adjacent {index}`separation factors <separation factor>` \~1.0-1.3 vs \~1.5-4 per stage for tailored solvent-extraction reagents). Adjacent selectivity must be **imported** -- from surface-complexation sites [@wu2023rare] a complexing eluent, or a grafted ligand.
 
-The proof-of-concept is the orebody itself: the regolith is vertically fractionated (LREE/HREE zonation, Ce anomalies) by clay loading plus carbonate-complexing groundwater acting as a mobile phase -- clay ion-exchange chromatography run over geologic time [@zhou2020genesis]. Feasibility is settled; throughput and control are the engineering questions.
+The proof-of-concept is the orebody itself: the regolith is vertically fractionated (LREE/HREE zonation, Ce anomalies) by clay loading plus carbonate-complexing groundwater acting as a mobile phase -- clay ion-exchange {index}`chromatography` run over geologic time [@zhou2020genesis]. Feasibility is settled; throughput and control are the engineering questions.
 
 A scorecard versus solvent extraction (SX):
 
@@ -113,8 +113,8 @@ A scorecard versus solvent extraction (SX):
 
 1.  **Clay as a preconcentrator ahead of SX (strongest near-term).** Load dilute leachate, reject monovalent/divalent matrix ions by charge selectivity, strip a 10-100x concentrated, de-salted REE eluate into a much smaller SX plant or direct precipitation. Directly attacks the dilute, high-volume penalty [@alshameri2019understanding; @moldoveanu2016overview].
 2.  **LREE/HREE rough cut.** Exploit the surface-complexation HREE-over-LREE enrichment [@wu2023rare] for a binary roughing split -- apt because IAC feeds are already HREE-enriched.
-3.  **Functionalized clay = extraction chromatography on a cheap support.** Graft an SX-grade ligand (phosphonic acid; a diglycolamide such as TODGA/DMDODGA) onto clay to combine "the selectivity of SX with the convenience of column IX." This is demonstrated on porous supports with diglycolamide extractants as a cleaner alternative to liquid-liquid SX [@momen2019extraction]; clay is the cheap, benign support variant.
-4.  **Continuous chromatography (simulated moving bed).** Batch single-column operation is what costs chromatography its throughput; SMB makes it counter-current and continuous (as it is industrially for sugars and enantiomers). A title search of the REE literature for "simulated moving bed" returns essentially nothing -- a genuine white space.
+3.  **Functionalized clay = extraction chromatography on a cheap support.** Graft an SX-grade ligand (phosphonic acid; a {index}`diglycolamide` such as {index}`TODGA`/DMDODGA) onto clay to combine "the selectivity of SX with the convenience of column IX." This is demonstrated on porous supports with diglycolamide extractants as a cleaner alternative to liquid-liquid SX [@momen2019extraction]; clay is the cheap, benign support variant.
+4.  **Continuous chromatography (simulated moving bed).** Batch single-column operation is what costs chromatography its throughput; SMB makes it {index}`counter-current <countercurrent cascade>` and continuous (as it is industrially for sugars and enantiomers). A title search of the REE literature for "simulated moving bed" returns essentially nothing -- a genuine white space.
 5.  **Synthetic / engineered clay analogues.** Technically feasible (synthetic smectites, pillared clays, LDHs have high exchange capacity), but the value of a natural **deposit** is the geologic pre-concentration onto already-mined regolith [@zhou2020genesis]; synthesizing and then loading from a dilute stream inverts that economy. The realistic role is selective **polishing/concentration** of leachates and effluents, not a synthetic orebody.
 6.  **Experimental validation of thermodynamic screening.** Extend Pourbaix-style models to multi-element, impurity-bearing systems with kinetics, and validate against column data [@mohamadsobri2025enhancing].
 7.  **Measured separation factors** on smectite/vermiculite vs kaolinite, and how far edge-site density, pH, and ionic strength can push adjacent-REE selectivity [@wu2023rare].
@@ -143,7 +143,7 @@ Dilute, high-volume hydrometallurgy means large reagent and water inventories. C
 
 ### Spent clay residue: reuse vs landfill (the recyclability question)
 
-After leaching, the kaolinite/halloysite substrate survives intact (REE merely desorbs) -- it becomes depleted regolith, not a closed-loop recycled material. Its fate splits between **landfill** and **beneficial reuse** (land reclamation/ revegetation, construction fill, geopolymer/ceramic feedstock), and residue valorization is part of the green-development agenda [@luo2022development]. **If landfill dominates, the environmental case weakens markedly** -- this is the weakest-sourced and most decision-relevant open question. By contrast, true REE **circularity** comes from end-products (NdFeB magnets, phosphors, e-waste) via urban mining, a separate stream.
+After leaching, the kaolinite/halloysite substrate survives intact (REE merely desorbs) -- it becomes depleted regolith, not a closed-loop recycled material. Its fate splits between **landfill** and **beneficial reuse** (land reclamation/ revegetation, construction fill, geopolymer/ceramic feedstock), and residue valorization is part of the green-development agenda [@luo2022development]. **If landfill dominates, the environmental case weakens markedly** -- this is the weakest-sourced and most decision-relevant open question. By contrast, true REE **circularity** comes from end-products ({index}`NdFeB` magnets, phosphors, e-waste) via urban mining, a separate stream.
 
 ### Spent-clay valorization routes
 

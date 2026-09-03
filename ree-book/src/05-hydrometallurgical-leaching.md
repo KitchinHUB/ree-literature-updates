@@ -6,11 +6,11 @@ title: Hydrometallurgical Leaching
 # Hydrometallurgical Leaching
 
 Leaching converts solid rare earth minerals into dissolved ions, and it is the
-step that decides what the solvent extraction circuit downstream will have to
-cope with. Which method works depends almost entirely on mineralogy: bastnasite,
-monazite, xenotime, and ion-adsorption clays each demand a different strategy,
+step that decides what the {index}`solvent extraction` circuit downstream will have to
+cope with. Which method works depends almost entirely on mineralogy: {index}`bastnasite <bastnäsite>`,
+{index}`monazite`, {index}`xenotime`, and {index}`ion-adsorption clays <ion-adsorption clay>` each demand a different strategy,
 because each locks its rare earths behind a different chemical barrier — a
-fluorocarbonate lattice, a refractory phosphate, a thorium burden, or nothing
+fluorocarbonate lattice, a refractory phosphate, a {index}`thorium` burden, or nothing
 more than an exchangeable surface site. This chapter follows the flowsheet from
 run-of-mine ore through beneficiation, decomposition, leaching, and impurity
 removal, ending at the purified aqueous feed that
@@ -19,10 +19,10 @@ removal, ending at the purified aqueous feed that
 Four themes recur. Bastnasite must be defluorinated, normally by roasting,
 before acid will touch it efficiently. Monazite releases radioactive thorium
 that has to be managed as a separate stream. Ion-adsorption clays need no strong
-acid at all — a mild salt solution displaces the rare earths by ion exchange —
+acid at all — a mild salt solution displaces the rare earths by {index}`ion exchange` —
 which is why they are treated separately in
 [](#ion-adsorption-clays). And across every ore type, the emerging
-alternatives — bioleaching, supercritical CO₂, deep eutectic solvents — trade
+alternatives — {index}`bioleaching`, supercritical CO₂, {index}`deep eutectic solvents <deep eutectic solvent>` — trade
 throughput for environmental burden in ways that are not yet resolved at
 industrial scale.
 
@@ -36,7 +36,7 @@ Rare earth elements do not occur as native metals but are found in approximately
     - Composition: (Ce,La,Nd,Pr)CO₃F
     - REO content: 60-75%
     - Light REE enriched (La, Ce, Pr, Nd)
-    - Major source: Mountain Pass (USA), Bayan Obo (China)
+    - Major source: {index}`Mountain Pass` (USA), {index}`Bayan Obo` (China)
     - Challenge: Fluorine content requires defluorination
 2.  **Monazite** ((REE,Th)PO₄) - Phosphate
     - Composition: (Ce,La,Nd,Th)PO₄
@@ -45,7 +45,7 @@ Rare earth elements do not occur as native metals but are found in approximately
     - Mixed light and middle REEs
     - Major source: Beach placers (India, Brazil, Australia)
     - Challenge: Thorium management, refractory phosphate matrix
-3.  **Xenotime** (YPO₄) - Yttrium phosphate
+3.  **Xenotime** (YPO₄) - {index}`Yttrium <yttrium>` phosphate
     - Composition: YPO₄ with heavy REEs
     - REO content: 50-67%
     - Heavy REE enriched (Y, Dy, Er, Yb)
@@ -374,7 +374,7 @@ Bastnasite (REE·FCO₃) contains 5-10% fluorine. Direct acid leaching releases 
 
 - Faster leaching than H₂SO₄
 - Higher REE solubility
-- Better for D2EHPA/PC88A solvent extraction (chloride medium)
+- Better for {index}`D2EHPA`/{index}`PC88A` solvent extraction (chloride medium)
 
 **Disadvantages**:
 
@@ -390,7 +390,7 @@ Bastnasite (REE·FCO₃) contains 5-10% fluorine. Direct acid leaching releases 
     Conditions:
     - Pressure: 10-30 MPa
     - Temperature: 40-80°C
-    - Complexing agent: TBP, organophosphates
+    - Complexing agent: {index}`TBP <TBP (tributyl phosphate)>`, organophosphates
     - CO₂ flow rate: 1-5 mL/min
 
 **Advantages**:
@@ -475,7 +475,7 @@ Monazite ((REE,Th)PO₄) presents two major challenges [@borai2016modified; @ama
 
 - Very corrosive conditions (hot concentrated acid)
 - High energy requirement
-- Phosphate removal needed (gypsum precipitation)
+- Phosphate removal needed (gypsum {index}`precipitation`)
 - Thorium separation required
 
 #### Hydrochloric Acid Leaching
@@ -1330,7 +1330,7 @@ Where:
 **Alternative lixiviants**:
 
 - Biodegradable organic acids
-- Recyclable ionic liquids (research stage)
+- Recyclable {index}`ionic liquids` (research stage)
 - Magnesium salts instead of ammonium
 
 ### Life Cycle Assessment
@@ -1412,7 +1412,7 @@ Where:
 
 - E-waste (magnets, phosphors)
 - Industrial waste (catalysts, polishing powders)
-- Coal fly ash
+- {index}`Coal fly ash <coal fly ash>`
 
 **Advantages**:
 

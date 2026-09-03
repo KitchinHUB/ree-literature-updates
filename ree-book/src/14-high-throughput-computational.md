@@ -67,11 +67,11 @@ The platform employs Bayesian Optimization with Gaussian Process surrogate model
 - Identified optimal conditions using only ****63% of experiments**** compared to full factorial screening
 - ****74% reduction**** in experimental effort for four-dimensional optimization
 - Convergence in 4 experimental cycles (339 total measurements vs. 1,296 for full screening)
-- Optimal Th distribution ratio (D = 4.85 ± 0.8) achieved
+- Optimal Th {index}`distribution ratio` (D = 4.85 ± 0.8) achieved
 
 #### Case Study: Thorium Extraction Optimization
 
-The platform was validated on Th⁴⁺ extraction using N,N-di-2-ethylhexylbutyramide (DEHBA) with TBP in n-dodecane.
+The platform was validated on Th⁴⁺ extraction using N,N-di-2-ethylhexylbutyramide (DEHBA) with {index}`TBP <TBP (tributyl phosphate)>` in n-dodecane.
 
 **Optimized Conditions:**
 
@@ -93,7 +93,7 @@ The platform was validated on Th⁴⁺ extraction using N,N-di-2-ethylhexylbutyr
 
 - Seven-point calibration curve (0-10 ppm Th⁴⁺)
 - Extended wash cycle: 50 seconds with 0.1 M HNO₃ + 0.01 w% HF
-  - Prevents thorium adhesion to sample introduction hardware
+  - Prevents {index}`thorium` adhesion to sample introduction hardware
   - Essential for accurate quantification
 - Delay time: 65 seconds between samples
 - Sample dilution: 10-1000× in 0.1 M HNO₃
@@ -138,7 +138,7 @@ The LANL group deposited their complete dataset in the ****Separation Archive fo
 - Purities: 88-96%
 - Substrate scope: 9 different DGA variants
 
-**Environmental Impact:** Life cycle assessment revealed ****67% reduction in global warming potential**** compared to prior synthetic pathways [@an2024agile].
+**Environmental Impact:** {index}`Life cycle assessment <life cycle assessment>` revealed ****67% reduction in global warming potential**** compared to prior synthetic pathways [@an2024agile].
 
 **Advantages over Prior Art:**
 
@@ -156,7 +156,7 @@ The LANL group deposited their complete dataset in the ****Separation Archive fo
 **Outcome:** The systematic ligand evaluation informed development of a promising flowsheet for separating light and heavy REEs.
 
 ### Diglycolamide Extractant Advantages
-Diglycolamide (DGA) extractants offer several advantages for REE separations:
+{index}`Diglycolamide <diglycolamide>` (DGA) extractants offer several advantages for REE separations:
 
 - High extraction capacity
 - Ease of synthesis (now enhanced by melt-amidation)
@@ -169,7 +169,7 @@ The work of [@an2024agile] demonstrates how integrating agile synthetic chemistr
 (machine-learning-for-distribution-coefficient-prediction)=
 ## Machine Learning for Distribution Coefficient Prediction
 ### Deep Learning Approaches
-@liu2022advancing developed deep neural networks (DNNs) trained on experimental data to predict distribution coefficients for lanthanide solvent extraction, enabling high-throughput virtual screening.
+@liu2022advancing developed deep neural networks (DNNs) trained on experimental data to predict distribution coefficients for lanthanide {index}`solvent extraction`, enabling high-throughput virtual screening.
 
 #### Dataset and Model Performance
 
@@ -313,7 +313,7 @@ DFT calculations provide atomic-level insights into metal-ligand interactions an
 
 **Key Findings from DFT Studies:**
 
-*D2EHPA Extractant Selectivity:* DFT combined with Born-Haber thermodynamics explains heavy REE preference [@alizadeh2023deep]:
+*{index}`D2EHPA` Extractant Selectivity:* DFT combined with Born-Haber thermodynamics explains heavy REE preference [@alizadeh2023deep]:
 
 | Parameter           | La(III)         | Y(III)          |
 |---------------------|-----------------|-----------------|
@@ -349,7 +349,7 @@ COSMO-RS (Conductor-like Screening Model for Real Solvents) enables prediction o
 **Validated Applications:**
 
 - β-diketone extraction of La/Ce
-- Ionic liquid diluent effects
+- {index}`Ionic liquid <ionic liquids>` diluent effects
 - Temperature dependence prediction
 - Multi-component system modeling
 
@@ -476,7 +476,7 @@ The Architector package automates metal-ligand complex construction [@summers202
 | gPROMS | Dynamic process modeling |
 | DWSIM | Open-source alternative |
 
-**Solvent Extraction Simulation:** Counter-current cascade modeling [@turgeon2023simulation]:
+**Solvent Extraction Simulation:** {index}`Counter-current <countercurrent cascade>` cascade modeling [@turgeon2023simulation]:
 
 - Stage-wise mass balance
 - Equilibrium and kinetic models

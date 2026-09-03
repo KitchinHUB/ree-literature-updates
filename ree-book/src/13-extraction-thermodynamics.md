@@ -5,7 +5,7 @@ title: Thermodynamics of Extraction
 (thermodynamics-of-extraction)=
 # Thermodynamics of Extraction
 
-Every separation factor in this book is, underneath, a difference of free
+Every {index}`separation factor` in this book is, underneath, a difference of free
 energies. This chapter works that relationship in both directions: forward, from
 atomistic calculation to a predicted extraction constant, and backward, from
 calorimetric measurement to the enthalpy and entropy terms that a prediction has
@@ -148,7 +148,7 @@ We construct a cycle where all species pass through the gas phase:
 **Key variations**:
 
 - Different REEs have different binding strengths
-- Different extractants (D2EHPA vs. PC88A vs. TBP) give different ΔG₂
+- Different extractants ({index}`D2EHPA` vs. {index}`PC88A` vs. {index}`TBP <TBP (tributyl phosphate)>`) give different ΔG₂
 - This is the **primary source of selectivity** in gas phase
 
 **Typical values**:
@@ -192,7 +192,7 @@ We construct a cycle where all species pass through the gas phase:
 **Key consideration**:
 
 - This term allows you to screen different solvents!
-- Kerosene vs. dodecane vs. ionic liquids
+- Kerosene vs. dodecane vs. {index}`ionic liquids`
 - Different solvents → different ΔG₃ → different extraction efficiency
 
 ##### ΔG₄: Desolvation of Extractant from Organic Phase
@@ -489,11 +489,11 @@ DFT/UMA → ΔG₂ → Sum cycle → ΔG°_extraction → log K°_ex → Apply p
 ```
 
 ## Microcalorimetry for Liquid-Liquid Extraction Thermodynamics
-Microcalorimetry, particularly **Isothermal Titration Calorimetry (ITC)**, has emerged as a key technique for directly measuring the heats of reaction during liquid-liquid extraction of metal ions. This allows determination of complete thermodynamic profiles (ΔH, ΔS, ΔG) for ion transfer between aqueous and organic phases in both extraction and stripping directions.
+Microcalorimetry, particularly **Isothermal Titration Calorimetry (ITC)**, has emerged as a key technique for directly measuring the heats of reaction during {index}`liquid-liquid extraction <solvent extraction>` of metal ions. This allows determination of complete thermodynamic profiles (ΔH, ΔS, ΔG) for ion transfer between aqueous and organic phases in both extraction and stripping directions.
 
 ### Experimental Techniques
 #### Two-Phase Calorimetry (Direct ITC Measurement)
-The foundational work on two-phase calorimetry was developed using the **HDEHP (bis(2-ethylhexyl) phosphoric acid)/lanthanide** system as a model. Key findings:
+The foundational work on two-phase calorimetry was developed using the **{index}`HDEHP` (bis(2-ethylhexyl) phosphoric acid)/lanthanide** system as a model. Key findings:
 
 - Enthalpies of extraction of lanthanide ions by HDEHP from aqueous nitrate solutions have been determined using isothermal titration microcalorimetry
 - Validation: Calorimetric ΔH values agree well with **van't Hoff analysis** of temperature-dependent distribution coefficients
@@ -529,7 +529,7 @@ The **entropy-enthalpy compensation effect** has been observed - less compact hy
 **Reference:** [OSTI Thermodynamics Studies](https://www.osti.gov/etdeweb/servlets/purl/20176396)
 
 #### Diglycolamide (DGA) Systems
-TODGA and related DGAs show:
+{index}`TODGA` and related DGAs show:
 
 - **Enthalpy-driven extraction** for Am(III) and U(VI)
 - **Both enthalpy and entropy favorable** for Pu(IV)
@@ -618,7 +618,7 @@ MD simulations reveal:
 #### Challenges
 1.  Heat measured represents **total process heat** - difficult to distinguish diffusion vs. binding contributions
 2.  Buffer matching critical - organic solvent composition must be consistent
-3.  Competing reactions (hydrolysis, precipitation) must be controlled
+3.  Competing reactions (hydrolysis, {index}`precipitation`) must be controlled
 4.  High equilibrium constants (\>10⁴-10⁵ M⁻¹) require specialized protocols
 
 #### Best Practices
@@ -657,7 +657,7 @@ MD simulations reveal:
 
 ### Overview
 
-This document presents a unified thermodynamic framework that connects (i) mineral dissolution of bastnäsite (REECO3F) using acid leaching, and (ii) liquid--liquid extraction (LLE) of rare-earth elements (REEs) using acidic organophosphorus extractants such as D2EHPA and related phosphates. The framework integrates atomistic thermodynamics inspired by first-principles mineral dissolution modeling with empirical and semi-empirical extraction models, providing a pathway toward chemically grounded, computationally extensible benchmarks.
+This document presents a unified thermodynamic framework that connects (i) mineral dissolution of {index}`bastnäsite` (REECO3F) using acid leaching, and (ii) liquid--liquid extraction (LLE) of rare-earth elements (REEs) using acidic organophosphorus extractants such as D2EHPA and related phosphates. The framework integrates atomistic thermodynamics inspired by first-principles mineral dissolution modeling with empirical and semi-empirical extraction models, providing a pathway toward chemically grounded, computationally extensible benchmarks.
 
 ### Bastnäsite Dissolution as a Source of Aqueous REE Chemical Potentials
 Bastnäsite (REECO3F, where REE = Y, La, Ce, Pr, Nd, Sm, Gd) is a major rare-earth mineral. Under acidic leaching conditions, it dissolves to release trivalent REE ions into solution. A simplified dissolution reaction is:  
@@ -671,7 +671,7 @@ In an atomistic thermodynamics framework, the free energy of dissolution can be 
 Density functional theory (DFT) provides the solid-state and surface energetics of REE release, while aqueous thermodynamics (hydration, complexation, activity coefficients) provides solution terms. This establishes the aqueous chemical potential μ_REE3+ as a function of pH, ionic strength, and ligand environment.
 
 ### Acidic Phosphate Extraction Thermodynamics
-Extraction with acidic organophosphorus extractants (HA) proceeds via cation exchange. The dominant extraction reaction for trivalent REEs is:  
+Extraction with acidic organophosphorus extractants (HA) proceeds via cat{index}`ion exchange`. The dominant extraction reaction for trivalent REEs is:  
   
 REE3+(aq) + 3HA(org) ⇌ REEA3(org) + 3H+(aq)  
   

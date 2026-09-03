@@ -148,7 +148,7 @@ HPLC provides both separation and quantification of individual REEs [@verma2007h
 - Combined HPLC-ICP-MS enables simultaneous determination of 14 REEs in 15 minutes
 
 ### Ion Chromatography (IC)
-Ion chromatography uses specialized stationary phases for REE separation [@ahmed2020chromatographic].
+Ion {index}`chromatography` uses specialized stationary phases for REE separation [@ahmed2020chromatographic].
 
 **Recent Developments:**
 
@@ -177,7 +177,7 @@ ITC is the gold standard for measuring thermodynamics of REE-ligand binding in s
 - Solvent effects critical: stability follows PC \> AN \> MeOH \> DMF \> DMSO
 - Stepwise 1:1 and 1:2 complexes can be distinguished
 
-**Solvent Extraction Studies:** ITC has been used to measure enthalpy of extraction (ΔH_extr) of Eu(NO₃)₃ using tripodal diglycolamide (T-DGA) in biphasic systems, providing insight into extraction thermodynamics.
+**{index}`Solvent Extraction <solvent extraction>` Studies:** ITC has been used to measure enthalpy of extraction (ΔH_extr) of Eu(NO₃)₃ using tripodal {index}`diglycolamide` (T-DGA) in biphasic systems, providing insight into extraction thermodynamics.
 
 ### Potentiometric Titration
 Potentiometric titration determines pKa values, stability constants, and extractant purity ([University of Idaho Thesis](https://objects.lib.uidaho.edu/etd/pdf/Lyon_idaho_0089N_10815.pdf)).
@@ -401,7 +401,7 @@ LA-ICP-MS enables spatially resolved analysis of solid samples [@lin2024situ].
 **Applications:**
 
 - In situ analysis of REE-bearing minerals
-- Sm-Nd and Lu-Hf isotope analysis in monazite, apatite, titanite
+- Sm-Nd and Lu-Hf isotope analysis in {index}`monazite`, apatite, titanite
 - Mapping REE distribution in materials
 - U-Pb geochronology
 
@@ -452,7 +452,7 @@ Key parameters for solvent extraction process design ([@liu2022advancing], [MDPI
 
     β_{REE1/REE2} = D_{REE1} / D_{REE2}
 
-**Multicomponent Systems:** Two approaches for calculating separation factors in complex mixtures:
+**Multicomponent Systems:** Two approaches for calculating {index}`separation factors <separation factor>` in complex mixtures:
 
 1.  **Effective separation factor**: Function of adjacent element separation factors and component percentages
 2.  **Equivalent separation factor**: Converts all components to two-component system

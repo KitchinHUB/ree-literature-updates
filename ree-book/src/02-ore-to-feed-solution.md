@@ -5,7 +5,7 @@ title: From Ore to Feed Solution
 (from-ore-to-feed-solution)=
 # From Ore to Feed Solution
 
-A solvent extraction circuit does not start from an ore. It starts from an
+A {index}`solvent extraction` circuit does not start from an ore. It starts from an
 aqueous solution of a particular acid, at a particular pH, carrying a particular
 set of impurities — and almost everything that circuit can achieve is fixed
 before the first contactor by decisions made upstream. This short chapter covers
@@ -15,9 +15,9 @@ begin.
 
 Two decisions made here echo through the rest of the book. The first is the
 choice of acid: hydrochloric gives a chloride liquor that suits the acidic
-organophosphorus extractants, nitric gives a nitrate liquor that suits TBP, and
+organophosphorus extractants, nitric gives a nitrate liquor that suits {index}`TBP <TBP (tributyl phosphate)>`, and
 the two are not freely interchangeable downstream. The second is impurity
-removal — iron, aluminium, calcium, thorium, and phosphate all interfere with
+removal — iron, aluminium, calcium, {index}`thorium`, and phosphate all interfere with
 extraction, and each part-per-million left in the feed is paid for later.
 
 [](#hydrometallurgical-leaching) treats the leaching step itself in full
@@ -27,18 +27,18 @@ sense of [](#solvent-extraction-fundamentals).
 ## Primary REE Minerals
 Rare-earth elements do not occur as native metals but are found in oxide or phosphate minerals [@jha2016hydrometallurgical; @xie2014critical]. The most important industrial sources are:
 
-1.  **Bastnasite** (REE·FCO₃): Carbonate-fluoride mineral
-    - Primary source in US (Mountain Pass, CA) and China (Bayan Obo)
+1.  **{index}`Bastnasite <bastnäsite>`** (REE·FCO₃): Carbonate-fluoride mineral
+    - Primary source in US ({index}`Mountain Pass`, CA) and China ({index}`Bayan Obo`)
     - Enriched in light REEs: La, Ce, Pr, Nd
     - Typical composition: 60-70% REO (rare earth oxides)
-2.  **Monazite** ((REE,Th)PO₄): Phosphate mineral
+2.  **{index}`Monazite <monazite>`** ((REE,Th)PO₄): Phosphate mineral
     - Contains thorium (radioactive, complicates processing)
     - Enriched in middle REEs and heavy REEs
     - Typical composition: 50-70% REO, 0-12% ThO₂
-3.  **Xenotime** (YPO₄): Yttrium phosphate
+3.  **{index}`Xenotime <xenotime>`** (YPO₄): {index}`Yttrium <yttrium>` phosphate
     - Primary source of heavy REEs: Y, Dy, Er, Yb
     - Typical composition: 50-67% Y₂O₃ + heavy REO
-4.  **Ion-adsorption clays** (Southern China)
+4.  **{index}`Ion-adsorption clays <ion-adsorption clay>`** (Southern China)
     - REEs weakly bound to clay surfaces as exchangeable ions
     - Can be leached with dilute electrolytes (NH₄)₂SO₄
     - Enriched in heavy REEs (Dy, Tb, Y)
@@ -55,7 +55,7 @@ Rare-earth elements do not occur as native metals but are found in oxide or phos
 - Faster dissolution kinetics than nitrate
 - Higher REE concentration possible (1-2 M)
 - Lower viscosity than nitrate solutions
-- Preferred for D2EHPA and PC88A extractants
+- Preferred for {index}`D2EHPA` and {index}`PC88A` extractants
 
 **Challenges**:
 
@@ -114,7 +114,7 @@ Before solvent extraction, feed solutions require purification [@jha2016hydromet
 
 1.  **Removal of bulk impurities**:
     - Fe³⁺ removal: pH adjustment to precipitate Fe(OH)₃ (pH 3-4)
-    - Ca²⁺, Al³⁺: Precipitation or ion exchange
+    - Ca²⁺, Al³⁺: {index}`Precipitation <precipitation>` or {index}`ion exchange`
     - Radioactive elements (Th, U): Pre-extraction or precipitation
 2.  **pH adjustment**:
     - Adjust to extraction pH (typically 0.5-4.0)

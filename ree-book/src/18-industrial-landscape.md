@@ -33,7 +33,7 @@ One of few industrial-scale refining facilities outside China:
 - Partnership with US Department of Defense
 
 ## MP Materials (USA)
-Operates the Mountain Pass mine in California:
+Operates the {index}`Mountain Pass` mine in California:
 
 - Produced **42,499 metric tons** of rare earths in 2022
 - \~14% of global production

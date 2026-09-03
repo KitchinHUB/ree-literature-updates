@@ -5,10 +5,10 @@ title: Precipitation and Selective Crystallization
 (precipitation-and-selective-crystallization)=
 # Precipitation and Selective Crystallization
 
-Precipitation is the oldest rare earth separation technology and it is still
+{index}`Precipitation <precipitation>` is the oldest rare earth separation technology and it is still
 everywhere in modern flowsheets — as a bulk recovery step at the end of a
-solvent extraction circuit, as an impurity scrub, and, in the single case of
-cerium, as a genuine separation. This chapter covers both halves of the subject:
+{index}`solvent extraction` circuit, as an impurity scrub, and, in the single case of
+{index}`cerium`, as a genuine separation. This chapter covers both halves of the subject:
 the conventional precipitation chemistry that industry runs today, and the
 designed molecular crystals that aim to turn precipitation into a selective
 separation in its own right.
@@ -131,7 +131,7 @@ Double sulfate salts (Na₂SO₄·RE₂(SO₄)₃·nH₂O) exploit differential 
 **Selectivity:**
 
 - LREEs form less soluble double sulfates
-- Effective for separating cerium earths from yttrium earths
+- Effective for separating cerium earths from {index}`yttrium` earths
 - Most direct recovery method for La, Ce, Nd, Pr from NiMH battery leachates
 
 **Process Conditions:**
@@ -152,7 +152,7 @@ Fluoride forms strong complexes with REEs, enabling effective precipitation as R
 **Applications:**
 
 - REE concentration from dilute solutions
-- Production of REE fluorides for molten salt electrolysis
+- Production of REE fluorides for {index}`molten salt electrolysis`
 - Recovery from electrolytic slag (Nd, Pr, Dy precipitation rates \>87%)
 
 **Caution:** HF handling requires specialized safety protocols.
@@ -216,7 +216,7 @@ Organic ligands and complexing agents enable enhanced selectivity in REE precipi
 
 **"Tug of War" Strategy:** Employs competing ligands with opposite selectivity profiles:
 
-- **Lipophilic ligand** (oil-soluble diglycolamide): Binds heavy lanthanides
+- **Lipophilic ligand** (oil-soluble {index}`diglycolamide`): Binds heavy lanthanides
 - **Hydrophilic ligand** (water-soluble bis-lactam-1,10-phenanthroline): Binds light lanthanides
 - Result: **Quantitative separation** of lightest (La-Nd) and heaviest (Ho-Lu) lanthanides
 
@@ -248,7 +248,7 @@ Organic ligands and complexing agents enable enhanced selectivity in REE precipi
 | SO₄²⁻      | Moderate, forms double salts     |
 
 ### Fractional Crystallization
-Fractional crystallization was the earliest industrial method for REE separation and remains relevant for high-purity production [@forsberg2024separation].
+{index}`Fractional crystallization <selective crystallization>` was the earliest industrial method for REE separation and remains relevant for high-purity production [@forsberg2024separation].
 
 **Principle:** Solubility differences of REE double salts enable separation by temperature or evaporation control:
 
@@ -279,7 +279,7 @@ Fractional crystallization was the earliest industrial method for REE separation
 ### Impurity Removal by Selective Precipitation
 Effective REE recovery requires prior removal of impurities through staged precipitation [@li2025iron].
 
-**Thorium and Uranium Removal:**
+**{index}`Thorium <thorium>` and Uranium Removal:**
 
 | Method                | Th Removal | U Removal               | REE Loss |
 |-----------------------|------------|-------------------------|----------|
@@ -297,7 +297,7 @@ Effective REE recovery requires prior removal of impurities through staged preci
 
 **Radioactive Impurity Considerations:** For high-purity REE products (electronics, phosphors), trace Th and U must be reduced to ppb levels:
 
-- Phosphine oxide modified adsorbents achieve separation factors \>15,000
+- Phosphine oxide modified adsorbents achieve {index}`separation factors <separation factor>` \>15,000
 - Equilibrium reached in 30 minutes in 0.1 M HNO₃
 
 ### Industrial Process Parameters

@@ -31,7 +31,7 @@ most of the work in this book is legible only against them:
    ([](#ion-adsorption-clays)), recycled magnets
    ([](#recycling-and-urban-mining)), coal ash, and mine tailings — receives
    attention out of proportion to the tonnage it can currently supply.
-2. **Environmental cost.** Conventional solvent extraction consumes large
+2. **Environmental cost.** Conventional {index}`solvent extraction` consumes large
    organic inventories and generates acidic, sometimes radioactive, raffinate
    ([](#environment-techno-economics-and-life-cycle)).
    Every alternative in Part III is partly an argument about reducing that
@@ -42,7 +42,7 @@ most of the work in this book is legible only against them:
    ([](#metal-organic-framework-mof-nanotraps)), and reactive halogenation
    ([](#pyrometallurgical-and-halogenation-routes)) are not incremental
    improvements on liquid–liquid extraction. They exploit different physics,
-   and several report separation factors that solvent extraction cannot reach
+   and several report {index}`separation factors <separation factor>` that solvent extraction cannot reach
    in a single stage.
 
 Whether any of them displaces solvent extraction at scale is a separate
@@ -59,7 +59,7 @@ publication to plant is so long.
 
 **Kinetics.** Many emerging technologies show excellent selectivity and slow
 mass transfer. A separation factor of 1000 is worth nothing if equilibrium
-takes six hours, because throughput sets plant capital cost. Microfluidics
+takes six hours, because throughput sets plant capital cost. {index}`Microfluidics <microfluidics>`
 ([](#microfluidic-separations)) is one of the few approaches that attacks this
 directly, by shrinking the diffusion length rather than improving the
 chemistry.
@@ -81,12 +81,12 @@ earths. Selectivity against the neighbouring lanthanide is the celebrated
 number; selectivity against iron is the one that decides whether the process
 runs.
 
-**Radioactivity.** Thorium and uranium travel with the rare earths through
+**Radioactivity.** {index}`Thorium <thorium>` and uranium travel with the rare earths through
 most leaching routes ([](#thorium-management)). Their management is a
 licensing and disposal problem as much as a chemical one, and it is frequently
-omitted from process proposals and from techno-economic analyses.
+omitted from process proposals and from {index}`techno-economic <techno-economic analysis (TEA)>` analyses.
 
-**Data and reproducibility.** Distribution ratios are reported under
+**Data and reproducibility.** {index}`Distribution ratios <distribution ratio>` are reported under
 inconsistent conditions, often without ionic strength, phase ratio, or
 equilibration time. This makes meta-analysis and machine learning across the
 published corpus far harder than it should be
@@ -124,7 +124,7 @@ judgments, retained here for orientation.
 
 1. Scale-up of protein-based separation systems beyond the milligram
    demonstrations ([](#lanmodulin-structure-mechanism-and-engineering))
-2. Optimization of flash Joule heating, particularly energy input and product
+2. Optimization of {index}`flash Joule heating`, particularly energy input and product
    collection ([](#flash-joule-heating-with-chlorination))
 3. Development of selective membrane materials with durable flux
    ([](#membrane-separation-technologies))
@@ -133,7 +133,7 @@ judgments, retained here for orientation.
 
 ### Medium term (3–7 years)
 
-1. Commercial deployment of MOF-based separation
+1. Commercial deployment of {index}`MOF <metal-organic framework (MOF)>`-based separation
 2. Integration of bioseparation into industrial workflows
 3. Efficient e-waste recycling infrastructure at collection scale
 4. Continuous-flow supramolecular separation

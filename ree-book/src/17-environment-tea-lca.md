@@ -19,7 +19,7 @@ step at all but by mining, radioactive residue management, and the acid and
 reagent load upstream — which means an improvement confined to the separation
 stage moves a smaller number than its advocates usually claim.
 
-The techno-economic and life cycle sections that follow are the right place to
+The {index}`techno-economic <techno-economic analysis (TEA)>` and life cycle sections that follow are the right place to
 check the claims made in Part III.
 
 ## Environmental and Sustainability Considerations
@@ -28,9 +28,9 @@ check the claims made in Part III.
 Traditional REE separation creates significant environmental challenges:
 
 - **Acidic/alkaline wastewater** from hydrometallurgical processes
-- **Radioactive waste** from thorium and uranium associated with REE ores
+- **Radioactive waste** from {index}`thorium` and uranium associated with REE ores
 - **High energy consumption** in pyrometallurgical methods
-- **Organic solvent use** in liquid-liquid extraction
+- **Organic solvent use** in {index}`liquid-liquid extraction <solvent extraction>`
 - **Habitat destruction** from mining operations
 
 Some of the highest pollution levels on Earth are associated with REE production in China, where \>70% is mined and \>95% is refined.
@@ -103,7 +103,7 @@ Solvent extraction remains the dominant commercial technology, with well-establi
 | Tb recovery           | 91%             |
 | Product purity        | \>99.5%         |
 
-**Mountain Pass Processing (2020 Baseline):** Operating cost analysis for bastnäsite processing [@uysal2022economic]:
+**{index}`Mountain Pass` Processing (2020 Baseline):** Operating cost analysis for {index}`bastnäsite` processing [@uysal2022economic]:
 
 | Processing Route   | OPEX (\$/ton REO) | Key Cost Drivers   |
 |--------------------|-------------------|--------------------|
@@ -171,7 +171,7 @@ Techno-economic assessment of REE recovery from AMD using network sourcing [@lar
 **Key Findings:**
 
 - Capital cost and HCl consumption are dominant factors
-- Extractants: D2EHPA, EHEHPA, CA-12, Cyanex 272, Cyanex 572
+- Extractants: {index}`D2EHPA`, {index}`EHEHPA`, CA-12, {index}`Cyanex 272`, Cyanex 572
 - Economics improve with REE concentration in feed
 - Co-product credits (Co, Mn) enhance viability
 
@@ -215,12 +215,12 @@ Techno-economic assessment of REE recovery from AMD using network sourcing [@lar
 
 ## Life Cycle Assessment
 
-Life cycle assessment provides a comprehensive framework for evaluating the environmental impacts of REE production, enabling comparison of technologies and identification of improvement opportunities.
+{index}`Life cycle assessment <life cycle assessment>` provides a comprehensive framework for evaluating the environmental impacts of REE production, enabling comparison of technologies and identification of improvement opportunities.
 
 ### LCA Framework for REE Production
 **System Boundaries:** REE LCA studies typically employ cradle-to-gate boundaries [@navarro2014life]:
 
-    Mining → Beneficiation → Cracking/Leaching → Separation → Precipitation → Calcination → REO
+    Mining → Beneficiation → Cracking/Leaching → Separation → {index}`Precipitation <precipitation>` → Calcination → REO
 
 **Functional Unit:** Most studies use 1 kg of rare earth oxide (REO) as the functional unit, though some analyze individual elements.
 
@@ -246,7 +246,7 @@ Life cycle assessment provides a comprehensive framework for evaluating the envi
 | Europium (from monazite)      | 21.3                   | Minimum observed |
 | Yttrium (from monazite)       | 197.9                  | Maximum observed |
 
-**Element-Specific GWP from Monazite:** The allocation of impacts to individual REEs reveals significant variation [@browning2017life]:
+**Element-Specific GWP from {index}`Monazite <monazite>`:** The allocation of impacts to individual REEs reveals significant variation [@browning2017life]:
 
 | Element      | GWP (kg CO₂-eq/kg) | Notes                            |
 |--------------|--------------------|----------------------------------|
@@ -296,7 +296,7 @@ Life cycle assessment provides a comprehensive framework for evaluating the envi
 - Caustic cracking generates NaOH waste
 - Higher human toxicity potential
 
-**Ion-Adsorption Clays (IACs):**
+**{index}`Ion-Adsorption Clays <ion-adsorption clay>` (IACs):**
 
 - In-situ leaching causes ammonia contamination
 - Marine eutrophication from NH₄⁺ emissions
@@ -387,6 +387,6 @@ Life cycle assessment provides a comprehensive framework for evaluating the envi
 **Circular Economy:**
 
 - Urban mining from e-waste
-- Industrial symbiosis (red mud, coal ash)
+- Industrial symbiosis ({index}`red mud`, coal ash)
 - Product design for recyclability
 - Extended producer responsibility

@@ -5,7 +5,7 @@ title: Solvent Extraction Fundamentals
 (solvent-extraction-fundamentals)=
 # Solvent Extraction Fundamentals
 
-This is the core teaching chapter of the book. Solvent extraction is how nearly
+This is the core teaching chapter of the book. {index}`Solvent extraction <solvent extraction>` is how nearly
 all rare earths are separated today, and everything in Part III is best read as
 an attempt to do better than what is described here.
 
@@ -18,10 +18,10 @@ The "pH swing" is the entire operating principle, and the −3 slope of log D
 against pH is its signature.
 
 What makes rare earths hard is that this mechanism discriminates between
-adjacent lanthanides only weakly. A separation factor near 1.5 is normal.
+adjacent lanthanides only weakly. A {index}`separation factor` near 1.5 is normal.
 Turning a factor of 1.5 into 99.99% purity is not a chemistry problem but a
 staging problem, which is why the second half of this chapter is about
-contactors, countercurrent cascades, and phase ratios rather than about
+contactors, {index}`countercurrent <countercurrent cascade>` cascades, and phase ratios rather than about
 molecules.
 
 Along the way the chapter answers the questions that new researchers reliably
@@ -31,7 +31,7 @@ in the organic phase — better than 99.99% of it).
 
 ## Aqueous Phase Composition and Additives
 ### Role of pH Control
-pH is the **primary control variable** in REE solvent extraction [@xie2014critical; @li2020hydration]. The extraction mechanism for acidic extractants (D2EHPA, PC88A) involves exchange of H⁺ for REE³⁺:
+pH is the **primary control variable** in REE solvent extraction [@xie2014critical; @li2020hydration]. The extraction mechanism for acidic extractants ({index}`D2EHPA`, {index}`PC88A`) involves exchange of H⁺ for REE³⁺:
 
     REE³⁺(aq) + 3 HL(org) ⇌ REEL₃(org) + 3 H⁺(aq)
 
@@ -63,7 +63,7 @@ Where:
     - Increases ionic strength: I = 0.5 Σ c~i~ z~i²~
 2.  **Ca(NO₃)₂** (1-3 M) [@matveev2018solvent]:
     - Strong salting-out effect (divalent cation)
-    - Enhances TBP extraction via nitrate complex formation
+    - Enhances {index}`TBP <TBP (tributyl phosphate)>` extraction via nitrate complex formation
     - Creates REE(NO₃)₃·nTBP extractable species
     - Used industrially for TBP processes
 3.  **Al(NO₃)₃** (0.5-2 M):
@@ -76,7 +76,7 @@ Where:
 - Salts compete for water of hydration
 - Reduces free water available to solvate extractant
 - Shifts equilibrium toward organic phase
-- Can provide 1-2 orders of magnitude improvement in distribution ratio
+- Can provide 1-2 orders of magnitude improvement in {index}`distribution ratio`
 
 #### Buffers and pH Control Agents
 **Buffering systems** [@xie2014critical]:
@@ -110,7 +110,7 @@ Where:
     - 0.01-0.1 M typical concentration
 2.  **EDTA/DTPA**:
     - Strong chelators for impurity removal
-    - Can suppress thorium, uranium extraction
+    - Can suppress {index}`thorium`, uranium extraction
     - Used in pre-treatment
 3.  **Thiocyanate (SCN⁻)**:
     - Modifies selectivity in some systems
@@ -209,7 +209,7 @@ Other diluents used in specialized applications [@dewulf2022effect]:
     - Higher flash point (\>100°C)
     - 2-3× cost of kerosene
     - Used in pharmaceutical/food applications
-3.  **Ionic liquids**:
+3.  **{index}`Ionic liquids <ionic liquids>`**:
     - Negligible vapor pressure
     - Tunable properties
     - Very expensive (\$100-1000/kg)
@@ -237,7 +237,7 @@ Other diluents used in specialized applications [@dewulf2022effect]:
 
 - High extractant concentration (\>30%)
 - High metal loading (\>50% of extractant capacity)
-- Systems prone to third-phase formation (Cyanex 272, DEHPA)
+- Systems prone to third-phase formation ({index}`Cyanex 272`, DEHPA)
 
 ## pH Swing Mechanism for Phase Transfer
 ### Extraction Step: Aqueous → Organic
@@ -508,7 +508,7 @@ At D = 1: pH₁/₂ = (log K~ex~ + 3 log\[(HL)₂\]) / 3
 - Compact vertical design (small footprint)
 - No moving parts in column (pulse from external pump)
 - High throughput per unit volume
-- Better stage efficiency than mixer-settlers
+- Better stage efficiency than {index}`mixer-settlers <mixer-settler>`
 
 **Disadvantages**:
 
@@ -718,7 +718,7 @@ Where:
 
 ## Industrial Example: Complete Process Flow
 ### Typical REE Separation Plant (Simplified)
-**Feed**: Bastnasite concentrate (60% REO, mostly La, Ce, Pr, Nd)
+**Feed**: {index}`Bastnasite <bastnäsite>` concentrate (60% REO, mostly La, Ce, Pr, Nd)
 
 #### Step 1: Dissolution
 

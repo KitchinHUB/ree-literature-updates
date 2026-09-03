@@ -6,19 +6,19 @@ title: The Landscape of Separation Technologies
 # The Landscape of Separation Technologies
 
 Part I closes with a map. This chapter sketches the two technologies that
-actually run at industrial scale today — solvent extraction and ion exchange —
+actually run at industrial scale today — {index}`solvent extraction` and {index}`ion exchange` —
 and then places every approach in this book on a single comparison, so that the
 detailed chapters that follow can be read against a common frame.
 
 Ion exchange deserves particular attention here because it has no chapter of
 its own. It is the only route that routinely delivers the ≥99.9999% purities
 required for optical and electronic applications, and it does so by displacement
-chromatography rather than by staging. Its limitation is throughput, which is
+{index}`chromatography` rather than by staging. Its limitation is throughput, which is
 why it survives industrially as a polishing step downstream of solvent
 extraction rather than as a replacement for it.
 
 The comparison at the end of the chapter is worth reading carefully, and worth
-reading sceptically. Separation factors quoted for laboratory systems are
+reading sceptically. {index}`Separation factors <separation factor>` quoted for laboratory systems are
 measured under conditions chosen to show them at their best; the TRL column is
 the honest one. Two technologies in that table are at TRL 9 and everything else
 is at 3–7.
@@ -36,15 +36,15 @@ Solvent extraction operates on mass transfer between two immiscible phases:
 ### Commercial Extractants
 Key industrial extractants include:
 
-- **D2EHPA** (Di-2-ethylhexyl phosphoric acid)
-- **PC88A/HEHEHP** (2-ethylhexyl phosphonic acid mono-2-ethylhexyl ester) - industrial standard
+- **{index}`D2EHPA`** (Di-2-ethylhexyl phosphoric acid)
+- **{index}`PC88A`/HEHEHP** (2-ethylhexyl phosphonic acid mono-2-ethylhexyl ester) - industrial standard
 - **Versatic 10** (neodecanoic acid)
-- **TBP** (Tributyl phosphate)
-- **Aliquat 336** (quaternary ammonium salt)
+- **{index}`TBP <TBP (tributyl phosphate)>`** (Tributyl phosphate)
+- **{index}`Aliquat 336`** (quaternary ammonium salt)
 - **Cyanex® 572** - emerging alternative that reduces acid consumption by \>30% compared to PC88A
 
 ### Industrial Scale
-- Up to **hundreds of stages** of mixer-settlers may be required
+- Up to **hundreds of stages** of {index}`mixer-settlers <mixer-settler>` may be required
 - Typical purities: **95-99.9%**
 - For optical/phosphor-grade materials (5-6 nines purity), ion exchange post-processing is required
 
@@ -106,7 +106,7 @@ Magnetic adsorbents combine polymer ion-exchange functionality with magnetic par
 - Demonstrated for heavy metal removal (Cu²⁺, Pb²⁺) with translation to REE recovery
 
 ### Polymer Inclusion Beads (µPIBs)
-Micro polymer inclusion beads represent a recent advance for online separation of critical rare-earth elements from end-of-life permanent magnets [@croft2024online].
+Micro {index}`polymer inclusion beads <polymer inclusion membranes>` represent a recent advance for online separation of critical rare-earth elements from end-of-life permanent magnets [@croft2024online].
 
 **Features:**
 
@@ -117,12 +117,12 @@ Micro polymer inclusion beads represent a recent advance for online separation o
 
 **Target Applications:**
 
-- NdFeB permanent magnet recycling
+- {index}`NdFeB` permanent magnet recycling
 - Recovery of Nd, Pr, Dy from e-waste
 - Separation of critical REEs from non-critical elements
 
 ### Ion-Imprinted Polymers (IIPs)
-Ion-imprinted polymers create binding cavities complementary in size and coordination to target REE ions, enabling high selectivity [@zhao2025ultra].
+{index}`Ion-imprinted polymers <ion-imprinted polymer>` create binding cavities complementary in size and coordination to target REE ions, enabling high selectivity [@zhao2025ultra].
 
 **Imprinting Process:**
 
