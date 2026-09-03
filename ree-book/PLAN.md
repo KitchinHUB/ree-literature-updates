@@ -236,6 +236,13 @@ index. Cited entries only; listing the uncited remainder would misrepresent
 what the book rests on. `--check` gates it in CI; `--orphans` writes the
 uncited list.
 
+The same run writes `src/references-cited.bib` — the 315 cited entries copied
+*verbatim* out of `references.bib`, not re-serialized, so nothing is lost in a
+round trip. Both it and the full 500-entry file are declared in the page's
+`downloads:` frontmatter and linked inline with `{download}`, so a reader can
+pull either straight into Zotero. MyST content-hashes the served filename but
+restores the original name on save.
+
 **`verify_bib.py` rejected 12 real sources.** Three separate causes:
 
 - 5 were bot-blocks, not dead links — Britannica ×4, IEA, IAEA answered 403 to
@@ -297,7 +304,7 @@ All in `tools/`, all re-runnable. Run from `ree-book/`.
 | `link_dois.py` | URL → DOI, cached in `.link-dois.json` | 8 publisher URL shapes |
 | `convert_link_citations.py` | hyperlink citations → `[@key]` | leaves non-papers as links |
 | `tag_index.py` | Adds `{index}` roles across chapters | idempotent; skips quoted spans |
-| `render_bibliography.py` | Generates `src/92-references.md` | `--check` to gate, `--orphans` to list |
+| `render_bibliography.py` | Generates `src/92-references.md` and `src/references-cited.bib` | `--check` to gate, `--orphans` to list |
 
 Audit trail, all committed: `bibliography-audit.md`, `doi-recovery.md`,
 `verification-report.md`, `doi-mismatch-repair.md`, `numeric-citation-audit.md`,
