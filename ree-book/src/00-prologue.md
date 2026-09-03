@@ -103,14 +103,30 @@ Running it over the merged bibliography:
 | Entries loaded from five source files | 506 |
 | Duplicates merged away | 33 |
 | Missing DOIs recovered from CrossRef | 77 of 154 |
-| **Entries verified** | **421** (373 by DOI, 48 by live URL) |
-| **Entries rejected and deleted** | **52** |
 | Author fields repaired from CrossRef | 172 |
-| Titles disagreeing with their DOI, flagged for review | 50 |
+| Wrong DOIs corrected | 37 |
+| **Entries verified** | **406** (359 by DOI, 47 by live URL) |
+| **Entries rejected and deleted** | **67** |
 
-Roughly one reference in nine did not survive. That is the scale of the problem
-this book started with, and it is the reason the disclaimer above is stated as
+**Roughly one reference in seven did not survive.** That is the scale of the
+problem this book started with, and it is why the disclaimer above is stated as
 plainly as it is.
+
+The 37 corrected DOIs deserve their own note, because they are the most
+dangerous category and the least visible. These entries carried a DOI that
+resolved perfectly well — and pointed at a completely different paper. A
+citation reading *"Selective Precipitation of Rare Earth and Critical
+Elements"* resolved to a paper about anaerobic digestion. The failure pattern
+was consistent: the journal and year were right and the article number was
+invented, landing on a real but unrelated paper in the same journal. A checker
+that only asks "does this DOI resolve?" passes every one of them.
+
+Finding these required comparing each entry's recorded title against the title
+its DOI actually belongs to, then searching for the DOI the *title* belongs to.
+Where that search found the real paper, the DOI was corrected; where it found
+nothing, the entry was rejected as describing a paper that does not exist. In
+no case was a wrong DOI's title adopted, which would have quietly swapped one
+reference for another.
 
 ### What this does and does not establish
 

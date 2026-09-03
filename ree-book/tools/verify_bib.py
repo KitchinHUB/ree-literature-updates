@@ -194,10 +194,23 @@ def main() -> int:
         w.order_entries_by = ("ID",)
         path.write_text(bibtexparser.dumps(out, w))
 
+        # Append rather than overwrite: this script is re-run after repairs,
+        # and a later pass rejecting fewer entries must not erase the record of
+        # what earlier passes removed.
+        rej_path = pathlib.Path(args.rejects)
+        existing = []
+        if rej_path.exists():
+            rp = bibtexparser.bparser.BibTexParser(common_strings=True)
+            rp.ignore_nonstandard_types = False
+            rp.expect_multiple_parse = True
+            existing = bibtexparser.loads(rej_path.read_text(), parser=rp).entries
+        seen = {e["ID"] for e in existing}
         rej = bibtexparser.bibdatabase.BibDatabase()
-        rej.entries = [{k: v for k, v in e.items() if not k.startswith("_")}
-                       for e, _ in rejected]
-        pathlib.Path(args.rejects).write_text(bibtexparser.dumps(rej, w))
+        rej.entries = existing + [
+            {k: v for k, v in e.items() if not k.startswith("_")}
+            for e, _ in rejected if e["ID"] not in seen
+        ]
+        rej_path.write_text(bibtexparser.dumps(rej, w))
         print(f"wrote {path} and {args.rejects}")
     else:
         print("dry run; re-run with --apply to prune")
