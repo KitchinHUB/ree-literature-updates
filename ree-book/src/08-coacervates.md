@@ -18,36 +18,36 @@ The headline results:
 
 - Polyelectrolyte complex coacervates offer tunable selectivity through charge
   density, polymer composition, and ionic strength
-  cite:sing2025polyelectrolyte,lee2025coacervate.
+  [@sing2025polyelectrolyte; @lee2025polyelectrolyte].
 - Aqueous biphasic systems built from polymers and ionic liquids give promising
-  REE separation factors cite:neves2022abs,kumar2021abs.
+  REE separation factors [@neves2022liquid; @kumar2022separation].
 - Biomimetic approaches using lanthanide-binding proteins such as lanmodulin
   reach separation factors above 100 for *adjacent* lanthanides
-  cite:cotruvo2023lanmodulin — a figure that should be read against the
+  [@cotruvo2023enhanced] — a figure that should be read against the
   single-digit factors typical of conventional extractants.
 - Stimuli-responsive coacervates allow on-demand capture and release through
-  temperature, pH, or redox triggers cite:love2020coacervate,wang2024redox.
+  temperature, pH, or redox triggers [@love2020reversible; @wang2025quantification].
 
 Lanmodulin and the other protein-based systems are treated more fully in
 [](#biological-and-biomimetic-separations); here the focus is the coacervate
 phase itself.
 
 ## Introduction to Coacervates
-Coacervation is a liquid-liquid phase separation (LLPS) process in polyelectrolyte solutions induced by environmental factors such as pH, ionic strength, temperature, and solubility, resulting in the formation of a colloid-rich phase known as a coacervate cite:lee2025coacervate. The term "coacervate" derives from the Latin *coacervare*, meaning "to cluster together." These polymer-dense phases represent a thermodynamically stable state where electrostatic attraction between oppositely charged species drives demixing from the bulk solution.
+Coacervation is a liquid-liquid phase separation (LLPS) process in polyelectrolyte solutions induced by environmental factors such as pH, ionic strength, temperature, and solubility, resulting in the formation of a colloid-rich phase known as a coacervate [@lee2025polyelectrolyte]. The term "coacervate" derives from the Latin *coacervare*, meaning "to cluster together." These polymer-dense phases represent a thermodynamically stable state where electrostatic attraction between oppositely charged species drives demixing from the bulk solution.
 
 Driving forces for coacervation include:
 
 - Electrostatic attraction between oppositely charged polyelectrolytes
-- Entropy gain from counterion release cite:zhang2022driving
+- Entropy gain from counterion release [@zhang2022driving]
 - Hydrophobic interactions
 - Hydrogen bonding
 
-The properties of coacervates can be controlled by adjusting parameters such as pH, polymer ratio, ionic strength, and molecular characteristics cite:spruijt2014polyelectrolyte,sing2025polyelectrolyte.
+The properties of coacervates can be controlled by adjusting parameters such as pH, polymer ratio, ionic strength, and molecular characteristics [@spruijt2014polyelectrolyte; @sing2025polyelectrolyte].
 
 ### Complex Coacervation
-Complex coacervation occurs when two oppositely charged polyelectrolytes (polycation and polyanion) are mixed in aqueous solution. At appropriate stoichiometries and ionic strengths, the system phase-separates into a polymer-rich coacervate phase and a polymer-dilute supernatant cite:spruijt2014polyelectrolyte.
+Complex coacervation occurs when two oppositely charged polyelectrolytes (polycation and polyanion) are mixed in aqueous solution. At appropriate stoichiometries and ionic strengths, the system phase-separates into a polymer-rich coacervate phase and a polymer-dilute supernatant [@spruijt2014polyelectrolyte].
 
-The earliest theoretical framework for complex coacervation was developed by Overbeek and Voorn in 1957, who estimated the total free energy of mixing as a sum of Flory-Huggins mixing entropy terms and Debye-Hückel electrostatic interactions cite:overbeek1957coacervation,priftis2012thermodynamic. This mean-field approach captures the essential physics: the electrostatic free energy provides the driving force, while entropic mixing favors the disordered homogeneous state.
+The earliest theoretical framework for complex coacervation was developed by Overbeek and Voorn in 1957, who estimated the total free energy of mixing as a sum of Flory-Huggins mixing entropy terms and Debye-Hückel electrostatic interactions [@overbeek1957phase; @priftis2012early]. This mean-field approach captures the essential physics: the electrostatic free energy provides the driving force, while entropic mixing favors the disordered homogeneous state.
 
 Key polymer systems for coacervation include:
 
@@ -56,10 +56,10 @@ Key polymer systems for coacervation include:
 - Synthetic polymers: poly(diallyldimethylammonium chloride) (PDADMAC)/poly(styrene sulfonate) (PSS)
 - Protein-polymer pairs: gelatin/gum arabic, BSA/polycations
 
-Phase diagrams for coacervate systems typically show a two-phase region at intermediate ionic strengths, bounded by a single-phase region at very low salt (kinetically trapped precipitates) and at high salt (electrostatic screening suppresses coacervation) cite:sing2020review.
+Phase diagrams for coacervate systems typically show a two-phase region at intermediate ionic strengths, bounded by a single-phase region at very low salt (kinetically trapped precipitates) and at high salt (electrostatic screening suppresses coacervation) [@sing2020progress].
 
 ### Simple Coacervation
-Simple coacervation involves a single polyelectrolyte species that undergoes phase separation induced by salt, solvent, or temperature changes. This process is particularly relevant for intrinsically disordered proteins (IDPs), which can self-coacervate due to their unique charge patterns and low-complexity sequences cite:uversky2014idp.
+Simple coacervation involves a single polyelectrolyte species that undergoes phase separation induced by salt, solvent, or temperature changes. This process is particularly relevant for intrinsically disordered proteins (IDPs), which can self-coacervate due to their unique charge patterns and low-complexity sequences [@uversky2015intrinsically].
 
 Temperature and pH are critical parameters:
 
@@ -69,7 +69,7 @@ Temperature and pH are critical parameters:
 The cloud point (temperature at which the solution becomes turbid due to coacervate formation) is a key characteristic of thermoresponsive coacervate systems.
 
 ## Coacervates for Metal Ion Separations
-The dense, water-rich environment of coacervates provides a unique medium for metal ion partitioning. Unlike organic solvents used in conventional liquid-liquid extraction, coacervates maintain aqueous compatibility while offering distinct chemical environments in the polymer-rich and polymer-dilute phases cite:kim2021pec.
+The dense, water-rich environment of coacervates provides a unique medium for metal ion partitioning. Unlike organic solvents used in conventional liquid-liquid extraction, coacervates maintain aqueous compatibility while offering distinct chemical environments in the polymer-rich and polymer-dilute phases [@kim2022facile].
 
 ### Mechanism of Ion Uptake
 Metal ions partition into coacervates through multiple mechanisms:
@@ -79,7 +79,7 @@ Metal ions partition into coacervates through multiple mechanisms:
 3.  **Ion exchange**: Displacement of polymer-bound counterions (Na+, K+) by metal ions with higher affinity
 4.  **Hydrophobic partitioning**: Neutral metal complexes preferentially partition into the less polar coacervate interior
 
-Polyelectrolyte complex resins fabricated from PDADMAC-PSS coacervates show outstanding performance for heavy metal adsorption, with significant uptakes of Cu2+, Pb2+, and Cd2+ and easy phase separation cite:kim2021pec. PEC capsules have demonstrated selective Au(III) recovery from multimetal mixtures containing Pt, Pd, Cu, Co, and Zn cite:wang2023pec.
+Polyelectrolyte complex resins fabricated from PDADMAC-PSS coacervates show outstanding performance for heavy metal adsorption, with significant uptakes of Cu2+, Pb2+, and Cd2+ and easy phase separation [@kim2022facile]. PEC capsules have demonstrated selective Au(III) recovery from multimetal mixtures containing Pt, Pd, Cu, Co, and Zn [@wang2023polyelectrolyte].
 
 ### Selectivity and Separation Factors
 Selectivity in coacervate-based separations arises from:
@@ -92,22 +92,22 @@ For rare earth elements, the challenge is that all lanthanides exhibit similar c
 
 Separation factors (SF) quantify selectivity: $$SF = \frac{[M_1]_{coacervate}/[M_1]_{supernatant}}{[M_2]_{coacervate}/[M_2]_{supernatant}}$$
 
-For adjacent lanthanides, conventional solvent extraction achieves SF = 1.5-3.0, while protein-based systems can achieve SF \> 100 cite:cotruvo2023lanmodulin.
+For adjacent lanthanides, conventional solvent extraction achieves SF = 1.5-3.0, while protein-based systems can achieve SF \> 100 [@cotruvo2023enhanced].
 
 ## Biomimetic and Natural Coacervate Systems
 Nature provides inspiration for REE-selective materials through the discovery of lanthanide-dependent bacteria and their associated proteins. Biological phase separation in the form of membraneless organelles also offers insights into coacervate function and design.
 
 ### Intrinsically Disordered Proteins (IDPs)
-IDPs are proteins that lack a fixed three-dimensional structure but remain functional. An estimated 30-40% of residues in the eukaryotic proteome are located in disordered regions cite:uversky2014idp. IDPs undergo liquid-liquid phase separation (LLPS) to form membrane-less organelles (MLOs) that play critical roles in cellular organization cite:brangwynne2015phase.
+IDPs are proteins that lack a fixed three-dimensional structure but remain functional. An estimated 30-40% of residues in the eukaryotic proteome are located in disordered regions [@uversky2015intrinsically]. IDPs undergo liquid-liquid phase separation (LLPS) to form membrane-less organelles (MLOs) that play critical roles in cellular organization [@brangwynne2015polymer].
 
 Key features of IDP phase separation:
 
 - Low-complexity sequences enriched in charged and polar amino acids
 - Multivalent interactions through repetitive motifs
-- Charge patterning---clustering of like charges into "patches" amplifies phase separation cite:wang2021peptide
-- Responsiveness to ionic strength, pH, and temperature cite:lin2020idp
+- Charge patterning---clustering of like charges into "patches" amplifies phase separation [@wang2025role]
+- Responsiveness to ionic strength, pH, and temperature [@lin2019intrinsically]
 
-Complete phase diagrams for IDP coacervation reveal that block-charged sequences have larger coacervation windows than randomly patterned sequences cite:pal2020idp. This insight guides the design of synthetic polymers with optimized phase behavior.
+Complete phase diagrams for IDP coacervation reveal that block-charged sequences have larger coacervation windows than randomly patterned sequences [@pal2019complete]. This insight guides the design of synthetic polymers with optimized phase behavior.
 
 ### Protein-Polyelectrolyte Coacervates
 Protein-polymer coacervates combine the structural selectivity of proteins with the processability of synthetic polymers. Key systems include:
@@ -123,34 +123,34 @@ For REE applications, protein-based coacervates offer:
 - Biocompatibility and biodegradability
 
 ### Peptide-Based Coacervates
-Short peptides (10-30 amino acids) can form coacervates and offer advantages of defined sequence, scalable synthesis, and tunable properties cite:li2019peptide.
+Short peptides (10-30 amino acids) can form coacervates and offer advantages of defined sequence, scalable synthesis, and tunable properties [@li2019coassembly].
 
 #### Lanthanide Binding Tags (LBTs)
 
-Lanthanide binding tags are amphiphilic peptide sequences based on the EF-hand metal binding loops of calcium-binding proteins cite:li2024lanthanide,schmitz2022lanm. The EF-hand motif consists of two alpha helices linked by a 12-residue loop that coordinates metal ions through carboxylate-rich sidechains.
+Lanthanide binding tags are amphiphilic peptide sequences based on the EF-hand metal binding loops of calcium-binding proteins [@li2024lanthanide; @schmitz2022lanmodulin]. The EF-hand motif consists of two alpha helices linked by a 12-residue loop that coordinates metal ions through carboxylate-rich sidechains.
 
 Key characteristics:
 
 - Pentagonal bipyramidal coordination geometry
 - Positions 1, 3, 5, 7, 9, and 12 provide coordinating residues (denoted X, Y, Z, -Y, -X, -Z)
-- Picomolar affinity for Ln3+ with 10^8^-fold selectivity over Ca2+ cite:cotruvo2023lanmodulin
+- Picomolar affinity for Ln3+ with 10^8^-fold selectivity over Ca2+ [@cotruvo2023enhanced]
 - Disorder-to-order conformational change upon lanthanide binding
 
-Isolated EF-hand loop peptides dimerize when saturated with lanthanide ions, reproducing the structure of native protein domains cite:shaw2000ef,nitz2000lbt. This metal-induced self-assembly could be exploited for coacervate formation and REE separation.
+Isolated EF-hand loop peptides dimerize when saturated with lanthanide ions, reproducing the structure of native protein domains [@shaw1997isolated; @ma2000lanthanide]. This metal-induced self-assembly could be exploited for coacervate formation and REE separation.
 
 #### Lanmodulin (LanM)
 
-Lanmodulin is a natural lanthanide-binding protein discovered in methylotrophic bacteria that use lanthanides in methanol dehydrogenase enzymes cite:cotruvo2023lanmodulin,deblonde2022lanmodulin. LanM possesses four EF-hand motifs with remarkable lanthanide selectivity:
+Lanmodulin is a natural lanthanide-binding protein discovered in methylotrophic bacteria that use lanthanides in methanol dehydrogenase enzymes [@cotruvo2023enhanced; @deblonde2021natural]. LanM possesses four EF-hand motifs with remarkable lanthanide selectivity:
 
 - Picomolar affinity for Ln3+ (Kd \~ 10^-12^ M)
 - 10^8^-fold selectivity over Ca2+
 - Large conformational change upon metal binding
 
-A variant from *Hansschlegelia quercus* (Hans-LanM) exhibits metal-sensitive dimerization, with the La3+-induced dimer being \>100-fold tighter than the Dy3+-induced dimer cite:cotruvo2023lanmodulin. X-ray crystal structures reveal how picometer-scale radius differences between La3+ and Dy3+ are propagated to quaternary structure through carboxylate shifts in second-sphere hydrogen bonding networks.
+A variant from *Hansschlegelia quercus* (Hans-LanM) exhibits metal-sensitive dimerization, with the La3+-induced dimer being \>100-fold tighter than the Dy3+-induced dimer [@cotruvo2023enhanced]. X-ray crystal structures reveal how picometer-scale radius differences between La3+ and Dy3+ are propagated to quaternary structure through carboxylate shifts in second-sphere hydrogen bonding networks.
 
-Structure-guided mutagenesis at the dimer interface enables single-stage, column-based separation of Nd3+/Dy3+ mixtures to \>98% individual element purities cite:park2024lanmodulin. This represents a breakthrough in achieving industrial-scale separation factors under mild, aqueous conditions.
+Structure-guided mutagenesis at the dimer interface enables single-stage, column-based separation of Nd3+/Dy3+ mixtures to \>98% individual element purities [@park2024modulating]. This represents a breakthrough in achieving industrial-scale separation factors under mild, aqueous conditions.
 
-Recent computational studies provide structural insights into REE selectivity in lanmodulin variants cite:yao2025lanm, enabling rational design of engineered proteins for specific separation challenges cite:chen2025lanmodulin.
+Recent computational studies provide structural insights into REE selectivity in lanmodulin variants [@yao2025computationally] enabling rational design of engineered proteins for specific separation challenges [@chen2025lanmodulin].
 
 ## Stimuli-Responsive Coacervates
 Stimuli-responsive coacervates undergo phase transitions in response to external triggers, enabling controlled capture and release of metal ions. This "smart" behavior is essential for practical separation processes requiring both extraction and stripping steps.
@@ -158,25 +158,25 @@ Stimuli-responsive coacervates undergo phase transitions in response to external
 ### Temperature-Responsive Systems
 #### LCST and UCST Polymers
 
-Poly(N-isopropylacrylamide) (PNIPAM) is the prototypical thermoresponsive polymer, exhibiting a lower critical solution temperature (LCST) around 32°C cite:das2024pnipam. Below the LCST, PNIPAM is water-soluble and hydrated; above the LCST, it undergoes a reversible transition to an insoluble, dehydrated state.
+Poly(N-isopropylacrylamide) (PNIPAM) is the prototypical thermoresponsive polymer, exhibiting a lower critical solution temperature (LCST) around 32°C [@das2024poly]. Below the LCST, PNIPAM is water-soluble and hydrated; above the LCST, it undergoes a reversible transition to an insoluble, dehydrated state.
 
 The LCST can be tuned by:
 
 - Copolymerization with hydrophilic monomers (increases LCST)
 - Copolymerization with hydrophobic monomers (decreases LCST)
 - Addition of salts following the Hofmeister series
-- Metal ion binding cite:zhong2020pnipam
+- Metal ion binding [@zhong2021thermoresponsive]
 
-For metal extraction, PNIPAM copolymers with metal-binding groups (acrylic acid, chelating monomers) capture metals at low temperature and release them upon heating above the LCST. This enables thermal cycling for extraction and back-extraction cite:kumar2023stimuli.
+For metal extraction, PNIPAM copolymers with metal-binding groups (acrylic acid, chelating monomers) capture metals at low temperature and release them upon heating above the LCST. This enables thermal cycling for extraction and back-extraction [@kumar2023comprehensive].
 
 #### Thermoseparating Coacervates
 
-Cloud point extraction (CPE) uses temperature-induced phase separation of non-ionic surfactants for metal preconcentration cite:castiho2003cpe. At temperatures above the cloud point, micellar solutions separate into surfactant-rich and surfactant-dilute phases. Metal complexes with hydrophobic ligands preferentially partition into the surfactant-rich phase.
+Cloud point extraction (CPE) uses temperature-induced phase separation of non-ionic surfactants for metal preconcentration [@favrerguillon2004cloud]. At temperatures above the cloud point, micellar solutions separate into surfactant-rich and surfactant-dilute phases. Metal complexes with hydrophobic ligands preferentially partition into the surfactant-rich phase.
 
-For lanthanide separation, CPE with Triton X-114 and 8-hydroxyquinoline achieves Gd3+/La3+ selectivity \> 30 and decontamination factors of 50 cite:castiho2003cpe. Water-soluble calixarenes as chelating agents with Triton X-100 enable CPE of La3+, Gd3+, and Yb3+ with tunable selectivity cite:depierro2008cpe.
+For lanthanide separation, CPE with Triton X-114 and 8-hydroxyquinoline achieves Gd3+/La3+ selectivity \> 30 and decontamination factors of 50 [@favrerguillon2004cloud]. Water-soluble calixarenes as chelating agents with Triton X-100 enable CPE of La3+, Gd3+, and Yb3+ with tunable selectivity [@depierro2008cloud].
 
 ### pH-Responsive Coacervates
-pH-responsive coacervates exploit the charge-switching behavior of weak polyelectrolytes above and below their pKa values cite:love2020coacervate.
+pH-responsive coacervates exploit the charge-switching behavior of weak polyelectrolytes above and below their pKa values [@love2020reversible].
 
 Mechanisms:
 
@@ -184,7 +184,7 @@ Mechanisms:
 - Above pKa: ionization increases charge density and promotes coacervation with polycations
 - The process is completely reversible, enabling pH-triggered assembly and disassembly
 
-Complex coacervates formed from peptides and polyoxometalates undergo pH-induced phase transitions from fluid coacervate to gel state cite:li2019peptide. Metal ions can trigger similar transitions, providing a readout for metal binding and a mechanism for metal-responsive materials.
+Complex coacervates formed from peptides and polyoxometalates undergo pH-induced phase transitions from fluid coacervate to gel state [@li2019coassembly]. Metal ions can trigger similar transitions, providing a readout for metal binding and a mechanism for metal-responsive materials.
 
 For REE separation, pH cycling can be used for:
 
@@ -204,15 +204,15 @@ Redox-responsive coacervates respond to changes in oxidation state, either throu
 - Polymer backbone redox changes (ferrocene, disulfide bonds)
 - Metal ion oxidation state changes (Ce3+/Ce4+, Fe2+/Fe3+)
 
-Recent work quantified redox thermodynamics shifts within coacervates using temperature-dependent electrochemistry, extracting reaction entropy, enthalpy, and Gibbs energy for redox processes in the condensed phase cite:wang2024redox.
+Recent work quantified redox thermodynamics shifts within coacervates using temperature-dependent electrochemistry, extracting reaction entropy, enthalpy, and Gibbs energy for redox processes in the condensed phase [@wang2025quantification].
 
-For cerium separation specifically, the Ce3+/Ce4+ redox couple enables selective oxidation and precipitation, which could be integrated with coacervate extraction for enhanced Ce selectivity cite:pramanik2024emerging.
+For cerium separation specifically, the Ce3+/Ce4+ redox couple enables selective oxidation and precipitation, which could be integrated with coacervate extraction for enhanced Ce selectivity [@pramanik2024emerging].
 
 ## Coacervates for Rare Earth Element Separations
 The application of coacervate-based systems specifically to REE separations is an emerging field, with most work focusing on aqueous biphasic systems, cloud point extraction, and protein-based approaches rather than classical polyelectrolyte coacervates.
 
 ### Polyelectrolyte Systems for REE
-While PEC coacervates have been extensively studied for heavy metal removal cite:kim2021pec,wang2023pec, their application to REE separation is limited. The similar chemistry of lanthanides means that non-specific electrostatic binding provides poor selectivity.
+While PEC coacervates have been extensively studied for heavy metal removal [@kim2022facile; @wang2023polyelectrolyte] their application to REE separation is limited. The similar chemistry of lanthanides means that non-specific electrostatic binding provides poor selectivity.
 
 Design strategies for improved selectivity include:
 
@@ -220,10 +220,9 @@ Design strategies for improved selectivity include:
 - Charge density matching between polymer and target metal
 - Use of water-soluble ligands (DTPA, EDTA) as holdback reagents
 
-Stimuli-responsive polymers that bind lanthanides selectively have been developed at UNC, featuring hydrophobic components that confer protein-like structure and improve selectivity over common metals like calcium cite:unc2024smart.
 
 ### Aqueous Biphasic Systems (ABS)
-Aqueous biphasic systems form when two water-soluble polymers (PEG/dextran) or a polymer and kosmotropic salt (PEG/ammonium sulfate) are mixed above critical concentrations cite:neves2022abs,li2020abs. Unlike organic-aqueous extraction, both ABS phases are aqueous, reducing environmental and safety concerns.
+Aqueous biphasic systems form when two water-soluble polymers (PEG/dextran) or a polymer and kosmotropic salt (PEG/ammonium sulfate) are mixed above critical concentrations [@neves2022liquid; @kee2020development]. Unlike organic-aqueous extraction, both ABS phases are aqueous, reducing environmental and safety concerns.
 
 #### Polymer-Salt ABS
 
@@ -234,13 +233,13 @@ PEG-salt ABS have been applied to lanthanide separation with added extractants:
 
 #### Ionic Liquid-Based ABS
 
-Ionic liquid (IL) ABS offer additional tunability through IL cation and anion selection cite:kumar2021abs:
+Ionic liquid (IL) ABS offer additional tunability through IL cation and anion selection [@kumar2022separation]:
 
-The tributyltetradecylphosphonium chloride (\[P444,14\]Cl) ABS enables separation of Sm/Co, Nd/Fe, Eu/Zn, and La/Ni pairs. A one-pot leaching-extraction process using \[P44414\]Cl-HCl ABS selectively extracts Fe (\>99%) while leaving REEs in the aqueous phase (\<10% extracted), enabling efficient REE/Fe separation from NdFeB magnets cite:chen2021abs.
+The tributyltetradecylphosphonium chloride (\[P444,14\]Cl) ABS enables separation of Sm/Co, Nd/Fe, Eu/Zn, and La/Ni pairs. A one-pot leaching-extraction process using \[P44414\]Cl-HCl ABS selectively extracts Fe (\>99%) while leaving REEs in the aqueous phase (\<10% extracted), enabling efficient REE/Fe separation from NdFeB magnets [@liu2022one].
 
 #### Three-Liquid-Phase Systems (TLPS)
 
-TLPS consisting of salt-rich bottom aqueous phase, polymer-rich middle phase, and organic top phase provide gradients of hydrophobicity for enhanced selectivity cite:wang2021tlps.
+TLPS consisting of salt-rich bottom aqueous phase, polymer-rich middle phase, and organic top phase provide gradients of hydrophobicity for enhanced selectivity [@wang2021strategy].
 
 The Cyanex272/PEG 2000/(NH4)2SO4-H2O system enables stripping of heavy rare earths with separation factors adjustable by polymer concentration, salt concentration, pH, and DTPA addition.
 
@@ -249,7 +248,7 @@ Functionalization of coacervate-forming polymers with specific REE-binding ligan
 
 #### Phosphonate-Modified Systems
 
-Phosphonate ligands are the basis of industrial REE extractants (HDEHP, PC88A, Cyanex 272). Polymer-supported phosphonate extractants \[D201\]\[DEHP\] and \[D201\]\[C272\] show excellent scandium selectivity with maximum adsorption at pH 0.78 cite:cui2016sc.
+Phosphonate ligands are the basis of industrial REE extractants (HDEHP, PC88A, Cyanex 272). Polymer-supported phosphonate extractants \[D201\]\[DEHP\] and \[D201\]\[C272\] show excellent scandium selectivity with maximum adsorption at pH 0.78 [@cui2016high].
 
 #### Aminocarboxylate-Modified Systems
 
@@ -263,17 +262,17 @@ Diglycolamides (DGA) show size-dependent lanthanide binding correlated with the 
 #### Light REE: La/Ce and Ce/Pr Separations
 Cerium is unique among lanthanides in exhibiting stable ~~4 oxidation state, enabling oxidative separation. Ce4~~ can be selectively precipitated as CeO2 or extracted with different partition coefficients than Ce3+.
 
-The ionic radius differences (La3+ = 1.03 Å, Ce3+ = 1.01 Å, Pr3+ = 0.99 Å) are sufficient for protein-based separation but challenging for conventional extractants cite:pramanik2024emerging.
+The ionic radius differences (La3+ = 1.03 Å, Ce3+ = 1.01 Å, Pr3+ = 0.99 Å) are sufficient for protein-based separation but challenging for conventional extractants [@pramanik2024emerging].
 
 #### Nd/Pr Separation
-The Nd/Pr separation ("didymium" problem) is critical for permanent magnet recycling. These elements have nearly identical ionic radii (Nd3+ = 0.98 Å, Pr3+ = 0.99 Å) and similar coordination chemistry, making separation extremely difficult cite:zhang2025ndpr.
+The Nd/Pr separation ("didymium" problem) is critical for permanent magnet recycling. These elements have nearly identical ionic radii (Nd3+ = 0.98 Å, Pr3+ = 0.99 Å) and similar coordination chemistry, making separation extremely difficult [@zhang2024remarkably].
 
 Recent advances:
 
-- Ionic liquid extraction with β-diketones achieves unprecedented separation factor \>500 cite:zhang2025ndpr
-- PC88A-impregnated surfaces achieve SF = 171 with 92% Pr+Nd purity cite:gao2023ndpr
-- Kinetic separation strategies with specific ion effects achieve SF \> 8 cite:chen2023ndpr
-- Push-and-pull systems with \[A336\]\[NO3\]-DTPA enhance separation in column extractors cite:wang2019ndpr
+- Ionic liquid extraction with β-diketones achieves unprecedented separation factor \>500 [@zhang2024remarkably]
+- PC88A-impregnated surfaces achieve SF = 171 with 92% Pr+Nd purity [@gao2023separation]
+- Kinetic separation strategies with specific ion effects achieve SF \> 8 [@sui2023kinetic]
+- Push-and-pull systems with \[A336\]\[NO3\]-DTPA enhance separation in column extractors [@wang2019enhanced]
 
 Coacervate-based approaches remain to be developed but could benefit from:
 
@@ -284,42 +283,42 @@ Coacervate-based approaches remain to be developed but could benefit from:
 #### Heavy REE Separations (Dy, Ho, Er, Yb, Lu)
 Heavy REEs have smaller ionic radii and typically prefer lower coordination numbers than light REEs. The ionic radius differences between adjacent heavy REEs are very small (\< 0.02 Å), making separation particularly challenging.
 
-Three-liquid-phase systems with Cyanex272/PEG/ammonium sulfate show promise for heavy REE stripping with tunable selectivity cite:wang2021tlps.
+Three-liquid-phase systems with Cyanex272/PEG/ammonium sulfate show promise for heavy REE stripping with tunable selectivity [@wang2021strategy].
 
 Protein-based approaches:
 
-- Hans-LanM discriminates light from heavy REEs based on metal-sensitive dimerization cite:cotruvo2023lanmodulin
-- Engineered lanmodulin variants can achieve Nd/Dy separation to \>98% purity in single-stage columns cite:park2024lanmodulin
+- Hans-LanM discriminates light from heavy REEs based on metal-sensitive dimerization [@cotruvo2023enhanced]
+- Engineered lanmodulin variants can achieve Nd/Dy separation to \>98% purity in single-stage columns [@park2024modulating]
 
 #### Sc Separation
 Scandium is geochemically associated with REEs but has distinct chemistry: smaller ionic radius (0.75 Å), lower coordination number preference, and unique complexation behavior. This enables high separation factors from lanthanides.
 
 Effective scandium separation methods:
 
-- Polymer-supported phosphonate extractants with SF \> 50 vs other REEs cite:cui2016sc
-- Amic acid extractants (D2EHAF) in polymer inclusion membranes for complete Sc separation from transition metals cite:kim2019sc
-- Mesoporous silica with unmodified silanols for selective Sc extraction over Fe cite:ramasamy2017sc
-- TRPO-modified resins in sulfuric and hydrochloric acid media cite:hou2024sc
+- Polymer-supported phosphonate extractants with SF \> 50 vs other REEs [@cui2016high]
+- Amic acid extractants (D2EHAF) in polymer inclusion membranes for complete Sc separation from transition metals [@kim2019separation]
+- Mesoporous silica with unmodified silanols for selective Sc extraction over Fe [@ramasamy2017selective]
+- TRPO-modified resins in sulfuric and hydrochloric acid media [@hou2024adsorption]
 
-A critical review of Sc/Fe separation emphasizes the importance of functional ligands and complexing agents for solid-phase extraction cite:li2025sc.
+A critical review of Sc/Fe separation emphasizes the importance of functional ligands and complexing agents for solid-phase extraction [@gangadari2025critical].
 
 ## Computational and Modeling Approaches
 Computational methods provide fundamental understanding of coacervate thermodynamics, structure, and metal ion interactions, guiding the rational design of separation systems.
 
 ### Molecular Dynamics Simulations
-Molecular dynamics (MD) simulations capture atomistic details of coacervate structure and dynamics cite:zhang2022driving:
+Molecular dynamics (MD) simulations capture atomistic details of coacervate structure and dynamics [@zhang2022driving]:
 
 - Ion solvation and coordination environments
 - Polymer-polymer and polymer-ion interactions
 - Water structure in coacervate vs supernatant phases
 - Free energy profiles for ion transfer between phases
 
-A key finding from MD simulations is that the thermodynamic driving force for coacervation is entropy-dominated under typical aqueous conditions. The temperature dependence of the dielectric constant of water contributes substantially to the entropic term in electrostatic interactions cite:zhang2022driving.
+A key finding from MD simulations is that the thermodynamic driving force for coacervation is entropy-dominated under typical aqueous conditions. The temperature dependence of the dielectric constant of water contributes substantially to the entropic term in electrostatic interactions [@zhang2022driving].
 
 ### Thermodynamic Modeling
 #### Voorn-Overbeek Theory
 
-The classical Voorn-Overbeek (VO) theory combines Flory-Huggins mixing entropy with Debye-Hückel electrostatics cite:overbeek1957coacervation,priftis2012thermodynamic. While capturing the essential physics of coacervation, VO theory treats backbone charges as disconnected free ions and neglects chain connectivity correlations.
+The classical Voorn-Overbeek (VO) theory combines Flory-Huggins mixing entropy with Debye-Hückel electrostatics [@overbeek1957phase; @priftis2012early]. While capturing the essential physics of coacervation, VO theory treats backbone charges as disconnected free ions and neglects chain connectivity correlations.
 
 #### Random Phase Approximation (RPA)
 
@@ -327,19 +326,19 @@ RPA extends mean-field theory by including correlation corrections to the electr
 
 #### PC-SAFT and Molecular Equations of State
 
-Perturbed-chain statistical associating fluid theory (PC-SAFT) and related equations of state provide rigorous molecular thermodynamic models for polyelectrolyte solutions cite:shen2024thermodynamics. These approaches address strong charge correlations and the complex interplay of short-range and long-range interactions.
+Perturbed-chain statistical associating fluid theory (PC-SAFT) and related equations of state provide rigorous molecular thermodynamic models for polyelectrolyte solutions [@ascani2025molecular]. These approaches address strong charge correlations and the complex interplay of short-range and long-range interactions.
 
 ### Field-Theoretic Simulations
-Field-theoretic simulations (FTS) using complex Langevin sampling provide approximation-free phase diagrams for coacervate systems cite:lee2008fts,delaney2017fts.
+Field-theoretic simulations (FTS) using complex Langevin sampling provide approximation-free phase diagrams for coacervate systems [@lee2008complex; @delaney2017theory].
 
 Key advantages of FTS:
 
 - No mean-field approximations
 - Proper sampling of fluctuations in electrostatic and composition fields
 - Prediction of spinodal and binodal boundaries
-- Extension to multicomponent and multiphase systems cite:chen2023multiphase
+- Extension to multicomponent and multiphase systems [@chen2022multiphase]
 
-FTS has been applied to IDP coacervation, revealing how charge patterning affects phase boundaries cite:pal2020idp.
+FTS has been applied to IDP coacervation, revealing how charge patterning affects phase boundaries [@pal2019complete].
 
 ### Machine Learning Approaches
 Machine learning offers opportunities for:
@@ -349,7 +348,7 @@ Machine learning offers opportunities for:
 - Inverse design of polymers with target metal selectivity
 - Analysis of MD trajectories to identify binding motifs
 
-Bridging theoretical frameworks (field theory, ion pairing, explicit simulations) remains an active area providing unified understanding of polyelectrolyte complexation cite:qin2023modeling,li2024arxiv.
+Bridging theoretical frameworks (field theory, ion pairing, explicit simulations) remains an active area providing unified understanding of polyelectrolyte complexation [@qin2023bridging; @li2024thermodynamic].
 
 ## Process Considerations
 Translation of coacervate-based separations from laboratory to industrial scale requires addressing process engineering challenges.
@@ -433,7 +432,7 @@ Hybrid approaches combining coacervates with:
 
 ### Hybrid Coacervate-Membrane Systems
 
-Polymer inclusion membranes (PIMs) containing coacervate-forming polymers or selective extractants offer continuous separation with reduced solvent inventory cite:kim2019sc.
+Polymer inclusion membranes (PIMs) containing coacervate-forming polymers or selective extractants offer continuous separation with reduced solvent inventory [@kim2019separation].
 
 ### Industrial Translation Barriers
 
@@ -450,13 +449,13 @@ Coacervate-based separation methods represent a promising, environmentally-frien
 
 Key conclusions:
 
-1.  **Biomimetic approaches show highest selectivity**: Lanmodulin and engineered variants achieve separation factors \>100 for adjacent lanthanides, approaching the theoretical limits of protein-based recognition cite:cotruvo2023lanmodulin,park2024lanmodulin.
+1.  **Biomimetic approaches show highest selectivity**: Lanmodulin and engineered variants achieve separation factors \>100 for adjacent lanthanides, approaching the theoretical limits of protein-based recognition [@cotruvo2023enhanced; @park2024modulating].
 
-2.  **Aqueous biphasic systems are most mature**: IL-based ABS and polymer-salt systems have demonstrated practical REE separations with good efficiency cite:neves2022abs,kumar2021abs,chen2021abs.
+2.  **Aqueous biphasic systems are most mature**: IL-based ABS and polymer-salt systems have demonstrated practical REE separations with good efficiency [@neves2022liquid; @kumar2022separation; @liu2022one].
 
-3.  **Stimuli-responsive coacervates enable process integration**: Temperature, pH, and redox triggers allow controlled capture and release essential for continuous processes cite:love2020coacervate,kumar2023stimuli.
+3.  **Stimuli-responsive coacervates enable process integration**: Temperature, pH, and redox triggers allow controlled capture and release essential for continuous processes [@love2020reversible; @kumar2023comprehensive].
 
-4.  **Computational methods guide rational design**: MD simulations, field-theoretic methods, and machine learning accelerate the discovery of improved coacervate systems cite:zhang2022driving,lee2008fts.
+4.  **Computational methods guide rational design**: MD simulations, field-theoretic methods, and machine learning accelerate the discovery of improved coacervate systems [@zhang2022driving; @lee2008complex].
 
 5.  **Significant challenges remain**: Selectivity for adjacent lanthanides (especially Nd/Pr), polymer cost and recyclability, and scale-up require further development.
 

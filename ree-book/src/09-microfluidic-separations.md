@@ -245,7 +245,7 @@ For intermediate scale, mini-channel extractors (4-6 mm diameter) bridge the gap
 
 ### Synergic Extraction with XRF Detection
 
-El Maangar et al. (2020) demonstrated a microfluidic technique coupled with X-ray fluorescence for investigating synergic liquid-liquid extraction of rare earth elements [cite:@elmaangar2020synergic]:
+El Maangar et al. (2020) demonstrated a microfluidic technique coupled with X-ray fluorescence for investigating synergic liquid-liquid extraction of rare earth elements [@elmaangar2020microfluidic]:
 
 - Studied combinations of solvating and ionic extractants
 - Quantified Gibbs free energies of transfer for five REEs
@@ -254,7 +254,7 @@ El Maangar et al. (2020) demonstrated a microfluidic technique coupled with X-ra
 
 ### Cyanex 572 for REE Extraction
 
-Kolar et al. (2016) investigated microfluidic solvent extraction of REEs from a leached mixed rare earth oxide mineral concentrate using Cyanex 572 [cite:@kolar2016cyanex]:
+Kolar et al. (2016) investigated microfluidic solvent extraction of REEs from a leached mixed rare earth oxide mineral concentrate using Cyanex 572 [@kolar2016microfluidic]:
 
 - Extraction rates typically double that observed in conventional bulk extractions
 - Lu and Yb showed three-times faster extraction
@@ -262,7 +262,7 @@ Kolar et al. (2016) investigated microfluidic solvent extraction of REEs from a 
 
 ### Lanthanide Extraction Kinetics
 
-Nichols et al. (2011) developed a plug-based microfluidic system to determine absolute interfacial mass transfer rate constants for all lanthanides under TALSPEAK process conditions [cite:@nichols2011lanthanide]:
+Nichols et al. (2011) developed a plug-based microfluidic system to determine absolute interfacial mass transfer rate constants for all lanthanides under TALSPEAK process conditions [@nichols2011mechanistic]:
 
 - Conditions of rapid mixing and controlled interfacial area
 - Quantified extraction kinetics for nuclear reprocessing applications
@@ -270,7 +270,7 @@ Nichols et al. (2011) developed a plug-based microfluidic system to determine ab
 
 ### Spectroscopic Monitoring
 
-Nelson et al. (2018) demonstrated micro-Raman technology to interrogate two-phase extraction on microfluidic devices [cite:@nelson2018microraman]:
+Nelson et al. (2018) demonstrated micro-Raman technology to interrogate two-phase extraction on microfluidic devices [@nelson2018micro]:
 
 - Microfluidic devices provide ideal environments for studying solvent extraction
 - Plug flow enables examination of reaction kinetics and interfacial transfer
@@ -281,7 +281,7 @@ Nelson et al. (2018) demonstrated micro-Raman technology to interrogate two-phas
 
 ### Colorimetric Sensors for Heavy Metals
 
-Idros and Chu (2018) developed a triple-indicator-based multidimensional colorimetric sensing platform [cite:@idros2018triple]:
+Idros and Chu (2018) developed a triple-indicator-based multidimensional colorimetric sensing platform [@idros2018triple]:
 
 - Low-cost paper-based microfluidic analytical device (μPAD)
 - Detection of mercury, lead, chromium, nickel, copper, and iron ions
@@ -290,7 +290,7 @@ Idros and Chu (2018) developed a triple-indicator-based multidimensional colorim
 
 ### Fluorescent and Colorimetric Sensors
 
-Kim et al. (2012) provided a comprehensive Chemical Society Reviews article on fluorescent and colorimetric sensors for lead, cadmium, and mercury ions [cite:@kim2012fluorescent]:
+Kim et al. (2012) provided a comprehensive Chemical Society Reviews article on fluorescent and colorimetric sensors for lead, cadmium, and mercury ions [@kim2012fluorescent]:
 
 - Systematic coverage of sensor mechanisms
 - Design principles for selective detection
@@ -298,7 +298,7 @@ Kim et al. (2012) provided a comprehensive Chemical Society Reviews article on f
 
 ### Paper-Based Analytical Devices
 
-Chauhan and Toley (2021) developed barrier-free microfluidic paper analytical devices for multiplex colorimetric detection [cite:@chauhan2021barrierfree]:
+Chauhan and Toley (2021) developed barrier-free microfluidic paper analytical devices for multiplex colorimetric detection [@chauhan2021barrier]:
 
 - Stack of paper membranes with different wicking rates
 - No need for wax patterning or barriers
@@ -306,7 +306,7 @@ Chauhan and Toley (2021) developed barrier-free microfluidic paper analytical de
 
 ### Smartphone-Based Detection
 
-Lopez-Ruiz et al. (2014) demonstrated smartphone-based simultaneous pH and nitrite colorimetric determination [cite:@lopezruiz2014smartphone]:
+Lopez-Ruiz et al. (2014) demonstrated smartphone-based simultaneous pH and nitrite colorimetric determination [@lopezruiz2014smartphone]:
 
 - Seven sensing areas with immobilized reagents
 - Smartphone flash as controlled light source
@@ -317,7 +317,7 @@ Lopez-Ruiz et al. (2014) demonstrated smartphone-based simultaneous pH and nitri
 
 ### Deep Neural Networks for Droplet Analysis
 
-Hadikhani et al. (2019) presented a non-intrusive method for measuring fluidic properties by optically monitoring droplet flow [cite:@hadikhani2019learning]:
+Hadikhani et al. (2019) presented a non-intrusive method for measuring fluidic properties by optically monitoring droplet flow [@hadikhani2019learning]:
 
 - Neural networks extract information from droplet images
 - Published in Scientific Reports
@@ -325,7 +325,7 @@ Hadikhani et al. (2019) presented a non-intrusive method for measuring fluidic p
 
 ### Enhanced Image Analysis with Deep Learning
 
-Gelado et al. (2023) investigated deep learning methods for accurate droplet detection and measurement [cite:@gelado2023enhancing]:
+Gelado et al. (2023) investigated deep learning methods for accurate droplet detection and measurement [@gelado2023enhancing]:
 
 - Compared Segment Anything Model (SAM) with Circular Hough Transform
 - SAM provides superior detection accuracy
@@ -338,7 +338,7 @@ Standard PDMS devices face solvent compatibility challenges. Several solutions h
 
 ### Perfluoropolyether (PFPE) "Liquid Teflon"
 
-Rolland et al. (2004) reported the first fabrication of solvent-compatible microfluidic devices using photocurable PFPE materials [cite:@rolland2004solventresistant]:
+Rolland et al. (2004) reported the first fabrication of solvent-compatible microfluidic devices using photocurable PFPE materials [@rolland2004solvent]:
 
 - Highly fluorinated functionalized perfluoropolyethers
 - Remarkable chemical resistance to organic solvents
@@ -346,7 +346,7 @@ Rolland et al. (2004) reported the first fabrication of solvent-compatible micro
 
 ### Hybrid Coatings for PDMS
 
-Kim et al. (2009) developed solvent-resistant PDMS microfluidic devices with hybrid inorganic/organic polymer coatings [cite:@kim2009solventresistant]:
+Kim et al. (2009) developed solvent-resistant PDMS microfluidic devices with hybrid inorganic/organic polymer coatings [@kim2009solvent]:
 
 - HR4 coating provides chemical resistance
 - Simple coating procedure
@@ -440,22 +440,22 @@ Based on this literature review, several promising research directions emerge:
 
 **Precedent**:
 
-- Micro-Raman monitoring demonstrated for two-phase extraction [cite:@nelson2018microraman]
-- Smartphone colorimetric detection established [cite:@lopezruiz2014smartphone]
-- REE extraction kinetics characterized via microfluidics [cite:@nichols2011lanthanide]
+- Micro-Raman monitoring demonstrated for two-phase extraction [@nelson2018micro]
+- Smartphone colorimetric detection established [@lopezruiz2014smartphone]
+- REE extraction kinetics characterized via microfluidics [@nichols2011mechanistic]
 
 #### Machine Learning-Optimized Extraction Screening
 **Concept**: Combine high-throughput droplet generation with computer vision analysis for automated extraction optimization.
 
 **Precedent**:
 
-- Deep learning for droplet detection demonstrated [cite:@hadikhani2019learning; @gelado2023enhancing]
-- Droplet-based extraction fundamentals established [cite:@mary2008microfluidic]
+- Deep learning for droplet detection demonstrated [@hadikhani2019learning; @gelado2023enhancing]
+- Droplet-based extraction fundamentals established [@mary2008microfluidic]
 
 #### Smartphone-Based Field Detection
 **Concept**: Portable microfluidic extraction kit with smartphone colorimetric readout for field applications.
 
 **Precedent**:
 
-- Smartphone platforms demonstrated for multi-analyte detection [cite:@lopezruiz2014smartphone]
-- Paper-based colorimetric devices for heavy metals [cite:@idros2018triple; @chauhan2021barrierfree]
+- Smartphone platforms demonstrated for multi-analyte detection [@lopezruiz2014smartphone]
+- Paper-based colorimetric devices for heavy metals [@idros2018triple; @chauhan2021barrier]

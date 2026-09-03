@@ -31,7 +31,7 @@ in the organic phase — better than 99.99% of it).
 
 ## Aqueous Phase Composition and Additives
 ### Role of pH Control
-pH is the **primary control variable** in REE solvent extraction cite:xie2014critical,li2020hydration. The extraction mechanism for acidic extractants (D2EHPA, PC88A) involves exchange of H⁺ for REE³⁺:
+pH is the **primary control variable** in REE solvent extraction [@xie2014critical; @li2020hydration]. The extraction mechanism for acidic extractants (D2EHPA, PC88A) involves exchange of H⁺ for REE³⁺:
 
     REE³⁺(aq) + 3 HL(org) ⇌ REEL₃(org) + 3 H⁺(aq)
 
@@ -40,7 +40,7 @@ Where:
 - HL = Extractant in organic phase (acidic form)
 - REEL₃ = REE-extractant complex in organic phase
 
-**pH ranges by extractant type** cite:xie2014critical,zhang2016rare:
+**pH ranges by extractant type** [@xie2014critical; @zhang2016rare]:
 
 | Extractant    | Optimal Extraction pH | Stripping pH |
 |---------------|-----------------------|--------------|
@@ -52,16 +52,16 @@ Where:
 
 ### Aqueous Phase Additives and Their Functions
 #### Salting-Out Agents
-**Purpose**: Increase extraction efficiency by reducing water activity and suppressing extractant hydration cite:sun2018nature.
+**Purpose**: Increase extraction efficiency by reducing water activity and suppressing extractant hydration [@rydberg2004solvent].
 
 **Common salting agents**:
 
-1.  **NaCl** (0.5-3 M) cite:agarwal2020comparative:
+1.  **NaCl** (0.5-3 M) [@agarwal2020comparative]:
     - Inexpensive and widely available
     - Moderate salting-out effect
     - Compatible with chloride media
     - Increases ionic strength: I = 0.5 Σ c~i~ z~i²~
-2.  **Ca(NO₃)₂** (1-3 M) cite:matveev2018solvent:
+2.  **Ca(NO₃)₂** (1-3 M) [@matveev2018solvent]:
     - Strong salting-out effect (divalent cation)
     - Enhances TBP extraction via nitrate complex formation
     - Creates REE(NO₃)₃·nTBP extractable species
@@ -71,7 +71,7 @@ Where:
     - Can interfere if Al³⁺ is also extracted
     - Useful for selective extractions
 
-**Mechanism** cite:sun2018nature:
+**Mechanism** [@rydberg2004solvent]:
 
 - Salts compete for water of hydration
 - Reduces free water available to solvate extractant
@@ -79,7 +79,7 @@ Where:
 - Can provide 1-2 orders of magnitude improvement in distribution ratio
 
 #### Buffers and pH Control Agents
-**Buffering systems** cite:xie2014critical:
+**Buffering systems** [@xie2014critical]:
 
 1.  **Acetate buffer** (pH 3.5-5.5):
     - CH₃COOH/CH₃COONa
@@ -87,7 +87,7 @@ Where:
     - Prevents pH drift during extraction
 2.  **Citrate/citric acid** (pH 2-6):
     - Can also act as complexing agent
-    - cite:dewulf2022effect shows solvent effects
+    - [@dewulf2022effect] shows solvent effects
 3.  **Direct acid addition**:
     - HCl or HNO₃ for low pH (\<2)
     - Continuous monitoring and adjustment needed
@@ -102,9 +102,9 @@ Where:
   - Target pH \< 1.0 for complete stripping
 
 #### Complexing Agents
-**Purpose**: Modify selectivity between REEs or suppress co-extraction of impurities cite:thiele2020tuning.
+**Purpose**: Modify selectivity between REEs or suppress co-extraction of impurities [@thiele2020tuning].
 
-1.  **Lactic acid** cite:dewulf2022effect:
+1.  **Lactic acid** [@dewulf2022effect]:
     - Forms aqueous complexes with REEs
     - Can enhance selectivity for certain REE pairs
     - 0.01-0.1 M typical concentration
@@ -117,7 +117,7 @@ Where:
     - Less common in industrial practice
 
 ### Ionic Strength Effects
-Ionic strength (I) affects activity coefficients cite:rydberg2004solvent:
+Ionic strength (I) affects activity coefficients [@rydberg2004solvent]:
 
     I = 0.5 Σ cᵢ zᵢ²
 
@@ -141,7 +141,7 @@ The organic phase consists of:
 2.  **Extractant** (5-30% by volume)
 3.  **Phase modifier** (0-10%, optional)
 
-**Key diluent requirements** cite:rydberg2004solvent,xie2014critical:
+**Key diluent requirements** [@rydberg2004solvent; @xie2014critical]:
 
 | Property                    | Requirement                    | Kerosene Value |
 |-----------------------------|--------------------------------|----------------|
@@ -157,9 +157,9 @@ The organic phase consists of:
 
 ### Why Kerosene is Preferred
 #### Chemical Properties
-**Composition**: Kerosene is a mixture of C₉-C₁₆ alkanes (linear and branched) with some aromatic content (10-20%) cite:rydberg2004solvent.
+**Composition**: Kerosene is a mixture of C₉-C₁₆ alkanes (linear and branched) with some aromatic content (10-20%) [@rydberg2004solvent].
 
-**Advantages for REE extraction** cite:xie2014critical,zhang2016rare:
+**Advantages for REE extraction** [@xie2014critical; @zhang2016rare]:
 
 1.  **Appropriate polarity**:
     - Dielectric constant ε ≈ 2.0
@@ -168,7 +168,7 @@ The organic phase consists of:
     - Low water solubility prevents phase mixing
 2.  **Solvation properties**:
     - Provides favorable solvation for REE-extractant complexes
-    - cite:dewulf2022effect showed polar solvents can interfere
+    - [@dewulf2022effect] showed polar solvents can interfere
     - Kerosene's low polarity minimizes interference
 3.  **Density difference**:
     - ρ(aqueous) ≈ 1.1-1.2 g/mL (with salts)
@@ -198,7 +198,7 @@ The organic phase consists of:
     - Phase separation is clean
 
 #### Alternative Diluents
-Other diluents used in specialized applications cite:dewulf2022effect:
+Other diluents used in specialized applications [@dewulf2022effect]:
 
 1.  **n-Dodecane** (C₁₂H₂₆):
     - Pure compound (better for research)
@@ -213,14 +213,14 @@ Other diluents used in specialized applications cite:dewulf2022effect:
     - Negligible vapor pressure
     - Tunable properties
     - Very expensive (\$100-1000/kg)
-    - Research stage for REE separations cite:sun2018nature
+    - Research stage for REE separations
 4.  **Supercritical CO₂**:
     - Green solvent
     - Requires high pressure equipment
     - Not yet commercial for REE
 
 ### Phase Modifiers
-**Purpose**: Prevent third-phase formation and improve phase separation cite:rydberg2004solvent.
+**Purpose**: Prevent third-phase formation and improve phase separation [@rydberg2004solvent].
 
 **Common modifiers**:
 
@@ -241,7 +241,7 @@ Other diluents used in specialized applications cite:dewulf2022effect:
 
 ## pH Swing Mechanism for Phase Transfer
 ### Extraction Step: Aqueous → Organic
-The fundamental extraction reaction for acidic extractants cite:xie2014critical,tanaka2021revaluating:
+The fundamental extraction reaction for acidic extractants [@xie2014critical; @tanaka2021revaluating]:
 
     REE³⁺(aq) + 3 (HL)₂(org) ⇌ REE(HL₂)₃(org) + 3 H⁺(aq)
 
@@ -254,14 +254,14 @@ Where:
 
     Kₑₓ = ([REE(HL₂)₃]ₒᵣ𝓰 × [H⁺]³ₐ𝓆) / ([REE³⁺]ₐ𝓆 × [(HL)₂]³ₒᵣ𝓰)
 
-**Distribution ratio** cite:iloeje2019gibbs:
+**Distribution ratio** [@iloeje2019gibbs]:
 
     D = [REE]ₒᵣ𝓰 / [REE]ₐ𝓆
 
     log D = log Kₑₓ + 3 log[(HL)₂]ₒᵣ𝓰 - 3 pH
 
 ### pH Dependence (The "pH Swing")
-**Key observation**: log D has **strong pH dependence** with slope ≈ -3 cite:tanaka2021revaluating,li2020hydration.
+**Key observation**: log D has **strong pH dependence** with slope ≈ -3 [@tanaka2021revaluating; @li2020hydration].
 
     ∂(log D) / ∂pH ≈ -3
 
@@ -270,7 +270,7 @@ This means:
 - Increasing pH by 1 unit → D increases by \~1000×
 - Decreasing pH by 1 unit → D decreases by \~1000×
 
-**Example with D2EHPA** cite:agarwal2020comparative:
+**Example with D2EHPA** [@agarwal2020comparative]:
 
 | pH  | log D (La) | D (La) | % Extraction |
 |-----|------------|--------|--------------|
@@ -281,7 +281,7 @@ This means:
 
 ### Extraction Cycle
 #### Extraction Stage (Forward Transfer)
-**Conditions** cite:xie2014critical:
+**Conditions** [@xie2014critical]:
 
 - pH: 2.5-4.0 (for D2EHPA/PC88A)
 - Phase ratio: O/A = 1/1 to 1/5
@@ -323,7 +323,7 @@ For 1.0 M REE feed, 90% extraction:
 - REEs remain in organic (high K~ex~ at this pH)
 
 #### Stripping Stage (Reverse Transfer)
-**Conditions** cite:xie2014critical,zhang2016rare:
+**Conditions** [@xie2014critical; @zhang2016rare]:
 
 - pH: 0.0-1.5 (strong acid)
 - Stripping agent: 2-6 M HCl or HNO₃
@@ -343,7 +343,7 @@ For 1.0 M REE feed, 90% extraction:
 
     REE(HL₂)₃(org) + 3 H⁺(aq) → REE³⁺(aq) + 3 (HL)₂(org)
 
-**Stripping efficiency** cite:agarwal2020comparative:
+**Stripping efficiency** [@agarwal2020comparative]:
 
 - pH 0.5: \~95% stripping
 - pH 1.0: \~85% stripping
@@ -351,7 +351,7 @@ For 1.0 M REE feed, 90% extraction:
 - Complete stripping usually requires 2-3 stages
 
 ### Where Do Extractants Go?
-**Critical insight**: Extractants remain predominantly in the organic phase throughout the cycle cite:rydberg2004solvent,xie2014critical.
+**Critical insight**: Extractants remain predominantly in the organic phase throughout the cycle [@rydberg2004solvent; @xie2014critical].
 
 #### Extractant Solubility
 **D2EHPA** (di-2-ethylhexyl phosphoric acid):
@@ -383,7 +383,7 @@ For 1.0 M REE feed, 90% extraction:
 - Metal complex dissociates: REE(HL₂)₃ → REE³⁺(aq) + (HL)₂(org)
 - Extractant regenerated in free form
 
-**Loading capacity** cite:xie2014critical:
+**Loading capacity** [@xie2014critical]:
 
 - Maximum loading: \~50-70% of extractant molecules coordinated
 - Typical operation: 30-40% loading
@@ -405,7 +405,7 @@ For 1.0 M REE feed, 90% extraction:
 4.  Only dissolved REE³⁺ moves between phases
 5.  H⁺ exchanges across interface
 
-**Mass transfer mechanism** cite:rydberg2004solvent:
+**Mass transfer mechanism** [@rydberg2004solvent]:
 
 - Diffusion of REE³⁺ to interface (aqueous side)
 - Interfacial complexation reaction (fast)
@@ -413,7 +413,7 @@ For 1.0 M REE feed, 90% extraction:
 - Rate-limiting step: usually aqueous diffusion
 
 ### Selectivity Between REEs
-**pH1/2 concept** cite:tanaka2021revaluating,xie2014critical:
+**pH1/2 concept** [@tanaka2021revaluating; @xie2014critical]:
 
 pH₁/₂ is defined as the pH where D = 1 (50% extraction).
 
@@ -425,7 +425,7 @@ At D = 1: pH₁/₂ = (log K~ex~ + 3 log\[(HL)₂\]) / 3
 
     Δ pH₁/₂(REE1-REE2) = pH₁/₂(REE1) - pH₁/₂(REE2)
 
-**Typical separation windows** cite:tanaka2021revaluating:
+**Typical separation windows** [@tanaka2021revaluating]:
 
 | REE Pair | Δ pH₁/₂ (D2EHPA) | Separation Factor |
 |----------|------------------|-------------------|
@@ -440,10 +440,10 @@ At D = 1: pH₁/₂ = (log K~ex~ + 3 log\[(HL)₂\]) / 3
 
 - Adjacent REEs have small Δ pH₁/₂ (0.1-0.3 pH units)
 - Requires many stages for high purity separations
-- cite:li2020hydration shows hydration effects counteract separability
+- [@li2020hydration] shows hydration effects counteract separability
 
 ### Temperature Effects
-**Extraction is typically exothermic** cite:khoshoei2025crown:
+**Extraction is typically exothermic** [@khoshoei2025crown]:
 
     ΔH_extraction ≈ -20 to -40 kJ/mol (for D2EHPA systems)
 
@@ -455,12 +455,12 @@ At D = 1: pH₁/₂ = (log K~ex~ + 3 log\[(HL)₂\]) / 3
 
 - Extraction: 20-30°C (ambient, favors exothermic forward reaction)
 - Stripping: 40-60°C (elevated T favors endothermic reverse reaction)
-- cite:khoshoei2025crown provides recent thermodynamic data
+- [@khoshoei2025crown] provides recent thermodynamic data
 
 ## Liquid-Liquid Contactor Design
 ### Types of Contactors
 #### Mixer-Settler
-**Most common industrial design** cite:rydberg2004solvent,zhang2016rare.
+**Most common industrial design** [@rydberg2004solvent; @zhang2016rare].
 
 **Mixer section**:
 
@@ -578,14 +578,14 @@ At D = 1: pH₁/₂ = (log K~ex~ + 3 log\[(HL)₂\]) / 3
 - Pore wetting issues
 - Not yet widely commercial for REE
 
-**Research status** cite:pramanik2024emerging:
+**Research status** [@pramanik2024emerging]:
 
 - Emerging technology for REE separations
 - Demonstrated in lab/pilot scale
-- cite:augustine2024advancing may incorporate in future HT systems
+- [@augustine2024advancing] may incorporate in future HT systems
 
 ### Countercurrent Cascade Design
-**Principle**: Multiple extraction stages in series maximize REE transfer cite:rydberg2004solvent.
+**Principle**: Multiple extraction stages in series maximize REE transfer [@rydberg2004solvent].
 
 #### McCabe-Thiele Diagram
 Graphical method for determining stage requirements:
@@ -629,7 +629,7 @@ Graphical method for determining stage requirements:
 - Each stage = 1 mixer-settler unit
 
 ### Phase Ratio and Material Balance
-**Phase ratio selection** cite:rydberg2004solvent:
+**Phase ratio selection** [@rydberg2004solvent]:
 
     (O/A)_extraction × D = (A/O)_stripping × (1/D_strip)
 
@@ -693,7 +693,7 @@ Where:
 - Increased residence time
 
 ### Process Control and Automation
-**Key control variables** cite:augustine2024advancing:
+**Key control variables** [@augustine2024advancing]:
 
 1.  **pH control**:
     - In-line pH meters
@@ -710,7 +710,7 @@ Where:
     - Capacitance or conductivity sensors
     - Maintains interface in settler
 
-**Modern automation** cite:augustine2024advancing:
+**Modern automation** [@augustine2024advancing]:
 
 - LANL Super Separator uses automated sampling and ICP-AES analysis
 - Closed-loop control with Bayesian optimization

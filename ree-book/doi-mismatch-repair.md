@@ -124,3 +124,28 @@ DOIs belong to unrelated work. Treated as fabricated.
   - Hydrometallurgical process for recovery of valuable and critical metals from spent {NdFeB}
 - `zhang2016carbochlorination` (best match 0.69), bad DOI `10.1016/j.mineng.2016.09.017`
   - Carbochlorination extraction of rare earth elements from bastnaesite
+
+## Follow-up (Phase 4): the two Research Square preprints
+
+Phase 1 repaired two entries by pointing them at Research Square preprints,
+which left an open question — had either been published since? Both were
+re-checked against CrossRef.
+
+- **`he2023stepwise` → `he2025stepwise` (published version found).** The Phase 1
+  repair replaced the DOI with the preprint `10.21203/rs.3.rs-5243250/v1` but
+  left the *previous* paper's `journal`, `url`, `volume`, `pages`, and `year`
+  fields in place, so the record described *Separation and Purification
+  Technology* 326, 124791 (2023) — which actually resolves to Wang 2023,
+  "Enhanced phosphate pollutant removal from liquid via adsorption flotation
+  strategy", an unrelated paper. The work has since appeared as He et al.,
+  *Environmental Science and Pollution Research* **32**(25), 15274–15286 (2025),
+  `10.1007/s11356-025-36598-8`. All fields were taken from CrossRef and the key
+  was updated to match the publication year. Cited in
+  `src/05-hydrometallurgical-leaching.md`.
+
+- **`anon2023deep` (no published version; stays a preprint).** A CrossRef
+  bibliographic search for the title returned only the preprint itself
+  (`10.21203/rs.3.rs-2525701/v1`, Alizadeh et al. 2023). The entry is correct as
+  recorded and is journaled as `Research Square (preprint)`. It was re-keyed to
+  `alizadeh2023deep` by `tools/rekey_bib.py` along with the other 170 entries
+  whose authors the repairs had recovered — see `bib-rekey.md`.

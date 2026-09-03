@@ -27,7 +27,7 @@ fast the loop can turn is in [](#characterization-methods).
 (automated-high-throughput-platforms-for-f-element-separations)=
 ## Automated High-Throughput Platforms for f-Element Separations
 ### LANL Super Separator Platform
-cite:augustine2024advancing developed a comprehensive automated platform that integrates robotic liquid handling with machine learning optimization for rare-earth (4f) and actinide (5f) separations.
+@augustine2024advancing developed a comprehensive automated platform that integrates robotic liquid handling with machine learning optimization for rare-earth (4f) and actinide (5f) separations.
 
 #### Platform Specifications
 
@@ -80,12 +80,12 @@ The platform was validated on Th⁴⁺ extraction using N,N-di-2-ethylhexylbutyr
 - \[DEHBA\] = 40 mM
 - Temperature = 25°C
 
-**Human-in-the-Loop Safeguards:** The research team detected anomalous measurements (D = 6.58 ± 0.05) during cycle review that would have contaminated the Gaussian Process model. This demonstrates the value of expert oversight in automated optimization campaigns cite:augustine2024advancing.
+**Human-in-the-Loop Safeguards:** The research team detected anomalous measurements (D = 6.58 ± 0.05) during cycle review that would have contaminated the Gaussian Process model. This demonstrates the value of expert oversight in automated optimization campaigns [@augustine2024advancing].
 
 ### Analytical Characterization Integration
 #### ICP-AES Protocol for Thorium Quantification
 
-cite:augustine2024advancing implemented rigorous ICP-AES analysis:
+@augustine2024advancing implemented rigorous ICP-AES analysis:
 
 **Instrumentation:** PerkinElmer Avio 500
 
@@ -116,12 +116,12 @@ High-throughput elemental analysis requires seamless integration of liquid handl
 - Compatible with ICP-OES and ICP-MS platforms
 
 ### Data Management and Reproducibility
-The LANL group deposited their complete dataset in the ****Separation Archive for f-elements (SAFE)**** at <https://safe.lanl.gov>, comprising 2,132 distribution ratios from literature involving 35 unique monoamide extractants and 11 actinide/lanthanide isotopes cite:augustine2024advancing.
+The LANL group deposited their complete dataset in the ****Separation Archive for f-elements (SAFE)**** at <https://safe.lanl.gov>, comprising 2,132 distribution ratios from literature involving 35 unique monoamide extractants and 11 actinide/lanthanide isotopes [@augustine2024advancing].
 
 (high-throughput-extractant-synthesis-and-screening)=
 ## High-Throughput Extractant Synthesis and Screening
 ### Agile Diglycolamide Synthesis Platform
-cite:an2024agile developed an integrated research, development, and deployment (RD&D) methodology combining facile ligand synthesis with rapid extraction evaluation.
+@an2024agile developed an integrated research, development, and deployment (RD&D) methodology combining facile ligand synthesis with rapid extraction evaluation.
 
 #### Green Chemistry Approach: Melt-Amidation
 
@@ -138,7 +138,7 @@ cite:an2024agile developed an integrated research, development, and deployment (
 - Purities: 88-96%
 - Substrate scope: 9 different DGA variants
 
-**Environmental Impact:** Life cycle assessment revealed ****67% reduction in global warming potential**** compared to prior synthetic pathways cite:an2024agile.
+**Environmental Impact:** Life cycle assessment revealed ****67% reduction in global warming potential**** compared to prior synthetic pathways [@an2024agile].
 
 **Advantages over Prior Art:**
 
@@ -151,7 +151,7 @@ cite:an2024agile developed an integrated research, development, and deployment (
 
 #### Automated Extraction Screening
 
-**Throughput:** The automated workflow completed ****over 180 runs in 48 hours****, enabling rapid structure-activity relationship investigations of alkyl-substituted DGAs cite:an2024agile.
+**Throughput:** The automated workflow completed ****over 180 runs in 48 hours****, enabling rapid structure-activity relationship investigations of alkyl-substituted DGAs [@an2024agile].
 
 **Outcome:** The systematic ligand evaluation informed development of a promising flowsheet for separating light and heavy REEs.
 
@@ -164,12 +164,12 @@ Diglycolamide (DGA) extractants offer several advantages for REE separations:
 - Good radiation stability
 - Promising industrial applications
 
-The work of cite:an2024agile demonstrates how integrating agile synthetic chemistry with automated screening accelerates discovery of sustainable extractants for critical materials.
+The work of [@an2024agile] demonstrates how integrating agile synthetic chemistry with automated screening accelerates discovery of sustainable extractants for critical materials.
 
 (machine-learning-for-distribution-coefficient-prediction)=
 ## Machine Learning for Distribution Coefficient Prediction
 ### Deep Learning Approaches
-cite:liu2022advancing developed deep neural networks (DNNs) trained on experimental data to predict distribution coefficients for lanthanide solvent extraction, enabling high-throughput virtual screening.
+@liu2022advancing developed deep neural networks (DNNs) trained on experimental data to predict distribution coefficients for lanthanide solvent extraction, enabling high-throughput virtual screening.
 
 #### Dataset and Model Performance
 
@@ -199,7 +199,7 @@ Distribution (D) values assess ligand performance:
 - Accelerates rational design of selective extractants
 
 ### Bayesian Optimization for Process Variables
-Beyond ligand screening, cite:augustine2024advancing demonstrated that Bayesian Optimization with high-throughput robotics significantly accelerates optimization of extraction conditions (concentration, pH, temperature).
+Beyond ligand screening, [@augustine2024advancing] demonstrated that Bayesian Optimization with high-throughput robotics significantly accelerates optimization of extraction conditions (concentration, pH, temperature).
 
 **Dataset Scope:**
 
@@ -218,13 +218,13 @@ This trend toward interpretable models will help identify underlying chemical pr
 ### Computational Pre-Screening → Targeted Experiments
 The emerging workflow combines:
 
-1.  **Virtual screening** using ML models (cite:liu2022advancing)
+1.  **Virtual screening** using ML models ([@liu2022advancing])
     - Rapid prediction of log D for candidate ligands
     - Identification of promising structures
-2.  **Automated synthesis** (cite:an2024agile)
+2.  **Automated synthesis** ([@an2024agile])
     - Scalable, sustainable synthesis methods
     - High-throughput synthesis of top candidates
-3.  **Automated extraction testing** (cite:augustine2024advancing)
+3.  **Automated extraction testing** ([@augustine2024advancing])
     - Robotic platforms for systematic evaluation
     - ICP-AES/ICP-MS characterization
 4.  **Process optimization** via Bayesian methods
@@ -252,7 +252,7 @@ For meaningful high-throughput separations research:
 #### For Actinides (Th, U, Pu)
 
 - Surface adhesion to sample introduction systems
-- Extended wash protocols required (cite:augustine2024advancing: 50 sec with HF)
+- Extended wash protocols required ([@augustine2024advancing]: 50 sec with HF)
 - Radiological safety considerations
 - Specialized facilities and protocols
 
@@ -276,7 +276,7 @@ High-throughput workflows require:
 
 Where the deep-learning models above are trained on measured distribution
 ratios, a second line of work learns the underlying binding energy directly and
-so generalises beyond the conditions in the training set. cite:gupta2025accelerating
+so generalises beyond the conditions in the training set. @gupta2025accelerating
 trained equivariant neural networks (Allegro) on 5,356 REE-ligand complexes,
 reaching a mean absolute error of 6.1 kcal/mol on binding energy predicted
 directly from structure. The point of that number is throughput: it bypasses the
@@ -289,7 +289,7 @@ also where the limits of the conversion are set out.
 
 ## Automated Process Control
 
-Modern plants incorporate cite:augustine2024advancing:
+Modern plants incorporate [@augustine2024advancing]:
 
 - Real-time ICP-MS analysis
 - Feedback control of pH, temperature, flow rates

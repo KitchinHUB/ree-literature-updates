@@ -25,7 +25,7 @@ industrial detail. What follows here is the condensed version needed to make
 sense of [](#solvent-extraction-fundamentals).
 
 ## Primary REE Minerals
-Rare-earth elements do not occur as native metals but are found in oxide or phosphate minerals cite:jha2016review,xie2014critical. The most important industrial sources are:
+Rare-earth elements do not occur as native metals but are found in oxide or phosphate minerals [@jha2016hydrometallurgical; @xie2014critical]. The most important industrial sources are:
 
 1.  **Bastnasite** (REE·FCO₃): Carbonate-fluoride mineral
     - Primary source in US (Mountain Pass, CA) and China (Bayan Obo)
@@ -42,11 +42,11 @@ Rare-earth elements do not occur as native metals but are found in oxide or phos
     - REEs weakly bound to clay surfaces as exchangeable ions
     - Can be leached with dilute electrolytes (NH₄)₂SO₄
     - Enriched in heavy REEs (Dy, Tb, Y)
-    - Recent work by cite:han2024efficient focuses on this feedstock
+    - Recent work by [@han2024efficient] focuses on this feedstock
 
 ## Dissolution and Feed Solution Preparation
 ### Chloride Solutions
-**Preparation**: REE concentrates are roasted and dissolved in hydrochloric acid cite:xie2014critical:
+**Preparation**: REE concentrates are roasted and dissolved in hydrochloric acid [@xie2014critical]:
 
     REE₂O₃ + 6 HCl → 2 REECl₃ + 3 H₂O
 
@@ -63,14 +63,14 @@ Rare-earth elements do not occur as native metals but are found in oxide or phos
 - Chloride can interfere with some extractants
 - Environmental concerns with HCl vapor
 
-**Typical composition** cite:agarwal2020comparative:
+**Typical composition** [@agarwal2020comparative]:
 
 - REE concentration: 0.5-2.0 M (total mixed REEs)
 - Free HCl: 0.01-1.0 M (pH 0-2)
 - Impurities: Fe³⁺, Ca²⁺, Al³⁺, thorium (if from monazite)
 
 ### Nitrate Solutions
-**Preparation**: REE carbonates or hydroxides dissolved in nitric acid cite:matveev2018solvent:
+**Preparation**: REE carbonates or hydroxides dissolved in nitric acid [@matveev2018solvent]:
 
     REE₂O₃ + 6 HNO₃ → 2 REE(NO₃)₃ + 3 H₂O
 
@@ -86,14 +86,14 @@ Rare-earth elements do not occur as native metals but are found in oxide or phos
 - Nitrate co-extraction can occur with some extractants
 - Decomposition risk at high temperatures
 
-**Typical composition** cite:matveev2018solvent,tanaka2021revaluating:
+**Typical composition** [@matveev2018solvent; @tanaka2021revaluating]:
 
 - REE concentration: 0.2-1.0 M
 - Free HNO₃: 0.1-3.0 M
 - Salting agent: 0-3 M Ca(NO₃)₂ or NaNO₃
 
 ### Sulfate Solutions (Ion-Adsorption Ores)
-**Preparation**: Direct leaching of clay ores with ammonium sulfate cite:han2024efficient:
+**Preparation**: Direct leaching of clay ores with ammonium sulfate [@han2024efficient]:
 
     Clay-REE³⁺ + (NH₄)₂SO₄ → REE₂(SO₄)₃ + NH₄⁺-Clay
 
@@ -110,7 +110,7 @@ Rare-earth elements do not occur as native metals but are found in oxide or phos
 - Requires different extractant chemistry
 
 ## Feed Solution Purification
-Before solvent extraction, feed solutions require purification cite:jha2016review:
+Before solvent extraction, feed solutions require purification [@jha2016hydrometallurgical]:
 
 1.  **Removal of bulk impurities**:
     - Fe³⁺ removal: pH adjustment to precipitate Fe(OH)₃ (pH 3-4)
