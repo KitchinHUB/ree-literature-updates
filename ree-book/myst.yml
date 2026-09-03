@@ -1,0 +1,71 @@
+# See docs at: https://mystmd.org/guide/frontmatter
+version: 1
+project:
+  id: e823d276-fe4c-4fdf-808c-85a2440eab03
+  title: Rare Earth Element Separations
+  description: >-
+    An organized introduction to rare earth element separation science for new
+    researchers, followed by dedicated treatments of the group's areas of
+    interest.
+  keywords:
+    - rare earth elements
+    - separations
+    - solvent extraction
+    - hydrometallurgy
+  authors:
+    - name: John Kitchin
+      email: jkitchin@andrew.cmu.edu
+      affiliations:
+        - Carnegie Mellon University
+  github: https://github.com/KitchinHUB/ree-literature-updates
+  bibliography:
+    - references.bib
+  toc:
+    - file: src/00-preface.md
+
+    - title: Part I — Orientation
+      children:
+        - file: src/01-why-separation-is-hard.md
+        - file: src/02-ore-to-feed-solution.md
+        - file: src/03-solvent-extraction-fundamentals.md
+        - file: src/04-technology-landscape.md
+
+    - title: "Part II — Upstream: Ore to Purified Feed"
+      children:
+        - file: src/05-hydrometallurgical-leaching.md
+        - file: src/06-ion-adsorption-clays.md
+        - file: src/07-pyrometallurgical-halogenation.md
+
+    - title: Part III — Separation Technologies
+      children:
+        - file: src/08-coacervates.md
+        - file: src/09-microfluidic-separations.md
+        - file: src/10-selective-crystallization.md
+        - file: src/11-biological-biomimetic.md
+        - file: src/12-membranes-mofs-emerging.md
+
+    - title: Part IV — Methods
+      children:
+        - file: src/13-extraction-thermodynamics.md
+        - file: src/14-high-throughput-computational.md
+        - file: src/15-characterization.md
+
+    - title: Part V — Context
+      children:
+        - file: src/16-recycling-urban-mining.md
+        - file: src/17-environment-tea-lca.md
+        - file: src/18-industrial-landscape.md
+        - file: src/19-research-directions.md
+
+    - title: Back Matter
+      children:
+        - file: src/90-glossary.md
+        - file: src/91-index.md
+        - file: src/92-references.md
+        - file: src/93-appendix-provenance.md
+        - file: src/94-appendix-further-reading.md
+
+site:
+  template: book-theme
+  options:
+    folders: true
