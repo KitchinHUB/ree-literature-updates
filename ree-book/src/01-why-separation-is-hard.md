@@ -11,8 +11,9 @@ exploits affinity. Rare earth separation is hard because the seventeen elements
 in question were built by nature to have as few differences as possible.
 
 They share a +3 oxidation state. They share coordination preferences. Their
-ionic radii decrease across the series by roughly 0.01 Å per element — about one
-percent of an ionic radius, distributed evenly over fifteen elements. Any
+ionic radii decrease across the series by roughly 0.012 Å per element — La³⁺ at
+1.032 Å down to Lu³⁺ at 0.861 Å in six-coordination [@shannon1976revised], about one percent of an
+ionic radius per step, distributed evenly over fourteen steps. Any
 chemical process that responds to that difference responds to it weakly, and a
 process that responds weakly must be repeated many times. That single fact
 explains the shape of the entire industry: a modern separation plant runs
@@ -45,7 +46,7 @@ The demand for REEs is expected to increase by a factor of up to 7 by 2040, driv
 ## The Separation Challenge
 The 17 rare earth elements (15 lanthanides plus {index}`scandium` and {index}`yttrium`) share remarkably similar chemical and physical properties, making their separation one of the most difficult problems in chemistry. Key challenges include:
 
-- Similar ionic radii (only decreasing by \~0.01 Å across the lanthanide series)
+- Similar ionic radii (\~0.012 Å per element, 0.171 Å in total from La³⁺ to Lu³⁺)
 - Identical +3 oxidation state for most elements
 - Similar complexation behavior with common ligands
 - Requirement for extremely high purity (\>99.99%) for many applications

@@ -154,8 +154,9 @@ lanmodulin
 
 lanthanide contraction
 : The steady decrease in ionic radius across the lanthanide series, roughly
-  0.01 Å per element, caused by poor shielding of the nuclear charge by 4f
-  electrons. It is the only property that reliably distinguishes adjacent
+  0.012 Å per element (0.171 Å in total, La³⁺ 1.032 Å to Lu³⁺ 0.861 Å at
+  six-coordination [@shannon1976revised]), caused by poor shielding of the
+  nuclear charge by 4f electrons. It is the only property that reliably distinguishes adjacent
   rare earths, and it is why every separation in this book is hard.
 
 leaching

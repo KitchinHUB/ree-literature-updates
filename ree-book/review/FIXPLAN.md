@@ -31,7 +31,7 @@ slope is taken against.
 right (La³⁺ 1.032 Å → Lu³⁺ 0.861 Å, CN 6: 0.171 Å over 14 steps ≈ 0.012 Å/step).
 Fix `:48` and make the two statements quote the same number.
 
-- [ ] B2
+- [x] B2
 
 ## B3 — The prologue's exemplar DOI resolves to an unrelated paper
 `src/00-prologue.md:226`. `10.1016/j.mineng.2023.108234` → "Effect of pyrite
