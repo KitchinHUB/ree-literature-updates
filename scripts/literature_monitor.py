@@ -22,6 +22,7 @@ import json
 import os
 import random
 import re
+import sys
 import time
 from datetime import datetime, timedelta
 from pathlib import Path
@@ -112,7 +113,14 @@ RELEVANCE_TERMS = [
 # Retry policy for the OpenAlex API. It returns 503 during maintenance and
 # 429 when the polite-pool rate limit is hit; both clear on their own, so a
 # failed topic should not silently produce a thin report.
+class OpenAlexUnavailable(Exception):
+    """Raised when a topic query cannot be completed, even after retries."""
+
+
 MAX_ATTEMPTS = 5
+# Above this share of failed topic queries, the report is too incomplete to
+# publish and the run should fail loudly instead.
+MAX_FAILED_TOPIC_SHARE = 0.25
 RETRY_BASE_DELAY = 1.0   # seconds; doubles each attempt
 RETRY_MAX_DELAY = 30.0   # cap on any single backoff
 RETRYABLE_STATUS = {429, 500, 502, 503, 504}
@@ -166,18 +174,27 @@ def query_openalex(
         except urllib.error.HTTPError as e:
             if e.code not in RETRYABLE_STATUS:
                 # 4xx client errors will not fix themselves; fail fast.
-                print(f"  Warning: OpenAlex query failed: {e}")
-                return {"results": [], "meta": {"count": 0}}
+                raise OpenAlexUnavailable(f"HTTP {e.code}") from e
             retry_after = e.headers.get("Retry-After") if e.headers else None
             reason = f"HTTP {e.code}"
+            if e.code == 429 and retry_after:
+                # The daily credit quota is spent; the reset is hours away, so
+                # there is nothing to wait out within a single run.
+                try:
+                    wait = float(retry_after)
+                except ValueError:
+                    wait = None
+                if wait is not None and wait > RETRY_MAX_DELAY:
+                    raise OpenAlexUnavailable(
+                        f"rate limited, quota resets in {wait / 3600:.1f}h"
+                    ) from e
         except (urllib.error.URLError, TimeoutError, json.JSONDecodeError) as e:
             reason = str(e)
 
         if attempt == MAX_ATTEMPTS:
-            print(
-                f"  Warning: OpenAlex query failed after {MAX_ATTEMPTS} attempts: {reason}"
+            raise OpenAlexUnavailable(
+                f"{reason} after {MAX_ATTEMPTS} attempts"
             )
-            return {"results": [], "meta": {"count": 0}}
 
         # Exponential backoff with jitter, honoring Retry-After when sent.
         delay = min(RETRY_BASE_DELAY * (2 ** (attempt - 1)), RETRY_MAX_DELAY)
@@ -194,8 +211,8 @@ def query_openalex(
         )
         time.sleep(delay)
 
-    # Unreachable: the final attempt always returns above.
-    return {"results": [], "meta": {"count": 0}}
+    # Unreachable: the final attempt always returns or raises above.
+    raise OpenAlexUnavailable("exhausted retries")
 
 
 def search_openalex_all_topics(
@@ -207,19 +224,25 @@ def search_openalex_all_topics(
     Returns deduplicated list of works.
     """
     all_works = {}
+    failed_topics = []
 
     for topic in SEARCH_TOPICS:
         print(f"  Searching OpenAlex: {topic}")
-        result = query_openalex(
-            topic, from_date, per_page=max_per_topic, to_date=to_date
-        )
+        try:
+            result = query_openalex(
+                topic, from_date, per_page=max_per_topic, to_date=to_date
+            )
+        except OpenAlexUnavailable as e:
+            print(f"    FAILED: {e}")
+            failed_topics.append(topic)
+            continue
 
         for work in result.get("results", []):
             work_id = work.get("id", "")
             if work_id and work_id not in all_works:
                 all_works[work_id] = work
 
-    return list(all_works.values())
+    return list(all_works.values()), failed_topics
 
 
 def extract_work_info(work: dict) -> dict:
@@ -832,11 +855,29 @@ def main():
     print(f"Searching {len(SEARCH_TOPICS)} topics...")
 
     # Search OpenAlex
-    works = search_openalex_all_topics(
+    works, failed_topics = search_openalex_all_topics(
         from_date_str,
         max_per_topic=args.max_per_topic,
         to_date=to_date_str if args.to_date else None,
     )
+
+    # A report built on mostly-failed queries looks like a quiet week rather
+    # than a broken run, and the weekly cron would commit and push it. Refuse
+    # to write one instead, so the failure is visible.
+    if failed_topics:
+        share = len(failed_topics) / len(SEARCH_TOPICS)
+        print(
+            f"\nWarning: {len(failed_topics)}/{len(SEARCH_TOPICS)} topic "
+            f"queries failed: {', '.join(failed_topics)}"
+        )
+        if share > MAX_FAILED_TOPIC_SHARE:
+            print(
+                f"Error: {share:.0%} of queries failed, exceeding the "
+                f"{MAX_FAILED_TOPIC_SHARE:.0%} threshold. Refusing to write a "
+                f"misleading report.",
+                file=sys.stderr,
+            )
+            return 1
 
     print(f"\nFound {len(works)} unique publications")
 
@@ -885,4 +926,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main() or 0)
