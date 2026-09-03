@@ -274,7 +274,7 @@ bioleaching, precipitation, diluent, modifier, third phase, phase ratio, loading
 McCabe-Thiele, K_ex vs D, pH₁/₂, TRL, plus the synonym map
 HDEHP = D2EHPA and PC88A = HEHEHP = P507 = EHEHPA (currently read as six reagents).
 
-- [ ] G28
+- [x] G28
 
 ## G29 — Add figures; the book has none
 Nine that carry arguments prose cannot: (a) the corrected thermodynamic cycle,
