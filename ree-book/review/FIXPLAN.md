@@ -82,7 +82,7 @@ citation must be to a work containing the claim, or the claim goes.
 Also: FJH-Cl₂ cited to `@deng2022rare` in ch. 7 and `@tour2025sustainable` in
 ch. 12 — reconcile.
 
-- [ ] B7
+- [x] B7
 
 ## B8 — Rewrite the lanmodulin story around what it actually discriminates
 `04:177`, `08:24-27,95,136,151,452`, `11:8-14,37-43,66-70,291`, `12:86`, glossary.
@@ -135,7 +135,7 @@ drop the `@jha2016hydrometallurgical` attribution unless the numbers are his.
 (bromination/iodination — also consider deleting as out of scope), `436-470`
 (FJH), `474-567` (MSE, one citation in 90 lines).
 
-- [ ] M13
+- [x] M13
 
 ## M14 — Source or delete ch. 5's uncited flowsheet, energy and cost tables
 `05:1042-1170` (three flowsheets, 130 lines, recoveries and energies),
@@ -231,7 +231,7 @@ The intro (`07:8-11,19-20`) promises separation by boiling point; LnCl₃ boil a
 impurity chlorides. Add a table of LnCl₃ mp/bp alongside FeCl₃, AlCl₃, SiCl₄,
 POCl₃, ThCl₄, ZrCl₄, TiCl₄, and rewrite the intro to make that the argument.
 
-- [ ] G24
+- [x] G24
 
 ## G25 — Ch. 12: a real membranes section
 26 uncited lines for membranes against 215 for scCO₂, in the chapter that names

@@ -59,7 +59,7 @@ For ion exchange, which this book covers only in outline,
 
 ## Pyrometallurgy and halogenation
 
-@pereira2021panoramic is the panoramic review of chlorination and
+@pomiro2021panoramic is the panoramic review of chlorination and
 carbochlorination of light rare earth oxides, and the closest thing
 [](#pyrometallurgical-and-halogenation-routes) has to a single source.
 @zheng2019mechanism covers chlorination treatment of ores more generally.
