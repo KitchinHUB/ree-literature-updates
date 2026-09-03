@@ -122,7 +122,8 @@ def query_openalex(
     query: str,
     from_date: str,
     per_page: int = 25,
-    cursor: str = "*"
+    cursor: str = "*",
+    to_date: Optional[str] = None,
 ) -> dict:
     """
     Query OpenAlex API for works matching the search query.
@@ -132,15 +133,22 @@ def query_openalex(
         from_date: ISO date string (YYYY-MM-DD) for filtering
         per_page: Results per page
         cursor: Pagination cursor
+        to_date: Optional ISO date string bounding the window at the top.
+            Needed to reconstruct a report for a past week; without it
+            OpenAlex also returns anything published since.
 
     Returns:
         API response as dict
     """
     base_url = "https://api.openalex.org/works"
 
+    date_filter = f"from_publication_date:{from_date}"
+    if to_date:
+        date_filter += f",to_publication_date:{to_date}"
+
     params = {
         "search": query,
-        "filter": f"from_publication_date:{from_date}",
+        "filter": date_filter,
         "sort": "publication_date:desc",
         "per-page": str(per_page),
         "cursor": cursor,
@@ -190,7 +198,9 @@ def query_openalex(
     return {"results": [], "meta": {"count": 0}}
 
 
-def search_openalex_all_topics(from_date: str, max_per_topic: int = 10) -> list[dict]:
+def search_openalex_all_topics(
+    from_date: str, max_per_topic: int = 10, to_date: Optional[str] = None
+) -> list[dict]:
     """
     Search OpenAlex for all configured topics.
 
@@ -200,7 +210,9 @@ def search_openalex_all_topics(from_date: str, max_per_topic: int = 10) -> list[
 
     for topic in SEARCH_TOPICS:
         print(f"  Searching OpenAlex: {topic}")
-        result = query_openalex(topic, from_date, per_page=max_per_topic)
+        result = query_openalex(
+            topic, from_date, per_page=max_per_topic, to_date=to_date
+        )
 
         for work in result.get("results", []):
             work_id = work.get("id", "")
@@ -776,6 +788,15 @@ def main():
         help="Output file path (default: reports/YYYY-MM-DD_literature_update.md)"
     )
     parser.add_argument(
+        "--to-date", type=str, default=None,
+        help="End of the reporting window, YYYY-MM-DD (default: today). "
+             "Use with --days or --from-date to backfill a past week."
+    )
+    parser.add_argument(
+        "--from-date", type=str, default=None,
+        help="Start of the reporting window, YYYY-MM-DD (overrides --days)"
+    )
+    parser.add_argument(
         "--max-per-topic", type=int, default=15,
         help="Maximum results per search topic (default: 15)"
     )
@@ -791,8 +812,18 @@ def main():
     args = parser.parse_args()
 
     # Calculate date range
-    to_date = datetime.now()
-    from_date = to_date - timedelta(days=args.days)
+    if args.to_date:
+        to_date = datetime.strptime(args.to_date, "%Y-%m-%d")
+    else:
+        to_date = datetime.now()
+
+    if args.from_date:
+        from_date = datetime.strptime(args.from_date, "%Y-%m-%d")
+    else:
+        from_date = to_date - timedelta(days=args.days)
+
+    if from_date > to_date:
+        parser.error("--from-date must not be after --to-date")
 
     from_date_str = from_date.strftime("%Y-%m-%d")
     to_date_str = to_date.strftime("%Y-%m-%d")
@@ -801,7 +832,11 @@ def main():
     print(f"Searching {len(SEARCH_TOPICS)} topics...")
 
     # Search OpenAlex
-    works = search_openalex_all_topics(from_date_str, max_per_topic=args.max_per_topic)
+    works = search_openalex_all_topics(
+        from_date_str,
+        max_per_topic=args.max_per_topic,
+        to_date=to_date_str if args.to_date else None,
+    )
 
     print(f"\nFound {len(works)} unique publications")
 
