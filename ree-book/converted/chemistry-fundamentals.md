@@ -439,7 +439,7 @@ For 1.0 M REE feed, 90% extraction:
 **D2EHPA** (di-2-ethylhexyl phosphoric acid):
 
 - Water solubility: \~5 ppm (very low)
-- Partition coefficient: P~HL~ = \[HL\]\_org / \[HL\]\_aq \> 10,000
+- Partition coefficient: P~HL~ = \[HL\]~org~ / \[HL\]~aq~ \> 10,000
 - Organic phase loss: \<0.01% per cycle
 
 **PC88A** (2-ethylhexyl phosphonic acid mono-2-ethylhexyl ester):
@@ -674,7 +674,7 @@ Graphical method for determining stage requirements:
 
 **Construction**:
 
-1.  Plot equilibrium curve: y\* = f(x) where y = \[REE\]\_org, x = \[REE\]\_aq
+1.  Plot equilibrium curve: y\* = f(x) where y = \[REE\]~org~, x = \[REE\]~aq~
 2.  Draw operating line: y = (A/O)x + y₀
 3.  Step off stages between equilibrium curve and operating line
 

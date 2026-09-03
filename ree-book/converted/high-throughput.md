@@ -60,7 +60,7 @@ The platform was validated on Th⁴⁺ extraction using N,N-di-2-ethylhexylbutyr
 
 **Optimized Conditions:**
 
-- \[Th⁴⁺\]\_{feed} = 3.0 mM
+- \[Th⁴⁺\]~feed~ = 3.0 mM
 - \[HNO₃\] = 4.0 M
 - \[DEHBA\] = 40 mM
 - Temperature = 25°C

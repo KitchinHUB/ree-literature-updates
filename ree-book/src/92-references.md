@@ -2,6 +2,7 @@
 title: Bibliography
 ---
 
+(bibliography)=
 # Bibliography
 
 All sources cited in this book. Every entry has been verified; see

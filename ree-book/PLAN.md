@@ -3,15 +3,15 @@
 Working notes for building the REE separations book. Written to be picked up
 cold — if you are resuming this after a gap, read this file first.
 
-**Where things stand: Phases 0–2 are done and committed. Phase 3 is next.**
+**Where things stand: Phases 0–3 are done and committed. Phase 4 is next.**
 
 | Phase | What | Status |
 |---|---|---|
 | 0 | Scaffold the MyST project, prove the toolchain | ✅ `6286a05` |
 | 1 | Merge, dedupe, and verify the bibliography | ✅ `0edb8aa`, `d9a9221` |
 | 2 | Convert all sources to MyST Markdown | ✅ `cc2e1df` |
-| 3 | **Restructure into chapters** | ⬜ next |
-| 4 | Convert citations to `[@key]` | ⬜ |
+| 3 | Restructure into chapters | ✅ |
+| 4 | **Convert citations to `[@key]`** | ⬜ next |
 | 5 | Index and glossary | ⬜ |
 | 6 | Final build and verification | ⬜ |
 
@@ -32,11 +32,16 @@ Do not relitigate these; they were settled deliberately.
 
 ```bash
 cd ree-book
-jupyter-book build --html     # build
-jupyter-book start            # live preview
+npx mystmd build --html       # build
+npx mystmd start              # live preview
 ```
 
-Use the venv Python: `/Users/jkitchin/Dropbox/uv/.venv/bin/python`.
+**Use `mystmd`, not `jupyter-book`.** The `jupyter-book` on PATH is v1
+(Sphinx-based) and does not understand this project; it fails on `--html`.
+`mystmd` is not installed globally, so `npx` fetches it.
+
+Use the venv Python for the `tools/` scripts:
+`/Users/jkitchin/Dropbox/uv/.venv/bin/python`.
 
 **Checking the build:** grep the output for `⛔`, `❌`, `⚠️`, `error`, *and* `warn`.
 MyST reports some failures as `⛔️ Unexpected node …` with no word "error" in
@@ -44,95 +49,68 @@ them — grepping only for "error" hid a broken glossary for two phases.
 
 ---
 
-# Phase 3 — Restructure into chapters (next)
+# Phase 3 — Restructure into chapters ✅
 
-The first phase needing editorial judgment rather than mechanics. Move content
-from `converted/` into the `src/` stubs. `converted/MANIFEST.md` maps every
-file to its destination.
+All nineteen chapters, both appendices, and the preface are written. The build
+is clean: `npx mystmd build --html` produces 26 pages with zero unresolved
+cross-references and zero diagnostic markers other than the ten Phase 4
+citation warnings listed below.
 
-Five sources map 1:1 and are mostly lift-and-drop: `leaching.md` → Ch. 5,
-`clay-ion-exchange.md` → Ch. 6, `coacervates.md` → Ch. 8,
-`crystallization.md` → Ch. 10, `thermodynamic-cycle.md` → Ch. 13.
+**Where the content came from is now recorded in the book itself**, in
+`src/93-appendix-provenance.md`: a per-chapter table of source files and line
+ranges, the material deliberately dropped, and the structural decisions. That
+appendix, not this file, is the provenance record. What follows is only what a
+future editor needs that does not belong in the book.
 
-The rest need real work:
+## Deviations from the original Phase 3 plan
 
-### 3a. Split `broad-review.md` (17,610 words, 1,903 lines) across 8 chapters
+- `broad-review.md` §2.3 (Precipitation) went to **Ch. 10**, not Ch. 4, and
+  Ch. 10 was retitled *Precipitation and Selective Crystallization*. §2.3 is
+  400 lines of precipitation chemistry; it belongs next to crystallization,
+  not in a landscape overview.
+- `bastnasite-framework.md` went to **Ch. 13**, not Ch. 5. It is a
+  thermodynamic argument, and it reads as a natural extension of the
+  extraction thermodynamic cycle. Ch. 5 carries a pointer.
+- The full flash-Joule-heating-with-chlorination treatment is in **Ch. 7**,
+  because the chemistry is chlorination. Ch. 12 keeps a pointer plus the
+  performance numbers for comparison against the other emerging technologies.
+- Per-chapter "Research opportunities" sections **stayed in their chapters**.
+  Ch. 19 synthesizes and cross-references them instead of absorbing them —
+  judging an opportunity needs the surrounding technical context.
+- **Section numbers were stripped from every heading** so MyST owns numbering.
+  The sources numbered their own sections and keeping both produced headings
+  like "3.2.1" inside chapter 12.
+- The one-shot extraction script stayed in the scratchpad rather than going
+  into `tools/`. It is not re-runnable against the current `src/`, which is
+  hand-edited; re-running it would clobber the editing. Appendix A carries the
+  provenance instead.
 
-Its `##` sections map as follows (line numbers as of `cc2e1df`):
+## Things fixed along the way
 
-| Section | Line | Destination |
-|---|---|---|
-| 1. Introduction and Background | 9 | Ch. 1 Why separation is hard |
-| 2. Conventional Separation Technologies | 25 | Ch. 4 Technology landscape |
-| 3. Emerging Separation Technologies | 305 | Ch. 12 Membranes/MOFs — **but §3.9 microfluidics goes to Ch. 9** |
-| 4. Electrochemical and Pyrometallurgical | 544 | Ch. 7 (merge with carbochlorination) |
-| 5. Recycling and Urban Mining | 672 | Ch. 16 |
-| 6. Environmental and Sustainability | 692 | Ch. 17 |
-| 7. Industrial Developments | 720 | Ch. 18 |
-| 8. Comparison of Technologies | 735 | Ch. 4 Technology landscape |
-| 9. Future Directions | 751 | Ch. 19 Research directions |
-| 10. Biological Separation Technologies | 779 | Ch. 11 (large — 313 lines) |
-| 11. Characterization Methods | 1092 | Ch. 15 |
-| 12. Techno-Economic Analysis | 1407 | Ch. 17 |
-| 13. Life Cycle Assessment | 1515 | Ch. 17 |
-| 14. Computational Approaches | 1612 | Ch. 14 (merge with high-throughput) |
-| 15. Conclusions | 1714 | fold into Ch. 19 |
-| 16. Microcalorimetry for LLE Thermodynamics | 1723 | Ch. 13 (pairs with the thermodynamic cycle) |
+- **`convert_sources.py` used the wrong pandoc reader for `.md`.** The broad
+  review writes "Key challenges include:" directly above its bullets with no
+  blank line, so pandoc's markdown reader treated every such list as lazy
+  paragraph continuation and `--wrap=none` joined it onto one line. Fixed with
+  `markdown+lists_without_preceding_blankline`. `converted/broad-review.md`
+  went from 1,903 to 2,936 lines and 370 table rows started parsing.
+  **All line numbers in the pre-Phase-3 version of this plan are stale.**
+- **38 pipe tables were collapsed onto single lines** across seven chapters,
+  from sources that wrote a table inside a paragraph. Rebuilt into real tables
+  by splitting on the `\| \|` row boundaries.
+- **`convert_sources.py` only unescaped the closing bracket of an org-cite.**
+  `ESCAPED_CITE_OPEN` now handles the opening bracket too.
+- Memo voice is gone: `grep -riE "bakery square|SOW|staffing"` returns nothing,
+  and the only surviving "your" is a compound adjective.
 
-Its `## References` (line 1865) is a hand-written list of 16 links, not a
-bibliography — drop it, Phase 4 handles citations.
+## Cross-references: use explicit labels
 
-### 3b. Merge the three microfluidic sources into Ch. 9
-
-`microfluidic-report.md` (3,045 w), `microfluidic-colorimetric.md` (1,311 w),
-and `broad-review.md` §3.9. All three repeat the same co-laminar / droplet /
-slug taxonomy and the same performance numbers (100–1000× mass transfer,
-2–3× faster extraction). Keep each one's distinct contribution:
-
-- report → industrial status, pilot scale, key players, feedstock integration
-- colorimetric → colorimetric/fluorescence detection, computer vision
-- broad-review §3.9 → fundamentals
-
-⚠️ `Microfluidic_REE_Separation_Report.org` carried its own warning:
-*"If there is not a url, the reference may be hallucinated."* Its 53 numeric
-citations went through Phase 1 verification, but this chapter deserves a closer
-read than the others.
-
-### 3c. Merge the two carbochlorination sources into Ch. 7
-
-`carbochlorination-report.md` (7,418 w) and `carbohalogenation-review.md`
-(4,882 w) overlap on fundamentals. Merge and dedupe; keep the Ti/Zr/Al/Mg/Nb-Ta
-industrial-precedent material, which is a genuinely distinctive angle. Add
-`broad-review.md` §4.
-
-Drop from the report: its manual "Table of Contents" section (MyST generates
-one) and the "Prepared by Claude Code" byline (the prologue covers provenance).
-
-### 3d. Split `chemistry-fundamentals.md` into Ch. 2 and Ch. 3
-
-Ch. 2 "From ore to feed solution" = its §1 (line 13–113).
-Ch. 3 "Solvent extraction fundamentals" = its §2–6 (line 114–866). This is the
-core teaching chapter for new researchers.
-Its §7 (high-throughput, line 867) → Ch. 14.
-
-### 3e. Cut project-internal material
-
-- `high-throughput.md`: keep §1–5 (lines 1–256), **drop §6–7** (lines 257–404)
-  — "Bakery Square Lab" equipment and staffing plans, CMU/METALLIC
-  recommendations. Internal memo, not a book chapter.
-- `thermodynamic-cycle.md`: strip the "Success Metrics from Your SOW" section.
-- Verify afterward: `grep -riE "bakery square|SOW|staffing" src/` returns nothing.
-
-### 3f. Short pieces
-
-`bastnasite-framework.md` (550 w) is a compact thermodynamic framework, not a
-review. Best as a sidebar in Ch. 5 or an aside in Ch. 13 — reader's call.
-
-### 3g. Fill the back matter
-
-Appendix A (provenance): table mapping each chapter to its original file in
-`ree-literature-review/`. Appendix B (further reading): the 6 un-synthesized
-PDFs in `papers/` and `microfluidic-ree-papers/`, with DOIs.
+MyST does **not** register an implicit target for a page's H1 when the H1 text
+matches the frontmatter `title` — the heading is consumed as the page title and
+`[](#chapter-slug)` silently fails with "No target for internal reference".
+Every file in `src/` therefore carries an explicit `(slug)=` label above its
+H1, and every section that is referenced from another file carries one too.
+**Add a label when you add a cross-reference target**; do not rely on implicit
+heading IDs, which also break the moment a heading is reworded.
 
 ---
 
@@ -161,6 +139,31 @@ Two hard cases:
 author/year/title metadata, so `cite:xie2014critical` in a converted file will
 *not* match `references.bib` directly. `bibliography-audit.md` records the old
 → new mapping; use it, don't guess.
+
+## What the Phase 3 build already tells you
+
+Auditing `src/` against `references.bib` after Phase 3: **50 `cite:` keys are
+used in the text but do not exist in the bibliography.** Only three of those
+(`chen2023multiphase`, `huang2006development`, `rydberg2004solvent`) are in
+`references-rejected.bib`; the other 47 are Phase 1 re-keying casualties and
+should map cleanly via `bibliography-audit.md`. Get the list with:
+
+```bash
+grep -rhoE "cite:[a-zA-Z0-9]+" src/*.md | sed 's/cite://' | sort -u > /tmp/used
+grep -oE "^@[a-z]+\{[^,]+," references.bib | sed -E 's/^@[a-z]+\{//; s/,$//' | sort -u > /tmp/have
+comm -23 /tmp/used /tmp/have
+```
+
+The build also reports ten `Could not link citation with label "X"` warnings,
+all in `src/09-microfluidic-separations.md`. These are org-cite `[cite:@key]`
+spans that MyST already parses as citations — they only need the key remapped,
+so they are the easiest ten to do first and a good check that the mapping
+works.
+
+Two references were added to `references.bib` during Phase 3 for Appendix B
+(`chen2024continuous`, `maurice2021first`), both with DOIs read out of the PDFs
+themselves and confirmed against CrossRef. The bibliography now has 408
+entries.
 
 **67 citations were deleted** (`references-rejected.bib`). Any claim resting
 solely on one of those must be removed or rewritten, not left unsupported.
@@ -215,6 +218,12 @@ Audit trail, all committed: `bibliography-audit.md`, `doi-recovery.md`,
   one reference for another.
 - **`verify_bib.py` used to overwrite `references-rejected.bib`.** Fixed to
   append. If you write another tool that touches it, append.
+- **`[](#slug)` to a chapter H1 fails silently** unless the file carries an
+  explicit `(slug)=` label. MyST consumes an H1 that matches the frontmatter
+  `title` as the page title, leaving no heading target. The build says "No
+  target for internal reference" — another reason to grep for `⚠️`.
+- **`jupyter-book` on PATH is v1 and cannot build this project.** Use
+  `npx mystmd`.
 - Re-running `convert_sources.py` wipes `converted/` — fine while that is
   staging, but not after Phase 3 edits land in `src/`.
 

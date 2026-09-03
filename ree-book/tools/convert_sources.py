@@ -72,6 +72,8 @@ LOCAL_VARS = re.compile(
 # pattern account for backslashes.
 ESCAPED_NUM_CITE = re.compile(r"\\\[(\d+(?:\s*[-,]\s*\d+)*)\\?\]")
 ESCAPED_CITE_CLOSE = re.compile(r"(\[cite:[^\]]*?)\\\]")
+# Pandoc escapes the opening bracket of an org-cite too, giving "\[cite:@key".
+ESCAPED_CITE_OPEN = re.compile(r"\\(?=\[cite:)")
 # MyST reads $...$ as inline math, so an unescaped currency figure silently
 # swallows everything up to the next dollar sign -- which wrecks the cost
 # tables in the leaching and techno-economics chapters. Escape a dollar only
@@ -96,7 +98,15 @@ def have_pandoc() -> str:
 
 
 def convert(src: pathlib.Path, dest: pathlib.Path, media_dir: pathlib.Path) -> None:
-    fmt = {".org": "org", ".docx": "docx", ".md": "markdown"}[src.suffix.lower()]
+    # lists_without_preceding_blankline: the broad review writes "Key
+    # challenges include:" on the line directly above its bullets. Pandoc's
+    # markdown reader treats a list that is not preceded by a blank line as
+    # lazy continuation of the paragraph, and --wrap=none then joins the whole
+    # thing onto one line -- turning every list in a 17k-word source into a
+    # run-on sentence full of " - " separators. The extension makes the list
+    # parse as a list.
+    fmt = {".org": "org", ".docx": "docx",
+           ".md": "markdown+lists_without_preceding_blankline"}[src.suffix.lower()]
     cmd = [
         "pandoc", "-f", fmt, "-t", "commonmark_x",
         "--wrap=none", "--markdown-headings=atx",
@@ -119,6 +129,7 @@ def postprocess(path: pathlib.Path) -> dict:
     text = HEADING_ANCHOR.sub(r"\1", text)
     text = ESCAPED_NUM_CITE.sub(r"[\1]", text)
     text = ESCAPED_CITE_CLOSE.sub(r"\1]", text)
+    text = ESCAPED_CITE_OPEN.sub(r"\1", text)
     text = EMPTY_REFS_DIV.sub("", text)
     for body in RAW_FORMAT_BLOCK.findall(text):
         if body.strip():

@@ -2,12 +2,98 @@
 title: Preface
 ---
 
+(preface)=
 # Preface
 
-This book collects the group's rare earth separation literature reviews into a
-single organized reference. Part I introduces the field for researchers new to
-the group; Parts II through V treat individual areas of interest in depth.
+This book exists because the same conversation kept happening. A new student
+joins the group, is handed a rare earth separations project, and asks what to
+read. The honest answer was a folder of a dozen literature reviews written at
+different times for different purposes, overlapping in places, contradicting
+each other in others, and assuming in each case that the reader already knew
+why the document had been written. This book is that folder, reorganized so it
+can be read in order.
 
-:::{note} Chapter stub
-Front matter to be written once chapters are migrated.
-:::
+## Who it is for
+
+The intended reader is a graduate student or new researcher who knows
+chemistry and chemical engineering but has not worked on rare earths. Nothing
+here assumes prior knowledge of lanthanide chemistry, hydrometallurgy, or
+solvent extraction practice.
+
+It should also be useful to someone who knows one corner of this field well
+and wants a quick, referenced orientation to the others — the coacervate
+person reading about carbochlorination, or the computational person trying to
+understand why a separation factor of 1.5 is considered good.
+
+## How it is organized
+
+**Part I — Orientation** is the part to read first and in order. It explains
+why rare earth separation is difficult at all
+([](#why-rare-earths-are-hard-to-separate)), walks the path from ore to a
+solution that can be fed to a separation process
+([](#from-ore-to-feed-solution)), develops solvent extraction from first
+principles because it is the incumbent technology and the benchmark everything
+else is measured against ([](#solvent-extraction-fundamentals)), and then maps
+the technology landscape ([](#the-landscape-of-separation-technologies)).
+
+**Part II — Upstream** covers getting rare earths out of rock and into
+solution: acid and alkaline leaching of the major minerals, the ion-adsorption
+clays that supply most of the world's heavy rare earths, and the
+pyrometallurgical and halogenation routes that bypass aqueous chemistry
+entirely.
+
+**Part III — Separation Technologies** treats the group's areas of active
+interest one per chapter: coacervates, microfluidics, selective
+crystallization, biological and biomimetic systems, and membranes and MOFs.
+These chapters are independent of one another and can be read in any order.
+
+**Part IV — Methods** is the toolkit: the thermodynamics that lets extraction
+data from one system be compared with another, high-throughput and
+computational screening, and the analytical methods that decide whether any of
+it worked.
+
+**Part V — Context** is the material that determines whether a good separation
+becomes a process: recycling and secondary feedstocks, environmental and
+economic assessment, the industrial landscape, and a closing chapter on what
+is actually open.
+
+The back matter carries a glossary, an index, the bibliography, and two
+appendices: [](#appendix-a-source-provenance), which traces every chapter back
+to the document it came from, and
+[](#appendix-b-further-reading), which lists papers that were collected but
+never written up.
+
+## Conventions
+
+**Cross-references.** Links of the form [](#thorium-management) point to
+another section of this book. Follow them when a chapter says something is
+"treated elsewhere" — the treatment is usually more detailed than the
+summary.
+
+**Citations.** Every citation resolves to an entry in a single verified
+bibliography. What "verified" means, and what it does not mean, is set out in
+[](#prologue-how-this-book-was-made) — read that before relying on any
+reference here.
+
+**Numbers.** Reported values are given as their sources gave them, including
+their units and their optimism. Where a number comes from a laboratory
+demonstration on a synthetic feed, the text says so. Assume that any
+performance figure not qualified in that way still deserves the question.
+
+**No figures.** None of the source documents contained figures, and none were
+commissioned for this edition. Several chapters would be substantially clearer
+with one — a pH-swing diagram in
+[](#solvent-extraction-fundamentals), a flowsheet in
+[](#hydrometallurgical-leaching) — and that is a known gap rather than a
+stylistic choice.
+
+## What this book is not
+
+It is not a textbook, and it is not comprehensive. It reflects what this group
+read, which was driven by what this group was working on. Whole areas of rare
+earth science — magnetism, catalysis, phosphors, the metallurgy after
+separation — appear only where they explain a separation requirement.
+
+It is also not a source. It is a map to one. The
+[](#prologue-how-this-book-was-made) explains why that distinction is more
+than modesty here, and it is worth reading before the first chapter.

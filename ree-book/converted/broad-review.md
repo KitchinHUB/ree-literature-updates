@@ -8,15 +8,30 @@ Rare earth elements (REEs) are critical materials for modern technology, clean e
 
 ## 1. Introduction and Background
 ### 1.1 Strategic Importance of Rare Earth Elements
-Rare earth elements are essential components in: - **Clean energy technologies**: Wind turbines, electric vehicles, solar panels - **Electronics**: Smartphones, computers, displays - **Defense systems**: Precision-guided weapons, stealth aircraft, submarines - **Medical devices**: MRI machines, diagnostic equipment
+Rare earth elements are essential components in:
+
+- **Clean energy technologies**: Wind turbines, electric vehicles, solar panels
+- **Electronics**: Smartphones, computers, displays
+- **Defense systems**: Precision-guided weapons, stealth aircraft, submarines
+- **Medical devices**: MRI machines, diagnostic equipment
 
 The demand for REEs is expected to increase by a factor of up to 7 by 2040, driven primarily by the global energy transition ([MRS Bulletin](https://link.springer.com/article/10.1557/s43577-022-00301-w)).
 
 ### 1.2 The Separation Challenge
-The 17 rare earth elements (15 lanthanides plus scandium and yttrium) share remarkably similar chemical and physical properties, making their separation one of the most difficult problems in chemistry. Key challenges include: - Similar ionic radii (only decreasing by \~0.01 Å across the lanthanide series) - Identical +3 oxidation state for most elements - Similar complexation behavior with common ligands - Requirement for extremely high purity (\>99.99%) for many applications
+The 17 rare earth elements (15 lanthanides plus scandium and yttrium) share remarkably similar chemical and physical properties, making their separation one of the most difficult problems in chemistry. Key challenges include:
+
+- Similar ionic radii (only decreasing by \~0.01 Å across the lanthanide series)
+- Identical +3 oxidation state for most elements
+- Similar complexation behavior with common ligands
+- Requirement for extremely high purity (\>99.99%) for many applications
 
 ### 1.3 Supply Chain Concerns
-China dominates the global REE supply chain: - **\~70%** of global rare earth mining - **\~90%** of separation and processing - **\~93%** of magnet manufacturing - **\~92%** of neodymium-iron-boron (NdFeB) magnet production
+China dominates the global REE supply chain:
+
+- **\~70%** of global rare earth mining
+- **\~90%** of separation and processing
+- **\~93%** of magnet manufacturing
+- **\~92%** of neodymium-iron-boron (NdFeB) magnet production
 
 In April 2025, China imposed new export controls on seven rare earth elements and permanent magnets, requiring foreign firms to obtain Chinese government approval for exports containing even trace amounts (≥0.1%) of Chinese-origin heavy rare earth materials ([CSIS](https://www.csis.org/analysis/consequences-chinas-new-rare-earths-export-restrictions)).
 
@@ -27,10 +42,21 @@ In April 2025, China imposed new export controls on seven rare earth elements an
 Solvent extraction is the dominant industrial method for REE separation, chosen because high-purity rare earths can be produced in large quantities continuously and economically ([ScienceDirect](https://www.sciencedirect.com/science/article/pii/S0892687513003452)).
 
 #### 2.1.1 Principle of Operation
-Solvent extraction operates on mass transfer between two immiscible phases: 1. An aqueous solution containing REE ions is mixed with an organic phase containing extractant molecules 2. REEs selectively transfer to the organic phase, forming complexes with extractant molecules 3. The phases separate (like oil and vinegar), allowing recovery of concentrated REEs
+Solvent extraction operates on mass transfer between two immiscible phases:
+
+1.  An aqueous solution containing REE ions is mixed with an organic phase containing extractant molecules
+2.  REEs selectively transfer to the organic phase, forming complexes with extractant molecules
+3.  The phases separate (like oil and vinegar), allowing recovery of concentrated REEs
 
 #### 2.1.2 Commercial Extractants
-Key industrial extractants include: - **D2EHPA** (Di-2-ethylhexyl phosphoric acid) - **PC88A/HEHEHP** (2-ethylhexyl phosphonic acid mono-2-ethylhexyl ester) - industrial standard - **Versatic 10** (neodecanoic acid) - **TBP** (Tributyl phosphate) - **Aliquat 336** (quaternary ammonium salt) - **Cyanex® 572** - emerging alternative that reduces acid consumption by \>30% compared to PC88A
+Key industrial extractants include:
+
+- **D2EHPA** (Di-2-ethylhexyl phosphoric acid)
+- **PC88A/HEHEHP** (2-ethylhexyl phosphonic acid mono-2-ethylhexyl ester) - industrial standard
+- **Versatic 10** (neodecanoic acid)
+- **TBP** (Tributyl phosphate)
+- **Aliquat 336** (quaternary ammonium salt)
+- **Cyanex® 572** - emerging alternative that reduces acid consumption by \>30% compared to PC88A
 
 #### 2.1.3 Industrial Scale
 - Up to **hundreds of stages** of mixer-settlers may be required
@@ -38,15 +64,28 @@ Key industrial extractants include: - **D2EHPA** (Di-2-ethylhexyl phosphoric aci
 - For optical/phosphor-grade materials (5-6 nines purity), ion exchange post-processing is required
 
 #### 2.1.4 Separation Groups
-Industrial processes typically separate REEs into groups: - **Light REEs (LREEs)**: La, Ce, Pr, Nd - **Medium REEs**: Sm, Eu, Gd - **Heavy REEs (HREEs)**: Tb, Dy, Ho, Er, Tm, Yb, Lu, Y
+Industrial processes typically separate REEs into groups:
+
+- **Light REEs (LREEs)**: La, Ce, Pr, Nd
+- **Medium REEs**: Sm, Eu, Gd
+- **Heavy REEs (HREEs)**: Tb, Dy, Ho, Er, Tm, Yb, Lu, Y
 
 ### 2.2 Ion Exchange
 Ion exchange was the predominant method before the 1960s and remains important for ultra-high purity applications ([ScienceDirect](https://www.sciencedirect.com/science/article/pii/S0304386X23000294)).
 
 #### 2.2.1 Conventional Ion Exchange Resins
-**Advantages:** - Capable of refining all REEs - Adaptable to various raw material compositions - Can achieve purities \>99.99999% (7 nines)
+**Advantages:**
 
-**Disadvantages:** - Low throughput - Prolonged batch processes (up to a month) - High operational costs - Low concentrations of REEs in solutions
+- Capable of refining all REEs
+- Adaptable to various raw material compositions
+- Can achieve purities \>99.99999% (7 nines)
+
+**Disadvantages:**
+
+- Low throughput
+- Prolonged batch processes (up to a month)
+- High operational costs
+- Low concentrations of REEs in solutions
 
 **Resin Types:**
 
@@ -68,23 +107,50 @@ Magnetic adsorbents combine polymer ion-exchange functionality with magnetic par
 | Core-shell | Magnetic core with polymer shell | High magnetic response |
 | Composite | Magnetic particles dispersed in polymer matrix | Tunable properties |
 
-**Functional Groups:** - Sulfonic acid groups for general cation exchange - Chelating groups (iminodiacetic acid, EDTA-type) for selectivity - Phosphonic acid groups for enhanced REE binding
+**Functional Groups:**
 
-**Operational Benefits:** - Magnetic collection after use eliminates filtration/centrifugation - Rapid solid-liquid separation - Reusable through desorption and regeneration - Demonstrated for heavy metal removal (Cu²⁺, Pb²⁺) with translation to REE recovery
+- Sulfonic acid groups for general cation exchange
+- Chelating groups (iminodiacetic acid, EDTA-type) for selectivity
+- Phosphonic acid groups for enhanced REE binding
+
+**Operational Benefits:**
+
+- Magnetic collection after use eliminates filtration/centrifugation
+- Rapid solid-liquid separation
+- Reusable through desorption and regeneration
+- Demonstrated for heavy metal removal (Cu²⁺, Pb²⁺) with translation to REE recovery
 
 #### 2.2.3 Polymer Inclusion Beads (µPIBs)
 Micro polymer inclusion beads represent a recent advance for online separation of critical rare-earth elements from end-of-life permanent magnets ([Separation and Purification Technology](https://www.sciencedirect.com/science/article/pii/S1383586623024450)).
 
-**Features:** - Functionalized polymer phase for selective REE binding - Magnetic responsiveness for easy recovery - Designed specifically for magnet recycling applications - Online separation capability
+**Features:**
 
-**Target Applications:** - NdFeB permanent magnet recycling - Recovery of Nd, Pr, Dy from e-waste - Separation of critical REEs from non-critical elements
+- Functionalized polymer phase for selective REE binding
+- Magnetic responsiveness for easy recovery
+- Designed specifically for magnet recycling applications
+- Online separation capability
+
+**Target Applications:**
+
+- NdFeB permanent magnet recycling
+- Recovery of Nd, Pr, Dy from e-waste
+- Separation of critical REEs from non-critical elements
 
 #### 2.2.4 Ion-Imprinted Polymers (IIPs)
 Ion-imprinted polymers create binding cavities complementary in size and coordination to target REE ions, enabling high selectivity ([Chemical Engineering Journal](https://www.sciencedirect.com/science/article/abs/pii/S1385894719315906)).
 
-**Imprinting Process:** 1. Template REE ion complexed with functional monomers 2. Cross-linking polymerization around template 3. Template removal creates selective cavities 4. Rebinding occurs with high specificity
+**Imprinting Process:**
 
-**Multi-Ion Imprinted Polymers (MIIPs):** Recent developments enable simultaneous imprinting for multiple REEs: - Cavities for both light and heavy REEs - Group selectivity (LREE vs. HREE) - Higher capacity than single-ion IIPs
+1.  Template REE ion complexed with functional monomers
+2.  Cross-linking polymerization around template
+3.  Template removal creates selective cavities
+4.  Rebinding occurs with high specificity
+
+**Multi-Ion Imprinted Polymers (MIIPs):** Recent developments enable simultaneous imprinting for multiple REEs:
+
+- Cavities for both light and heavy REEs
+- Group selectivity (LREE vs. HREE)
+- Higher capacity than single-ion IIPs
 
 **Performance Characteristics:**
 
@@ -98,11 +164,22 @@ Ion-imprinted polymers create binding cavities complementary in size and coordin
 #### 2.2.5 Advanced Chelating Resins
 Modern chelating resins offer improved selectivity through tailored functional groups:
 
-**Aminophosphonic Acid Resins:** - Strong affinity for trivalent REEs - pH-dependent selectivity - Effective for HREE enrichment
+**Aminophosphonic Acid Resins:**
 
-**Diglycolamic Acid Resins:** - Selective for middle and heavy REEs - Applied in spent nuclear fuel processing - High radiation stability
+- Strong affinity for trivalent REEs
+- pH-dependent selectivity
+- Effective for HREE enrichment
 
-**Bis-picolinic Acid Resins:** - Exceptionally high selectivity for Am/Cm over lanthanides - Used in minor actinide separations
+**Diglycolamic Acid Resins:**
+
+- Selective for middle and heavy REEs
+- Applied in spent nuclear fuel processing
+- High radiation stability
+
+**Bis-picolinic Acid Resins:**
+
+- Exceptionally high selectivity for Am/Cm over lanthanides
+- Used in minor actinide separations
 
 ### 2.3 Precipitation and Crystallization
 Precipitation is a fundamental and cost-effective method for group separation of REEs, capable of producing high-purity products when properly optimized. The technique exploits differences in solubility of REE salts with various precipitants ([MDPI Minerals 2020](https://www.mdpi.com/2075-163X/10/2/178)).
@@ -128,7 +205,13 @@ Oxalic acid is the most widely used precipitant for high-purity REE recovery due
 
     2RE³⁺ + 3C₂O₄²⁻ + 10H₂O → RE₂(C₂O₄)₃·10H₂O ↓
 
-**Key Characteristics:** - Requires **1.5 mol oxalic acid per mol REE** - Product purity: **\>98% REE oxides** after roasting - Avoids co-precipitation of nickel (5× less water for washing vs. hydroxide route) - Limited in further aqueous processing due to poor solubility - Ideal for thermal processing pathways
+**Key Characteristics:**
+
+- Requires **1.5 mol oxalic acid per mol REE**
+- Product purity: **\>98% REE oxides** after roasting
+- Avoids co-precipitation of nickel (5× less water for washing vs. hydroxide route)
+- Limited in further aqueous processing due to poor solubility
+- Ideal for thermal processing pathways
 
 **pH-Dependent Behavior:** Oxalate forms soluble REE complexes at low pH and precipitates as pH increases. The saturation index of REE-oxalate decreases at higher pH due to competition with hydroxide precipitation:
 
@@ -142,7 +225,11 @@ Oxalic acid is the most widely used precipitant for high-purity REE recovery due
 #### 2.3.3 Hydroxide Precipitation
 Hydroxide precipitation exploits the decreasing solubility of lanthanide hydroxides from La to Lu as ionic radii decrease ([OLI Systems](https://olisystems.com/resources/blog/modeling-phase-equilibria-and-recovery-of-rare-earth-elements-with-hydroxide-and-organic-ligands/)).
 
-**Solubility Trends:** - Solubilities show greatest variability in pH 3-9 range - Above pH 9.5, all REE hydroxides have similar low solubility - Precipitation pH threshold varies systematically across lanthanide series
+**Solubility Trends:**
+
+- Solubilities show greatest variability in pH 3-9 range
+- Above pH 9.5, all REE hydroxides have similar low solubility
+- Precipitation pH threshold varies systematically across lanthanide series
 
 **Industrial pH Thresholds:**
 
@@ -156,41 +243,79 @@ Hydroxide precipitation exploits the decreasing solubility of lanthanide hydroxi
 | Heavy REEs    | 7.0-8.0          | Slightly higher pH         |
 | Y             | 6.5-7.5          | Behaves as HREE            |
 
-**Staged Hydroxide Precipitation:** Industrial processes use multi-stage precipitation to sequentially remove impurities before REE recovery: 1. **Stage 1 (pH 3-4)**: Remove Fe, Al, Th 2. **Stage 2 (pH 4.5-5.5)**: Remove remaining Th, U 3. **Stage 3 (pH 6.5-8)**: Precipitate REEs
+**Staged Hydroxide Precipitation:** Industrial processes use multi-stage precipitation to sequentially remove impurities before REE recovery:
+
+1.  **Stage 1 (pH 3-4)**: Remove Fe, Al, Th
+2.  **Stage 2 (pH 4.5-5.5)**: Remove remaining Th, U
+3.  **Stage 3 (pH 6.5-8)**: Precipitate REEs
 
 Over **99% REE precipitation** achieved at pH 6.5, though some Al and \~40% Fe co-precipitate.
 
-**Limitations:** - Poor selectivity for metal ions (Fe²⁺, Mn²⁺, Zn²⁺) in pH 6-8 range - Only \~70% REE recovery at circumneutral pH using NaOH alone - Ammonium hydroxide suppresses REE precipitation up to pH 8
+**Limitations:**
+
+- Poor selectivity for metal ions (Fe²⁺, Mn²⁺, Zn²⁺) in pH 6-8 range
+- Only \~70% REE recovery at circumneutral pH using NaOH alone
+- Ammonium hydroxide suppresses REE precipitation up to pH 8
 
 #### 2.3.4 Carbonate and Bicarbonate Precipitation
 Carbonate precipitation offers a cost-effective alternative with good REE recovery ([Springer 2025](https://link.springer.com/article/10.1007/s40831-025-01173-5)).
 
-**Advantages:** - Carbonates readily available and inexpensive - Precipitates easily dissolved in mild acid for further purification - Particularly effective at high pH - Na₂CO₃ found most effective for AMD treatment considering cost and performance
+**Advantages:**
 
-**Staged Carbonate Precipitation from AMD:** A three-stage process developed for acid mine drainage: 1. **Stage 1**: Selective Al precipitation via CO₂ mineralization 2. **Stage 2**: REE precipitation at controlled pH 3. **Stage 3**: Co-Mn precipitation via oxidative or ammoniacal treatment
+- Carbonates readily available and inexpensive
+- Precipitates easily dissolved in mild acid for further purification
+- Particularly effective at high pH
+- Na₂CO₃ found most effective for AMD treatment considering cost and performance
+
+**Staged Carbonate Precipitation from AMD:** A three-stage process developed for acid mine drainage:
+
+1.  **Stage 1**: Selective Al precipitation via CO₂ mineralization
+2.  **Stage 2**: REE precipitation at controlled pH
+3.  **Stage 3**: Co-Mn precipitation via oxidative or ammoniacal treatment
 
 No interference observed between Al and REE precipitation stages when using Na₂CO₃, unlike hydroxide precipitation.
 
 #### 2.3.5 Double Sulfate Precipitation
 Double sulfate salts (Na₂SO₄·RE₂(SO₄)₃·nH₂O) exploit differential solubility between light and heavy REEs.
 
-**Selectivity:** - LREEs form less soluble double sulfates - Effective for separating cerium earths from yttrium earths - Most direct recovery method for La, Ce, Nd, Pr from NiMH battery leachates
+**Selectivity:**
 
-**Process Conditions:** - Sodium sulfate addition to REE-bearing sulfate solutions - Temperature and concentration control critical - Yields LREE-enriched precipitate with \~57% light REE recovery
+- LREEs form less soluble double sulfates
+- Effective for separating cerium earths from yttrium earths
+- Most direct recovery method for La, Ce, Nd, Pr from NiMH battery leachates
+
+**Process Conditions:**
+
+- Sodium sulfate addition to REE-bearing sulfate solutions
+- Temperature and concentration control critical
+- Yields LREE-enriched precipitate with \~57% light REE recovery
 
 #### 2.3.6 Fluoride Precipitation
 Fluoride forms strong complexes with REEs, enabling effective precipitation as REF₃ ([Alfa Chemistry](https://www.alfa-chemistry.com/resources/preparation-method-of-rare-earth-fluoride.html)).
 
-**Synthesis Methods:** 1. **Hydrofluoric acid precipitation-vacuum dehydration** 2. **Hydrofluoride fluorination** 3. **Ammonium hydrogen fluoride (NH₄HF₂) fluorination**
+**Synthesis Methods:**
 
-**Applications:** - REE concentration from dilute solutions - Production of REE fluorides for molten salt electrolysis - Recovery from electrolytic slag (Nd, Pr, Dy precipitation rates \>87%)
+1.  **Hydrofluoric acid precipitation-vacuum dehydration**
+2.  **Hydrofluoride fluorination**
+3.  **Ammonium hydrogen fluoride (NH₄HF₂) fluorination**
+
+**Applications:**
+
+- REE concentration from dilute solutions
+- Production of REE fluorides for molten salt electrolysis
+- Recovery from electrolytic slag (Nd, Pr, Dy precipitation rates \>87%)
 
 **Caution:** HF handling requires specialized safety protocols.
 
 #### 2.3.7 Phosphate Precipitation
 Phosphate is a powerful precipitant, ranking second only to oxalate in effectiveness.
 
-**Characteristics:** - Disodium hydrogen phosphate (Na₂HPO₄) used for selective precipitation - Increases REE precipitation yield at lower pH values - Can separate REEs from sulfate liquors containing Th⁴⁺ and UO₂²⁺ - Produces rare earth phosphate (REPO₄) intermediate products
+**Characteristics:**
+
+- Disodium hydrogen phosphate (Na₂HPO₄) used for selective precipitation
+- Increases REE precipitation yield at lower pH values
+- Can separate REEs from sulfate liquors containing Th⁴⁺ and UO₂²⁺
+- Produces rare earth phosphate (REPO₄) intermediate products
 
 #### 2.3.8 Selective Oxidative Precipitation of Cerium
 Cerium separation by oxidation to Ce(IV) is a critical first step in REE purification, as Ce typically comprises up to 50% of ore REE content ([Hydrometallurgy 2024](https://www.sciencedirect.com/science/article/pii/S0304386X24001579)).
@@ -218,22 +343,49 @@ Cerium separation by oxidation to Ce(IV) is a critical first step in REE purific
 | H₂O₂ stoichiometry    | 1.5-2× excess      | REE losses \<5%               |
 | Ce(OH)₄ precipitation | Fast, quantitative | Rate-limiting: Ce³⁺ oxidation |
 
-**Industrial Molycorp Process:** 1. Calcination of bastnaesite at 620°C to oxidize Ce³⁺ to Ce⁴⁺ 2. Acidic treatment with 30% HCl to leach trivalent lanthanides 3. Filtration yields solid CeO₂ concentrate and LREE solution
+**Industrial Molycorp Process:**
 
-**Recent Advances:** - **\>99.8% selective Ce precipitation** achieved using KMnO₄ - Co-precipitation of other REEs maintained below 1.5% - Manganese ferrite adsorbents for Ce(IV) separation from highly acidic solutions
+1.  Calcination of bastnaesite at 620°C to oxidize Ce³⁺ to Ce⁴⁺
+2.  Acidic treatment with 30% HCl to leach trivalent lanthanides
+3.  Filtration yields solid CeO₂ concentrate and LREE solution
+
+**Recent Advances:**
+
+- **\>99.8% selective Ce precipitation** achieved using KMnO₄
+- Co-precipitation of other REEs maintained below 1.5%
+- Manganese ferrite adsorbents for Ce(IV) separation from highly acidic solutions
 
 #### 2.3.9 Ligand-Assisted Selective Precipitation
 Organic ligands and complexing agents enable enhanced selectivity in REE precipitation, representing an emerging approach for challenging separations ([Nature Communications 2022](https://www.nature.com/articles/s41467-022-32178-3), [JACS Au 2023](https://pubs.acs.org/doi/10.1021/jacsau.2c00671)).
 
-**Supramolecular Encapsulation:** Pre-organized triamidoarene platforms selectively precipitate light REE nitratometalates as supramolecular capsules under acidic biphasic conditions: - Intra- and intermolecular hydrogen bonds dictate selectivity - Promotes precipitation and facilitates REE release - Receptor can be recycled
+**Supramolecular Encapsulation:** Pre-organized triamidoarene platforms selectively precipitate light REE nitratometalates as supramolecular capsules under acidic biphasic conditions:
 
-**"Tug of War" Strategy:** Employs competing ligands with opposite selectivity profiles: - **Lipophilic ligand** (oil-soluble diglycolamide): Binds heavy lanthanides - **Hydrophilic ligand** (water-soluble bis-lactam-1,10-phenanthroline): Binds light lanthanides - Result: **Quantitative separation** of lightest (La-Nd) and heaviest (Ho-Lu) lanthanides
+- Intra- and intermolecular hydrogen bonds dictate selectivity
+- Promotes precipitation and facilitates REE release
+- Receptor can be recycled
 
-**Aminobis(phosphonate) Precipitants:** Alkyl-substituted aminobis(phosphonates) offer exceptional selectivity: - Recover Th and U from REE concentrates in **15 minutes** - Separation of adjacent lanthanides comparable or superior to oxalates - Particularly effective for radioactive element removal
+**"Tug of War" Strategy:** Employs competing ligands with opposite selectivity profiles:
 
-**8-Hydroxyquinoline for Aluminum Removal:** - Selectively precipitates Al³⁺ from REE leaching solutions - High selectivity with good precipitate morphology - Minimal REE entrainment losses
+- **Lipophilic ligand** (oil-soluble diglycolamide): Binds heavy lanthanides
+- **Hydrophilic ligand** (water-soluble bis-lactam-1,10-phenanthroline): Binds light lanthanides
+- Result: **Quantitative separation** of lightest (La-Nd) and heaviest (Ho-Lu) lanthanides
 
-**CEPPA (3-hydroxyphenylphosphoryl propionic acid):** - At 50°C, pH 1: **90.5% RE³⁺ extraction**, only 9.5% Al³⁺ - Effective selective complexation in feed liquid
+**Aminobis(phosphonate) Precipitants:** Alkyl-substituted aminobis(phosphonates) offer exceptional selectivity:
+
+- Recover Th and U from REE concentrates in **15 minutes**
+- Separation of adjacent lanthanides comparable or superior to oxalates
+- Particularly effective for radioactive element removal
+
+**8-Hydroxyquinoline for Aluminum Removal:**
+
+- Selectively precipitates Al³⁺ from REE leaching solutions
+- High selectivity with good precipitate morphology
+- Minimal REE entrainment losses
+
+**CEPPA (3-hydroxyphenylphosphoryl propionic acid):**
+
+- At 50°C, pH 1: **90.5% RE³⁺ extraction**, only 9.5% Al³⁺
+- Effective selective complexation in feed liquid
 
 **Staged Precipitation with Ligands (AMD Processing):**
 
@@ -248,7 +400,10 @@ Organic ligands and complexing agents enable enhanced selectivity in REE precipi
 #### 2.3.10 Fractional Crystallization
 Fractional crystallization was the earliest industrial method for REE separation and remains relevant for high-purity production ([Wiley 2024](https://agupubs.onlinelibrary.wiley.com/doi/10.1002/9781119515005.ch6)).
 
-**Principle:** Solubility differences of REE double salts enable separation by temperature or evaporation control: - Less soluble compounds crystallize first - More soluble compounds concentrate in mother liquor
+**Principle:** Solubility differences of REE double salts enable separation by temperature or evaporation control:
+
+- Less soluble compounds crystallize first
+- More soluble compounds concentrate in mother liquor
 
 **Preferred Compounds:**
 
@@ -258,9 +413,18 @@ Fractional crystallization was the earliest industrial method for REE separation
 | Sm, Eu, Gd | Double magnesium nitrates |
 | Heavy REEs | Bromates, ethyl sulfates  |
 
-**Advantages:** - Simple equipment with large capacity per unit volume - No reagent addition during crystallization - Easy crystal-mother liquor separation - Capable of producing individual elements with high purity
+**Advantages:**
 
-**Disadvantages:** - Multiple (often hundreds of) crystallization stages required - Time-intensive process - Largely superseded by solvent extraction for bulk separation
+- Simple equipment with large capacity per unit volume
+- No reagent addition during crystallization
+- Easy crystal-mother liquor separation
+- Capable of producing individual elements with high purity
+
+**Disadvantages:**
+
+- Multiple (often hundreds of) crystallization stages required
+- Time-intensive process
+- Largely superseded by solvent extraction for bulk separation
 
 #### 2.3.11 Impurity Removal by Selective Precipitation
 Effective REE recovery requires prior removal of impurities through staged precipitation ([Scientific Reports 2025](https://www.nature.com/articles/s41598-025-00847-0)).
@@ -274,9 +438,17 @@ Effective REE recovery requires prior removal of impurities through staged preci
 | MgCO₃ at pH 3.6, 81°C | \~95%      | Variable                | \<3%     |
 | TRPO/SiO₂-P adsorbent | \>99%      | \>99%                   | Minimal  |
 
-**Optimal Multi-Stage Impurity Removal:** Using magnesium carbonate with H₂O₂: - Complete Fe removal at pH 3.5 - \~95% Th removal at pH 3.6 - \~65% Al removal - TREE losses under 3%
+**Optimal Multi-Stage Impurity Removal:** Using magnesium carbonate with H₂O₂:
 
-**Radioactive Impurity Considerations:** For high-purity REE products (electronics, phosphors), trace Th and U must be reduced to ppb levels: - Phosphine oxide modified adsorbents achieve separation factors \>15,000 - Equilibrium reached in 30 minutes in 0.1 M HNO₃
+- Complete Fe removal at pH 3.5
+- \~95% Th removal at pH 3.6
+- \~65% Al removal
+- TREE losses under 3%
+
+**Radioactive Impurity Considerations:** For high-purity REE products (electronics, phosphors), trace Th and U must be reduced to ppb levels:
+
+- Phosphine oxide modified adsorbents achieve separation factors \>15,000
+- Equilibrium reached in 30 minutes in 0.1 M HNO₃
 
 #### 2.3.12 Industrial Process Parameters
 **Typical Industrial Precipitation Sequence:**
@@ -289,7 +461,13 @@ Effective REE recovery requires prior removal of impurities through staged preci
 | 4     | --       | Ce⁴⁺           | Oxidant + base       |
 | 5     | 6.5-8.0  | Bulk REEs      | Oxalate or carbonate |
 
-**Key Process Considerations:** - pH control precision: ±0.2 units for selective stages - Temperature: 50-80°C improves kinetics and selectivity - Oxidant dosing: Stoichiometric excess (1.5-2×) for Ce oxidation - Aging time: 30-60 minutes for complete precipitation - Washing: Oxalate route requires 5× less water than hydroxide
+**Key Process Considerations:**
+
+- pH control precision: ±0.2 units for selective stages
+- Temperature: 50-80°C improves kinetics and selectivity
+- Oxidant dosing: Stoichiometric excess (1.5-2×) for Ce oxidation
+- Aging time: 30-60 minutes for complete precipitation
+- Washing: Oxalate route requires 5× less water than hydroxide
 
 **Recovery Rates by Method:**
 
@@ -307,12 +485,26 @@ Effective REE recovery requires prior removal of impurities through staged preci
 Membrane separation technology (MST) has emerged as an environmentally friendly alternative that addresses concerns about acidic and alkaline wastewater from traditional methods ([MDPI](https://www.mdpi.com/2077-0375/12/1/80)).
 
 #### 3.1.1 Types of Membrane Technologies
-**Liquid Membranes:** - Bulk Liquid Membranes (BLMs) - Emulsion Liquid Membranes (ELMs) - Supported Liquid Membranes (SLMs) - Hollow Fiber Supported Liquid Membranes (HFSLMs) - Electrostatic Pseudo Liquid Membranes (ESPLMs)
+**Liquid Membranes:**
 
-**Non-Liquid Membranes:** - Polymer Inclusion Membranes (PIMs) - Molecular Imprinted Membranes (MIMs) - Ion Imprinted Membranes (IIMs)
+- Bulk Liquid Membranes (BLMs)
+- Emulsion Liquid Membranes (ELMs)
+- Supported Liquid Membranes (SLMs)
+- Hollow Fiber Supported Liquid Membranes (HFSLMs)
+- Electrostatic Pseudo Liquid Membranes (ESPLMs)
+
+**Non-Liquid Membranes:**
+
+- Polymer Inclusion Membranes (PIMs)
+- Molecular Imprinted Membranes (MIMs)
+- Ion Imprinted Membranes (IIMs)
 
 #### 3.1.2 Nanofiltration and Ultrafiltration
-NF and UF membranes are particularly effective for treating acidic streams: - Allow passage of monovalent ions (H⁺, HSO₄⁻, Na⁺, NO₃⁻, Cl⁻) - Achieve high rejection of trivalent REE ions - Function effectively at very low REE concentrations
+NF and UF membranes are particularly effective for treating acidic streams:
+
+- Allow passage of monovalent ions (H⁺, HSO₄⁻, Na⁺, NO₃⁻, Cl⁻)
+- Achieve high rejection of trivalent REE ions
+- Function effectively at very low REE concentrations
 
 #### 3.1.3 Electrodialysis
 Recent research has explored electrodialysis for REE separation, using adjacent anion exchange membranes with chelating agents like EDTA. Mathematical models based on the Nernst-Planck equation have been developed to optimize Dy separation from Pr/Nd mixtures ([Nature Scientific Reports](https://www.nature.com/articles/s41598-024-62885-4)).
@@ -346,12 +538,25 @@ Self-assembled metal-organic cages exhibit high-precision metal ion self-sorting
 ### 3.4 Brief Overview of Bioseparation
 Bioseparation technologies represent a paradigm shift in REE separation, offering high selectivity with minimal environmental impact. These approaches are covered in comprehensive detail in **Section 11: Deep Dive - Biological Separation Technologies**.
 
-Key highlights include: - **Lanmodulin proteins**: 100 million-fold selectivity for lanthanides over calcium - **Lanthanide binding peptides**: Interfacial separation at air-water interfaces - **Biosurfactants**: Rhamnolipid complexation with REEs - **Microbial biosorption**: Bacteria, yeast, and algae for REE recovery - **Phytomining**: Hyperaccumulator ferns for sustainable extraction
+Key highlights include:
+
+- **Lanmodulin proteins**: 100 million-fold selectivity for lanthanides over calcium
+- **Lanthanide binding peptides**: Interfacial separation at air-water interfaces
+- **Biosurfactants**: Rhamnolipid complexation with REEs
+- **Microbial biosorption**: Bacteria, yeast, and algae for REE recovery
+- **Phytomining**: Hyperaccumulator ferns for sustainable extraction
 
 ### 3.5 Flash Joule Heating with Chlorination (FJH-Cl₂)
 A 2025 breakthrough combines flash Joule heating with chlorination for e-waste processing ([PNAS](https://www.pnas.org/doi/10.1073/pnas.2507819122)).
 
-**Performance vs. Traditional Hydrometallurgy:** - REE purity: **\>90%** - REE yield: **\>90%** in a single step - Energy consumption reduction: **87%** - Greenhouse gas emission reduction: **84%** - Operating cost reduction: **54%** - Water and acid use: **100% elimination**
+**Performance vs. Traditional Hydrometallurgy:**
+
+- REE purity: **\>90%**
+- REE yield: **\>90%** in a single step
+- Energy consumption reduction: **87%**
+- Greenhouse gas emission reduction: **84%**
+- Operating cost reduction: **54%**
+- Water and acid use: **100% elimination**
 
 ### 3.6 Water-Based Recycling (2025)
 Researchers at IOCB Prague developed a novel aqueous recycling method ([Metal Tech News](https://www.metaltechnews.com/story/2025/07/09/tech-bytes/water-based-rare-earth-recycling-emerges/2367.html)):
@@ -370,7 +575,12 @@ Developed by Oak Ridge National Laboratory and Idaho National Laboratory ([ORNL]
 - Licensed to Marshallton for commercialization
 
 ### 3.8 CSEREOX Method
-Chemical Separation of Rare-Earth Element Oxalates (CSEREOX): - Exploits different solubilities when REEs react with oxalate and organic base - LREEs precipitate first due to lower solubility - Operates at neutral pH - More environmentally friendly than acidic processes
+Chemical Separation of Rare-Earth Element Oxalates (CSEREOX):
+
+- Exploits different solubilities when REEs react with oxalate and organic base
+- LREEs precipitate first due to lower solubility
+- Operates at neutral pH
+- More environmentally friendly than acidic processes
 
 ### 3.9 Microfluidic Separation Technologies
 Microfluidic technology represents a transformative approach to REE separation, offering precise control, enhanced mass transfer, and significant process intensification. This section provides a comprehensive overview of microfluidic approaches for rare earth separation.
@@ -378,54 +588,121 @@ Microfluidic technology represents a transformative approach to REE separation, 
 #### 3.9.1 Fundamentals and Advantages
 Microfluidic liquid-phase extraction miniaturizes traditional liquid-liquid extraction within microchannels (typically tens of µm cross-section), offering several key advantages ([Lab on a Chip 2025](https://pubs.rsc.org/en/content/articlehtml/2025/lc/d5lc00387c)):
 
-**Core Benefits:** - **High surface-to-volume ratio**: Dramatically increases mass transfer rates - **Precise flow control**: Sub-second contact time resolution - **Low reagent consumption**: Minimizes chemical waste - **Rapid testing**: Enables high-throughput reagent screening - **Process intensification**: 2-3× higher extraction rates than conventional methods
+**Core Benefits:**
+
+- **High surface-to-volume ratio**: Dramatically increases mass transfer rates
+- **Precise flow control**: Sub-second contact time resolution
+- **Low reagent consumption**: Minimizes chemical waste
+- **Rapid testing**: Enables high-throughput reagent screening
+- **Process intensification**: 2-3× higher extraction rates than conventional methods
 
 **Performance Metrics:** \| Parameter \| Microfluidic \| Conventional Mixer-Settler \| \|-----------\|-------------\|---------------------------\| \| Extraction time \| \<10 seconds \| \~25 minutes \| \| Extraction rate \| 2-3× higher \| Baseline \| \| Contact time control \| Sub-second \| Minutes \| \| Reagent consumption \| Minimal \| High \|
 
 #### 3.9.2 Flow Regimes and Configurations
 Microfluidic extractors operate in the laminar flow regime (Reynolds number \<2300), with several distinct configurations ([ScienceDirect](https://www.sciencedirect.com/science/article/abs/pii/S0009250916301658)):
 
-**Co-Laminar (Parallel) Flow:** - Both phases flow as continuous streams - Stable interface maintained between phases - Limited to relatively low phase ratios (5:1 to 1:5) - Mass transfer via diffusion across interface
+**Co-Laminar (Parallel) Flow:**
 
-**Droplet/Slug Flow:** - Dispersed phase forms discrete droplets in continuous phase - Internal circulation within droplets enhances mixing - Higher mass transfer efficiency: 86.9-94.8% - Suitable for small-to-medium scale applications
+- Both phases flow as continuous streams
+- Stable interface maintained between phases
+- Limited to relatively low phase ratios (5:1 to 1:5)
+- Mass transfer via diffusion across interface
 
-**Micro-Droplet Flow:** - Highest mass transfer efficiency: 92.9-97.4% - Large specific surface area - Excellent for high-selectivity separation of trace REEs
+**Droplet/Slug Flow:**
 
-**Pore-Throat Microchannels:** - Sequential pore-throat geometry creates capillary barriers - Retains dispersed droplets for enhanced contact - Achieves equilibrium within 30 seconds at phase ratios of 50-250 - At extreme 500:1 phase ratio: 77% extraction efficiency
+- Dispersed phase forms discrete droplets in continuous phase
+- Internal circulation within droplets enhances mixing
+- Higher mass transfer efficiency: 86.9-94.8%
+- Suitable for small-to-medium scale applications
+
+**Micro-Droplet Flow:**
+
+- Highest mass transfer efficiency: 92.9-97.4%
+- Large specific surface area
+- Excellent for high-selectivity separation of trace REEs
+
+**Pore-Throat Microchannels:**
+
+- Sequential pore-throat geometry creates capillary barriers
+- Retains dispersed droplets for enhanced contact
+- Achieves equilibrium within 30 seconds at phase ratios of 50-250
+- At extreme 500:1 phase ratio: 77% extraction efficiency
 
 #### 3.9.3 Droplet-Based Microfluidic Systems
 Droplet microfluidics has emerged as a powerful platform for REE separation ([Chemical Engineering Journal](https://www.sciencedirect.com/science/article/abs/pii/S1385894718317509)):
 
-**Flow-Focusing Droplet Microreactors:** Research on Dy-La binary separation systems demonstrates exceptional performance: - Monodispersed aqueous droplets with high interfacial area - Residence times: 3-60 seconds - At pH 1: **90% dysprosium extraction** - **Separation factor: 279** achieved - Nearly complete Dy/La separation
+**Flow-Focusing Droplet Microreactors:** Research on Dy-La binary separation systems demonstrates exceptional performance:
+
+- Monodispersed aqueous droplets with high interfacial area
+- Residence times: 3-60 seconds
+- At pH 1: **90% dysprosium extraction**
+- **Separation factor: 279** achieved
+- Nearly complete Dy/La separation
 
 **Hollow Droplet Systems:** Fast extraction and enrichment from wastewater using hollow droplets enables rapid REE recovery from dilute solutions ([Separation and Purification Technology](https://www.sciencedirect.com/science/article/abs/pii/S1383586616312576)).
 
-**Janus Nanoparticle-Enhanced Systems:** Snowman-shaped magnetic Janus nanoparticles added as emulsifiers provide: - Uniform extractant dispersion - Rapid phase separation - Good emulsification performance after 3+ cycles - Feasible path for low-concentration REE enrichment
+**Janus Nanoparticle-Enhanced Systems:** Snowman-shaped magnetic Janus nanoparticles added as emulsifiers provide:
+
+- Uniform extractant dispersion
+- Rapid phase separation
+- Good emulsification performance after 3+ cycles
+- Feasible path for low-concentration REE enrichment
 
 #### 3.9.4 Electrophoretic Microfluidic Separation
 Electrophoretic techniques offer exceptional resolution for lanthanide separation on microfluidic platforms:
 
-**Isotachophoresis (ITP) on Chip:** ITP can separate up to **14 lanthanides** from a homogeneous sample into elementally pure bands ([Analytica Chimica Acta](https://www.sciencedirect.com/science/article/abs/pii/S0003267020308886)): - PMMA microchips with contactless conductivity detection (C4D) - Complexing agents: acetate and α-hydroxyisobutyric acid (HIBA) - Eight lanthanides concentrated within \~6 minutes - Chip-to-ICP-MS interface enables elemental analysis
+**Isotachophoresis (ITP) on Chip:** ITP can separate up to **14 lanthanides** from a homogeneous sample into elementally pure bands ([Analytica Chimica Acta](https://www.sciencedirect.com/science/article/abs/pii/S0003267020308886)):
 
-**Capillary Zone Electrophoresis (CZE):** Complete separation of all 14 lanthanide ions achieved ([Journal of Chromatographic Science](https://academic.oup.com/chromsci/article/55/4/465/2712537)): - Buffer: 4.5 mM 2-hydroxyisobutyric acid + 1 mM acetic acid (pH 4.5) - Separation time: **\<6 minutes** - Indirect UV detection using creatinine
+- PMMA microchips with contactless conductivity detection (C4D)
+- Complexing agents: acetate and α-hydroxyisobutyric acid (HIBA)
+- Eight lanthanides concentrated within \~6 minutes
+- Chip-to-ICP-MS interface enables elemental analysis
 
-**Ligand-Assisted Enhancement:** Iminodiacetic acid (IDA) greatly enhances light/heavy lanthanide separation: - Tridentate coordination with light lanthanides - Bidentate coordination with heavy lanthanides - Significantly improved selectivity
+**Capillary Zone Electrophoresis (CZE):** Complete separation of all 14 lanthanide ions achieved ([Journal of Chromatographic Science](https://academic.oup.com/chromsci/article/55/4/465/2712537)):
+
+- Buffer: 4.5 mM 2-hydroxyisobutyric acid + 1 mM acetic acid (pH 4.5)
+- Separation time: **\<6 minutes**
+- Indirect UV detection using creatinine
+
+**Ligand-Assisted Enhancement:** Iminodiacetic acid (IDA) greatly enhances light/heavy lanthanide separation:
+
+- Tridentate coordination with light lanthanides
+- Bidentate coordination with heavy lanthanides
+- Significantly improved selectivity
 
 #### 3.9.5 Scale-Up: Numbering-Up Approach
 Unlike conventional scale-up (making vessels larger), microfluidics uses "numbering-up" (parallelization) to increase throughput while maintaining performance ([Minerals Engineering](https://www.sciencedirect.com/science/article/abs/pii/S0892687522001467)):
 
 **Numbering-Up Strategies:** \| Type \| Description \| Advantages \| \|------\|-------------\|------------\| \| Internal \| Parallel channels within single device \| Hardware efficient \| \| External \| Multiple complete systems in parallel \| Simpler implementation \|
 
-**Pilot-Scale Demonstrations:** - Multistream microchips numbered-up for industrial leach solutions - **100-fold scale-up** achieved without losing extraction efficiency - Three-stage counter-current circuits demonstrated - Throughput: **up to 1 L/h** (orders of magnitude higher than previous reports) - Platinum and REE extraction from acid ore leach solutions
+**Pilot-Scale Demonstrations:**
 
-**Successful REE Extractions:** - Nd(III) equilibrium achieved within **1.5 seconds** in microreactor - High-value metal (Pt, REEs) separation maintained at pilot scale - Counter-current operation validated
+- Multistream microchips numbered-up for industrial leach solutions
+- **100-fold scale-up** achieved without losing extraction efficiency
+- Three-stage counter-current circuits demonstrated
+- Throughput: **up to 1 L/h** (orders of magnitude higher than previous reports)
+- Platinum and REE extraction from acid ore leach solutions
+
+**Successful REE Extractions:**
+
+- Nd(III) equilibrium achieved within **1.5 seconds** in microreactor
+- High-value metal (Pt, REEs) separation maintained at pilot scale
+- Counter-current operation validated
 
 #### 3.9.6 Mini-Channel Counter-Current Extractors
 For intermediate scale, mini-channel extractors (4-6 mm diameter) bridge the gap between microfluidics and conventional equipment ([Separation and Purification Technology](https://www.sciencedirect.com/science/article/abs/pii/S1383586623028381)):
 
-**Design Parameters:** - Channel length \>250 mm provides \>1 extraction stage - Guidance for novel extractor design - Improved REE extraction efficiency
+**Design Parameters:**
 
-**Novel Continuous Countercurrent Micro-Extractor:** Hydrodynamic characteristics studied for continuous operation, addressing the challenges of: - Large input/output volumes - Time delays - Nonlinear, multivariable behavior
+- Channel length \>250 mm provides \>1 extraction stage
+- Guidance for novel extractor design
+- Improved REE extraction efficiency
+
+**Novel Continuous Countercurrent Micro-Extractor:** Hydrodynamic characteristics studied for continuous operation, addressing the challenges of:
+
+- Large input/output volumes
+- Time delays
+- Nonlinear, multivariable behavior
 
 #### 3.9.7 Scandium Recovery from Red Mud
 A specific application demonstrating microfluidic strategy for rapid Sc extraction from red mud (bauxite residue) shows the technology's applicability to industrial waste streams ([Separation and Purification Technology 2025](https://www.sciencedirect.com/science/article/abs/pii/S138358662502307X)).
@@ -433,9 +710,20 @@ A specific application demonstrating microfluidic strategy for rapid Sc extracti
 #### 3.9.8 "Mine-on-a-Chip" Vision
 The concept of "mine-on-a-chip" envisions leveraging microfluidics for critical materials recovery ([Lab on a Chip 2025](https://pubs.rsc.org/en/content/articlehtml/2025/lc/d5lc00387c)):
 
-**Opportunities:** - Materials characterization at microscale - Reagent screening and optimization - Process development with minimal material - Analytical sample preparation - Rapid separation method development
+**Opportunities:**
 
-**Challenges Addressed:** - Natural REE co-occurrence - Association with major cations (Ca, Al, Fe) - Co-existence with radionuclides - Physicochemical similarity across lanthanide series
+- Materials characterization at microscale
+- Reagent screening and optimization
+- Process development with minimal material
+- Analytical sample preparation
+- Rapid separation method development
+
+**Challenges Addressed:**
+
+- Natural REE co-occurrence
+- Association with major cations (Ca, Al, Fe)
+- Co-existence with radionuclides
+- Physicochemical similarity across lanthanide series
 
 #### 3.9.9 Comparison of Microfluidic Configurations
 | Configuration | Mass Transfer | Phase Ratio | Scale | Best Application |
@@ -447,9 +735,20 @@ The concept of "mine-on-a-chip" envisions leveraging microfluidics for critical 
 | Electrophoretic | Excellent resolution | N/A | Analytical | 14-element separation |
 
 #### 3.9.10 Current Limitations and Future Directions
-**Challenges:** - Maintaining stable interfaces at high phase ratios - Fouling and clogging with real feedstocks - Integration with upstream/downstream processes - Cost of precision fabrication at scale
+**Challenges:**
 
-**Future Developments:** - Machine learning for flow optimization - 3D-printed microfluidic devices for rapid prototyping - Integration with online analytics (ICP-MS, etc.) - Hybrid systems combining multiple flow regimes - Automated multi-stage counter-current operation
+- Maintaining stable interfaces at high phase ratios
+- Fouling and clogging with real feedstocks
+- Integration with upstream/downstream processes
+- Cost of precision fabrication at scale
+
+**Future Developments:**
+
+- Machine learning for flow optimization
+- 3D-printed microfluidic devices for rapid prototyping
+- Integration with online analytics (ICP-MS, etc.)
+- Hybrid systems combining multiple flow regimes
+- Automated multi-stage counter-current operation
 
 ### 3.10 Supercritical Fluid Extraction (SFE)
 Supercritical fluid extraction using carbon dioxide (sc-CO₂) offers an environmentally benign alternative to conventional hydrometallurgical processes, eliminating organic solvents and aqueous acid waste streams while achieving high extraction efficiencies.
@@ -457,7 +756,11 @@ Supercritical fluid extraction using carbon dioxide (sc-CO₂) offers an environ
 #### 3.10.1 Fundamentals and Principles
 Supercritical CO₂ (critical point: 31.1°C, 7.38 MPa) is an attractive solvent for REE extraction due to its unique properties ([Anal. Chem. 1994](https://pubs.acs.org/doi/10.1021/ac00066a027)):
 
-**Requirements for Metal Dissolution in sc-CO₂:** 1. **Charge neutralization**: Metal ions must be rendered electrically neutral 2. **Coordinative saturation**: Metal must be coordinatively satisfied 3. **Lipophilicity**: Resulting metal-ligand complex must be nonpolar
+**Requirements for Metal Dissolution in sc-CO₂:**
+
+1.  **Charge neutralization**: Metal ions must be rendered electrically neutral
+2.  **Coordinative saturation**: Metal must be coordinatively satisfied
+3.  **Lipophilicity**: Resulting metal-ligand complex must be nonpolar
 
 Direct extraction of charged REE³⁺ ions by sc-CO₂ is inefficient because CO₂ is a weak Lewis base. Therefore, chelating agents are dissolved in the supercritical phase to form CO₂-soluble metal complexes.
 
@@ -466,15 +769,35 @@ Direct extraction of charged REE³⁺ ions by sc-CO₂ is inefficient because CO
 #### 3.10.2 Chelating Agents and Extractant Systems
 Several extractant systems have been developed for REE extraction in sc-CO₂ ([OSTI 1995](https://www.osti.gov/biblio/7243167)):
 
-**TBP-HNO₃ Adduct System:** The tributyl phosphate-nitric acid system is the most extensively studied ([INL 2017](https://inldigitallibrary.inl.gov/sites/sti/sti/Sort_7228.pdf)): - Nitrate anions bond with Ln³⁺ to form nitrate salts - TBP molecules substitute coordinated water - Forms CO₂-soluble Ln(NO₃)₃·nTBP complexes - Optimal H⁺ concentration: \~4 mol/L - Fastest extraction kinetics among tested systems
+**TBP-HNO₃ Adduct System:** The tributyl phosphate-nitric acid system is the most extensively studied ([INL 2017](https://inldigitallibrary.inl.gov/sites/sti/sti/Sort_7228.pdf)):
 
-**Fluorinated β-Diketones:** - Hexafluoroacetylacetone (HFA, pKa = 4.4) - Thenoyltrifluoroacetone (TTA) - 2,2-dimethyl-6,6,7,7,8,8,8-heptafluoro-3,5-octanedione (FOD) - Exhibit strong synergistic effect with TBP - Quantitative extraction (92-98%) from solid matrices at 60°C, 150 atm
+- Nitrate anions bond with Ln³⁺ to form nitrate salts
+- TBP molecules substitute coordinated water
+- Forms CO₂-soluble Ln(NO₃)₃·nTBP complexes
+- Optimal H⁺ concentration: \~4 mol/L
+- Fastest extraction kinetics among tested systems
+
+**Fluorinated β-Diketones:**
+
+- Hexafluoroacetylacetone (HFA, pKa = 4.4)
+- Thenoyltrifluoroacetone (TTA)
+- 2,2-dimethyl-6,6,7,7,8,8,8-heptafluoro-3,5-octanedione (FOD)
+- Exhibit strong synergistic effect with TBP
+- Quantitative extraction (92-98%) from solid matrices at 60°C, 150 atm
 
 **Synergistic TBP-β-Diketone Systems:** \| Extractant Combination \| Conditions \| REE Recovery \| \|----------------------\|------------\|--------------\| \| TBP + TTA (2.7:3.2 mol%) \| 65°C, 20 MPa \| 88% Am, 69% Pu \| \| TBP + HFA (5.3:6.8 mol%) \| 95°C, 26 MPa \| 95% Am, 83% Pu \| \| TBP-HNO₃ (4M H⁺) \| 65°C, 34 MPa \| \>99% REE \|
 
-**Fluorinated Organophosphates:** Recent advances in fluorinated tributyl phosphate derivatives (TFPs) show enhanced CO₂ solubility ([ACS Sustainable Res. Manage. 2024](https://pubs.acs.org/doi/10.1021/acssusresmgt.4c00122)): - TFPC4 solubility: 8.82 mmol/mol CO₂ - Compared to CMPO: 5.41 mmol/mol CO₂ - Compared to DIDPA: 2.49 mmol/mol CO₂
+**Fluorinated Organophosphates:** Recent advances in fluorinated tributyl phosphate derivatives (TFPs) show enhanced CO₂ solubility ([ACS Sustainable Res. Manage. 2024](https://pubs.acs.org/doi/10.1021/acssusresmgt.4c00122)):
 
-**Crown Ethers and Calixarenes:** - DC18C6 (dicyclohexano-18-crown-6) for Cs/Sr separation - Calixarene-crown ethers for selective Cs extraction - Research ongoing for REE applications
+- TFPC4 solubility: 8.82 mmol/mol CO₂
+- Compared to CMPO: 5.41 mmol/mol CO₂
+- Compared to DIDPA: 2.49 mmol/mol CO₂
+
+**Crown Ethers and Calixarenes:**
+
+- DC18C6 (dicyclohexano-18-crown-6) for Cs/Sr separation
+- Calixarene-crown ethers for selective Cs extraction
+- Research ongoing for REE applications
 
 #### 3.10.3 Ore Processing Applications
 **Bastnäsite Extraction:** Pretreatment is essential for efficient REE dissolution ([ScienceDirect 2016](https://www.sciencedirect.com/science/article/abs/pii/S089684461630403X)):
@@ -483,33 +806,75 @@ Several extractant systems have been developed for REE extraction in sc-CO₂ ([
 
 *NaOH-Digested Bastnäsite (caustic cracking):* \| Element \| 60 min \| 90 min \| 120 min \| \|---------\|--------\|--------\|---------\| \| La \| 81% \| 93% \| 97% \| \| Ce \| 94% \| 100% \| 100% \| \| Pr \| 91% \| 99% \| 100% \| \| Nd \| 93% \| 101% \| 101% \|
 
-The NaOH digestion route achieves near-complete extraction in shorter times due to: - Conversion of fluorocarbonates to hydroxides - Enhanced REE accessibility to chelating agents - Removal of CO₂ and fluorine barriers
+The NaOH digestion route achieves near-complete extraction in shorter times due to:
 
-**Zircon-Rich Ore Processing:** Canadian ore concentrate containing REEs in zircon matrix ([ACS Sustain. Chem. Eng. 2024](https://pubs.acs.org/doi/abs/10.1021/acssuschemeng.4c04103)): - NaOH cracking pretreatment essential - Near-complete REE extraction achieved - Superior selectivity over gangue elements vs. acid leaching
+- Conversion of fluorocarbonates to hydroxides
+- Enhanced REE accessibility to chelating agents
+- Removal of CO₂ and fluorine barriers
+
+**Zircon-Rich Ore Processing:** Canadian ore concentrate containing REEs in zircon matrix ([ACS Sustain. Chem. Eng. 2024](https://pubs.acs.org/doi/abs/10.1021/acssuschemeng.4c04103)):
+
+- NaOH cracking pretreatment essential
+- Near-complete REE extraction achieved
+- Superior selectivity over gangue elements vs. acid leaching
 
 #### 3.10.4 Secondary Source Processing
-**Coal Ash Extraction:** Coal ash contains 270-1480 ppm REEs and represents a significant secondary resource ([U. Alaska Fairbanks 2024](https://scholarworks.alaska.edu/handle/11122/15693)): - Anthracite, bituminous, sub-bituminous ash all amenable - Concentration factor increased to 3.23 ± 0.30 vs. acid leaching - Enhanced selectivity of REEs over impurities
+**Coal Ash Extraction:** Coal ash contains 270-1480 ppm REEs and represents a significant secondary resource ([U. Alaska Fairbanks 2024](https://scholarworks.alaska.edu/handle/11122/15693)):
 
-**Coal Byproducts (2025):** Research on coal-related materials demonstrates feasibility ([ScienceDirect 2025](https://www.sciencedirect.com/science/article/abs/pii/S0304386X2500115X)): - Chelation mechanism with synthesized organic solvents - TBP + HNO₃ extractants in sc-CO₂ - Green alternative to traditional methods
+- Anthracite, bituminous, sub-bituminous ash all amenable
+- Concentration factor increased to 3.23 ± 0.30 vs. acid leaching
+- Enhanced selectivity of REEs over impurities
 
-**Fluorescent Lamp Phosphors:** Waste fluorescent lamp luminescent materials ([ResearchGate 2011](https://www.researchgate.net/publication/223476971)): - Y and Eu extraction \>99% after 120 min - 15 MPa, 333 K (60°C) - TBP·(HNO₃)x·(H₂O)y complexes
+**Coal Byproducts (2025):** Research on coal-related materials demonstrates feasibility ([ScienceDirect 2025](https://www.sciencedirect.com/science/article/abs/pii/S0304386X2500115X)):
 
-**Acid Mine Drainage:** AMD from anthracite coal regions ([ScienceDirect 2019](https://www.sciencedirect.com/science/article/pii/S1002072119307744)): - Coagulation + complexation approach - Selective REE extraction demonstrated - Wastewater remediation co-benefit
+- Chelation mechanism with synthesized organic solvents
+- TBP + HNO₃ extractants in sc-CO₂
+- Green alternative to traditional methods
+
+**Fluorescent Lamp Phosphors:** Waste fluorescent lamp luminescent materials ([ResearchGate 2011](https://www.researchgate.net/publication/223476971)):
+
+- Y and Eu extraction \>99% after 120 min
+- 15 MPa, 333 K (60°C)
+- TBP·(HNO₃)x·(H₂O)y complexes
+
+**Acid Mine Drainage:** AMD from anthracite coal regions ([ScienceDirect 2019](https://www.sciencedirect.com/science/article/pii/S1002072119307744)):
+
+- Coagulation + complexation approach
+- Selective REE extraction demonstrated
+- Wastewater remediation co-benefit
 
 #### 3.10.5 Selectivity and Separation Factors
-**Lanthanide Size Effects:** Higher extraction rates are observed for heavier REEs due to smaller ionic radii: - Nd extraction 30-100% faster than La - This trend enables some inherent fractionation - Heavy REEs preferentially extracted
+**Lanthanide Size Effects:** Higher extraction rates are observed for heavier REEs due to smaller ionic radii:
+
+- Nd extraction 30-100% faster than La
+- This trend enables some inherent fractionation
+- Heavy REEs preferentially extracted
 
 **Selectivity Over Impurities:** \| Matrix \| REE Selectivity \| Concentration Factor \| \|--------\|----------------\|---------------------\| \| Coal fly ash \| Superior to acid leaching \| 3.23× \| \| Bastnäsite \| Excellent over Fe, Ca, Al \| \>10× \| \| AMD precipitates \| Good vs. base metals \| Variable \|
 
-**Individual REE Separation:** Achieving high separation factors between individual lanthanides remains challenging due to their chemical similarity. Current approaches: - Multi-stage extraction with optimized conditions - Temperature/pressure gradient fractionation - Sequential extraction with different chelating agents
+**Individual REE Separation:** Achieving high separation factors between individual lanthanides remains challenging due to their chemical similarity. Current approaches:
+
+- Multi-stage extraction with optimized conditions
+- Temperature/pressure gradient fractionation
+- Sequential extraction with different chelating agents
 
 #### 3.10.6 Green Chemistry Approaches
-**Citric Acid-Based Extraction:** Sandia National Laboratory developed an ultra-green approach ([Sandia 2024](https://ip.sandia.gov/opportunity/green-extraction-of-rare-earth-elements-from-coal-waste/)): - Uses only water, sc-CO₂, and food-grade citric acid - Thermodynamic and DFT modeling guided development - 42% extraction efficiency achieved - Preferential extraction of critical REEs - No hazardous reagents required
+**Citric Acid-Based Extraction:** Sandia National Laboratory developed an ultra-green approach ([Sandia 2024](https://ip.sandia.gov/opportunity/green-extraction-of-rare-earth-elements-from-coal-waste/)):
+
+- Uses only water, sc-CO₂, and food-grade citric acid
+- Thermodynamic and DFT modeling guided development
+- 42% extraction efficiency achieved
+- Preferential extraction of critical REEs
+- No hazardous reagents required
 
 **Environmental Benefits of SFE:** \| Aspect \| SFE \| Conventional Hydromet \| \|--------\|-----\|----------------------\| \| Organic solvent use \| None \| High \| \| Aqueous acid waste \| Minimal \| Large volumes \| \| CO₂ recyclability \| \>95% \| N/A \| \| Process footprint \| Compact \| Large \| \| Temperature \| Moderate (40-100°C) \| Variable \|
 
 #### 3.10.7 Process Engineering and Scale-Up
-**Reactor Configurations:** - Batch extraction vessels (lab to pilot scale) - Semi-continuous with CO₂ recirculation - Counter-current multi-stage extraction
+**Reactor Configurations:**
+
+- Batch extraction vessels (lab to pilot scale)
+- Semi-continuous with CO₂ recirculation
+- Counter-current multi-stage extraction
 
 **Industrial-Scale Design (2025 TEA Study):** Technoeconomic analysis of a 4000 L reactor facility in Ontario, Canada ([ACS I&EC Res. 2025](https://pubs.acs.org/doi/10.1021/acs.iecr.5c00324)):
 
@@ -521,12 +886,33 @@ The NaOH digestion route achieves near-complete extraction in shorter times due 
 | REE recovery   | \>95%               |
 | Purity         | Battery-grade       |
 
-**Scale-Up Considerations:** - High-pressure vessel design and safety - CO₂ compression and recycling systems - Heat integration for efficiency - Extractant recovery and regeneration - Integration with pretreatment operations
+**Scale-Up Considerations:**
+
+- High-pressure vessel design and safety
+- CO₂ compression and recycling systems
+- Heat integration for efficiency
+- Extractant recovery and regeneration
+- Integration with pretreatment operations
 
 #### 3.10.8 Advantages and Limitations
-**Advantages:** - Eliminates aqueous acid waste streams - No organic solvent consumption or emissions - Tunable solvent power via pressure/temperature - Compact process footprint - CO₂ is non-toxic, non-flammable, and recyclable - Lower environmental impact than hydrometallurgy - High selectivity over gangue elements
+**Advantages:**
 
-**Limitations:** - High capital cost for pressure equipment - Limited individual REE separation capability - Requires solid pretreatment (roasting or caustic cracking) - Extractant costs for fluorinated ligands - Scale-up challenges for very large throughputs - Current technology readiness level: pilot scale
+- Eliminates aqueous acid waste streams
+- No organic solvent consumption or emissions
+- Tunable solvent power via pressure/temperature
+- Compact process footprint
+- CO₂ is non-toxic, non-flammable, and recyclable
+- Lower environmental impact than hydrometallurgy
+- High selectivity over gangue elements
+
+**Limitations:**
+
+- High capital cost for pressure equipment
+- Limited individual REE separation capability
+- Requires solid pretreatment (roasting or caustic cracking)
+- Extractant costs for fluorinated ligands
+- Scale-up challenges for very large throughputs
+- Current technology readiness level: pilot scale
 
 #### 3.10.9 Comparison with Conventional Methods
 | Parameter             | SFE     | Solvent Extraction | Ion Exchange |
@@ -567,10 +953,18 @@ MSE is the dominant method for rare earth metal and alloy production in China ([
 - Environmental impact from fluoride systems
 
 ### 4.2 FFC Cambridge Process
-A direct electrochemical reduction of solid metal oxides in molten salts: - Developed by Chen et al. - Applied to Gd, Tb, Dy, Er, and Ce - Avoids the need for fluoride intermediates
+A direct electrochemical reduction of solid metal oxides in molten salts:
+
+- Developed by Chen et al.
+- Applied to Gd, Tb, Dy, Er, and Ce
+- Avoids the need for fluoride intermediates
 
 ### 4.3 Room Temperature Ionic Liquid Electrochemistry
-An alternative to high-temperature molten salt processes: - Lower environmental impact - Reduced energy consumption - Still under development for industrial scale
+An alternative to high-temperature molten salt processes:
+
+- Lower environmental impact
+- Reduced energy consumption
+- Still under development for industrial scale
 
 ### 4.4 Carbochlorination
 Carbochlorination is a pyrometallurgical process that converts rare earth oxides into water-soluble chlorides using carbon as a reducing agent and chlorine gas as the chlorinating agent. This technology has gained significant attention in 2024-2025 as a clean and efficient alternative to conventional hydrometallurgical processing ([Minerals Engineering 2025](https://www.sciencedirect.com/science/article/abs/pii/S0892687525004510), [Chemical Engineering Science 2025](https://www.sciencedirect.com/science/article/pii/S0009250925010656)).
@@ -583,7 +977,13 @@ The carbochlorination process utilizes the synergistic effect of carbonaceous re
     RE₂O₃ + 3C + 3Cl₂ → 2RECl₃ + 3CO     (T > 700°C)
     RE₂O₃ + 1.5C + 3Cl₂ → 2RECl₃ + 1.5CO₂  (T < 700°C)
 
-**Key Features:** - Temperature range: **500-900°C** (vs. 1200°C+ for traditional roasting) - Chlorination rates: **\>93%** under optimized conditions - Single-step conversion from oxide to water-soluble chloride - No acid/alkali reagents required - Potential for "zero discharge" of acidic wastewater
+**Key Features:**
+
+- Temperature range: **500-900°C** (vs. 1200°C+ for traditional roasting)
+- Chlorination rates: **\>93%** under optimized conditions
+- Single-step conversion from oxide to water-soluble chloride
+- No acid/alkali reagents required
+- Potential for "zero discharge" of acidic wastewater
 
 #### 4.4.2 Thermodynamics and Kinetics
 **Thermodynamic Analysis:**
@@ -606,7 +1006,11 @@ The carbochlorination kinetics exhibit distinct regimes:
 | \< 800°C          | Chemical reaction  | 187 ± 3 kJ/mol    |
 | 850-975°C         | Gas film diffusion | 105 ± 11 kJ/mol   |
 
-Research shows that direct contact between metal oxides and carbon is not necessary for effective chlorination. The reaction proceeds through gaseous intermediates, including: - **Phosgene (COCl₂)**: Important at lower temperatures - **Carbon tetrachloride (CCl₄)**: Active chlorinating species - **Other reactive gas intermediates**: Formed at catalytic activity sites on carbon
+Research shows that direct contact between metal oxides and carbon is not necessary for effective chlorination. The reaction proceeds through gaseous intermediates, including:
+
+- **Phosgene (COCl₂)**: Important at lower temperatures
+- **Carbon tetrachloride (CCl₄)**: Active chlorinating species
+- **Other reactive gas intermediates**: Formed at catalytic activity sites on carbon
 
 For neodymium oxide, the chlorination reaction begins at approximately **250°C**, initially forming neodymium oxychloride (NdOCl). Below 425°C, the system follows nucleation and growth kinetics with chemical control.
 
@@ -617,7 +1021,12 @@ Lanthanum through gadolinium exhibit similar chlorination behavior, with reactio
 #### 4.4.3 Stepwise Carbochlorination-Chemical Vapor Transport (SC-CVT)
 A breakthrough process combining carbochlorination with chemical vapor transport (CVT) enables both extraction and separation of individual REEs ([Metallurgical and Materials Transactions B 2002](https://link.springer.com/article/10.1007/s11663-002-0018-1)).
 
-**Process Components:** - **Carbon**: Reducing agent - **Cl₂ gas**: Primary chlorinating agent - **SiCl₄**: Defluorination agent for fluorocarbonate minerals - **AlCl₃**: Vapor complex former for transport
+**Process Components:**
+
+- **Carbon**: Reducing agent
+- **Cl₂ gas**: Primary chlorinating agent
+- **SiCl₄**: Defluorination agent for fluorocarbonate minerals
+- **AlCl₃**: Vapor complex former for transport
 
 **Mechanism:**
 
@@ -628,14 +1037,21 @@ REE chlorides form vapor complexes with aluminum chloride: RAlₙCl₃₊₃ₙ 
 | REE chlorides | 1220-730 K               |
 | AlCl₃, FeCl₃  | \< 400 K                 |
 
-**Performance:** - **LaCl₃ and CeCl₃ purity**: \~80% achieved through selective condensation - **Thorium removal**: Complete (critical for monazite processing) - **REE recovery**: 92-99 mol% with SiCl₄ addition (vs. 56-88% without)
+**Performance:**
+
+- **LaCl₃ and CeCl₃ purity**: \~80% achieved through selective condensation
+- **Thorium removal**: Complete (critical for monazite processing)
+- **REE recovery**: 92-99 mol% with SiCl₄ addition (vs. 56-88% without)
 
 #### 4.4.4 Processing of Mixed Bastnaesite-Monazite Concentrates
 The SC-CVT process is particularly effective for mixed bastnaesite (REFCO₃) and monazite (REPO₄) concentrates:
 
 **Optimized Conditions:** \| Parameter \| Value \| \|-----------\|-------\| \| Chlorination temperature \| 500-800°C \| \| Atmosphere \| Cl₂ + SiCl₄ \| \| REE chloride yield \| 92-99 mol% \|
 
-**Two-Stage CVT Separation:** 1. **Stage 1** (800°C, 0.5 h): Cl₂ + SiCl₄ + AlCl₃ atmosphere 2. **Stage 2** (1000°C, 6 h): Cl₂ + AlCl₃ atmosphere with temperature gradients
+**Two-Stage CVT Separation:**
+
+1.  **Stage 1** (800°C, 0.5 h): Cl₂ + SiCl₄ + AlCl₃ atmosphere
+2.  **Stage 2** (1000°C, 6 h): Cl₂ + AlCl₃ atmosphere with temperature gradients
 
 This approach operates at temperatures as low as 500°C, compared to the conventional Goldschmidt process at 1000-1200°C.
 
@@ -646,7 +1062,12 @@ A recent breakthrough proposes a one-step carbochlorination-washing process achi
 
 **Chlorination Rates Achieved:** \| Element \| Chlorination Rate \| \|---------\|------------------\| \| Rare earths \| 93% \| \| Calcium \| 99% \| \| Barium \| 95% \| \| Iron \| 99% \|
 
-**Environmental Advantages:** - No acid or alkali reagents required - Emissions recyclable within the system - Short-process characteristic avoids wastewater generation - Significantly reduced equipment costs due to lower operating temperatures
+**Environmental Advantages:**
+
+- No acid or alkali reagents required
+- Emissions recyclable within the system
+- Short-process characteristic avoids wastewater generation
+- Significantly reduced equipment costs due to lower operating temperatures
 
 #### 4.4.6 Comparison: Carbochlorination vs. Conventional Processes
 | Feature | Carbochlorination | Hydrometallurgy | Traditional Roasting |
@@ -661,37 +1082,79 @@ A recent breakthrough proposes a one-step carbochlorination-washing process achi
 | Thorium handling | Separable via CVT | Complex | Retained |
 
 #### 4.4.7 Current Challenges and Future Directions
-**Technical Challenges:** - Corrosive nature of Cl₂ and chloride products - Need for specialized reactor materials - Chlorine handling and safety requirements - Scale-up from laboratory to industrial scale
+**Technical Challenges:**
 
-**Research Opportunities:** - Integration with flash Joule heating for rapid chlorination - Development of continuous carbochlorination reactors - Optimization of CVT conditions for heavy REE separation - Recovery of valuable by-products (F₂, P₂O₅) from mineral processing - Life cycle assessment and techno-economic analysis
+- Corrosive nature of Cl₂ and chloride products
+- Need for specialized reactor materials
+- Chlorine handling and safety requirements
+- Scale-up from laboratory to industrial scale
 
-**Industrial Outlook:** Carbochlorination represents a promising pathway for clean rare earth processing, particularly for: - Mixed ore concentrates containing both bastnaesite and monazite - Ores with high thorium content requiring separation - Situations where wastewater discharge is restricted - Integration with existing chlor-alkali industrial infrastructure
+**Research Opportunities:**
+
+- Integration with flash Joule heating for rapid chlorination
+- Development of continuous carbochlorination reactors
+- Optimization of CVT conditions for heavy REE separation
+- Recovery of valuable by-products (F₂, P₂O₅) from mineral processing
+- Life cycle assessment and techno-economic analysis
+
+**Industrial Outlook:** Carbochlorination represents a promising pathway for clean rare earth processing, particularly for:
+
+- Mixed ore concentrates containing both bastnaesite and monazite
+- Ores with high thorium content requiring separation
+- Situations where wastewater discharge is restricted
+- Integration with existing chlor-alkali industrial infrastructure
 
 ------------------------------------------------------------------------
 
 ## 5. Recycling and Urban Mining
 ### 5.1 Current State
-The global REE recycling rate remains below **1%**, primarily due to: - Difficulty in separating and purifying individual REEs - Collection and disassembly challenges - Limited recycling infrastructure - Economic factors favoring primary mining
+The global REE recycling rate remains below **1%**, primarily due to:
+
+- Difficulty in separating and purifying individual REEs
+- Collection and disassembly challenges
+- Limited recycling infrastructure
+- Economic factors favoring primary mining
 
 ### 5.2 E-Waste as a Resource
-Electronic waste contains significant REE concentrations: - Hard disk drives (NdFeB magnets) - Electric motors - Phosphors from displays - Batteries
+Electronic waste contains significant REE concentrations:
 
-**Recent Advances:** - Recycling innovations have increased recovery rates from e-waste by up to **50% since 2015** - Co-recovery of precious metals (Au, Ag, Pt) can offset recycling costs
+- Hard disk drives (NdFeB magnets)
+- Electric motors
+- Phosphors from displays
+- Batteries
+
+**Recent Advances:**
+
+- Recycling innovations have increased recovery rates from e-waste by up to **50% since 2015**
+- Co-recovery of precious metals (Au, Ag, Pt) can offset recycling costs
 
 ### 5.3 Coal and Coal Ash
-Certain coal and coal ash samples contain REE concentrations rivaling traditional ores: - Promising for nature-based solutions within circular economy frameworks - Research ongoing for sustainable extraction methods
+Certain coal and coal ash samples contain REE concentrations rivaling traditional ores:
+
+- Promising for nature-based solutions within circular economy frameworks
+- Research ongoing for sustainable extraction methods
 
 ### 5.4 REEcover Start-up (ETH Zurich)
 A new company commercializing patented technology for europium recovery from e-waste, with adaptation underway for neodymium and dysprosium ([ETH Zurich](https://ethz.ch/en/news-and-events/eth-news/news/2024/07/mining-rare-earth-metals-from-electronic-waste.html)).
 
 ### 5.5 Acid-Free Leaching
-A straightforward, environment-friendly process using copper salts: - Eliminates volatile toxic acids - Selective leaching from magnet-containing e-waste - Applicable to end-of-life hard disk drives and electric motors
+A straightforward, environment-friendly process using copper salts:
+
+- Eliminates volatile toxic acids
+- Selective leaching from magnet-containing e-waste
+- Applicable to end-of-life hard disk drives and electric motors
 
 ------------------------------------------------------------------------
 
 ## 6. Environmental and Sustainability Considerations
 ### 6.1 Environmental Impacts of Traditional Methods
-Traditional REE separation creates significant environmental challenges: - **Acidic/alkaline wastewater** from hydrometallurgical processes - **Radioactive waste** from thorium and uranium associated with REE ores - **High energy consumption** in pyrometallurgical methods - **Organic solvent use** in liquid-liquid extraction - **Habitat destruction** from mining operations
+Traditional REE separation creates significant environmental challenges:
+
+- **Acidic/alkaline wastewater** from hydrometallurgical processes
+- **Radioactive waste** from thorium and uranium associated with REE ores
+- **High energy consumption** in pyrometallurgical methods
+- **Organic solvent use** in liquid-liquid extraction
+- **Habitat destruction** from mining operations
 
 Some of the highest pollution levels on Earth are associated with REE production in China, where \>70% is mined and \>95% is refined.
 
@@ -713,22 +1176,40 @@ Some of the highest pollution levels on Earth are associated with REE production
 - Recovery efficiencies of **80-95%** for Y, Ce, Nd, and Th
 
 ### 6.3 Molecular Recognition Technology (MRT)
-The SuperLig® MRT™ process ([IBC](https://ibcmrt.com/markets-and-applications/rare-earth-elements-ree/)): - Separates all individual REEs at **\>99% recovery** and **\>99% purity** - Operates at ambient temperature and atmosphere - Considered a green chemistry solution
+The SuperLig® MRT™ process ([IBC](https://ibcmrt.com/markets-and-applications/rare-earth-elements-ree/)):
+
+- Separates all individual REEs at **\>99% recovery** and **\>99% purity**
+- Operates at ambient temperature and atmosphere
+- Considered a green chemistry solution
 
 ------------------------------------------------------------------------
 
 ## 7. Industrial Developments and Commercial Applications
 ### 7.1 Rare Element Resources Demonstration Plant
-A \$66M+ REE processing and separation demonstration plant in Upton, Wyoming ([Rare Element Resources](https://www.rareelementresources.com/technology/)): - Operations expected to begin in late 2025 - Will produce up to **10 tons of separated Nd/Pr oxide** - 10-month operational demonstration planned
+A \$66M+ REE processing and separation demonstration plant in Upton, Wyoming ([Rare Element Resources](https://www.rareelementresources.com/technology/)):
+
+- Operations expected to begin in late 2025
+- Will produce up to **10 tons of separated Nd/Pr oxide**
+- 10-month operational demonstration planned
 
 ### 7.2 Saskatchewan Research Council
-A \$74M rare earth processing plant in Canada: - Target production: **400 tonnes NdPr metals/year** - Supports North American supply chain diversification
+A \$74M rare earth processing plant in Canada:
+
+- Target production: **400 tonnes NdPr metals/year**
+- Supports North American supply chain diversification
 
 ### 7.3 Lynas Rare Earths (Malaysia)
-One of few industrial-scale refining facilities outside China: - Processing capacity expansion underway - Partnership with US Department of Defense
+One of few industrial-scale refining facilities outside China:
+
+- Processing capacity expansion underway
+- Partnership with US Department of Defense
 
 ### 7.4 MP Materials (USA)
-Operates the Mountain Pass mine in California: - Produced **42,499 metric tons** of rare earths in 2022 - \~14% of global production - Building domestic separation capability
+Operates the Mountain Pass mine in California:
+
+- Produced **42,499 metric tons** of rare earths in 2022
+- \~14% of global production
+- Building domestic separation capability
 
 ------------------------------------------------------------------------
 
@@ -808,19 +1289,36 @@ A breakthrough discovery revealed that lanmodulin from *Hansschlegelia quercus* 
 - **Mechanism**: Picometre-scale differences in ionic radius propagate to quaternary structure through a "carboxylate shift" that rearranges second-sphere hydrogen bonding
 - **Application**: Selective dimerization enriches high-value Pr³⁺/Nd³⁺ relative to low-value La³⁺/Ce³⁺
 
-**Separation Performance:** - Achieves higher separation factors than standard lanmodulins - Comparable or better than common industrial extractants (e.g., HDEHP) - All-aqueous process without organic solvents
+**Separation Performance:**
+
+- Achieves higher separation factors than standard lanmodulins
+- Comparable or better than common industrial extractants (e.g., HDEHP)
+- All-aqueous process without organic solvents
 
 #### 10.1.4 Protein Engineering and Variants
 Computational and experimental studies have revealed key engineering principles ([Computational Biology 2025](https://pmc.ncbi.nlm.nih.gov/articles/PMC11879702/)):
 
 **D9 Residue Mutations:** \| Mutation \| Effect on Affinity \| \|----------\|-------------------\| \| Asp→Asn \| 2-fold decrease \| \| Asp→Ala \| 20-fold decrease \| \| Bulky side chains \| Up to 100-fold decrease \|
 
-**Key Insights:** - Amino acids outside direct metal binding motif are crucial for coordination - Point mutations can induce long-range structural perturbations - Weak chelators can achieve high selectivity through allosteric mechanisms
+**Key Insights:**
+
+- Amino acids outside direct metal binding motif are crucial for coordination
+- Point mutations can induce long-range structural perturbations
+- Weak chelators can achieve high selectivity through allosteric mechanisms
 
 #### 10.1.5 Practical Implementation
-**Immobilized Lanmodulin Systems:** - Conjugated onto porous support materials via thiol-maleimide chemistry - Enables tandem REE purification and separation under flow-through conditions - Column systems with multiple adsorption (pH 3) and desorption (pH \<1.7) cycles - Protein can be reused for many cycles
+**Immobilized Lanmodulin Systems:**
 
-**Performance from Real Feedstocks:** - Transforms low-grade leachate (0.043 mol% REEs) into 88 mol% purity fractions - Uses \~90% of column capacity in single run - Achieves tandem extraction and grouped separation without organic solvents
+- Conjugated onto porous support materials via thiol-maleimide chemistry
+- Enables tandem REE purification and separation under flow-through conditions
+- Column systems with multiple adsorption (pH 3) and desorption (pH \<1.7) cycles
+- Protein can be reused for many cycles
+
+**Performance from Real Feedstocks:**
+
+- Transforms low-grade leachate (0.043 mol% REEs) into 88 mol% purity fractions
+- Uses \~90% of column capacity in single run
+- Achieves tandem extraction and grouped separation without organic solvents
 
 ------------------------------------------------------------------------
 
@@ -828,25 +1326,52 @@ Computational and experimental studies have revealed key engineering principles 
 #### 10.2.1 EF-Hand Derived Peptides
 Lanthanide binding tags (LBTs) are short peptides derived from calcium-binding EF-hand loops that selectively coordinate REE cations ([PNAS 2024](https://www.pnas.org/doi/10.1073/pnas.2411763121)).
 
-**Design Principles:** - Based on EF-hand metal binding loops from calmodulin, troponin, and parvalbumin - Typical sequence: YIDTNNDGWYEGDELLA (troponin-derived, Tb³⁺-optimized) - Net charge of -3 on binding loop creates neutral 1:1 cation:peptide complex
+**Design Principles:**
 
-**Selectivity Characteristics:** - DGA resins: Selectivity at high acid (pH \<1) - Bioderived ligands: Selectivity at moderate pH (\>3) - LBT Kd range: 0.9-1.8 μM (immobilized) vs. 0.4-10 pM (full LanM protein)
+- Based on EF-hand metal binding loops from calmodulin, troponin, and parvalbumin
+- Typical sequence: YIDTNNDGWYEGDELLA (troponin-derived, Tb³⁺-optimized)
+- Net charge of -3 on binding loop creates neutral 1:1 cation:peptide complex
+
+**Selectivity Characteristics:**
+
+- DGA resins: Selectivity at high acid (pH \<1)
+- Bioderived ligands: Selectivity at moderate pH (\>3)
+- LBT Kd range: 0.9-1.8 μM (immobilized) vs. 0.4-10 pM (full LanM protein)
 
 #### 10.2.2 Lanmodulin-Derived Peptides
 Mimicking lanmodulin with shorter peptides offers advantages ([ACS Applied Materials & Interfaces](https://pubs.acs.org/doi/10.1021/acsami.3c17565)):
 
-**LanM1 Peptide (from EF-hand loop 1):** - Simpler to produce and manipulate - Easier to optimize through directed evolution - Surface-immobilizable for separation technologies - Maintains REE binding when bound to solid substrates
+**LanM1 Peptide (from EF-hand loop 1):**
 
-**Challenges:** - Lower affinity than full protein - High affinity doesn't necessarily correlate with high selectivity between REEs
+- Simpler to produce and manipulate
+- Easier to optimize through directed evolution
+- Surface-immobilizable for separation technologies
+- Maintains REE binding when bound to solid substrates
+
+**Challenges:**
+
+- Lower affinity than full protein
+- High affinity doesn't necessarily correlate with high selectivity between REEs
 
 #### 10.2.3 Foam-Based Interfacial Separation
 A novel approach uses peptide surfactants for foam flotation separation ([PNAS 2024](https://www.pnas.org/doi/10.1073/pnas.2411763121)):
 
-**Mechanism:** 1. LBT peptides selectively complex with trivalent REE cations 2. Metal-peptide complexes adsorb to air/aqueous interfaces of bubbles 3. Foam carries REE-enriched complexes for recovery
+**Mechanism:**
 
-**Glutaraldehyde Enhancement:** - Cross-linking of metal-peptide complexes in solution - Acts as "facilitating agent" for enhanced surface adsorption - Significantly improves separation efficiency
+1.  LBT peptides selectively complex with trivalent REE cations
+2.  Metal-peptide complexes adsorb to air/aqueous interfaces of bubbles
+3.  Foam carries REE-enriched complexes for recovery
 
-**Demonstrated Separations:** - Selective extraction from equimolar Tb³⁺/La³⁺ mixtures - Validated LBT-mediated interfacial REE separation
+**Glutaraldehyde Enhancement:**
+
+- Cross-linking of metal-peptide complexes in solution
+- Acts as "facilitating agent" for enhanced surface adsorption
+- Significantly improves separation efficiency
+
+**Demonstrated Separations:**
+
+- Selective extraction from equimolar Tb³⁺/La³⁺ mixtures
+- Validated LBT-mediated interfacial REE separation
 
 #### 10.2.4 Gravity-Driven Separation
 Microbead technology using immobilized lanthanide binding peptides (LBPs) ([ACS Applied Bio Materials](https://pubs.acs.org/doi/10.1021/acsabm.3c01280)):
@@ -858,9 +1383,18 @@ Microbead technology using immobilized lanthanide binding peptides (LBPs) ([ACS 
 #### 10.2.5 Mineralization Peptides
 Lanthanide ion mineralization peptide (Lamp) enables direct extraction ([Nature Communications](https://www.nature.com/articles/ncomms15670)):
 
-**Mechanism:** 1. Lamp promotes REE hydroxide species generation in aqueous solution 2. Binds to form hydrophobic complexes 3. Spontaneous accumulation as insoluble precipitates 4. Works under physiological conditions (pH \~6.0)
+**Mechanism:**
 
-**Applications:** - Selective separation from seawater - Industrial wastewater treatment - No additional energy input required
+1.  Lamp promotes REE hydroxide species generation in aqueous solution
+2.  Binds to form hydrophobic complexes
+3.  Spontaneous accumulation as insoluble precipitates
+4.  Works under physiological conditions (pH \~6.0)
+
+**Applications:**
+
+- Selective separation from seawater
+- Industrial wastewater treatment
+- No additional energy input required
 
 ------------------------------------------------------------------------
 
@@ -878,10 +1412,18 @@ Lanthanides can replace Ca²⁺ in EF-hand proteins isomorphously ([PNAS](https:
 - Same degree of conformational changes as with Ca²⁺
 - Widely used as luminescent probes (Eu³⁺, Tb³⁺)
 
-**Calmodulin Studies:** - Ln³⁺ associates with binding pockets more strongly than Ca²⁺ - Though coordination distorts structure slightly, perturbations are small - Useful for structure-function studies
+**Calmodulin Studies:**
+
+- Ln³⁺ associates with binding pockets more strongly than Ca²⁺
+- Though coordination distorts structure slightly, perturbations are small
+- Useful for structure-function studies
 
 #### 10.3.3 Applications for REE Recovery
-**Calmodulin-Based Systems:** - Peptide binding loop conjugated to polymer scaffold particles - Applied to cerium recovery from solution - Exploits natural EF-hand selectivity
+**Calmodulin-Based Systems:**
+
+- Peptide binding loop conjugated to polymer scaffold particles
+- Applied to cerium recovery from solution
+- Exploits natural EF-hand selectivity
 
 ------------------------------------------------------------------------
 
@@ -895,14 +1437,27 @@ Stability constants (log β) place REEs in the "strongly bound" group: \| Elemen
 
 **Key Finding:** REEs are bound more strongly than common soil/water cations, enabling selective recovery.
 
-**Properties:** - Hydrophilic surfactant - Biodegradable and environmentally friendly - Reduces surface tension more effectively than chemical surfactants at same CMC - Potential green technology for REE recovery
+**Properties:**
+
+- Hydrophilic surfactant
+- Biodegradable and environmentally friendly
+- Reduces surface tension more effectively than chemical surfactants at same CMC
+- Potential green technology for REE recovery
 
 #### 10.4.2 Sophorolipid Biosurfactants
 Sophorolipids (produced by *Starmerella bombicola*) show promise for rare earth mineral flotation:
 
-**Flotation Applications:** - Evaluated as collectors for ultrafine ceria (model REE mineral) - Both acidic (ASL) and lactonic (LSL) forms tested - Compared favorably to petroleum-based collectors like benzohydroxamic acid (BHA)
+**Flotation Applications:**
 
-**Complementary Properties:** - Sophorolipids: Very hydrophobic - Rhamnolipids: Hydrophilic - Mixtures show robust performance in combined applications
+- Evaluated as collectors for ultrafine ceria (model REE mineral)
+- Both acidic (ASL) and lactonic (LSL) forms tested
+- Compared favorably to petroleum-based collectors like benzohydroxamic acid (BHA)
+
+**Complementary Properties:**
+
+- Sophorolipids: Very hydrophobic
+- Rhamnolipids: Hydrophilic
+- Mixtures show robust performance in combined applications
 
 #### 10.4.3 Saponin for Soil Remediation
 Non-ionic biosurfactant saponin has been evaluated for REE leaching from contaminated soils ([ScienceDirect](https://www.sciencedirect.com/science/article/abs/pii/S1002072117609943)):
@@ -918,14 +1473,27 @@ Saponin outperformed rhamnolipid for soil leaching applications.
 Siderophores are extracellular chelating compounds produced by aerobic microorganisms to acquire iron. They also complex REEs effectively for bioleaching applications ([World Journal of Microbiology](https://link.springer.com/article/10.1007/s11274-019-2666-1)).
 
 #### 10.5.2 Key Microorganisms
-**Aspergillus niger:** - Produces 87% siderophore units in iron-deficient conditions - Main siderophore identified as **ferrichrome** (FTIR/NMR confirmed) - Metabolites weather rock and destroy mineral crystal structures - REE dissolution via proton exchange, redox, and ligand complexation
+**Aspergillus niger:**
+
+- Produces 87% siderophore units in iron-deficient conditions
+- Main siderophore identified as **ferrichrome** (FTIR/NMR confirmed)
+- Metabolites weather rock and destroy mineral crystal structures
+- REE dissolution via proton exchange, redox, and ligand complexation
 
 **Extraction Performance from Egyptian Phosphorites:** \| Element \| Removal Efficiency \| \|---------\|-------------------\| \| Uranium \| 69.5% \| \| Samarium \| 66.7% \| \| Thorium \| 55.0% \| \| Lanthanum \| 51.0% \| \| Cerium \| 50.1% \|
 
-**Actinobacteria:** - Four strains tested for bastnaesite-bearing rock bioleaching - *Streptomyces* strains FXJ1.172 and FXJ1.532 produced 200 and 9.3 µmol/L siderophores - Secreted organic acids and complexing ligands as dominant extraction agents
+**Actinobacteria:**
+
+- Four strains tested for bastnaesite-bearing rock bioleaching
+- *Streptomyces* strains FXJ1.172 and FXJ1.532 produced 200 and 9.3 µmol/L siderophores
+- Secreted organic acids and complexing ligands as dominant extraction agents
 
 #### 10.5.3 Methylotrophic Bacteria
-*Methylobacterium extorquens* AM1 provides a unique approach: - Natural ability to acquire lanthanides from environment - First demonstration of REE bioaccumulation/biomineralization in mesophilic bacteria - Attractive for sustainable bioleaching due to inherent lanthanide metabolism
+*Methylobacterium extorquens* AM1 provides a unique approach:
+
+- Natural ability to acquire lanthanides from environment
+- First demonstration of REE bioaccumulation/biomineralization in mesophilic bacteria
+- Attractive for sustainable bioleaching due to inherent lanthanide metabolism
 
 #### 10.5.4 Mineral Source Selectivity
 Microorganism selection depends on mineral type: \| Mineral Type \| Preferred Organisms \| Mechanism \| \|--------------\|--------------------\| ----------\| \| Iron-bearing (sulfide/oxide) \| Siderophore-producing chemoautotrophs \| Sc extraction \| \| Phosphate-rich \| Chemoheterotrophic bacteria \| Organic acid secretion \| \| Carbonate minerals \| Chemoheterotrophic bacteria \| Acid dissolution \|
@@ -936,30 +1504,55 @@ Microorganism selection depends on mineral type: \| Mineral Type \| Preferred Or
 #### 10.6.1 Overview
 Biosorption is a physicochemical, metabolically-independent process based on absorption, adsorption, ion-exchange, surface complexation, and precipitation. It represents a cost-effective, biotechnological approach for REE recovery ([World Journal of Microbiology](https://link.springer.com/article/10.1007/s11274-024-03974-4)).
 
-**Advantages:** - Large surface area per unit mass - Abundant cell surface functional groups (carboxylates, phosphates, hydroxyls) - Good metal coordination capacity - Biodegradable and non-toxic
+**Advantages:**
+
+- Large surface area per unit mass
+- Abundant cell surface functional groups (carboxylates, phosphates, hydroxyls)
+- Good metal coordination capacity
+- Biodegradable and non-toxic
 
 #### 10.6.2 Bacterial Biosorption
 **Gram-Positive vs. Gram-Negative Selectivity:**
 
 *Bacillus subtilis* (Gram-positive) showed higher selectivity for heavy REEs (Yb, Lu) compared to Gram-negative species like *Leisingera methylohalidivorans* and *Phaeobacter inhibens* ([MDPI Metals](https://www.mdpi.com/2075-4701/10/7/954)).
 
-**Roseobacter-Based Separation:** - *Roseobacter* sp. AzwK-3b immobilized on assay filter - pH-dependent adsorption/desorption - Preprotonation concentrates solution to \~50% of three heaviest lanthanides (Tm, Lu, Yb) in just two passes
+**Roseobacter-Based Separation:**
 
-**Engineered E. coli Systems ([Environmental Science & Technology](https://pubs.acs.org/doi/abs/10.1021/acs.estlett.6b00064)):** - OmpA protein functionalized with 16 copies of LBT - 2-10-fold increase in distribution coefficients for individual REEs - LBT-display enhances affinity as function of decreasing atomic radius - Enables separation of high-value heavy REEs from common light REEs
+- *Roseobacter* sp. AzwK-3b immobilized on assay filter
+- pH-dependent adsorption/desorption
+- Preprotonation concentrates solution to \~50% of three heaviest lanthanides (Tm, Lu, Yb) in just two passes
+
+**Engineered E. coli Systems ([Environmental Science & Technology](https://pubs.acs.org/doi/abs/10.1021/acs.estlett.6b00064)):**
+
+- OmpA protein functionalized with 16 copies of LBT
+- 2-10-fold increase in distribution coefficients for individual REEs
+- LBT-display enhances affinity as function of decreasing atomic radius
+- Enables separation of high-value heavy REEs from common light REEs
 
 #### 10.6.3 Yeast Biosorption
 Phosphorylated dry baker's yeast (*Saccharomyces cerevisiae*) has demonstrated effective REE adsorption ([Scientific Reports](https://www.nature.com/articles/s41598-018-36306-2)):
 
-**Metals Adsorbed:** - Ce³⁺, Dy³⁺, Gd³⁺, La³⁺, Nd³⁺, Y³⁺, Yb³⁺
+**Metals Adsorbed:**
 
-**Advantages:** - Lower biomass requirement for relevant biosorption - Cost-effective and simple technique - Eukaryotes (especially fungi/yeasts like *Pichia* sp.) should be prioritized
+- Ce³⁺, Dy³⁺, Gd³⁺, La³⁺, Nd³⁺, Y³⁺, Yb³⁺
+
+**Advantages:**
+
+- Lower biomass requirement for relevant biosorption
+- Cost-effective and simple technique
+- Eukaryotes (especially fungi/yeasts like *Pichia* sp.) should be prioritized
 
 #### 10.6.4 Algal Biosorption
-**Seaweed (*Sargassum* sp.):** - Quick and efficient acquisition of Eu, Gd, La, Nd, Pr, Sm
+**Seaweed (*Sargassum* sp.):**
+
+- Quick and efficient acquisition of Eu, Gd, La, Nd, Pr, Sm
 
 **Microalgae and Moss ([Applied Microbiology and Biotechnology](https://link.springer.com/article/10.1007/s00253-021-11386-9)):** \| Organism \| Nd³⁺ Capacity \| Eu³⁺ Capacity \| \|----------\|---------------\|---------------\| \| *Physcomitrella patens* (moss) \| 0.74 mmol/g \| 0.48 mmol/g \| \| *Calothrix brevissima* \| Lower \| Lower \| \| *Chlorella kessleri* \| Lower \| Lower \|
 
-**Two-Stage Adsorption Process:** 1. **Passive stage**: Rapid surface uptake 2. **Active stage**: Slow membrane transport to cytoplasm
+**Two-Stage Adsorption Process:**
+
+1.  **Passive stage**: Rapid surface uptake
+2.  **Active stage**: Slow membrane transport to cytoplasm
 
 Cell wall chemistry determines biosorption efficiency.
 
@@ -969,26 +1562,52 @@ Cell wall chemistry determines biosorption efficiency.
 #### 10.7.1 Overview
 Phytomining uses hyperaccumulator plants to extract REEs from soils, offering an ecologically sound technique for contaminated lands where traditional mining is not competitive.
 
-**Process Stages:** 1. **Phytoextraction**: REE accumulation in plant tissues 2. **Enrichment**: Concentration into bio-ores 3. **Extraction**: REE recovery from harvested biomass
+**Process Stages:**
+
+1.  **Phytoextraction**: REE accumulation in plant tissues
+2.  **Enrichment**: Concentration into bio-ores
+3.  **Extraction**: REE recovery from harvested biomass
 
 #### 10.7.2 Dicranopteris linearis (Forked Fern)
 The strongest known REE hyperaccumulator ([ScienceDirect](https://www.sciencedirect.com/science/article/abs/pii/S0892687521001084)):
 
-**Accumulation Capacity:** - Up to **0.7 wt% REEs** in above-ground tissues - Total REE concentrations: 2-3 mg/g in fronds - Most abundant: La, Nd, Ce, Pr
+**Accumulation Capacity:**
 
-**Processing:** - 92.3% weight reduction after incineration (550°C, 3 hours) - REEs enriched to **30,000 mg/kg** in ash - \~11-fold concentration vs. original woody biomass
+- Up to **0.7 wt% REEs** in above-ground tissues
+- Total REE concentrations: 2-3 mg/g in fronds
+- Most abundant: La, Nd, Ce, Pr
+
+**Processing:**
+
+- 92.3% weight reduction after incineration (550°C, 3 hours)
+- REEs enriched to **30,000 mg/kg** in ash
+- \~11-fold concentration vs. original woody biomass
 
 **Detoxification Mechanism:** \[Silicon-pectin\] matrix fixation protects plant from REE toxicity ([Journal of Hazardous Materials](https://www.sciencedirect.com/science/article/abs/pii/S0304389423005368)).
 
 #### 10.7.3 Blechnum orientale: Biomineralization Discovery (2025)
 A groundbreaking discovery of naturally formed REE minerals in living plants ([Environmental Science & Technology](https://pubs.acs.org/doi/10.1021/acs.est.5c09617)):
 
-**Key Findings:** - **Nanoscale monazite** crystals form within extracellular tissues - Ambient temperature biomineralization process - Dendritic nanocrystal morphology - First discovery of REE mineral crystals in living plants
+**Key Findings:**
 
-**Advantages of "Biological Monazite":** - **Pure and non-radioactive** (unlike natural monazite containing U/Th) - Strong potential for green extraction - No mining-associated radioactive waste concerns
+- **Nanoscale monazite** crystals form within extracellular tissues
+- Ambient temperature biomineralization process
+- Dendritic nanocrystal morphology
+- First discovery of REE mineral crystals in living plants
+
+**Advantages of "Biological Monazite":**
+
+- **Pure and non-radioactive** (unlike natural monazite containing U/Th)
+- Strong potential for green extraction
+- No mining-associated radioactive waste concerns
 
 #### 10.7.4 Challenges and Future Potential
-While promising, phytomining faces hurdles: - No peer-reviewed studies establishing commercial viability - Slow accumulation rates - Land requirements for large-scale operations - Need for optimized processing of plant biomass
+While promising, phytomining faces hurdles:
+
+- No peer-reviewed studies establishing commercial viability
+- Slow accumulation rates
+- Land requirements for large-scale operations
+- Need for optimized processing of plant biomass
 
 ------------------------------------------------------------------------
 
@@ -996,7 +1615,12 @@ While promising, phytomining faces hurdles: - No peer-reviewed studies establish
 #### 10.8.1 Chitosan-Based Adsorbents
 Chitosan, the second most abundant biopolymer, offers exceptional properties for REE recovery ([ScienceDirect](https://www.sciencedirect.com/science/article/pii/S2773207X24000368)):
 
-**Properties:** - Non-toxic and biodegradable - High adsorption capacity (85-100%) - Excellent surface area and porosity - High chelating power and hydrophilicity
+**Properties:**
+
+- Non-toxic and biodegradable
+- High adsorption capacity (85-100%)
+- Excellent surface area and porosity
+- High chelating power and hydrophilicity
 
 **Modifications for Enhanced Performance:**
 
@@ -1011,14 +1635,31 @@ Chitosan, the second most abundant biopolymer, offers exceptional properties for
 #### 10.8.2 Cellulose Composites
 **Graphene Oxide-Cellulose Systems:** \| Adsorbent \| Nd(III) Capacity \| Ce(III) Capacity \| \|-----------\|------------------\|------------------\| \| GO-sodium carboxymethyl cellulose \| 661.21 mg/g \| 436.55 mg/g \|
 
-**Dialdehyde Cellulose-Chitosan:** - Chemically hybridized via Schiff base reaction - Followed by acrylic acid graft copolymerization - High adsorption efficiency for heavy metals
+**Dialdehyde Cellulose-Chitosan:**
+
+- Chemically hybridized via Schiff base reaction
+- Followed by acrylic acid graft copolymerization
+- High adsorption efficiency for heavy metals
 
 #### 10.8.3 Modification Strategies
-**Cross-linking:** - Covalent bonds with amine groups - Increases mechanical strength and chemical stability - Glutaraldehyde commonly used
+**Cross-linking:**
 
-**Functionalization:** - Introduction of new functional groups - EDTA functionalization creates high-capacity adsorbents - Example: EDTA-Fe₃O₄-chitosan-CMC nanocomposite: 432.34 mg/g for Pb²⁺
+- Covalent bonds with amine groups
+- Increases mechanical strength and chemical stability
+- Glutaraldehyde commonly used
 
-**Composite Materials:** - Metal-organic frameworks (MOFs) - Layered double hydroxides - Carbon materials - Clays
+**Functionalization:**
+
+- Introduction of new functional groups
+- EDTA functionalization creates high-capacity adsorbents
+- Example: EDTA-Fe₃O₄-chitosan-CMC nanocomposite: 432.34 mg/g for Pb²⁺
+
+**Composite Materials:**
+
+- Metal-organic frameworks (MOFs)
+- Layered double hydroxides
+- Carbon materials
+- Clays
 
 ------------------------------------------------------------------------
 
@@ -1026,24 +1667,53 @@ Chitosan, the second most abundant biopolymer, offers exceptional properties for
 #### 10.9.1 Engineered Microbes for Bioleaching
 Systems biology-guided engineering has dramatically improved REE extraction ([Communications Biology 2025](https://www.nature.com/articles/s42003-025-08109-5)):
 
-**Gluconobacter oxydans Engineering:** - Whole-genome screening identified key genes - Deletion of *pstS* gene (phosphate transport) - Overexpression of *mgdh* gene - Result: **Up to 73% improvement** in REE extraction
+**Gluconobacter oxydans Engineering:**
 
-**Transposon Mutant Library:** - High-throughput genome editing approach - Disruption of phosphate-specific transport genes - 18% increase in bioleaching rates
+- Whole-genome screening identified key genes
+- Deletion of *pstS* gene (phosphate transport)
+- Overexpression of *mgdh* gene
+- Result: **Up to 73% improvement** in REE extraction
+
+**Transposon Mutant Library:**
+
+- High-throughput genome editing approach
+- Disruption of phosphate-specific transport genes
+- 18% increase in bioleaching rates
 
 #### 10.9.2 Scalable Microbial Platforms
-**Methylobacterium extorquens AM1 Platform ([Environmental Science & Technology](https://pubs.acs.org/doi/10.1021/acs.est.3c06775)):** - Grows using electronic waste as sole REE source - Scalable to 10 L with consistent metal yields - No harsh acids or high temperatures required - Engineered overproduction of: - REE-binding ligands (lanthanophores) - Pyrroloquinoline quinone (PQQ)
+**Methylobacterium extorquens AM1 Platform ([Environmental Science & Technology](https://pubs.acs.org/doi/10.1021/acs.est.3c06775)):**
+
+- Grows using electronic waste as sole REE source
+- Scalable to 10 L with consistent metal yields
+- No harsh acids or high temperatures required
+- Engineered overproduction of:
+  - REE-binding ligands (lanthanophores)
+  - Pyrroloquinoline quinone (PQQ)
 
 #### 10.9.3 Synthetic Biology for E-Waste Recovery
 Advanced approaches for sustainable e-waste processing ([Advanced Functional Materials](https://advanced.onlinelibrary.wiley.com/doi/10.1002/adfm.202509900)):
 
-**Capabilities Achieved:** - Higher metal selectivity - Enhanced tolerance to acidic conditions - Faster recovery kinetics in complex matrices - Selective bioleaching, biosorption, and bioaccumulation
+**Capabilities Achieved:**
 
-**Technologies Applied:** - Metabolic pathway engineering - Synthetic gene circuits - Cell surface display systems - Directed evolution
+- Higher metal selectivity
+- Enhanced tolerance to acidic conditions
+- Faster recovery kinetics in complex matrices
+- Selective bioleaching, biosorption, and bioaccumulation
+
+**Technologies Applied:**
+
+- Metabolic pathway engineering
+- Synthetic gene circuits
+- Cell surface display systems
+- Directed evolution
 
 #### 10.9.4 High-Purity REE Biomanufacturing
 Microbial synthesis systems achieve active biomanufacturing:
 
-**Affinity Column Systems:** - Bioconjugated with structurally engineered proteins - Outstanding separation achieved
+**Affinity Column Systems:**
+
+- Bioconjugated with structurally engineered proteins
+- Outstanding separation achieved
 
 **Purity Results:** \| Element Pair \| Purity Achieved \| \|--------------\|-----------------\| \| Eu recovery \| 99.9% \| \| La recovery \| 97.1% \| \| Dy recovery \| 92.7% \|
 
@@ -1053,22 +1723,50 @@ Microbial synthesis systems achieve active biomanufacturing:
 #### 10.10.1 Overview
 Deep eutectic solvents (DESs) and ionic liquids (ILs) represent green alternatives to conventional organic solvents for REE separation ([Journal of Sustainable Metallurgy](https://link.springer.com/article/10.1007/s40831-025-01289-8)).
 
-**Shared Properties:** - Liquid over wide temperature range - Non-volatile - Non-flammable - Good ionic conductivity
+**Shared Properties:**
 
-**DES Advantages:** - Easier preparation (simple mixing of two components) - Much cheaper than ILs - Generally less stable than ILs
+- Liquid over wide temperature range
+- Non-volatile
+- Non-flammable
+- Good ionic conductivity
+
+**DES Advantages:**
+
+- Easier preparation (simple mixing of two components)
+- Much cheaper than ILs
+- Generally less stable than ILs
 
 #### 10.10.2 Natural Deep Eutectic Solvents (NADESs)
-NADESs use natural compounds as components: - Sugars - Organic acids - **Amino acids** - Organic bases
+NADESs use natural compounds as components:
 
-**Amino Acid-Based DESs:** - Cheap and natural source - Biodegradable - **Important Caveat:** Recent studies show amino acid-based DESs can be unexpectedly toxic---up to 10⁵ times more toxic than conventional choline chloride-based DESs ([ScienceDirect](https://www.sciencedirect.com/science/article/abs/pii/S0167732222025831))
+- Sugars
+- Organic acids
+- **Amino acids**
+- Organic bases
+
+**Amino Acid-Based DESs:**
+
+- Cheap and natural source
+- Biodegradable
+- **Important Caveat:** Recent studies show amino acid-based DESs can be unexpectedly toxic---up to 10⁵ times more toxic than conventional choline chloride-based DESs ([ScienceDirect](https://www.sciencedirect.com/science/article/abs/pii/S0167732222025831))
 
 #### 10.10.3 REE Extraction Performance
 **Choline Chloride-Urea-Malonic Acid System:** \| Condition \| Y Dissolution \| \|-----------\|--------------\| \| Without activation \| 49% \| \| 60 min mechanical activation \| 85% \|
 
-**IL Extraction Systems:** - Extracted complexes often different from organic solvent systems - REE extraction and separation efficiencies significantly enhanced - Synergistic IL extraction improves extractability and separability
+**IL Extraction Systems:**
+
+- Extracted complexes often different from organic solvent systems
+- REE extraction and separation efficiencies significantly enhanced
+- Synergistic IL extraction improves extractability and separability
 
 #### 10.10.4 Industrial Challenges
-Despite academic promise, commercial breakthroughs have been limited: - High cost of some ILs - Stability issues with DESs - Scale-up challenges - Toxicity concerns with some formulations - Need for life cycle assessments
+Despite academic promise, commercial breakthroughs have been limited:
+
+- High cost of some ILs
+- Stability issues with DESs
+- Scale-up challenges
+- Toxicity concerns with some formulations
+- Need for life cycle assessments
 
 ------------------------------------------------------------------------
 
@@ -1098,9 +1796,18 @@ ICP-OES is a workhorse technique for REE analysis due to its robustness and mult
 
 **Characteristics:** \| Parameter \| Typical Value \| \|-----------\|---------------\| \| Detection limits \| 0.009-0.45 mg/L (element-dependent) \| \| Linear dynamic range \| 5-6 orders of magnitude \| \| Precision (RSD) \| 1-3% \| \| Sample throughput \| 20-40 samples/hour \| \| Matrix tolerance \| High \|
 
-**Advantages:** - Higher matrix tolerance than ICP-MS - Lower running costs - Robust sample introduction system - Good for routine analysis of process solutions
+**Advantages:**
 
-**Challenges:** - Numerous emission line overlaps between REEs - Requires careful line selection for each element and matrix - Lower sensitivity than ICP-MS for trace levels
+- Higher matrix tolerance than ICP-MS
+- Lower running costs
+- Robust sample introduction system
+- Good for routine analysis of process solutions
+
+**Challenges:**
+
+- Numerous emission line overlaps between REEs
+- Requires careful line selection for each element and matrix
+- Lower sensitivity than ICP-MS for trace levels
 
 #### 11.1.2 Inductively Coupled Plasma-Mass Spectrometry (ICP-MS)
 ICP-MS has become the method of choice for REE analysis due to its exceptional sensitivity and multi-element capability ([Agilent](https://www.agilent.com/cs/library/applications/application-ree-icp-oes-5800-5994-4492en-agilent.pdf), [NETL](https://www.netl.doe.gov/sites/default/files/netl-file/Rare-Earth-Trace-Bulk-Elemental-Analysis-ICP-MS-Topical-Report-4-14-2016.pdf)).
@@ -1137,7 +1844,12 @@ XRF enables rapid, non-destructive analysis of solid samples without digestion (
 | EDXRF           | Moderate   | Good                   | Desktop/portable | Moderate |
 | pXRF (handheld) | Lower      | Adequate for screening | Field portable   | Lower    |
 
-**Analytical Challenges:** - REEs have numerous K-lines (3) and L-lines (\~7) with significant overlap - Spectral overlap with common elements (Ge, Ni) - Careful selection of analytical lines and background positions required - Detection limits: \~5-10% for laboratory instruments (lower for trace analysis)
+**Analytical Challenges:**
+
+- REEs have numerous K-lines (3) and L-lines (\~7) with significant overlap
+- Spectral overlap with common elements (Ge, Ni)
+- Careful selection of analytical lines and background positions required
+- Detection limits: \~5-10% for laboratory instruments (lower for trace analysis)
 
 **TXRF (Total Reflection XRF):** For trace element and contamination analyses, TXRF offers improved sensitivity through sample presentation on optically flat reflectors. Neural network-based modeling has been applied to decode interfering L-lines for direct analysis of lanthanides in water samples.
 
@@ -1146,7 +1858,12 @@ NAA was the historical standard for REE analysis before ICP-MS ([De Gruyter](htt
 
 **Principle:** Samples are irradiated with neutrons in a nuclear reactor, creating artificial radioisotopes. Subsequent gamma-ray emission is measured by high-resolution Ge detectors.
 
-**Elements Measurable by INAA:** - Light REEs (La, Ce, Nd, Sm): 10¹-10² ppm detection - Eu: High sensitivity due to favorable nuclear properties - Heavy REEs (Tb, Yb, Lu): 10⁰ ppm detection - Pr, Er: Require chemical separation (RNAA)
+**Elements Measurable by INAA:**
+
+- Light REEs (La, Ce, Nd, Sm): 10¹-10² ppm detection
+- Eu: High sensitivity due to favorable nuclear properties
+- Heavy REEs (Tb, Yb, Lu): 10⁰ ppm detection
+- Pr, Er: Require chemical separation (RNAA)
 
 **Characteristics:**
 
@@ -1157,7 +1874,11 @@ NAA was the historical standard for REE analysis before ICP-MS ([De Gruyter](htt
 | Sample preparation  | Minimal to none                       |
 | Non-destructive     | Yes (for INAA)                        |
 
-**Limitations:** - Requires access to nuclear reactor - Declining availability of reactor facilities - Largely superseded by ICP-MS for routine analysis
+**Limitations:**
+
+- Requires access to nuclear reactor
+- Declining availability of reactor facilities
+- Largely superseded by ICP-MS for routine analysis
 
 ### 11.2 Chromatographic Separation and Analysis
 #### 11.2.1 High-Performance Liquid Chromatography (HPLC)
@@ -1171,12 +1892,20 @@ HPLC provides both separation and quantification of individual REEs ([Wiley 2007
 | Ion Pair RP | C18 | Ion-pairing agent + complexant | Post-column derivatization |
 | Ion Interaction (IIC) | C18 | Diglycolic acid (ODA) + TBAOH | UV-Vis |
 
-**Performance:** - Full REE separation (16 elements except Pm): 55 minutes with α-HIBA gradient - Detection: Post-column derivatization with chlorophosphonazo III at 660 nm - Combined HPLC-ICP-MS enables simultaneous determination of 14 REEs in 15 minutes
+**Performance:**
+
+- Full REE separation (16 elements except Pm): 55 minutes with α-HIBA gradient
+- Detection: Post-column derivatization with chlorophosphonazo III at 660 nm
+- Combined HPLC-ICP-MS enables simultaneous determination of 14 REEs in 15 minutes
 
 #### 11.2.2 Ion Chromatography (IC)
 Ion chromatography uses specialized stationary phases for REE separation ([Springer 2021](https://link.springer.com/article/10.1007/s11696-020-01182-6)).
 
-**Recent Developments:** - Nitrilotriacetate-type chelating resins as stationary phases - Anhydride-derived carboxyl-functionalized silica (Sil-TMA) - Analysis time: \~20 minutes for heavy metals and sum of REEs
+**Recent Developments:**
+
+- Nitrilotriacetate-type chelating resins as stationary phases
+- Anhydride-derived carboxyl-functionalized silica (Sil-TMA)
+- Analysis time: \~20 minutes for heavy metals and sum of REEs
 
 ### 11.3 Thermodynamic Characterization
 #### 11.3.1 Isothermal Titration Calorimetry (ITC)
@@ -1192,14 +1921,23 @@ ITC is the gold standard for measuring thermodynamics of REE-ligand binding in s
 | Stoichiometry        | n      | Metal:ligand ratio        |
 | Gibbs free energy    | ΔG     | Overall driving force     |
 
-**Key Findings from REE-Ligand Studies:** - Formation of lanthanide complexes is often **enthalpy-driven** with **unfavorable entropy** - Enthalpy-entropy compensation observed across lanthanide series - Solvent effects critical: stability follows PC \> AN \> MeOH \> DMF \> DMSO - Stepwise 1:1 and 1:2 complexes can be distinguished
+**Key Findings from REE-Ligand Studies:**
+
+- Formation of lanthanide complexes is often **enthalpy-driven** with **unfavorable entropy**
+- Enthalpy-entropy compensation observed across lanthanide series
+- Solvent effects critical: stability follows PC \> AN \> MeOH \> DMF \> DMSO
+- Stepwise 1:1 and 1:2 complexes can be distinguished
 
 **Solvent Extraction Studies:** ITC has been used to measure enthalpy of extraction (ΔH_extr) of Eu(NO₃)₃ using tripodal diglycolamide (T-DGA) in biphasic systems, providing insight into extraction thermodynamics.
 
 #### 11.3.2 Potentiometric Titration
 Potentiometric titration determines pKa values, stability constants, and extractant purity ([University of Idaho Thesis](https://objects.lib.uidaho.edu/etd/pdf/Lyon_idaho_0089N_10815.pdf)).
 
-**Applications:** - Determination of extractant purity and pKa - Measurement of acid concentration in process solutions - Determination of REE-ligand complex stability constants
+**Applications:**
+
+- Determination of extractant purity and pKa
+- Measurement of acid concentration in process solutions
+- Determination of REE-ligand complex stability constants
 
 **Metal Hydrolysis Mitigation:** Metal ions in acidic solution can act as Bronsted acids, causing hydrolysis and lowering pH. This is mitigated by adding 1 M potassium oxalate (5 mL) to complex metal ions before titration.
 
@@ -1215,7 +1953,11 @@ Potentiometric titration determines pKa values, stability constants, and extract
 #### 11.4.1 UV-Visible Absorption Spectroscopy
 UV-Vis spectroscopy exploits the characteristic f-f electronic transitions of lanthanide ions ([MDPI Crystals 2020](https://www.mdpi.com/2073-4352/10/7/593)).
 
-**Applications:** - Quantification of individual REEs based on characteristic absorption bands - Online process monitoring (multi-track visible spectrometer) - Determination of complex stability constants
+**Applications:**
+
+- Quantification of individual REEs based on characteristic absorption bands
+- Online process monitoring (multi-track visible spectrometer)
+- Determination of complex stability constants
 
 **Process Monitoring:** Simultaneous measurement of Nd³⁺ concentration at multiple process locations (inlet/outlet of aqueous and organic phases) enables real-time mass balance and material accountancy.
 
@@ -1238,7 +1980,12 @@ Lanthanide luminescence provides highly sensitive detection with characteristic 
 #### 11.4.3 FTIR and Raman Spectroscopy
 Vibrational spectroscopy characterizes REE-ligand bonding and complex structure ([Dalton Transactions 2016](https://pubs.rsc.org/en/content/articlelanding/2016/dt/c5dt04547a)).
 
-**Applications:** - Confirmation of ligand coordination modes - Identification of inner-sphere vs. outer-sphere complexation - Characterization of chloride and aqua ligand coordination - Phase identification in solid REE compounds
+**Applications:**
+
+- Confirmation of ligand coordination modes
+- Identification of inner-sphere vs. outer-sphere complexation
+- Characterization of chloride and aqua ligand coordination
+- Phase identification in solid REE compounds
 
 **Raman of Dinitrogen Complexes:** In rare earth dinitrogen complexes, Raman stretching frequencies decrease regularly with decreasing atomic number and increasing Lewis acidity of the metal (Gd → Tm).
 
@@ -1255,48 +2002,104 @@ Paramagnetic lanthanide ions produce characteristic shifts in NMR spectra ([Chem
 | Contact (Fermi) | Unpaired electron density at nucleus | Large for ¹⁷O, ¹³C |
 | Pseudocontact (dipolar) | Magnetic anisotropy | Dominant for 4f lanthanides |
 
-**Limitations:** - Line broadening at high field strengths - Less widely used today than historically - Strategies: use smaller shifting ions (Sm³⁺), higher temperature
+**Limitations:**
+
+- Line broadening at high field strengths
+- Less widely used today than historically
+- Strategies: use smaller shifting ions (Sm³⁺), higher temperature
 
 ### 11.5 X-Ray Absorption Spectroscopy (XAS)
 Synchrotron-based XAS provides element-specific structural and electronic information ([Environmental Science & Technology 2024](https://pubs.acs.org/doi/10.1021/acs.est.4c04256)).
 
 #### 11.5.1 XANES (X-Ray Absorption Near Edge Structure)
-**Information Provided:** - Oxidation state - Coordination geometry - Electronic structure - Bond angles
+**Information Provided:**
 
-**Applications:** - Distinguishing Ce³⁺ vs. Ce⁴⁺ in separation processes - Characterizing REE speciation in environmental samples - Identifying mineral host phases
+- Oxidation state
+- Coordination geometry
+- Electronic structure
+- Bond angles
+
+**Applications:**
+
+- Distinguishing Ce³⁺ vs. Ce⁴⁺ in separation processes
+- Characterizing REE speciation in environmental samples
+- Identifying mineral host phases
 
 #### 11.5.2 EXAFS (Extended X-Ray Absorption Fine Structure)
-**Information Provided:** - Interatomic distances (±0.02 Å) - Coordination numbers - Debye-Waller factors (disorder) - Identity of neighboring atoms
+**Information Provided:**
 
-**REE Applications:** - Local structure of lanthanide ions complexed with chelating ligands - Speciation in coal and coal combustion byproducts - Minimal transformation of REE host phase observed during combustion
+- Interatomic distances (±0.02 Å)
+- Coordination numbers
+- Debye-Waller factors (disorder)
+- Identity of neighboring atoms
 
-**Technical Requirements:** - Synchrotron radiation source required - L-edge XANES primarily used for lanthanides (K-edge at very high energies) - Recent developments enable some lab-based EXAFS (5-30 keV range)
+**REE Applications:**
+
+- Local structure of lanthanide ions complexed with chelating ligands
+- Speciation in coal and coal combustion byproducts
+- Minimal transformation of REE host phase observed during combustion
+
+**Technical Requirements:**
+
+- Synchrotron radiation source required
+- L-edge XANES primarily used for lanthanides (K-edge at very high energies)
+- Recent developments enable some lab-based EXAFS (5-30 keV range)
 
 ### 11.6 Electron Microscopy and Microanalysis
 #### 11.6.1 SEM-EDS (Scanning Electron Microscopy with Energy Dispersive Spectroscopy)
 SEM-EDS is widely used for qualitative and semi-quantitative analysis of REE minerals ([MDPI Applied Sciences 2023](https://www.mdpi.com/2076-3417/13/23/12600), [Hindawi Scanning 2020](https://www.hindawi.com/journals/scanning/2020/2134516/)).
 
-**Capabilities:** - Detection limits: ≥0.1 wt% (1000 ppm) for high-Z elements - Spatial resolution: 1-5 μm - Backscattered electron (BSE) imaging identifies high-Z particles - EDS mapping for elemental distribution
+**Capabilities:**
 
-**Advanced Analysis:** - Principal Component Analysis (PCA) on EDS datasets enhances phase identification - Non-negative Matrix Factorization (NMF) algorithms separate mixed EDS signals - Automated mineralogy systems (AMICS) for high-throughput phase characterization
+- Detection limits: ≥0.1 wt% (1000 ppm) for high-Z elements
+- Spatial resolution: 1-5 μm
+- Backscattered electron (BSE) imaging identifies high-Z particles
+- EDS mapping for elemental distribution
+
+**Advanced Analysis:**
+
+- Principal Component Analysis (PCA) on EDS datasets enhances phase identification
+- Non-negative Matrix Factorization (NMF) algorithms separate mixed EDS signals
+- Automated mineralogy systems (AMICS) for high-throughput phase characterization
 
 #### 11.6.2 TEM (Transmission Electron Microscopy)
 TEM with EELS (Electron Energy Loss Spectroscopy) provides nanoscale characterization of REE associations in minerals and processed materials.
 
-**Applications:** - Nanoscale REE-mineral associations - Crystal structure determination - Identification of submicrometer-sized REE crystals
+**Applications:**
+
+- Nanoscale REE-mineral associations
+- Crystal structure determination
+- Identification of submicrometer-sized REE crystals
 
 ### 11.7 Thermal Analysis
 Thermal analysis techniques characterize phase transitions, decomposition, and thermal stability of REE compounds ([C-Therm](https://ctherm.com/resources/newsroom/thermal-analysis-labs/exploring-the-thermal-properties-of-materials-using-thermogravimetric-analysis-tga-differential-scanning-calorimetry-dsc-and-differential-thermal-analysis-dta/)).
 
 #### 11.7.1 Thermogravimetric Analysis (TGA)
-**Measures:** - Mass loss as function of temperature - Decomposition temperatures - Hydration/dehydration - Oxidation/reduction
+**Measures:**
 
-**REE Applications:** - Decomposition of REE oxalates to oxides - Dehydration of REE phosphate hydrates - Thermal stability of REE complexes with organic ligands
+- Mass loss as function of temperature
+- Decomposition temperatures
+- Hydration/dehydration
+- Oxidation/reduction
+
+**REE Applications:**
+
+- Decomposition of REE oxalates to oxides
+- Dehydration of REE phosphate hydrates
+- Thermal stability of REE complexes with organic ligands
 
 #### 11.7.2 Differential Scanning Calorimetry (DSC) / Differential Thermal Analysis (DTA)
-**Measures:** - Heat flow (DSC) or temperature difference (DTA) - Endo/exothermic transitions - Phase changes, melting points - Glass transition temperatures
+**Measures:**
 
-**Combined TG/DTA:** Simultaneous analysis provides both mass change and thermal event information: - Identifies whether decomposition is endothermic or exothermic - Measures phase transitions without mass loss (melting, crystallization)
+- Heat flow (DSC) or temperature difference (DTA)
+- Endo/exothermic transitions
+- Phase changes, melting points
+- Glass transition temperatures
+
+**Combined TG/DTA:** Simultaneous analysis provides both mass change and thermal event information:
+
+- Identifies whether decomposition is endothermic or exothermic
+- Measures phase transitions without mass loss (melting, crystallization)
 
 ### 11.8 Surface Area and Porosity Analysis
 BET analysis characterizes adsorbent materials used for REE separation ([Intertek](https://cdn.intertek.com/www-intertek-com/dms-legacy/IntertekWhitepaper_Surface_Area_and_Porosity_Chemicals170613.pdf), [PMC 2024](https://pmc.ncbi.nlm.nih.gov/articles/PMC11206383/)).
@@ -1320,20 +2123,38 @@ BET analysis characterizes adsorbent materials used for REE separation ([Interte
 | Diatomite         | \~150 m²/g           | Macroporous |
 | Biochar           | 100-500 m²/g         | Variable    |
 
-**Methods for Micropore Analysis:** - BJH (Barrett-Joyner-Halenda): Adequate for mesopores - NLDFT (Non-Local Density Functional Theory): More accurate for micropores (\<2 nm)
+**Methods for Micropore Analysis:**
+
+- BJH (Barrett-Joyner-Halenda): Adequate for mesopores
+- NLDFT (Non-Local Density Functional Theory): More accurate for micropores (\<2 nm)
 
 ### 11.9 Mass Spectrometry for Speciation
 #### 11.9.1 Electrospray Ionization Mass Spectrometry (ESI-MS)
 ESI-MS enables direct observation of REE-ligand complexes in solution ([Frontiers in Chemistry 2021](https://www.frontiersin.org/journals/chemistry/articles/10.3389/fchem.2020.625945/full), [Analytical Chemistry 2024](https://pubs.acs.org/doi/10.1021/acs.analchem.4c01028)).
 
-**Applications:** - Formation and stoichiometry of metal-ligand complexes - Changes in speciation with metal:ligand ratio and pH - Identification of metal oxidation state - Competitive interactions in ternary systems
+**Applications:**
 
-**Considerations:** - Soft ionization preserves weak metal-ligand bonds - ESI adduct formation and fragmentation can occur - Different ionization efficiencies among species - Best used with corroborating techniques (potentiometry, spectroscopy)
+- Formation and stoichiometry of metal-ligand complexes
+- Changes in speciation with metal:ligand ratio and pH
+- Identification of metal oxidation state
+- Competitive interactions in ternary systems
+
+**Considerations:**
+
+- Soft ionization preserves weak metal-ligand bonds
+- ESI adduct formation and fragmentation can occur
+- Different ionization efficiencies among species
+- Best used with corroborating techniques (potentiometry, spectroscopy)
 
 #### 11.9.2 LA-ICP-MS (Laser Ablation ICP-MS)
 LA-ICP-MS enables spatially resolved analysis of solid samples ([Springer 2024](https://link.springer.com/article/10.1007/s12583-023-2002-4)).
 
-**Applications:** - In situ analysis of REE-bearing minerals - Sm-Nd and Lu-Hf isotope analysis in monazite, apatite, titanite - Mapping REE distribution in materials - U-Pb geochronology
+**Applications:**
+
+- In situ analysis of REE-bearing minerals
+- Sm-Nd and Lu-Hf isotope analysis in monazite, apatite, titanite
+- Mapping REE distribution in materials
+- U-Pb geochronology
 
 **Spatial Resolution:** 10-100 μm spot sizes typical
 
@@ -1369,14 +2190,23 @@ Key parameters for solvent extraction process design ([JACS Au 2022](https://pub
 
     D = [REE]_organic / [REE]_aqueous
 
-**Influencing Factors:** - Extractant type and concentration - pH - Temperature - Diluent type - Aqueous phase composition
+**Influencing Factors:**
+
+- Extractant type and concentration
+- pH
+- Temperature
+- Diluent type
+- Aqueous phase composition
 
 #### 11.11.2 Separation Factor (β)
 **Definition:**
 
     β_{REE1/REE2} = D_{REE1} / D_{REE2}
 
-**Multicomponent Systems:** Two approaches for calculating separation factors in complex mixtures: 1. **Effective separation factor**: Function of adjacent element separation factors and component percentages 2. **Equivalent separation factor**: Converts all components to two-component system
+**Multicomponent Systems:** Two approaches for calculating separation factors in complex mixtures:
+
+1.  **Effective separation factor**: Function of adjacent element separation factors and component percentages
+2.  **Equivalent separation factor**: Converts all components to two-component system
 
 **Example Separation Factors (optimized system):**
 
@@ -1438,7 +2268,11 @@ Solvent extraction remains the dominant commercial technology, with well-establi
 | Caustic crack + SX | Higher            | NaOH consumption   |
 | Chloride route     | Variable          | HCl, environment   |
 
-**Sensitivity Analysis:** REO recovery has the largest impact on process economics: - 1% increase in recovery → \~2% improvement in NPV - Reagent costs → moderate sensitivity - CAPEX → lower sensitivity (amortized over life)
+**Sensitivity Analysis:** REO recovery has the largest impact on process economics:
+
+- 1% increase in recovery → \~2% improvement in NPV
+- Reagent costs → moderate sensitivity
+- CAPEX → lower sensitivity (amortized over life)
 
 ### 12.3 Alternative Technology Economics
 **Supercritical Fluid Extraction (2025):** TEA for 4000 L industrial-scale sc-CO₂ facility ([ACS I&EC Res. 2025](https://pubs.acs.org/doi/10.1021/acs.iecr.5c00324)):
@@ -1491,7 +2325,12 @@ Solvent extraction remains the dominant commercial technology, with well-establi
 ### 12.5 Acid Mine Drainage REE Recovery
 Techno-economic assessment of REE recovery from AMD using network sourcing ([MDPI Minerals 2021](https://www.mdpi.com/2075-163X/11/11/1298)):
 
-**Key Findings:** - Capital cost and HCl consumption are dominant factors - Extractants: D2EHPA, EHEHPA, CA-12, Cyanex 272, Cyanex 572 - Economics improve with REE concentration in feed - Co-product credits (Co, Mn) enhance viability
+**Key Findings:**
+
+- Capital cost and HCl consumption are dominant factors
+- Extractants: D2EHPA, EHEHPA, CA-12, Cyanex 272, Cyanex 572
+- Economics improve with REE concentration in feed
+- Co-product credits (Co, Mn) enhance viability
 
 **Monte Carlo Sensitivity:** \| Factor \| Impact on IRR \| \|--------\|---------------\| \| Capital cost \| High \| \| HCl consumption \| High \| \| REE price \| Moderate-High \| \| Recovery rate \| Moderate \|
 
@@ -1506,9 +2345,23 @@ Techno-economic assessment of REE recovery from AMD using network sourcing ([MDP
 | Bioseparation      | Low         | Low-Medium | \>95%    | Lab           | 3-5 |
 
 ### 12.7 Key Economic Drivers
-**Critical Success Factors:** 1. **Ore grade**: Higher grades dramatically improve economics 2. **REE distribution**: HREE-rich deposits command premium 3. **Recovery rates**: Each 1% improvement significant 4. **Reagent costs**: Extractant and acid consumption dominant 5. **By-product credits**: Th/U, Fe, P, F recovery offsets costs 6. **Scale**: Larger facilities benefit from economies of scale 7. **Location**: Infrastructure, labor, permitting costs vary
+**Critical Success Factors:**
 
-**Risk Factors:** - REE price volatility (historical swings \>10×) - Permitting delays (radioactive waste concerns) - Technology scale-up risk - Geopolitical/trade policy changes - Environmental compliance costs
+1.  **Ore grade**: Higher grades dramatically improve economics
+2.  **REE distribution**: HREE-rich deposits command premium
+3.  **Recovery rates**: Each 1% improvement significant
+4.  **Reagent costs**: Extractant and acid consumption dominant
+5.  **By-product credits**: Th/U, Fe, P, F recovery offsets costs
+6.  **Scale**: Larger facilities benefit from economies of scale
+7.  **Location**: Infrastructure, labor, permitting costs vary
+
+**Risk Factors:**
+
+- REE price volatility (historical swings \>10×)
+- Permitting delays (radioactive waste concerns)
+- Technology scale-up risk
+- Geopolitical/trade policy changes
+- Environmental compliance costs
 
 ------------------------------------------------------------------------
 
@@ -1545,7 +2398,12 @@ Life cycle assessment provides a comprehensive framework for evaluating the envi
 | Praseodymium | 50-70              | Co-produced with Nd              |
 | Yttrium      | 197.9              | Energy-intensive separation      |
 
-**Process Hotspots:** - Chemical production: 40-60% of GWP - Energy consumption: 20-35% of GWP - Transportation: 5-10% of GWP - Mining operations: 10-15% of GWP
+**Process Hotspots:**
+
+- Chemical production: 40-60% of GWP
+- Energy consumption: 20-35% of GWP
+- Transportation: 5-10% of GWP
+- Mining operations: 10-15% of GWP
 
 ### 13.3 Water Footprint
 **Water Consumption by Process:** REE production is highly water-intensive ([ACS Sustain. Chem. Eng. 2015](https://pubs.acs.org/doi/full/10.1021/sc500573b)):
@@ -1560,13 +2418,30 @@ Life cycle assessment provides a comprehensive framework for evaluating the envi
 **Water Use by Process Stage:** \| Stage \| Share of Water Use \| \|-------\|-------------------\| \| Beneficiation \| 20-30% \| \| Leaching/Cracking \| 15-25% \| \| Solvent extraction \| 25-35% \| \| Precipitation/Washing \| 15-25% \| \| Utilities/Cooling \| 10-15% \|
 
 ### 13.4 Ore-Specific Environmental Impacts
-**Bastnäsite Processing:** - Lower radioactive waste concerns (low Th/U content) - Higher SO₂ emissions from sulfuric acid roasting - Dust emissions during mining significant for PM
+**Bastnäsite Processing:**
 
-**Monazite Processing:** - Radioactive waste management challenges (Th, U) - Caustic cracking generates NaOH waste - Higher human toxicity potential
+- Lower radioactive waste concerns (low Th/U content)
+- Higher SO₂ emissions from sulfuric acid roasting
+- Dust emissions during mining significant for PM
 
-**Ion-Adsorption Clays (IACs):** - In-situ leaching causes ammonia contamination - Marine eutrophication from NH₄⁺ emissions - Soil and groundwater impacts - Lower energy intensity than hard rock mining
+**Monazite Processing:**
 
-**Eudialyte Processing:** - High gangue element content increases waste - Complex mineralogy increases chemical consumption - Lower radioactivity than monazite
+- Radioactive waste management challenges (Th, U)
+- Caustic cracking generates NaOH waste
+- Higher human toxicity potential
+
+**Ion-Adsorption Clays (IACs):**
+
+- In-situ leaching causes ammonia contamination
+- Marine eutrophication from NH₄⁺ emissions
+- Soil and groundwater impacts
+- Lower energy intensity than hard rock mining
+
+**Eudialyte Processing:**
+
+- High gangue element content increases waste
+- Complex mineralogy increases chemical consumption
+- Lower radioactivity than monazite
 
 ### 13.5 Comparative LCA of Technologies
 **Environmental Impact by Separation Method:** \| Method \| GWP \| Water \| Waste \| Toxicity \| \|--------\|-----\|-------\|-------\|----------\| \| Solvent extraction \| High \| High \| High \| High \| \| Ion exchange \| Medium \| High \| Medium \| Medium \| \| Supercritical CO₂ \| Medium \| Low \| Low \| Low \| \| Membrane separation \| Low-Medium \| Medium \| Low \| Low \| \| Bioseparation \| Low \| Medium \| Low \| Very Low \|
@@ -1596,16 +2471,42 @@ Life cycle assessment provides a comprehensive framework for evaluating the envi
 **Energy Intensity:** \| Process \| Energy (MWh/ton REO) \| \|---------\|---------------------\| \| Mining + beneficiation \| 10-30 \| \| Cracking/leaching \| 20-50 \| \| Solvent extraction \| 30-60 \| \| Precipitation + calcination \| 10-30 \| \| Total \| 100+ \|
 
 ### 13.7 Data Challenges and Uncertainties
-**Key Limitations:** ([Frontiers Energy 2014](https://www.researchgate.net/publication/273515425)): - Majority of REE production in China limits data access - Proprietary process information - Allocation challenges for multi-output processes - Temporal and geographical variability - Inconsistent system boundaries across studies
+**Key Limitations:** ([Frontiers Energy 2014](https://www.researchgate.net/publication/273515425)):
 
-**Uncertainty Ranges:** - GWP estimates vary by 5× or more - Water footprint estimates vary by 8× - Regional electricity grid mix dominates variability
+- Majority of REE production in China limits data access
+- Proprietary process information
+- Allocation challenges for multi-output processes
+- Temporal and geographical variability
+- Inconsistent system boundaries across studies
+
+**Uncertainty Ranges:**
+
+- GWP estimates vary by 5× or more
+- Water footprint estimates vary by 8×
+- Regional electricity grid mix dominates variability
 
 ### 13.8 Improvement Opportunities
-**Process Optimization:** - Reagent recycling and recovery - Heat integration - Renewable energy adoption - Wastewater treatment and reuse - By-product valorization
+**Process Optimization:**
 
-**Technology Substitution:** - Supercritical CO₂ for solvent extraction - Bioseparation for selective recovery - Membrane processes for bulk separation - Electrochemical methods for metal production
+- Reagent recycling and recovery
+- Heat integration
+- Renewable energy adoption
+- Wastewater treatment and reuse
+- By-product valorization
 
-**Circular Economy:** - Urban mining from e-waste - Industrial symbiosis (red mud, coal ash) - Product design for recyclability - Extended producer responsibility
+**Technology Substitution:**
+
+- Supercritical CO₂ for solvent extraction
+- Bioseparation for selective recovery
+- Membrane processes for bulk separation
+- Electrochemical methods for metal production
+
+**Circular Economy:**
+
+- Urban mining from e-waste
+- Industrial symbiosis (red mud, coal ash)
+- Product design for recyclability
+- Extended producer responsibility
 
 ------------------------------------------------------------------------
 
@@ -1615,7 +2516,13 @@ Computational methods are increasingly important for understanding REE separatio
 ### 14.1 Density Functional Theory (DFT) for Ligand Design
 DFT calculations provide atomic-level insights into metal-ligand interactions and extraction mechanisms ([JACS Au 2024](https://pubs.acs.org/doi/10.1021/jacsau.4c00770)).
 
-**Applications:** - Geometry optimization of REE-ligand complexes - Binding energy calculations - Charge distribution analysis (Mulliken, NBO) - Molecular orbital interactions - Selectivity prediction
+**Applications:**
+
+- Geometry optimization of REE-ligand complexes
+- Binding energy calculations
+- Charge distribution analysis (Mulliken, NBO)
+- Molecular orbital interactions
+- Selectivity prediction
 
 **Key Findings from DFT Studies:**
 
@@ -1627,7 +2534,11 @@ DFT calculations provide atomic-level insights into metal-ligand interactions an
 | Complex stability   | Lower           | Higher          |
 | Extraction tendency | Lower           | Higher          |
 
-*Diglycolamide (DGA) Complexes:* Electrostatic interactions dominate Ln-DGA binding ([ScienceDirect 2021](https://www.sciencedirect.com/science/article/abs/pii/S1002072120303987)): - Covalent character increases along lanthanide series - Binding pocket shrinks from La to Nd to Eu - Explains observed selectivity trends
+*Diglycolamide (DGA) Complexes:* Electrostatic interactions dominate Ln-DGA binding ([ScienceDirect 2021](https://www.sciencedirect.com/science/article/abs/pii/S1002072120303987)):
+
+- Covalent character increases along lanthanide series
+- Binding pocket shrinks from La to Nd to Eu
+- Explains observed selectivity trends
 
 **Computational Challenges:** Metal complexes can have many stable configurations whose energy differences exceed the small energy differences determining selectivity. Incorrect predictions result if lowest-energy configurations are not identified ([JACS Au 2024](https://pubs.acs.org/doi/10.1021/jacsau.4c00770)):
 
@@ -1641,18 +2552,37 @@ DFT calculations provide atomic-level insights into metal-ligand interactions an
 ### 14.2 COSMO-RS for Solvent Effects
 COSMO-RS (Conductor-like Screening Model for Real Solvents) enables prediction of thermodynamic properties in liquid phases ([ScienceDirect 2021](https://www.sciencedirect.com/science/article/abs/pii/S0167732220368975)).
 
-**DFT + COSMO-RS Workflow:** 1. Determine extraction stoichiometry experimentally 2. Optimize extractant/complex structures (DFT) 3. Calculate σ-profiles and chemical potentials 4. Predict partition coefficients and selectivity
+**DFT + COSMO-RS Workflow:**
 
-**Validated Applications:** - β-diketone extraction of La/Ce - Ionic liquid diluent effects - Temperature dependence prediction - Multi-component system modeling
+1.  Determine extraction stoichiometry experimentally
+2.  Optimize extractant/complex structures (DFT)
+3.  Calculate σ-profiles and chemical potentials
+4.  Predict partition coefficients and selectivity
+
+**Validated Applications:**
+
+- β-diketone extraction of La/Ce
+- Ionic liquid diluent effects
+- Temperature dependence prediction
+- Multi-component system modeling
 
 **Accuracy:** Theoretical selectivity trends agree closely with experimental results, including for ionic liquid systems.
 
 ### 14.3 Molecular Dynamics (MD) Simulations
 MD simulations reveal dynamic behavior and solvation structure of REE complexes.
 
-**Applications:** - Nitrate coordination dynamics in extraction - Ligand flexibility and binding pocket size - Interfacial behavior at organic/aqueous interface - Aggregation phenomena in organic phase
+**Applications:**
 
-**Key Findings:** BLPhen ligand studies show ([PMC 2020](https://pmc.ncbi.nlm.nih.gov/articles/PMC7452217/)): - Dynamic nitrate coordination (bidentate ↔ monodentate switching) - Binding pocket contraction along La → Nd → Eu series - Configuration changes correlate with selectivity
+- Nitrate coordination dynamics in extraction
+- Ligand flexibility and binding pocket size
+- Interfacial behavior at organic/aqueous interface
+- Aggregation phenomena in organic phase
+
+**Key Findings:** BLPhen ligand studies show ([PMC 2020](https://pmc.ncbi.nlm.nih.gov/articles/PMC7452217/)):
+
+- Dynamic nitrate coordination (bidentate ↔ monodentate switching)
+- Binding pocket contraction along La → Nd → Eu series
+- Configuration changes correlate with selectivity
 
 **Simulation Parameters:** \| Parameter \| Typical Value \| \|-----------\|---------------\| \| Time scale \| 10-100 ns \| \| Force field \| AMBER, CHARMM, OPLS \| \| REE parameters \| Specialized (12-6-4 LJ) \| \| Solvation \| Explicit water + organic \|
 
@@ -1661,60 +2591,140 @@ Deep neural networks enable high-throughput virtual screening of potential extra
 
 **Input Features:** \| Category \| Examples \| \|----------\|----------\| \| Molecular descriptors \| RDKit (208 descriptors) \| \| Fingerprints \| ECFP (extended connectivity) \| \| Process conditions \| Temperature, concentration \| \| Solvent properties \| Dielectric constant, viscosity \| \| Total inputs \| \~2291 per prediction \|
 
-**Model Architecture:** - Deep neural networks trained on experimental D values - SMILES → RDKit → Descriptor + ECFP pipeline - Trained on curated solvent extraction database - Predicts log D for Ln(III) ions
+**Model Architecture:**
+
+- Deep neural networks trained on experimental D values
+- SMILES → RDKit → Descriptor + ECFP pipeline
+- Trained on curated solvent extraction database
+- Predicts log D for Ln(III) ions
 
 **Performance:** \| Metric \| Value \| \|--------\|-------\| \| Training data \| Thousands of experimental D values \| \| Prediction accuracy \| R² \> 0.85 for held-out test \| \| Throughput \| Millions of compounds/day \| \| Use case \| Virtual screening, prioritization \|
 
-**Applications:** - Rapid evaluation of novel ligand structures - Identification of structure-activity relationships - Guidance for synthetic chemistry efforts - Optimization of extraction conditions
+**Applications:**
+
+- Rapid evaluation of novel ligand structures
+- Identification of structure-activity relationships
+- Guidance for synthetic chemistry efforts
+- Optimization of extraction conditions
 
 ### 14.5 QSPR Models
 Quantitative Structure-Property Relationships correlate molecular descriptors with extraction properties.
 
 **Common Descriptors:** \| Category \| Examples \| \|----------\|----------\| \| Constitutional \| MW, atom counts, bond counts \| \| Topological \| Connectivity indices, shape \| \| Electronic \| HOMO/LUMO, partial charges \| \| Geometric \| Surface area, volume \| \| Lipophilicity \| log P, polar surface area \|
 
-**Model Types:** - Multiple linear regression (MLR) - Partial least squares (PLS) - Random forests - Support vector machines (SVM) - Gradient boosting (XGBoost, LightGBM)
+**Model Types:**
+
+- Multiple linear regression (MLR)
+- Partial least squares (PLS)
+- Random forests
+- Support vector machines (SVM)
+- Gradient boosting (XGBoost, LightGBM)
 
 **Validation:** \| Method \| Description \| \|--------\|-------------\| \| Cross-validation \| K-fold, leave-one-out \| \| External test set \| Held-out experimental data \| \| Y-scrambling \| Randomization check \| \| Applicability domain \| Chemical space coverage \|
 
 ### 14.6 Automated Structure Generation
 The Architector package automates metal-ligand complex construction ([JACS Au 2024](https://pubs.acs.org/doi/10.1021/jacsau.4c00770)):
 
-**Workflow:** 1. Input: ligand SMILES + metal ion 2. Automated 3D structure generation 3. Configuration exploration 4. Semi-empirical optimization (GFN2-xTB) 5. DFT refinement of promising candidates 6. Property prediction
+**Workflow:**
 
-**Advantages:** - Eliminates human bias in structure construction - Explores vast conformational space - Computationally efficient screening - Interfaces with high-level DFT
+1.  Input: ligand SMILES + metal ion
+2.  Automated 3D structure generation
+3.  Configuration exploration
+4.  Semi-empirical optimization (GFN2-xTB)
+5.  DFT refinement of promising candidates
+6.  Property prediction
+
+**Advantages:**
+
+- Eliminates human bias in structure construction
+- Explores vast conformational space
+- Computationally efficient screening
+- Interfaces with high-level DFT
 
 ### 14.7 Process Simulation
 **Software Platforms:** \| Software \| Application \| \|----------\|-------------\| \| Aspen Plus \| Flowsheet simulation \| \| MATLAB/Python \| Custom extraction models \| \| gPROMS \| Dynamic process modeling \| \| DWSIM \| Open-source alternative \|
 
-**Solvent Extraction Simulation:** Counter-current cascade modeling ([MDPI Minerals 2023](https://www.mdpi.com/2075-163X/13/6/714)): - Stage-wise mass balance - Equilibrium and kinetic models - Parameter estimation from lab data - Optimization of stage count, A/O ratio
+**Solvent Extraction Simulation:** Counter-current cascade modeling ([MDPI Minerals 2023](https://www.mdpi.com/2075-163X/13/6/714)):
+
+- Stage-wise mass balance
+- Equilibrium and kinetic models
+- Parameter estimation from lab data
+- Optimization of stage count, A/O ratio
 
 ### 14.8 Speciation Modeling
 **Geochemical Codes:** \| Software \| Capabilities \| \|----------\|-------------\| \| PHREEQC \| Aqueous equilibrium, adsorption \| \| Geochemist's Workbench \| Reaction path modeling \| \| MINTEQ \| Trace metal speciation \| \| EQ3/6 \| High T/P geochemistry \|
 
-**Thermodynamic Databases:** - NIST Critical Stability Constants - NEA-TDB (nuclear applications) - THEREDA (waste disposal) - Custom databases for novel extractants
+**Thermodynamic Databases:**
+
+- NIST Critical Stability Constants
+- NEA-TDB (nuclear applications)
+- THEREDA (waste disposal)
+- Custom databases for novel extractants
 
 ### 14.9 Emerging Computational Approaches
-**Generative Models for Ligand Design:** - Variational autoencoders (VAE) - Generative adversarial networks (GAN) - Reinforcement learning for property optimization - Automatic generation of novel molecular structures
+**Generative Models for Ligand Design:**
 
-**Graph Neural Networks:** - Direct learning on molecular graphs - Message passing for property prediction - Transfer learning from large databases
+- Variational autoencoders (VAE)
+- Generative adversarial networks (GAN)
+- Reinforcement learning for property optimization
+- Automatic generation of novel molecular structures
 
-**Multi-Objective Optimization:** - Pareto optimization of selectivity + sustainability - Genetic algorithms for extractant design - Bayesian optimization for process conditions
+**Graph Neural Networks:**
 
-**High-Throughput Computing:** - Cloud-based DFT screening - Workflow automation (FireWorks, AiiDA) - Database integration (Materials Project, NOMAD)
+- Direct learning on molecular graphs
+- Message passing for property prediction
+- Transfer learning from large databases
+
+**Multi-Objective Optimization:**
+
+- Pareto optimization of selectivity + sustainability
+- Genetic algorithms for extractant design
+- Bayesian optimization for process conditions
+
+**High-Throughput Computing:**
+
+- Cloud-based DFT screening
+- Workflow automation (FireWorks, AiiDA)
+- Database integration (Materials Project, NOMAD)
 
 ### 14.10 Integration with Experimental Workflows
-**Closed-Loop Discovery:** 1. ML model predicts promising candidates 2. Automated synthesis (if feasible) 3. High-throughput extraction screening 4. Data fed back to improve model 5. Iterate until target selectivity achieved
+**Closed-Loop Discovery:**
 
-**Current Limitations:** - Limited experimental training data - Difficulty predicting kinetics - Gap between model compounds and real ores - Multi-phase system complexity
+1.  ML model predicts promising candidates
+2.  Automated synthesis (if feasible)
+3.  High-throughput extraction screening
+4.  Data fed back to improve model
+5.  Iterate until target selectivity achieved
 
-**Future Directions:** - Active learning for efficient data collection - Physics-informed neural networks - Multi-scale modeling (molecular → process) - Integration with robotic laboratories
+**Current Limitations:**
+
+- Limited experimental training data
+- Difficulty predicting kinetics
+- Gap between model compounds and real ores
+- Multi-phase system complexity
+
+**Future Directions:**
+
+- Active learning for efficient data collection
+- Physics-informed neural networks
+- Multi-scale modeling (molecular → process)
+- Integration with robotic laboratories
 
 ------------------------------------------------------------------------
 
 ## 15. Conclusions
-Rare earth element separation technology is undergoing a transformation driven by: 1. **Supply chain security concerns** following China's export restrictions 2. **Environmental imperatives** to reduce pollution from traditional methods 3. **Technological breakthroughs** in bio-based, supramolecular, and electrochemical approaches
+Rare earth element separation technology is undergoing a transformation driven by:
 
-The most promising emerging technologies include: - **Lanmodulin-based bioseparation**: Offers exceptional selectivity with minimal environmental impact - **Flash Joule heating**: Provides single-step, solvent-free separation from e-waste - **MOF nanotraps**: Achieve extraordinary separation factors in single-step processes - **Supramolecular precipitation**: Enables direct recovery from complex mixtures
+1.  **Supply chain security concerns** following China's export restrictions
+2.  **Environmental imperatives** to reduce pollution from traditional methods
+3.  **Technological breakthroughs** in bio-based, supramolecular, and electrochemical approaches
+
+The most promising emerging technologies include:
+
+- **Lanmodulin-based bioseparation**: Offers exceptional selectivity with minimal environmental impact
+- **Flash Joule heating**: Provides single-step, solvent-free separation from e-waste
+- **MOF nanotraps**: Achieve extraordinary separation factors in single-step processes
+- **Supramolecular precipitation**: Enables direct recovery from complex mixtures
 
 While traditional solvent extraction will remain important for large-scale production, the future likely involves hybrid approaches combining multiple technologies optimized for specific feedstocks and product requirements. The global REE recycling rate, currently below 1%, represents both a challenge and an opportunity for new separation technologies to demonstrate their value in circular economy applications.
 
@@ -1761,9 +2771,18 @@ The **entropy-enthalpy compensation effect** has been observed - less compact hy
 **Reference:** [OSTI Thermodynamics Studies](https://www.osti.gov/etdeweb/servlets/purl/20176396)
 
 #### 16.2.3 Diglycolamide (DGA) Systems
-TODGA and related DGAs show: - **Enthalpy-driven extraction** for Am(III) and U(VI) - **Both enthalpy and entropy favorable** for Pu(IV) - Novel unsymmetrical DGA: ΔH = −64.94 kJ/mol, ΔS = −144.42 J/(mol·K) - Complexation shows **negative ΔH with positive ΔS** - driven by both factors
+TODGA and related DGAs show:
 
-**References:** - [Chemistry of Diglycolamides (Chemical Reviews)](https://pubs.acs.org/doi/10.1021/cr200002f) - [Temperature Influence on TODGA Extraction](https://link.springer.com/article/10.1007/s10967-024-09902-y) - [TODGA Thermodynamics (IAEA)](https://inis.iaea.org/records/5cbkn-fw635)
+- **Enthalpy-driven extraction** for Am(III) and U(VI)
+- **Both enthalpy and entropy favorable** for Pu(IV)
+- Novel unsymmetrical DGA: ΔH = −64.94 kJ/mol, ΔS = −144.42 J/(mol·K)
+- Complexation shows **negative ΔH with positive ΔS** - driven by both factors
+
+**References:**
+
+- [Chemistry of Diglycolamides (Chemical Reviews)](https://pubs.acs.org/doi/10.1021/cr200002f)
+- [Temperature Influence on TODGA Extraction](https://link.springer.com/article/10.1007/s10967-024-09902-y)
+- [TODGA Thermodynamics (IAEA)](https://inis.iaea.org/records/5cbkn-fw635)
 
 #### 16.2.4 Ionic Liquid Systems
 Lanthanide extraction into **Bumim·Tf₂N** with HTTA:
@@ -1794,15 +2813,25 @@ Key insight: **Endothermic complexation** driven by **favorable entropy** in ion
 **Reference:** [Nature - Solvent Extraction and Stripping of Uranium with Alamine 336](https://www.nature.com/articles/s41598-025-96421-9)
 
 #### 16.3.3 Thermodynamic Balance
-The thermochemistry of metal ion partitioning represents a balance between: 1. **Endothermic**: Metal ion dehydration in aqueous phase 2. **Exothermic**: Formation of lipophilic complexes in organic phase
+The thermochemistry of metal ion partitioning represents a balance between:
+
+1.  **Endothermic**: Metal ion dehydration in aqueous phase
+2.  **Exothermic**: Formation of lipophilic complexes in organic phase
 
 For stripping, this balance reverses - breaking organic-phase complexes and rehydrating the metal ion.
 
 ### 16.4 Molecular-Level Insights
 #### 16.4.1 Ion Transfer at Liquid-Liquid Interfaces
-MD simulations reveal: - **Water/nitrobenzene interface**: Energetic costs include interfacial deformation and co-transfer of hydration waters - **Free energy profile**: Small local minimum (\~−5.9 kJ/mol) near interface, then monotonic increase into organic phase - **SCN⁻ at oil-water**: Transfer driven by **entropy increase** with minimal enthalpic contribution (different from air-water interfaces)
+MD simulations reveal:
 
-**References:** - [PNAS - Mechanisms of Ion Adsorption to Aqueous Interfaces](https://www.pnas.org/doi/10.1073/pnas.2210857119) - [Science - Mechanism and Dynamics of Ion Transfer](https://www.science.org/doi/10.1126/science.261.5128.1558)
+- **Water/nitrobenzene interface**: Energetic costs include interfacial deformation and co-transfer of hydration waters
+- **Free energy profile**: Small local minimum (\~−5.9 kJ/mol) near interface, then monotonic increase into organic phase
+- **SCN⁻ at oil-water**: Transfer driven by **entropy increase** with minimal enthalpic contribution (different from air-water interfaces)
+
+**References:**
+
+- [PNAS - Mechanisms of Ion Adsorption to Aqueous Interfaces](https://www.pnas.org/doi/10.1073/pnas.2210857119)
+- [Science - Mechanism and Dynamics of Ion Transfer](https://www.science.org/doi/10.1126/science.261.5128.1558)
 
 #### 16.4.2 Synergistic Extraction
 - Synergy enhances extraction by increasing **entropy of the extracted ion** (final state)
@@ -1858,7 +2887,11 @@ MD simulations reveal: - **Water/nitrobenzene interface**: Energetic costs inclu
 3.  **Crown ether systems** for group/individual REE separation with full thermodynamic data
 4.  **Nonaqueous solvent extraction (NASX)** systems - quantitative thermodynamic studies still lacking
 
-**References:** - [Thermomorphic IL Extraction (ScienceDirect)](https://www.sciencedirect.com/science/article/abs/pii/S1383586624034257) - [ITC + MD for Binary Mixtures (ScienceDirect)](https://www.sciencedirect.com/science/article/abs/pii/S0167732221017098) - [NASX Review (ACS I&EC Research)](https://pubs.acs.org/doi/10.1021/acs.iecr.1c02287)
+**References:**
+
+- [Thermomorphic IL Extraction (ScienceDirect)](https://www.sciencedirect.com/science/article/abs/pii/S1383586624034257)
+- [ITC + MD for Binary Mixtures (ScienceDirect)](https://www.sciencedirect.com/science/article/abs/pii/S0167732221017098)
+- [NASX Review (ACS I&EC Research)](https://pubs.acs.org/doi/10.1021/acs.iecr.1c02287)
 
 ------------------------------------------------------------------------
 

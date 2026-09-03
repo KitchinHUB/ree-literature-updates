@@ -2,6 +2,7 @@
 title: Prologue — How This Book Was Made
 ---
 
+(prologue-how-this-book-was-made)=
 # Prologue: How This Book Was Made
 
 ## A disclaimer about AI

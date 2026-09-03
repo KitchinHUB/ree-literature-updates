@@ -2,6 +2,7 @@
 title: Glossary
 ---
 
+(glossary)=
 # Glossary
 
 :::{glossary}
