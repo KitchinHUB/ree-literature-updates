@@ -20,10 +20,13 @@ Environment Variables:
 import argparse
 import json
 import os
+import random
 import re
+import time
 from datetime import datetime, timedelta
 from pathlib import Path
 from typing import Optional
+import urllib.error
 import urllib.parse
 import urllib.request
 
@@ -106,6 +109,15 @@ RELEVANCE_TERMS = [
 ]
 
 
+# Retry policy for the OpenAlex API. It returns 503 during maintenance and
+# 429 when the polite-pool rate limit is hit; both clear on their own, so a
+# failed topic should not silently produce a thin report.
+MAX_ATTEMPTS = 5
+RETRY_BASE_DELAY = 1.0   # seconds; doubles each attempt
+RETRY_MAX_DELAY = 30.0   # cap on any single backoff
+RETRYABLE_STATUS = {429, 500, 502, 503, 504}
+
+
 def query_openalex(
     query: str,
     from_date: str,
@@ -136,14 +148,46 @@ def query_openalex(
     }
 
     url = f"{base_url}?{urllib.parse.urlencode(params)}"
+    req = urllib.request.Request(url, headers={"User-Agent": "LiteratureMonitor/1.0"})
 
-    try:
-        req = urllib.request.Request(url, headers={"User-Agent": "LiteratureMonitor/1.0"})
-        with urllib.request.urlopen(req, timeout=30) as response:
-            return json.loads(response.read().decode())
-    except Exception as e:
-        print(f"  Warning: OpenAlex query failed: {e}")
-        return {"results": [], "meta": {"count": 0}}
+    for attempt in range(1, MAX_ATTEMPTS + 1):
+        retry_after = None
+        try:
+            with urllib.request.urlopen(req, timeout=30) as response:
+                return json.loads(response.read().decode())
+        except urllib.error.HTTPError as e:
+            if e.code not in RETRYABLE_STATUS:
+                # 4xx client errors will not fix themselves; fail fast.
+                print(f"  Warning: OpenAlex query failed: {e}")
+                return {"results": [], "meta": {"count": 0}}
+            retry_after = e.headers.get("Retry-After") if e.headers else None
+            reason = f"HTTP {e.code}"
+        except (urllib.error.URLError, TimeoutError, json.JSONDecodeError) as e:
+            reason = str(e)
+
+        if attempt == MAX_ATTEMPTS:
+            print(
+                f"  Warning: OpenAlex query failed after {MAX_ATTEMPTS} attempts: {reason}"
+            )
+            return {"results": [], "meta": {"count": 0}}
+
+        # Exponential backoff with jitter, honoring Retry-After when sent.
+        delay = min(RETRY_BASE_DELAY * (2 ** (attempt - 1)), RETRY_MAX_DELAY)
+        if retry_after:
+            try:
+                delay = min(float(retry_after), RETRY_MAX_DELAY)
+            except ValueError:
+                pass  # Retry-After can be an HTTP date; fall back to backoff
+        delay += random.uniform(0, 0.5)
+
+        print(
+            f"    {reason}, retrying in {delay:.1f}s "
+            f"(attempt {attempt}/{MAX_ATTEMPTS})"
+        )
+        time.sleep(delay)
+
+    # Unreachable: the final attempt always returns above.
+    return {"results": [], "meta": {"count": 0}}
 
 
 def search_openalex_all_topics(from_date: str, max_per_topic: int = 10) -> list[dict]:
