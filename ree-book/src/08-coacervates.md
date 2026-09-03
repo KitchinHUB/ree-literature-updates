@@ -22,9 +22,14 @@ The headline results:
 - Aqueous biphasic systems built from polymers and {index}`ionic liquids` give promising
   REE {index}`separation factors <separation factor>` [@neves2022liquid; @kumar2022separation].
 - Biomimetic approaches using lanthanide-binding proteins such as {index}`lanmodulin`
-  reach separation factors above 100 for *adjacent* lanthanides
-  [@cotruvo2023enhanced] — a figure that should be read against the
-  single-digit factors typical of conventional extractants.
+  separate the rare earths from *everything else* with a sharpness no synthetic
+  extractant matches — roughly 10⁸-fold discrimination against Ca²⁺, and
+  quantitative recovery of REEs from leachates carrying molar quantities of Na,
+  Mg, Ca, Al, Fe, Cu and Zn [@cotruvo2018lanmodulin; @deblonde2020selective].
+  They discriminate one lanthanide from its *neighbour* only weakly. That makes
+  them group-separation agents rather than replacements for a fractionation
+  cascade; the distinction is developed in
+  [](#lanmodulin-structure-mechanism-and-engineering).
 - Stimuli-responsive coacervates allow on-demand capture and release through
   temperature, pH, or redox triggers [@love2020reversible; @wang2025quantification].
 
@@ -92,7 +97,7 @@ For rare earth elements, the challenge is that all lanthanides exhibit similar c
 
 Separation factors (SF) quantify selectivity: $$SF = \frac{[M_1]_{coacervate}/[M_1]_{supernatant}}{[M_2]_{coacervate}/[M_2]_{supernatant}}$$
 
-For adjacent lanthanides, conventional solvent extraction achieves SF = 1.5-3.0, while protein-based systems can achieve SF \> 100 [@cotruvo2023enhanced].
+For adjacent lanthanides, conventional solvent extraction achieves SF = 1.5-3.0. Protein-based systems are sometimes quoted at "SF \> 100", but that number is a misreading. The figure in circulation is the \>100-fold ratio of *dimerization affinities* between the La³⁺- and Dy³⁺-loaded forms of Hans-LanM [@mattocks2023enhanced] — neither a separation factor nor an adjacent pair, since La and Dy sit nine places apart on opposite sides of the light/heavy split. The separation factors the same work actually measured are Nd/Dy = 8.1 (wild type) and 12.7 (the R100K variant), and the best adjacent-pair figures from any protein system are Ce/La = 3.0, Pr/Ce = 1.7 and Nd/Pr = 1.4 [@larrinaga2024modulating]. That is the same band as conventional extractants, not a hundred times better. Against Ca²⁺ and the other non-rare-earth cations in a leachate the protein discrimination genuinely is enormous; against a neighbouring lanthanide it is not. The two selectivities must be kept apart, and only the second is what a fractionation cascade is built to supply.
 
 ## Biomimetic and Natural Coacervate Systems
 Nature provides inspiration for REE-selective materials through the discovery of lanthanide-dependent bacteria and their associated proteins. Biological phase separation in the form of membraneless organelles also offers insights into coacervate function and design.
@@ -133,22 +138,29 @@ Key characteristics:
 
 - Pentagonal bipyramidal coordination geometry
 - Positions 1, 3, 5, 7, 9, and 12 provide coordinating residues (denoted X, Y, Z, -Y, -X, -Z)
-- Picomolar affinity for Ln3+ with 10^8^-fold selectivity over Ca2+ [@cotruvo2023enhanced]
 - Disorder-to-order conformational change upon lanthanide binding
+
+Isolated tags are much weaker binders than the protein they are derived from:
+micromolar dissociation constants for immobilized LBTs against picomolar ones
+for full-length lanmodulin, a difference of roughly six orders of magnitude
+(see [](#biological-and-biomimetic-separations)). The picomolar affinity and the
+10⁸-fold Ca²⁺ discrimination quoted in the literature belong to the whole
+protein [@cotruvo2018lanmodulin], not to the excised loop.
 
 Isolated EF-hand loop peptides dimerize when saturated with lanthanide ions, reproducing the structure of native protein domains [@shaw1997isolated; @ma2000lanthanide]. This metal-induced self-assembly could be exploited for coacervate formation and REE separation.
 
 #### Lanmodulin (LanM)
 
-Lanmodulin is a natural lanthanide-binding protein discovered in methylotrophic bacteria that use lanthanides in methanol dehydrogenase enzymes [@cotruvo2023enhanced; @deblonde2021natural]. LanM possesses four EF-hand motifs with remarkable lanthanide selectivity:
+Lanmodulin is a natural lanthanide-binding protein discovered in methylotrophic bacteria that use lanthanides in methanol dehydrogenase enzymes [@cotruvo2018lanmodulin; @deblonde2020selective]. LanM possesses four EF-hand motifs and undergoes a large disorder-to-order conformational change on metal binding. Two of its properties matter here, and they are different properties:
 
-- Picomolar affinity for Ln3+ (Kd \~ 10^-12^ M)
-- 10^8^-fold selectivity over Ca2+
-- Large conformational change upon metal binding
+- **Ln³⁺ versus everything else.** LanM responds to picomolar concentrations of every trivalent lanthanide from La to Lu (and Y), but only to near-millimolar Ca²⁺ — a discrimination of order 10⁸ [@cotruvo2018lanmodulin]. It holds that binding down to pH ≈ 2.5, survives 95 °C and repeated acid cycling, and recovers rare earths quantitatively from coal and electronic-waste leachates containing molar amounts of Li, Na, Mg, Ca, Sr, Al, Si, Mn, Fe, Co, Ni, Cu, Zn and U [@deblonde2020selective]. This is a *group* selectivity, and it is the strongest one known for a macromolecule.
+- **Ln³⁺ versus Ln³⁺.** The same property — picomolar affinity for the whole series — means the monomer barely distinguishes one lanthanide from the next. Discriminating Nd from Pr, which is what a fractionation cascade exists to do, is a different problem, and native LanM does not solve it.
 
-A variant from *Hansschlegelia quercus* (Hans-LanM) exhibits metal-sensitive dimerization, with the La3+-induced dimer being \>100-fold tighter than the Dy3+-induced dimer [@cotruvo2023enhanced]. X-ray crystal structures reveal how picometer-scale radius differences between La3+ and Dy3+ are propagated to quaternary structure through carboxylate shifts in second-sphere hydrogen bonding networks.
+The route to intra-series discrimination is not the binding site but the *quaternary* structure. A homologue from *Hansschlegelia quercus* (Hans-LanM) dimerizes in a way that is sensitive to ionic radius: the La³⁺-induced dimer is \>100-fold tighter than the Dy³⁺-induced dimer [@mattocks2023enhanced]. X-ray crystal structures reveal how picometer-scale radius differences between La³⁺ and Dy³⁺ are propagated to quaternary structure through carboxylate shifts in second-sphere hydrogen bonding networks.
 
-Structure-guided mutagenesis at the dimer interface enables single-stage, column-based separation of Nd3+/Dy3+ mixtures to \>98% individual element purities [@park2024modulating]. This represents a breakthrough in achieving industrial-scale separation factors under mild, aqueous conditions.
+Note carefully what that \>100-fold number is and is not. It is a ratio of dimerization affinities for La versus Dy — nine places apart, on opposite sides of the light/heavy split — and not a separation factor for any pair, least of all an adjacent one. The measured separation factors from the same work are Nd/Dy = 8.12 ± 0.40 on a Hans-LanM column and 12.7 ± 1.3 on an R100K variant column [@mattocks2023enhanced]. Amplified down a column, an SF of that size still does real work: loaded with a model electronic-waste mixture of 95% Nd and 5% Dy, the R100K column achieved baseline separation to \>98% purity and \>99% yield in a single stage. The result is genuine; the mechanism is a modest separation factor plus many theoretical plates, not a separation factor above 100.
+
+For an adjacent pair the honest numbers are smaller still. Applying the same dimerization strategy to *Methylorubrum extorquens* LanD — a related periplasmic lanthanide chaperone, not lanmodulin — an engineered variant enriches Pr³⁺ and Nd³⁺ relative to La³⁺ and Ce³⁺ in an all-aqueous ultrafiltration step, with SF Ce/La = 3.0 ± 0.4, Pr/Ce = 1.7 ± 0.2 and Nd/Pr = 1.4 ± 0.2 [@larrinaga2024modulating]. Those are the best protein-based adjacent-pair separation factors reported, they sit inside the conventional 1.5-3.0 band, and they were measured on micromolar solutions at bench scale.
 
 Recent computational studies provide structural insights into REE selectivity in lanmodulin variants [@yao2025computationally] enabling rational design of engineered proteins for specific separation challenges [@chen2025lanmodulin].
 
@@ -287,8 +299,8 @@ Three-liquid-phase systems with Cyanex272/PEG/ammonium sulfate show promise for 
 
 Protein-based approaches:
 
-- Hans-LanM discriminates light from heavy REEs based on metal-sensitive dimerization [@cotruvo2023enhanced]
-- Engineered lanmodulin variants can achieve Nd/Dy separation to \>98% purity in single-stage columns [@park2024modulating]
+- Hans-LanM discriminates light from heavy REEs through metal-sensitive dimerization, and an interface mutant separates an Nd/Dy mixture to \>98% purity in a single-stage column [@mattocks2023enhanced]. Nd/Dy is a light/heavy split; no protein system has been shown to fractionate an adjacent heavy pair such as Dy/Ho.
+- The related LanD chaperone, engineered at the same interface, fractionates *within* the light lanthanides, enriching Pr and Nd over La and Ce [@larrinaga2024modulating]
 
 #### Sc Separation
 Scandium is geochemically associated with REEs but has distinct chemistry: smaller ionic radius (0.75 Å), lower coordination number preference, and unique complexation behavior. This enables high separation factors from lanthanides.
@@ -449,7 +461,7 @@ Coacervate-based separation methods represent a promising, environmentally-frien
 
 Key conclusions:
 
-1.  **Biomimetic approaches show highest selectivity**: Lanmodulin and engineered variants achieve separation factors \>100 for adjacent lanthanides, approaching the theoretical limits of protein-based recognition [@cotruvo2023enhanced; @park2024modulating].
+1.  **Biomimetic approaches show the highest *group* selectivity**: lanmodulin discriminates rare earths from calcium and the common leachate cations by roughly eight orders of magnitude, and does so at pH 2.5 in real coal and e-waste liquors [@cotruvo2018lanmodulin; @deblonde2020selective]. Its intra-series discrimination is far weaker. Engineered dimer-interface variants have delivered a light/heavy split (Nd/Dy, \>98% purity, single-stage column) [@mattocks2023enhanced] and a light-lanthanide enrichment (Pr,Nd over La,Ce) [@larrinaga2024modulating], but no adjacent-pair separation factor comparable to a solvent-extraction cascade has been reported. The right place for these ligands in a flowsheet is therefore upstream concentration and group separation, not adjacent-pair fractionation.
 
 2.  **Aqueous biphasic systems are most mature**: IL-based ABS and polymer-salt systems have demonstrated practical REE separations with good efficiency [@neves2022liquid; @kumar2022separation; @liu2022one].
 

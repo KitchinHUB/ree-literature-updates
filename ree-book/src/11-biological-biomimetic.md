@@ -5,17 +5,43 @@ title: Biological and Biomimetic Separations
 (biological-and-biomimetic-separations)=
 # Biological and Biomimetic Separations
 
-Biology solved selective lanthanide binding before chemistry did. {index}`Lanmodulin <lanmodulin>`, a
-bacterial protein discovered in methylotrophs that use lanthanides as enzyme
-cofactors, binds them with roughly a hundred-million-fold preference over
-calcium — a discrimination no synthetic extractant approaches. That single
-result reframes the separation problem: the reason conventional processes need
-hundreds of stages is not that the underlying differences are too small to
-exploit, but that the ligands in use are the wrong shape to exploit them.
+Biology solved one half of the rare-earth separation problem long before
+chemistry did, and left the other half untouched. {index}`Lanmodulin <lanmodulin>`,
+a bacterial protein discovered in methylotrophs that use lanthanides as enzyme
+cofactors, responds to picomolar concentrations of lanthanides but only to
+near-millimolar calcium — a preference of order 10⁸ that no synthetic
+extractant approaches [@cotruvo2018lanmodulin].
+
+Before that number is put to work, it has to be read correctly, because the two
+selectivities involved in rare-earth processing are entirely different
+quantities:
+
+- **Ln/non-Ln selectivity** — telling a rare earth from calcium, iron,
+  aluminium, or the rest of a leach liquor. This is a charge-and-radius problem,
+  and lanmodulin is spectacular at it. It is also the selectivity that decides
+  whether you can pull rare earths out of a dilute, calcium-rich, iron-rich
+  pregnant leach solution in one aqueous step.
+- **Ln/Ln selectivity** — telling Nd from Pr, or Dy from Ho. This is what
+  "hundreds of stages" in [](#solvent-extraction-fundamentals) is about, and it
+  is a much harder problem. Lanmodulin is a *weak* discriminator here: the same
+  picomolar affinity that gives it the 10⁸-fold edge over calcium applies to
+  every element from La to Lu, and the prototypal protein shows only about a
+  **fivefold** overall preference for light over heavy rare earths
+  [@mattocks2023enhanced].
+
+Seven orders of magnitude separate those two figures, and conflating them
+produces the claim — common in reviews and press coverage — that proteins have
+already beaten solvent extraction on selectivity. They have not. The best
+adjacent-pair separation factor demonstrated by any protein system is about
+1.4 (Nd/Pr) to 3.0 (Ce/La) [@larrinaga2024modulating], which is the same band
+conventional acidic organophosphorus extractants occupy. What biology has actually delivered is a
+group-separation and concentration step that solvent extraction performs poorly
+and expensively, plus — through a second, quaternary-structure mechanism
+described below — a genuine but modest intra-series fractionation.
 
 This chapter covers what has been built on that observation. Protein and peptide
-systems come first, since they carry the highest selectivities and the clearest
-mechanistic picture. Then the routes that trade selectivity for robustness and
+systems come first, since they carry the highest group selectivities and the
+clearest mechanistic picture. Then the routes that trade selectivity for robustness and
 cost: biosurfactants, microbial {index}`biosorption`, {index}`bioleaching`, and phytomining. The
 economics run in the opposite direction from the selectivity — the most
 selective systems are the most fragile and the most expensive to produce, and
@@ -34,16 +60,32 @@ Lanmodulin (LanM) is a 12 kDa protein identified in *Methylobacterium extorquens
 
 **Key Binding Properties:**
 
-| Property | Value |
-| ---------- | ------- |
-| Selectivity Ln³⁺/Ca²⁺ | 100,000,000-fold |
-| Dissociation constant (Kd) | 0.4-10 pM across lanthanide series |
-| pH stability | Retains binding down to pH ≈ 2.5 |
-| Temperature stability | Up to 95°C |
-| Competing metal tolerance | Up to molar amounts of Mg, Ca, Zn, Cu |
+| Property | Value | Source |
+| ---------- | ------- | ------- |
+| Selectivity Ln³⁺/Ca²⁺ | ~10⁸-fold (picomolar Ln³⁺ response vs. near-millimolar Ca²⁺) | [@cotruvo2018lanmodulin] |
+| Dissociation constant (Kd) | Picomolar for every Ln³⁺ from La to Lu, and for Y³⁺ (reported as 0.4-10 pM across the series) | [@cotruvo2018lanmodulin] |
+| Selectivity Ln³⁺/Ln³⁺ | **About fivefold**, light over heavy, for the whole series; all lanthanides and Y³⁺ induce essentially the same conformational change | [@mattocks2023enhanced] |
+| pH stability | Retains binding down to pH ≈ 2.5 | [@deblonde2020selective] |
+| Temperature stability | Up to 95 °C; survives repeated acid treatment | [@deblonde2020selective] |
+| Competing metal tolerance | Up to molar amounts of Li, Na, Mg, Ca, Sr, Al, Si, Mn, Fe, Co, Ni, Cu, Zn, U | [@deblonde2020selective] |
+
+Read the first three rows together, because they are the whole story. The
+10⁸-fold figure, the flat picomolar Kd profile, and the fivefold Ln/Ln
+preference are three faces of one fact: lanmodulin binds *all* trivalent rare
+earths at nearly the same enormous strength, and calcium essentially not at all.
+Set the two selectivities side by side — 10⁸ against Ca²⁺, about 5 across the
+entire lanthanide series — and the seven orders of magnitude between them is the
+single most important number in this chapter.
+
+That combination is exactly the property wanted for lifting a few hundred ppm of
+total REE out of a leach liquor dominated by Ca, Fe and Al — the
+{index}`pregnant leach solution` of [](#hydrometallurgical-leaching) — and
+exactly the wrong property for splitting Nd from Pr. Quoting the 10⁸-fold number
+in a discussion of intra-series separation, which is common in reviews and press
+coverage, inverts what the measurement means.
 
 ### Structural Basis of Selectivity
-The NMR solution structure reveals LanM's unique architecture [@mattocks2019structural]:
+The NMR solution structure reveals LanM's unique architecture [@cook2019structural]:
 
 - **Four EF-hand motifs**: Metal coordination sites typically associated with Ca²⁺ binding
 - **Unusual fusion of adjacent EF-hands**: Creates a compact fold unique among EF-hand proteins
@@ -57,17 +99,84 @@ The NMR solution structure reveals LanM's unique architecture [@mattocks2019stru
 **Critical Proline Residues:** Each EF-hand contains a crucial proline residue that hampers response to calcium while maintaining lanthanide selectivity. When prolines are mutated to alanine, calcium can induce conformational change at much lower concentrations, demonstrating proline's role in selectivity.
 
 ### Metal-Sensitive Dimerization
-A breakthrough discovery revealed that lanmodulin from *Hansschlegelia quercus* (Hans-LanM) exhibits oligomeric state sensitivity to rare-earth ionic radius [@cotruvo2023enhanced]:
 
-- **La(III)-induced dimer**: \>100-fold tighter than Dy(III)-induced dimer
-- **Mechanism**: Picometre-scale differences in ionic radius propagate to quaternary structure through a "carboxylate shift" that rearranges second-sphere hydrogen bonding
-- **Application**: Selective dimerization enriches high-value Pr³⁺/Nd³⁺ relative to low-value La³⁺/Ce³⁺
+If the binding site cannot distinguish neighbouring lanthanides, something else
+must. In the one mechanism that has worked, the discrimination is moved out of
+the coordination sphere and into the *quaternary* structure: whether two protein
+molecules associate at all depends on which ion is bound.
 
-**Separation Performance:**
+Lanmodulin from *Hansschlegelia quercus* (Hans-LanM) has an oligomeric state
+sensitive to rare-earth ionic radius [@mattocks2023enhanced]:
 
-- Achieves higher {index}`separation factors <separation factor>` than standard lanmodulins
-- Comparable or better than common industrial extractants (e.g., {index}`HDEHP`)
-- All-aqueous process without organic solvents
+- **La(III)-induced dimer**: \>100-fold tighter than the Dy(III)-induced dimer
+- **Mechanism**: picometre-scale differences in ionic radius propagate to quaternary structure through a "carboxylate shift" that rearranges second-sphere hydrogen bonding
+
+**What the \>100-fold number is, and what it is not.** It is the ratio of two
+*dimerization* affinities, measured for La(III) against Dy(III). It is not a
+{index}`separation factor <separation factor>`, and La and Dy are not adjacent
+— they sit on opposite sides of the light/heavy split, nine places apart in the
+series and about 0.12 Å of six-coordinate ionic radius apart, against the
+~0.012 Å that separates a genuinely adjacent pair. Quoting it as "a separation factor above 100 for
+adjacent lanthanides", as a good deal of secondary literature does, misstates
+both the quantity and the pair. Anyone tempted to do so should look at the
+separation factors the same paper actually measured for that same protein:
+8.12 ± 0.40 (Hans-LanM) and 12.7 ± 1.3 (the R100K variant) for Nd/Dy, tabulated
+below. Roughly an order of magnitude, on a light/heavy pair — not a hundredfold,
+and not on neighbours.
+
+The point of the dimerization mechanism is not the size of that ratio; it is
+that the ratio exists at all in a system whose *binding site* is nearly
+indifferent to which lanthanide it holds. The same paper measured the
+prototypal *Methylorubrum extorquens* lanmodulin (Mex-LanM) at only about a
+fivefold preference for light over heavy rare earths, with all lanthanides and
+Y³⁺ inducing essentially the same conformational change [@mattocks2023enhanced].
+Moving the discrimination from the first coordination sphere to the protein
+interface is what buys the improvement.
+
+**Separation factors actually measured, with the pair named and the pair type
+stated.** These are the numbers the book stands behind; every one is a
+distribution-ratio-based separation factor from the cited primary work.
+
+| System | Pair | SF | Pair type | Conditions |
+| ------ | ---- | -- | --------- | ---------- |
+| Hans-LanM column [@mattocks2023enhanced] | Nd/Dy | 8.12 ± 0.40 | Light/heavy split | Binary Nd/Dy, immobilized protein, 0.9 mL column |
+| Hans-LanM(R100K) column [@mattocks2023enhanced] | Nd/Dy | 12.7 ± 1.3 | Light/heavy split | Binary Nd/Dy, immobilized protein, 0.7 mL column |
+| LanD–E75Q/E78A [@larrinaga2024modulating] | Ce/La | 3.0 ± 0.4 | **Adjacent** | 5 µM protein, 0.8 µM each of La-Nd, pH 6, \<1 h |
+| LanD–E75Q/E78A [@larrinaga2024modulating] | Pr/Ce | 1.7 ± 0.2 | **Adjacent** | as above |
+| LanD–E75Q/E78A [@larrinaga2024modulating] | Nd/Pr | 1.4 ± 0.2 | **Adjacent** | as above |
+| LanD–E75Q/E78A [@larrinaga2024modulating] | Nd/La | 7.3 ± 0.9 | Three elements apart | as above |
+
+The last three rows are the honest headline, and they are the only adjacent-pair
+separation factors any protein system has produced: **1.4 for Nd/Pr, 1.7 for
+Pr/Ce, 3.0 for Ce/La**. That range sits squarely inside the 1.5-3.0 band
+[](#solvent-extraction-fundamentals) gives for conventional organophosphorus
+extractants — not two orders of magnitude above it. The LanD authors make
+exactly this comparison themselves: their separation factors beat
+{index}`HDEHP`/D2EHPA and PC88A and are comparable to next-generation
+diglycolamides. That is a real achievement, and a far smaller one than
+"SF \> 100 for adjacent lanthanides."
+
+Two further cautions. First, LanD is a *different protein* from lanmodulin — a
+periplasmic lanthanide chaperone from the same uptake gene cluster, with a
+surface-exposed site that supplies only four ligands — so its numbers are not
+lanmodulin's. Second, the LanD separations were run on 0.8 µM metal in 5 µM
+protein by ultrafiltration; nothing at that scale has been demonstrated on a
+process stream. What is genuinely attractive is that both systems are
+all-aqueous, need no organic diluent, and reach equilibrium in under an hour
+rather than the 24 h typical of synthetic ligand assays.
+
+Where these results *do* deliver a large effect is on purity in a single stage,
+because a column amplifies a modest SF over many theoretical plates. Immobilized
+Hans-LanM, loaded with a model electronic-waste mixture of 95% Nd and 5% Dy,
+upgraded Dy from 5% to 83% purity and recovered Nd at 99.8% purity in one pass;
+the R100K variant achieved baseline separation of Nd and Dy to \>98% purity and
+\>99% yield in a single stage [@mattocks2023enhanced]. That is the correct way to
+state the result: a modest separation factor plus a column, on a light/heavy
+pair.
+
+No protein system has yet been shown to fractionate an adjacent *heavy* pair —
+Dy/Ho, Ho/Er — which is where the separation problem is hardest and where the
+industrial cascades are longest.
 
 ### Protein Engineering and Variants
 Computational and experimental studies have revealed key engineering principles [@yao2025computationally]:
@@ -99,6 +208,42 @@ Computational and experimental studies have revealed key engineering principles 
 - Transforms low-grade leachate (0.043 mol% REEs) into 88 mol% purity fractions
 - Uses \~90% of column capacity in single run
 - Achieves tandem extraction and grouped separation without organic solvents
+
+Note the shape of that last result: 0.043 mol% to 88 mol% is a concentration
+factor of about 2,000, achieved in one aqueous pass. It is a *purity* figure —
+rare earths against everything else — not an individual-element figure. Reading
+it as an intra-series result is the same error as reading the 10⁸-fold Ca²⁺
+number that way.
+
+#### Where Lanmodulin Belongs in a Flowsheet
+
+The two selectivities place these ligands at a specific and defensible point in
+a process, and it is not the point solvent extraction occupies.
+
+- **Upstream, where LanM is strong.** The output of leaching
+  ([](#hydrometallurgical-leaching)) is a dilute pregnant leach solution in
+  which rare earths are a minor component against Ca, Fe, Al, Mg and Si. Getting
+  them out of it, cleanly and without an organic phase, is precisely a group
+  separation, and it is what LanM's flat picomolar profile and acid tolerance
+  buy. The competing conventional operations — oxalate or double-sulfate
+  precipitation, or a dedicated impurity-rejection extraction circuit — are
+  reagent-intensive and lossy.
+- **Downstream, where LanM is weak.** Once a mixed rare-earth concentrate
+  exists, separating it into individual elements needs an adjacent-pair
+  separation factor applied over many stages
+  ([](#solvent-extraction-fundamentals)). LanM's monomer supplies almost none;
+  the dimerization variants supply a group-level split (light versus heavy, or
+  light-lanthanide enrichment), which is a coarse cut, not a fractionation.
+
+The honest statement is therefore that lanmodulin is a candidate to *replace the
+front end* of a rare-earth flowsheet and to *feed* the cascade, not to replace
+it. That is a smaller claim than "biology has beaten solvent extraction," and a
+more useful one, because the front end is where the water, acid and reagent
+consumption that [](#environment-techno-economics-and-life-cycle) accounts for
+actually sits. It is also why the technology comparison in
+[](#technology-comparison) must record the element pair
+alongside any separation factor: without the pair, a group number and an
+adjacent-pair number are indistinguishable on the page.
 
 ## Lanthanide Binding Tags and Peptide-Based Separation
 ### EF-Hand Derived Peptides
@@ -267,7 +412,7 @@ Saponin outperformed rhamnolipid for soil leaching applications.
 
 ## Siderophore-Mediated Bioleaching
 ### Siderophore Overview
-Siderophores are extracellular chelating compounds produced by aerobic microorganisms to acquire iron. They also complex REEs effectively for bioleaching applications [@others2019characterization].
+Siderophores are extracellular chelating compounds produced by aerobic microorganisms to acquire iron. They also complex REEs effectively for bioleaching applications [@osman2019characterization].
 
 ### Key Microorganisms
 **Aspergillus niger:**
@@ -595,16 +740,31 @@ Despite academic promise, commercial breakthroughs have been limited:
 - Need for {index}`life cycle assessment`s
 
 ## Comparison of Biological Separation Technologies
-| Technology | Selectivity | Scalability | Cost | Environmental Impact | TRL |
-|----|----|----|----|----|----|
-| Lanmodulin | Exceptional | Pilot scale | Moderate | Very Low | 4-5 |
-| LBT Peptides | High | Lab scale | Moderate | Very Low | 3-4 |
-| Biosurfactants | Moderate | Pilot scale | Low | Very Low | 4-5 |
-| Siderophore Bioleaching | Moderate | Pilot scale | Low | Very Low | 5-6 |
-| Microbial Biosorption | Variable | Lab-Pilot | Low | Very Low | 4-6 |
-| Phytomining | Low-Moderate | Field trials | Low | Very Low | 3-4 |
-| Chitosan Adsorbents | Moderate | Industrial | Low | Very Low | 6-7 |
-| Engineered Microbes | High | Lab scale | Moderate | Very Low | 3-4 |
-| DES/IL Systems | Variable | Pilot scale | Moderate | Low | 5-6 |
 
-*TRL = Technology Readiness Level (1-9 scale)*
+Selectivity is split into two columns, because collapsing them into one is the
+error this chapter opened by warning against. *Group* selectivity is
+rare-earths-versus-everything-else; *intra-group* selectivity is one lanthanide
+versus its neighbour. A technology can be world-leading in the first column and
+useless in the second, and lanmodulin is.
+
+| Technology | Group selectivity (REE vs. non-REE) | Intra-group selectivity (Ln vs. Ln) | Scalability | Cost | Environmental Impact | TRL |
+|----|----|----|----|----|----|----|
+| Lanmodulin | Exceptional (~10⁸ vs. Ca²⁺) | Weak: ~5× light-over-heavy for the native protein; SF = 8-13 for Nd/Dy on a dimerizing-variant column | Pilot scale | Moderate | Very Low | 4-5 |
+| LanD (dimerizing chaperone) | Not characterized | SF 1.4 (Nd/Pr) to 3.0 (Ce/La) — the best protein adjacent-pair figures reported | Bench, µM scale | Moderate | Very Low | 2-3 |
+| LBT Peptides | High | Not demonstrated | Lab scale | Moderate | Very Low | 3-4 |
+| Biosurfactants | Moderate | Weak (log β spans ~1.3 units across the series) | Pilot scale | Low | Very Low | 4-5 |
+| Siderophore Bioleaching | Moderate | Not demonstrated | Pilot scale | Low | Very Low | 5-6 |
+| Microbial Biosorption | Variable | Not demonstrated | Lab-Pilot | Low | Very Low | 4-6 |
+| Phytomining | Low-Moderate | None (bulk uptake) | Field trials | Low | Very Low | 3-4 |
+| Chitosan Adsorbents | Moderate | Not demonstrated | Industrial | Low | Very Low | 6-7 |
+| Engineered Microbes | High | Not demonstrated | Lab scale | Moderate | Very Low | 3-4 |
+| DES/IL Systems | Variable | Variable | Pilot scale | Moderate | Low | 5-6 |
+
+*TRL = Technology Readiness Level (1-9 scale). "Not demonstrated" means no
+element-pair separation factor is reported for that technology anywhere in this
+chapter; it is not a claim that the selectivity is zero.*
+
+The pattern in the second column is the chapter's real conclusion. Biology has
+produced outstanding group-separation chemistry and, so far, only the beginnings
+of intra-group separation. That is a reason to put biological ligands into the
+front end of a flowsheet, not a reason to expect them to retire the cascade.
