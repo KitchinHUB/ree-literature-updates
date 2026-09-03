@@ -66,26 +66,21 @@ Techno-economic analysis is essential for evaluating the commercial viability of
 ### Cost Structure Overview
 REE separation projects involve significant capital and operating costs that vary substantially by technology, scale, and feedstock [@obrien2024simplified].
 
-**Capital Expenditure (CAPEX) Components:**
+Capital cost divides across the same categories as any hydrometallurgical plant:
+process equipment (reactors, mixer-settlers, columns), installation, engineering
+and project management, instrumentation and control, civil works, and a
+contingency allowance. Operating cost divides across reagents, energy, labor,
+maintenance, and effluent treatment. The share each category takes in a rare
+earth separation plant specifically is not published, and the generic factors
+tabulated in cost-engineering texts are not REE data; no percentage breakdown is
+given here.
 
-| Category | Typical Share | Description |
-| ---------- | -------------- | ------------- |
-| Process equipment | 30-40% | Reactors, extractors, columns |
-| Installation | 15-20% | Mechanical, electrical, piping |
-| Engineering | 10-15% | Design, project management |
-| Instrumentation | 5-10% | Control systems, analyzers |
-| Construction | 15-20% | Civil works, buildings |
-| Contingency | 10-15% | Uncertainty allowance |
-
-**Operating Expenditure (OPEX) Components:**
-
-| Category | Typical Share | Description |
-| ---------- | -------------- | ------------- |
-| Reagents/chemicals | 40-60% | Acids, extractants, precipitants |
-| Energy | 15-25% | Electricity, heating, cooling |
-| Labor | 10-20% | Operators, maintenance, QC |
-| Maintenance | 5-10% | Equipment upkeep |
-| Waste treatment | 5-15% | Effluent processing, disposal |
+What the REE-specific studies do establish is which items dominate. In the acid
+mine drainage assessment discussed below, capital cost and HCl consumption are
+the two factors that move the internal rate of return most
+[@larochelle2021fundamental]. In the Mountain Pass analysis, oxide recovery has a
+larger effect on project economics than either capital or operating cost
+[@uysal2022economic].
 
 ### Solvent Extraction Economics
 Solvent extraction remains the dominant commercial technology, with well-established cost profiles.
@@ -103,19 +98,19 @@ Solvent extraction remains the dominant commercial technology, with well-establi
 | Tb recovery           | 91%             |
 | Product purity        | \>99.5%         |
 
-**{index}`Mountain Pass` Processing (2020 Baseline):** Operating cost analysis for {index}`bastnäsite` processing [@uysal2022economic]:
+**{index}`Mountain Pass` Processing:** The published economic analysis of
+{index}`bastnäsite` from Mountain Pass compares *beneficiation* routes — direct
+leaching, attrition scrubbing followed by leaching, and flotation followed by
+leaching — rather than separation routes, and its costs are therefore costs of
+REO in concentrate, not of separated oxide [@uysal2022economic]. Flotation plus
+leaching is the most profitable of the three: it adds capital and operating cost
+but delivers a higher grade and a higher recovery, which more than compensate.
 
-| Processing Route   | OPEX (\$/ton REO) | Key Cost Drivers   |
-|--------------------|-------------------|--------------------|
-| Acid roast + SX    | \$1,430           | H₂SO₄, extractants |
-| Caustic crack + SX | Higher            | NaOH consumption   |
-| Chloride route     | Variable          | HCl, environment   |
-
-**Sensitivity Analysis:** REO recovery has the largest impact on process economics:
-
-- 1% increase in recovery → \~2% improvement in NPV
-- Reagent costs → moderate sensitivity
-- CAPEX → lower sensitivity (amortized over life)
+**Sensitivity Analysis:** In that study, oxide recovery has a larger effect on
+project economics than either capital cost or operating cost
+[@uysal2022economic]. Note that costs quoted per kilogram of *concentrate* and
+per kilogram of *separated oxide* differ by well over an order of magnitude; the
+basis must be stated before any two figures in this section are compared.
 
 ### Alternative Technology Economics
 **Supercritical Fluid Extraction (2025):** TEA for 4000 L industrial-scale sc-CO₂ facility [@azimi2025technoeconomic]:
@@ -185,14 +180,9 @@ Techno-economic assessment of REE recovery from AMD using network sourcing [@lar
 | Recovery rate | Moderate |
 
 ### Process Comparison Economics
-| Technology         | CAPEX       | OPEX       | Purity   | Scale         | TRL |
-|--------------------|-------------|------------|----------|---------------|-----|
-| Solvent extraction | High        | Medium     | \>99.5%  | Commercial    | 9   |
-| Ion exchange       | Medium-High | High       | \>99.9%  | Commercial    | 9   |
-| SFE                | High        | Medium     | \>95%    | Pilot         | 5-6 |
-| MRT                | Low-Medium  | Low        | \>99%    | Demonstration | 7-8 |
-| Membrane           | Medium      | Low        | Variable | Lab-Pilot     | 4-6 |
-| Bioseparation      | Low         | Low-Medium | \>95%    | Lab           | 3-5 |
+Separation factors, purities, demonstrated scale, and technology readiness levels
+for the technologies covered in Parts II and III are compared in a single table in
+[](#the-landscape-of-separation-technologies), and are not repeated here.
 
 ### Key Economic Drivers
 **Critical Success Factors:**
@@ -236,15 +226,20 @@ Techno-economic assessment of REE recovery from AMD using network sourcing [@lar
 | Land Use | m²·year | Mining, waste storage |
 
 ### Carbon Footprint of REE Production
-**Global Warming Potential Ranges:** Carbon footprint varies significantly by ore type and process [@zapp2022environmental]:
+**Global Warming Potential Ranges:** Carbon footprint varies significantly by ore
+type and process, and published cradle-to-gate estimates for rare earth oxide
+production span roughly an order of magnitude [@zapp2022environmental]. Two
+values with a clear published basis anchor that range:
 
-| Source/Process                | GWP (kg CO₂-eq/kg REO) | Reference        |
-|-------------------------------|------------------------|------------------|
-| General REE production        | 12-66                  | Multiple studies |
-| Monazite processing (average) | 65.4                   | Springer 2017    |
-| Ionic rare earth clays        | 17.8-24.3              | MDPI 2022        |
-| Europium (from monazite)      | 21.3                   | Minimum observed |
-| Yttrium (from monazite)       | 197.9                  | Maximum observed |
+| Source/Process                          | GWP (kg CO₂-eq/kg REO) | Source                   |
+|-----------------------------------------|------------------------|--------------------------|
+| Monazite processing (average)           | 65.4                   | [@browning2017life]      |
+| Ionic rare earth clays, mixed REO       | 17.8-24.3              | [@wan2022lca]            |
+
+The ionic-clay figure carries a stated uncertainty of about 16%, and it rises
+when magnesium-salt leaching replaces ammonium-salt leaching: the substitution
+that relieves the ammonia problem described in [](#ion-adsorption-clays)
+increases the carbon footprint of the product [@wan2022lca].
 
 **Element-Specific GWP from {index}`Monazite <monazite>`:** The allocation of impacts to individual REEs reveals significant variation [@browning2017life]:
 
@@ -256,12 +251,11 @@ Techno-economic assessment of REE recovery from AMD using network sourcing [@lar
 | Praseodymium | 50-70              | Co-produced with Nd              |
 | Yttrium      | 197.9              | Energy-intensive separation      |
 
-**Process Hotspots:**
-
-- Chemical production: 40-60% of GWP
-- Energy consumption: 20-35% of GWP
-- Transportation: 5-10% of GWP
-- Mining operations: 10-15% of GWP
+Which activities dominate each impact category is tabulated in the hotspot
+analysis later in this chapter. Percentage shares of total GWP are not given:
+the published studies draw their system boundaries and allocate between
+co-products differently, so shares taken from separate studies do not add up to a
+single accounting.
 
 ### Water Footprint
 **Water Consumption by Process:** REE production is highly water-intensive [@zaimes2015environmental]:
@@ -273,15 +267,9 @@ Techno-economic assessment of REE recovery from AMD using network sourcing [@lar
 | Gadolinium         | 3,803 (lowest)                |
 | Yttrium            | 29,902 (highest)              |
 
-**Water Use by Process Stage:**
-
-| Stage | Share of Water Use |
-| ------- | ------------------- |
-| Beneficiation | 20-30% |
-| Leaching/Cracking | 15-25% |
-| Solvent extraction | 25-35% |
-| Precipitation/Washing | 15-25% |
-| Utilities/Cooling | 10-15% |
+These inventories report water consumption per kilogram of oxide and per element;
+they do not resolve it by process stage, and no stage-by-stage split is given
+here.
 
 ### Ore-Specific Environmental Impacts
 **Bastnäsite Processing:**
@@ -311,15 +299,17 @@ Techno-economic assessment of REE recovery from AMD using network sourcing [@lar
 
 ### Comparative LCA of Technologies
 
-**Environmental Impact by Separation Method:**
-
-| Method | GWP | Water | Waste | Toxicity |
-| -------- | ----- | ------- | ------- | ---------- |
-| Solvent extraction | High | High | High | High |
-| Ion exchange | Medium | High | Medium | Medium |
-| Supercritical CO₂ | Medium | Low | Low | Low |
-| Membrane separation | Low-Medium | Medium | Low | Low |
-| Bioseparation | Low | Medium | Low | Very Low |
+The comparison a reader wants at this point — global warming potential, water,
+waste, and toxicity for each separation method on a common basis — cannot be
+assembled from the published literature. Cradle-to-gate assessments exist for
+primary production routes built on solvent extraction
+[@zapp2022environmental; @navarro2014life; @browning2017life; @zaimes2015environmental]
+and for ionic clays [@wan2022lca]; supercritical CO₂ has been assessed
+techno-economically but not on a comparable life cycle basis
+[@azimi2025technoeconomic]. Molecular recognition, membrane, and biological
+routes have no cradle-to-gate LCA at boundaries that would let them be ranked
+against solvent extraction. A table ranking all five would be assertion rather
+than measurement, and none is given.
 
 **Recycling vs. Primary Production:** Secondary recovery from waste streams shows dramatic improvements [@mugion2025systematic]:
 
@@ -343,15 +333,12 @@ Techno-economic assessment of REE recovery from AMD using network sourcing [@lar
 | Human toxicity     | Heavy metals, radionuclides        |
 | Water              | Process water, washing             |
 
-**Energy Intensity:**
-
-| Process | Energy (MWh/ton REO) |
-| --------- | --------------------- |
-| Mining + beneficiation | 10-30 |
-| Cracking/leaching | 20-50 |
-| Solvent extraction | 30-60 |
-| Precipitation + calcination | 10-30 |
-| Total | 100+ |
+**Energy Intensity:** Only an aggregate figure is available. The integrated
+mining-and-refining estimate quoted earlier in this chapter puts total energy use
+above 100 MWh per ton of REO. The breakdown that would answer the question this
+chapter opened with — how much of that belongs to mining, how much to cracking,
+how much to the separation train itself — is not reported in the LCA literature,
+and is not given here.
 
 ### Data Challenges and Uncertainties
 **Key Limitations:** ([Frontiers Energy 2014](https://www.researchgate.net/publication/273515425)):
