@@ -74,27 +74,21 @@ and the protons on the right are not optional bookkeeping: they carry three
 units of charge and are the reason the equilibrium responds to pH at all. Every
 step of the cycle has to conserve them.
 
-``` example
-                    ΔG₂ (gas-phase complexation
-                         + 3 × deprotonation)
-   REE³⁺(g) + 3HL(g) ────────────────────────→ REEL₃(g) + 3H⁺(g)
-        ↑         ↑                                 │        │
-        │         │                                 │        │
-     ΔG₁│      ΔG₄│                              ΔG₃│        │ΔG₅
-(dehydr)│   (extractant                (solvation   │        │(proton
-        │    desolvation)                 in org)   │        │hydration)
-        │         │                                 ↓        ↓
-   REE³⁺(aq) + 3HL(org) ──────────────────→ REEL₃(org) + 3H⁺(aq)
-                          Net extraction
-                        (what we measure)
-```
+:::{figure} ../figures/13-thermo-cycle.svg
+:name: fig-thermo-cycle
+:width: 100%
 
-Read around the loop: up the two left arrows, across the top, down the two
-right arrows. Charge is +3 on both sides at every point, and three protons
-enter the top-right corner and leave at the bottom. The version of this cycle
-that omits them — writing ΔG₂ as `REE³⁺(g) + 3HL(g) → REEL₃(g)`, neutral on the
-right — is short by three gas-phase deprotonations, roughly +4,000 kJ/mol, and
-no amount of care with the other four terms will recover it.
+The extraction cycle, with the La + D2EHPA numbers from the table below. Read
+around the loop: up the two left arrows into the gas phase, across the top,
+down the two right arrows. The figure is drawn from
+`tools/figures/fig_thermo_cycle.py`.
+:::
+
+Read around the loop. Charge is +3 on both sides at every point, and three
+protons enter the top-right corner and leave at the bottom. The version of this
+cycle that omits them — writing ΔG₂ as `REE³⁺(g) + 3HL(g) → REEL₃(g)`, neutral
+on the right — is short by three gas-phase deprotonations, roughly
++4,000 kJ/mol, and no amount of care with the other four terms will recover it.
 
 #### Step-by-Step Breakdown
 
