@@ -91,7 +91,7 @@ the series). Stop quoting the Hans-LanM ">100-fold tighter dimer" affinity ratio
 as a separation factor for adjacent lanthanides — La/Dy is not an adjacent pair.
 Unswap `@park2024modulating` (light lanthanides) and `@cotruvo2023enhanced` (Nd/Dy).
 
-- [ ] B8
+- [x] B8
 
 ## M9 — Rewrite the Mountain Pass and monazite-digestion descriptions
 `05:410-433,478-497,520-533,1053-1080`, `07:304-308`. Mountain Pass was oxidative
@@ -176,7 +176,7 @@ of 200-450"). No definitions exist anywhere in either file.
 first authors as in Phase 6. Then grep `author = {[^}]*Authors}` and
 `author = {(others|anon)` again.
 
-- [ ] M18
+- [x] M18
 
 ## G19 — Ch. 3: the missing quantitative core
 Add: extraction order across the series with the pH₁/₂ trend; the extraction
@@ -187,7 +187,7 @@ derivable); fractional extraction cascades with REE-on-REE scrubbing (Xu
 Guangxian); and saponification of the extractant, which is the origin of the
 ammonia effluent problem ch. 6 and ch. 17 discuss.
 
-- [ ] G19
+- [x] G19
 
 ## G20 — Ch. 4: write the promised ion-exchange section
 `04:13-18` says IX has no chapter of its own and is covered here; the section
@@ -195,7 +195,7 @@ never describes displacement chromatography (EDTA eluent, retaining ion,
 self-sharpening bands) or why throughput is limited. ~200 words plus a band
 schematic. Add the glossary entry.
 
-- [ ] G20
+- [x] G20
 
 ## G21 — Rebuild the technology comparison table, retire the rivals
 `04:171-182` is the canonical one. `07:645-654` and `17:188-195` duplicate it
@@ -204,7 +204,7 @@ II-III chapter with: best reported separation factor **and the element pair**,
 feed (synthetic or real), concentration, T/pH, demonstrated scale, TRL with a
 one-line justification, and a cross-reference. Delete the other two.
 
-- [ ] G21
+- [x] G21
 
 ## G22 — Ch. 15: how to measure D, and an interference table
 The most-used measurement in the group is absent: aqueous-by-difference vs direct
@@ -240,7 +240,7 @@ result (`09:359`) out of microfluidics; add NF/UF rejection and flux; state the
 limitations the glossary knows and the chapter does not — carrier loss, membrane
 lifetime, fouling, and why SLMs have not displaced cascades.
 
-- [ ] G25
+- [x] G25
 
 ## G26 — Expand ch. 16 (recycling) from a 334-word stub
 Keep `16:8-24`. Add feedstock inventory with REE contents (NdFeB ~30 wt%,

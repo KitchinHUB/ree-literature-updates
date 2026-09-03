@@ -20,8 +20,9 @@ extraction rather than as a replacement for it.
 The comparison at the end of the chapter is worth reading carefully, and worth
 reading sceptically. {index}`Separation factors <separation factor>` quoted for laboratory systems are
 measured under conditions chosen to show them at their best; the TRL column is
-the honest one. Two technologies in that table are at TRL 9 and everything else
-is at 3–7.
+the honest one. Only the incumbent routes — solvent extraction, ion exchange,
+ore leaching, and bulk precipitation — are at TRL 9, and each TRL below is
+justified from a demonstrated scale rather than from a claimed one.
 
 ## Solvent Extraction (Liquid-Liquid Extraction)
 Solvent extraction is the dominant industrial method for REE separation, chosen because high-purity rare earths can be produced in large quantities continuously and economically [@xie2014critical].
@@ -41,11 +42,14 @@ Key industrial extractants include:
 - **Versatic 10** (neodecanoic acid)
 - **{index}`TBP <TBP (tributyl phosphate)>`** (Tributyl phosphate)
 - **{index}`Aliquat 336`** (quaternary ammonium salt)
-- **Cyanex® 572** - emerging alternative that reduces acid consumption by \>30% compared to PC88A
+- **Cyanex® 572** - emerging alternative marketed as reducing acid consumption
+  relative to PC88A; the quoted reduction is a vendor figure and has not been
+  independently reproduced in the literature surveyed here
 
 ### Industrial Scale
 - Up to **hundreds of stages** of {index}`mixer-settlers <mixer-settler>` may be required
-- Typical purities: **95-99.9%**
+- Typical purities: **99.9-99.99%** on individual oxides, routinely, from a
+  cascade with enough stages; the limit is stage count and reflux, not chemistry
 - For optical/phosphor-grade materials (5-6 nines purity), ion exchange post-processing is required
 
 ### Separation Groups
@@ -58,12 +62,65 @@ Industrial processes typically separate REEs into groups:
 ## Ion Exchange
 Ion exchange was the predominant method before the 1960s and remains important for ultra-high purity applications [@elouardi2023progress].
 
+(displacement-chromatography)=
+### Displacement Chromatography
+Ion exchange separates rare earths by a mechanism with no counterpart in solvent
+extraction, and since it has no chapter of its own, it is worth setting out here.
+
+The bed is a strong-acid cation resin, loaded to capacity with the mixed rare
+earths as a single narrow band. A chelating eluent — {index}`EDTA`, or HEDTA or
+DTPA where a weaker or a stronger complex is wanted — is then pumped through
+[@james1968displacement]. It does not *elute* the band in the chromatographic
+sense of carrying solutes at different velocities through excess resin; it
+*displaces* it, pushing a saturated band down a bed that is otherwise full. Ahead
+of the rare earths sits a band of a **retaining ion**, usually Cu²⁺ or Zn²⁺, whose
+EDTA complex is less stable than any lanthanide's [@powell1956basic]. Eluent that
+runs ahead of the front is intercepted by the retaining ion and handed back, so
+the front cannot smear: it stays a step.
+
+Within the band the elements sort themselves by the stability of their EDTA
+complexes, which rises monotonically with atomic number. The heavier lanthanide
+spends more of its time in solution as the complex, travels faster, and
+accumulates at the front; the lighter one is left behind. Because the band is
+saturated, an element that diffuses forward into its neighbour's zone meets resin
+already fully loaded with a heavier element that outcompetes it and pushes it
+back. The zones therefore **self-sharpen** into adjacent bands of nearly pure
+single elements, each one abutting the next with a boundary a few centimetres
+wide, and each can be cut out of the effluent as it emerges
+[@spedding1947separation; @belova2024chromatographic]. This is why the method
+reaches purities a cascade struggles with: the separation is not the ratio of two
+distribution coefficients repeated across dozens of stages, it is a
+thermodynamically self-correcting front.
+
+    EDTA eluent in                              direction of travel  →
+         │
+         ▼
+    ┌────────────┬──────┬──────┬──────┬──────┬──────┬───────────┬────────┐
+    │  eluent    │  La  │  Ce  │  Pr  │  Nd  │  Sm  │ retaining │ resin  │
+    │  front     │      │      │      │      │      │ ion, Cu²⁺ │ ahead  │
+    └────────────┴──────┴──────┴──────┴──────┴──────┴───────────┴────────┘
+      rear of band   ←── weakest EDTA complex to strongest ──→   band front
+                         (each zone one element, self-sharpening)
+
+What limits the method is not resolution, which is excellent, but throughput.
+The band occupies the whole bed, so the quantity separated per cycle is set by
+the resin inventory rather than by a flow rate; a cycle takes days to weeks;
+the product leaves at the eluent's concentration, so it is dilute and must be
+precipitated and redissolved; and both the eluent and the retaining ion have to
+be recovered and recycled. Capital and cycle time per kilogram are therefore
+poor against a mixer-settler train that runs continuously
+[@elouardi2023progress]. That economics confines displacement chromatography to
+work where purity is worth more than tonnage — scandium and lutetium, 5N-6N
+oxides for optical and electronic use, and, historically, the Manhattan-era and
+early Ames Laboratory separations that first produced weighable quantities of the
+individual lanthanides in pure form [@spedding1947separation].
+
 ### Conventional Ion Exchange Resins
 **Advantages:**
 
 - Capable of refining all REEs
 - Adaptable to various raw material compositions
-- Can achieve purities \>99.99999% (7 nines)
+- Can achieve 5N-6N purities (99.999-99.9999%)
 
 **Disadvantages:**
 
@@ -166,17 +223,98 @@ Modern chelating resins offer improved selectivity through tailored functional g
 - Exceptionally high selectivity for Am/Cm over lanthanides
 - Used in minor actinide separations
 
+(technology-comparison)=
 ## Comparison of Separation Technologies
 
-| Technology | Separation Factor | Purity | Environmental Impact | Scalability | TRL |
-|----|----|----|----|----|----|
-| Solvent Extraction | 2-10 (per stage) | 95-99.9% | High (organic solvents) | Industrial | 9 |
-| Ion Exchange | High | \>99.9999% | Moderate | Industrial | 9 |
-| Membrane Separation | Variable | \>90% | Low | Pilot | 5-7 |
-| MOF Nanotraps | 270-800 | High | Low | Lab | 3-4 |
-| Lanmodulin | High | \>99.9% | Very Low | Pilot | 4-5 |
-| Flash Joule Heating | High | \>90% | Very Low | Lab | 3-4 |
-| Supramolecular | High | \>95% | Low | Lab | 4-5 |
-| Molten Salt Electrolysis | N/A (reduction) | \>99% | Moderate | Industrial | 9 |
+This is the book's single comparison table; where another chapter needs one, it
+points here. Four conventions govern it, and they are what make it usable.
 
-*TRL = Technology Readiness Level (1-9 scale)*
+**A separation factor without an element pair is not a number.** β = 796 for
+Pr/Lu and β = 1.5 for Nd/Pr describe problems that differ by six elements of
+lanthanide contraction; quoting either as "the separation factor" of a technology
+is the most common way a comparison misleads. Every β below carries its pair.
+
+**"Not reported" is an entry.** Several chapters describe real technologies that
+have never been characterised on an adjacent lanthanide pair — they report
+recovery, or purity, or discrimination against iron. Where that is so, the cell
+says so rather than borrowing a number from somewhere else.
+
+**TRL is assigned from demonstrated scale**, not from promise, and each is
+justified in the notes. A licensing announcement, a techno-economic study of a
+plant that does not exist, and a vendor datasheet are not demonstrations.
+
+**Conditions are the chapter's own.** Where a chapter gives no feed
+concentration, temperature or pH — which is more often than it should be — the
+cell says "not reported", and that absence is itself a finding.
+
+| Approach | Best reported β (element pair) | Feed | Conditions | Demonstrated scale | TRL |
+|----|----|----|----|----|----|
+| **Solvent extraction** — [](#solvent-extraction-fundamentals) | 1.3-2 per stage for adjacent pairs (Nd/Pr ≈ 1.4-1.5); 4-10 for pairs two or more apart [@xie2014critical] | Real: purified chloride or nitrate liquor from any ore route | 0.3-1.5 M REE; 20-40 °C; pH 2.5-4.0 extraction, \<1 stripping | Commercial; tens of thousands of t/y REO worldwide | 9 [^trl-sx] |
+| **Ion exchange (displacement)** — [](#displacement-chromatography) | Not expressed as β; adjacent zones separate on EDTA complex stability [@powell1956basic] | Real: mixed REE loaded on cation resin | Chelating eluent (EDTA/HEDTA/DTPA), ambient, Cu²⁺ or Zn²⁺ retaining ion | Commercial polishing step; pilot plants since 1947 [@spedding1947separation] | 9 [^trl-ix] |
+| **Hydrometallurgical leaching** — [](#hydrometallurgical-leaching) | Not reported. The chapter's only quantified split is Fe/REE at iron removal (\>99 % Fe out, \<2 % REE lost) | Real ores: bastnäsite concentrate 60-75 % REO (7-9 % REO ore), monazite 50-70 % REO with 0-12 % ThO₂, clay 0.05-0.3 % REO | H₂SO₄ 2-6 M at 60-95 °C (bastnäsite); conc. H₂SO₄ at 200-250 °C (monazite); Fe removal pH 3.5-4.5 | Commercial; IREL ~3,000 t/y REO [@jha2016hydrometallurgical] | 9 [^trl-leach] |
+| **Ion-adsorption clays** — [](#ion-adsorption-clays) | ~1.0-1.3, adjacent lanthanide pairs on bare clay — reported as a *limitation*, against 1.5-4 for a tailored extractant [@wu2023rare] | Real regolith ore, 0.03-0.3 wt % REO, REE in the ion-exchangeable phase | (NH₄)₂SO₄ or MgSO₄, 0.05-0.6 M; ambient (25 °C optimal); leachate pH 4-6 | Leaching: commercial in-situ, \>90 % of global HREE supply [@zhou2020genesis]. Clay as a separation medium: not demonstrated | 9 leaching / 2-3 as a separation step [^trl-iac] |
+| **Pyrometallurgy and halogenation** — [](#pyrometallurgical-and-halogenation-routes) | Not reported for any lanthanide pair. The best quantified split is a La+Ce group cut, ~80 % chloride purity, by selective condensation in stepwise carbochlorination-chemical vapour transport [@huang2002rare] | Real: bastnäsite ~70 wt % REO, monazite 55-65 % REO, xenotime 52-62 % REO, NdFeB scrap | Carbochlorination 600-900 °C (optimum 700 °C, 60 min, 12 wt % C, Cl₂); anhydrous, no pH | Pilot-to-commercial in China (Baotou); pilot elsewhere | 7-8 China / 6-7 elsewhere [^trl-pyro] |
+| **Coacervates and aqueous biphasic systems** — [](#coacervates-and-aqueous-biphasic-systems) | \>30, Gd/La, by cloud-point extraction with Triton X-114 and 8-hydroxyquinoline [@favrerguillon2004cloud]. No β is reported for a polyelectrolyte coacervate on any REE pair | Synthetic, composition not reported. One real feed: NdFeB magnet leachate, for Fe/REE rejection (Fe \>99 % extracted, REE \<10 %) [@liu2022one] | Not reported. Isolated values: PNIPAM LCST ~32 °C; Sc-selective phosphonate at pH 0.78 | Bench. The chapter lists pilot demonstration on real feedstock as an unmet need | 3-4 [^trl-coac] |
+| **Microfluidic separations** — [](#microfluidic-separations) | 279, Dy/La, flow-focusing droplet microreactor at 90 % Dy extraction [@fernandezmaza2024high]; 125, Dy/Nd, by electrodialysis with EDTA [@ding2023separation]. Adjacent-pair reality check: 2.72, Nd/Pr, with D2EHPA [@safarzadeh2018insights] | Both. Dy/La binary is synthetic; real feeds include leached mixed-REO concentrate with Cyanex 572 [@kolar2016microfluidic] and NdFeB leachate [@yadav2018ndfeb] | pH 1 (Dy/La) to pH 5 (D2EHPA); residence 3-60 s; REE feed concentration and temperature not reported | Pilot: three-stage countercurrent at 1 L/h by 100-fold numbering-up (~8.8 m³/y) [@yang2022pilot]; 8 m² HFSLM module [@alemrajabi2022separation] | 4-5 [^trl-micro] |
+| **Precipitation and selective crystallization** — [](#precipitation-and-selective-crystallization) | 26.9 ± 3.1, La/Lu, by solvothermal selective crystallization with H₂PDA [@yin2025selective]. Commercially practiced split is Ce(IV)/RE(III), \>99.8 % Ce precipitated with \<1.5 % co-precipitation | Both. Real: bastnäsite calcine, acid mine drainage, NiMH leachate, electrolytic slag. Designed ligands: synthetic only | Oxalate 1.5 mol per mol REE, 50-80 °C, pH held to ±0.2; staged hydroxide pH 3-8; Ce by H₂O₂ at pH 3-5 | Commercial for bulk precipitation and Ce removal (Molycorp calcine route); proof-of-concept for the designed ligands | 9 conventional / 2-3 designed ligands [^trl-precip] |
+| **Biological and biomimetic** — [](#biological-and-biomimetic-separations) | **No pairwise β is reported.** Lanmodulin's intrinsic Ln³⁺/Ln³⁺ preference is only about fivefold across the whole La-Lu series [@mattocks2023enhanced]; the famous 10⁸ figure is Ln³⁺/Ca²⁺ [@cotruvo2018lanmodulin], not Ln/Ln. Best separation performance: \>98 % purity and \>99 % yield on a Dy/Nd mixture in a single column stage with the Hans-LanM R100K variant [@mattocks2023enhanced] | Real but uncharacterised: a leachate at 0.043 mol % REE taken to 88 mol % purity; e-waste as sole REE source for engineered *M. extorquens* [@good2024scalable] | Adsorption pH 3, desorption pH \<1.7; protein stable to pH 2.5 and 95 °C; temperature and REE concentration otherwise not reported | Bench. Largest figure in the chapter is a 10 L culture [@good2024scalable]; no column dimensions, throughput or duration are given anywhere | 3-4 [^trl-bio] |
+| **Membranes, MOFs and emerging** — [](#membranes-mofs-and-emerging-approaches) | **796, Pr/Lu**, and 273, Nd/Er, in a single step on the MOF nanotrap NCU-1 [@hu2024rationally] — the highest β in this book. Membranes: no rejection, flux or selectivity value is reported. scCO₂: explicitly cannot separate individual lanthanides | MOFs: synthetic, milligram scale. scCO₂: real — roasted bastnäsite, lamp phosphors, coal ash at 270-1480 ppm REE | MOF conditions not reported. scCO₂ 40-100 °C (optimum 60-65 °C), 10-40 MPa, 4 M H⁺ with TBP-HNO₃ | Lab. The 4,000 L reactor is a techno-economic design study [@azimi2025technoeconomic], not a built facility | 2-3 MOFs / 4-5 scCO₂ [^trl-mof] |
+
+*TRL = Technology Readiness Level (1-9 scale). β = separation factor.*
+
+[^trl-sx]: Full commercial deployment: solvent extraction produces essentially
+    all separated rare earth oxide sold today, at plant scale, continuously.
+
+[^trl-ix]: Commercial, but as a polishing step rather than a bulk route.
+    Pilot-plant separations were demonstrated in 1947 [@spedding1947separation]
+    and the method has been in industrial use for high-purity oxides since.
+
+[^trl-leach]: Commercial for every ore type in the chapter; the IREL monazite
+    circuit is quoted at ~3,000 t/y REO. Bioleaching within the same chapter is
+    explicitly "laboratory and pilot scale, not yet industrial implementation".
+
+[^trl-iac]: Two different technologies share the chapter. In-situ ammonium- or
+    magnesium-sulfate leaching is commercial and dominant. Using the clay itself
+    as a chromatographic separation medium has no engineered demonstration at
+    all — the chapter's own proof of concept is the orebody, and it lists
+    measured separation factors on clay as an open research question — so it
+    sits at concept stage.
+
+[^trl-pyro]: Carbochlorination is described as practiced at pilot-to-commercial
+    scale at Baotou, which supports 7-8 in China; outside China the chapter
+    reports pilot demonstration only, hence 6-7. Ch. 7 states both numbers in
+    different places. **Flash Joule heating with chlorination** is a special
+    case: it is a feed-activation and leaching step rather than a separation,
+    ch. 7 assigns it TRL 5-6 on a "pilot" designation, but the only support
+    offered is a licensing agreement and production *planned* for 2026. On
+    demonstrated scale it is bench work, TRL 4-5, until a pilot run is
+    documented.
+
+[^trl-coac]: Laboratory proof of concept only. The chapter states that pilot
+    demonstration with real feedstock remains a research need, and gives no
+    feed composition, throughput or cycle data for any system.
+
+[^trl-micro]: Continuous multi-stage operation on real leachate has been
+    demonstrated, which is more than most of Part III can claim, but 1 L/h is
+    four to five orders of magnitude below plant scale and the chapter states
+    that commercial-scale microfluidic REE plants do not exist. **Supported
+    liquid membranes** are the strongest membrane result in the book — an 8 m²
+    hollow-fibre module and \>97 % Dy purity from NdFeB leachate — and belong at
+    the same 4-5. Nanofiltration and ultrafiltration for REE separation carry no
+    reported rejection or flux in this book and cannot be assigned a TRL at all.
+
+[^trl-precip]: Oxalate and carbonate precipitation and oxidative cerium removal
+    are unit operations inside commercial flowsheets. The reverse-size-selective
+    ligands in the second half of the chapter are, in the chapter's own words,
+    at proof-of-concept scale.
+
+[^trl-bio]: Bench columns and a 10 L culture. Ch. 11's own summary table
+    assigns "pilot" and even "industrial" scalability to several entries, but no
+    demonstration in the chapter supports those labels, and the chapter
+    elsewhere states that commercial breakthroughs have been limited.
+
+[^trl-mof]: The MOF nanotrap result is a single study on synthetic feed at
+    milligram scale with no capacity, kinetic, cycling or real-feed data — a
+    striking laboratory measurement, not a process. Supercritical CO₂ extraction
+    has repeated bench-scale batch demonstrations on real solids, which supports
+    4-5; the 4,000 L facility exists only as a techno-economic analysis.

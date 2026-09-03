@@ -182,7 +182,7 @@ Techno-economic assessment of REE recovery from AMD using network sourcing [@lar
 ### Process Comparison Economics
 Separation factors, purities, demonstrated scale, and technology readiness levels
 for the technologies covered in Parts II and III are compared in a single table in
-[](#the-landscape-of-separation-technologies), and are not repeated here.
+[](#technology-comparison), and are not repeated here.
 
 ### Key Economic Drivers
 **Critical Success Factors:**

@@ -531,7 +531,8 @@ extractant and diluent can reach, not as what an arbitrary circuit will deliver:
 
 - Mixer: 1-5 m³
 - Settler: 5-20 m³ (settler larger than mixer)
-- Number of stages: 4-8 extraction, 2-4 stripping
+- Number of stages: 4-8 extraction, 2-4 stripping *for a bulk-recovery duty*; an
+  adjacent-pair separation needs tens to hundreds (see below)
 
 #### Pulsed Columns
 **Design**:
@@ -621,54 +622,10 @@ extractant and diluent can reach, not as what an arbitrary circuit will deliver:
 - Demonstrated in lab/pilot scale
 - [@augustine2024advancing] may incorporate in future HT systems
 
-### Countercurrent Cascade Design
-**Principle**: Multiple extraction stages in series maximize REE transfer [@rydberg2004solvent].
-
-#### McCabe-Thiele Diagram
-Graphical method for determining stage requirements:
-
-**Construction**:
-
-1.  Plot equilibrium curve: y\* = f(x) where y = \[REE\]~org~, x = \[REE\]~aq~
-2.  Draw operating line: y = (A/O)x + y₀
-3.  Step off stages between equilibrium curve and operating line
-
-**Parameters**:
-
-- A/O = aqueous/organic flow ratio
-- Slope of operating line = A/O
-- Number of graphical steps = number of theoretical stages
-
-#### Typical Cascade Configuration
-**Extraction section**:
-
-- Feed enters at intermediate point
-- Fresh organic enters at bottom
-- Loaded organic exits at top
-- Raffinate (depleted aqueous) exits at bottom
-- Stages required: N = 4-8 (depends on separation factor)
-
-**Scrubbing section**:
-
-- 1-2 stages
-- Removes co-extracted impurities
-
-**Stripping section**:
-
-- 2-4 stages
-- Strong acid strip solution
-- Regenerates organic for recycle
-- Product (concentrated REE) exits
-
-**Overall plant**:
-
-- Total stages: 8-15 (extraction + scrub + strip)
-- Each stage = 1 mixer-settler unit
-
 ### Phase Ratio and Material Balance
 The distribution ratio alone does not tell you how much metal a stage moves.
 That depends on how much of each phase is present, and the quantity that
-combines the two is the **extraction factor** [@rydberg2004solvent]:
+combines the two is the **{index}`extraction factor`** [@rydberg2004solvent]:
 
     E = D × (O/A)
 
@@ -710,6 +667,211 @@ an acidic organophosphorus extractant are consumed per REE³⁺. A 30 vol% D2EHP
 solution is about 0.9 M in monomer, so it saturates near 0.3 M REE and is run at
 half that. A phase ratio that would load the organic past saturation does not
 give the `D` the equilibrium data predict, no matter what the pH is.
+
+### Countercurrent Cascade Design
+**Principle**: Multiple extraction stages in series maximize REE transfer [@rydberg2004solvent].
+
+#### McCabe-Thiele Diagram
+Graphical method for determining stage requirements:
+
+**Construction**:
+
+1.  Plot equilibrium curve: y\* = f(x) where y = \[REE\]~org~, x = \[REE\]~aq~
+2.  Draw operating line: y = (A/O)x + y₀
+3.  Step off stages between equilibrium curve and operating line
+
+**Parameters**:
+
+- A/O = aqueous/organic flow ratio
+- Slope of operating line = A/O
+- Number of graphical steps = number of theoretical stages
+
+This construction answers a *recovery* question — how many stages to strip one
+solute out of one aqueous stream — and nothing else. It is drawn for a single
+transferring species; it says nothing about which of two lanthanides ends up
+where. Both questions have to be answered, and they have different answers.
+
+#### How Many Stages for Recovery? The Kremser Equation
+The graphical construction has an algebraic counterpart that is faster to use
+and easier to check. If the equilibrium line is straight over the range of
+interest, `y* = m x` with `m` the distribution ratio `D`, and if the phase flows
+are constant through the train, the stage-by-stage material balance sums in
+closed form. The result is the {index}`Kremser equation`, the same relation that
+sizes absorbers and strippers throughout separations practice
+[@rydberg2004solvent].
+
+The notation matters, so state it. Take the aqueous phase to be the one losing
+metal, and let
+
+- `x_in` = metal concentration in the aqueous feed entering the cascade;
+- `x_out` = metal concentration in the raffinate leaving it;
+- `y_in` = metal concentration in the organic entering the cascade — zero for
+  fresh solvent, non-zero when incompletely stripped organic is recycled;
+- `m = D`, the slope of the equilibrium line; and
+- `E = m (O/A) = D (O/A)`, the extraction factor defined above, taken constant
+  through the cascade.
+
+Then for `N` ideal countercurrent stages,
+
+    (x_in − y_in/m) / (x_out − y_in/m) = (E^(N+1) − 1) / (E − 1)
+
+and inverting for the stage count,
+
+    N = ln[ ((x_in − y_in/m) / (x_out − y_in/m)) × (1 − 1/E) + 1/E ] / ln E
+
+Three checks. At `N = 1` the first expression gives `x_out/x_in = 1/(1 + E)`
+for fresh solvent — the single-stage result of the previous section, recovered.
+At `E = 1` both expressions are indeterminate; the limit is
+`(x_in − y_in/m)/(x_out − y_in/m) = N + 1`, so the raffinate falls only as
+`1/(N + 1)`. Stages then buy recovery arithmetically rather than geometrically,
+and 99.9% recovery would take 999 of them — which is why nobody runs a cascade
+at `E = 1` for recovery duty. At `E >> 1` the `1/E` terms drop out and
+`N ≈ ln(x_in/x_out) / ln E`: every stage divides the aqueous concentration by
+`E`, the geometric behaviour the McCabe-Thiele staircase draws.
+
+**Worked example, using this chapter's own numbers.** Take `D = 10` at
+`O/A = 1/3`, so `E = 3.33`, with fresh organic (`y_in = 0`). One stage extracts
+77%. For 99.9% recovery, `x_in/x_out = 1000`:
+
+    N = ln[1000 × (1 − 0.30) + 0.30] / ln 3.33
+      = ln(700.3) / 1.204
+      = 5.4  →  6 theoretical stages
+
+Six stages, and at 100% stage efficiency. That is where the "4-8 extraction
+stages" figure quoted for a mixer-settler train comes from: it is a **recovery**
+duty — one solute, a large `D`, a target expressed as percent recovered. It is
+not a separation duty, and none of it carries over to the problem of splitting
+two neighbouring lanthanides.
+
+#### How Many Stages for Separation? A Fenske Bound
+When two rare earths with separation factor β are to be split so that one is
+pure at the extract end and the other pure at the raffinate end, the governing
+estimate is not Kremser but Fenske's — the distillation result for the minimum
+number of equilibrium stages at total reflux. It transfers to a fractional
+extraction cascade unchanged, because the underlying algebra is the same: a
+constant relative separation applied stage after stage.
+
+    N_min = ln[ (x_P/(1 − x_P)) × ((1 − x_R)/x_R) ] / ln β
+
+`x_P` is the mole fraction of the more-extractable element in the product taken
+from the extract end; `x_R` is that same element's mole fraction in the
+raffinate; β is the pair's separation factor. Each bracketed term is a ratio of
+wanted to unwanted, so the logarithm's argument is the product of the two
+end-point enrichments — the separation job is shared between the two ends, and
+tightening either end costs stages.
+
+Put in the numbers this book keeps returning to. Demand 99.99% at both ends
+(`x_P = 0.9999`, `x_R = 0.0001`) of a pair with β = 1.5:
+
+    N_min = ln(9999 × 9999) / ln 1.5 = 18.42 / 0.405 = 45 stages
+
+Forty-five, and that is a floor, not a design. `N_min` assumes total reflux, a
+strictly binary feed, and equilibrium in every stage. A working circuit has
+none of those: it runs at **finite reflux**, since the scrub and strip returns
+that play the role of reflux are finite streams that cost reagent and pumping;
+it splits a feed of eight or ten lanthanides rather than two, so each cut
+carries the others through it; and its mixers reach 90-95% of equilibrium, not
+100%. Installed stage counts are accordingly two to three times `N_min`. That
+is the derivation behind the "hundreds of stages" of
+[](#why-rare-earths-are-hard-to-separate): it follows from β ≈ 1.5 and the
+purity specification, and is not an assertion about industrial habit.
+
+The sensitivity is worth seeing, because it explains what plants actually do.
+Relaxing both ends to 99.9% drops `N_min` from 45 to 34. Doubling β to 3.0 — the
+gap between an adjacent pair and a pair two apart — drops it to 17. Choosing a
+better extractant and choosing a less demanding purity target are the two levers,
+and the logarithm means neither one is dramatic.
+
+#### Fractional Extraction: Extract, Scrub and Strip
+A recovery cascade has the aqueous feed entering at one end. A **{index}`fractional
+extraction`** cascade — the configuration every rare earth separation plant
+actually runs — has it entering somewhere in the middle, which is what splits the
+train into two sections that do different jobs:
+
+    less-extractable                                    more-extractable
+    product (raffinate)                                 product (strip liquor)
+         ↑                                                        ↑
+      ───┴──── EXTRACTION SECTION ──┬── SCRUB SECTION ────┐   ┌────┴────┐
+      aqueous  →→→→→→→→→→→→→→→→→→→→ │ →→→→→→→→→→→→→→→→→→→ │   │  STRIP  │
+      organic  ←←←←←←←←←←←←←←←←←←←← │ ←←←←←←←←←←←←←←←←←←← │   │ SECTION │
+      ───┬──────────────────────────┴─────────────────────┘   └────┬────┘
+         │                          ↑                loaded        │
+    fresh/stripped                FEED               organic  ──→──┘
+      organic in                                                   │
+                                     scrub liquor  ←──── split ←────┤
+                                     (part of the strip product)    ↓
+                                                              product out
+
+In the **extraction section**, between the feed point and the raffinate outlet,
+the organic flowing counter to the aqueous pulls the more-extractable element
+(for acidic organophosphorus reagents, the heavier lanthanide) out of the
+aqueous; what survives to the raffinate end is progressively purer in the
+*less*-extractable element. In the **scrub section**, between the feed point and
+the loaded-organic outlet, an aqueous stream washes the loaded organic on its way
+out, displacing the less-extractable element back off the extractant by mass
+action and returning it toward the feed. What makes this work is the choice of
+scrub liquor: not acid, and not a buffer, but a portion of the cascade's own
+strip product — the purified more-extractable element, returned to the head of
+the train [@banda2015separation].
+
+That is **REE-on-REE scrubbing**, and it is the exact liquid-liquid analogue of
+reflux in a distillation column. It is also the reason a cascade can be pure at
+*both* ends instead of one. Scrubbing described as impurity removal — washing
+Fe³⁺ or Ca²⁺ off the organic — is a different and much smaller operation; iron
+in particular binds D2EHPA more strongly than any rare earth does and has to be
+taken out upstream ([](#from-ore-to-feed-solution)), not scrubbed off here. The
+strip section then returns the metal to an aqueous phase with strong acid and
+regenerates the extractant; part of that strip liquor is split off as the scrub,
+and the rest is product. The scrub-to-product split is the reflux ratio, and it
+is the knob that trades reagent and throughput against stage count.
+
+The design theory that makes such a cascade calculable rather than empirical is
+{index}`Xu Guangxian`'s countercurrent extraction theory, developed in China from
+the 1970s [@xu1985theory]. Given β, the feed composition and the two purity
+specifications, it yields the number of extraction stages, the number of scrub
+stages, the feed-stage location, and the flow ratios in closed form, so that a
+plant can be designed on paper and brought up at its design point instead of
+being tuned over months of operation. Its adoption, and the linking of cascades
+in series so that the raffinate of one becomes the feed of the next, is what
+turned a fifteen-component feed into a fan-out of individual oxides and made
+China the world's separator of rare earths [@yan2006rare].
+
+#### Saponification of the Extractant
+There is one industrial practice that follows directly from the reaction this
+chapter opened with, and that a laboratory description of solvent extraction
+never mentions. Each REE³⁺ transferred to the organic phase releases three
+protons into the aqueous phase. At a working loading of 0.2 M rare earth, that
+is 0.6 mol of H⁺ per litre of aqueous feed — enough to drop the pH by several
+units, which by the slope-3 dependence collapses `D` by several *orders* of
+magnitude. Left alone, an extraction cascade poisons itself in its first stage.
+
+Adding caustic to each mixer, as this chapter's own extraction-stage description
+does, is how it is handled on a bench. It does not survive scale-up: base
+injected into a mixer creates local pH excursions that precipitate rare earth
+hydroxides and stabilise emulsions, and it has to be dosed and controlled
+separately in every one of dozens of stages. Industrial circuits instead
+neutralise the extractant *before* it enters the cascade, a step called
+**{index}`saponification`**. The organic is contacted with NaOH, aqueous ammonia,
+or a magnesium base, converting 30-50% of the acidic extractant from HL to its
+sodium, ammonium, or magnesium salt. Extraction then proceeds by exchanging
+RE³⁺ for Na⁺, NH₄⁺, or Mg²⁺ rather than for H⁺, and the aqueous pH stays where
+it was set without any in-stage dosing [@banda2015separation; @xie2014critical].
+
+The cost is that the saponifying cation has to go somewhere, and where it goes
+is the raffinate. Ammonia saponification — long the standard for P507 circuits,
+because ammonium salts of the extractant behave well and NH₃ is cheap — puts
+ammonium into every aqueous stream leaving the plant. This is the origin of the
+{index}`ammonium-nitrogen <ammonia-nitrogen pollution>` effluent that is the
+signature pollution problem of Chinese rare earth separation, and it is the same
+nitrogen burden, from a different unit operation, that
+[](#ion-adsorption-clays) describes for ammonium sulfate clay leaching and that
+[](#environment-techno-economics-and-life-cycle) counts in the eutrophication
+column of the life-cycle inventory. Sodium saponification trades it for a saline
+raffinate; magnesium and calcium saponification, and non-saponification
+flowsheets that recycle the acid instead, are the directions the Chinese industry
+has been pushed toward on exactly these grounds [@liao2013clean]. Whichever is
+chosen, the reagent bill and the effluent are set by the same stoichiometry:
+three equivalents of base per mole of rare earth moved.
 
 ### Operational Considerations
 #### Phase Continuity
@@ -870,7 +1032,7 @@ the raffinate, not out of the organic phase.
 | Salting agent     | 1-3 M        | Not needed  | 1-2 order improvement in D    |
 | Phase ratio (O/A) | 1/1 to 1/5   | 2/1 to 10/1 | Determines concentration      |
 | Contact time      | 2-10 min     | 5-15 min    | Usually adequate for kinetics |
-| Number of stages  | 4-8          | 2-4         | Depends on separation factor  |
+| Number of stages  | 4-8          | 2-4         | Bulk recovery only; an adjacent-pair split needs ≥45 (Fenske, β = 1.5) |
 
 ### Why Kerosene?
 In summary:
