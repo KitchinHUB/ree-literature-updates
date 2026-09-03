@@ -132,7 +132,7 @@ def query_openalex(
         "sort": "publication_date:desc",
         "per-page": str(per_page),
         "cursor": cursor,
-        "mailto": "literature-monitor@example.com",  # Polite pool
+        "mailto": "jkitchin@andrew.cmu.edu",  # Polite pool
     }
 
     url = f"{base_url}?{urllib.parse.urlencode(params)}"
@@ -170,20 +170,21 @@ def extract_work_info(work: dict) -> dict:
     """Extract relevant information from an OpenAlex work."""
     # Get authors
     authors = []
-    for authorship in work.get("authorships", [])[:5]:  # Limit to first 5
-        author = authorship.get("author", {})
-        name = author.get("display_name", "Unknown")
+    authorships = work.get("authorships") or []
+    for authorship in authorships[:5]:  # Limit to first 5
+        author = authorship.get("author") or {}
+        name = author.get("display_name") or "Unknown"
         authors.append(name)
 
-    if len(work.get("authorships", [])) > 5:
+    if len(authorships) > 5:
         authors.append("et al.")
 
     # Get primary source/journal
-    source = work.get("primary_location", {}).get("source") or {}
-    journal = source.get("display_name", "Unknown Source")
+    source = (work.get("primary_location") or {}).get("source") or {}
+    journal = source.get("display_name") or "Unknown Source"
 
     # Get DOI
-    doi = work.get("doi", "")
+    doi = work.get("doi") or ""
     if doi and not doi.startswith("http"):
         doi = f"https://doi.org/{doi}"
 
@@ -199,21 +200,27 @@ def extract_work_info(work: dict) -> dict:
         abstract = " ".join(words)
 
     # Get concepts/topics
-    concepts = [c.get("display_name", "") for c in work.get("concepts", [])[:5]]
+    concepts = [
+        c.get("display_name") or "" for c in (work.get("concepts") or [])[:5]
+    ]
+
+    # Use `or` rather than get() defaults: OpenAlex returns these keys with
+    # explicit null values, which a default would not catch.
+    work_id = work.get("id") or ""
 
     return {
-        "id": work.get("id", ""),
-        "title": work.get("title", "Untitled"),
+        "id": work_id,
+        "title": work.get("title") or "Untitled",
         "authors": authors,
-        "publication_date": work.get("publication_date", ""),
+        "publication_date": work.get("publication_date") or "",
         "journal": journal,
         "doi": doi,
-        "url": work.get("id", "").replace("https://openalex.org/", "https://openalex.org/works/"),
+        "url": work_id.replace("https://openalex.org/", "https://openalex.org/works/"),
         "abstract": abstract[:500] + "..." if len(abstract) > 500 else abstract,
         "concepts": concepts,
-        "cited_by_count": work.get("cited_by_count", 0),
-        "type": work.get("type", "unknown"),
-        "open_access": work.get("open_access", {}).get("is_oa", False),
+        "cited_by_count": work.get("cited_by_count") or 0,
+        "type": work.get("type") or "unknown",
+        "open_access": (work.get("open_access") or {}).get("is_oa", False),
     }
 
 
@@ -231,9 +238,9 @@ def is_relevant_to_ree(work: dict) -> bool:
         True if the work appears relevant to REE research
     """
     # Combine searchable text fields
-    title = work.get("title", "").lower()
-    abstract = work.get("abstract", "").lower()
-    concepts = " ".join(work.get("concepts", [])).lower()
+    title = (work.get("title") or "").lower()
+    abstract = (work.get("abstract") or "").lower()
+    concepts = " ".join(work.get("concepts") or []).lower()
 
     # Add spaces around text to help with word boundary matching
     searchable_text = f" {title} {abstract} {concepts} "

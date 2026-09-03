@@ -10,6 +10,7 @@
 #
 
 set -e
+set -o pipefail  # Preserve exit codes through pipes
 
 # Configuration
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
@@ -57,8 +58,8 @@ fi
 
 log "Running: claude -p \"$PROMPT\""
 
-# Run Claude Code in non-interactive mode
-claude -p "$PROMPT" --dangerously-skip-permissions >> "$LOG_FILE" 2>&1
+# Run Claude Code in non-interactive mode (verbose - output to both terminal and log)
+claude -p "$PROMPT" --dangerously-skip-permissions 2>&1 | tee -a "$LOG_FILE"
 
 EXIT_CODE=$?
 
