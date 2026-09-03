@@ -1,0 +1,165 @@
+# DOI recovery via CrossRef
+
+- Entries missing a DOI: **154**
+- Recovered: **77** (title similarity >= 0.9, year agreeing within 1)
+- Still missing: **77**
+
+## Recovered
+
+- `anderson2016chlorination` -> 10.1007/978-3-319-48245-3_2 (similarity 1.00) — Chlorination Roasting of Rare Earth Element Oxides
+- `anon1995supercritical` -> 10.1021/ac00085a008 (similarity 0.97) — Supercritical Fluid Extraction of Lanthanides with Fluorinated β-Diketones and T
+- `anon2001hand` -> 10.1201/noe0849309823.ch4 (similarity 0.94) — EF-hand Calcium-Binding Proteins
+- `anon2004rare` -> 10.1002/chin.200503221 (similarity 1.00) — Rare-earth diiodides and derivatives
+- `anon2011characterization` -> 10.3390/ijms12021232 (similarity 1.00) — Characterization and Emulsification Properties of Rhamnolipid and Sophorolipid B
+- `anon2017cracking` -> 10.1016/s1002-0721(17)60971-2 (similarity 1.00) — A review on the cracking, baking and leaching processes of rare earth element co
+- `anon2017development` -> 10.1016/j.jre.2018.03.024 (similarity 1.00) — Development of a Microfluidic-Chip System Based on Parallel Flow for Intensified
+- `anon2017fast` -> 10.1016/j.seppur.2016.10.059 (similarity 1.00) — Fast Extraction and Enrichment of Rare Earth Elements from Waste Water via Micro
+- `anon2017recovery` -> 10.1021/acs.est.7b02414.s001 (similarity 1.00) — Recovery of Rare Earth Elements from Low-Grade Feedstock Leachates Using Enginee
+- `anon2017separation` -> 10.1093/chromsci/bmw200 (similarity 1.00) — Separation and Sensitive Detection of Lanthanides by Capillary Electrophoresis a
+- `anon2018bioleaching` -> 10.1016/j.chemgeo.2018.03.023 (similarity 1.00) — Bioleaching of Rare Earth Elements from Bastnaesite-Bearing Rock by Actinobacter
+- `anon2018leaching` -> 10.1016/s1002-0721(17)60994-3 (similarity 1.00) — Leaching of Rare Earth Elements from Contaminated Soils Using Saponin and Rhamno
+- `anon2018overview` -> 10.1016/j.seppur.2017.12.053 (similarity 1.00) — An Overview on Membrane Strategies for Rare Earths Extraction and Separation
+- `anon2019characterization` -> 10.1016/j.cej.2018.09.039 (similarity 1.00) — Characterization of the Interaction of Rare Earth Elements with P507 in a Microf
+- `anon2019droplet` -> 10.5772/intechopen.89846 (similarity 1.00) — Droplet Microfluidic Device for Rapid and Efficient Metals Separation Using Host
+- `anon2019mechanistic` -> 10.1016/j.cej.2018.09.043 (similarity 1.00) — Toward a Mechanistic Understanding of Microfluidic Droplet-Based Extraction and 
+- `anon2020biosorption` -> 10.3390/met10070954 (similarity 1.00) — Biosorption of Rare Earth Elements by Different Microorganisms in Acidic Solutio
+- `anon2020biosorptiona` -> 10.1007/s11274-020-02821-6 (similarity 1.00) — Biosorption as Green Technology for the Recovery and Separation of Rare Earth El
+- `anon2020hydrometallurgical` -> 10.3390/met10060841 (similarity 1.00) — Hydrometallurgical Recovery of Rare Earth Elements from {NdFeB} Permanent Magnet
+- `anon2020progressa` -> 10.2116/analsci.20sar11 (similarity 1.00) — Recent Progress in Ionic Liquid Extraction for the Separation of Rare Earth Elem
+- `anon2020rare` -> 10.1016/j.ceramint.2020.03.067 (similarity 1.00) — Rare Earth Elements and Urban Mines: Critical Strategies for Sustainable Develop
+- `anon2020separationa` -> 10.1016/j.mineng.2020.106694 (similarity 1.00) — Separation and solvent extraction of rare earth elements ({Pr}, {Nd}, {Sm}, {Eu}
+- `anon2020supercritical` -> 10.1007/978-3-030-36758-9_10 (similarity 1.00) — Supercritical Fluid Extraction of Rare-Earth Elements from a Canadian Ore
+- `anon2021critical` -> 10.1080/10643389.2020.1727718 (similarity 1.00) — A Critical Review of Bioleaching of Rare Earth Elements: The Mechanisms and Effe
+- `anon2021method` -> 10.1016/j.mineng.2021.106879 (similarity 1.00) — A New Method for Recovering Rare Earth Elements from the Hyperaccumulating Fern 
+- `anon2022economic` -> 10.17159/2411-9717/1989/2022 (similarity 1.00) — Economic Analysis of Rare Earth Element Processing Methods for Mountain Pass Ore
+- `anon2022high` -> 10.1016/j.molliq.2022.121044 (similarity 1.00) — High Toxicity of Amino Acid-Based Deep Eutectic Solvents
+- `anon2022molten` -> 10.1016/j.seta.2022.102840 (similarity 1.00) — Molten Salt Electrolysis and Room Temperature Ionic Liquid Electrochemical Proce
+- `anon2022phytomining` -> 10.1016/j.chemosphere.2022.134259 (similarity 1.00) — Phytomining of Rare Earth Elements -- A Review
+- `anon2022rare` -> 10.1021/acs.chemrev.1c00842 (similarity 1.00) — Rare Earth Starting Materials and Methodologies for Synthetic Chemistry
+- `anon2022rareb` -> 10.3390/membranes12010080 (similarity 1.00) — Rare Earth Elements Recovery Using Selective Membranes via Extraction and Reject
+- `anon2022separationa` -> 10.1016/j.seppur.2022.120882 (similarity 1.00) — Separation of Heavy Rare-Earth Elements by Non-Aqueous Solvent Extraction: Flows
+- `anon2023advances` -> 10.1016/j.jtice.2023.105095 (similarity 1.00) — Recent Advances in Cellulose, Chitosan, and Alginate Based Biopolymeric Composit
+- `anon2023application` -> 10.1016/j.jece.2023.110777 (similarity 1.00) — Application of deep eutectic solvents ({DESs}) as a green lixiviant for extracti
+- `anon2023biomining` -> 10.1016/j.scitotenv.2023.168210 (similarity 1.00) — Biomining for sustainable recovery of rare earth elements from mining waste: A c
+- `anon2023bioseparation` -> 10.1016/j.bioorg.2023.107040 (similarity 1.00) — Bioseparation of Rare Earth Elements and High Value-Added Biomaterials Applicati
+- `anon2023comparative` -> 10.3390/pr11072070 (similarity 1.00) — A Comparative Study on Recent Developments for Individual Rare Earth Elements Se
+- `anon2023deep` -> 10.21203/rs.3.rs-2525701/v1 (similarity 1.00) — A Deep Insight into the Selectivity Difference Between Y(III) and La(III) Ions T
+- `anon2023extraction` -> 10.1016/j.jece.2023.109746 (similarity 1.00) — A Review on the Extraction and Recovery of Critical Metals Using Molten Salt Ele
+- `anon2023green` -> 10.1016/j.seppur.2023.125501 (similarity 1.00) — Green Recovery of Rare Earth Elements under Sustainability and Low Carbon: A Rev
+- `anon2023lanthanides` -> 10.3390/ijms24076297 (similarity 1.00) — Lanthanides as Calcium Mimetic Species in Calcium-Signaling/Buffering Proteins: 
+- `anon2023latest` -> 10.3390/membranes13100839 (similarity 1.00) — The Latest Achievements of Liquid Membranes for Rare Earth Elements Recovery fro
+- `anon2023membrane` -> 10.1016/j.ccr.2023.215340 (similarity 1.00) — On Membrane-Based Approaches for Rare Earths Separation and Extraction -- Recent
+- `anon2023progress` -> 10.1016/j.hydromet.2023.106047 (similarity 1.00) — The Recent Progress of Ion Exchange for the Separation of Rare Earths from Secon
+- `anon2023rare` -> 10.1016/j.jhazmat.2023.131254 (similarity 1.00) — Rare Earth Elements Detoxification Mechanism in the Hyperaccumulator Dicranopter
+- `anon2023recovery` -> 10.1016/j.seppur.2023.124013 (similarity 1.00) — Recovery of rare earth elements from deep-sea mud using acid leaching followed b
+- `anon2023recoverya` -> 10.3390/met13030559 (similarity 1.00) — Recovery of Rare Earth Elements from Spent {NdFeB} Magnets: Metal Extraction by 
+- `anon2023work` -> 10.3390/min13101288 (similarity 1.00) — Recent Work on the Recovery of Rare Earths Using Ionic Liquids and Deep Eutectic
+- `anon2024application` -> 10.1016/j.hybadv.2024.100175 (similarity 1.00) — Application and Implementation of Chitosan as a Potential and Sustainable Adsorb
+- `anon2024current` -> 10.1016/j.molliq.2024.126751 (similarity 1.00) — Current Status and Future Directions: Separation of Rare Earth Elements by Sorpt
+- `anon2024eco` -> 10.1016/j.jhazmat.2024.134633 (similarity 1.00) — An eco-friendly and high-yield extraction of rare earth from the leaching soluti
+- `anon2024enhanced` -> 10.1016/j.jcis.2024.08.225 (similarity 1.00) — Enhanced Rare Earth Element Recovery with Cross-Linked Glutaraldehyde-Lanthanide
+- `anon2024enhanceda` -> 10.1016/j.seppur.2024.128513 (similarity 1.00) — Enhanced Solvent Extraction of Rare Earth Elements in Ultra-High Phase Ratio wit
+- `anon2024extraction` -> 10.1016/j.jre.2024.01.012 (similarity 1.00) — Extraction of rare earth elements from neodymium ({NdFeB}) magnet scrap using ma
+- `anon2024extractiona` -> 10.20944/preprints202312.0986.v1 (similarity 1.00) — Extraction of Rare Earth Elements from Chloride Solutions Using Mixtures of {P50
+- `anon2024high` -> 10.2139/ssrn.4593980 (similarity 1.00) — High Performance Flow-Focusing Droplet Microreactor: Extractive Separation of Ra
+- `anon2024industry` -> 10.3389/fceng.2024.1445900 (similarity 1.00) — Industry Relevant Microfluidic Platforms for Mineral Leaching Experiments
+- `anon2024intensifying` -> 10.1016/j.seppur.2023.125930 (similarity 1.00) — Intensifying the Extraction of Rare Earth Elements by a Mini-Channel Counter-Cur
+- `anon2024investigationa` -> 10.20944/preprints202411.2378.v1 (similarity 1.00) — Investigation on the Recovery of Rare Earth Fluorides from Spent Rare Earth Molt
+- `anon2024investigationb` -> 10.1016/j.seppur.2024.126867 (similarity 1.00) — Investigation of Fundamental Interactions Between Rare Earth Elements and a Seri
+- `anon2024mechanism` -> 10.3390/ma17235807 (similarity 1.00) — Mechanism and Experimental Study on the Recovery of Rare Earth Elements from Neo
+- `anon2024mechanisma` -> 10.2139/ssrn.4916822 (similarity 1.00) — Mechanism and experimental study on the recovery of rare earth elements from neo
+- `anon2024methods` -> 10.3390/pr12061235 (similarity 1.00) — Review of Methods for Obtaining Rare Earth Elements from Recycling and Their Imp
+- `anon2024research` -> 10.3390/met14040407 (similarity 1.00) — Research Status of Electrolytic Preparation of Rare Earth Metals and Alloys in F
+- `anon2024reshaping` -> 10.1016/j.fmre.2023.11.019 (similarity 1.00) — Reshaping Heavy Rare Earth Supply Chains amidst China's Stringent Environmental 
+- `anon2025clean` -> 10.1016/j.ces.2025.122244 (similarity 1.00) — A Clean and Efficient One-Step Process for Rare Earth Extraction: Carbochlorinat
+- `anon2025efficiently` -> 10.1016/j.seppur.2025.132426 (similarity 1.00) — Efficiently Selective Removal of Radioactive Thorium and Uranium from Rare Earth
+- `anon2025microfluidic` -> 10.2139/ssrn.5188466 (similarity 1.00) — Microfluidic Strategy for Rapid and Efficient Extraction of Scandium Ions from R
+- `anon2025preparation` -> 10.1016/j.scitotenv.2025.178468 (similarity 1.00) — Preparation of Ion Imprinted EDTA Modified Chitosan-Magnetic Graphene Oxide for 
+- `anon2025rarea` -> 10.1038/s41467-025-59468-w (similarity 1.00) — Rare earth metals production using alternative feedstock that eliminates {HF}
+- `anon2025separation` -> 10.1016/j.seppur.2025.135433 (similarity 1.00) — Separation and recovery of strategic metals by solvent extraction based on hydro
+- `anon2025sustainable` -> 10.1038/s41598-025-04937-x (similarity 1.00) — Sustainable bio-extraction of rare earth elements from discarded {LED} lamps
+- `anon2025sustainablea` -> 10.1016/j.jenvman.2025.125411 (similarity 1.00) — Sustainable Recovery of Rare Earth Elements (REEs) from Coal and Coal Ash throug
+- `anon2025tailored` -> 10.1016/j.seppur.2025.132566 (similarity 1.00) — Tailored Separation of Light Rare-Earth Elements Using Combined Oxidative Precip
+- `deblonde2021natural` -> 10.1021/acscentsci.1c01247 (similarity 1.00) — A Natural Lanthanide-Binding Protein Facilitates Separation and Recovery of Rare
+- `li2024thermodynamic` -> 10.1063/5.0250546 (similarity 1.00) — Thermodynamic Insights into Polyelectrolyte Complexation: A Theoretical Framewor
+- `yang2022pilot` -> 10.1016/j.mineng.2022.107536 (similarity 1.00) — Pilot-Scale Microfluidic Solvent Extraction of High-Value Metals
+
+## Not recovered
+
+- `anderson2015chlorination` — year mismatch 2015 vs 2003 — Chlorination and Carbochlorination of Rare Earth and Uranium Bearing Minerals
+- `anon1969goldschmidt` — below threshold (0.45) — The Goldschmidt Process for Rare Earth Production
+- `anon1999solvent` — year mismatch 1999 vs 2004 — Solvent Effects on Metal Complexation with Crown Ethers from Liquid to Supercrit
+- `anon2005vapor` — year mismatch 2005 vs 2017 — Vapor Complex Formation of Rare Earth Chlorides with Aluminum Chloride for Separ
+- `anon2008defluorination` — year mismatch 2008 vs 2004 — Defluorination of Bastnaesite Concentrate Using Silicon Tetrachloride During Car
+- `anon2010role` — year mismatch 2010 vs 1953 — Role of Phosgene and Carbon Tetrachloride as Intermediates in Carbochlorination 
+- `anon2011supercritical` — year mismatch 2011 vs 2005 — Supercritical Fluid Extraction of Rare Earth Elements from Luminescent Material 
+- `anon2012activation` — below threshold (0.42) — Activation Energy Determination for Carbochlorination of Light Rare Earth Oxides
+- `anon2016rareb` — below threshold (0.50) — Rare-Earth Trace/Bulk Elemental Analysis by ICP-MS
+- `anon2017formation` — below threshold (0.57) — Formation and Decomposition Kinetics of Neodymium Oxychloride During Chlorinatio
+- `anon2018direct` — below threshold (0.61) — Direct Oxalate Precipitation for Rare Earth Elements Recovery
+- `anon2018separation` — below threshold (0.67) — Separation of Thorium from Rare Earth Elements via Chemical Vapor Transport
+- `anon2019anomalous` — year mismatch 2019 vs 1987 — Anomalous Chlorination Behavior of Gadolinium Oxide: Intermediate Between Light 
+- `anon2019extraction` — year mismatch 2019 vs 2021 — Extraction of Selected Rare Earth Elements from Anthracite Acid Mine Drainage Us
+- `anon2020chlorometallurgical` — below threshold (0.57) — Chlorometallurgical Processing of Rare Earth Ores: Fundamentals and Applications
+- `anon2021separationa` — below threshold (0.80) — Separation of Thorium, Uranium, and Rare Earths from a Strip Solution
+- `anon2022ligand` — year mismatch 2022 vs 2004 — Ligand-Assisted Separation of Rare Earth Elements via Capillary Electrophoresis
+- `anon2022parametric` — below threshold (0.85) — Parametric Study and Speciation Analysis of Rare Earth Precipitation Using Oxali
+- `anon2022rarea` — year mismatch 2022 vs 2018 — Rare Earth Elements Recovery Using Staged Precipitation
+- `anon2024advancements` — year mismatch 2024 vs 2020 — Advancements in Rare Earth Element Extraction: Top 7 Innovations
+- `anon2024china` — below threshold (0.64) — China's Rare Earth Elements: What Businesses Need to Know
+- `anon2024determination` — year mismatch 2024 vs 2016 — Determination of Rare Earth Elements in Geological and Agricultural Samples by I
+- `anon2024efficienta` — year mismatch 2024 vs 2022 — Efficient Recovery and Enrichment of Rare Earth Elements by a Continuous Flow Mi
+- `anon2024environmentally` — below threshold (0.62) — New, Environmentally Friendly Method to Extract and Separate Rare Earth Elements
+- `anon2024higha` — below threshold (0.49) — High-Resolution ICP-OES for the Determination of Trace Elements in a Rare Earth 
+- `anon2024how` — below threshold (0.52) — How to Loosen China's Stranglehold on Rare Earths
+- `anon2024methodsa` — year mismatch 2024 vs 2018 — Methods for the Extraction of Minerals with Rare Earths
+- `anon2024mine` — year mismatch 2024 vs 2015 — Mine the Tech Gap: Why China's Rare Earth Dominance Persists
+- `anon2024mining` — below threshold (0.65) — Mining Rare Earth Metals from Electronic Waste
+- `anon2024rareb` — below threshold (0.69) — 5 Rare Earth Separation Methods to Master Now
+- `anon2024separationb` — below threshold (0.55) — New Separation Process Can Efficiently Mine Rare Earth Metal Europium from Elect
+- `anon2024technology` — below threshold (0.46) — Technology -- Rare Earth Processing and Separation
+- `anon2025china` — below threshold (0.46) — China's New Rare Earth and Magnet Restrictions Threaten U.S. Defense Supply Chai
+- `anon2025consequences` — year mismatch 2025 vs 2016 — The Consequences of China's New Rare Earths Export Restrictions
+- `anon2025export` — year mismatch 2025 vs 2015 — With New Export Controls on Critical Minerals, Supply Concentration Risks Become
+- `anon2025losing` — year mismatch 2025 vs 2019 — U.S. is Losing Rare Earth Metals War to China, and Running Out of Time to Win It
+- `anon2025water` — below threshold (0.57) — Water-Based Rare Earth Recycling Emerges
+- `anonymous2024extraction` — below threshold (0.68) — Extraction of Rare Earth Elements from Coal Ash Using Supercritical CO₂
+- `britannica2024rare` — year mismatch 2024 vs 2026 — Rare-earth element - Processing Ores
+- `britannicanodaterare` — below threshold (0.83) — Rare-earth element - Preparation of the Metals
+- `chemistry2023preparation` — year mismatch 2023 vs 2007 — Preparation Method of Rare Earth Fluoride
+- `chen2023multiphase` — below threshold (0.86) — Multiphase Coacervation of Polyelectrolytes Driven by Asymmetry
+- `commission2020critical` — year mismatch 2020 vs 2026 — Critical raw materials resilience: Charting a path towards greater security and 
+- `energy2011critical` — below threshold (0.68) — Critical materials strategy
+- `energy2023economic` — below threshold (0.52) — Economic Costs of Rare Earth Mining and Refining
+- `engell2023could` — year mismatch 2023 vs 1997 — Could the chloride process replace the {Hall-H{\'e}roult} process in aluminium p
+- `eurarenodatehydrometallurgy` — below threshold (0.32) — Hydrometallurgy in the Processing of {REE}
+- `eurarenodatemetal` — below threshold (0.80) — Metal production by salt electrolysis
+- `gupta2003chemical` — below threshold (0.61) — Chemical metallurgy: principles and practice
+- `habashi1997handbook` — below threshold (0.78) — Handbook of extractive metallurgy
+- `huang2006development` — year mismatch 2006 vs 2015 — Development Status and Research Progress in Rare Earth Hydrometallurgy in China
+- `iaea2011radiation` — year mismatch 2011 vs 2015 — Radiation protection and {NORM} residue management in the production of rare ear
+- `inc2024fast` — year mismatch 2024 vs 1983 — FAST Automated Sample Introduction System
+- `intertek2024physical` — year mismatch 2024 vs 2022 — Physical Characterization: Surface Area and Porosity
+- `jena2024analysis` — year mismatch 2024 vs 2017 — Analysis of Rare Earth Elements by ICP-OES and ICP-MS – Potentials and Limitatio
+- `laboratory2015enhanced` — below threshold (0.85) — Enhanced Separation of Rare Earth Elements
+- `laboratory2024game` — year mismatch 2024 vs 2016 — Game-changing rare-earth elements separation technology licensed to {Marshallton
+- `laboratory2024separation` — below threshold (0.73) — Separation Archive for f-elements (SAFE)
+- `labs2024green` — year mismatch 2024 vs 2021 — Green Extraction of Rare Earth Elements from Coal Waste
+- `llc2024geochemist` — below threshold (0.63) — The Geochemist's Workbench
+- `lyon2015separation` — below threshold (0.56) — Separation of Adjacent Rare Earth Elements Using Solvent Extraction
+- `metallurgistnodateelectrowinning` — below threshold (0.72) — Electrowinning Rare Earth Elements
+- `news2025rapid` — below threshold (0.64) — Rapid flash {Joule} heating technique unlocks efficient rare earth element recov
+- `patent1985metallothermic` — year mismatch 1985 vs 2014 — Metallothermic reduction of rare earth oxides
+- `resources2024aclara` — year mismatch 2024 vs 2015 — Aclara Announces Update on its Rare Earths Separation Project
+- `rigaku2024determining` — year mismatch 2024 vs 1991 — Determining the Rare Earth Elements in Geological Minerals Accurately Using X-ra
+- `roine2019hsc` — year mismatch 2019 vs 2025 — {HSC} Chemistry for Windows: Chemical reaction and equilibrium software with the
+- `rydberg2004solvent` — below threshold (0.62) — Solvent Extraction Principles and Practice, Revised and Expanded
+- `scientific2024portable` — year mismatch 2024 vs 2002 — Portable XRF for Rare-Earth Element Identification and Exploration
+- `survey2024phreeqc` — year mismatch 2024 vs 2021 — PHREEQC Version 3
+- `systems2023modeling` — below threshold (0.86) — Modeling Phase Equilibria and Recovery of Rare Earth Elements with Hydroxide and
+- `team2024scientists` — below threshold (0.49) — Scientists Develop Smart Polymers for Sustainable Rare Earth Recovery
+- `technologies2024analysis` — year mismatch 2024 vs 2017 — Analysis of Rare Earth Elements in Base Metal Ores by ICP-OES
+- `technologies2024exploring` — year mismatch 2024 vs 2019 — Exploring the Thermal Properties of Materials Using Thermogravimetric Analysis (
+- `technologies2024rare` — below threshold (0.39) — Rare Earth Elements Separation -- Green Chemistry Methods
+- `topicsnodatecalciothermic` — below threshold (0.57) — Calciothermic Reduction
+- `usa2025flash` — below threshold (0.45) — Flash Metals {USA} and Rice University Achieve Breakthrough in Rare Earth Recove

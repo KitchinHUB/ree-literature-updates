@@ -1,0 +1,311 @@
+# Bibliography audit
+
+- Source files merged: 5 (`nnl.bib` excluded: disjoint, general materials science, 147 unverifiable entries)
+- Entries loaded: **506**
+- Entries after dedup: **473** (33 duplicates removed)
+- Missing a DOI: **154**
+- No DOI, URL, or ISBN — unverifiable as recorded: **10**
+- Placeholder `{Journal} Authors` fields: **29**
+
+## Duplicates removed
+
+- DOI  10.1002/ejic.202400064: kept coacervate.bib:pramanik2024emerging, dropped high-throughput-ree-refs.bib:pramanik2024emerging
+- DOI  10.1002/ejic.202400064: kept coacervate.bib:pramanik2024emerging, dropped rare_earth_separation_references.bib:pramanik2024emerging
+- DOI  10.1016/j.mineng.2013.10.021: kept rare_earth_separation_references.bib:xie2014critical, dropped high-throughput-ree-refs.bib:xie2014critical
+- DOI  10.1073/pnas.2507819122: kept rare_earth_separation_references.bib:tour2025sustainable, dropped carbohalogenation_references.bib:fjh_pnas2025
+- DOI  10.1038/s41586-023-05945-5: kept coacervate.bib:cotruvo2023lanmodulin, dropped rare_earth_separation_references.bib:cotruvo2023enhanced
+- DOI  10.1038/s41467-022-32178-3: kept rare_earth_separation_references.bib:oconnell2022supramolecular, dropped rare_earth_separation_references.bib:natcomm2022supramolecular
+- DOI  10.1073/pnas.2410926121: kept coacervate.bib:park2024lanmodulin, dropped rare_earth_separation_references.bib:pnas2024lanmodulin
+- DOI  10.1073/pnas.2410926121: kept coacervate.bib:park2024lanmodulin, dropped rare_earth_separation_references.bib:pnas2024dimerization
+- DOI  10.1073/pnas.2411763121: kept coacervate.bib:li2024lanthanide, dropped rare_earth_separation_references.bib:lbt2024surfactants
+- DOI  10.1016/j.ces.2016.04.009: kept rare_earth_separation_references.bib:kolar2016microfluidic, dropped colorimetric-microfluidic-separation.bib:kolar2016cyanex
+- DOI  10.1007/s42461-021-00490-z: kept rare_earth_separation_references.bib:pereira2021panoramic, dropped carbohalogenation_references.bib:peng2021panoramic
+- DOI  10.1007/s40831-015-0023-7: kept rare_earth_separation_references.bib:anderson2015cerium, dropped carbohalogenation_references.bib:anderson2015carbochlorination
+- DOI  10.1073/pnas.2507819122: kept rare_earth_separation_references.bib:tour2025sustainable, dropped rare_earth_separation_references.bib:flashjoule2025pnas
+- DOI  10.1021/jacsau.2c00122: kept high-throughput-ree-refs.bib:liu2022advancing, dropped rare_earth_separation_references.bib:jacsau2022ml
+- DOI  10.1021/acssuschemeng.4c04103: kept carbohalogenation_references.bib:scco2_optimization2024, dropped rare_earth_separation_references.bib:acssuschemeng2024scfe
+- DOI  10.1021/jacsau.2c00122: kept high-throughput-ree-refs.bib:liu2022advancing, dropped rare_earth_separation_references.bib:jacsau2022ml
+- DOI  10.1002/ejic.202400064: kept coacervate.bib:pramanik2024emerging, dropped rare_earth_separation_references.bib:ejic2024emerging
+- TITLE 'environmentally friendly comprehensive hydrometallurgical me': folded carbohalogenation_references.bib:nd_recovery2020 into rare_earth_separation_references.bib:neodymium2020hydrometallurgical
+- TITLE 'ionic liquids and deep eutectic solvents in extractive metal': folded carbohalogenation_references.bib:ils_des_mismatch2023 into rare_earth_separation_references.bib:desil2023mismatch
+- TITLE 'electrochemical extraction of rare earth metals in molten fl': folded carbohalogenation_references.bib:fluoride_conversion2017 into rare_earth_separation_references.bib:electrochemical2017conversion
+- TITLE 'microbial recovery of rare earth elements from various waste': folded carbohalogenation_references.bib:bioleaching_review2024 into rare_earth_separation_references.bib:microalgae2024recovery
+- TITLE 'scalable and consolidated microbial platform for rare earth ': folded carbohalogenation_references.bib:microbial_platform2024 into rare_earth_separation_references.bib:scalable2024microbial
+- TITLE 'recent advances in selective separation technologies of rare': folded rare_earth_separation_references.bib:selective2021advances into high-throughput-ree-refs.bib:chen2021recent
+- TITLE 'preparation method of rare earth fluoride': folded rare_earth_separation_references.bib:alfachem2023fluoride into carbohalogenation_references.bib:alfa_fluoride
+- TITLE 'game changing rare earth elements separation technology lice': folded rare_earth_separation_references.bib:ornl2024gamechanging into carbohalogenation_references.bib:ornl_separation2024
+- TITLE 'rare earth element processing ores': folded rare_earth_separation_references.bib:britannica2024processing into carbohalogenation_references.bib:britannica_ree_processing
+- TITLE 'computationally derived structural insights into rare earth ': folded rare_earth_separation_references.bib:computational2025insights into coacervate.bib:yao2025lanm
+- TITLE 'a microfluidic study of synergic liquid liquid extraction of': folded rare_earth_separation_references.bib:synergic2020microfluidic into colorimetric-microfluidic-separation.bib:elmaangar2020synergic
+- TITLE 'experimental and mechanistic analysis of bastnaesite pelleti': folded rare_earth_separation_references.bib:xing2024pelletization into carbohalogenation_references.bib:xia2024bastnaesite
+- TITLE 'rare earth element extraction from pretreated bastnasite in ': folded rare_earth_separation_references.bib:inl2017sfe into high-throughput-ree-refs.bib:sinclair2017rare
+- TITLE 'green extraction of rare earth elements from coal waste': folded rare_earth_separation_references.bib:sandia2024green into carbohalogenation_references.bib:scco2_sandia
+- TITLE 'rare earth elements separation green chemistry methods': folded rare_earth_separation_references.bib:ibcmrt2024 into rare_earth_separation_references.bib:ibc2024mrt
+- TITLE 'advancing rare earth separation by machine learning': folded rare_earth_separation_references.bib:ornl2022ml into high-throughput-ree-refs.bib:liu2022advancing
+
+## Entries with no usable author
+
+- no usable author: carbohalogenation_references.bib:hf_fluorination2019 (Fluorination of neodymium carbonate monohydrate with anhydrous hydroge)
+- no usable author: carbohalogenation_references.bib:lanthanide_triiodide2004 (A Convenient Route to Lanthanide Triiodide {THF} Solvates. Crystal Str)
+- no usable author: carbohalogenation_references.bib:pyrometallurgy_review2022 (Pyrometallurgy and Electrometallurgy of Rare Earths -- Part A: Analysi)
+- no usable author: carbohalogenation_references.bib:scco2_coalash2023 (Supercritical carbon dioxide/nitrogen/air extraction with multistage s)
+- no usable author: rare_earth_separation_references.bib:springer2025conversion (Conversion of Sodium-Rare Earth Double Sulfate Salts Prepared from Spe)
+- no usable author: rare_earth_separation_references.bib:hydromet2024cerium (Separation of Cerium from Solution by Oxidative Precipitation with Hyd)
+- no usable author: rare_earth_separation_references.bib:hydromet2019cerium1 (Oxidative Precipitation of Cerium in Acidic Chloride Solutions: Part I)
+- no usable author: rare_earth_separation_references.bib:hydromet2020cerium2 (Oxidative Precipitation of Cerium in Acidic Chloride Solutions: Part I)
+- no usable author: rare_earth_separation_references.bib:researchgate2023cerium (Cerium Removal from a Mixed Rare Earth Sulfate Solution by Oxidation w)
+- no usable author: rare_earth_separation_references.bib:jenvche2024ferrite (Efficient Separation of Cerium from Rare Earth Elements and Major Impu)
+- no usable author: rare_earth_separation_references.bib:jacsau2023tugofwar (Size Selective Ligand Tug of War Strategy to Separate Rare Earth Eleme)
+- no usable author: rare_earth_separation_references.bib:molecules2021aminobisphosphonate (Alkyl-Substituted Aminobis(phosphonates)—Efficient Precipitating Agent)
+- no usable author: rare_earth_separation_references.bib:hydromet2020aluminum (Removal of Aluminum from Rare-Earth Leaching Solutions via a Complexat)
+- no usable author: rare_earth_separation_references.bib:mdpi2021sulfate (Thermodynamic Analysis of Precipitation Characteristics of Rare Earth )
+- no usable author: rare_earth_separation_references.bib:rescon2022amd1 (Selective Precipitation of Rare Earth and Critical Elements from Acid )
+- no usable author: rare_earth_separation_references.bib:rescon2022amd2 (Selective Precipitation of Rare Earth and Critical Elements from Acid )
+- no usable author: rare_earth_separation_references.bib:chemosphere2021ligands (Effect of Various Ligands on the Selective Precipitation of Critical a)
+- no usable author: rare_earth_separation_references.bib:mineng2019phosphate (Selective Precipitation of Rare Earth from Non-Purified and Purified S)
+- no usable author: rare_earth_separation_references.bib:scirep2025mgco3 (Iron, Aluminum, and Thorium Impurity Removal from a Rare Earth Element)
+- no usable author: rare_earth_separation_references.bib:hydromet2020thorium (Separation of Thorium, Uranium, and Rare Earths from a Strip Solution )
+- no usable author: rare_earth_separation_references.bib:hydromet2020impurity (Recent Progress in Impurity Removal during Rare Earth Element Processi)
+- no usable author: rare_earth_separation_references.bib:chemsci2020oxalate (Rationally Designed Rare Earth Separation by Selective Oxalate Solubil)
+- no usable author: rare_earth_separation_references.bib:acsearthspace2024ligand (Organic Ligand-Mediated Dissolution and Fractionation of Rare-Earth El)
+- no usable author: rare_earth_separation_references.bib:minerals2022aluminum (Separation of Rare Earth and Aluminum by Selective Complexation)
+- no usable author: rare_earth_separation_references.bib:ncu1_2024nanotrap (Rationally Designed Nanotrap Structures for Efficient Separation of Ra)
+- no usable author: rare_earth_separation_references.bib:he2018supramolecular (A Supramolecular Lanthanide Separation Approach Based on Multivalent C)
+- no usable author: rare_earth_separation_references.bib:simple2024supramolecular (A Simple Supramolecular Approach to Recycling Rare Earth Elements)
+- no usable author: rare_earth_separation_references.bib:electrodialysis2024modeling (Mathematical Modeling of Rare Earth Element Separation in Electrodialy)
+- no usable author: rare_earth_separation_references.bib:electrochemical2017conversion (Electrochemical Extraction of Rare Earth Metals in Molten Fluorides: C)
+- no usable author: rare_earth_separation_references.bib:synergistic2024removal (Synergistic Removal of Rare Earth Elements from Radioactive Molten Sal)
+- no usable author: rare_earth_separation_references.bib:neodymium2020hydrometallurgical (Environmentally Friendly Comprehensive Hydrometallurgical Method Devel)
+- no usable author: rare_earth_separation_references.bib:recycling2022perspectives (Recycling Rare Earths: Perspectives and Recent Advances)
+- no usable author: rare_earth_separation_references.bib:sustainable2019urban (Sustainable Urban Mining of Critical Elements from Magnet and Electron)
+- no usable author: rare_earth_separation_references.bib:polymer2024extracting (Polymer-Based Extracting Materials in the Green Recycling of Rare Eart)
+- no usable author: rare_earth_separation_references.bib:semiconductor2025recycling (Rare Earth Element Recycling: A Review on Sustainable Solutions and Im)
+- no usable author: rare_earth_separation_references.bib:lbt2024surface (Investigation of Rare Earth Element Binding to a Surface-Bound Affinit)
+- no usable author: rare_earth_separation_references.bib:gravity2023separation (Gravity-Driven Separation for Enrichment of Rare Earth Elements Using )
+- no usable author: rare_earth_separation_references.bib:mineralization2017peptide (Rationally Designed Mineralization for Selective Recovery of the Rare )
+- no usable author: rare_earth_separation_references.bib:calmodulin2018lanthanide (Coordination to Lanthanide Ions Distorts Binding Site Conformation in )
+- no usable author: rare_earth_separation_references.bib:rhamnolipid2017ree (Rhamnolipid Biosurfactant Complexation of Rare Earth Elements)
+- no usable author: rare_earth_separation_references.bib:microalgae2024recovery (Microbial Recovery of Rare Earth Elements from Various Waste Sources: )
+- no usable author: rare_earth_separation_references.bib:yeast2018phosphorylated (Recovering Metals from Aqueous Solutions by Biosorption onto Phosphory)
+- no usable author: rare_earth_separation_references.bib:phototrophic2021biosorption (Towards Rare Earth Element Recovery from Wastewaters: Biosorption Usin)
+- no usable author: rare_earth_separation_references.bib:bacteria2016separation (Rare-Earth Separation Using Bacteria)
+- no usable author: rare_earth_separation_references.bib:biomineralization2025fern (Discovery and Implications of a Nanoscale Rare Earth Mineral in a Hype)
+- no usable author: rare_earth_separation_references.bib:cellulose2023grafted (Sustainable Grafted Chitosan-Dialdehyde Cellulose with High Adsorption)
+- no usable author: rare_earth_separation_references.bib:gluconobacter2025bioleaching (High Efficiency Rare Earth Element Bioleaching with Systems Biology Gu)
+- no usable author: rare_earth_separation_references.bib:syntheticbiology2025ewaste (Harnessing Synthetic Biology for Sustainable Recovery of Critical Meta)
+- no usable author: rare_earth_separation_references.bib:scalable2024microbial (Scalable and Consolidated Microbial Platform for Rare Earth Element Le)
+- no usable author: rare_earth_separation_references.bib:metabolic2025review (Metabolic Engineering and Synthetic Biology for the Environment: From )
+- no usable author: rare_earth_separation_references.bib:interactions2025ree (Interactions of Rare Earth Elements with Living Organisms and Emerging)
+- no usable author: rare_earth_separation_references.bib:desil2025application (Application of Ionic Liquids and Deep Eutectic Solvents as Green Solve)
+- no usable author: rare_earth_separation_references.bib:desil2023mismatch (Ionic Liquids and Deep-Eutectic Solvents in Extractive Metallurgy: Mis)
+- no usable author: rare_earth_separation_references.bib:mineonachip2025 (Mine-on-a-Chip: Megascale Opportunities for Microfluidics in Critical )
+- no usable author: rare_earth_separation_references.bib:itp2020lanthanides (A Versatile and Low-Cost Chip-to-World Interface: Enabling ICP-MS Char)
+- no usable author: rare_earth_separation_references.bib:microreactor2019sustainable (Sustainable Green Production: A Review of Recent Development on Rare E)
+- no usable author: rare_earth_separation_references.bib:numberingup2016platinum (Numbering-Up Y-Y Microfluidic Chips for Higher-Throughput Solvent Extr)
+- no usable author: rare_earth_separation_references.bib:carbochlor2025thermodynamics (Carbochlorination Extraction of Rare Earth Elements: Thermodynamics, K)
+- no usable author: rare_earth_separation_references.bib:carbochlor2024review (Review of Rare Earth Extraction and Product Preparation Technologies a)
+- no usable author: rare_earth_separation_references.bib:chlorination2024waste (Separation and Utilization of Iron, Cerium, and Other Rare Earth Eleme)
+- no usable author: rare_earth_separation_references.bib:talanta2020icpms (Determination of Rare Earth Elements in Uranium Materials by ICP-MS an)
+- no usable author: rare_earth_separation_references.bib:pmc2022icpqqq (Determination of Rare Earth Elements by Inductively Coupled Plasma–Tan)
+- no usable author: rare_earth_separation_references.bib:gca2002mcicpms (Rapid and Highly Reproducible Analysis of Rare Earth Elements by Multi)
+- no usable author: rare_earth_separation_references.bib:ijms2021idmcicpms (Rapid Unseparated Rare Earth Element Analyses by Isotope Dilution Mult)
+- no usable author: rare_earth_separation_references.bib:jes2024laicpms (Review on in situ Isotopic Analysis by LA-MC-ICP-MS)
+- no usable author: rare_earth_separation_references.bib:analchem2020wdxrf (Highly Sensitive Nondestructive Rare Earth Element Detection by Means )
+- no usable author: rare_earth_separation_references.bib:degruyterxrf2016 (Use of X-ray Fluorescence Analysis for the Determination of Rare Earth)
+- no usable author: rare_earth_separation_references.bib:degruyternaa2016 (Neutron Activation Analysis of the Rare Earth Elements (REE) – With Em)
+- no usable author: rare_earth_separation_references.bib:jrnc2016inaa (Rare Earths Analysis of Rock Samples by Instrumental Neutron Activatio)
+- no usable author: rare_earth_separation_references.bib:springer2024chromatographic (Chromatographic Methods in the Separation of Rare-Earth Elements)
+- no usable author: rare_earth_separation_references.bib:chromatographia2021iic (Separation of Rare Earth Elements (REE) by Ion Interaction Chromatogra)
+- no usable author: rare_earth_separation_references.bib:rscadvances2022autoic (Development of a Fully Automatic Separation System Coupled with Online)
+- no usable author: rare_earth_separation_references.bib:natmethodsprimers2023itc (Isothermal Titration Calorimetry)
+- no usable author: rare_earth_separation_references.bib:dalton2016biphasic (Thermodynamics of Biphasic Lanthanide Extraction by Tripodal Diglycola)
+- no usable author: rare_earth_separation_references.bib:inorgchem2019complexation (Complexation of Lanthanides with N,N,N′,N′-Tetramethylamide Derivative)
+- no usable author: rare_earth_separation_references.bib:coordchemrev2011nonaqueous (Thermodynamics of Lanthanide(III) Complexation in Non-Aqueous Solvents)
+- no usable author: rare_earth_separation_references.bib:mdpicrystals2020uvvis (Library of UV-Visible Absorption Spectra of Rare Earth Orthophosphates)
+- no usable author: rare_earth_separation_references.bib:springer2019luminescence (Rare Earth Luminescence: Electronic Spectroscopy and Applications)
+- no usable author: rare_earth_separation_references.bib:dalton2016raman (Raman Spectroscopy of the N–N Bond in Rare Earth Dinitrogen Complexes)
+- no usable author: rare_earth_separation_references.bib:chemrev1973lsr (Lanthanide Shift Reagents for Nuclear Magnetic Resonance Spectroscopy)
+- no usable author: rare_earth_separation_references.bib:est2024xas (Rare Earth Element Speciation in Coal and Coal Combustion Byproducts: )
+- no usable author: rare_earth_separation_references.bib:iucrj2025xaslanmodulin (X-ray Absorption Spectroscopy of Lanmodulin-Derived Peptides Bound to )
+- no usable author: rare_earth_separation_references.bib:scanning2020semeds (Multivariate Statistical Analysis on a SEM/EDS Phase Map of Rare Earth)
+- no usable author: rare_earth_separation_references.bib:applsci2023sem (Mineral Characterization Using Scanning Electron Microscopy (SEM): A R)
+- no usable author: rare_earth_separation_references.bib:acsearthspace2018microscopy (Micro- and Nanoscale Identification of Rare Earth Element–Mineral Asso)
+- no usable author: rare_earth_separation_references.bib:pmc2024porousmaterials (Overview of Functionalized Porous Materials for Rare-Earth Element Sep)
+- no usable author: rare_earth_separation_references.bib:frontchem2021esims (Recent Approaches for Chemical Speciation and Analysis by Electrospray)
+- no usable author: rare_earth_separation_references.bib:analchem2024supramolecular (Modern Electrospray Ionization Mass Spectrometry Techniques for the Ch)
+- no usable author: rare_earth_separation_references.bib:mdpi2023sxdesign (Design of Multi-Stage Solvent Extraction Process for Separation of Rar)
+- no usable author: rare_earth_separation_references.bib:seppur2025distribution (Predicting the Distribution Coefficient in the Solvent Extraction of R)
+- no usable author: rare_earth_separation_references.bib:acsomega2024monitoring (Spectroscopic Online Monitoring: Using a Multi-Track Visible Spectrome)
+- no usable author: rare_earth_separation_references.bib:seppur2023pibs (Micro Polymer Inclusion Beads for Online Separation of Critical Rare-E)
+- no usable author: rare_earth_separation_references.bib:cej2019iip (Ion-Imprinted Polymers for Selective Separation of Rare Earth Elements)
+- no usable author: rare_earth_separation_references.bib:acssusresmgt2024tfp (Maximized Lanthanide Extraction Using Supercritical CO₂ and Fluorinate)
+- no usable author: rare_earth_separation_references.bib:acsiecr2025tea (Technoeconomic Analysis of the Supercritical Fluid Extraction Process )
+- no usable author: rare_earth_separation_references.bib:scidir2025coalbyproducts (Investigation of Rare Earth Element Extraction from Coal Byproducts Us)
+- no usable author: rare_earth_separation_references.bib:springer2024costmodel (A Simplified Rare Earth Element Mining Project Cost Estimator - A New )
+- no usable author: rare_earth_separation_references.bib:acssusresmgt2025coalrefuse (Reclaiming Value from Waste: A Techno-Economic Evaluation of Rare Eart)
+- no usable author: rare_earth_separation_references.bib:mdpi2021amd (A Fundamental Economic Assessment of Recovering Rare Earth Elements an)
+- no usable author: rare_earth_separation_references.bib:frontiers2014lca (Life-Cycle Assessment of the Production of Rare-Earth Elements for Ene)
+- no usable author: rare_earth_separation_references.bib:mrsbulletin2022 (Environmental Impacts of Rare Earth Production)
+- no usable author: rare_earth_separation_references.bib:springer2017monazite (Life Cycle Assessment of Rare Earth Production from Monazite)
+- no usable author: rare_earth_separation_references.bib:acssuschemeng2015lca (Environmental Life Cycle Perspective on Rare Earth Oxide Production)
+- no usable author: rare_earth_separation_references.bib:mdpi2022ionic (LCA-Based Carbon Footprint Accounting of Mixed Rare Earth Oxides Produ)
+- no usable author: rare_earth_separation_references.bib:mdpi2025sustainable (A Systematic Literature Review of Selected Aspects of Life Cycle Asses)
+- no usable author: rare_earth_separation_references.bib:jacsau2024architector (On the Importance of Configuration Search to the Predictivity of Lanth)
+- no usable author: rare_earth_separation_references.bib:scidir2021cosmors (Theoretical Prediction of Selectivity in Solvent Extraction of La(III))
+- no usable author: rare_earth_separation_references.bib:scidir2020dga (Theoretical Elucidation of Rare Earth Extraction and Separation by Dig)
+- no usable author: rare_earth_separation_references.bib:pmc2020blphen (A Molecular-Scale Approach to Rare-Earth Beneficiation: Thinking Small)
+- no usable author: rare_earth_separation_references.bib:mdpi2023sxsimulation (Simulation of Solvent Extraction Circuits for the Separation of Rare E)
+- no usable author: carbohalogenation_references.bib:ree_fluoride_vacuum2024 (Investigation on the Recovery of Rare Earth Fluorides from Spent Rare )
+- no usable author: carbohalogenation_references.bib:znf2_fluorination2024 (Mechanism and Experimental Study on the Recovery of Rare Earth Element)
+- no usable author: carbohalogenation_references.bib:nabf4_fluorination2024 (Mechanism and experimental study on the recovery of rare earth element)
+- no usable author: carbohalogenation_references.bib:hf_alternative2025 (Rare earth metals production using alternative feedstock that eliminat)
+- no usable author: carbohalogenation_references.bib:ree_starting_materials2022 (Rare Earth Starting Materials and Methodologies for Synthetic Chemistr)
+- no usable author: carbohalogenation_references.bib:ree_diiodides2004 (Rare-earth diiodides and derivatives)
+- no usable author: carbohalogenation_references.bib:mg_halides_extraction2024 (Extraction of rare earth elements from neodymium ({NdFeB}) magnet scra)
+- no usable author: carbohalogenation_references.bib:deep_sea_mud2023 (Recovery of rare earth elements from deep-sea mud using acid leaching )
+- no usable author: carbohalogenation_references.bib:ion_adsorbed2024 (An eco-friendly and high-yield extraction of rare earth from the leach)
+- no usable author: carbohalogenation_references.bib:ndfeb_hydromet2020 (Hydrometallurgical Recovery of Rare Earth Elements from {NdFeB} Perman)
+- no usable author: carbohalogenation_references.bib:cracking_review2017 (A review on the cracking, baking and leaching processes of rare earth )
+- no usable author: carbohalogenation_references.bib:tbp_cyanex572_2020 (Separation and solvent extraction of rare earth elements ({Pr}, {Nd}, )
+- no usable author: carbohalogenation_references.bib:p507_cyanex272_2024 (Extraction of Rare Earth Elements from Chloride Solutions Using Mixtur)
+- no usable author: carbohalogenation_references.bib:hils_hdes2025 (Separation and recovery of strategic metals by solvent extraction base)
+- no usable author: carbohalogenation_references.bib:des_monazite2023 (Application of deep eutectic solvents ({DESs}) as a green lixiviant fo)
+- no usable author: carbohalogenation_references.bib:fluoride_mse_china2024 (Research Status of Electrolytic Preparation of Rare Earth Metals and A)
+- no usable author: carbohalogenation_references.bib:ndfeb_mse2023 (Recovery of Rare Earth Elements from Spent {NdFeB} Magnets: Metal Extr)
+- no usable author: carbohalogenation_references.bib:scco2_canadian2020 (Supercritical Fluid Extraction of Rare-Earth Elements from a Canadian )
+- no usable author: carbohalogenation_references.bib:biomining_review2023 (Biomining for sustainable recovery of rare earth elements from mining )
+- no usable author: carbohalogenation_references.bib:led_bioleaching2025 (Sustainable bio-extraction of rare earth elements from discarded {LED})
+- no usable author: rare_earth_separation_references.bib:sorption2024status (Current Status and Future Directions: Separation of Rare Earth Element)
+- no usable author: rare_earth_separation_references.bib:comparative2023study (A Comparative Study on Recent Developments for Individual Rare Earth E)
+- no usable author: rare_earth_separation_references.bib:osti2022oxalate (Parametric Study and Speciation Analysis of Rare Earth Precipitation U)
+- no usable author: rare_earth_separation_references.bib:seppur2025cerium (Tailored Separation of Light Rare-Earth Elements Using Combined Oxidat)
+- no usable author: rare_earth_separation_references.bib:osti2022staged (Rare Earth Elements Recovery Using Staged Precipitation)
+- no usable author: rare_earth_separation_references.bib:seppur2025trpo (Efficiently Selective Removal of Radioactive Thorium and Uranium from )
+- no usable author: rare_earth_separation_references.bib:osti2021thorium (Separation of Thorium, Uranium, and Rare Earths from a Strip Solution)
+- no usable author: rare_earth_separation_references.bib:patent2018oxalate (Direct Oxalate Precipitation for Rare Earth Elements Recovery)
+- no usable author: rare_earth_separation_references.bib:bioseparation2023review (Bioseparation of Rare Earth Elements and High Value-Added Biomaterials)
+- no usable author: rare_earth_separation_references.bib:membrane2023approaches (On Membrane-Based Approaches for Rare Earths Separation and Extraction)
+- no usable author: rare_earth_separation_references.bib:membrane2018overview (An Overview on Membrane Strategies for Rare Earths Extraction and Sepa)
+- no usable author: rare_earth_separation_references.bib:membranes2022recovery (Rare Earth Elements Recovery Using Selective Membranes via Extraction )
+- no usable author: rare_earth_separation_references.bib:liquidmembranes2023review (The Latest Achievements of Liquid Membranes for Rare Earth Elements Re)
+- no usable author: rare_earth_separation_references.bib:ionexchange2023progress (The Recent Progress of Ion Exchange for the Separation of Rare Earths )
+- no usable author: rare_earth_separation_references.bib:moltensalt2023critical (A Review on the Extraction and Recovery of Critical Metals Using Molte)
+- no usable author: rare_earth_separation_references.bib:moltensalt2022comparison (Molten Salt Electrolysis and Room Temperature Ionic Liquid Electrochem)
+- no usable author: rare_earth_separation_references.bib:nonaqueous2022separation (Separation of Heavy Rare-Earth Elements by Non-Aqueous Solvent Extract)
+- no usable author: rare_earth_separation_references.bib:urbanmining2020critical (Rare Earth Elements and Urban Mines: Critical Strategies for Sustainab)
+- no usable author: rare_earth_separation_references.bib:coal2025sustainable (Sustainable Recovery of Rare Earth Elements (REEs) from Coal and Coal )
+- no usable author: rare_earth_separation_references.bib:green2023recovery (Green Recovery of Rare Earth Elements under Sustainability and Low Car)
+- no usable author: rare_earth_separation_references.bib:recycling2024methods (Review of Methods for Obtaining Rare Earth Elements from Recycling and)
+- no usable author: rare_earth_separation_references.bib:reshaping2024supply (Reshaping Heavy Rare Earth Supply Chains amidst China's Stringent Envi)
+- no usable author: rare_earth_separation_references.bib:csis2025consequences (The Consequences of China's New Rare Earths Export Restrictions)
+- no usable author: rare_earth_separation_references.bib:csis2025defense (China's New Rare Earth and Magnet Restrictions Threaten U.S. Defense S)
+- no usable author: rare_earth_separation_references.bib:iea2025outlook (With New Export Controls on Critical Minerals, Supply Concentration Ri)
+- no usable author: rare_earth_separation_references.bib:cnbc2025losing (U.S. is Losing Rare Earth Metals War to China, and Running Out of Time)
+- no usable author: rare_earth_separation_references.bib:chinabriefing2024dominance (China's Rare Earth Elements: What Businesses Need to Know)
+- no usable author: rare_earth_separation_references.bib:cepa2024stranglehold (How to Loosen China's Stranglehold on Rare Earths)
+- no usable author: rare_earth_separation_references.bib:techgap2024dominance (Mine the Tech Gap: Why China's Rare Earth Dominance Persists)
+- no usable author: rare_earth_separation_references.bib:rer2024technology (Technology -- Rare Earth Processing and Separation)
+- no usable author: rare_earth_separation_references.bib:ethz2024europium (Mining Rare Earth Metals from Electronic Waste)
+- no usable author: rare_earth_separation_references.bib:pennstate2024protein (New, Environmentally Friendly Method to Extract and Separate Rare Eart)
+- no usable author: rare_earth_separation_references.bib:physorg2024europium (New Separation Process Can Efficiently Mine Rare Earth Metal Europium )
+- no usable author: rare_earth_separation_references.bib:metaltechnews2025water (Water-Based Rare Earth Recycling Emerges)
+- no usable author: rare_earth_separation_references.bib:condorchem2024extraction (Methods for the Extraction of Minerals with Rare Earths)
+- no usable author: rare_earth_separation_references.bib:farmonaut2024innovations (Advancements in Rare Earth Element Extraction: Top 7 Innovations)
+- no usable author: rare_earth_separation_references.bib:rareearthexchanges2024methods (5 Rare Earth Separation Methods to Master Now)
+- no usable author: rare_earth_separation_references.bib:foam2024separation (Enhanced Rare Earth Element Recovery with Cross-Linked Glutaraldehyde-)
+- no usable author: rare_earth_separation_references.bib:lanthanides2023calcium (Lanthanides as Calcium Mimetic Species in Calcium-Signaling/Buffering )
+- no usable author: rare_earth_separation_references.bib:efhand2001review (EF-hand Calcium-Binding Proteins)
+- no usable author: rare_earth_separation_references.bib:saponin2018leaching (Leaching of Rare Earth Elements from Contaminated Soils Using Saponin )
+- no usable author: rare_earth_separation_references.bib:sophorolipid2011properties (Characterization and Emulsification Properties of Rhamnolipid and Soph)
+- no usable author: rare_earth_separation_references.bib:actinobacteria2018bioleaching (Bioleaching of Rare Earth Elements from Bastnaesite-Bearing Rock by Ac)
+- no usable author: rare_earth_separation_references.bib:bioleaching2024critical (A Critical Review of Bioleaching of Rare Earth Elements: The Mechanism)
+- no usable author: rare_earth_separation_references.bib:biosorption2020metals (Biosorption of Rare Earth Elements by Different Microorganisms in Acid)
+- no usable author: rare_earth_separation_references.bib:ecoli2017engineered (Recovery of Rare Earth Elements from Low-Grade Feedstock Leachates Usi)
+- no usable author: rare_earth_separation_references.bib:biosorption2020green (Biosorption as Green Technology for the Recovery and Separation of Rar)
+- no usable author: rare_earth_separation_references.bib:dicranopteris2021recovery (A New Method for Recovering Rare Earth Elements from the Hyperaccumula)
+- no usable author: rare_earth_separation_references.bib:detoxification2023mechanism (Rare Earth Elements Detoxification Mechanism in the Hyperaccumulator D)
+- no usable author: rare_earth_separation_references.bib:phytomining2022review (Phytomining of Rare Earth Elements -- A Review)
+- no usable author: rare_earth_separation_references.bib:chitosan2024sustainable (Application and Implementation of Chitosan as a Potential and Sustaina)
+- no usable author: rare_earth_separation_references.bib:edta2025chitosan (Preparation of Ion Imprinted EDTA Modified Chitosan-Magnetic Graphene )
+- no usable author: rare_earth_separation_references.bib:biopolymers2023composites (Recent Advances in Cellulose, Chitosan, and Alginate Based Biopolymeri)
+- no usable author: rare_earth_separation_references.bib:des2023recovery (Recent Work on the Recovery of Rare Earths Using Ionic Liquids and Dee)
+- no usable author: rare_earth_separation_references.bib:aminoacid2022toxicity (High Toxicity of Amino Acid-Based Deep Eutectic Solvents)
+- no usable author: rare_earth_separation_references.bib:il2020progress (Recent Progress in Ionic Liquid Extraction for the Separation of Rare )
+- no usable author: rare_earth_separation_references.bib:droplet2018mechanistic (Toward a Mechanistic Understanding of Microfluidic Droplet-Based Extra)
+- no usable author: rare_earth_separation_references.bib:flowfocusing2024droplet (High Performance Flow-Focusing Droplet Microreactor: Extractive Separa)
+- no usable author: rare_earth_separation_references.bib:p507microfluidic2019 (Characterization of the Interaction of Rare Earth Elements with P507 i)
+- no usable author: rare_earth_separation_references.bib:gd2017microfluidic (Development of a Microfluidic-Chip System Based on Parallel Flow for I)
+- no usable author: rare_earth_separation_references.bib:hollowdroplet2017 (Fast Extraction and Enrichment of Rare Earth Elements from Waste Water)
+- no usable author: rare_earth_separation_references.bib:janus2024continuous (Efficient Recovery and Enrichment of Rare Earth Elements by a Continuo)
+- no usable author: rare_earth_separation_references.bib:minichannel2024intensifying (Intensifying the Extraction of Rare Earth Elements by a Mini-Channel C)
+- no usable author: rare_earth_separation_references.bib:porethroat2024enhanced (Enhanced Solvent Extraction of Rare Earth Elements in Ultra-High Phase)
+- no usable author: rare_earth_separation_references.bib:scandium2025redmud (Microfluidic Strategy for Rapid and Efficient Extraction of Scandium I)
+- no usable author: rare_earth_separation_references.bib:capillaryelectrophoresis2017lanthanides (Separation and Sensitive Detection of Lanthanides by Capillary Electro)
+- no usable author: rare_earth_separation_references.bib:ligandassisted2024separation (Investigation of Fundamental Interactions Between Rare Earth Elements )
+- no usable author: rare_earth_separation_references.bib:hostguest2019droplet (Droplet Microfluidic Device for Rapid and Efficient Metals Separation )
+- no usable author: rare_earth_separation_references.bib:industry2024microfluidic (Industry Relevant Microfluidic Platforms for Mineral Leaching Experime)
+- no usable author: rare_earth_separation_references.bib:ligandassisted2022osti (Ligand-Assisted Separation of Rare Earth Elements via Capillary Electr)
+- no usable author: rare_earth_separation_references.bib:carbochlor2025onestep (A Clean and Efficient One-Step Process for Rare Earth Extraction: Carb)
+- no usable author: rare_earth_separation_references.bib:goldschmidt1969process (The Goldschmidt Process for Rare Earth Production)
+- no usable author: rare_earth_separation_references.bib:chlorometallurgy2020review (Chlorometallurgical Processing of Rare Earth Ores: Fundamentals and Ap)
+- no usable author: rare_earth_separation_references.bib:thorium2018separation (Separation of Thorium from Rare Earth Elements via Chemical Vapor Tran)
+- no usable author: rare_earth_separation_references.bib:vaporcomplex2005alcl3 (Vapor Complex Formation of Rare Earth Chlorides with Aluminum Chloride)
+- no usable author: rare_earth_separation_references.bib:defluorination2008sicl4 (Defluorination of Bastnaesite Concentrate Using Silicon Tetrachloride )
+- no usable author: rare_earth_separation_references.bib:phosgene2010mechanism (Role of Phosgene and Carbon Tetrachloride as Intermediates in Carbochl)
+- no usable author: rare_earth_separation_references.bib:activation2012energy (Activation Energy Determination for Carbochlorination of Light Rare Ea)
+- no usable author: rare_earth_separation_references.bib:gadolinium2019behavior (Anomalous Chlorination Behavior of Gadolinium Oxide: Intermediate Betw)
+- no usable author: rare_earth_separation_references.bib:ndocl2017formation (Formation and Decomposition Kinetics of Neodymium Oxychloride During C)
+- no usable author: rare_earth_separation_references.bib:netl2016icpms (Rare-Earth Trace/Bulk Elemental Analysis by ICP-MS)
+- no usable author: rare_earth_separation_references.bib:spectroscopy2024icpoes (Determination of Rare Earth Elements in Geological and Agricultural Sa)
+- no usable author: rare_earth_separation_references.bib:spectroscopy2024highres (High-Resolution ICP-OES for the Determination of Trace Elements in a R)
+- no usable author: rare_earth_separation_references.bib:osti1995sfe (Supercritical Fluid Extraction of Lanthanides with Fluorinated β-Diket)
+- no usable author: rare_earth_separation_references.bib:researchgate2011phosphor (Supercritical Fluid Extraction of Rare Earth Elements from Luminescent)
+- no usable author: rare_earth_separation_references.bib:scidir2019amd (Extraction of Selected Rare Earth Elements from Anthracite Acid Mine D)
+- no usable author: rare_earth_separation_references.bib:osti1997crown (Solvent Effects on Metal Complexation with Crown Ethers from Liquid to)
+- no usable author: rare_earth_separation_references.bib:saimm2022mountainpass (Economic Analysis of Rare Earth Element Processing Methods for Mountai)
+- no usable author: rare_earth_separation_references.bib:researchsquare2023d2ehpa (A Deep Insight into the Selectivity Difference Between Y(III) and La(I)
+
+## Unverifiable as recorded (no DOI/URL/ISBN)
+
+- `anon1969goldschmidt` (rare_earth_separation_references.bib) — The Goldschmidt Process for Rare Earth Production
+- `anon2005vapor` (rare_earth_separation_references.bib) — Vapor Complex Formation of Rare Earth Chlorides with Aluminum Chloride for Separation Appl
+- `anon2008defluorination` (rare_earth_separation_references.bib) — Defluorination of Bastnaesite Concentrate Using Silicon Tetrachloride During Carbochlorina
+- `anon2010role` (rare_earth_separation_references.bib) — Role of Phosgene and Carbon Tetrachloride as Intermediates in Carbochlorination Reactions
+- `anon2012activation` (rare_earth_separation_references.bib) — Activation Energy Determination for Carbochlorination of Light Rare Earth Oxides
+- `anon2017formation` (rare_earth_separation_references.bib) — Formation and Decomposition Kinetics of Neodymium Oxychloride During Chlorination
+- `anon2018separation` (rare_earth_separation_references.bib) — Separation of Thorium from Rare Earth Elements via Chemical Vapor Transport
+- `anon2019anomalous` (rare_earth_separation_references.bib) — Anomalous Chlorination Behavior of Gadolinium Oxide: Intermediate Between Light and Heavy 
+- `anon2020chlorometallurgical` (rare_earth_separation_references.bib) — Chlorometallurgical Processing of Rare Earth Ores: Fundamentals and Applications
+- `huang2006development` (high-throughput-ree-refs.bib) — Development Status and Research Progress in Rare Earth Hydrometallurgy in China
+
+## Placeholder author fields (authorship known-wrong)
+
+- `anon2004convenient` — author = {{Inorganic Chemistry Authors}} — A Convenient Route to Lanthanide Triiodide {THF} Solvates. Crystal Str
+- `anon2004rare` — author = {{Journal of Alloys and Compounds Authors}} — Rare-earth diiodides and derivatives
+- `anon2017cracking` — author = {{ScienceDirect Authors}} — A review on the cracking, baking and leaching processes of rare earth 
+- `anon2017electrochemical` — author = {{Journal of Sustainable Metallurgy Authors}} — Electrochemical Extraction of Rare Earth Metals in Molten Fluorides: C
+- `anon2019fluorination` — author = {{RSC Authors}} — Fluorination of neodymium carbonate monohydrate with anhydrous hydroge
+- `anon2020environmentally` — author = {{Scientific Reports Authors}} — Environmentally Friendly Comprehensive Hydrometallurgical Method Devel
+- `anon2020hydrometallurgical` — author = {{Metals Authors}} — Hydrometallurgical Recovery of Rare Earth Elements from {NdFeB} Perman
+- `anon2020separationa` — author = {{Minerals Engineering Authors}} — Separation and solvent extraction of rare earth elements ({Pr}, {Nd}, 
+- `anon2020supercritical` — author = {{Springer Authors}} — Supercritical Fluid Extraction of Rare-Earth Elements from a Canadian 
+- `anon2022pyrometallurgy` — author = {{Mineral Processing and Extractive Metallurgy Review Authors}} — Pyrometallurgy and Electrometallurgy of Rare Earths -- Part A: Analysi
+- `anon2022rare` — author = {{PMC Authors}} — Rare Earth Starting Materials and Methodologies for Synthetic Chemistr
+- `anon2023application` — author = {{Journal of Environmental Chemical Engineering Authors}} — Application of deep eutectic solvents ({DESs}) as a green lixiviant fo
+- `anon2023biomining` — author = {{Science of The Total Environment Authors}} — Biomining for sustainable recovery of rare earth elements from mining 
+- `anon2023ionic` — author = {{Journal of Sustainable Metallurgy Authors}} — Ionic Liquids and Deep-Eutectic Solvents in Extractive Metallurgy: Mis
+- `anon2023recovery` — author = {{Separation and Purification Technology Authors}} — Recovery of rare earth elements from deep-sea mud using acid leaching 
+- `anon2023recoverya` — author = {{Metals Authors}} — Recovery of Rare Earth Elements from Spent {NdFeB} Magnets: Metal Extr
+- `anon2023supercritical` — author = {{RSC Sustainability Authors}} — Supercritical carbon dioxide/nitrogen/air extraction with multistage s
+- `anon2024eco` — author = {{Journal of Hazardous Materials Authors}} — An eco-friendly and high-yield extraction of rare earth from the leach
+- `anon2024extraction` — author = {{ScienceDirect Authors}} — Extraction of rare earth elements from neodymium ({NdFeB}) magnet scra
+- `anon2024extractiona` — author = {{Minerals Authors}} — Extraction of Rare Earth Elements from Chloride Solutions Using Mixtur
+- `anon2024investigationa` — author = {{PMC Authors}} — Investigation on the Recovery of Rare Earth Fluorides from Spent Rare 
+- `anon2024mechanism` — author = {{Materials Authors}} — Mechanism and Experimental Study on the Recovery of Rare Earth Element
+- `anon2024mechanisma` — author = {{ScienceDirect Authors}} — Mechanism and experimental study on the recovery of rare earth element
+- `anon2024microbial` — author = {{PMC Authors}} — Microbial Recovery of Rare Earth Elements from Various Waste Sources: 
+- `anon2024research` — author = {{Metals Authors}} — Research Status of Electrolytic Preparation of Rare Earth Metals and A
+- `anon2024scalable` — author = {{PMC Authors}} — Scalable and Consolidated Microbial Platform for Rare Earth Element Le
+- `anon2025rarea` — author = {{Nature Communications Authors}} — Rare earth metals production using alternative feedstock that eliminat
+- `anon2025separation` — author = {{Separation and Purification Technology Authors}} — Separation and recovery of strategic metals by solvent extraction base
+- `anon2025sustainable` — author = {{Scientific Reports Authors}} — Sustainable bio-extraction of rare earth elements from discarded {LED}

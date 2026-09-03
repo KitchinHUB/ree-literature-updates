@@ -1,0 +1,102 @@
+name: Book content — add, correct, or update
+description: Request a change to the REE separations book (ree-book/)
+title: "[book] "
+labels: ["book", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This issue will be worked by Claude, which has not read the paper you
+        have in mind and cannot ask you a quick question in the hallway. The
+        more specific this is, the less it will bounce back for clarification.
+
+        Expect clarifying questions, and expect a group member to review the
+        result before it lands.
+
+        **Already written the prose?** Open a pull request instead.
+
+  - type: dropdown
+    id: change_type
+    attributes:
+      label: Type of change
+      options:
+        - Add new material to an existing section
+        - Correct something that is wrong
+        - Update something out of date
+        - Add a new section or chapter
+        - Flag a suspect citation (no rewrite needed)
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: location
+    attributes:
+      label: Where does this go?
+      description: >-
+        Chapter, and the section within it if you can. If you are unsure,
+        propose a home anyway — a starting guess saves a round trip. For a new
+        chapter, say where it sits relative to the existing ones.
+      placeholder: "Ch. 12 Membranes, MOFs and Emerging Approaches, after the nanofiltration subsection"
+    validations:
+      required: true
+
+  - type: textarea
+    id: what
+    attributes:
+      label: What should change?
+      description: >-
+        Be concrete. "Add a subsection on membrane fouling in REE
+        nanofiltration" is workable; "the membrane chapter needs work" is not.
+    validations:
+      required: true
+
+  - type: textarea
+    id: dois
+    attributes:
+      label: DOIs of the relevant papers
+      description: >-
+        One per line. DOIs, not titles or PDFs — the DOI is what makes a
+        reference verifiable, and every citation added to this book must clear
+        the verification pipeline. If a source genuinely has no DOI, give a
+        stable URL and say what kind of source it is.
+      placeholder: |
+        10.1016/j.mineng.2023.108234
+        10.1021/acssuschemeng.4c04103
+    validations:
+      required: false
+
+  - type: textarea
+    id: finding
+    attributes:
+      label: What does the source actually show?
+      description: >-
+        One or two sentences on the specific result, not the abstract. If a
+        number matters (separation factor, yield, temperature), state it and say
+        where in the paper it appears (table or figure). You have read the
+        paper; the automated verification has not — this is the faithfulness
+        check that tooling cannot perform.
+      placeholder: >-
+        Reports 82% REE recovery with magnesium sulfate lixiviant at pH 4.5
+        (Table 3), against the ~70% the chapter attributes to ammonium sulfate.
+    validations:
+      required: true
+
+  - type: textarea
+    id: contradicts
+    attributes:
+      label: Does this contradict what the book currently says?
+      description: >-
+        If so, quote or point at the passage. Corrections are more valuable than
+        additions and are easy to miss.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: I gave a DOI (or explained why the source has none)
+        - label: I said where in the book this belongs, or proposed a home
+        - label: I described the specific finding, not just the paper's topic

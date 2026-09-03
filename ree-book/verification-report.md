@@ -1,0 +1,394 @@
+# Citation verification report
+
+- Entries checked: **473**
+- Verified: **421** (373 by resolving DOI, 48 by live URL)
+- Rejected: **52**
+- Author fields repaired from CrossRef: **172**
+- Titles diverging from CrossRef: **50**
+
+## Rejected — removed from the bibliography
+
+Any claim resting solely on one of these must be removed or rewritten.
+
+- `anderson2015chlorination` — no DOI; URL does not respond: https://core.ac.uk/download/pdf/48316193.pdf — Chlorination and Carbochlorination of Rare Earth and Uranium Bearing Minera
+- `anderson2016rare` — DOI 10.1007/s11837-016-2147-4 does not resolve in CrossRef — Rare earth phase stability diagrams in chlorine-oxygen systems
+- `anon1969goldschmidt` — no DOI, no URL — unverifiable as recorded — The Goldschmidt Process for Rare Earth Production
+- `anon2005vapor` — no DOI, no URL — unverifiable as recorded — Vapor Complex Formation of Rare Earth Chlorides with Aluminum Chloride for 
+- `anon2008defluorination` — no DOI, no URL — unverifiable as recorded — Defluorination of Bastnaesite Concentrate Using Silicon Tetrachloride Durin
+- `anon2010role` — no DOI, no URL — unverifiable as recorded — Role of Phosgene and Carbon Tetrachloride as Intermediates in Carbochlorina
+- `anon2011supercritical` — no DOI; URL does not respond: https://www.researchgate.net/publication/223476971 — Supercritical Fluid Extraction of Rare Earth Elements from Luminescent Mate
+- `anon2012activation` — no DOI, no URL — unverifiable as recorded — Activation Energy Determination for Carbochlorination of Light Rare Earth O
+- `anon2016rareb` — no DOI; URL does not respond: https://www.netl.doe.gov/sites/default/files/netl-file/Rare-Earth-Trac — Rare-Earth Trace/Bulk Elemental Analysis by ICP-MS
+- `anon2017formation` — no DOI, no URL — unverifiable as recorded — Formation and Decomposition Kinetics of Neodymium Oxychloride During Chlori
+- `anon2018separation` — no DOI, no URL — unverifiable as recorded — Separation of Thorium from Rare Earth Elements via Chemical Vapor Transport
+- `anon2019anomalous` — no DOI, no URL — unverifiable as recorded — Anomalous Chlorination Behavior of Gadolinium Oxide: Intermediate Between L
+- `anon2019extraction` — no DOI; URL does not respond: https://www.sciencedirect.com/science/article/pii/S1002072119307744 — Extraction of Selected Rare Earth Elements from Anthracite Acid Mine Draina
+- `anon2020chlorometallurgical` — no DOI, no URL — unverifiable as recorded — Chlorometallurgical Processing of Rare Earth Ores: Fundamentals and Applica
+- `anon2020molecular` — DOI 10.1021/acsami.0c09943 does not resolve in CrossRef — A Molecular-Scale Approach to Rare-Earth Beneficiation: Thinking Small to A
+- `anon2020oxidative` — DOI 10.1016/j.hydromet.2019.105245 does not resolve in CrossRef — Oxidative Precipitation of Cerium in Acidic Chloride Solutions: Part II – O
+- `anon2021rapid` — DOI 10.1016/j.ijms.2021.116713 does not resolve in CrossRef — Rapid Unseparated Rare Earth Element Analyses by Isotope Dilution Multicoll
+- `anon2022determination` — DOI 10.1007/s44211-022-00138-6 does not resolve in CrossRef — Determination of Rare Earth Elements by Inductively Coupled Plasma–Tandem Q
+- `anon2024advancements` — no DOI; URL does not respond: https://farmonaut.com/mining/advancements-in-rare-earth-element-extrac — Advancements in Rare Earth Element Extraction: Top 7 Innovations
+- `anon2024determination` — no DOI; URL does not respond: https://www.spectroscopyonline.com/view/determination-rare-earth-eleme — Determination of Rare Earth Elements in Geological and Agricultural Samples
+- `anon2024higha` — no DOI; URL does not respond: https://www.spectroscopyonline.com/view/high-resolution-icp-oes-determ — High-Resolution ICP-OES for the Determination of Trace Elements in a Rare E
+- `anon2024separation` — DOI 10.1016/j.hydromet.2024.106275 does not resolve in CrossRef — Separation of Cerium from Solution by Oxidative Precipitation with Hydrogen
+- `anon2024separationb` — no DOI; URL does not respond: https://phys.org/news/2024-07-efficiently-rare-earth-metal-europium.ht — New Separation Process Can Efficiently Mine Rare Earth Metal Europium from 
+- `anon2025carbochlorination` — DOI 10.1016/j.mineng.2025.109051 does not resolve in CrossRef — Carbochlorination Extraction of Rare Earth Elements: Thermodynamics, Kineti
+- `anon2025investigation` — DOI 10.1016/j.hydromet.2025.106337 does not resolve in CrossRef — Investigation of Rare Earth Element Extraction from Coal Byproducts Using S
+- `anon2025predicting` — DOI 10.1016/j.seppur.2025.130659 does not resolve in CrossRef — Predicting the Distribution Coefficient in the Solvent Extraction of Rare E
+- `anon2025ray` — DOI 10.1107/s1600577524010786 does not resolve in CrossRef — X-ray Absorption Spectroscopy of Lanmodulin-Derived Peptides Bound to Rare 
+- `anonymous2024extraction` — no DOI; URL does not respond: https://scholarworks.alaska.edu/handle/11122/15693 — Extraction of Rare Earth Elements from Coal Ash Using Supercritical CO₂
+- `bordbar2017production` — DOI 10.22063/poj.2017.1453 does not resolve in CrossRef — Production of titanium tetrachloride ({TiCl4}) from titanium ores: A review
+- `castiho2003cloud` — DOI 10.1016/s0039-9140(03)00387-2 does not resolve in CrossRef — Cloud point extraction: an alternative to traditional liquid-liquid extract
+- `chen2021one` — DOI 10.1007/s11426-021-1014-6 does not resolve in CrossRef — A one-pot process based on P44414Cl-HCl aqueous biphasic system for recover
+- `chen2023kinetic` — DOI 10.1016/j.seppur.2023.123076 does not resolve in CrossRef — Kinetic enhanced separation of praseodymium and neodymium induced by specif
+- `chen2023multiphase` — no DOI; URL does not respond: https://www.chem.pku.edu.cn/page/cheneq/docs/2023-05/20230531141430667 — Multiphase Coacervation of Polyelectrolytes Driven by Asymmetry
+- `fox2017rare` — DOI 10.1016/j.hydromet.2016.10.030 does not resolve in CrossRef — Rare Earth Element Extraction from Pretreated Bastnäsite in Supercritical C
+- `gaballah1994carbochlorination` — DOI 10.1016/0040-6031(94)00211-4 does not resolve in CrossRef — Carbochlorination of yttrium oxide
+- `gupta2003chemical` — no DOI; URL does not respond: https://www.wiley.com/en-us/Chemical+Metallurgy%3A+Principles+and+Prac — Chemical metallurgy: principles and practice
+- `habashi1997handbook` — no DOI; URL does not respond: https://www.wiley.com/en-us/Handbook+of+Extractive+Metallurgy-p-978352 — Handbook of extractive metallurgy
+- `huang2006development` — no DOI, no URL — unverifiable as recorded — Development Status and Research Progress in Rare Earth Hydrometallurgy in C
+- `iaea2011radiation` — no DOI; URL does not respond: https://www.iaea.org/publications/8564/radiation-protection-and-norm-r — Radiation protection and {NORM} residue management in the production of rar
+- `li2019coassembly` — DOI 10.1021/acsami.8b21764 does not resolve in CrossRef — Coassembly of Short Peptide and Polyoxometalate into Complex Coacervate Ada
+- `li2020development` — DOI 10.1039/d0gc01065k does not resolve in CrossRef — Recent development of unconventional aqueous biphasic system: characteristi
+- `li2025carbochlorination` — DOI 10.1016/j.mineng.2025.109110 does not resolve in CrossRef — Carbochlorination extraction of rare earth elements: Thermodynamics, kineti
+- `li2025critical` — DOI 10.1016/j.hydromet.2025.106234 does not resolve in CrossRef — A critical review on selective separation of scandium and iron from aqueous
+- `news2025rapid` — no DOI; URL does not respond: https://news.rice.edu/news/2025/rapid-flash-joule-heating-technique-un — Rapid flash {Joule} heating technique unlocks efficient rare earth element 
+- `nitz2000lanthanide` — DOI 10.1021/ja001609v does not resolve in CrossRef — Lanthanide ions bind specifically to an added EF-hand and orient a membrane
+- `rydberg2004solvent` — no DOI, no URL — unverifiable as recorded — Solvent Extraction Principles and Practice, Revised and Expanded
+- `schreiber2021life` — DOI 10.1021/acs.est.0c07166 does not resolve in CrossRef — Life cycle assessment of rare earth elements recycling from {NdFeB} permane
+- `shen2024molecular` — DOI 10.1016/j.fluid.2024.114135 does not resolve in CrossRef — Molecular thermodynamics of complex coacervate systems. Part I: Modeling of
+- `survey2024phreeqc` — no DOI; URL does not respond: https://www.usgs.gov/software/phreeqc-version-3 — PHREEQC Version 3
+- `team2024scientists` — no DOI; URL does not respond: https://chem.unc.edu/news/scientists-develop-smart-polymers-for-sustai — Scientists Develop Smart Polymers for Sustainable Rare Earth Recovery
+- `technologies2024analysis` — no DOI; URL does not respond: https://www.agilent.com/cs/library/applications/application-ree-icp-oe — Analysis of Rare Earth Elements in Base Metal Ores by ICP-OES
+- `topicsnodatecalciothermic` — no DOI; URL does not respond: https://www.sciencedirect.com/topics/engineering/calciothermic-reducti — Calciothermic Reduction
+
+## Titles that disagree with CrossRef (check these by hand)
+
+- `anon2012thermodynamics` (similarity 0.32)
+  - bib: Thermodynamics of Lanthanide(III) Complexation in Non-Aqueou
+  - crossref: Copper(II), zinc(II) and nickel(II) complexes as nuclease mi
+- `anon2019oxidative` (similarity 0.57)
+  - bib: Oxidative Precipitation of Cerium in Acidic Chloride Solutio
+  - crossref: Solvent extraction of copper from acidic chloride solutions 
+- `anon2019selective` (similarity 0.25)
+  - bib: Selective Precipitation of Rare Earth from Non-Purified and 
+  - crossref: Thermal upgrading of nickeliferous pyrrhotite tailings: Form
+- `anon2020determination` (similarity 0.34)
+  - bib: Determination of Rare Earth Elements in Uranium Materials by
+  - crossref: Enzyme-free electrochemical biosensor based on amplification
+- `anon2020ion` (similarity 0.34)
+  - bib: Ion-Imprinted Polymers for Selective Separation of Rare Eart
+  - crossref: Enhanced H2O2 activation and sulfamethoxazole degradation by
+- `anon2020progress` (similarity 0.11)
+  - bib: Recent Progress in Impurity Removal during Rare Earth Elemen
+  - crossref: Research on chlorination leaching of pressure-oxidized refra
+- `anon2020rationally` (similarity 0.21)
+  - bib: Rationally Designed Rare Earth Separation by Selective Oxala
+  - crossref: Heteroleptic actinocenes: a thorium(
+                    <sc
+- `anon2020separation` (similarity 0.43)
+  - bib: Separation of Thorium, Uranium, and Rare Earths from a Strip
+  - crossref: Study of the leaching and pore evolution in large particles 
+- `anon2021alkyl` (similarity 0.32)
+  - bib: Alkyl-Substituted Aminobis(phosphonates)—Efficient Precipita
+  - crossref: A Convenient Approach towards the Synthesis of ADMDP Type Im
+- `anon2021theoretical` (similarity 0.25)
+  - bib: Theoretical Prediction of Selectivity in Solvent Extraction 
+  - crossref: Self-assembly of silver nanoclusters and phthalic acid into 
+- `anon2021theoreticala` (similarity 0.17)
+  - bib: Theoretical Elucidation of Rare Earth Extraction and Separat
+  - crossref: Luminescent and thermometric properties of dual emitting Eu2
+- `anon2021versatile` (similarity 0.32)
+  - bib: A Versatile and Low-Cost Chip-to-World Interface: Enabling I
+  - crossref: A MIP-based low-cost electrochemical sensor for 2-furaldehyd
+- `anon2022design` (similarity 0.31)
+  - bib: Design of Multi-Stage Solvent Extraction Process for Separat
+  - crossref: Thiol-Ene Reaction of Heparin Allyl Ester, Heparin 4-Vinylbe
+- `anon2022selectivea` (similarity 0.06)
+  - bib: Selective Precipitation of Rare Earth and Critical Elements 
+  - crossref: Does anaerobic digestion improve environmental and economic 
+- `anon2023micro` (similarity 0.42)
+  - bib: Micro Polymer Inclusion Beads for Online Separation of Criti
+  - crossref: Environmentally safe ZVI/ZnS-based polymer composite for lin
+- `anon2024efficient` (similarity 0.28)
+  - bib: Efficient Separation of Cerium from Rare Earth Elements and 
+  - crossref: Study of electric field-enhanced mass transfer and Li/Mg sep
+- `anon2024overview` (similarity 0.30)
+  - bib: Overview of Functionalized Porous Materials for Rare-Earth E
+  - crossref: Bioactive Peptide Profiling in Collagen Hydrolysates: Compar
+- `anon2024rare` (similarity 0.32)
+  - bib: Review of Rare Earth Extraction and Product Preparation Tech
+  - crossref: Migration behavior of iron and phosphorus during gas-based r
+- `anon2024separationa` (similarity 0.09)
+  - bib: Separation and Utilization of Iron, Cerium, and Other Rare E
+  - crossref: Theoretical understanding of defects-driven mechanoluminesce
+- `ansari2022solvent` (similarity 0.40)
+  - bib: Solvent extraction of actinides and fission products using d
+  - crossref: Adsorption of lanthanum and cerium on chelating ion exchange
+- `bailey2017sustainability` (similarity 0.29)
+  - bib: Sustainability of permanent rare earth magnet motors in {(H)
+  - crossref: Developing a Life Cycle Inventory for Rare Earth Oxides from
+- `battsengel2018recovery` (similarity 0.66)
+  - bib: Recovery of light and heavy rare earth elements from apatite
+  - crossref: Recovery of light and heavy rare earth elements from apatite
+- `chen2025process` (similarity 0.35)
+  - bib: Process design of molten salt distillation separation of {Zr
+  - crossref: Revealing effect of heat transfer mode on the transformation
+- `davidson2020application` (similarity 0.25)
+  - bib: Application of stimuli-responsive materials for extraction p
+  - crossref: Covalent organic framework Schiff base network-1-based pipet
+- `delons2007modelling` (similarity 0.20)
+  - bib: Modelling of extractive distillation of {ZrCl4-HfCl4} by mol
+  - crossref: Feasibility of the electrochemical way in molten fluorides f
+- `depierro2008cloud` (similarity 0.31)
+  - bib: Cloud point extraction of lanthanide(III) ions via use of Tr
+  - crossref: Optimization of Polyurethane Foams for Enhanced Stir Bar Sor
+- `gaballah1995carbochlorination` (similarity 0.55)
+  - bib: Carbochlorination of rare earth oxides
+  - crossref: Kinetics of chlorination and carbochlorination of vanadium p
+- `ghidini2019cloud` (similarity 0.22)
+  - bib: Cloud point extraction of La(III) by C13E10 non-ionic surfac
+  - crossref: Experimental study on treatment of tertiary oil recovery was
+- `gorman2018sustainable` (similarity 0.34)
+  - bib: A review of sustainable mining and resource management
+  - crossref: Environmental impact of urban consumption patterns: Drivers 
+- `he2023stepwise` (similarity 0.33)
+  - bib: Stepwise leaching rare earth from weathered crust elution-de
+  - crossref: Enhanced phosphate pollutant removal from liquid via adsorpt
+- `horwitz2001extraction` (similarity 0.38)
+  - bib: Extraction of strontium from nitric acid solutions using dic
+  - crossref: SREX: A NEWPROCESS FOR THE EXTRACTION AND RECOVERY OF STRONT
+- `kumar2023comprehensive` (similarity 0.19)
+  - bib: Comprehensive review on pH and temperature-responsive polyme
+  - crossref: Multi-antibiotics removal under UV-A light using sol-gel pre
+- `lee2015separation` (similarity 0.44)
+  - bib: Separation of {Nd} and {Pr} from chloride solution by extrac
+  - crossref: Electro-oxidation of sphalerite in weak alkaline sodium chlo
+- `mishra2016carbochlorination` (similarity 0.33)
+  - bib: Carbochlorination thermodynamics of neodymium and cerium oxi
+  - crossref: Quantitative Analysis of the Trace Elements in Purity Indium
+- `moyer2011overview` (similarity 0.47)
+  - bib: Overview of solvent extraction chemistry for reprocessing
+  - crossref: Standard and advanced separation: PUREX processes for nuclea
+- `nagaiyar2016carbochlorination` (similarity 0.29)
+  - bib: Carbochlorination of zircon: A review
+  - crossref: Mechanism of Interaction of Cloud Point Polymers with Platin
+- `onal2015recycling` (similarity 0.38)
+  - bib: Recycling of {NdFeB} magnets using sulfation, selective roas
+  - crossref: Electrosmelting of Lead-Containing Dusts from Copper Smelter
+- `paulick2017global` (similarity 0.52)
+  - bib: The global rare earth element exploration boom
+  - crossref: The global rare earth element exploration boom: An analysis 
+- `priftis2012early` (similarity 0.24)
+  - bib: A Review of the Early Development of the Thermodynamics of t
+  - crossref: Thermal properties of nanofluids
+- `wang2019direct` (similarity 0.23)
+  - bib: Direct chlorination of rare earth concentrate in molten magn
+  - crossref: Development of CeO2 nanorods reinforced electrodeposited nic
+- `wang2019enhanced` (similarity 0.27)
+  - bib: Enhanced separation of praseodymium and neodymium by kinetic
+  - crossref: An overview on nucleation theories and models
+- `wang2021strategy` (similarity 0.33)
+  - bib: A new strategy of three-liquid-phase partitioning for stripp
+  - crossref: Role of dissolved air flotation (DAF) and liquid ferrate on 
+- `wang2023polyelectrolyte` (similarity 0.27)
+  - bib: Polyelectrolyte complex-derived adsorbent capsules capable o
+  - crossref: Advances in X-ray radiography for the measurement of dynamic
+- `xia2024experimental` (similarity 0.37)
+  - bib: Experimental and mechanistic analysis of bastnaesite pelleti
+  - crossref: Sustainable Water Recovery from a Hydrometallurgical Effluen
+- `xu2024rare` (similarity 0.31)
+  - bib: Review of rare earth extraction and product preparation tech
+  - crossref: An automated mineralogy derived criterion for clustering ore
+- `yao2025computationally` (similarity 0.25)
+  - bib: Computationally derived structural insights into Rare Earth 
+  - crossref: InTiCAR: Network-based identification of significant inter-t
+- `zhan2014hydrometallurgical` (similarity 0.35)
+  - bib: Hydrometallurgical process for recovery of valuable and crit
+  - crossref: The separation of chalcopyrite and chalcocite from pyrite in
+- `zhang2016carbochlorination` (similarity 0.38)
+  - bib: Carbochlorination extraction of rare earth elements from bas
+  - crossref: Commercial heap biooxidation of refractory gold ores – Revis
+- `zheng2019mechanism` (similarity 0.45)
+  - bib: Mechanism and application of the ore with chlorination treat
+  - crossref: Thermochemical modification for the surface of smithsonite w
+- `zhong2021thermoresponsive` (similarity 0.22)
+  - bib: Thermoresponsive PNIPAM-b-PAA block copolymers as smart adso
+  - crossref: Changes of meniscus shapes and capillary rise heights under 
+
+## Author fields repaired
+
+- `anon1973lanthanide`: (empty) -> Cockerill, Anthony F. and Davies, Geoffrey L. O. and Harden,
+- `anon1995supercritical`: (empty) -> Lin, Yuehe. and Wai, C. M.
+- `anon2002rapid`: (empty) -> Baker, Joel and Waight, Tod and Ulfbeck, David
+- `anon2004convenient`: {Inorganic Chemistry Authors} -> Izod, Keith and Liddle, Stephen T. and Clegg, William
+- `anon2004rare`: {Journal of Alloys and Compounds Authors} -> Meyer, Gerd and Gerlitzki, Niels and Hammerich, Stefanie
+- `anon2011characterization`: (empty) -> Nguyen, Thu  T. and Sabatini, David  A.
+- `anon2012thermodynamics`: (empty) -> Desbouis, Dominique and Troitsky, Ivan P. and Belousoff, Mat
+- `anon2014life`: (empty) -> Navarro, Julio and Zhao, Fu
+- `anon2015environmental`: (empty) -> Zaimes, George G. and Hubler, Berlyn J. and Wang, Shuo and K
+- `anon2016neutron`: (empty) -> Stosch, Heinz-Günter
+- `anon2016numbering`: (empty) -> Kriel, Frederik H. and Woollam, Stephen and Gordon, Ross J. 
+- `anon2016raman`: (empty) -> Fieser, Megan E. and Woen, David H. and Corbey, Jordan F. an
+- `anon2016rare`: (empty) -> Bonificio, William D. and Clarke, David R.
+- `anon2016rarea`: (empty) -> Silachyov, I.
+- `anon2016thermodynamics`: (empty) -> Ansari, Seraj A. and Mohapatra, Prasanta K. and Verboom, Wil
+- `anon2016use`: (empty) -> Schramm, Rainer
+- `anon2017cracking`: {ScienceDirect Authors} -> Sadri, Farzaneh and Nazari, Amir Mohammad and Ghahreman, Ahm
+- `anon2017development`: (empty) -> Abbasi, Ali and Rahbar-Kelishami, Ahmad and Ghasemi, Mohamma
+- `anon2017electrochemical`: {Journal of Sustainable Metallurgy Authors} -> Abbasalizadeh, Aida and Malfliet, Annelies and Seetharaman, 
+- `anon2017fast`: (empty) -> Chen, Zhuo and Wang, Wen-Ting and Sang, Fu-Ning and Xu, Jian
+- `anon2017life`: (empty) -> Browning, Callum and Northey, Stephen and Haque, Nawshad and
+- `anon2017rationally`: (empty) -> Hatanaka, Takaaki and Matsugami, Akimasa and Nonaka, Takamas
+- `anon2017rhamnolipid`: (empty) -> Hogan, David E. and Curry, Joan E. and Pemberton, Jeanne E. 
+- `anon2017separation`: (empty) -> Yelkenci, H. Ecem and Öztekin, Nevin
+- `anon2018bioleaching`: (empty) -> Zhang, Limin and Dong, Hailiang and Liu, Yan and Bian, Liang
+- `anon2018coordination`: (empty) -> Edington, Sean C. and Gonzalez, Andrea and Middendorf, Thoma
+- `anon2018leaching`: (empty) -> ZHOU, Dan and LI, Zhenzhen and LUO, Xianping and SU, Jia
+- `anon2018micro`: (empty) -> Xu, Nian and Rate, Andrew W. and Morgan, Bree and Saunders, 
+- `anon2018overview`: (empty) -> Chen, Li and Wu, Yilin and Dong, Hongjun and Meng, Minjia an
+- `anon2018recovering`: (empty) -> Ojima, Yoshihiro and Kosako, Shogo and Kihara, Maya and Miyo
+- `anon2018supramolecular`: (empty) -> Li, Xiao-Zhen and Zhou, Li-Peng and Yan, Liang-Liang and Don
+- `anon2019characterization`: (empty) -> Chen, Kaihua and He, Yuan and Srinivasakannan, C. and Li, Sh
+- `anon2019complexation`: (empty) -> Chen, Baihua and Liu, Jun and Lv, Lina and Yang, Liang and L
+- `anon2019droplet`: (empty) -> Steven Kurniawan, Yehezkiel and Rao Sathuluri, Ramachandra a
+- `anon2019fluorination`: {RSC Authors} -> Pretorius, Ryno and le Roux, John and Wagener, Kobus and van
+- `anon2019mechanistic`: (empty) -> Zhang, Hao and Wang, Huizhi and Luo, Xiaojiao and Leung, Den
+- `anon2019oxidative`: (empty) -> Elizalde, M.P. and Rúa, M.S. and Menoyo, B. and Ocio, A.
+- `anon2019rare`: (empty) -> Khan, Latif Ullah and Khan, Zahid U.
+- `anon2019selective`: (empty) -> Liu, Feng and Yu, Dawei and Marcuson, Sam and Wang, Fanmao a
+- `anon2019sustainable`: (empty) -> Prodius, Denis and Gandha, Kinjal and Mudring, Anja-Verena a
+- `anon2019sustainablea`: (empty) -> He, Yuan and Guo, Shenghui and Chen, Kaihua and Li, Shiwei a
+- `anon2020biosorption`: (empty) -> Breuker, Anja and Ritter, Simon F. and Schippers, Axel
+- `anon2020biosorptiona`: (empty) -> Giese, Ellen Cristine
+- `anon2020determination`: (empty) -> Cheng, Yu-Hong and Liu, Si-Jia and Jiang, Jian-Hui
+- `anon2020environmentally`: {Scientific Reports Authors} -> Arellano Ruiz, Verónica Cristina and Kuchi, Rambabu and Parh
+- `anon2020highly`: (empty) -> De Pauw, Ella and Tack, Pieter and Lindner, Miles and Ashaue
+- `anon2020hydrometallurgical`: {Metals Authors} -> Zhang, Yuanbo and Gu, Foquan and Su, Zijian and Liu, Shuo an
+- `anon2020ion`: (empty) -> Zhang, Xiaoying and Sun, Peizhe and Wei, Kajia and Huang, Xi
+- `anon2020library`: (empty) -> Sharma, Suchinder K. and Behm, Thomas and Köhler, Thomas and
+- `anon2020multivariate`: (empty) -> Teng, Chaoyi and Gauvin, Raynald
+- `anon2020progress`: (empty) -> Pak, Kyong-Song and Zhang, Ting-An and Kim, Chang-Sok and Ki
+- `anon2020progressa`: (empty) -> Okamura, Hiroyuki and Hirayama, Naoki
+- `anon2020rare`: (empty) -> Lukowiak, Anna and Zur, Lidia and Tomala, Robert and LamTran
+- `anon2020rationally`: (empty) -> Boronski, Josef T. and Wooles, Ashley J. and Liddle, Stephen
+- `anon2020removal`: (empty) -> Wang, Yudong and Li, Jinhui and Gao, Yan and Yang, Yang and 
+- `anon2020separation`: (empty) -> Ram, Rahul and Beiza, Luis and Becker, Megan and Pownceby, M
+- `anon2020separationa`: {Minerals Engineering Authors} -> Dashti, Somayeh and Sadri, Farzaneh and Shakibania, Sina and
+- `anon2020supercritical`: {Springer Authors} -> Zhang, Jiakai and Watada, Kimberly and Sauber, Maziar E. and
+- `anon2021alkyl`: (empty) -> Szcześniak, Piotr and Grzeszczyk, Barbara and Furman, Bartło
+- `anon2021approaches`: (empty) -> Indelicato, Serena and Bongiorno, David and Ceraulo, Leopold
+- `anon2021critical`: (empty) -> Rasoulnia, Payam and Barthen, Robert and Lakaniemi, Aino-Mai
+- `anon2021effect`: (empty) -> Hassas, Behzad Vaziri and Rezaee, Mohammad and Pisupati, Sar
+- `anon2021fundamental`: (empty) -> Larochelle, Tommee and Noble, Aaron and Ziemkiewicz, Paul an
+- `anon2021method`: (empty) -> Jally, Bastien and Laubie, Baptiste and Chour, Zeinab and Mu
+- `anon2021rare`: (empty) -> Heilmann, Marcus and Breiter, Roman and Becker, Anna Maria
+- `anon2021separation`: (empty) -> Dybczyński, Rajmund S. and Kulisa, Krzysztof
+- `anon2021theoretical`: (empty) -> Cheng, Xiaohui and Sun, Panpan and Zhang, Na and Zhou, Shuji
+- `anon2021theoreticala`: (empty) -> Liu, Fuwen and Deng, Degang and Wu, Ming and Chen, Bowen and
+- `anon2021thermodynamic`: (empty) -> Han, Kenneth N. and Kim, Rina
+- `anon2021versatile`: (empty) -> Pesavento, M. and Merli, D. and Biesuz, R. and Alberti, G. a
+- `anon2022design`: (empty) -> Taylor, Richard T. and Poudel, Dhruba P.
+- `anon2022development`: (empty) -> Li, Haitao and Tong, Rui and Guo, Wei and Xu, Quanhui and Ta
+- `anon2022economic`: (empty) -> Uysal, T.
+- `anon2022environmental`: (empty) -> Zapp, Petra and Schreiber, Andrea and Marx, Josefine and Kuc
+- `anon2022high`: (empty) -> Li, Yilin and Luo, Jialu and Shan, Shuyi and Cao, Yuanyuan
+- `anon2022lca`: (empty) -> Wan, Chen and Zhou, Dan and Xue, Bing
+- `anon2022molten`: (empty) -> Pérez-Cardona, Jesús R. and Huang, Tai-Yuan and Zhao, Fu and
+- `anon2022phytomining`: (empty) -> Dinh, Truong and Dobo, Zsolt and Kovacs, Helga
+- `anon2022pyrometallurgy`: {Mineral Processing and Extractive Metallurgy Review Authors} -> Rafique, Muhammad Musaddique Ali
+- `anon2022rare`: {PMC Authors} -> Ortu, Fabrizio
+- `anon2022rareb`: (empty) -> Bashiri, Atiyeh and Nikzad, Arash and Maleki, Reza and Asadn
+- `anon2022recycling`: (empty) -> Fujita, Yoshiko and McCall, Scott K. and Ginosar, Daniel
+- `anon2022selective`: (empty) -> Vaziri Hassas, Behzad and Shekarian, Younes and Rezaee, Moha
+- `anon2022selectivea`: (empty) -> Zhao, Shunan and Yan, Kun and Wang, Zhihui and Gao, Yong and
+- `anon2022separation`: (empty) -> Li, Jinhui and Wen, Yaoru and Chu, Yuhang and Liu, Wenxin an
+- `anon2022separationa`: (empty) -> Dewulf, Brecht and Riaño, Sofía and Binnemans, Koen
+- `anon2023advances`: (empty) -> Doyo, Ahmed N. and Kumar, Rajeev and Barakat, M.A.
+- `anon2023application`: {Journal of Environmental Chemical Engineering Authors} -> Shakiba, Ghazaleh and Saneie, Roozbeh and Abdollahi, Hadi an
+- `anon2023biomining`: {Science of The Total Environment Authors} -> Vo, Phong H.N. and Danaee, Soroosh and Hai, Ho Truong Nam an
+- `anon2023bioseparation`: (empty) -> Qian, Xining and Ma, Chao and Zhang, Hongjie and Liu, Kai
+- `anon2023cerium`: (empty) -> Moldoveanu, Georgiana and Papangelakis, Vladimiros G.
+- `anon2023comparative`: (empty) -> Pathapati, Subbu Venkata Satyasri Harsha and Free, Michael L
+- `anon2023deep`: (empty) -> Alizadeh, Shahab and Abdollahy, Mahmoud and Darban, Ahmad Kh
+- `anon2023extraction`: (empty) -> Li, Ming and Liu, Chuanying and Ding, Anting and Xiao, Cheng
+- `anon2023gravity`: (empty) -> Sree, Hrishitha and Swarup, Gitanjali and Gupta, Sharad and 
+- `anon2023green`: (empty) -> Xu, Tongtong and Zheng, Xudong and Ji, Biao and Xu, Zihuai a
+- `anon2023ionic`: {Journal of Sustainable Metallurgy Authors} -> Binnemans, Koen and Jones, Peter Tom
+- `anon2023isothermal`: (empty) -> Bastos, Margarida and Abian, Olga and Johnson, Christopher M
+- `anon2023lanthanides`: (empty) -> Nikolova, Valya and Kircheva, Nikoleta and Dobrev, Stefan an
+- `anon2023latest`: (empty) -> Kaczorowska, Małgorzata A.
+- `anon2023membrane`: (empty) -> Kujawa, Joanna and Al Gharabli, Samer and Szymczyk, Anthony 
+- `anon2023micro`: (empty) -> Rescigno, Raffaella and Sacco, Olga and Pragliola, Stefania 
+- `anon2023mineral`: (empty) -> Ali, Asif and Zhang, Ning and Santos, Rafael M.
+- `anon2023progress`: (empty) -> El Ouardi, Youssef and Virolainen, Sami and Massima Mouele, 
+- `anon2023rare`: (empty) -> Zheng, Hong-Xiang and Yang, Yu-Lu and Liu, Wen-Shen and Zhon
+- `anon2023recovery`: {Separation and Purification Technology Authors} -> Zhang, Kuifang and Wei, Bohan and Tao, Jinzhang and Zhong, X
+- `anon2023recoverya`: {Metals Authors} -> Chung, Hanwen and Prasakti, Laras and Stopic, Srecko R. and 
+- `anon2023simulation`: (empty) -> Turgeon, Keven and Boulanger, Jean-François and Bazin, Claud
+- `anon2023size`: (empty) -> Johnson, Katherine R. and Driscoll, Darren M. and Damron, Jo
+- `anon2023supercritical`: {RSC Sustainability Authors} -> Zhu, Yaguang and Wang, Guangcheng and Jun, Young-Shin
+- `anon2023sustainable`: (empty) -> El-Sayed, Essam S. Abd and Dacrory, Sawsan and Essawy, Hisha
+- `anon2023work`: (empty) -> Alguacil, Francisco Jose and Robla, Jose Ignacio
+- `anon2024application`: (empty) -> Kore, Akansha and Subash, Alsha and Naebe, Minoo and Kandasu
+- `anon2024chromatographic`: (empty) -> Belova, V. V. and Kostanyan, A. E.
+- `anon2024current`: (empty) -> Saravanan, Panchamoorthy and Kannan, Rajan Rajesh and Sarava
+- `anon2024eco`: {Journal of Hazardous Materials Authors} -> Yu, Guisu and Zhang, Hepeng and Tian, Zhong and Gao, Yun and
+- `anon2024efficient`: (empty) -> Meng, Xiaorong and Sun, Chi and Liu, Xingfan and Huang, Jing
+- `anon2024enhanced`: (empty) -> Ortuno Macias, Luis E. and Zhang, Honghu and Ocko, Benjamin 
+- `anon2024enhanceda`: (empty) -> Ge, Xue-hui and Zhang, Huafeng and Huang, Xiaolian and Liu, 
+- `anon2024extraction`: {ScienceDirect Authors} -> Heo, Sung Gue and Yang, Jae Yeol and Oh, Soong Ju and Seo, S
+- `anon2024extractiona`: {Minerals Authors} -> Afonin, Mikhail A. and Nechaev, Andrey V. and Yakimenko, Ily
+- `anon2024high`: (empty) -> Fernández-Maza, Christian and González-Lavín, Gloria and Gom
+- `anon2024importance`: (empty) -> Summers, Thomas J. and Taylor, Michael G. and Augustine, Log
+- `anon2024industry`: (empty) -> Yang, Daisy and Priest, Craig
+- `anon2024intensifying`: (empty) -> He, Yuan and Zhang, Tao and Lv, Li and Tang, Wenxiang and Wa
+- `anon2024investigation`: (empty) -> Verma, Geeta and Hostert, Jacob and Summerville, Alex A. and
+- `anon2024investigationa`: {PMC Authors} -> Yang, Ziyan and Xiao, Faxin and Sun, Shuchen and Tu, Ganfeng
+- `anon2024investigationb`: (empty) -> Tolbert, Chloe L. and Bamane, Swapnil S. and Pawar, Gorakh M
+- `anon2024mathematical`: (empty) -> Ding, Lingyang and Azimi, Gisele
+- `anon2024maximized`: (empty) -> Deng, Yuemin and Xia, Dong and Bourgeois, Damien and Meyer, 
+- `anon2024mechanism`: {Materials Authors} -> Liu, Youwei and Zhong, Yuan and Lei, Xiang and Wang, Jinlian
+- `anon2024mechanisma`: {ScienceDirect Authors} -> liu, youwei and Gao, Yuxin and Lei, Xiang and Lin, Shuyuan a
+- `anon2024methods`: (empty) -> Gkika, Despina A. and Chalaris, Michail and Kyzas, George Z.
+- `anon2024microbial`: {PMC Authors} -> Vítová, Milada and Mezricky, Dana
+- `anon2024modern`: (empty) -> Geue, Niklas
+- `anon2024organic`: (empty) -> Wen, Yinghao and Liu, Pan and Wang, Qian and Zhao, Simin and
+- `anon2024overview`: (empty) -> Oztug, Merve
+- `anon2024polymer`: (empty) -> Croft, Charles
+F. and Nagul, Edward A. and Almeida, M. Inês
+- `anon2024rare`: (empty) -> Ji, Guangheng and Xiao, Cihong and Gao, Xu and Zhou, You and
+- `anon2024rarea`: (empty) -> Bishop, Brendan A. and Ramachandran Shivakumar, Karthik and 
+- `anon2024rationally`: (empty) -> Hu, Qing-Hua and Song, An-Min and Gao, Xin and Shi, Yu-Zhen 
+- `anon2024research`: {Metals Authors} -> Liao, Chunfa and Que, Lianghua and Fu, Zanhui and Deng, Pan 
+- `anon2024reshaping`: (empty) -> Chen, Wei and Wang, Peng and Meng, Fanran and Pehlken, Alexa
+- `anon2024scalable`: {PMC Authors} -> Good, Nathan M. and Kang-Yun, Christina S. and Su, Morgan Z.
+- `anon2024separationa`: (empty) -> Li, Wenhao and Jin, Minyu and Li, Jianhui and Wang, Ci and S
+- `anon2024simple`: (empty) -> O’Connell-Danes, Joseph G. and Ozen Ilik, Buse and Hull, Eri
+- `anon2024simplified`: (empty) -> O’Brien, Tim M. and Alonso, Elisa
+- `anon2024situ`: (empty) -> Lin, Jie and Yang, Ao and Lin, Ran and Mao, Ji and Hu, Zhaoc
+- `anon2024spectroscopic`: (empty) -> Tse, Poki and Bessen, Nathan P. and Espley, Alyssa F. and Fe
+- `anon2024synergistic`: (empty) -> Zhang, Qingrong and Wang, Yingcai and Jiang, Yuanping and Li
+- `anon2025application`: (empty) -> Deng, Wenjuan and Geng, Ranran and Hu, Zhiqiang and Zhou, Ba
+- `anon2025clean`: (empty) -> Xue, Haiyue and Lv, Guozhi and Wang, Long and Ren, Jiawei an
+- `anon2025conversion`: (empty) -> Laskar, C. and Guzhov, B. and Barnabé, A. and Josse, M. and 
+- `anon2025discovery`: (empty) -> He, Liuqing and Xian, Haiyang and Yang, Yiping and Cao, Jiel
+- `anon2025efficiently`: (empty) -> He, Dongqiao and Ning, Shunyan and Liu, Juan and Zhang, Shic
+- `anon2025harnessing`: (empty) -> Bai, Yang and Su, Juanjuan and Wang, Fan and Cui, Huijing an
+- `anon2025high`: (empty) -> Schmitz, Alexa M. and Pian, Brooke and Marecos, Sabrina and 
+- `anon2025interactions`: (empty) -> McGaughey, Samantha A. and Iqbal, Shagufta and De Rosa, Anna
+- `anon2025iron`: (empty) -> Li, Sicheng and Sauber, Maziar E. and Sun, Tong and Azimi, G
+- `anon2025metabolic`: (empty) -> Jiang, Tian and Montgomery, Veronica A. and Jetty, Karuna an
+- `anon2025microfluidic`: (empty) -> FENG, LANG and Long, Wei and Li, Bin and Li, Tao and Zhang, 
+- `anon2025mine`: (empty) -> Song, Wen
+- `anon2025preparation`: (empty) -> Bulin, Chaoke and Guo, Ting and Zheng, Rongxiang
+- `anon2025rare`: (empty) -> Hamzat, Abdulhammed K. and Murad, Md. Shafinur and Subeshan,
+- `anon2025rarea`: {Nature Communications Authors} -> Karati, Anirudha and Parmar, Harshida and Riedemann, Trevor 
+- `anon2025reclaiming`: (empty) -> Nili, Sheida and Rabbani, Mohsen and Sharifian, Seyedmehdi a
+- `anon2025separation`: {Separation and Purification Technology Authors} -> Lu, Xiaohui and Wang, Chaowu and Deng, Rongrong and Wang, Ji
+- `anon2025sustainable`: {Scientific Reports Authors} -> Nadi, Sahba and Pourhossein, Fatemeh and Mousavi, Seyyed Moh
+- `anon2025sustainablea`: (empty) -> Agrawal, Ruchi and Ragauskas, Arthur J.
+- `anon2025systematic`: (empty) -> Mugion, Roberta Guglielmetti and Elmo, Grazia Chiara and Ung
+- `anon2025tailored`: (empty) -> Salehi, Hossein and Maroufi, Samane and Kh. Nekouei, Rasoul 
+- `anon2025technoeconomic`: (empty) -> Azimi, Gisele and Sauber, Maziar E. and Li, Sicheng

@@ -21,6 +21,7 @@ project:
   bibliography:
     - references.bib
   toc:
+    - file: src/00-prologue.md
     - file: src/00-preface.md
 
     - title: Part I — Orientation
