@@ -214,7 +214,7 @@ The NaOH digestion route achieves near-complete extraction in shorter times due 
 - Enhanced REE accessibility to chelating agents
 - Removal of CO₂ and fluorine barriers
 
-**Zircon-Rich Ore Processing:** Canadian ore concentrate containing REEs in zircon matrix [@authors2024optimization]:
+**Zircon-Rich Ore Processing:** Canadian ore concentrate containing REEs in zircon matrix [@li2024optimization]:
 
 - NaOH cracking pretreatment essential
 - Near-complete REE extraction achieved

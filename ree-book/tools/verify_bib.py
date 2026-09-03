@@ -9,7 +9,16 @@ Three verification routes, in order of strength:
 2. No DOI but a URL -> check the URL responds. Web sources (standards pages,
    vendor documentation, software) are legitimate references that will never
    have a DOI; a live URL is the right evidence for them.
-3. Neither -> unverifiable. These are the likely-fabricated entries.
+3. No DOI and no URL, but an ISBN -> look the ISBN up in OpenLibrary. Books
+   and book chapters are legitimate references that predate DOIs, and a
+   publisher landing page guessed from the title is not evidence -- five such
+   URLs were written by hand and all of them 404'd.
+4. None of the above -> unverifiable. These are the likely-fabricated entries.
+
+A URL that answers with 401, 403, or 406 counts as alive. Britannica, the IEA,
+and the IAEA refuse scripted requests outright; the server answering about that
+exact URL is evidence the page exists, and treating a refusal as a dead link
+rejected five real sources.
 
 Entries failing all three are written to a separate file rather than deleted in
 place, so the removal is reviewable before it is applied.
@@ -89,11 +98,34 @@ def crossref_by_doi(doi: str) -> dict | None:
         return None
 
 
+# The server answered about this exact URL and refused to serve it to a script.
+# That is evidence the resource exists, which is all this check is asking.
+ACCESS_REFUSED = {401, 403, 406}
+
+
 def url_alive(url: str) -> bool:
     if not url.lower().startswith(("http://", "https://")):
         return False
     status, _ = _get(url, timeout=20)
-    return status is not None and 200 <= status < 400
+    if status is None:
+        return False
+    return 200 <= status < 400 or status in ACCESS_REFUSED
+
+
+def isbn_title(isbn: str) -> str | None:
+    """Resolve an ISBN through OpenLibrary. Returns the title, or None."""
+    key = "ISBN:" + re.sub(r"[^0-9Xx]", "", isbn)
+    url = ("https://openlibrary.org/api/books?format=json&jscmd=data"
+           f"&bibkeys={urllib.parse.quote(key)}")
+    status, body = _get(url, timeout=20)
+    if status != 200 or not body:
+        return None
+    try:
+        data = json.loads(body)
+    except json.JSONDecodeError:
+        return None
+    rec = data.get(key)
+    return rec.get("title") if rec else None
 
 
 def format_authors(msg: dict) -> str:
@@ -181,7 +213,28 @@ def main() -> int:
                 rejected.append((e, f"no DOI; URL does not respond: {url[:70]}"))
             continue
 
-        rejected.append((e, "no DOI, no URL — unverifiable as recorded"))
+        isbn = (e.get("isbn") or "").strip().strip("{}")
+        if isbn:
+            title = isbn_title(isbn)
+            time.sleep(args.delay)
+            if title:
+                # An ISBN names the book. For a chapter, that is `booktitle`;
+                # comparing it to the chapter title reports a false mismatch.
+                recorded = e.get("booktitle") or e.get("title", "")
+                sim = difflib.SequenceMatcher(
+                    None, norm_title(recorded), norm_title(title)
+                ).ratio()
+                if sim < args.title_threshold:
+                    mismatched_titles.append((e["ID"], sim, e.get("title", "")[:60],
+                                              title[:60]))
+                e["_verified"] = "isbn"
+                verified.append(e)
+                print(f"  [{i}/{total}] {e['ID']}: ok (isbn)")
+            else:
+                rejected.append((e, f"no DOI, no URL; ISBN not found: {isbn}"))
+            continue
+
+        rejected.append((e, "no DOI, no URL, no ISBN — unverifiable as recorded"))
 
     print(f"\nverified {len(verified)} / {total}; rejected {len(rejected)}")
 
