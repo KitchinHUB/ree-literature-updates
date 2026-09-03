@@ -73,7 +73,7 @@ acidic organophosphorus extractants; Y falls near Ho/Er).
 (`05:452,482,521,552`). `05:251` also has the wrong chemistry: dry calcination of
 bastnäsite gives REOF + CO₂; HF evolves only on steam hydrolysis.
 
-- [ ] B6
+- [x] B6
 
 ## B7 — Audit citations attached to claims their source cannot support
 ~30 in ch. 7 (tabulated in `review/raw/part2-ch05-07.md`), 5 in ch. 5, 3 in

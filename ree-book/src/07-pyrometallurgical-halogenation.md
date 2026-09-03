@@ -38,11 +38,11 @@ pyrometallurgical and electrochemical material from the broad review.
 ### Fundamental Thermodynamics of Halogenation
 Halogenation of metal oxides to form metal halides is governed by fundamental thermodynamic principles. The general reaction for direct halogenation is:
 
-> MₓOᵧ + γX₂ → xMX₂ᵧ/ₓ + γ/2 O₂
+> $\mathrm{M}_x\mathrm{O}_y + y\,\mathrm{X}_2 \rightarrow x\,\mathrm{MX}_{2y/x} + \tfrac{y}{2}\,\mathrm{O}_2$
 
 For most rare earth oxides, direct halogenation is thermodynamically unfavorable without a reducing agent. Carbon serves as an effective reductant, lowering the reaction temperature and driving the reaction toward products through the formation of CO or CO₂:
 
-> MₓOᵧ + γC + γX₂ → xMX₂ᵧ/ₓ + γCO (carbohalogenation)
+> $\mathrm{M}_x\mathrm{O}_y + y\,\mathrm{C} + y\,\mathrm{X}_2 \rightarrow x\,\mathrm{MX}_{2y/x} + y\,\mathrm{CO}$ (carbohalogenation)
 
 The thermodynamic favorability of carbohalogenation varies with the halogen used. The bond energies and electronegativity of the halogens influence reaction thermodynamics:
 
@@ -83,7 +83,7 @@ For rare earth oxides, the primary reactions are:
 
 - RE₂O₃ + 1.5C + 3Cl₂ → 2RECl₃ + 1.5CO₂ (at lower temperatures)
 
-- CeO₂ + 2C + 2Cl₂ → CeCl₃ + 2CO (for tetravalent {index}`cerium`)
+- 2CeO₂ + 4C + 3Cl₂ → 2CeCl₃ + 4CO (for tetravalent {index}`cerium`; the extra carbon supplies the electrons for Ce(IV) → Ce(III))
 
 Research has shown that direct contact between metal oxides and carbon is not necessary for effective chlorination [@gavira2010carbochlorination]. The reaction proceeds through gaseous intermediates, with carbon providing catalytic activity sites for the formation of highly reactive species. Proposed intermediates include phosgene (COCl₂), monatomic chlorine, and carbon tetrachloride (CCl₄) [@murase1995recovery].
 
@@ -512,9 +512,16 @@ An alternative to high-temperature molten salt processes:
 ### Fluoride-Based Electrolysis
 Molten salt electrolysis is the most widely used method for producing light rare earth metals (La, Ce, Pr, Nd) and alloys in China. The process uses rare earth fluorides dissolved in fluoride-based electrolytes:
 
-> REF₃ → RE³⁺ + 3e⁻ → RE(metal) at cathode
+> Cathode:  RE³⁺ + 3 e⁻ → RE(metal)
 >
-> Fluoride ions oxidized to F₂ gas at carbon anode
+> Anode:    2 O²⁻ + C → CO₂ + 4 e⁻
+>
+> Overall:  2 REO₁.₅ + 3 C → 2 RE + 3 CO₂
+>
+> The fluorides are the solvent, not the reagent: the reducible species is the
+> dissolved oxide, and the consumable carbon anode burns to CO/CO₂ exactly as in
+> aluminium electrolysis. F₂ and CF₄ evolve only when the melt is depleted of
+> oxide and the cell goes into anode effect.
 
 Optimal process parameters for Pr-Nd alloy production (25 kA cell):
 
@@ -533,7 +540,11 @@ The technology is similar to aluminum electrolysis but operates at higher temper
 ### Chloride-Based Electrolysis
 An alternative chloride-based molten salt electrolysis process has been developed that eliminates greenhouse gas emissions associated with conventional fluoride systems:
 
-> RECl₃ (in LiCl-KCl eutectic) → RE(metal) + Cl₂(gas)
+> Cathode:  RE³⁺ + 3 e⁻ → RE(metal)
+>
+> Anode:    2 Cl⁻ → Cl₂(g) + 2 e⁻
+>
+> Overall:  2 RECl₃ (in LiCl-KCl eutectic) → 2 RE(metal) + 3 Cl₂(g)
 
 Technical performance of chloride-based process:
 

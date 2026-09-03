@@ -248,11 +248,11 @@ Bastnasite (REE·FCO₃) contains 5-10% fluorine. Direct acid leaching releases 
 
     Temperature progression:
 
-    300-400°C:   2 REE·FCO₃ → REE₂O₂CO₃ + 2 HF↑
-                 (Oxycarbonate formation, HF evolution)
+    300-500°C:   REE·FCO₃ → REEOF + CO₂↑
+                 (Decarbonation to the oxyfluoride)
 
-    500-700°C:   REE₂O₂CO₃ → REE₂O₃ + CO₂↑
-                 (Oxide formation)
+    500-700°C:   2 REEOF + H₂O → REE₂O₃ + 2 HF↑
+                 (Steam hydrolysis; HF evolves only if water vapour is present)
 
 **Conditions**:
 
@@ -276,7 +276,7 @@ Bastnasite (REE·FCO₃) contains 5-10% fluorine. Direct acid leaching releases 
 **Process**: Mix bastnasite with Na₂CO₃, roast [@xu2012decomposition; @kim2025rare]
 
     Step 1 (400-500°C): Defluorination
-    2 REE·FCO₃ + Na₂CO₃ → REE₂O₂CO₃ + 2 NaF + CO₂↑
+    2 REE·FCO₃ + Na₂CO₃ → REE₂O₂CO₃ + 2 NaF + 2 CO₂↑
 
     Step 2 (700-900°C): Complete decomposition
     REE₂O₂CO₃ + Na₂CO₃ → 2 NaREEO₂ + 2 CO₂↑
@@ -296,10 +296,10 @@ Bastnasite (REE·FCO₃) contains 5-10% fluorine. Direct acid leaching releases 
 **Water leaching of roasted product**:
 
     NaREEO₂ + H₂O → NaOH + REEO(OH) (hydrated oxide)
-    REEO(OH) + 2 HCl → REECl₃ + H₂O
+    REEO(OH) + 3 HCl → REECl₃ + 2 H₂O
 
     Or direct acid dissolution:
-    2 NaREEO₂ + 3 H₂SO₄ → REE₂(SO₄)₃ + Na₂SO₄ + 3 H₂O
+    2 NaREEO₂ + 4 H₂SO₄ → REE₂(SO₄)₃ + Na₂SO₄ + 4 H₂O
 
 **Advantages**:
 
@@ -316,7 +316,7 @@ Bastnasite (REE·FCO₃) contains 5-10% fluorine. Direct acid leaching releases 
 #### Ammonium Chloride Roasting (Fluorine Deactivation)
 **Process developed by Chinese researchers** [@chi2004recovery]
 
-    REE·FCO₃ + 3 NH₄Cl → REECl₃ + NH₃↑ + NH₄F + CO₂↑ + H₂O
+    REE·FCO₃ + 3 NH₄Cl → REECl₃ + NH₄F + 2 NH₃↑ + CO₂↑ + H₂O
 
     Temperature: 400-600°C
     NH₄Cl:bastnasite molar ratio: 3-4:1
@@ -449,7 +449,9 @@ Monazite ((REE,Th)PO₄) presents two major challenges [@borai2016modified; @ama
 #### Sulfuric Acid Digestion (Classical Method)
 **Process** [@jha2016hydrometallurgical]:
 
-    2 (REE,Th)PO₄ + 3 H₂SO₄ → (REE,Th)₂(SO₄)₃ + 2 H₃PO₄
+    2 REEPO₄ + 3 H₂SO₄ → REE₂(SO₄)₃ + 2 H₃PO₄
+
+    Th₃(PO₄)₄ + 6 H₂SO₄ → 3 Th(SO₄)₂ + 4 H₃PO₄
 
     Conditions:
     - Concentrated H₂SO₄: 93-98 wt%
@@ -479,7 +481,9 @@ Monazite ((REE,Th)PO₄) presents two major challenges [@borai2016modified; @ama
 - Thorium separation required
 
 #### Hydrochloric Acid Leaching
-    (REE,Th)PO₄ + 3 HCl → (REE,Th)Cl₃ + H₃PO₄
+    REEPO₄ + 3 HCl → REECl₃ + H₃PO₄
+
+    Th₃(PO₄)₄ + 12 HCl → 3 ThCl₄ + 4 H₃PO₄
 
     Conditions:
     - HCl: 6-12 M (20-37 wt%)
@@ -501,7 +505,9 @@ Monazite ((REE,Th)PO₄) presents two major challenges [@borai2016modified; @ama
 #### Nitric Acid Leaching
 Used in some processes [@borai2016modified]:
 
-    (REE,Th)PO₄ + 3 HNO₃ → (REE,Th)(NO₃)₃ + H₃PO₄
+    REEPO₄ + 3 HNO₃ → REE(NO₃)₃ + H₃PO₄
+
+    Th₃(PO₄)₄ + 12 HNO₃ → 3 Th(NO₃)₄ + 4 H₃PO₄
 
     Conditions:
     - HNO₃: 6-10 M
@@ -518,14 +524,17 @@ Used in some processes [@borai2016modified]:
 **Process** [@borai2016modified; @shahreldin2018selective]:
 
     Step 1: Alkaline digestion (300-400°C)
-    (REE,Th)PO₄ + 3 NaOH → (REE,Th)(OH)₃ + Na₃PO₄
+    REEPO₄ + 3 NaOH → REE(OH)₃ + Na₃PO₄
+    Th₃(PO₄)₄ + 12 NaOH → 3 Th(OH)₄ + 4 Na₃PO₄
 
     Step 2: Water leaching
     Na₃PO₄ dissolves (remove phosphate)
-    (REE,Th)(OH)₃ remains as solid
+    REE(OH)₃ and Th(OH)₄ remain as solids
 
     Step 3: Acid leaching of hydroxides
-    (REE,Th)(OH)₃ + 3 HCl → (REE,Th)Cl₃ + 3 H₂O
+    REE(OH)₃ + 3 HCl → REECl₃ + 3 H₂O
+
+    Th(OH)₄ + 4 HCl → ThCl₄ + 4 H₂O
 
 **Conditions for NaOH digestion**:
 
@@ -549,7 +558,9 @@ Used in some processes [@borai2016modified]:
 #### Sodium Carbonate Roasting
 Similar to bastnasite [@xu2012decomposition]:
 
-    2 (REE,Th)PO₄ + 3 Na₂CO₃ → (REE,Th)₂O₃ + 2 Na₃PO₄ + 3 CO₂
+    2 REEPO₄ + 3 Na₂CO₃ → REE₂O₃ + 2 Na₃PO₄ + 3 CO₂↑
+
+    Th₃(PO₄)₄ + 6 Na₂CO₃ → 3 ThO₂ + 4 Na₃PO₄ + 6 CO₂↑
 
     Temperature: 800-900°C
     Time: 1-2 hours
@@ -853,7 +864,8 @@ Microorganisms mobilize REEs through [@rasoulnia2020critical; @brisson2015biolea
 
 **Mechanism**:
 
-    Fungal organic acids + (REE,Th)PO₄ → REE-organic acid complexes + H₃PO₄
+    Fungal organic acids + REEPO₄ → REE-organic acid complexes + H₃PO₄
+    (schematic: the acids are a mixture and the stoichiometry is not fixed)
 
 **Advantages**:
 
@@ -1016,7 +1028,8 @@ More challenging than Fe (Al(OH)₃ soluble at low and high pH):
 **Gypsum co-precipitation** (H₂SO₄ leach):
 
     Add CaCl₂ or lime:
-    Ca²⁺ + SO₄²⁻ + PO₄³⁻ → CaSO₄·xH₂O↓ (traps phosphate)
+    3 Ca²⁺ + 2 PO₄³⁻ → Ca₃(PO₄)₂↓
+    Ca²⁺ + SO₄²⁻ + 2 H₂O → CaSO₄·2H₂O↓  (gypsum; occludes residual phosphate)
 
 **Precipitation as FePO₄**:
 

@@ -675,7 +675,7 @@ This document presents a unified thermodynamic framework that connects (i) miner
 ### Bastnäsite Dissolution as a Source of Aqueous REE Chemical Potentials
 Bastnäsite (REECO3F, where REE = Y, La, Ce, Pr, Nd, Sm, Gd) is a major rare-earth mineral. Under acidic leaching conditions, it dissolves to release trivalent REE ions into solution. A simplified dissolution reaction is:  
   
-REECO3F(s) + 3H+ ⇌ REE3+ + CO2(g) + HF(aq)  
+REECO3F(s) + 3H+ ⇌ REE3+ + CO2(g) + HF(aq) + H2O  
   
 In an atomistic thermodynamics framework, the free energy of dissolution can be written as:  
   

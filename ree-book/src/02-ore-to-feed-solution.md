@@ -95,7 +95,7 @@ Rare-earth elements do not occur as native metals but are found in oxide or phos
 ### Sulfate Solutions (Ion-Adsorption Ores)
 **Preparation**: Direct leaching of clay ores with ammonium sulfate [@han2024efficient]:
 
-    Clay-REE³⁺ + (NH₄)₂SO₄ → REE₂(SO₄)₃ + NH₄⁺-Clay
+    Clay−[REE³⁺] + 3 NH₄⁺ → Clay−[NH₄⁺]₃ + REE³⁺(aq)
 
 **Advantages**:
 
