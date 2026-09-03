@@ -3,7 +3,7 @@
 Working notes for building the REE separations book. Written to be picked up
 cold — if you are resuming this after a gap, read this file first.
 
-**Where things stand: Phases 0–3 are done and committed. Phase 4 is next.**
+**Where things stand: Phases 0–4 are done and committed. Phase 5 is next.**
 
 | Phase | What | Status |
 |---|---|---|
@@ -11,8 +11,8 @@ cold — if you are resuming this after a gap, read this file first.
 | 1 | Merge, dedupe, and verify the bibliography | ✅ `0edb8aa`, `d9a9221` |
 | 2 | Convert all sources to MyST Markdown | ✅ `cc2e1df` |
 | 3 | Restructure into chapters | ✅ |
-| 4 | **Convert citations to `[@key]`** | ⬜ next |
-| 5 | Index and glossary | ⬜ |
+| 4 | Convert citations to `[@key]` | ✅ `cc2e1df`, `0abdc70`, `821d1a2` |
+| 5 | **Index and glossary** | ⬜ next |
 | 6 | Final build and verification | ⬜ |
 
 ## Decisions already made
@@ -114,59 +114,70 @@ heading IDs, which also break the moment a heading is reworded.
 
 ---
 
-# Phase 4 — Citations
+# Phase 4 — Citations ✅
 
-Four incompatible styles must all become MyST `[@key]` against the verified
-`references.bib` (406 entries).
+All four inherited citation styles are gone from `src/`. `grep -r 'cite:'`,
+a numeric-marker grep, and a hyperlink-citation grep all return nothing. The
+book builds 26 pages with **643 cite nodes and no unresolved citation**, and
+every key used in the text exists in `references.bib`.
 
-| Style | Where | Count |
+| Style | Where | Done in |
 |---|---|---|
-| org-ref `cite:key` | leaching, chemistry-fundamentals, coacervates, high-throughput | 83 / 70 / 73 / 23 |
-| org-cite `[cite:@a; @b]` | microfluidic-colorimetric | 38 |
-| numeric `[1]`, `[1-3]` | carbochlorination-report, carbohalogenation-review, microfluidic-report | 166 / 51 / 49 |
-| inline Markdown hyperlinks | broad-review | 172 |
+| org-ref `cite:key` | leaching, chemistry-fundamentals, coacervates, high-throughput | `cc2e1df` (`tools/convert_citations.py`) |
+| org-cite `[cite:@a; @b]` | microfluidic-colorimetric | `cc2e1df` |
+| numeric `[1]`, `[1-3]` | ch. 7, ch. 9 | `0abdc70` (`tools/convert_numeric_citations.py`) |
+| inline Markdown hyperlinks | ch. 1, 4, 7, 9–17 | `821d1a2` (`tools/convert_link_citations.py`) |
 
-Two hard cases:
+`references.bib` went 406 → **500 entries** across the phase: 27 DOIs recovered
+from the numeric reference lists, 19 hand-written grey-literature entries, 21
+recovered from hyperlink URLs, and the rest from the org-ref conversions.
 
-- **Numeric citations** need their hand-written reference lists parsed first,
-  then each number mapped to a bib key. The lists are at the end of each file.
-- **`broad-review.md` cites nothing from any `.bib`** — 172 inline hyperlinks
-  and no citation keys, despite a 257-entry bib file having sat next to it.
-  Match hyperlinks back to bib entries by DOI/URL. Whatever resolves to
-  nothing becomes a verification candidate.
+## What the audits found
 
-**The keys changed in Phase 1.** Every citation key was regenerated from actual
-author/year/title metadata, so `cite:xie2014critical` in a converted file will
-*not* match `references.bib` directly. `bibliography-audit.md` records the old
-→ new mapping; use it, don't guess.
+The two hand-written citation styles were both unreliable in the same way, and
+neither failure is visible from a build log. **A resolving DOI proves nothing;
+only a title cross-check does.** Both converters now hard-fail rather than
+write a chapter when a resolved title disagrees with the recorded one.
 
-## What the Phase 3 build already tells you
+**Numeric citations** (`numeric-citation-audit.md`) — of 112 markers:
 
-Auditing `src/` against `references.bib` after Phase 3: **50 `cite:` keys are
-used in the text but do not exist in the bibliography.** Only three of those
-(`chen2023multiphase`, `huang2006development`, `rydberg2004solvent`) are in
-`references-rejected.bib`; the other 47 are Phase 1 re-keying casualties and
-should map cleanly via `bibliography-audit.md`. Get the list with:
+- 9 carried a DOI that resolves cleanly to a *completely unrelated paper*.
+  Recovered by CrossRef title search.
+- 9 described papers that **do not exist**. Each was re-sourced to work that
+  supports the sentence, or the claim was cut. This removed a fabricated
+  figure (TiCl₄ production "exceeding 280 million metric tonnes annually") and
+  a misidentified company (REEtec → REEgen, a Cornell spinout).
+- 22 were grey literature — USGS commodity summaries, agency reports,
+  reference works — which get real bib entries rather than being dropped.
 
-```bash
-grep -rhoE "cite:[a-zA-Z0-9]+" src/*.md | sed 's/cite://' | sort -u > /tmp/used
-grep -oE "^@[a-z]+\{[^,]+," references.bib | sed -E 's/^@[a-z]+\{//; s/,$//' | sort -u > /tmp/have
-comm -23 /tmp/used /tmp/have
-```
+**Hyperlink citations** — of 153 links:
 
-The build also reports ten `Could not link citation with label "X"` warnings,
-all in `src/09-microfluidic-separations.md`. These are org-cite `[cite:@key]`
-spans that MyST already parses as citations — they only need the key remapped,
-so they are the easiest ten to do first and a good check that the mapping
-works.
+- 113 resolved to a DOI and became citations. `tools/link_dois.py` does the
+  recovery: DOIs in the path, Nature article ids, RSC codes, Elsevier PIIs via
+  the CrossRef `alternative-id` filter, MDPI via ISSN + volume/issue/page,
+  Hindawi, Research Square, and PMC/PubMed via NCBI esummary.
+- 3 pointed at a real paper on an unrelated subject — the same failure as the
+  wrong DOIs above, arriving through a different channel. Corrected in
+  `MANUAL_URL` with replacements found by CrossRef search.
+- 4 were repository/aggregator URLs (ResearchGate, an institutional
+  repository, a publisher platform, SciELO) hosting a real paper with no
+  exposed DOI; matched to the published record by title search.
+- **36 stay hyperlinks on purpose.** Vendor pages, national-lab reports, news
+  articles, software documentation — sources with no DOI because they are not
+  papers. Citing them would imply a peer-reviewed record that does not exist.
 
-Two references were added to `references.bib` during Phase 3 for Appendix B
-(`chen2024continuous`, `maurice2021first`), both with DOIs read out of the PDFs
-themselves and confirmed against CrossRef. The bibliography now has 408
-entries.
+`feng2025microfluidic` was upgraded from its SSRN preprint DOI to the published
+*Sep. Purif. Technol.* record its link pointed at.
 
-**67 citations were deleted** (`references-rejected.bib`). Any claim resting
-solely on one of those must be removed or rewritten, not left unsupported.
+## Carried into Phase 6
+
+- **184 of 500 bib entries are orphans** — present in `references.bib`, cited
+  nowhere. Expected: the bibliography was merged from five sources covering
+  more ground than the book. Report them in Phase 6; do not prune blind.
+- **`src/92-references.md` renders empty.** MyST puts a reference list at the
+  foot of each page that cites, so there is no whole-book list to render. The
+  page needs to either be generated or be rewritten to say where references
+  actually live.
 
 ---
 
@@ -200,10 +211,15 @@ All in `tools/`, all re-runnable. Run from `ree-book/`.
 | `verify_bib.py` | Verifies every entry; repairs authors | `--apply` to prune |
 | `fix_doi_mismatches.py` | Fixes DOIs that resolve to the wrong paper | reads `verification-report.md` |
 | `convert_sources.py` | pandoc → MyST for all 13 sources | rewrites `converted/` |
+| `add_refs.py` | Adds a DOI to `references.bib` from CrossRef | same bar as Phase 1 |
+| `convert_citations.py` | org-ref/org-cite → `[@key]` | Phase 4 |
+| `convert_numeric_citations.py` | numeric markers → `[@key]` | hard-fails on a title mismatch |
+| `link_dois.py` | URL → DOI, cached in `.link-dois.json` | 8 publisher URL shapes |
+| `convert_link_citations.py` | hyperlink citations → `[@key]` | leaves non-papers as links |
 
 Audit trail, all committed: `bibliography-audit.md`, `doi-recovery.md`,
-`verification-report.md`, `doi-mismatch-repair.md`, `references-rejected.bib`,
-`converted/MANIFEST.md`.
+`verification-report.md`, `doi-mismatch-repair.md`, `numeric-citation-audit.md`,
+`references-rejected.bib`, `converted/MANIFEST.md`.
 
 ## Gotchas learned the hard way
 
@@ -216,6 +232,11 @@ Audit trail, all committed: `bibliography-audit.md`, `doi-recovery.md`,
   article number. Only a title-vs-DOI cross-check catches this.
 - **Never adopt a wrong DOI's title.** It looks like a fix and silently swaps
   one reference for another.
+- **Hand-written reference lists contain papers that do not exist.** Nine of
+  the 112 numeric references in ch. 7 and ch. 9 described no real paper, and
+  three hyperlink URLs pointed at an unrelated one. Neither shows up in a
+  build log. Every converter must cross-check the resolved title against the
+  recorded one and refuse to write the chapter when they disagree.
 - **`verify_bib.py` used to overwrite `references-rejected.bib`.** Fixed to
   append. If you write another tool that touches it, append.
 - **`[](#slug)` to a chapter H1 fails silently** unless the file carries an
@@ -237,9 +258,10 @@ Audit trail, all committed: `bibliography-audit.md`, `doi-recovery.md`,
 - `Microfluidic_REE_Separation_Report.docx` and
   `microfluidic_extraction_presentation.pptx` look redundant with the `.org`
   siblings. Confirm before ignoring.
-- Two Research Square preprint DOIs in `references.bib`
-  (`10.21203/rs.3.rs-2525701/v1`, `10.21203/rs.3.rs-5243250/v1`) — check
-  whether published versions now exist.
+- ~~Two Research Square preprint DOIs~~ — resolved. `rs-5243250` was already
+  upgraded to its published record (`he2025stepwise`,
+  10.1007/s11356-025-36598-8); `rs-2525701` (`alizadeh2023deep`) still has no
+  published version, confirmed by CrossRef `relation` and title search.
 
 ---
 
