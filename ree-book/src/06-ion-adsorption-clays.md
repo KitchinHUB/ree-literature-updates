@@ -12,8 +12,8 @@ the open market, what chemistry makes them work, and are they recyclable? This
 chapter answers those in turn, then assesses the state of the art, the research
 opportunities, and the environmental implications.
 
-The starting point is the thermodynamic-screening work of
-@mohamadsobri2025enhancing and the broader ion-adsorption-clay literature
+It draws on the thermodynamic-screening work of
+@mohamadsobri2025enhancing and on the broader ion-adsorption-clay literature
 [@borst2020adsorption; @zhou2020genesis; @moldoveanu2016overview; @luo2022development; @wu2023rare; @alshameri2019understanding]. Leaching
 of these ores is also treated from the flowsheet side in
 [](#ion-adsorption-clay-leaching-the-gentle-approach); this chapter takes the
@@ -23,7 +23,7 @@ deposit and the {index}`ion-exchange <ion exchange>` chemistry as its subject.
 
 - Ion-adsorption clays (IAC) -- also "ion-adsorption deposits," "regolith-hosted REE deposits," or "weathered-crust elution-deposited ores" -- are the dominant global source of the **heavy** rare earths (Dy, Tb, Y). Their value is that the REE are held as loosely bound, hydrated, **exchangeable** ions on clay surfaces, so they can be recovered by a simple salt solution at room temperature -- no roasting or strong-acid cracking [@borst2020adsorption].
 - The clay is **not** an open-market commodity: it is low-grade, processed near-source, and supply is dominated by China and Myanmar. The host minerals (kaolinite, halloysite) are cheap industrial clays, but those are sold **without** the adsorbed REE.
-- The chemical-engineering pain is dilute, high-volume hydrometallurgy with impurity co-extraction (Al, Fe), speciation/{index}`precipitation` yield losses, and reagent-driven pollution. The Sobri paper is one response: use thermodynamics to pick a reagent (MgSO4) and conditions (ambient, acidic) that keep REE soluble [@mohamadsobri2025enhancing].
+- The chemical-engineering pain is dilute, high-volume hydrometallurgy with impurity co-extraction (Al, Fe), speciation/{index}`precipitation` yield losses, and reagent-driven pollution. Thermodynamic screening is one response to it: compute the aqueous stability fields and pick a reagent (MgSO4) and conditions (ambient, acidic) that keep the freed REE soluble [@mohamadsobri2025enhancing].
 - The most interesting forward direction is to use **clay/ion exchange itself as a separation technology** -- as a preconcentrator ahead of {index}`solvent extraction`, and (with imported selectivity) as a partial replacement for it.
 - The headline environmental issue is ammonia-nitrogen pollution from in-situ ammonium-sulfate leaching, plus landscape destruction and a large spent-clay residue stream whose fate (reuse vs landfill) is unresolved.
 
@@ -71,9 +71,9 @@ Largely **no**. The ore is low-grade, processed near-source, and subject to Chin
 
 ## State of the art
 
-### Reagent and condition selection (the Sobri paper in context)
+### Reagent and condition selection by thermodynamic screening
 
-The paper that prompted this report is a purely **thermodynamic** (Eh-pH / Pourbaix) screening study, not an experimental one [@mohamadsobri2025enhancing]. Using HSC Chemistry 10.0 it computes the stability fields of La, Nd, and Y in three sulfate leaching solutions over 0.05-0.6 M and 25-80 degrees C, asking which conditions keep the freed REE soluble as REE3+ rather than precipitating or complexing.
+One route to choosing a lixiviant is to screen candidates thermodynamically before touching an ore. @mohamadsobri2025enhancing is a purely **thermodynamic** (Eh-pH / Pourbaix) study of exactly this kind, not an experimental one. Using HSC Chemistry 10.0 it computes the stability fields of La, Nd, and Y in three sulfate leaching solutions over 0.05-0.6 M and 25-80 degrees C, asking which conditions keep the freed REE soluble as REE3+ rather than precipitating or complexing.
 
 | Leaching solution | Behavior across concentration | Verdict |
 |----|----|----|
@@ -127,11 +127,9 @@ In-situ ammonium-sulfate leaching discharges ammonia-nitrogen into groundwater a
 
 #### Precedent: ammonia at the Moab UMTRA site
 
-A sobering precedent for what residual process ammonia costs comes from uranium, not rare earths. The Moab uranium mill tailings pile near Moab, Utah -- a \~16-million-ton pile on the bank of the Colorado River from the former Atlas Minerals mill -- is remediated by the U.S. Department of Energy under the Uranium Mill Tailings Radiation Control Act (a DOE UMTRA project, **not** a CERCLA Superfund site). Its two main **groundwater** contaminants of concern are **ammonia and uranium**, and ammonia is the dominant driver of the active groundwater remediation: it is acutely toxic to young-of-year endangered fish (razorback sucker, Colorado pikeminnow) in Colorado River backwaters. Since 2003 DOE has run a groundwater interim action (now 42 wells) that extracts contaminated groundwater and injects diverted river water to dilute the discharge; over the project life it has kept an estimated **1,002,109 lb of ammonia** versus **5,816 lb of uranium** out of the river -- ammonia outweighing uranium by \~170x
+A sobering precedent for what residual process ammonia costs comes from uranium, not rare earths. The Moab uranium mill tailings pile near Moab, Utah -- roughly 16 million tons of tailings on the bank of the Colorado River, left by the former Atlas Minerals mill -- is being remediated by the U.S. Department of Energy under the Uranium Mill Tailings Radiation Control Act [@doe2025moaboverview]. Its two main **groundwater** contaminants of concern are **ammonia and uranium**, and ammonia is the driver of the active groundwater remediation: elevated ammonia in the backwater channels beside the pile is toxic to young-of-year endangered fish [@doe2025moaboverview], among them the razorback sucker and Colorado pikeminnow, for which measured chronic values for un-ionized ammonia lie below the concentrations found in those backwaters [@fairchild2005chronic]. Since 2003 DOE has run a groundwater interim action -- currently eight extraction wells plus more than thirty freshwater injection wells that dilute what still reaches the river -- and reports that it has kept roughly **1.0 million pounds of ammonia** and about **5,800 pounds of uranium** out of the Colorado, ammonia outweighing uranium by some **170-fold** [@doe2025moabgroundwater; @doe2025moaboverview].
 
-[^1][^2].
-
-The ammonia is **process-reagent** ammonia: the mill precipitated uranium as ammonium diuranate ("yellowcake") using ammonia reagents, and residual ammonia held in tailings pore water has leached into the aquifer for decades -- the same root cause as ammonium-sulfate REE leaching, differing only in unit operation (milling vs leaching). If anything the REE case is harder to contain: Moab is a **point source** (one pile) that can be ringed with extraction wells, whereas in-situ REE leaching injects ammonium **directly into a hillside aquifer over large areas** with no engineered liner. Moab is thus the multi-decade, multi-million-pound, still-pumping illustration of the bill that ammonium hydrometallurgy can incur, and a concrete argument for the magnesium-sulfate / ammonium-free direction [@pan2024insights; @luo2022development; @mohamadsobri2025enhancing].
+The ammonia is **process** ammonia: the tailings pile and the former mill area are DOE's identified sources of ammonia to soil and groundwater, and it has leached from the pile into the aquifer for decades [@doe2025moaboverview] -- the same root cause as ammonium-sulfate REE leaching, differing only in unit operation (milling vs leaching). If anything the REE case is harder to contain: Moab is a **point source** (one pile) that can be ringed with extraction wells, whereas in-situ REE leaching injects ammonium **directly into a hillside aquifer over large areas** with no engineered liner. Moab is thus the multi-decade, million-pound, still-pumping illustration of the bill that ammonium hydrometallurgy can incur, and a concrete argument for the magnesium-sulfate / ammonium-free direction [@pan2024insights; @luo2022development; @mohamadsobri2025enhancing].
 
 ### Landscape destruction and slope failure
 
@@ -143,7 +141,7 @@ Dilute, high-volume hydrometallurgy means large reagent and water inventories. C
 
 ### Spent clay residue: reuse vs landfill (the recyclability question)
 
-After leaching, the kaolinite/halloysite substrate survives intact (REE merely desorbs) -- it becomes depleted regolith, not a closed-loop recycled material. Its fate splits between **landfill** and **beneficial reuse** (land reclamation/ revegetation, construction fill, geopolymer/ceramic feedstock), and residue valorization is part of the green-development agenda [@luo2022development]. **If landfill dominates, the environmental case weakens markedly** -- this is the weakest-sourced and most decision-relevant open question. By contrast, true REE **circularity** comes from end-products ({index}`NdFeB` magnets, phosphors, e-waste) via urban mining, a separate stream.
+After leaching, the kaolinite/halloysite substrate survives intact (REE merely desorbs) -- it becomes depleted regolith, not a closed-loop recycled material. Its fate splits between **landfill** and **beneficial reuse** (land reclamation/ revegetation, construction fill, geopolymer/ceramic feedstock), and residue valorization is part of the green-development agenda [@luo2022development]. **If landfill dominates, the environmental case weakens markedly**, and which fate prevails in practice is poorly documented -- the most decision-relevant open question about these deposits, and the one with the thinnest published evidence behind it. By contrast, true REE **circularity** comes from end-products ({index}`NdFeB` magnets, phosphors, e-waste) via urban mining, a separate stream.
 
 ### Spent-clay valorization routes
 

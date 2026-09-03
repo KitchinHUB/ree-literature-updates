@@ -6,11 +6,13 @@ title: Microfluidic Separations
 # Microfluidic Separations
 
 Shrinking a {index}`solvent extraction` contactor to the width of a human hair changes
-the physics of what happens inside it. Surface-to-volume ratio rises by about an
-order of magnitude, mass transfer coefficients rise by two or three, and contact
-time becomes something that can be set to a tenth of a second rather than
-estimated over twenty minutes. The measured consequence is extraction in seconds
-where conventional {index}`mixer-settlers <mixer-settler>` need tens of minutes.
+the physics of what happens inside it. Surface-to-volume ratio is fixed by the
+channel width rather than by agitation — a 50-100 µm channel presents 400-800 cm²
+of interface per cm³ of fluid — volumetric mass transfer coefficients rise by one
+to two orders of magnitude, and contact time becomes something that can be set to
+a fraction of a second rather than estimated over twenty minutes. The measured
+consequence is extraction in seconds where conventional
+{index}`mixer-settlers <mixer-settler>` need tens of minutes.
 
 The more interesting consequence is that it opens a separation mechanism that
 bulk processing cannot use. Conventional solvent extraction runs to equilibrium,
@@ -48,7 +50,7 @@ relying on any specific number here.
 
 Microfluidic technology represents a transformative approach to REE separation, offering precise control, enhanced mass transfer, and significant process intensification. This section provides a comprehensive overview of microfluidic approaches for rare earth separation.
 
-#### Fundamentals and Advantages
+### Fundamentals and Advantages
 Microfluidic liquid-phase extraction miniaturizes traditional liquid-liquid extraction within microchannels (typically tens of µm cross-section), offering several key advantages [@song2025mine]:
 
 **Core Benefits:**
@@ -63,7 +65,7 @@ Microfluidic liquid-phase extraction miniaturizes traditional liquid-liquid extr
 
 | Parameter | Microfluidic | Conventional Mixer-Settler |
 | ----------- | ------------- | --------------------------- |
-| Extraction time | \<10 seconds | \~25 minutes |
+| Extraction time | 3-60 seconds | 10-25 minutes |
 | Extraction rate | 2-3× higher | Baseline |
 | Contact time control | Sub-second | Minutes |
 | Reagent consumption | Minimal | High |
@@ -73,15 +75,15 @@ Microfluidic liquid-phase extraction miniaturizes traditional liquid-liquid extr
 Three primary microfluidic extraction architectures have emerged for REE separation, each optimized for different kinetic regimes [@fernandezmaza2024high; @zhang2019mechanistic; @zhang2019enabling].
 
 ### Co-laminar (Parallel) Flow Systems
-These systems establish stable interfaces between aqueous and organic phases flowing side-by-side in microchannels at velocities of 40-400 mm/s [@kolar2016microfluidic]. This configuration achieves surface-to-volume ratios double those in bulk extraction and is optimal for fast-kinetics extraction reactions, enabling contact times as short as 0.03-10 seconds with sub-second resolution [@nichols2011mechanistic].
+These systems establish stable interfaces between aqueous and organic phases flowing side-by-side in microchannels at velocities of 40-400 mm/s [@kolar2016microfluidic]. The configuration is optimal for fast-kinetics extraction reactions, enabling contact times as short as 0.03-10 seconds with sub-second resolution [@nichols2011mechanistic]; measured extraction rates in such chips run roughly double those of the corresponding bulk contact, which their authors attribute to the higher interfacial area per unit volume [@kolar2016microfluidic].
 
 ### Droplet-Based (Segmented) Systems
-Droplet-based systems generate discrete organic droplets within continuous aqueous phases, inducing internal vortexes through shear stress that enhance mass transfer by 10-1000× compared to conventional contactors [@zhou2019controlled]. Recent innovations include Janus nanoparticle-stabilized droplets using snowman-shaped magnetic particles that serve as emulsifiers enabling uniform extractant dispersion and rapid magnetic demulsification in under 3 minutes [@anon2024efficienta]. Hollow droplet systems introducing a gas phase (G/L/L configurations) achieve enrichment factors of **200-450** at phase ratios exceeding 200:1---far beyond conventional capabilities [^1].
+Droplet-based systems generate discrete organic droplets within continuous aqueous phases, inducing internal vortexes through shear stress that enhance mass transfer by 10-1000× compared to conventional contactors [@zhou2019controlled]. Recent innovations include Janus nanoparticle-stabilized droplets using snowman-shaped magnetic particles that serve as emulsifiers enabling uniform extractant dispersion and rapid magnetic demulsification in under 3 minutes [@anon2024efficienta]. Hollow droplet systems introduce a gas phase (gas-in-oil-in-water) so that a thin organic shell contacts a large aqueous volume: working at a phase ratio of 200:1 with P507, this configuration concentrated neodymium from a \~100 ppm waste water to about 9 g/L, roughly a hundredfold enrichment in a single pass [@chen2017fast].
 
 ### Slug Flow Configurations
 Slug flow configurations create alternating liquid segments of aqueous and organic phases, allowing precise control of slug length and specific surface area [@dessimoz2008liquid]. This approach has demonstrated {index}`separation factors <separation factor>` of **1,289 for Zn/Mn** in 45 seconds of microfluidic extraction versus 233 in 25 minutes of batch extraction---a five-fold improvement with 33× faster processing [@touma2024intensification]. Novel reactor designs include serpentine microreactors, rotating microchannel extractors, and 3D reticulated hollow-strut SiC foam microreactors achieving **98.7% extraction efficiency** for {index}`praseodymium` and 97.0% for {index}`cerium` [@zhang2022solvent].
 
-#### Flow Regimes and Configurations
+### Flow Regimes and Configurations
 Microfluidic extractors operate in the laminar flow regime (Reynolds number \<2300), with several distinct configurations [@kolar2016microfluidic]:
 
 **Co-Laminar (Parallel) Flow:**
@@ -111,7 +113,7 @@ Microfluidic extractors operate in the laminar flow regime (Reynolds number \<23
 - Achieves equilibrium within 30 seconds at phase ratios of 50-250
 - At extreme 500:1 phase ratio: 77% extraction efficiency
 
-#### Droplet-Based Microfluidic Systems
+### Droplet-Based Microfluidic Systems
 Droplet microfluidics has emerged as a powerful platform for REE separation [@zhang2019mechanistic]:
 
 **Flow-Focusing Droplet Microreactors:** Research on Dy-La binary separation systems demonstrates exceptional performance:
@@ -158,21 +160,47 @@ Microfluidic intensification exploits kinetic rather than equilibrium difference
 
 ## Process Intensification: The Numbers
 
-Quantitative comparisons between microfluidic and conventional solvent extraction demonstrate compelling intensification benefits [@dessimoz2010quantitative; @kashid2007hydrodynamics]:
+Quantitative comparisons between microfluidic and conventional solvent extraction
+are worth making carefully, because the intensification factor depends on which
+channel and which conventional contactor are being compared. The flow-regime
+definitions that underlie these measurements are given by
+[@dessimoz2010quantitative; @kashid2007hydrodynamics].
 
 **Table 2: Performance Comparison**
 
 | **Parameter** | **Microfluidic** | **Conventional** | **Enhancement** |
 |----|----|----|----|
-| Mass transfer coefficient (kLa) | 0.19-0.41 s⁻¹ | 10⁻³-10⁻² s⁻¹ | **100-1000×** |
-| Extraction time | 3-60 seconds | 10-25 minutes | **10-100×** |
-| Surface-to-volume ratio | 49-61 cm²/cm³ | Much lower | **\~10×** |
-| Separation factor | Up to 6× higher | Baseline | **2-6×** |
-| Phase ratio capability | Up to 200:1 | Typically \<50:1 | **4×** |
+| Mass transfer coefficient (kLa) | 0.19-0.41 s⁻¹, slug flow in 269-400 µm rectangular glass channels [@dessimoz2008liquid] | 10⁻³-10⁻² s⁻¹ | **20-400×** |
+| Extraction time | 3-60 s residence time [@fernandezmaza2024high] | 10-25 minutes | **10-500×** |
+| Surface-to-volume ratio | \~800 cm²/cm³ at 50 µm; \~400 at 100 µm; \~57 at a 0.7 mm capillary | set by drop size and holdup, not quoted on a common basis | geometric, not intrinsic |
+| Phase ratio capability | 200:1 demonstrated [@chen2017fast] | Typically \<50:1 | **\~4×** |
+
+*Basis of each row.* Every enhancement figure above is the ratio of the two
+columns at their extremes, computed here rather than quoted: 0.19/10⁻² = 19 and
+0.41/10⁻³ = 410 for kLa, 600 s/60 s = 10 and 1500 s/3 s = 500 for extraction
+time. Two caveats travel with them. The conventional kLa is an order-of-magnitude
+figure carrying no stated agitation condition, and a vigorously stirred contactor
+sits at or above the top of that range, so 400× is an upper bound rather than a
+typical value. And surface-to-volume is not an intrinsic property of
+"microfluidics" at all: for a square channel of side *d* it is simply 4/*d*, so
+it must be quoted against a channel size. At the tens-of-µm scale described above
+that is several hundred cm²/cm³; at a 0.7 mm capillary, which is what much of the
+slug-flow literature actually uses, it is about 57 cm²/cm³ — an order of
+magnitude lower, from the same technology. No interfacial area for a stirred
+dispersion is reported on a comparable basis in the sources cited here, so no
+ratio is given for that row.
+
+The table carries no generic separation-factor row, because no generic figure is
+supportable: selectivity is a property of an element pair and a chemistry, not of
+a contactor. The separation factors reported in this chapter are quoted per pair
+and per system instead — 279 for Dy/La in a flow-focusing droplet reactor
+[@fernandezmaza2024high], 2.72 for Nd/Pr with D2EHPA at pH 5
+[@safarzadeh2018insights] — and none of the microfluidic studies cited here
+measured the same pair in a conventional contactor for comparison.
 
 Heavy REE extraction from mixed oxide concentrates using Cyanex 572 shows Lu and Yb extraction rates **3× faster** than bulk methods [@kriel2015microfluidic]. Heavy REEs separate effectively after only 10-15 seconds of contact versus minutes-hours conventionally.
 
-#### Electrophoretic Microfluidic Separation
+## Electrophoretic Microfluidic Separation
 Electrophoretic techniques offer exceptional resolution for lanthanide separation on microfluidic platforms:
 
 **{index}`Isotachophoresis <isotachophoresis>` (ITP) on Chip:** ITP can separate up to **14 lanthanides** from a homogeneous sample into elementally pure bands [@pesavento2021versatile]:
@@ -198,35 +226,11 @@ Electrophoretic techniques offer exceptional resolution for lanthanide separatio
 
 The most significant pilot-scale achievement comes from the University of South Australia, where Yang et al. (2022) demonstrated **three-stage {index}`counter-current <countercurrent cascade>` microfluidic solvent extraction at 1 L/h throughput** through 100-fold numbering-up [@yang2022pilot]. Multi-layer glass chips stacked in the z-direction maintained extraction efficiency while dramatically increasing throughput. Calculations suggest further numbering-up to 1,000-channel modules remains feasible with minor circuit modifications.
 
-Scale-up follows numbering-up rather than geometric scale-up, preserving the microfluidic advantages of enhanced mass transfer [@hessel2013process]. Internal numbering-up (parallel operations within the extractor) is preferred over external numbering-up (replication of entire systems including pumps) for hardware efficiency. The University of South Australia work with Anglo American Platinum and Johnson Matthey demonstrates industrial interest in translating these approaches [@yang2022pilot].
+Scale-up follows numbering-up rather than geometric scale-up, preserving the microfluidic advantages of enhanced mass transfer [@hessel2013process]. The choice is between *internal* numbering-up, which puts parallel channels inside one device and is the hardware-efficient option, and *external* numbering-up, which replicates whole systems including their pumps and is simpler to implement but multiplies the ancillary equipment. The South Australian chips were fed real acid ore leach liquors rather than synthetic solutions, and recovered platinum as well as REEs; the work was done with Anglo American Platinum and Johnson Matthey, which is a fair indication of industrial interest in translating the approach [@yang2022pilot].
 
-However, a substantial gap remains between current demonstrations and industrial requirements. Industrial REE separation typically processes 50,000-100,000 tons of concentrates annually. The best microfluidic demonstration at 1 L/h equals approximately 8.76 m³/year---requiring 10,000-100,000× additional scale-up through massive parallelization
+However, a substantial gap remains between current demonstrations and industrial requirements. Industrial REE separation typically processes 50,000-100,000 tonnes of concentrates annually. The best microfluidic demonstration at 1 L/h equals approximately 8.76 m³/year of process liquor---so the gap is four to five orders of magnitude of further parallelization, and it is wider still than that ratio suggests, because one side of it is measured as solid concentrate and the other as dilute liquor.
 
-#### Scale-Up: Numbering-Up Approach
-Unlike conventional scale-up (making vessels larger), microfluidics uses "numbering-up" (parallelization) to increase throughput while maintaining performance [@yang2022pilot]:
-
-**Numbering-Up Strategies:**
-
-| Type | Description | Advantages |
-| ------ | ------------- | ------------ |
-| Internal | Parallel channels within single device | Hardware efficient |
-| External | Multiple complete systems in parallel | Simpler implementation |
-
-**Pilot-Scale Demonstrations:**
-
-- Multistream microchips numbered-up for industrial leach solutions
-- **100-fold scale-up** achieved without losing extraction efficiency
-- Three-stage counter-current circuits demonstrated
-- Throughput: **up to 1 L/h** (orders of magnitude higher than previous reports)
-- Platinum and REE extraction from acid ore leach solutions
-
-**Successful REE Extractions:**
-
-- Nd(III) equilibrium achieved within **1.5 seconds** in microreactor
-- High-value metal (Pt, REEs) separation maintained at pilot scale
-- Counter-current operation validated
-
-#### Mini-Channel Counter-Current Extractors
+### Mini-Channel Counter-Current Extractors
 For intermediate scale, mini-channel extractors (4-6 mm diameter) bridge the gap between microfluidics and conventional equipment [@he2024intensifying]:
 
 **Design Parameters:**
@@ -422,7 +426,7 @@ The concept of "mine-on-a-chip" envisions leveraging microfluidics for critical 
 - Hybrid systems combining multiple flow regimes
 - Automated multi-stage counter-current operation
 
-Microfluidic rare earth separation has progressed from fundamental kinetic studies to pilot-scale demonstrations processing 1 L/h through 100-fold parallelization. The technology delivers genuine intensification---100-1000× mass transfer enhancement, 2-3× faster extraction, and separation factors 2-6× higher than conventional systems---by exploiting kinetic differences between lanthanides under precisely controlled non-equilibrium conditions.
+Microfluidic rare earth separation has progressed from fundamental kinetic studies to pilot-scale demonstrations processing 1 L/h through 100-fold parallelization. The technology delivers genuine intensification---volumetric mass transfer coefficients 20-400× those assumed for a conventional contactor, extraction rates 2-3× faster [@kolar2016microfluidic], and, in specific pairs, separation factors far above a single conventional stage (279 for Dy/La in a flow-focusing droplet reactor [@fernandezmaza2024high])---by exploiting kinetic differences between lanthanides under precisely controlled non-equilibrium conditions.
 
 Three key developments will determine commercial trajectory: (1) successful scale-up to industrially relevant throughputs through massive parallelization while maintaining microfluidic advantages; (2) integration of robust on-chip analytics for real-time process control; and (3) demonstration of long-term operational stability with real industrial feedstocks [@wang2017microflow]. Biological separation approaches using lanmodulin proteins achieving \>98% purity in single stages suggest hybrid bio-microfluidic systems may ultimately prove more transformative than incremental improvements to solvent extraction chemistry [@cotruvo2023enhanced].
 
