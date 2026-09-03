@@ -70,16 +70,16 @@ Microfluidic liquid-phase extraction miniaturizes traditional liquid-liquid extr
 
 ## Extraction Architectures
 
-Three primary microfluidic extraction architectures have emerged for REE separation, each optimized for different kinetic regimes [5-7].
+Three primary microfluidic extraction architectures have emerged for REE separation, each optimized for different kinetic regimes [@fernandezmaza2024high; @zhang2019mechanistic; @zhang2019enabling].
 
 ### Co-laminar (Parallel) Flow Systems
-These systems establish stable interfaces between aqueous and organic phases flowing side-by-side in microchannels at velocities of 40-400 mm/s [8]. This configuration achieves surface-to-volume ratios double those in bulk extraction and is optimal for fast-kinetics extraction reactions, enabling contact times as short as 0.03-10 seconds with sub-second resolution [9].
+These systems establish stable interfaces between aqueous and organic phases flowing side-by-side in microchannels at velocities of 40-400 mm/s [@kolar2016microfluidic]. This configuration achieves surface-to-volume ratios double those in bulk extraction and is optimal for fast-kinetics extraction reactions, enabling contact times as short as 0.03-10 seconds with sub-second resolution [@nichols2011mechanistic].
 
 ### Droplet-Based (Segmented) Systems
-Droplet-based systems generate discrete organic droplets within continuous aqueous phases, inducing internal vortexes through shear stress that enhance mass transfer by 10-1000× compared to conventional contactors [10]. Recent innovations include Janus nanoparticle-stabilized droplets using snowman-shaped magnetic particles that serve as emulsifiers enabling uniform extractant dispersion and rapid magnetic demulsification in under 3 minutes [11]. Hollow droplet systems introducing a gas phase (G/L/L configurations) achieve enrichment factors of **200-450** at phase ratios exceeding 200:1---far beyond conventional capabilities [^1].
+Droplet-based systems generate discrete organic droplets within continuous aqueous phases, inducing internal vortexes through shear stress that enhance mass transfer by 10-1000× compared to conventional contactors [@zhou2019controlled]. Recent innovations include Janus nanoparticle-stabilized droplets using snowman-shaped magnetic particles that serve as emulsifiers enabling uniform extractant dispersion and rapid magnetic demulsification in under 3 minutes [@anon2024efficienta]. Hollow droplet systems introducing a gas phase (G/L/L configurations) achieve enrichment factors of **200-450** at phase ratios exceeding 200:1---far beyond conventional capabilities [^1].
 
 ### Slug Flow Configurations
-Slug flow configurations create alternating liquid segments of aqueous and organic phases, allowing precise control of slug length and specific surface area [13]. This approach has demonstrated separation factors of **1,289 for Zn/Mn** in 45 seconds of microfluidic extraction versus 233 in 25 minutes of batch extraction---a five-fold improvement with 33× faster processing [14]. Novel reactor designs include serpentine microreactors, rotating microchannel extractors, and 3D reticulated hollow-strut SiC foam microreactors achieving **98.7% extraction efficiency** for praseodymium and 97.0% for cerium [15].
+Slug flow configurations create alternating liquid segments of aqueous and organic phases, allowing precise control of slug length and specific surface area [@dessimoz2008liquid]. This approach has demonstrated separation factors of **1,289 for Zn/Mn** in 45 seconds of microfluidic extraction versus 233 in 25 minutes of batch extraction---a five-fold improvement with 33× faster processing [@touma2024intensification]. Novel reactor designs include serpentine microreactors, rotating microchannel extractors, and 3D reticulated hollow-strut SiC foam microreactors achieving **98.7% extraction efficiency** for praseodymium and 97.0% for cerium [@zhang2022solvent].
 
 #### Flow Regimes and Configurations
 Microfluidic extractors operate in the laminar flow regime (Reynolds number \<2300), with several distinct configurations ([ScienceDirect](https://www.sciencedirect.com/science/article/abs/pii/S0009250916301658)):
@@ -133,7 +133,7 @@ Droplet microfluidics has emerged as a powerful platform for REE separation ([Ch
 
 ## Separation Mechanisms and Extractants
 
-The dominant separation mechanism employs cation exchange extraction using organophosphorus extractants [16]. The fundamental reaction---RE³⁺(aq) + 3(HA)₂(org) → RE(A₂H)₃(org) + 3H⁺(aq)---involves each REE ion extracted in a complex with six extractant molecules arranged as dimers [17].
+The dominant separation mechanism employs cation exchange extraction using organophosphorus extractants [@xie2014critical]. The fundamental reaction---RE³⁺(aq) + 3(HA)₂(org) → RE(A₂H)₃(org) + 3H⁺(aq)---involves each REE ion extracted in a complex with six extractant molecules arranged as dimers [@jensen2002comparison].
 
 **Table 1: Common Extractants for REE Separation**
 
@@ -144,21 +144,21 @@ The dominant separation mechanism employs cation exchange extraction using organ
 | HEHEHP/P507 | Light REEs (La, Ce, Pr, Nd) | Lower acid stripping requirement |
 | TODGA | f-element separations | Tridentate ligand, high Ln affinity |
 
-Synergistic extraction systems combining multiple extractants produce non-linear enhancement effects [18]. Studies of DMDOHEMA + HDEHP systems reveal that synergy effects are quadratic in mole fraction, attributed to in-plane mixing entropy at bent extractant film interfaces [19]. TODGA + TBP in ionic liquid \[C4mim\]\[Tf2N\] achieves enhanced extraction AND high intra-lanthanide selectivity simultaneously [20].
+Synergistic extraction systems combining multiple extractants produce non-linear enhancement effects [@turanov2020solvent]. Studies of DMDOHEMA + HDEHP systems reveal that synergy effects are quadratic in mole fraction, attributed to in-plane mixing entropy at bent extractant film interfaces [@elmaangar2020microfluidic]. TODGA + TBP in ionic liquid \[C4mim\]\[Tf2N\] achieves enhanced extraction AND high intra-lanthanide selectivity simultaneously [@rout2014solvent].
 
-Beyond solvent extraction, membrane-based separations using hollow fiber supported liquid membranes (HFSLM) have reached **8 m² pilot-scale testing** with D2EHPA [21]. Electrophoretic methods, particularly capillary zone electrophoresis with HIBA buffers, achieve complete separation of **14 lanthanides in under 6 minutes**---though primarily at analytical scale [22]. Electrodialysis with EDTA chelation exploits differential chelation between heavy REEs (preferentially forming chelates) and light REEs (remaining as free cations) to achieve a **Dy/Nd separation factor of 125** with 93% Dy purity [23].
+Beyond solvent extraction, membrane-based separations using hollow fiber supported liquid membranes (HFSLM) have reached **8 m² pilot-scale testing** with D2EHPA [@alemrajabi2022separation]. Electrophoretic methods, particularly capillary zone electrophoresis with HIBA buffers, achieve complete separation of **14 lanthanides in under 6 minutes**---though primarily at analytical scale [@yelkenci2017separation]. Electrodialysis with EDTA chelation exploits differential chelation between heavy REEs (preferentially forming chelates) and light REEs (remaining as free cations) to achieve a **Dy/Nd separation factor of 125** with 93% Dy purity [@ding2023separation].
 
 ## The Adjacent Lanthanide Challenge
 
-Separating adjacent lanthanides differing by only 0.01-0.02 Å in ionic radius represents the field's hardest problem [24]. For the industrially critical **Nd/Pr separation**, optimized D2EHPA systems at pH 5 in hydrochloric acid achieve separation factors of only 2.72---requiring many stages for high purity [25]. pH emerges as the dominant variable affecting Nd/Pr selectivity.
+Separating adjacent lanthanides differing by only 0.01-0.02 Å in ionic radius represents the field's hardest problem [@nash1993basic]. For the industrially critical **Nd/Pr separation**, optimized D2EHPA systems at pH 5 in hydrochloric acid achieve separation factors of only 2.72---requiring many stages for high purity [@safarzadeh2018insights]. pH emerges as the dominant variable affecting Nd/Pr selectivity.
 
-The **Dy/Nd separation** critical for permanent magnet recycling has seen dramatic advances through non-conventional approaches. Lanmodulin protein variants (Hans-LanM R100K) achieve **\>98% purity and \>99% yield in a single stage**---a result unachievable with conventional solvent extraction [26]. MOF nanotraps (NCU-1) with carboxyl groups and triazole nitrogen atoms demonstrate **separation factors of 273 for Nd/Er and 796 for Pr/Lu** in single-step separations [27]. Flow-focusing droplet microreactors achieve 90% Dy extraction with separation factor of 279 for Dy/La at pH 1 in 3-60 seconds residence time [28].
+The **Dy/Nd separation** critical for permanent magnet recycling has seen dramatic advances through non-conventional approaches. Lanmodulin protein variants (Hans-LanM R100K) achieve **\>98% purity and \>99% yield in a single stage**---a result unachievable with conventional solvent extraction [@cotruvo2023enhanced]. MOF nanotraps (NCU-1) with carboxyl groups and triazole nitrogen atoms demonstrate **separation factors of 273 for Nd/Er and 796 for Pr/Lu** in single-step separations [@hu2024rationally]. Flow-focusing droplet microreactors achieve 90% Dy extraction with separation factor of 279 for Dy/La at pH 1 in 3-60 seconds residence time [@fernandezmaza2024high].
 
-Microfluidic intensification exploits kinetic rather than equilibrium differences [29]. For lanthanide pairs with distinguished kinetics (Eu³⁺/La³⁺), extraction proceeds to different degrees before equilibrium is reached. For pairs with similar kinetics (Eu³⁺/Sm³⁺), Damköhler number manipulation via flow rate, concentration, and temperature enables separation through precise control of non-equilibrium conditions---impossible in conventional batch systems [30].
+Microfluidic intensification exploits kinetic rather than equilibrium differences [@zhang2019mechanistic]. For lanthanide pairs with distinguished kinetics (Eu³⁺/La³⁺), extraction proceeds to different degrees before equilibrium is reached. For pairs with similar kinetics (Eu³⁺/Sm³⁺), Damköhler number manipulation via flow rate, concentration, and temperature enables separation through precise control of non-equilibrium conditions---impossible in conventional batch systems [@zhang2019enabling].
 
 ## Process Intensification: The Numbers
 
-Quantitative comparisons between microfluidic and conventional solvent extraction demonstrate compelling intensification benefits [31-33]:
+Quantitative comparisons between microfluidic and conventional solvent extraction demonstrate compelling intensification benefits [@dessimoz2010quantitative; @kashid2007hydrodynamics]:
 
 **Table 2: Performance Comparison**
 
@@ -170,7 +170,7 @@ Quantitative comparisons between microfluidic and conventional solvent extractio
 | Separation factor | Up to 6× higher | Baseline | **2-6×** |
 | Phase ratio capability | Up to 200:1 | Typically \<50:1 | **4×** |
 
-Heavy REE extraction from mixed oxide concentrates using Cyanex 572 shows Lu and Yb extraction rates **3× faster** than bulk methods [34]. Heavy REEs separate effectively after only 10-15 seconds of contact versus minutes-hours conventionally. Hollow droplet systems with gas phases achieve kLa values 5-50× higher than systems without gas injection [35].
+Heavy REE extraction from mixed oxide concentrates using Cyanex 572 shows Lu and Yb extraction rates **3× faster** than bulk methods [@kriel2015microfluidic]. Heavy REEs separate effectively after only 10-15 seconds of contact versus minutes-hours conventionally.
 
 #### Electrophoretic Microfluidic Separation
 Electrophoretic techniques offer exceptional resolution for lanthanide separation on microfluidic platforms:
@@ -196,9 +196,9 @@ Electrophoretic techniques offer exceptional resolution for lanthanide separatio
 
 ## Scale-Up by Numbering-Up
 
-The most significant pilot-scale achievement comes from the University of South Australia, where Yang et al. (2022) demonstrated **three-stage counter-current microfluidic solvent extraction at 1 L/h throughput** through 100-fold numbering-up [4]. Multi-layer glass chips stacked in the z-direction maintained extraction efficiency while dramatically increasing throughput. Calculations suggest further numbering-up to 1,000-channel modules remains feasible with minor circuit modifications.
+The most significant pilot-scale achievement comes from the University of South Australia, where Yang et al. (2022) demonstrated **three-stage counter-current microfluidic solvent extraction at 1 L/h throughput** through 100-fold numbering-up [@yang2022pilot]. Multi-layer glass chips stacked in the z-direction maintained extraction efficiency while dramatically increasing throughput. Calculations suggest further numbering-up to 1,000-channel modules remains feasible with minor circuit modifications.
 
-Scale-up follows numbering-up rather than geometric scale-up, preserving the microfluidic advantages of enhanced mass transfer [36]. Internal numbering-up (parallel operations within the extractor) is preferred over external numbering-up (replication of entire systems including pumps) for hardware efficiency. The University of South Australia work with Anglo American Platinum and Johnson Matthey demonstrates industrial interest in translating these approaches [37].
+Scale-up follows numbering-up rather than geometric scale-up, preserving the microfluidic advantages of enhanced mass transfer [@hessel2013process]. Internal numbering-up (parallel operations within the extractor) is preferred over external numbering-up (replication of entire systems including pumps) for hardware efficiency. The University of South Australia work with Anglo American Platinum and Johnson Matthey demonstrates industrial interest in translating these approaches [@yang2022pilot].
 
 However, a substantial gap remains between current demonstrations and industrial requirements. Industrial REE separation typically processes 50,000-100,000 tons of concentrates annually. The best microfluidic demonstration at 1 L/h equals approximately 8.76 m³/year---requiring 10,000-100,000× additional scale-up through massive parallelization
 
@@ -354,29 +354,27 @@ Kim et al. (2009) developed solvent-resistant PDMS microfluidic devices with hyb
 
 ## Feedstock Integration
 
-Microfluidic systems have been validated with diverse REE-containing feedstocks beyond synthetic solutions. Processing of **mixed rare earth oxide ore leachates** using Y-Y microchip configurations with Cyanex 572 achieved 2-3× higher extraction rates with contact times of only 15 seconds [8]. Stream-based chips avoid "crud" formation---emulsions stabilized by fine particles that plague conventional processing [48].
+Microfluidic systems have been validated with diverse REE-containing feedstocks beyond synthetic solutions. Processing of **mixed rare earth oxide ore leachates** using Y-Y microchip configurations with Cyanex 572 achieved 2-3× higher extraction rates with contact times of only 15 seconds [@kolar2016microfluidic]. Stream-based chips avoid "crud" formation---emulsions stabilized by fine particles that plague conventional processing [@yang2024industry].
 
-**NdFeB permanent magnet recycling** represents a high-value near-term application. HFSLM systems achieve \>97% purity Dy separation from NdFeB leachates using EHEHPA extractant in non-dispersive mode [49]. Novel selective leaching approaches using ionic hydrotropes (sodium salicylate in ethyl acetate) achieve 88% Dy dissolution in a first step, with subsequent Nd/Pr extraction enabling clean fraction separation [50].
+**NdFeB permanent magnet recycling** represents a high-value near-term application. HFSLM systems achieve \>97% purity Dy separation from NdFeB leachates using EHEHPA extractant in non-dispersive mode [@yadav2018ndfeb]. Novel selective leaching approaches using ionic hydrotropes (sodium salicylate in ethyl acetate) achieve 88% Dy dissolution in a first step, with subsequent Nd/Pr extraction enabling clean fraction separation [@orefice2019selective].
 
-**Coal fly ash** containing 250-800 ppm total REE (Appalachian sources average 591 ppm) integrates with microfluidic extraction following citrate leaching [51]. Complete "ash-to-oxide" processes achieve enrichment factors exceeding 400× relative to raw fly ash. Flash Joule heating ultrafast activation (\~3000°C, \~1 second) increases REE extractability approximately 2× from secondary wastes including coal ash, bauxite residue, and electronic waste at remarkably low energy consumption of 600 kWh/ton (\~\$12/ton) [52].
+**Coal fly ash** containing 250-800 ppm total REE (Appalachian sources average 591 ppm) integrates with microfluidic extraction following citrate leaching [@osti2021process]. Complete "ash-to-oxide" processes achieve enrichment factors exceeding 400× relative to raw fly ash. Flash Joule heating ultrafast activation (\~3000°C, \~1 second) increases REE extractability approximately 2× from secondary wastes including coal ash, bauxite residue, and electronic waste at remarkably low energy consumption of 600 kWh/ton (\~\$12/ton) [@deng2022rare].
 
 ### Scandium Recovery from Red Mud
 A specific application demonstrating microfluidic strategy for rapid Sc extraction from red mud (bauxite residue) shows the technology's applicability to industrial waste streams ([Separation and Purification Technology 2025](https://www.sciencedirect.com/science/article/abs/pii/S138358662502307X)).
 
 ## Industrial Status and Key Players
 
-**True commercial-scale microfluidic REE separation plants do not yet exist.** The technology remains at research-to-pilot stages, though several companies are developing related advanced separation technologies [39]:
+**True commercial-scale microfluidic REE separation plants do not yet exist.** The technology remains at research-to-pilot stages. Several companies are commercialising *related* intensified separations, and the figures below come from company announcements rather than from the peer-reviewed literature; treat them as claims, not measurements.
 
-- **IBC Advanced Technologies** offers the most mature related technology with SuperLig® Molecular Recognition Technology (MRT™), which has demonstrated separation of all individual REEs (except promethium) including adjacent pairs from spent NdFeB permanent magnets with \>99% recovery and \>99.9% purity [40].
+- **IBC Advanced Technologies** offers the most mature related technology, SuperLig® Molecular Recognition Technology (MRT™), a ligand-on-support column chemistry that the company reports separates individual REEs, including adjacent pairs, from spent NdFeB magnets at high recovery and purity.
 
-- **Phoenix Tailings** (Boston) extracts REEs from mine tailings without toxic chemicals, scaling from 40 to 400 metric tons/year with \~\$80M in funding from BMW, Hitachi, and Microsoft [41].
+- **Phoenix Tailings** (Boston) extracts REEs from mine tailings by a route it describes as free of the acids and radioactive waste of conventional processing, and is scaling from tens to hundreds of tonnes per year.
 
-- **Rare Earth Technologies Inc.** plans the first US REE facility in 2025, targeting 300 metric tons/year initially scaling to 90,000 metric tons by 2028 using proprietary column chemistry achieving 99.999% separation in single pass [42].
-
-- **REEtec** (Cornell spinout) combines bioleaching using Gluconobacter oxydans with microfluidics for directed evolution screening [43].
+- **REEgen**, a Cornell spinout, uses bioleaching with *Gluconobacter oxydans* — the organism behind the biolixiviant work in [](#biological-and-biomimetic-separations) — rather than microfluidic contactors as such.
 
 ### Leading Research Groups
-**Tsinghua University's State Key Laboratory of Chemical Engineering** leads global research, with Prof. Jianhong Xu's group pioneering hollow droplet extraction and Janus nanoparticle-stabilized systems [11]. Prof. Yundong Wang's team focuses on continuous REE recovery from wastewater
+**Tsinghua University's State Key Laboratory of Chemical Engineering** leads global research, with Prof. Jianhong Xu's group pioneering hollow droplet extraction and Janus nanoparticle-stabilized systems [@anon2024efficienta]. Prof. Yundong Wang's team focuses on continuous REE recovery from wastewater
 
 ## The Mine-on-a-Chip Vision
 
@@ -426,7 +424,7 @@ The concept of "mine-on-a-chip" envisions leveraging microfluidics for critical 
 
 Microfluidic rare earth separation has progressed from fundamental kinetic studies to pilot-scale demonstrations processing 1 L/h through 100-fold parallelization. The technology delivers genuine intensification---100-1000× mass transfer enhancement, 2-3× faster extraction, and separation factors 2-6× higher than conventional systems---by exploiting kinetic differences between lanthanides under precisely controlled non-equilibrium conditions.
 
-Three key developments will determine commercial trajectory: (1) successful scale-up to industrially relevant throughputs through massive parallelization while maintaining microfluidic advantages; (2) integration of robust on-chip analytics for real-time process control; and (3) demonstration of long-term operational stability with real industrial feedstocks [53]. Biological separation approaches using lanmodulin proteins achieving \>98% purity in single stages suggest hybrid bio-microfluidic systems may ultimately prove more transformative than incremental improvements to solvent extraction chemistry [26].
+Three key developments will determine commercial trajectory: (1) successful scale-up to industrially relevant throughputs through massive parallelization while maintaining microfluidic advantages; (2) integration of robust on-chip analytics for real-time process control; and (3) demonstration of long-term operational stability with real industrial feedstocks [@wang2017microflow]. Biological separation approaches using lanmodulin proteins achieving \>98% purity in single stages suggest hybrid bio-microfluidic systems may ultimately prove more transformative than incremental improvements to solvent extraction chemistry [@cotruvo2023enhanced].
 
 The most promising near-term applications target high-value, low-volume separations---particularly adjacent heavy REE pairs critical for permanent magnets where conventional SX requires dozens of stages. Phoenix Tailings, RETi, and IBC Advanced Technologies are positioning related technologies for commercial deployment, though true microfluidic processing at scale remains 5-10 years away. The fundamental science is proven; the engineering and economics of massive parallelization will determine whether microfluidics transforms REE processing or remains a powerful laboratory tool.
 

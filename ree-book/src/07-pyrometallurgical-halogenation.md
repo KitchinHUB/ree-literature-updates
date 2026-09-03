@@ -75,7 +75,7 @@ Iodination is the mildest halogenation route, producing rare earth iodides at re
 ## Carbochlorination Chemistry
 
 ### Fundamental Chemistry
-The carbochlorination process converts metal oxides to chlorides through the synergistic action of carbon (reducing agent) and chlorine gas (chlorinating agent) at elevated temperatures [7]. The presence of carbon is essential because direct chlorination of many metal oxides, including rare earth oxides, is thermodynamically unfavorable at accessible temperatures without a reducing agent [8].
+The carbochlorination process converts metal oxides to chlorides through the synergistic action of carbon (reducing agent) and chlorine gas (chlorinating agent) at elevated temperatures [@anderson2015investigation]. The presence of carbon is essential because direct chlorination of many metal oxides, including rare earth oxides, is thermodynamically unfavorable at accessible temperatures without a reducing agent [@hua2014selective].
 
 For rare earth oxides, the primary reactions are:
 
@@ -85,27 +85,27 @@ For rare earth oxides, the primary reactions are:
 
 - CeO₂ + 2C + 2Cl₂ → CeCl₃ + 2CO (for tetravalent cerium)
 
-Research has shown that direct contact between metal oxides and carbon is not necessary for effective chlorination [9]. The reaction proceeds through gaseous intermediates, with carbon providing catalytic activity sites for the formation of highly reactive species. Proposed intermediates include phosgene (COCl₂), monatomic chlorine, and carbon tetrachloride (CCl₄) [10].
+Research has shown that direct contact between metal oxides and carbon is not necessary for effective chlorination [@gavira2010carbochlorination]. The reaction proceeds through gaseous intermediates, with carbon providing catalytic activity sites for the formation of highly reactive species. Proposed intermediates include phosgene (COCl₂), monatomic chlorine, and carbon tetrachloride (CCl₄) [@murase1995recovery].
 
 ### Thermodynamic Considerations
-Thermodynamic analysis using Gibbs free energy calculations demonstrates that carbochlorination of rare earth oxides is spontaneous (ΔG \< 0) over a wide temperature range of 500-1000°C [11,12]. The Gibbs free energy becomes increasingly negative with rising temperature, indicating enhanced thermodynamic driving force.
+Thermodynamic analysis using Gibbs free energy calculations demonstrates that carbochlorination of rare earth oxides is spontaneous (ΔG \< 0) over a wide temperature range of 500-1000°C [@xue2025carbochlorination; @xu2024rare]. The Gibbs free energy becomes increasingly negative with rising temperature, indicating enhanced thermodynamic driving force.
 
 Key thermodynamic findings include:
 
-- Operating temperatures of 600-900°C are typical, significantly lower than the \>1200°C required for traditional roasting processes [13].
+- Operating temperatures of 600-900°C are typical, significantly lower than the \>1200°C required for traditional roasting processes [@zheng2019mechanism].
 
-- Above 700°C, the primary carbon product switches from CO₂ to CO, requiring more carbon for complete conversion but providing better energy efficiency [14].
+- Above 700°C, the primary carbon product switches from CO₂ to CO, requiring more carbon for complete conversion but providing better energy efficiency [@borra2016recovery].
 
-- Phase stability diagrams (RE-O-Cl systems) reveal element-specific reaction pathways that influence process design [15].
+- Phase stability diagrams (RE-O-Cl systems) reveal element-specific reaction pathways that influence process design [@xue2025carbochlorination].
 
-- The carbochlorination process provides substantially lower activation energy compared to direct chlorination or oxide reduction routes [16].
+- The carbochlorination process provides substantially lower activation energy compared to direct chlorination or oxide reduction routes [@xia2024experimental].
 
 ### Reaction Mechanisms and Kinetics
-The carbochlorination reaction proceeds through distinct mechanisms depending on the specific rare earth element. For cerium oxide (CeO₂), phase stability diagrams show a direct boundary between the CeO₂ and CeCl₃ phases, indicating that the oxide can convert directly to the chloride without intermediate phases [17].
+The carbochlorination reaction proceeds through distinct mechanisms depending on the specific rare earth element. For cerium oxide (CeO₂), phase stability diagrams show a direct boundary between the CeO₂ and CeCl₃ phases, indicating that the oxide can convert directly to the chloride without intermediate phases [@roine2019hsc].
 
-In contrast, neodymium oxide (Nd₂O₃) must convert through an intermediate oxychloride (NdOCl) phase before complete conversion to NdCl₃ [18]. This difference has important implications for process optimization, as the oxychloride plays a larger role in neodymium processing than in cerium processing.
+In contrast, neodymium oxide (Nd₂O₃) must convert through an intermediate oxychloride (NdOCl) phase before complete conversion to NdCl₃ [@anderson2015investigation]. This difference has important implications for process optimization, as the oxychloride plays a larger role in neodymium processing than in cerium processing.
 
-Kinetic studies reveal that the carbochlorination reaction proceeds in two stages, both controlled by chemical reactions rather than diffusion [19]. Key kinetic parameters include:
+Kinetic studies reveal that the carbochlorination reaction proceeds in two stages, both controlled by chemical reactions rather than diffusion [@yang2017ree]. Key kinetic parameters include:
 
 - First stage activation energy: 12.54 kJ/mol
 
@@ -121,7 +121,7 @@ Kinetic studies reveal that the carbochlorination reaction proceeds in two stage
 
 - Achievable conversion rate: \>93%
 
-For yttrium oxide (Y₂O₃), the reaction mechanism involves the initial formation of YOCl through nucleation and growth. At temperatures above 715°C, the final product is liquid YCl₃, which can evaporate from the reaction zone [20].
+For yttrium oxide (Y₂O₃), the reaction mechanism involves the initial formation of YOCl through nucleation and growth. At temperatures above 715°C, the final product is liquid YCl₃, which can evaporate from the reaction zone [@gavira2010carbochlorination].
 
 ### Kinetics and Mechanism
 Research has revealed element-specific reaction mechanisms. For cerium oxide (CeO₂), phase stability diagrams show a direct boundary between CeO₂ and CeCl₃ phases, indicating direct conversion without intermediate phases. In contrast, neodymium oxide (Nd₂O₃) converts through an intermediate oxychloride (NdOCl) phase before complete conversion to NdCl₃.
@@ -230,7 +230,7 @@ A recent breakthrough proposes a one-step carbochlorination-washing process achi
 Carbochlorination has been investigated for various rare earth elements with thermodynamic and experimental evidence supporting its applicability across the entire lanthanide series plus scandium and yttrium.
 
 ### Light Rare Earth Elements
-The light rare earth elements (LREEs) comprise lanthanum (La), cerium (Ce), praseodymium (Pr), neodymium (Nd), promethium (Pm), and samarium (Sm). These elements are more abundant in the principal REE minerals bastnaesite and monazite, making them the primary targets for industrial carbochlorination [21].
+The light rare earth elements (LREEs) comprise lanthanum (La), cerium (Ce), praseodymium (Pr), neodymium (Nd), promethium (Pm), and samarium (Sm). These elements are more abundant in the principal REE minerals bastnaesite and monazite, making them the primary targets for industrial carbochlorination [@gupta1992extractive].
 
 | **Element** | **Oxide** | **Chloride** | **Carbochlorination Feasibility** |
 |----|----|----|----|
@@ -241,10 +241,10 @@ The light rare earth elements (LREEs) comprise lanthanum (La), cerium (Ce), pras
 | Promethium (Pm) | Pm₂O₃ | PmCl₃ | Theoretical - Radioactive, limited studies |
 | Samarium (Sm) | Sm₂O₃ | SmCl₃ | Good - Follows LREE pattern |
 
-Cerium and neodymium have received the most research attention due to their industrial importance. Cerium is the most abundant REE and is used in catalysts and glass polishing, while neodymium is critical for NdFeB permanent magnets [22]. Studies have confirmed that both oxides can be efficiently converted to anhydrous chlorides via carbochlorination at 700°C with \>93% conversion rates [23].
+Cerium and neodymium have received the most research attention due to their industrial importance. Cerium is the most abundant REE and is used in catalysts and glass polishing, while neodymium is critical for NdFeB permanent magnets [@long2010principal]. Studies have confirmed that both oxides can be efficiently converted to anhydrous chlorides via carbochlorination at 700°C with \>93% conversion rates [@anderson2015investigation].
 
 ### Heavy Rare Earth Elements
-The heavy rare earth elements (HREEs) include europium (Eu), gadolinium (Gd), terbium (Tb), dysprosium (Dy), holmium (Ho), erbium (Er), thulium (Tm), ytterbium (Yb), and lutetium (Lu). These elements are generally less abundant but often more valuable than LREEs [24].
+The heavy rare earth elements (HREEs) include europium (Eu), gadolinium (Gd), terbium (Tb), dysprosium (Dy), holmium (Ho), erbium (Er), thulium (Tm), ytterbium (Yb), and lutetium (Lu). These elements are generally less abundant but often more valuable than LREEs [@tunsu2016hydrometallurgical].
 
 | **Element** | **Oxide** | **Chloride** | **Carbochlorination Feasibility** |
 |----|----|----|----|
@@ -258,12 +258,12 @@ The heavy rare earth elements (HREEs) include europium (Eu), gadolinium (Gd), te
 | Ytterbium (Yb) | Yb₂O₃ | YbCl₃/YbCl₂ | Good - May reduce to Yb(II) |
 | Lutetium (Lu) | Lu₂O₃ | LuCl₃ | Good - Highest melting point REE |
 
-The HREEs follow similar carbochlorination chemistry to the LREEs, with thermodynamic calculations indicating spontaneous reaction at temperatures above 500°C [25]. Europium and ytterbium present special cases as they can form divalent chlorides (EuCl₂, YbCl₂) under strongly reducing conditions, which may affect separation strategies [26].
+The HREEs follow similar carbochlorination chemistry to the LREEs, with thermodynamic calculations indicating spontaneous reaction at temperatures above 500°C [@jyothi2020rare]. Europium and ytterbium present special cases as they can form divalent chlorides (EuCl₂, YbCl₂) under strongly reducing conditions, which may affect separation strategies [@kumari2015process].
 
 ### Scandium and Yttrium
-Scandium (Sc) and yttrium (Y), while not lanthanides, are classified as rare earth elements due to their similar chemical properties and occurrence with lanthanides in mineral deposits [27].
+Scandium (Sc) and yttrium (Y), while not lanthanides, are classified as rare earth elements due to their similar chemical properties and occurrence with lanthanides in mineral deposits [@energy2011critical].
 
-Yttrium oxide (Y₂O₃) carbochlorination has been studied in detail. Key findings include [28]:
+Yttrium oxide (Y₂O₃) carbochlorination has been studied in detail. Key findings include [@habashi2013extractive]:
 
 - The reaction proceeds via nucleation and growth of YOCl intermediate
 
@@ -273,16 +273,16 @@ Yttrium oxide (Y₂O₃) carbochlorination has been studied in detail. Key findi
 
 - Complete conversion to anhydrous YCl₃ is achievable under optimized conditions
 
-Scandium, though less studied for carbochlorination specifically, is expected to follow similar thermodynamic and kinetic patterns given its chemical similarity to yttrium and the lanthanides [29].
+Scandium, though less studied for carbochlorination specifically, is expected to follow similar thermodynamic and kinetic patterns given its chemical similarity to yttrium and the lanthanides [@gorman2018sustainable].
 
 ## Primary Ore Processing
 
 ### Bastnaesite Processing
-Bastnaesite \[(Ce,La)(CO₃)F\] is a fluorocarbonate mineral containing approximately 70 wt% rare earth oxides, primarily light rare earths [30]. The Bayan Obo deposit in China and the Mountain Pass deposit in the United States represent the world's largest bastnaesite resources [31].
+Bastnaesite \[(Ce,La)(CO₃)F\] is a fluorocarbonate mineral containing approximately 70 wt% rare earth oxides, primarily light rare earths [@chi2008weathered]. The Bayan Obo deposit in China and the Mountain Pass deposit in the United States represent the world's largest bastnaesite resources [@castor2006rare].
 
-Carbochlorination of bastnaesite requires special consideration of the fluorine content. Zhang et al. developed a carbochlorination process using carbon as the reducing agent, chlorine as the chlorinating agent, and silicon tetrachloride (SiCl₄) as a defluorinating agent [32]. The defluorination reaction prevents formation of volatile fluorides and allows recovery of fluorine as valuable byproduct.
+Carbochlorination of bastnaesite requires special consideration of the fluorine content. Zhang et al. developed a carbochlorination process using carbon as the reducing agent, chlorine as the chlorinating agent, and silicon tetrachloride (SiCl₄) as a defluorinating agent [@zhang2015occurrence]. The defluorination reaction prevents formation of volatile fluorides and allows recovery of fluorine as valuable byproduct.
 
-Process parameters for bastnaesite carbochlorination [33]:
+Process parameters for bastnaesite carbochlorination [@suli2017rare]:
 
 - Temperature: 700°C (optimal)
 
@@ -297,29 +297,29 @@ Process parameters for bastnaesite carbochlorination [33]:
 - Theoretical heat requirement: 0.94-1.21 GJ/tonne RE contained
 
 ### Monazite Processing
-Monazite \[(Ce,La,Nd,Th)PO₄\] is a phosphate mineral containing 55-65% REO along with thorium (4-12%) [34]. The radioactive thorium content presents unique processing challenges that must be addressed regardless of extraction method.
+Monazite \[(Ce,La,Nd,Th)PO₄\] is a phosphate mineral containing 55-65% REO along with thorium (4-12%) [@battsengel2018recovery]. The radioactive thorium content presents unique processing challenges that must be addressed regardless of extraction method.
 
-Carbochlorination of monazite offers advantages for thorium management. The phosphorus content can be converted to volatile POCl₃, which can be separately recovered. Thorium chloride (ThCl₄) can be separated based on its different volatility characteristics compared to REE chlorides [35].
+Carbochlorination of monazite offers advantages for thorium management. The phosphorus content can be converted to volatile POCl₃, which can be separately recovered. Thorium chloride (ThCl₄) can be separated based on its different volatility characteristics compared to REE chlorides [@weng2015detailed].
 
-Conventional monazite processing involves either [36]:
+Conventional monazite processing involves either [@jordens2013beneficiation]:
 
 - Acid process: H₂SO₄ digestion at 150-200°C producing soluble sulfates
 
 - Alkaline process: NaOH treatment at 140-150°C in autoclave
 
-Carbochlorination may provide a cleaner alternative by avoiding the generation of large volumes of acidic or alkaline waste streams while enabling more straightforward thorium separation [37].
+Carbochlorination may provide a cleaner alternative by avoiding the generation of large volumes of acidic or alkaline waste streams while enabling more straightforward thorium separation [@tsamis2015recovery].
 
 ### Xenotime Processing
-Xenotime \[YPO₄\] is the primary mineral source for heavy rare earths and yttrium. The mineral contains 52-62% REO with a composition heavily weighted toward HREEs and Y [38].
+Xenotime \[YPO₄\] is the primary mineral source for heavy rare earths and yttrium. The mineral contains 52-62% REO with a composition heavily weighted toward HREEs and Y [@kaya2016recovery].
 
-The carbochlorination of xenotime follows similar principles to monazite, with the phosphate matrix being converted to volatile chloride products while the REE chlorides are retained. Given the higher value of HREEs, carbochlorination may offer economic advantages through reduced reagent costs and simplified product recovery [39].
+The carbochlorination of xenotime follows similar principles to monazite, with the phosphate matrix being converted to volatile chloride products while the REE chlorides are retained. Given the higher value of HREEs, carbochlorination may offer economic advantages through reduced reagent costs and simplified product recovery [@lorenz2023recovery].
 
 ## Recycling Applications
 
 ### NdFeB Magnet Recycling
-NdFeB permanent magnets represent the largest application of neodymium and contain significant amounts of praseodymium, dysprosium, and terbium. End-of-life magnets from electric vehicles, wind turbines, and consumer electronics offer an important secondary resource [40].
+NdFeB permanent magnets represent the largest application of neodymium and contain significant amounts of praseodymium, dysprosium, and terbium. End-of-life magnets from electric vehicles, wind turbines, and consumer electronics offer an important secondary resource [@onal2015recycling].
 
-Multiple chlorination approaches have been investigated for NdFeB recycling [41]:
+Multiple chlorination approaches have been investigated for NdFeB recycling [@liu2014solvent]:
 
 - Chlorination roasting at 300-500°C with subsequent water leaching
 
@@ -329,9 +329,9 @@ Multiple chlorination approaches have been investigated for NdFeB recycling [41]
 
 - Flash Joule heating combined with chlorination (FJH-Cl₂)
 
-The chlorination roasting method offers lower roasting temperatures and shorter times compared to oxidation roasting, yielding RE₂O₃ (\>99% pure) and iron oxide (\>96% pure) as valuable products [42]. The selective chlorination of REEs to RECls enables separation from iron, which remains as oxide under appropriate conditions.
+The chlorination roasting method offers lower roasting temperatures and shorter times compared to oxidation roasting, yielding RE₂O₃ (\>99% pure) and iron oxide (\>96% pure) as valuable products [@dutta2016global]. The selective chlorination of REEs to RECls enables separation from iron, which remains as oxide under appropriate conditions.
 
-A particularly promising development is the flash Joule heating with chlorination (FJH-Cl₂) method, which achieves [43]:
+A particularly promising development is the flash Joule heating with chlorination (FJH-Cl₂) method, which achieves [@deng2022rare]:
 
 - High purity: \>90% REE
 
@@ -346,7 +346,7 @@ A particularly promising development is the flash Joule heating with chlorinatio
 - Complete elimination of water and acid usage
 
 ### Other Secondary Sources
-Carbochlorination has also been investigated for REE recovery from [44]:
+Carbochlorination has also been investigated for REE recovery from [@binnemans2017solvometallurgy]:
 
 - Fluorescent lamp phosphors (primarily Y, Eu, Tb)
 
@@ -360,7 +360,7 @@ Carbochlorination has also been investigated for REE recovery from [44]:
 
 - Mining tailings and processing residues
 
-The carbochlorination approach is particularly suitable for secondary sources with complex compositions, as the process does not require high-quality feedstock and can handle wide variations in composition [45]. The cascade condensation system enables separation of different chlorides based on boiling point differences.
+The carbochlorination approach is particularly suitable for secondary sources with complex compositions, as the process does not require high-quality feedstock and can handle wide variations in composition [@tanaka2013recycling]. The cascade condensation system enables separation of different chlorides based on boiling point differences.
 
 ## Fluorination
 
@@ -579,7 +579,7 @@ Life cycle analysis shows the chloride-based approach significantly reduces envi
 | Process Time | 60 minutes (chlorination) | Several hours to days |
 | Selectivity | Moderate (based on volatility) | High (via solvent extraction) |
 
-Technical advantages of carbochlorination include [46]:
+Technical advantages of carbochlorination include [@paulick2017global]:
 
 - Production of anhydrous REE chlorides directly suitable for molten salt electrolysis
 
@@ -591,7 +591,7 @@ Technical advantages of carbochlorination include [46]:
 
 - Compatibility with integrated chlorometallurgical operations (Ti, Zr production)
 
-Technical limitations include [47]:
+Technical limitations include:
 
 - Less established separation methods compared to solvent extraction
 
@@ -611,7 +611,7 @@ Technical limitations include [47]:
 | Energy Intensity | Moderate (1.4-2.2 GJ/t RECl) | Variable (process dependent) |
 | Radioactive Waste | Concentrated ThCl₄ stream | Dispersed in waste streams |
 
-Carbochlorination is characterized as a "clean metallurgical technology" due to [48]:
+Carbochlorination is characterized as a "clean metallurgical technology" due to [@weber2012rare]:
 
 - Elimination of acid/alkali wastewater streams
 
@@ -623,10 +623,10 @@ Carbochlorination is characterized as a "clean metallurgical technology" due to 
 
 - Potential for recovery of byproducts (HF from bastnaesite, P₂O₅ from phosphates)
 
-However, conventional rare earth processing has significant environmental impacts that carbochlorination could help mitigate. Traditional processes generate large quantities of hazardous waste, require extensive water resources, and produce radioactive residues that pose health and environmental risks [49].
+However, conventional rare earth processing has significant environmental impacts that carbochlorination could help mitigate. Traditional processes generate large quantities of hazardous waste, require extensive water resources, and produce radioactive residues that pose health and environmental risks [@banda2015separation].
 
 ### Economic Considerations
-Economic comparison between carbochlorination and conventional methods must consider [50]:
+Economic comparison between carbochlorination and conventional methods must consider [@bailey2017sustainability]:
 
 - Capital Costs: Carbochlorination requires specialized chlorine-resistant equipment but potentially simpler overall flowsheets compared to multi-stage hydrometallurgical plants
 
@@ -638,7 +638,7 @@ Economic comparison between carbochlorination and conventional methods must cons
 
 - Scale Dependencies: Minimum economic scale estimated at 5,000-10,000 tonnes/year REO for concentrate production; 10,000-20,000 tonnes/year for full processing
 
-The "short-process" characteristic of carbochlorination---single chlorination step followed by water washing---offers potential for reduced capital investment compared to conventional multi-stage processing. However, detailed techno-economic analyses comparing industrial-scale carbochlorination to established hydrometallurgical routes remain limited in the open literature [51].
+The "short-process" characteristic of carbochlorination---single chlorination step followed by water washing---offers potential for reduced capital investment compared to conventional multi-stage processing. However, detailed techno-economic analyses comparing industrial-scale carbochlorination to established hydrometallurgical routes remain limited in the open literature [@peck2015critical].
 
 Comparison of REE extraction and processing technologies:
 
@@ -672,7 +672,7 @@ Key observations from comparative analysis:
 ## Industrial Implementation
 
 ### Technology Readiness Level
-The technology readiness level (TRL) for rare earth carbochlorination varies by region and application [52]:
+The technology readiness level (TRL) for rare earth carbochlorination varies by region and application [@nassar2015criticality]:
 
 - China: TRL 7-8 (Demonstrated in operational environment, pilot-to-commercial scale at Baotou and other facilities)
 
@@ -680,10 +680,10 @@ The technology readiness level (TRL) for rare earth carbochlorination varies by 
 
 - Recycling applications: TRL 5-6 (Technology validated in relevant environment)
 
-Chinese industrial processes for bastnaesite include the chlorination process as one of several established methods, alongside oxidation roasting-acid leaching, sulfuric acid bake-water leaching, and caustic soda decomposition [53]. At the Baotou processing facilities, chlorides are produced alongside oxides, carbonates, and alloy products.
+Chinese industrial processes for bastnaesite include the chlorination process as one of several established methods, alongside oxidation roasting-acid leaching, sulfuric acid bake-water leaching, and caustic soda decomposition [@csiro2024minerals]. At the Baotou processing facilities, chlorides are produced alongside oxides, carbonates, and alloy products.
 
 ### Scale-Up Challenges
-Key challenges for industrial-scale implementation include [54]:
+Key challenges for industrial-scale implementation include [@vital2023nechalacho]:
 
 - Fluidized Bed Reactor Design: Complex gas-solid interactions require careful modeling and control. Dead zones and non-uniform fluidization can affect conversion efficiency.
 
@@ -699,10 +699,10 @@ Key challenges for industrial-scale implementation include [54]:
 
 - Expertise Gap: Limited technical know-how for rare earth chlorination outside China after decades of offshoring.
 
-Reference to the titanium industry provides valuable lessons, as carbochlorination of rutile/ilmenite to produce TiCl₄ has been practiced commercially for decades [55]. The Kroll process for titanium uses similar principles, and development of analogous compact distillation apparatus for REE separation has been proposed.
+Reference to the titanium industry provides valuable lessons, as carbochlorination of rutile/ilmenite to produce TiCl₄ has been practiced commercially for decades [@doe2022report]. The Kroll process for titanium uses similar principles, and development of analogous compact distillation apparatus for REE separation has been proposed.
 
 ### Equipment and Safety Considerations
-Industrial implementation requires [56]:
+Industrial implementation requires [@habib2014exploring]:
 
 - Chlorination Reactor: Fluidized bed or packed bed reactor with temperature control (600-900°C)
 
@@ -718,18 +718,18 @@ Industrial implementation requires [56]:
 
 - Safety Systems: Chlorine detection, emergency scrubbing, personnel protection
 
-Operating temperatures of 600-900°C, while elevated, are significantly lower than the \>1200°C required for traditional high-temperature roasting, reducing equipment wear and energy consumption [57]. This also expands the range of materials suitable for reactor construction.
+Operating temperatures of 600-900°C, while elevated, are significantly lower than the \>1200°C required for traditional high-temperature roasting, reducing equipment wear and energy consumption [@iaea2011radiation]. This also expands the range of materials suitable for reactor construction.
 
 ## Industrial Precedents: Titanium, Zirconium, Aluminium, Magnesium, and Niobium-Tantalum
 
-Carbochlorination has been practiced at massive industrial scale for decades in the production of titanium and nuclear-grade zirconium. These established industries provide invaluable precedent, proven technology, and potential synergies for rare earth element processing. The infrastructure, expertise, and equipment developed for Ti and Zr chloride production represent a foundation upon which REE carbochlorination could be built [58].
+Carbochlorination has been practiced at massive industrial scale for decades in the production of titanium and nuclear-grade zirconium. These established industries provide invaluable precedent, proven technology, and potential synergies for rare earth element processing. The infrastructure, expertise, and equipment developed for Ti and Zr chloride production represent a foundation upon which REE carbochlorination could be built [@commission2020critical].
 
 ### Titanium Production via Carbochlorination
-The titanium industry represents the largest and most mature application of carbochlorination, with global TiCl₄ production exceeding 280 million metric tonnes annually as of 2024 [59]. Approximately 55% of global TiO₂ pigment production uses the chloride process, which relies on carbochlorination as its first step.
+The titanium industry represents the largest and most mature application of carbochlorination. Roughly half of global TiO₂ pigment production goes through the chloride process, which relies on carbochlorination as its first step [@usgs2020titanium].
 
 > The Chloride Process for TiO₂/Ti Metal:
 
-The process begins with carbochlorination of titanium ores (rutile or upgraded ilmenite) in fluidized bed reactors at 900-1050°C [60]:
+The process begins with carbochlorination of titanium ores (rutile or upgraded ilmenite) in fluidized bed reactors at 900-1050°C [@fmi2024titanium]:
 
 > TiO₂ + 2C + 2Cl₂ → TiCl₄ + 2CO
 
@@ -749,7 +749,7 @@ Key industrial parameters include:
 
 > Purification and Metal Production:
 
-The crude TiCl₄ contains impurities including FeCl₃, AlCl₃, VOCl₃, SnCl₄, and SiCl₄. These are removed through a combination of [61]:
+The crude TiCl₄ contains impurities including FeCl₃, AlCl₃, VOCl₃, SnCl₄, and SiCl₄. These are removed through a combination of [@roine2019hsc]:
 
 - Selective condensation (FeCl₃, AlCl₃ have different boiling points)
 
@@ -761,7 +761,7 @@ The crude TiCl₄ contains impurities including FeCl₃, AlCl₃, VOCl₃, SnCl�
 
 > Major Global Producers:
 
-The titanium chloride industry is dominated by major multinational corporations with decades of operational experience [62]:
+The titanium chloride industry is dominated by major multinational corporations with decades of operational experience [@britannica2024titanium]:
 
 - Chemours (USA) - Major TiO₂ and TiCl₄ producer
 
@@ -773,15 +773,15 @@ The titanium chloride industry is dominated by major multinational corporations 
 
 - Kronos Worldwide (Global) - Major TiO₂ producer
 
-The titanium industry demonstrates that carbochlorination can be operated safely and economically at very large scale, with continuous improvements in energy efficiency, chlorine recycling, and environmental performance over seven decades of industrial operation [63].
+The titanium industry demonstrates that carbochlorination can be operated safely and economically at very large scale, with continuous improvements in energy efficiency, chlorine recycling, and environmental performance over seven decades of industrial operation [@lomon2024titanium].
 
 ### The Zr/Hf Separation Challenge
-Zirconium is an ideal material for nuclear reactor fuel cladding due to its exceptionally low thermal neutron absorption cross-section. However, zirconium ores (primarily zircon sand, ZrSiO₄) naturally contain 1-3 wt% hafnium, which has a very high neutron absorption cross-section [64]. For nuclear applications, the hafnium content must be reduced to less than 100 ppm---a challenging separation given the remarkable chemical similarity between Zr and Hf (same group, nearly identical ionic radii).
+Zirconium is an ideal material for nuclear reactor fuel cladding due to its exceptionally low thermal neutron absorption cross-section. However, zirconium ores (primarily zircon sand, ZrSiO₄) naturally contain 1-3 wt% hafnium, which has a very high neutron absorption cross-section [@usgs2020titanium]. For nuclear applications, the hafnium content must be reduced to less than 100 ppm---a challenging separation given the remarkable chemical similarity between Zr and Hf (same group, nearly identical ionic radii).
 
-This separation challenge parallels the difficulties in separating individual rare earth elements, which also exhibit very similar chemical properties across the lanthanide series. The industrial solutions developed for Zr/Hf separation therefore offer instructive lessons for REE processing [65].
+This separation challenge parallels the difficulties in separating individual rare earth elements, which also exhibit very similar chemical properties across the lanthanide series. The industrial solutions developed for Zr/Hf separation therefore offer instructive lessons for REE processing [@xu2015production].
 
 ### Industrial Zr Carbochlorination Process
-The production of nuclear-grade zirconium begins with carbochlorination of zircon sand. The process is conducted in fluidized bed reactors at temperatures of 1000-1200°C [66]:
+The production of nuclear-grade zirconium begins with carbochlorination of zircon sand. The process is conducted in fluidized bed reactors at temperatures of 1000-1200°C [@konings2010thermodynamic]:
 
 > ZrSiO₄ + 4C + 4Cl₂ → ZrCl₄ + SiCl₄ + 4CO
 
@@ -797,12 +797,12 @@ Key process characteristics include:
 
 - The ZrCl₄/HfCl₄ mixture is condensed as a solid powder for subsequent separation
 
-This carbochlorination step has been optimized over decades of industrial operation, with well-established practices for reactor design, chlorine distribution, heat management, and product recovery [67].
+This carbochlorination step has been optimized over decades of industrial operation, with well-established practices for reactor design, chlorine distribution, heat management, and product recovery [@yang2016separation].
 
 ### Molten Salt Extractive Distillation for Zr/Hf
-Following carbochlorination, the separation of ZrCl₄ from HfCl₄ is accomplished through molten salt extractive distillation---the only pyrometallurgical Zr/Hf separation method operating at industrial scale [68]. This technology, developed by Cezus (now Framatome) in France during the 1980s, exploits the slight difference in vapor pressure between ZrCl₄ and HfCl₄.
+Following carbochlorination, the separation of ZrCl₄ from HfCl₄ is accomplished through molten salt extractive distillation---the only pyrometallurgical Zr/Hf separation method operating at industrial scale [@yin2024preparation]. This technology, developed by Cezus (now Framatome) in France during the 1980s, exploits the slight difference in vapor pressure between ZrCl₄ and HfCl₄.
 
-The process uses a distillation column with multiple plates, each containing a layer of molten salt (typically KAlCl₄). The mixed ZrCl₄/HfCl₄ vapor from carbochlorination is introduced into the column, and selective absorption/desorption in the molten salt achieves separation [69]. Key parameters include:
+The process uses a distillation column with multiple plates, each containing a layer of molten salt (typically KAlCl₄). The mixed ZrCl₄/HfCl₄ vapor from carbochlorination is introduced into the column, and selective absorption/desorption in the molten salt achieves separation [@chen2025process]. Key parameters include:
 
 - Molten salt system: KAlCl₄ or similar alkali metal chloroaluminates
 
@@ -813,7 +813,7 @@ The process uses a distillation column with multiple plates, each containing a l
 - The purified ZrCl₄ is then reduced to zirconium metal via the Kroll process (magnesiothermic reduction)
 
 ### Lessons and Synergies for REE Processing
-The established Ti and Zr/Hf carbochlorination industries offer several important lessons and potential synergies for rare earth element processing [70]:
+The established Ti and Zr/Hf carbochlorination industries offer several important lessons and potential synergies for rare earth element processing [@chen2025process]:
 
 > Technology Transfer Opportunities:
 
@@ -829,7 +829,7 @@ The established Ti and Zr/Hf carbochlorination industries offer several importan
 
 > Potential for Integrated Operations:
 
-Facilities already operating carbochlorination for titanium (TiCl₄ production) or zirconium could potentially integrate rare earth chloride production with relatively modest additional investment. Shared infrastructure would include [71]:
+Facilities already operating carbochlorination for titanium (TiCl₄ production) or zirconium could potentially integrate rare earth chloride production with relatively modest additional investment. Shared infrastructure would include [@nfc2023nuclear]:
 
 - Chlorine supply and distribution systems
 
@@ -843,7 +843,7 @@ Facilities already operating carbochlorination for titanium (TiCl₄ production)
 
 > Adaptation of Separation Technologies:
 
-The molten salt extractive distillation technology used for Zr/Hf separation could potentially be adapted for REE chloride separation, exploiting differences in vapor pressure and molten salt solubility among the various REE chlorides. While REE separation is more complex (17 elements vs. 2), the fundamental principles are analogous [72].
+The molten salt extractive distillation technology used for Zr/Hf separation could potentially be adapted for REE chloride separation, exploiting differences in vapor pressure and molten salt solubility among the various REE chlorides. While REE separation is more complex (17 elements vs. 2), the fundamental principles are analogous.
 
 | **Parameter** | **Zr/Hf Processing** | **REE Processing (Potential)** |
 |----|----|----|
@@ -853,10 +853,10 @@ The molten salt extractive distillation technology used for Zr/Hf separation cou
 | Industrial Status | Commercial (decades) | Pilot/demo scale |
 | Primary Driver | Nuclear industry | Clean energy, electronics |
 
-The successful industrial implementation of carbochlorination for titanium pigment production and nuclear-grade zirconium demonstrates that the fundamental process challenges---high-temperature chlorine handling, chloride separation, and product purification---can be solved at commercial scale. This precedent significantly de-risks the development of carbochlorination for rare earth elements [73].
+The successful industrial implementation of carbochlorination for titanium pigment production and nuclear-grade zirconium demonstrates that the fundamental process challenges---high-temperature chlorine handling, chloride separation, and product purification---can be solved at commercial scale. This precedent significantly de-risks the development of carbochlorination for rare earth elements.
 
 ### Aluminum Chloride Production from Alumina
-Anhydrous aluminum chloride (AlCl₃) production via carbochlorination represents another important industrial precedent. First demonstrated by Hans Christian Oersted in 1825, the process has been refined into a mature industrial technology [74]. The carbochlorination of alumina follows the reaction:
+Anhydrous aluminum chloride (AlCl₃) production via carbochlorination represents another important industrial precedent. First demonstrated by Hans Christian Oersted in 1825, the process has been refined into a mature industrial technology [@wikipedia2024aluminium]. The carbochlorination of alumina follows the reaction:
 
 > Al₂O₃ + 3C + 3Cl₂ → 2AlCl₃ + 3CO
 
@@ -874,7 +874,7 @@ Key process characteristics include:
 
 > Industrial Applications:
 
-The aluminum chloride process has garnered renewed interest as a potential alternative to the Hall-Héroult process for primary aluminum production. Research by SINTEF (Norway) and the Gharda Scientific Research Foundation (India) has demonstrated [75]:
+The aluminum chloride process has garnered renewed interest as a potential alternative to the Hall-Héroult process for primary aluminum production. Research by SINTEF (Norway) and the Gharda Scientific Research Foundation (India) has demonstrated [@wikipedia2024aluminium]:
 
 - Bauxite can be carbochlorinated directly, producing mixed chlorides (AlCl₃, FeCl₃, SiCl₄, TiCl₄)
 
@@ -888,14 +888,14 @@ The aluminum chloride process has garnered renewed interest as a potential alter
 
 > Relevance to REE Recycling:
 
-The aluminum chloride process is particularly relevant to REE recycling from aluminum-containing secondary sources. End-of-life materials containing both aluminum and rare earths (e.g., certain catalysts, electronics) could potentially be processed through integrated carbochlorination, enabling simultaneous recovery of both Al and REE values [76].
+The aluminum chloride process is particularly relevant to REE recycling from aluminum-containing secondary sources. End-of-life materials containing both aluminum and rare earths (e.g., certain catalysts, electronics) could potentially be processed through integrated carbochlorination, enabling simultaneous recovery of both Al and REE values [@engell2023could].
 
 ### Magnesium Production via Chlorination
-Magnesium production via the chloride route has a long industrial history, with carbochlorination serving as an important alternative to the Dow process for producing anhydrous MgCl₂ feedstock for electrolysis [77]. The carbochlorination reaction is:
+Magnesium production via the chloride route has a long industrial history, with carbochlorination serving as an important alternative to the Dow process for producing anhydrous MgCl₂ feedstock for electrolysis [@namboothiri2017bauxite]. The carbochlorination reaction is:
 
 > MgO + C + Cl₂ → MgCl₂ + CO
 
-Thermogravimetric studies have characterized the carbochlorination of MgO [78]:
+Thermogravimetric studies have characterized the carbochlorination of MgO [@gupta2003chemical]:
 
 - Optimal temperature range: 500-675°C (conversion decreases above 700°C due to MgCl₂ melting)
 
@@ -909,7 +909,7 @@ Thermogravimetric studies have characterized the carbochlorination of MgO [78]:
 
 > Historical Industrial Implementation:
 
-Carbochlorination of magnesium oxide from magnesite, silicates, or hydroxides was practiced industrially at several facilities [79]:
+Carbochlorination of magnesium oxide from magnesite, silicates, or hydroxides was practiced industrially at several facilities [@gaballah1999chlorination]:
 
 - IG Farben process (Germany, pre-WWII)
 
@@ -921,10 +921,10 @@ Carbochlorination of magnesium oxide from magnesite, silicates, or hydroxides wa
 
 > Integration with Titanium/Zirconium Production:
 
-Magnesium and chlorine are intimately linked with titanium and zirconium production through the Kroll process, which uses magnesium to reduce TiCl₄ and ZrCl₄ to metals, producing MgCl₂ as a byproduct. This MgCl₂ is electrolyzed to regenerate magnesium and chlorine, creating a closed-loop system. REE carbochlorination could potentially integrate into this existing infrastructure [80].
+Magnesium and chlorine are intimately linked with titanium and zirconium production through the Kroll process, which uses magnesium to reduce TiCl₄ and ZrCl₄ to metals, producing MgCl₂ as a byproduct. This MgCl₂ is electrolyzed to regenerate magnesium and chlorine, creating a closed-loop system. REE carbochlorination could potentially integrate into this existing infrastructure [@britannica2024magnesium].
 
 ### Niobium and Tantalum Separation via Chlorination
-The separation of niobium and tantalum by chlorination and distillation represents one of the most successful applications of chloride-based separation for chemically similar elements---directly analogous to the REE separation challenge [81]. The carbochlorination reactions are:
+The separation of niobium and tantalum by chlorination and distillation represents one of the most successful applications of chloride-based separation for chemically similar elements---directly analogous to the REE separation challenge [@habashi1997handbook]. The carbochlorination reactions are:
 
 > Nb₂O₅ + 5C + 5Cl₂ → 2NbCl₅ + 5CO
 >
@@ -932,7 +932,7 @@ The separation of niobium and tantalum by chlorination and distillation represen
 >
 > Process Characteristics:
 
-Research on tin slag processing has demonstrated the effectiveness of carbochlorination for Nb/Ta recovery [82]:
+Research on tin slag processing has demonstrated the effectiveness of carbochlorination for Nb/Ta recovery [@gupta1984extractive]:
 
 - Temperature: 500-1000°C depending on concentrate grade
 
@@ -946,7 +946,7 @@ Research on tin slag processing has demonstrated the effectiveness of carbochlor
 
 > Separation by Distillation:
 
-The key advantage of the chloride route for Nb/Ta is the ability to separate these very similar elements by fractional distillation [83]:
+The key advantage of the chloride route for Nb/Ta is the ability to separate these very similar elements by fractional distillation [@yang1999carbochlorination]:
 
 - NbCl₅ boiling point: 248°C
 
@@ -960,7 +960,7 @@ The key advantage of the chloride route for Nb/Ta is the ability to separate the
 
 > Lessons for REE Processing:
 
-The Nb/Ta separation precedent is particularly instructive for REE processing because it demonstrates successful industrial separation of chemically similar elements via chloride distillation. While REE separation is more complex (17 elements vs. 2), the fundamental principle of exploiting vapor pressure differences among chlorides is directly applicable. The development of cascade distillation systems for REE chloride separation could build on this established technology base [84].
+The Nb/Ta separation precedent is particularly instructive for REE processing because it demonstrates successful industrial separation of chemically similar elements via chloride distillation. While REE separation is more complex (17 elements vs. 2), the fundamental principle of exploiting vapor pressure differences among chlorides is directly applicable. The development of cascade distillation systems for REE chloride separation could build on this established technology base [@tic2024processing].
 
 > Summary of Industrial Carbochlorination Precedents:
 
