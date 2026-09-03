@@ -103,7 +103,7 @@ XRF enables rapid, non-destructive analysis of solid samples without digestion (
 **TXRF (Total Reflection XRF):** For trace element and contamination analyses, TXRF offers improved sensitivity through sample presentation on optically flat reflectors. Neural network-based modeling has been applied to decode interfering L-lines for direct analysis of lanthanides in water samples.
 
 ### Neutron Activation Analysis (NAA)
-NAA was the historical standard for REE analysis before ICP-MS ([De Gruyter](https://www.degruyterbrill.com/document/doi/10.1515/psr-2016-0062/html), [Missouri Archaeometry](https://archaeometry.missouri.edu/naa_technical.html)).
+NAA was the historical standard for REE analysis before ICP-MS ([@stosch2016neutron], [Missouri Archaeometry](https://archaeometry.missouri.edu/naa_technical.html)).
 
 **Principle:** Samples are irradiated with neutrons in a nuclear reactor, creating artificial radioisotopes. Subsequent gamma-ray emission is measured by high-resolution Ge detectors.
 
@@ -131,7 +131,7 @@ NAA was the historical standard for REE analysis before ICP-MS ([De Gruyter](htt
 
 ## Chromatographic Separation and Analysis
 ### High-Performance Liquid Chromatography (HPLC)
-HPLC provides both separation and quantification of individual REEs ([Wiley 2007](https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1751-908X.2007.00842.x), [Springer](https://link.springer.com/article/10.1007/s10337-021-04025-y)).
+HPLC provides both separation and quantification of individual REEs [@verma2007high; @dybczynski2021separation].
 
 **Methods:**
 
@@ -148,7 +148,7 @@ HPLC provides both separation and quantification of individual REEs ([Wiley 2007
 - Combined HPLC-ICP-MS enables simultaneous determination of 14 REEs in 15 minutes
 
 ### Ion Chromatography (IC)
-Ion chromatography uses specialized stationary phases for REE separation ([Springer 2021](https://link.springer.com/article/10.1007/s11696-020-01182-6)).
+Ion chromatography uses specialized stationary phases for REE separation [@ahmed2020chromatographic].
 
 **Recent Developments:**
 
@@ -158,7 +158,7 @@ Ion chromatography uses specialized stationary phases for REE separation ([Sprin
 
 ## Thermodynamic Characterization
 ### Isothermal Titration Calorimetry (ITC)
-ITC is the gold standard for measuring thermodynamics of REE-ligand binding in solution ([Nature Methods Primers 2023](https://www.nature.com/articles/s43586-023-00199-x), [Dalton Transactions 2016](https://pubs.rsc.org/en/content/articlelanding/2016/DT/C6DT03380F)).
+ITC is the gold standard for measuring thermodynamics of REE-ligand binding in solution [@bastos2023isothermal; @ansari2016thermodynamics].
 
 **Parameters Measured in Single Experiment:**
 
@@ -200,7 +200,7 @@ Potentiometric titration determines pKa values, stability constants, and extract
 
 ## Spectroscopic Characterization
 ### UV-Visible Absorption Spectroscopy
-UV-Vis spectroscopy exploits the characteristic f-f electronic transitions of lanthanide ions ([MDPI Crystals 2020](https://www.mdpi.com/2073-4352/10/7/593)).
+UV-Vis spectroscopy exploits the characteristic f-f electronic transitions of lanthanide ions [@sharma2020library].
 
 **Applications:**
 
@@ -211,7 +211,7 @@ UV-Vis spectroscopy exploits the characteristic f-f electronic transitions of la
 **Process Monitoring:** Simultaneous measurement of Nd³⁺ concentration at multiple process locations (inlet/outlet of aqueous and organic phases) enables real-time mass balance and material accountancy.
 
 ### Luminescence/Fluorescence Spectroscopy
-Lanthanide luminescence provides highly sensitive detection with characteristic sharp emission lines ([Springer 2019](https://link.springer.com/chapter/10.1007/978-3-319-92955-2_10)).
+Lanthanide luminescence provides highly sensitive detection with characteristic sharp emission lines [@khan2019rare].
 
 **Characteristic Emissions:**
 
@@ -227,7 +227,7 @@ Lanthanide luminescence provides highly sensitive detection with characteristic 
 **Antenna Effect:** In REE complexes, fluorescence from the central metal ion is strongly sensitized by aromatic ligands through energy transfer, enabling enhanced detection sensitivity.
 
 ### FTIR and Raman Spectroscopy
-Vibrational spectroscopy characterizes REE-ligand bonding and complex structure ([Dalton Transactions 2016](https://pubs.rsc.org/en/content/articlelanding/2016/dt/c5dt04547a)).
+Vibrational spectroscopy characterizes REE-ligand bonding and complex structure [@fieser2016raman].
 
 **Applications:**
 
@@ -239,7 +239,7 @@ Vibrational spectroscopy characterizes REE-ligand bonding and complex structure 
 **Raman of Dinitrogen Complexes:** In rare earth dinitrogen complexes, Raman stretching frequencies decrease regularly with decreasing atomic number and increasing Lewis acidity of the metal (Gd → Tm).
 
 ### NMR Spectroscopy
-Paramagnetic lanthanide ions produce characteristic shifts in NMR spectra ([Chemical Reviews](https://pubs.acs.org/doi/10.1021/cr60286a001)).
+Paramagnetic lanthanide ions produce characteristic shifts in NMR spectra [@cockerill1973lanthanide].
 
 **Lanthanide Shift Reagents (LSR):** Paramagnetic lanthanide complexes (typically Eu³⁺ or Pr³⁺ with β-diketonates) cause significant increases in chemical shifts, simplifying complex absorption patterns.
 
@@ -258,7 +258,7 @@ Paramagnetic lanthanide ions produce characteristic shifts in NMR spectra ([Chem
 - Strategies: use smaller shifting ions (Sm³⁺), higher temperature
 
 ## X-Ray Absorption Spectroscopy (XAS)
-Synchrotron-based XAS provides element-specific structural and electronic information ([Environmental Science & Technology 2024](https://pubs.acs.org/doi/10.1021/acs.est.4c04256)).
+Synchrotron-based XAS provides element-specific structural and electronic information [@bishop2024rare].
 
 ### XANES (X-Ray Absorption Near Edge Structure)
 **Information Provided:**
@@ -296,7 +296,7 @@ Synchrotron-based XAS provides element-specific structural and electronic inform
 
 ## Electron Microscopy and Microanalysis
 ### SEM-EDS (Scanning Electron Microscopy with Energy Dispersive Spectroscopy)
-SEM-EDS is widely used for qualitative and semi-quantitative analysis of REE minerals ([MDPI Applied Sciences 2023](https://www.mdpi.com/2076-3417/13/23/12600), [Hindawi Scanning 2020](https://www.hindawi.com/journals/scanning/2020/2134516/)).
+SEM-EDS is widely used for qualitative and semi-quantitative analysis of REE minerals [@ali2023mineral; @teng2020multivariate].
 
 **Capabilities:**
 
@@ -351,7 +351,7 @@ Thermal analysis techniques characterize phase transitions, decomposition, and t
 - Measures phase transitions without mass loss (melting, crystallization)
 
 ## Surface Area and Porosity Analysis
-BET analysis characterizes adsorbent materials used for REE separation ([Intertek](https://cdn.intertek.com/www-intertek-com/dms-legacy/IntertekWhitepaper_Surface_Area_and_Porosity_Chemicals170613.pdf), [PMC 2024](https://pmc.ncbi.nlm.nih.gov/articles/PMC11206383/)).
+BET analysis characterizes adsorbent materials used for REE separation ([Intertek](https://cdn.intertek.com/www-intertek-com/dms-legacy/IntertekWhitepaper_Surface_Area_and_Porosity_Chemicals170613.pdf), [@oztug2024overview]).
 
 **BET Method:**
 
@@ -379,7 +379,7 @@ BET analysis characterizes adsorbent materials used for REE separation ([Interte
 
 ## Mass Spectrometry for Speciation
 ### Electrospray Ionization Mass Spectrometry (ESI-MS)
-ESI-MS enables direct observation of REE-ligand complexes in solution ([Frontiers in Chemistry 2021](https://www.frontiersin.org/journals/chemistry/articles/10.3389/fchem.2020.625945/full), [Analytical Chemistry 2024](https://pubs.acs.org/doi/10.1021/acs.analchem.4c01028)).
+ESI-MS enables direct observation of REE-ligand complexes in solution [@indelicato2021approaches; @geue2024modern].
 
 **Applications:**
 
@@ -396,7 +396,7 @@ ESI-MS enables direct observation of REE-ligand complexes in solution ([Frontier
 - Best used with corroborating techniques (potentiometry, spectroscopy)
 
 ### LA-ICP-MS (Laser Ablation ICP-MS)
-LA-ICP-MS enables spatially resolved analysis of solid samples ([Springer 2024](https://link.springer.com/article/10.1007/s12583-023-2002-4)).
+LA-ICP-MS enables spatially resolved analysis of solid samples [@lin2024situ].
 
 **Applications:**
 
@@ -432,7 +432,7 @@ Software tools calculate REE speciation, saturation indices, and phase equilibri
 **Caution:** Calculated speciation, mineral solubilities, and gas concentrations may vary substantially between different thermodynamic data files. The choice of database is the responsibility of the user.
 
 ## Distribution Coefficient and Separation Factor Calculation
-Key parameters for solvent extraction process design ([JACS Au 2022](https://pubs.acs.org/doi/10.1021/jacsau.2c00122), [MDPI 2023](https://www.mdpi.com/2673-6489/3/3/31)).
+Key parameters for solvent extraction process design ([@liu2022advancing], [MDPI 2023](https://www.mdpi.com/2673-6489/3/3/31)).
 
 ### Distribution Coefficient (D)
 **Definition:**

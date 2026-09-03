@@ -301,7 +301,7 @@ Modern plants incorporate [@augustine2024advancing]:
 Computational methods are increasingly important for understanding REE separation mechanisms, designing new ligands, and accelerating the discovery of more selective and sustainable extraction systems.
 
 ### Density Functional Theory (DFT) for Ligand Design
-DFT calculations provide atomic-level insights into metal-ligand interactions and extraction mechanisms ([JACS Au 2024](https://pubs.acs.org/doi/10.1021/jacsau.4c00770)).
+DFT calculations provide atomic-level insights into metal-ligand interactions and extraction mechanisms [@summers2024importance].
 
 **Applications:**
 
@@ -313,7 +313,7 @@ DFT calculations provide atomic-level insights into metal-ligand interactions an
 
 **Key Findings from DFT Studies:**
 
-*D2EHPA Extractant Selectivity:* DFT combined with Born-Haber thermodynamics explains heavy REE preference ([Research Square 2023](https://www.researchsquare.com/article/rs-2525701/v1)):
+*D2EHPA Extractant Selectivity:* DFT combined with Born-Haber thermodynamics explains heavy REE preference [@alizadeh2023deep]:
 
 | Parameter           | La(III)         | Y(III)          |
 |---------------------|-----------------|-----------------|
@@ -321,13 +321,13 @@ DFT calculations provide atomic-level insights into metal-ligand interactions an
 | Complex stability   | Lower           | Higher          |
 | Extraction tendency | Lower           | Higher          |
 
-*Diglycolamide (DGA) Complexes:* Electrostatic interactions dominate Ln-DGA binding ([ScienceDirect 2021](https://www.sciencedirect.com/science/article/abs/pii/S1002072120303987)):
+*Diglycolamide (DGA) Complexes:* Electrostatic interactions dominate Ln-DGA binding [@liu2021theoretical]:
 
 - Covalent character increases along lanthanide series
 - Binding pocket shrinks from La to Nd to Eu
 - Explains observed selectivity trends
 
-**Computational Challenges:** Metal complexes can have many stable configurations whose energy differences exceed the small energy differences determining selectivity. Incorrect predictions result if lowest-energy configurations are not identified ([JACS Au 2024](https://pubs.acs.org/doi/10.1021/jacsau.4c00770)):
+**Computational Challenges:** Metal complexes can have many stable configurations whose energy differences exceed the small energy differences determining selectivity. Incorrect predictions result if lowest-energy configurations are not identified [@summers2024importance]:
 
 | Challenge            | Impact                           |
 |----------------------|----------------------------------|
@@ -337,7 +337,7 @@ DFT calculations provide atomic-level insights into metal-ligand interactions an
 | Basis set selection  | f-electron treatment             |
 
 ### COSMO-RS for Solvent Effects
-COSMO-RS (Conductor-like Screening Model for Real Solvents) enables prediction of thermodynamic properties in liquid phases ([ScienceDirect 2021](https://www.sciencedirect.com/science/article/abs/pii/S0167732220368975)).
+COSMO-RS (Conductor-like Screening Model for Real Solvents) enables prediction of thermodynamic properties in liquid phases [@cheng2021theoretical].
 
 **DFT + COSMO-RS Workflow:**
 
@@ -365,7 +365,7 @@ MD simulations reveal dynamic behavior and solvation structure of REE complexes.
 - Interfacial behavior at organic/aqueous interface
 - Aggregation phenomena in organic phase
 
-**Key Findings:** BLPhen ligand studies show ([PMC 2020](https://pmc.ncbi.nlm.nih.gov/articles/PMC7452217/)):
+**Key Findings:** BLPhen ligand studies show [@chapleski2020molecular]:
 
 - Dynamic nitrate coordination (bidentate ↔ monodentate switching)
 - Binding pocket contraction along La → Nd → Eu series
@@ -381,7 +381,7 @@ MD simulations reveal dynamic behavior and solvation structure of REE complexes.
 | Solvation | Explicit water + organic |
 
 ### Machine Learning for Extractant Screening
-Deep neural networks enable high-throughput virtual screening of potential extractants ([JACS Au 2022](https://pubs.acs.org/doi/10.1021/jacsau.2c00122), [ORNL](https://www.ornl.gov/publication/advancing-rare-earth-separation-machine-learning)).
+Deep neural networks enable high-throughput virtual screening of potential extractants ([@liu2022advancing], [ORNL](https://www.ornl.gov/publication/advancing-rare-earth-separation-machine-learning)).
 
 **Input Features:**
 
@@ -447,7 +447,7 @@ Quantitative Structure-Property Relationships correlate molecular descriptors wi
 | Applicability domain | Chemical space coverage |
 
 ### Automated Structure Generation
-The Architector package automates metal-ligand complex construction ([JACS Au 2024](https://pubs.acs.org/doi/10.1021/jacsau.4c00770)):
+The Architector package automates metal-ligand complex construction [@summers2024importance]:
 
 **Workflow:**
 
@@ -476,7 +476,7 @@ The Architector package automates metal-ligand complex construction ([JACS Au 20
 | gPROMS | Dynamic process modeling |
 | DWSIM | Open-source alternative |
 
-**Solvent Extraction Simulation:** Counter-current cascade modeling ([MDPI Minerals 2023](https://www.mdpi.com/2075-163X/13/6/714)):
+**Solvent Extraction Simulation:** Counter-current cascade modeling [@turgeon2023simulation]:
 
 - Stage-wise mass balance
 - Equilibrium and kinetic models

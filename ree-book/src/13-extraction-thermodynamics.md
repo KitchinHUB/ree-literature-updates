@@ -499,14 +499,14 @@ The foundational work on two-phase calorimetry was developed using the **HDEHP (
 - Validation: Calorimetric ΔH values agree well with **van't Hoff analysis** of temperature-dependent distribution coefficients
 - First direct calorimetric measurements of heat of liquid-liquid partitioning for transuranic elements (Am³⁺)
 
-**Reference:** [Two-Phase Calorimetry: Studies on Thermodynamics of Lanthanide Extraction by HDEHP](https://www.researchgate.net/publication/244611960_Two-Phase_Calorimetry_I_Studies_on_the_Thermodynamics_of_Lanthanide_Extraction_by_Bis2-EthylHexyl_Phosphoric_Acid)
+**Reference:** [@zalupski2008two]
 
 #### Van't Hoff Analysis (Indirect Method)
 - Plot ln(D) vs 1/T to obtain ΔH and ΔS from slope and intercept
 - Valid over small temperature ranges (15-40°C) where ΔH and ΔS are approximately constant
 - Results typically agree with direct calorimetric measurements within experimental error
 
-**Reference:** [Thermodynamic Parameters of Am(III), Cm(III) and Eu(III) Extraction](https://centaur.reading.ac.uk/86832/1/MS-Thermodynamic_parameters_revised_v190915_all%20(1).pdf)
+**Reference:** [@distler2020thermodynamic]
 
 ### Thermodynamic Results by Extractant System
 #### HDEHP/D2EHPA Systems
@@ -538,8 +538,8 @@ TODGA and related DGAs show:
 
 **References:**
 
-- [Chemistry of Diglycolamides (Chemical Reviews)](https://pubs.acs.org/doi/10.1021/cr200002f)
-- [Temperature Influence on TODGA Extraction](https://link.springer.com/article/10.1007/s10967-024-09902-y)
+- [@ansari2011chemistry]
+- [@sharov2024specific]
 - [TODGA Thermodynamics (IAEA)](https://inis.iaea.org/records/5cbkn-fw635)
 
 #### Ionic Liquid Systems
@@ -555,7 +555,7 @@ Lanthanide extraction into **Bumim·Tf₂N** with HTTA:
 
 Key insight: **Endothermic complexation** driven by **favorable entropy** in ionic liquid media.
 
-**Reference:** [RSC - Complexation Thermodynamics of Lanthanides in Ionic Liquids](https://pubs.rsc.org/en/content/articlelanding/2023/nj/d2nj05314d/unauth)
+**Reference:** [@gujar2023complexation]
 
 ### Thermodynamics of Stripping (Reverse Extraction)
 #### General Principles
@@ -568,7 +568,7 @@ Key insight: **Endothermic complexation** driven by **favorable entropy** in ion
 - Stripping: ΔH values obtained; less temperature-dependent than forward extraction
 - Both extraction and stripping thermodynamics can be characterized using van't Hoff analysis
 
-**Reference:** [Nature - Solvent Extraction and Stripping of Uranium with Alamine 336](https://www.nature.com/articles/s41598-025-96421-9)
+**Reference:** [@zahakifar2025solvent]
 
 #### Thermodynamic Balance
 The thermochemistry of metal ion partitioning represents a balance between:
@@ -588,14 +588,14 @@ MD simulations reveal:
 
 **References:**
 
-- [PNAS - Mechanisms of Ion Adsorption to Aqueous Interfaces](https://www.pnas.org/doi/10.1073/pnas.2210857119)
-- [Science - Mechanism and Dynamics of Ion Transfer](https://www.science.org/doi/10.1126/science.261.5128.1558)
+- [@devlin2022mechanisms]
+- [@benjamin1993mechanism]
 
 #### Synergistic Extraction
 - Synergy enhances extraction by increasing **entropy of the extracted ion** (final state)
 - Reciprocal effect of chelation: enhances final entropy while chelation reduces initial entropy
 
-**Reference:** [ACS Nano - Synergistic Solvent Extraction is Driven by Entropy](https://pubs.acs.org/doi/10.1021/acsnano.9b07605)
+**Reference:** [@spadina2019synergistic]
 
 ### Key Research Groups & Resources
 #### Kenneth Nash Group (Washington State University)
@@ -627,7 +627,7 @@ MD simulations reveal:
 - Control ionic strength and pH carefully
 - Consider using ITC + molecular modeling for mechanistic insights
 
-**Reference:** [ScienceDirect - ITC and Molecular Modeling in Solvent Extraction](https://www.sciencedirect.com/science/article/abs/pii/S1226086X18310049)
+**Reference:** [@sprakel2019improving]
 
 ### Summary of Thermodynamic Trends
 | System          | ΔH_extr                        | ΔS_extr     | Driving Force |
@@ -647,9 +647,9 @@ MD simulations reveal:
 
 **References:**
 
-- [Thermomorphic IL Extraction (ScienceDirect)](https://www.sciencedirect.com/science/article/abs/pii/S1383586624034257)
-- [ITC + MD for Binary Mixtures (ScienceDirect)](https://www.sciencedirect.com/science/article/abs/pii/S0167732221017098)
-- [NASX Review (ACS I&EC Research)](https://pubs.acs.org/doi/10.1021/acs.iecr.1c02287)
+- [@papadopoulou2025extraction]
+- [@coquil2022interactions]
+- [@li2021nonaqueous]
 
 
 (linking-dissolution-and-extraction-thermodynamically)=

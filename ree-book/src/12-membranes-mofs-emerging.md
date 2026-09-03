@@ -26,7 +26,7 @@ technology, has grown enough to warrant its own chapter —
 
 (membrane-separation-technologies)=
 ## Membrane Separation Technologies
-Membrane separation technology (MST) has emerged as an environmentally friendly alternative that addresses concerns about acidic and alkaline wastewater from traditional methods ([MDPI](https://www.mdpi.com/2077-0375/12/1/80)).
+Membrane separation technology (MST) has emerged as an environmentally friendly alternative that addresses concerns about acidic and alkaline wastewater from traditional methods [@bashiri2022rare].
 
 ### Types of Membrane Technologies
 **Liquid Membranes:**
@@ -51,11 +51,11 @@ NF and UF membranes are particularly effective for treating acidic streams:
 - Function effectively at very low REE concentrations
 
 ### Electrodialysis
-Recent research has explored electrodialysis for REE separation, using adjacent anion exchange membranes with chelating agents like EDTA. Mathematical models based on the Nernst-Planck equation have been developed to optimize Dy separation from Pr/Nd mixtures ([Nature Scientific Reports](https://www.nature.com/articles/s41598-024-62885-4)).
+Recent research has explored electrodialysis for REE separation, using adjacent anion exchange membranes with chelating agents like EDTA. Mathematical models based on the Nernst-Planck equation have been developed to optimize Dy separation from Pr/Nd mixtures [@ding2024mathematical].
 
 (metal-organic-framework-mof-nanotraps)=
 ## Metal-Organic Framework (MOF) Nanotraps
-A breakthrough approach using rationally designed MOF structures has demonstrated remarkable selectivity ([Nature Communications](https://www.nature.com/articles/s41467-024-45810-1)).
+A breakthrough approach using rationally designed MOF structures has demonstrated remarkable selectivity [@hu2024rationally].
 
 ### Key Innovation
 
@@ -69,7 +69,7 @@ A breakthrough approach using rationally designed MOF structures has demonstrate
 - Achieves high separation in a **single step**
 
 ## Supramolecular Chemistry Approaches
-Supramolecular strategies amplify small property differences across the lanthanide series to achieve selective separation ([Nature Communications 2022](https://www.nature.com/articles/s41467-022-32178-3)).
+Supramolecular strategies amplify small property differences across the lanthanide series to achieve selective separation [@oconnelldanes2022selective].
 
 ### Triamidoarene Platform
 - Selective precipitation of light REE nitratometalates as supramolecular capsules
@@ -78,7 +78,7 @@ Supramolecular strategies amplify small property differences across the lanthani
 - Receptor can be recycled for further use
 
 ### M₄L₄ Tetrahedral Cages
-Self-assembled metal-organic cages exhibit high-precision metal ion self-sorting, enabling selective assembly across the lanthanide series ([Nature Communications 2018](https://www.nature.com/articles/s41467-018-02940-7)).
+Self-assembled metal-organic cages exhibit high-precision metal ion self-sorting, enabling selective assembly across the lanthanide series [@li2018supramolecular].
 
 ## Brief Overview of Bioseparation
 Bioseparation technologies offer high selectivity with minimal environmental impact, and are treated in full in [](#biological-and-biomimetic-separations). In outline:
@@ -90,7 +90,7 @@ Bioseparation technologies offer high selectivity with minimal environmental imp
 - **Phytomining**: Hyperaccumulator ferns for sustainable extraction
 
 ## Flash Joule Heating with Chlorination (FJH-Cl₂)
-A 2025 result combines flash Joule heating with chlorination for e-waste processing ([PNAS](https://www.pnas.org/doi/10.1073/pnas.2507819122)). The chemistry is chlorination, so the full treatment sits in [](#flash-joule-heating-with-chlorination); the reported performance is repeated here for comparison against the other technologies in this chapter.
+A 2025 result combines flash Joule heating with chlorination for e-waste processing [@tour2025sustainable]. The chemistry is chlorination, so the full treatment sits in [](#flash-joule-heating-with-chlorination); the reported performance is repeated here for comparison against the other technologies in this chapter.
 
 **Performance vs. Traditional Hydrometallurgy:**
 
@@ -129,7 +129,7 @@ Chemical Separation of Rare-Earth Element Oxalates (CSEREOX):
 Supercritical fluid extraction using carbon dioxide (sc-CO₂) offers an environmentally benign alternative to conventional hydrometallurgical processes, eliminating organic solvents and aqueous acid waste streams while achieving high extraction efficiencies.
 
 ### Fundamentals and Principles
-Supercritical CO₂ (critical point: 31.1°C, 7.38 MPa) is an attractive solvent for REE extraction due to its unique properties ([Anal. Chem. 1994](https://pubs.acs.org/doi/10.1021/ac00066a027)):
+Supercritical CO₂ (critical point: 31.1°C, 7.38 MPa) is an attractive solvent for REE extraction due to its unique properties [@lin1994supercritical]:
 
 **Requirements for Metal Dissolution in sc-CO₂:**
 
@@ -175,7 +175,7 @@ Several extractant systems have been developed for REE extraction in sc-CO₂ ([
 | TBP + HFA (5.3:6.8 mol%) | 95°C, 26 MPa | 95% Am, 83% Pu |
 | TBP-HNO₃ (4M H⁺) | 65°C, 34 MPa | \>99% REE |
 
-**Fluorinated Organophosphates:** Recent advances in fluorinated tributyl phosphate derivatives (TFPs) show enhanced CO₂ solubility ([ACS Sustainable Res. Manage. 2024](https://pubs.acs.org/doi/10.1021/acssusresmgt.4c00122)):
+**Fluorinated Organophosphates:** Recent advances in fluorinated tributyl phosphate derivatives (TFPs) show enhanced CO₂ solubility [@deng2024maximized]:
 
 - TFPC4 solubility: 8.82 mmol/mol CO₂
 - Compared to CMPO: 5.41 mmol/mol CO₂
@@ -188,7 +188,7 @@ Several extractant systems have been developed for REE extraction in sc-CO₂ ([
 - Research ongoing for REE applications
 
 ### Ore Processing Applications
-**Bastnäsite Extraction:** Pretreatment is essential for efficient REE dissolution ([ScienceDirect 2016](https://www.sciencedirect.com/science/article/abs/pii/S089684461630403X)):
+**Bastnäsite Extraction:** Pretreatment is essential for efficient REE dissolution [@sinclair2017rare]:
 
 *Roasted Bastnäsite (500°C calcination):*
 
@@ -214,7 +214,7 @@ The NaOH digestion route achieves near-complete extraction in shorter times due 
 - Enhanced REE accessibility to chelating agents
 - Removal of CO₂ and fluorine barriers
 
-**Zircon-Rich Ore Processing:** Canadian ore concentrate containing REEs in zircon matrix ([ACS Sustain. Chem. Eng. 2024](https://pubs.acs.org/doi/abs/10.1021/acssuschemeng.4c04103)):
+**Zircon-Rich Ore Processing:** Canadian ore concentrate containing REEs in zircon matrix [@authors2024optimization]:
 
 - NaOH cracking pretreatment essential
 - Near-complete REE extraction achieved
@@ -227,7 +227,7 @@ The NaOH digestion route achieves near-complete extraction in shorter times due 
 - Concentration factor increased to 3.23 ± 0.30 vs. acid leaching
 - Enhanced selectivity of REEs over impurities
 
-**Coal Byproducts (2025):** Research on coal-related materials demonstrates feasibility ([ScienceDirect 2025](https://www.sciencedirect.com/science/article/abs/pii/S0304386X2500115X)):
+**Coal Byproducts (2025):** Research on coal-related materials demonstrates feasibility [@veerla2025investigation]:
 
 - Chelation mechanism with synthesized organic solvents
 - TBP + HNO₃ extractants in sc-CO₂
@@ -239,7 +239,7 @@ The NaOH digestion route achieves near-complete extraction in shorter times due 
 - 15 MPa, 333 K (60°C)
 - TBP·(HNO₃)x·(H₂O)y complexes
 
-**Acid Mine Drainage:** AMD from anthracite coal regions ([ScienceDirect 2019](https://www.sciencedirect.com/science/article/pii/S1002072119307744)):
+**Acid Mine Drainage:** AMD from anthracite coal regions [@song2021extraction]:
 
 - Coagulation + complexation approach
 - Selective REE extraction demonstrated
@@ -292,7 +292,7 @@ The NaOH digestion route achieves near-complete extraction in shorter times due 
 - Semi-continuous with CO₂ recirculation
 - Counter-current multi-stage extraction
 
-**Industrial-Scale Design (2025 TEA Study):** Technoeconomic analysis of a 4000 L reactor facility in Ontario, Canada ([ACS I&EC Res. 2025](https://pubs.acs.org/doi/10.1021/acs.iecr.5c00324)):
+**Industrial-Scale Design (2025 TEA Study):** Technoeconomic analysis of a 4000 L reactor facility in Ontario, Canada [@azimi2025technoeconomic]:
 
 | Parameter      | Value               |
 |----------------|---------------------|

@@ -30,7 +30,7 @@ This section provides an in-depth examination of biosurfactants, peptides, prote
 (lanmodulin-structure-mechanism-and-engineering)=
 ## Lanmodulin: Structure, Mechanism, and Engineering
 ### Discovery and Properties
-Lanmodulin (LanM) is a 12 kDa protein identified in *Methylobacterium extorquens*, a methylotrophic bacterium that requires lanthanides for methanol metabolism. LanM is the most selective macromolecule for REEs characterized to date, even outperforming many synthetic chelators ([ACS Inorganic Chemistry](https://pubs.acs.org/doi/10.1021/acs.inorgchem.0c01303)).
+Lanmodulin (LanM) is a 12 kDa protein identified in *Methylobacterium extorquens*, a methylotrophic bacterium that requires lanthanides for methanol metabolism. LanM is the most selective macromolecule for REEs characterized to date, even outperforming many synthetic chelators [@deblonde2020selective].
 
 **Key Binding Properties:**
 
@@ -43,7 +43,7 @@ Lanmodulin (LanM) is a 12 kDa protein identified in *Methylobacterium extorquens
 | Competing metal tolerance | Up to molar amounts of Mg, Ca, Zn, Cu |
 
 ### Structural Basis of Selectivity
-The NMR solution structure reveals LanM's unique architecture ([Biochemistry](https://pubs.acs.org/doi/10.1021/acs.biochem.8b01019)):
+The NMR solution structure reveals LanM's unique architecture [@mattocks2019structural]:
 
 - **Four EF-hand motifs**: Metal coordination sites typically associated with Ca²⁺ binding
 - **Unusual fusion of adjacent EF-hands**: Creates a compact fold unique among EF-hand proteins
@@ -57,7 +57,7 @@ The NMR solution structure reveals LanM's unique architecture ([Biochemistry](ht
 **Critical Proline Residues:** Each EF-hand contains a crucial proline residue that hampers response to calcium while maintaining lanthanide selectivity. When prolines are mutated to alanine, calcium can induce conformational change at much lower concentrations, demonstrating proline's role in selectivity.
 
 ### Metal-Sensitive Dimerization
-A breakthrough discovery revealed that lanmodulin from *Hansschlegelia quercus* (Hans-LanM) exhibits oligomeric state sensitivity to rare-earth ionic radius ([Nature 2023](https://www.nature.com/articles/s41586-023-05945-5)):
+A breakthrough discovery revealed that lanmodulin from *Hansschlegelia quercus* (Hans-LanM) exhibits oligomeric state sensitivity to rare-earth ionic radius [@cotruvo2023enhanced]:
 
 - **La(III)-induced dimer**: \>100-fold tighter than Dy(III)-induced dimer
 - **Mechanism**: Picometre-scale differences in ionic radius propagate to quaternary structure through a "carboxylate shift" that rearranges second-sphere hydrogen bonding
@@ -70,7 +70,7 @@ A breakthrough discovery revealed that lanmodulin from *Hansschlegelia quercus* 
 - All-aqueous process without organic solvents
 
 ### Protein Engineering and Variants
-Computational and experimental studies have revealed key engineering principles ([Computational Biology 2025](https://pmc.ncbi.nlm.nih.gov/articles/PMC11879702/)):
+Computational and experimental studies have revealed key engineering principles [@yao2025computationally]:
 
 **D9 Residue Mutations:**
 
@@ -102,7 +102,7 @@ Computational and experimental studies have revealed key engineering principles 
 
 ## Lanthanide Binding Tags and Peptide-Based Separation
 ### EF-Hand Derived Peptides
-Lanthanide binding tags (LBTs) are short peptides derived from calcium-binding EF-hand loops that selectively coordinate REE cations ([PNAS 2024](https://www.pnas.org/doi/10.1073/pnas.2411763121)).
+Lanthanide binding tags (LBTs) are short peptides derived from calcium-binding EF-hand loops that selectively coordinate REE cations [@li2024lanthanide].
 
 **Design Principles:**
 
@@ -117,7 +117,7 @@ Lanthanide binding tags (LBTs) are short peptides derived from calcium-binding E
 - LBT Kd range: 0.9-1.8 μM (immobilized) vs. 0.4-10 pM (full LanM protein)
 
 ### Lanmodulin-Derived Peptides
-Mimicking lanmodulin with shorter peptides offers advantages ([ACS Applied Materials & Interfaces](https://pubs.acs.org/doi/10.1021/acsami.3c17565)):
+Mimicking lanmodulin with shorter peptides offers advantages [@verma2024investigation]:
 
 **LanM1 Peptide (from EF-hand loop 1):**
 
@@ -132,7 +132,7 @@ Mimicking lanmodulin with shorter peptides offers advantages ([ACS Applied Mater
 - High affinity doesn't necessarily correlate with high selectivity between REEs
 
 ### Foam-Based Interfacial Separation
-A novel approach uses peptide surfactants for foam flotation separation ([PNAS 2024](https://www.pnas.org/doi/10.1073/pnas.2411763121)):
+A novel approach uses peptide surfactants for foam flotation separation [@li2024lanthanide]:
 
 **Mechanism:**
 
@@ -152,14 +152,14 @@ A novel approach uses peptide surfactants for foam flotation separation ([PNAS 2
 - Validated LBT-mediated interfacial REE separation
 
 ### Gravity-Driven Separation
-Microbead technology using immobilized lanthanide binding peptides (LBPs) ([ACS Applied Bio Materials](https://pubs.acs.org/doi/10.1021/acsabm.3c01280)):
+Microbead technology using immobilized lanthanide binding peptides (LBPs) [@sree2023gravity]:
 
 - Selective adsorption of REEs onto functionalized microbeads
 - Gravity-based separation of bound vs. unbound REEs
 - Demonstrated enrichment of Europium and Terbium
 
 ### Mineralization Peptides
-Lanthanide ion mineralization peptide (Lamp) enables direct extraction ([Nature Communications](https://www.nature.com/articles/ncomms15670)):
+Lanthanide ion mineralization peptide (Lamp) enables direct extraction [@hatanaka2017rationally]:
 
 **Mechanism:**
 
@@ -188,7 +188,7 @@ The EF-hand motif is a helix-loop-helix structural domain found in diverse calci
 | S100 proteins | Cell signaling | Eu³⁺ Kd = 660 nM |
 
 ### Lanthanide Substitution Properties
-Lanthanides can replace Ca²⁺ in EF-hand proteins isomorphously ([PNAS](https://www.pnas.org/doi/10.1073/pnas.1722042115)):
+Lanthanides can replace Ca²⁺ in EF-hand proteins isomorphously [@edington2018coordination]:
 
 - X-ray crystallography shows lanthanides bind more strongly than calcium
 - Proteins retain biochemical activity after Ln³⁺ substitution
@@ -210,7 +210,7 @@ Lanthanides can replace Ca²⁺ in EF-hand proteins isomorphously ([PNAS](https:
 
 ## Biosurfactants for REE Separation
 ### Rhamnolipid Biosurfactants
-Rhamnolipids are glycolipid biosurfactants produced by *Pseudomonas aeruginosa* with strong REE complexation properties ([Journal of Hazardous Materials](https://www.sciencedirect.com/science/article/abs/pii/S0304389417304776)).
+Rhamnolipids are glycolipid biosurfactants produced by *Pseudomonas aeruginosa* with strong REE complexation properties [@hogan2017rhamnolipid].
 
 **REE Binding Characteristics:**
 
@@ -252,7 +252,7 @@ Sophorolipids (produced by *Starmerella bombicola*) show promise for rare earth 
 - Mixtures show robust performance in combined applications
 
 ### Saponin for Soil Remediation
-Non-ionic biosurfactant saponin has been evaluated for REE leaching from contaminated soils ([ScienceDirect](https://www.sciencedirect.com/science/article/abs/pii/S1002072117609943)):
+Non-ionic biosurfactant saponin has been evaluated for REE leaching from contaminated soils [@zhou2018leaching]:
 
 **Performance (25 g/L saponin, 400 mL):**
 
@@ -267,7 +267,7 @@ Saponin outperformed rhamnolipid for soil leaching applications.
 
 ## Siderophore-Mediated Bioleaching
 ### Siderophore Overview
-Siderophores are extracellular chelating compounds produced by aerobic microorganisms to acquire iron. They also complex REEs effectively for bioleaching applications ([World Journal of Microbiology](https://link.springer.com/article/10.1007/s11274-019-2666-1)).
+Siderophores are extracellular chelating compounds produced by aerobic microorganisms to acquire iron. They also complex REEs effectively for bioleaching applications [@others2019characterization].
 
 ### Key Microorganisms
 **Aspergillus niger:**
@@ -312,7 +312,7 @@ Microorganism selection depends on mineral type:
 
 ## Microbial Biosorption
 ### Overview
-Biosorption is a physicochemical, metabolically-independent process based on absorption, adsorption, ion-exchange, surface complexation, and precipitation. It represents a cost-effective, biotechnological approach for REE recovery ([World Journal of Microbiology](https://link.springer.com/article/10.1007/s11274-024-03974-4)).
+Biosorption is a physicochemical, metabolically-independent process based on absorption, adsorption, ion-exchange, surface complexation, and precipitation. It represents a cost-effective, biotechnological approach for REE recovery [@vitova2024microbial].
 
 **Advantages:**
 
@@ -324,7 +324,7 @@ Biosorption is a physicochemical, metabolically-independent process based on abs
 ### Bacterial Biosorption
 **Gram-Positive vs. Gram-Negative Selectivity:**
 
-*Bacillus subtilis* (Gram-positive) showed higher selectivity for heavy REEs (Yb, Lu) compared to Gram-negative species like *Leisingera methylohalidivorans* and *Phaeobacter inhibens* ([MDPI Metals](https://www.mdpi.com/2075-4701/10/7/954)).
+*Bacillus subtilis* (Gram-positive) showed higher selectivity for heavy REEs (Yb, Lu) compared to Gram-negative species like *Leisingera methylohalidivorans* and *Phaeobacter inhibens* [@breuker2020biosorption].
 
 **Roseobacter-Based Separation:**
 
@@ -332,7 +332,7 @@ Biosorption is a physicochemical, metabolically-independent process based on abs
 - pH-dependent adsorption/desorption
 - Preprotonation concentrates solution to \~50% of three heaviest lanthanides (Tm, Lu, Yb) in just two passes
 
-**Engineered E. coli Systems ([Environmental Science & Technology](https://pubs.acs.org/doi/abs/10.1021/acs.estlett.6b00064)):**
+**Engineered E. coli Systems [@bonificio2016rare]:**
 
 - OmpA protein functionalized with 16 copies of LBT
 - 2-10-fold increase in distribution coefficients for individual REEs
@@ -340,7 +340,7 @@ Biosorption is a physicochemical, metabolically-independent process based on abs
 - Enables separation of high-value heavy REEs from common light REEs
 
 ### Yeast Biosorption
-Phosphorylated dry baker's yeast (*Saccharomyces cerevisiae*) has demonstrated effective REE adsorption ([Scientific Reports](https://www.nature.com/articles/s41598-018-36306-2)):
+Phosphorylated dry baker's yeast (*Saccharomyces cerevisiae*) has demonstrated effective REE adsorption [@ojima2018recovering]:
 
 **Metals Adsorbed:**
 
@@ -357,7 +357,7 @@ Phosphorylated dry baker's yeast (*Saccharomyces cerevisiae*) has demonstrated e
 
 - Quick and efficient acquisition of Eu, Gd, La, Nd, Pr, Sm
 
-**Microalgae and Moss ([Applied Microbiology and Biotechnology](https://link.springer.com/article/10.1007/s00253-021-11386-9)):**
+**Microalgae and Moss [@heilmann2021rare]:**
 
 | Organism | Nd³⁺ Capacity | Eu³⁺ Capacity |
 | ---------- | --------------- | --------------- |
@@ -383,7 +383,7 @@ Phytomining uses hyperaccumulator plants to extract REEs from soils, offering an
 3.  **Extraction**: REE recovery from harvested biomass
 
 ### Dicranopteris linearis (Forked Fern)
-The strongest known REE hyperaccumulator ([ScienceDirect](https://www.sciencedirect.com/science/article/abs/pii/S0892687521001084)):
+The strongest known REE hyperaccumulator [@jally2021method]:
 
 **Accumulation Capacity:**
 
@@ -397,10 +397,10 @@ The strongest known REE hyperaccumulator ([ScienceDirect](https://www.sciencedir
 - REEs enriched to **30,000 mg/kg** in ash
 - \~11-fold concentration vs. original woody biomass
 
-**Detoxification Mechanism:** \[Silicon-pectin\] matrix fixation protects plant from REE toxicity ([Journal of Hazardous Materials](https://www.sciencedirect.com/science/article/abs/pii/S0304389423005368)).
+**Detoxification Mechanism:** \[Silicon-pectin\] matrix fixation protects plant from REE toxicity [@zheng2023rare].
 
 ### Blechnum orientale: Biomineralization Discovery (2025)
-A groundbreaking discovery of naturally formed REE minerals in living plants ([Environmental Science & Technology](https://pubs.acs.org/doi/10.1021/acs.est.5c09617)):
+A groundbreaking discovery of naturally formed REE minerals in living plants [@he2025discovery]:
 
 **Key Findings:**
 
@@ -425,7 +425,7 @@ While promising, phytomining faces hurdles:
 
 ## Biopolymer Adsorbents
 ### Chitosan-Based Adsorbents
-Chitosan, the second most abundant biopolymer, offers exceptional properties for REE recovery ([ScienceDirect](https://www.sciencedirect.com/science/article/pii/S2773207X24000368)):
+Chitosan, the second most abundant biopolymer, offers exceptional properties for REE recovery [@kore2024application]:
 
 **Properties:**
 
@@ -480,7 +480,7 @@ Chitosan, the second most abundant biopolymer, offers exceptional properties for
 
 ## Synthetic Biology and Metabolic Engineering
 ### Engineered Microbes for Bioleaching
-Systems biology-guided engineering has dramatically improved REE extraction ([Communications Biology 2025](https://www.nature.com/articles/s42003-025-08109-5)):
+Systems biology-guided engineering has dramatically improved REE extraction [@schmitz2025high]:
 
 **Gluconobacter oxydans Engineering:**
 
@@ -496,7 +496,7 @@ Systems biology-guided engineering has dramatically improved REE extraction ([Co
 - 18% increase in bioleaching rates
 
 ### Scalable Microbial Platforms
-**Methylobacterium extorquens AM1 Platform ([Environmental Science & Technology](https://pubs.acs.org/doi/10.1021/acs.est.3c06775)):**
+**Methylobacterium extorquens AM1 Platform [@good2024scalable]:**
 
 - Grows using electronic waste as sole REE source
 - Scalable to 10 L with consistent metal yields
@@ -506,7 +506,7 @@ Systems biology-guided engineering has dramatically improved REE extraction ([Co
   - Pyrroloquinoline quinone (PQQ)
 
 ### Synthetic Biology for E-Waste Recovery
-Advanced approaches for sustainable e-waste processing ([Advanced Functional Materials](https://advanced.onlinelibrary.wiley.com/doi/10.1002/adfm.202509900)):
+Advanced approaches for sustainable e-waste processing [@bai2025harnessing]:
 
 **Capabilities Achieved:**
 
@@ -540,7 +540,7 @@ Microbial synthesis systems achieve active biomanufacturing:
 
 ## Green Solvents: Deep Eutectic Solvents and Ionic Liquids
 ### Overview
-Deep eutectic solvents (DESs) and ionic liquids (ILs) represent green alternatives to conventional organic solvents for REE separation ([Journal of Sustainable Metallurgy](https://link.springer.com/article/10.1007/s40831-025-01289-8)).
+Deep eutectic solvents (DESs) and ionic liquids (ILs) represent green alternatives to conventional organic solvents for REE separation [@deng2025application].
 
 **Shared Properties:**
 
@@ -567,7 +567,7 @@ NADESs use natural compounds as components:
 
 - Cheap and natural source
 - Biodegradable
-- **Important Caveat:** Recent studies show amino acid-based DESs can be unexpectedly toxic---up to 10⁵ times more toxic than conventional choline chloride-based DESs ([ScienceDirect](https://www.sciencedirect.com/science/article/abs/pii/S0167732222025831))
+- **Important Caveat:** Recent studies show amino acid-based DESs can be unexpectedly toxic---up to 10⁵ times more toxic than conventional choline chloride-based DESs [@li2022high]
 
 ### REE Extraction Performance
 

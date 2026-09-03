@@ -49,7 +49,7 @@ relying on any specific number here.
 Microfluidic technology represents a transformative approach to REE separation, offering precise control, enhanced mass transfer, and significant process intensification. This section provides a comprehensive overview of microfluidic approaches for rare earth separation.
 
 #### Fundamentals and Advantages
-Microfluidic liquid-phase extraction miniaturizes traditional liquid-liquid extraction within microchannels (typically tens of µm cross-section), offering several key advantages ([Lab on a Chip 2025](https://pubs.rsc.org/en/content/articlehtml/2025/lc/d5lc00387c)):
+Microfluidic liquid-phase extraction miniaturizes traditional liquid-liquid extraction within microchannels (typically tens of µm cross-section), offering several key advantages [@song2025mine]:
 
 **Core Benefits:**
 
@@ -82,7 +82,7 @@ Droplet-based systems generate discrete organic droplets within continuous aqueo
 Slug flow configurations create alternating liquid segments of aqueous and organic phases, allowing precise control of slug length and specific surface area [@dessimoz2008liquid]. This approach has demonstrated separation factors of **1,289 for Zn/Mn** in 45 seconds of microfluidic extraction versus 233 in 25 minutes of batch extraction---a five-fold improvement with 33× faster processing [@touma2024intensification]. Novel reactor designs include serpentine microreactors, rotating microchannel extractors, and 3D reticulated hollow-strut SiC foam microreactors achieving **98.7% extraction efficiency** for praseodymium and 97.0% for cerium [@zhang2022solvent].
 
 #### Flow Regimes and Configurations
-Microfluidic extractors operate in the laminar flow regime (Reynolds number \<2300), with several distinct configurations ([ScienceDirect](https://www.sciencedirect.com/science/article/abs/pii/S0009250916301658)):
+Microfluidic extractors operate in the laminar flow regime (Reynolds number \<2300), with several distinct configurations [@kolar2016microfluidic]:
 
 **Co-Laminar (Parallel) Flow:**
 
@@ -112,7 +112,7 @@ Microfluidic extractors operate in the laminar flow regime (Reynolds number \<23
 - At extreme 500:1 phase ratio: 77% extraction efficiency
 
 #### Droplet-Based Microfluidic Systems
-Droplet microfluidics has emerged as a powerful platform for REE separation ([Chemical Engineering Journal](https://www.sciencedirect.com/science/article/abs/pii/S1385894718317509)):
+Droplet microfluidics has emerged as a powerful platform for REE separation [@zhang2019mechanistic]:
 
 **Flow-Focusing Droplet Microreactors:** Research on Dy-La binary separation systems demonstrates exceptional performance:
 
@@ -122,7 +122,7 @@ Droplet microfluidics has emerged as a powerful platform for REE separation ([Ch
 - **Separation factor: 279** achieved
 - Nearly complete Dy/La separation
 
-**Hollow Droplet Systems:** Fast extraction and enrichment from wastewater using hollow droplets enables rapid REE recovery from dilute solutions ([Separation and Purification Technology](https://www.sciencedirect.com/science/article/abs/pii/S1383586616312576)).
+**Hollow Droplet Systems:** Fast extraction and enrichment from wastewater using hollow droplets enables rapid REE recovery from dilute solutions [@chen2017fast].
 
 **Janus Nanoparticle-Enhanced Systems:** Snowman-shaped magnetic Janus nanoparticles added as emulsifiers provide:
 
@@ -175,14 +175,14 @@ Heavy REE extraction from mixed oxide concentrates using Cyanex 572 shows Lu and
 #### Electrophoretic Microfluidic Separation
 Electrophoretic techniques offer exceptional resolution for lanthanide separation on microfluidic platforms:
 
-**Isotachophoresis (ITP) on Chip:** ITP can separate up to **14 lanthanides** from a homogeneous sample into elementally pure bands ([Analytica Chimica Acta](https://www.sciencedirect.com/science/article/abs/pii/S0003267020308886)):
+**Isotachophoresis (ITP) on Chip:** ITP can separate up to **14 lanthanides** from a homogeneous sample into elementally pure bands [@pesavento2021versatile]:
 
 - PMMA microchips with contactless conductivity detection (C4D)
 - Complexing agents: acetate and α-hydroxyisobutyric acid (HIBA)
 - Eight lanthanides concentrated within \~6 minutes
 - Chip-to-ICP-MS interface enables elemental analysis
 
-**Capillary Zone Electrophoresis (CZE):** Complete separation of all 14 lanthanide ions achieved ([Journal of Chromatographic Science](https://academic.oup.com/chromsci/article/55/4/465/2712537)):
+**Capillary Zone Electrophoresis (CZE):** Complete separation of all 14 lanthanide ions achieved [@yelkenci2017separation]:
 
 - Buffer: 4.5 mM 2-hydroxyisobutyric acid + 1 mM acetic acid (pH 4.5)
 - Separation time: **\<6 minutes**
@@ -203,7 +203,7 @@ Scale-up follows numbering-up rather than geometric scale-up, preserving the mic
 However, a substantial gap remains between current demonstrations and industrial requirements. Industrial REE separation typically processes 50,000-100,000 tons of concentrates annually. The best microfluidic demonstration at 1 L/h equals approximately 8.76 m³/year---requiring 10,000-100,000× additional scale-up through massive parallelization
 
 #### Scale-Up: Numbering-Up Approach
-Unlike conventional scale-up (making vessels larger), microfluidics uses "numbering-up" (parallelization) to increase throughput while maintaining performance ([Minerals Engineering](https://www.sciencedirect.com/science/article/abs/pii/S0892687522001467)):
+Unlike conventional scale-up (making vessels larger), microfluidics uses "numbering-up" (parallelization) to increase throughput while maintaining performance [@yang2022pilot]:
 
 **Numbering-Up Strategies:**
 
@@ -227,7 +227,7 @@ Unlike conventional scale-up (making vessels larger), microfluidics uses "number
 - Counter-current operation validated
 
 #### Mini-Channel Counter-Current Extractors
-For intermediate scale, mini-channel extractors (4-6 mm diameter) bridge the gap between microfluidics and conventional equipment ([Separation and Purification Technology](https://www.sciencedirect.com/science/article/abs/pii/S1383586623028381)):
+For intermediate scale, mini-channel extractors (4-6 mm diameter) bridge the gap between microfluidics and conventional equipment [@he2024intensifying]:
 
 **Design Parameters:**
 
@@ -361,7 +361,7 @@ Microfluidic systems have been validated with diverse REE-containing feedstocks 
 **Coal fly ash** containing 250-800 ppm total REE (Appalachian sources average 591 ppm) integrates with microfluidic extraction following citrate leaching [@osti2021process]. Complete "ash-to-oxide" processes achieve enrichment factors exceeding 400× relative to raw fly ash. Flash Joule heating ultrafast activation (\~3000°C, \~1 second) increases REE extractability approximately 2× from secondary wastes including coal ash, bauxite residue, and electronic waste at remarkably low energy consumption of 600 kWh/ton (\~\$12/ton) [@deng2022rare].
 
 ### Scandium Recovery from Red Mud
-A specific application demonstrating microfluidic strategy for rapid Sc extraction from red mud (bauxite residue) shows the technology's applicability to industrial waste streams ([Separation and Purification Technology 2025](https://www.sciencedirect.com/science/article/abs/pii/S138358662502307X)).
+A specific application demonstrating microfluidic strategy for rapid Sc extraction from red mud (bauxite residue) shows the technology's applicability to industrial waste streams [@feng2025microfluidic].
 
 ## Industrial Status and Key Players
 
@@ -378,7 +378,7 @@ A specific application demonstrating microfluidic strategy for rapid Sc extracti
 
 ## The Mine-on-a-Chip Vision
 
-The concept of "mine-on-a-chip" envisions leveraging microfluidics for critical materials recovery ([Lab on a Chip 2025](https://pubs.rsc.org/en/content/articlehtml/2025/lc/d5lc00387c)):
+The concept of "mine-on-a-chip" envisions leveraging microfluidics for critical materials recovery [@song2025mine]:
 
 **Opportunities:**
 

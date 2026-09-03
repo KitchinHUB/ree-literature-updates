@@ -64,7 +64,7 @@ The SuperLig® MRT™ process ([IBC](https://ibcmrt.com/markets-and-applications
 Techno-economic analysis is essential for evaluating the commercial viability of REE separation processes, comparing alternative technologies, and guiding investment decisions. This section summarizes key economic parameters and recent TEA studies.
 
 ### Cost Structure Overview
-REE separation projects involve significant capital and operating costs that vary substantially by technology, scale, and feedstock ([Springer 2024](https://link.springer.com/article/10.1007/s13563-024-00467-6)).
+REE separation projects involve significant capital and operating costs that vary substantially by technology, scale, and feedstock [@obrien2024simplified].
 
 **Capital Expenditure (CAPEX) Components:**
 
@@ -103,7 +103,7 @@ Solvent extraction remains the dominant commercial technology, with well-establi
 | Tb recovery           | 91%             |
 | Product purity        | \>99.5%         |
 
-**Mountain Pass Processing (2020 Baseline):** Operating cost analysis for bastnäsite processing ([SAIMM 2022](https://scielo.org.za/scielo.php?script=sci_arttext&pid=S2225-62532022000700011)):
+**Mountain Pass Processing (2020 Baseline):** Operating cost analysis for bastnäsite processing [@uysal2022economic]:
 
 | Processing Route   | OPEX (\$/ton REO) | Key Cost Drivers   |
 |--------------------|-------------------|--------------------|
@@ -118,7 +118,7 @@ Solvent extraction remains the dominant commercial technology, with well-establi
 - CAPEX → lower sensitivity (amortized over life)
 
 ### Alternative Technology Economics
-**Supercritical Fluid Extraction (2025):** TEA for 4000 L industrial-scale sc-CO₂ facility ([ACS I&EC Res. 2025](https://pubs.acs.org/doi/10.1021/acs.iecr.5c00324)):
+**Supercritical Fluid Extraction (2025):** TEA for 4000 L industrial-scale sc-CO₂ facility [@azimi2025technoeconomic]:
 
 | Parameter        | Value                              |
 |------------------|------------------------------------|
@@ -136,7 +136,7 @@ Solvent extraction remains the dominant commercial technology, with well-establi
 | Smaller footprint | Reduced facility cost        |
 | No mixer-settlers | Eliminates hundreds of units |
 
-**Coal Refuse REE Recovery (2025):** Chemical recycling with 90% reagent recovery ([ACS Sustain. Res. Manage. 2025](https://pubs.acs.org/doi/10.1021/acssusresmgt.5c00353)):
+**Coal Refuse REE Recovery (2025):** Chemical recycling with 90% reagent recovery [@nili2025reclaiming]:
 
 | Parameter        | Value           |
 |------------------|-----------------|
@@ -147,7 +147,7 @@ Solvent extraction remains the dominant commercial technology, with well-establi
 | Reagent recovery | 90%             |
 
 ### Mining Project Cost Estimation
-**Simplified Cost Framework:** A framework for screening greenfield REE mining investments ([Mineral Economics 2024](https://link.springer.com/article/10.1007/s13563-024-00467-6)):
+**Simplified Cost Framework:** A framework for screening greenfield REE mining investments [@obrien2024simplified]:
 
 | Project Type               | CAPEX Range | Key Variables            |
 |----------------------------|-------------|--------------------------|
@@ -166,7 +166,7 @@ Solvent extraction remains the dominant commercial technology, with well-establi
 | CO₂ intensity    | \>20 tons CO₂/ton REO  |
 
 ### Acid Mine Drainage REE Recovery
-Techno-economic assessment of REE recovery from AMD using network sourcing ([MDPI Minerals 2021](https://www.mdpi.com/2075-163X/11/11/1298)):
+Techno-economic assessment of REE recovery from AMD using network sourcing [@larochelle2021fundamental]:
 
 **Key Findings:**
 
@@ -218,7 +218,7 @@ Techno-economic assessment of REE recovery from AMD using network sourcing ([MDP
 Life cycle assessment provides a comprehensive framework for evaluating the environmental impacts of REE production, enabling comparison of technologies and identification of improvement opportunities.
 
 ### LCA Framework for REE Production
-**System Boundaries:** REE LCA studies typically employ cradle-to-gate boundaries ([Frontiers Energy 2014](https://www.frontiersin.org/articles/10.3389/fenrg.2014.00045/full)):
+**System Boundaries:** REE LCA studies typically employ cradle-to-gate boundaries [@navarro2014life]:
 
     Mining → Beneficiation → Cracking/Leaching → Separation → Precipitation → Calcination → REO
 
@@ -236,7 +236,7 @@ Life cycle assessment provides a comprehensive framework for evaluating the envi
 | Land Use | m²·year | Mining, waste storage |
 
 ### Carbon Footprint of REE Production
-**Global Warming Potential Ranges:** Carbon footprint varies significantly by ore type and process ([MRS Bulletin 2022](https://link.springer.com/article/10.1557/s43577-022-00286-6)):
+**Global Warming Potential Ranges:** Carbon footprint varies significantly by ore type and process [@zapp2022environmental]:
 
 | Source/Process                | GWP (kg CO₂-eq/kg REO) | Reference        |
 |-------------------------------|------------------------|------------------|
@@ -246,7 +246,7 @@ Life cycle assessment provides a comprehensive framework for evaluating the envi
 | Europium (from monazite)      | 21.3                   | Minimum observed |
 | Yttrium (from monazite)       | 197.9                  | Maximum observed |
 
-**Element-Specific GWP from Monazite:** The allocation of impacts to individual REEs reveals significant variation ([Springer 2017](https://link.springer.com/chapter/10.1007/978-3-319-48768-7_12)):
+**Element-Specific GWP from Monazite:** The allocation of impacts to individual REEs reveals significant variation [@browning2017life]:
 
 | Element      | GWP (kg CO₂-eq/kg) | Notes                            |
 |--------------|--------------------|----------------------------------|
@@ -264,7 +264,7 @@ Life cycle assessment provides a comprehensive framework for evaluating the envi
 - Mining operations: 10-15% of GWP
 
 ### Water Footprint
-**Water Consumption by Process:** REE production is highly water-intensive ([ACS Sustain. Chem. Eng. 2015](https://pubs.acs.org/doi/full/10.1021/sc500573b)):
+**Water Consumption by Process:** REE production is highly water-intensive [@zaimes2015environmental]:
 
 | Element            | Water Consumption (kg/kg REO) |
 |--------------------|-------------------------------|
@@ -321,7 +321,7 @@ Life cycle assessment provides a comprehensive framework for evaluating the envi
 | Membrane separation | Low-Medium | Medium | Low | Low |
 | Bioseparation | Low | Medium | Low | Very Low |
 
-**Recycling vs. Primary Production:** Secondary recovery from waste streams shows dramatic improvements ([MDPI Sustainability 2025](https://www.mdpi.com/2071-1050/17/13/5825)):
+**Recycling vs. Primary Production:** Secondary recovery from waste streams shows dramatic improvements [@mugion2025systematic]:
 
 | Impact Category | Recycling Reduction |
 |-----------------|---------------------|
@@ -332,7 +332,7 @@ Life cycle assessment provides a comprehensive framework for evaluating the envi
 | Land use        | \>95%               |
 
 ### Process Hotspot Analysis
-**Dominant Impact Contributors:** ([MRS Bulletin 2022](https://pubmed.ncbi.nlm.nih.gov/35316936/))
+**Dominant Impact Contributors:** [@zapp2022environmental]
 
 | Impact Category    | Primary Contributor                |
 |--------------------|------------------------------------|

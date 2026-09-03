@@ -40,7 +40,7 @@ Rare earth elements are essential components in:
 - **Defense systems**: Precision-guided weapons, stealth aircraft, submarines
 - **Medical devices**: MRI machines, diagnostic equipment
 
-The demand for REEs is expected to increase by a factor of up to 7 by 2040, driven primarily by the global energy transition ([MRS Bulletin](https://link.springer.com/article/10.1557/s43577-022-00301-w)).
+The demand for REEs is expected to increase by a factor of up to 7 by 2040, driven primarily by the global energy transition [@fujita2022recycling].
 
 ## The Separation Challenge
 The 17 rare earth elements (15 lanthanides plus scandium and yttrium) share remarkably similar chemical and physical properties, making their separation one of the most difficult problems in chemistry. Key challenges include:

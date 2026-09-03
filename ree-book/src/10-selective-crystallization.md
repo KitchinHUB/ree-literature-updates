@@ -32,7 +32,7 @@ gradient in radius into a discontinuity in what precipitates.
 
 ## Conventional Precipitation
 
-Precipitation is a fundamental and cost-effective method for group separation of REEs, capable of producing high-purity products when properly optimized. The technique exploits differences in solubility of REE salts with various precipitants ([MDPI Minerals 2020](https://www.mdpi.com/2075-163X/10/2/178)).
+Precipitation is a fundamental and cost-effective method for group separation of REEs, capable of producing high-purity products when properly optimized. The technique exploits differences in solubility of REE salts with various precipitants [@kim2020characteristics].
 
 ### Precipitant Effectiveness Hierarchy
 Thermodynamic studies have established the relative precipitation power of common precipitants:
@@ -108,7 +108,7 @@ Over **99% REE precipitation** achieved at pH 6.5, though some Al and \~40% Fe c
 - Ammonium hydroxide suppresses REE precipitation up to pH 8
 
 ### Carbonate and Bicarbonate Precipitation
-Carbonate precipitation offers a cost-effective alternative with good REE recovery ([Springer 2025](https://link.springer.com/article/10.1007/s40831-025-01173-5)).
+Carbonate precipitation offers a cost-effective alternative with good REE recovery [@laskar2025conversion].
 
 **Advantages:**
 
@@ -168,7 +168,7 @@ Phosphate is a powerful precipitant, ranking second only to oxalate in effective
 - Produces rare earth phosphate (REPO₄) intermediate products
 
 ### Selective Oxidative Precipitation of Cerium
-Cerium separation by oxidation to Ce(IV) is a critical first step in REE purification, as Ce typically comprises up to 50% of ore REE content ([Hydrometallurgy 2024](https://www.sciencedirect.com/science/article/pii/S0304386X24001579)).
+Cerium separation by oxidation to Ce(IV) is a critical first step in REE purification, as Ce typically comprises up to 50% of ore REE content [@moldoveanu2025separation].
 
 **Principle:** Ce³⁺ is readily oxidized to Ce⁴⁺, which has much lower solubility:
 
@@ -206,7 +206,7 @@ Cerium separation by oxidation to Ce(IV) is a critical first step in REE purific
 - Manganese ferrite adsorbents for Ce(IV) separation from highly acidic solutions
 
 ### Ligand-Assisted Selective Precipitation
-Organic ligands and complexing agents enable enhanced selectivity in REE precipitation, representing an emerging approach for challenging separations ([Nature Communications 2022](https://www.nature.com/articles/s41467-022-32178-3), [JACS Au 2023](https://pubs.acs.org/doi/10.1021/jacsau.2c00671)).
+Organic ligands and complexing agents enable enhanced selectivity in REE precipitation, representing an emerging approach for challenging separations [@oconnelldanes2022selective; @johnson2023size].
 
 **Supramolecular Encapsulation:** Pre-organized triamidoarene platforms selectively precipitate light REE nitratometalates as supramolecular capsules under acidic biphasic conditions:
 
@@ -248,7 +248,7 @@ Organic ligands and complexing agents enable enhanced selectivity in REE precipi
 | SO₄²⁻      | Moderate, forms double salts     |
 
 ### Fractional Crystallization
-Fractional crystallization was the earliest industrial method for REE separation and remains relevant for high-purity production ([Wiley 2024](https://agupubs.onlinelibrary.wiley.com/doi/10.1002/9781119515005.ch6)).
+Fractional crystallization was the earliest industrial method for REE separation and remains relevant for high-purity production [@forsberg2024separation].
 
 **Principle:** Solubility differences of REE double salts enable separation by temperature or evaporation control:
 
@@ -277,7 +277,7 @@ Fractional crystallization was the earliest industrial method for REE separation
 - Largely superseded by solvent extraction for bulk separation
 
 ### Impurity Removal by Selective Precipitation
-Effective REE recovery requires prior removal of impurities through staged precipitation ([Scientific Reports 2025](https://www.nature.com/articles/s41598-025-00847-0)).
+Effective REE recovery requires prior removal of impurities through staged precipitation [@li2025iron].
 
 **Thorium and Uranium Removal:**
 

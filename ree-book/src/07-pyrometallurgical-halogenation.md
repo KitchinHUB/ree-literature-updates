@@ -154,7 +154,7 @@ Bastnaesite \[(Ce,La)(CO₃)F\] processing requires special consideration of flu
 Chlorination roasting at 300-500°C with subsequent water leaching enables REE recovery from end-of-life permanent magnets. The selective chlorination of REEs to RECl₃ enables separation from iron, which remains as oxide under appropriate conditions.
 
 ### Stepwise Carbochlorination-Chemical Vapor Transport (SC-CVT)
-A breakthrough process combining carbochlorination with chemical vapor transport (CVT) enables both extraction and separation of individual REEs ([Metallurgical and Materials Transactions B 2002](https://link.springer.com/article/10.1007/s11663-002-0018-1)).
+A breakthrough process combining carbochlorination with chemical vapor transport (CVT) enables both extraction and separation of individual REEs [@huang2002rare].
 
 **Process Components:**
 
@@ -472,7 +472,7 @@ The technology has been licensed to Flash Metals USA, with commercial production
 ## Molten Salt Electrolysis and Electrowinning
 
 ### Molten Salt Electrolysis (MSE)
-MSE is the dominant method for rare earth metal and alloy production in China ([Springer](https://link.springer.com/article/10.1007/s12613-020-2228-4)).
+MSE is the dominant method for rare earth metal and alloy production in China [@yang2021recovery].
 
 #### Advantages over Other Reduction Processes
 

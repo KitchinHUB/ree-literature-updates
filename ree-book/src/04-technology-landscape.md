@@ -24,7 +24,7 @@ the honest one. Two technologies in that table are at TRL 9 and everything else
 is at 3–7.
 
 ## Solvent Extraction (Liquid-Liquid Extraction)
-Solvent extraction is the dominant industrial method for REE separation, chosen because high-purity rare earths can be produced in large quantities continuously and economically ([ScienceDirect](https://www.sciencedirect.com/science/article/pii/S0892687513003452)).
+Solvent extraction is the dominant industrial method for REE separation, chosen because high-purity rare earths can be produced in large quantities continuously and economically [@xie2014critical].
 
 ### Principle of Operation
 Solvent extraction operates on mass transfer between two immiscible phases:
@@ -56,7 +56,7 @@ Industrial processes typically separate REEs into groups:
 - **Heavy REEs (HREEs)**: Tb, Dy, Ho, Er, Tm, Yb, Lu, Y
 
 ## Ion Exchange
-Ion exchange was the predominant method before the 1960s and remains important for ultra-high purity applications ([ScienceDirect](https://www.sciencedirect.com/science/article/pii/S0304386X23000294)).
+Ion exchange was the predominant method before the 1960s and remains important for ultra-high purity applications [@elouardi2023progress].
 
 ### Conventional Ion Exchange Resins
 **Advantages:**
@@ -82,7 +82,7 @@ Ion exchange was the predominant method before the 1960s and remains important f
 | Anion exchange | Quaternary ammonium | REE-anionic complex capture |
 
 ### Magnetic Ion Exchange Adsorbents
-Magnetic adsorbents combine polymer ion-exchange functionality with magnetic particles for easy recovery, representing an emerging approach for REE separation ([Frontiers in Bioengineering](https://www.frontiersin.org/articles/10.3389/fbioe.2020.00004/full)).
+Magnetic adsorbents combine polymer ion-exchange functionality with magnetic particles for easy recovery, representing an emerging approach for REE separation [@molinacaldern2022advances].
 
 **Design Approaches:**
 
@@ -106,7 +106,7 @@ Magnetic adsorbents combine polymer ion-exchange functionality with magnetic par
 - Demonstrated for heavy metal removal (Cu²⁺, Pb²⁺) with translation to REE recovery
 
 ### Polymer Inclusion Beads (µPIBs)
-Micro polymer inclusion beads represent a recent advance for online separation of critical rare-earth elements from end-of-life permanent magnets ([Separation and Purification Technology](https://www.sciencedirect.com/science/article/pii/S1383586623024450)).
+Micro polymer inclusion beads represent a recent advance for online separation of critical rare-earth elements from end-of-life permanent magnets [@croft2024online].
 
 **Features:**
 
@@ -122,7 +122,7 @@ Micro polymer inclusion beads represent a recent advance for online separation o
 - Separation of critical REEs from non-critical elements
 
 ### Ion-Imprinted Polymers (IIPs)
-Ion-imprinted polymers create binding cavities complementary in size and coordination to target REE ions, enabling high selectivity ([Chemical Engineering Journal](https://www.sciencedirect.com/science/article/abs/pii/S1385894719315906)).
+Ion-imprinted polymers create binding cavities complementary in size and coordination to target REE ions, enabling high selectivity [@zhao2025ultra].
 
 **Imprinting Process:**
 
