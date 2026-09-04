@@ -33,8 +33,10 @@ Seven orders of magnitude separate those two figures, and conflating them
 produces the claim — common in reviews and press coverage — that proteins have
 already beaten solvent extraction on selectivity. They have not. The best
 adjacent-pair separation factor demonstrated by any protein system is about
-1.4 (Nd/Pr) to 3.0 (Ce/La) [@larrinaga2024modulating], which is the same band
-conventional acidic organophosphorus extractants occupy. What biology has actually delivered is a
+1.4 (Nd/Pr) to 3.0 (Ce/La) [@larrinaga2024modulating], and the best
+*average* over a long run of adjacent pairs is 2.1, across the eleven elements
+Nd to Lu [@choi2026near]. Both sit in the band conventional acidic
+organophosphorus extractants occupy. What biology has actually delivered is a
 group-separation and concentration step that solvent extraction performs poorly
 and expensively, plus — through a second, quaternary-structure mechanism
 described below — a genuine but modest intra-series fractionation.
@@ -51,29 +53,32 @@ The coacervate systems in [](#coacervates-and-aqueous-biphasic-systems) are the
 natural process vehicle for these ligands, since both work in aqueous media
 under mild conditions.
 
-This section provides an in-depth examination of biosurfactants, peptides, proteins, and related biological approaches for REE separation---representing some of the most promising sustainable technologies in this field.
-
 (lanmodulin-structure-mechanism-and-engineering)=
 ## Lanmodulin: Structure, Mechanism, and Engineering
 ### Discovery and Properties
 Lanmodulin (LanM) is a 12 kDa protein identified in *Methylobacterium extorquens*, a methylotrophic bacterium that requires lanthanides for methanol metabolism. LanM is the most selective macromolecule for REEs characterized to date, even outperforming many synthetic chelators [@deblonde2020selective].
 
-**Key Binding Properties:**
+The measured properties, each with the paper it comes from, are collected
+below; the first three rows are the ones that decide what the protein is good
+for.
 
 | Property | Value | Source |
 | ---------- | ------- | ------- |
 | Selectivity Ln³⁺/Ca²⁺ | ~10⁸-fold (picomolar Ln³⁺ response vs. near-millimolar Ca²⁺) | [@cotruvo2018lanmodulin] |
-| Dissociation constant (Kd) | Picomolar for every Ln³⁺ from La to Lu, and for Y³⁺ (reported as 0.4-10 pM across the series) | [@cotruvo2018lanmodulin] |
+| Dissociation constant (K_d,app) | Picomolar for every Ln³⁺ from La to Lu and for Y³⁺; tabulated values for the prototypal protein run 70 ± 10 pM (Pr³⁺), 100 ± 10 pM (Gd³⁺), 200 ± 50 pM (Dy³⁺), 260 ± 60 pM (Ho³⁺) and 177 pM (Y³⁺) | [@cotruvo2018lanmodulin; @deblonde2020selective; @cook2019structural], as tabulated in [@yang2025emerging] |
 | Selectivity Ln³⁺/Ln³⁺ | **About fivefold**, light over heavy, for the whole series; all lanthanides and Y³⁺ induce essentially the same conformational change | [@mattocks2023enhanced] |
 | pH stability | Retains binding down to pH ≈ 2.5 | [@deblonde2020selective] |
 | Temperature stability | Up to 95 °C; survives repeated acid treatment | [@deblonde2020selective] |
 | Competing metal tolerance | Up to molar amounts of Li, Na, Mg, Ca, Sr, Al, Si, Mn, Fe, Co, Ni, Cu, Zn, U | [@deblonde2020selective] |
 
 Read the first three rows together, because they are the whole story. The
-10⁸-fold figure, the flat picomolar Kd profile, and the fivefold Ln/Ln
+10⁸-fold figure, the near-flat picomolar Kd profile, and the fivefold Ln/Ln
 preference are three faces of one fact: lanmodulin binds *all* trivalent rare
 earths at nearly the same enormous strength, and calcium essentially not at all.
-Set the two selectivities side by side — 10⁸ against Ca²⁺, about 5 across the
+The tabulated dissociation constants make the point concretely: from Pr³⁺ to
+Ho³⁺, nine places across the series, the apparent Kd moves by less than a factor
+of four, which is the fivefold light-over-heavy preference seen from the other
+side. Set the two selectivities side by side — 10⁸ against Ca²⁺, about 5 across the
 entire lanthanide series — and the seven orders of magnitude between them is the
 single most important number in this chapter.
 
@@ -85,19 +90,27 @@ in a discussion of intra-series separation, which is common in reviews and press
 coverage, inverts what the measurement means.
 
 ### Structural Basis of Selectivity
-The NMR solution structure reveals LanM's unique architecture [@cook2019structural]:
 
-- **Four EF-hand motifs**: Metal coordination sites typically associated with Ca²⁺ binding
-- **Unusual fusion of adjacent EF-hands**: Creates a compact fold unique among EF-hand proteins
-- **Coordination sphere**: the structure was solved with Y³⁺, not with a
-  lanthanide, and the paper's point about the sphere is that an *additional*
-  carboxylate ligand beyond the canonical EF-hand set is what buys the picomolar
-  affinity. It also implicates unusual N$_{i+1}$-H···N$_i$ hydrogen bonds
-  involving the EF-hand prolines in selective Ln³⁺ recognition. Donor-by-donor
-  assignments and metal-ligand distances are in the deposited coordinates rather
-  than in the paper's own text, so they are not quoted here.
+The NMR solution structure explains where the group selectivity comes from
+[@cook2019structural]. Lanmodulin carries four EF-hand motifs, the same
+helix-loop-helix used throughout biology to bind Ca²⁺, but adjacent pairs of
+them are fused in a way that has no counterpart among ordinary EF-hand proteins
+and that gives the protein a compact fold. The structure was solved with Y³⁺
+rather than with a lanthanide, and its central claim about the coordination
+sphere is that an *additional* carboxylate ligand, beyond the canonical EF-hand
+donor set, is what buys the picomolar affinity. The same work implicates unusual
+N$_{i+1}$-H···N$_i$ hydrogen bonds involving the EF-hand prolines in selective
+Ln³⁺ recognition. Donor-by-donor assignments and metal-ligand distances live in
+the deposited coordinates rather than in the paper's own text, so they are not
+quoted here.
 
-**Critical Proline Residues:** Each EF-hand contains a crucial proline residue that hampers response to calcium while maintaining lanthanide selectivity. When prolines are mutated to alanine, calcium can induce conformational change at much lower concentrations, demonstrating proline's role in selectivity.
+Those prolines are the second half of the discrimination against calcium. Each
+EF-hand contains one, and it hampers the loop's response to Ca²⁺ while leaving
+the response to a lanthanide intact; mutate the prolines to alanine and calcium
+becomes able to induce the conformational change at far lower concentrations.
+The extra carboxylate raises the affinity for a trivalent ion, and the proline
+lowers it for a divalent one --- two independent mechanisms pushing in the same
+direction, which is how eight orders of magnitude are assembled.
 
 [](#fig-lanm-efhand) sets the lanmodulin site beside the canonical calcium
 EF-hand it is built from, and puts both selectivities on one axis. The three
@@ -123,14 +136,19 @@ as the source of picomolar affinity [@cook2019structural] -- a structure solved
 with Y³⁺ rather than with a lanthanide; the sources cited here do not assign the
 sphere donor by donor, so neither does the drawing.
 **(C)** Both selectivities on one affinity axis. The ~10⁸-fold preference for
-Ln³⁺ over Ca²⁺ is eight units tall. Across the series the site is nearly flat —
-$K_\mathrm{d}$ = 0.4–10 pM for every lanthanide and Y³⁺ [@cotruvo2018lanmodulin], with
-only about a fivefold light-over-heavy preference for the prototypal protein
-[@mattocks2023enhanced], drawn to scale as the dashed line inside the band,
-where the tilt is half the width of the band that contains it. The binding site
-does not sharply distinguish neighbouring rare earths: the best adjacent-pair
-separation factors any protein system has produced are 1.4 (Nd/Pr) to 3.0
-(Ce/La) [@larrinaga2024modulating].
+Ln³⁺ over Ca²⁺ is eight units tall; calcium's own position is *implied* by that
+ratio rather than measured, and the panel says so. Across the series the site is
+nearly flat — picomolar for every lanthanide and Y³⁺ [@cotruvo2018lanmodulin].
+The plotted points are the tabulated apparent dissociation constants of the
+prototypal protein, 70 ± 10 pM at Pr rising to 260 ± 60 pM at Ho, with 177 pM
+for Y³⁺ as the dashed line [@yang2025emerging]: a factor of four across nine
+elements, and the same light-over-heavy direction, of roughly the same size, as
+the fivefold intrinsic preference reported for this protein
+[@mattocks2023enhanced]. Less than one unit on an axis where the gap to calcium
+is eight. The binding site does not sharply distinguish neighbouring rare earths: the best adjacent-pair separation factors
+any protein system has produced are 1.4 (Nd/Pr) to 3.0 (Ce/La)
+[@larrinaga2024modulating], with an average of 2.1 over the eleven adjacent
+pairs from Nd to Lu [@choi2026near].
 :::
 
 ### Metal-Sensitive Dimerization
@@ -141,10 +159,12 @@ the coordination sphere and into the *quaternary* structure: whether two protein
 molecules associate at all depends on which ion is bound.
 
 Lanmodulin from *Hansschlegelia quercus* (Hans-LanM) has an oligomeric state
-sensitive to rare-earth ionic radius [@mattocks2023enhanced]:
-
-- **La(III)-induced dimer**: \>100-fold tighter than the Dy(III)-induced dimer
-- **Mechanism**: picometre-scale differences in ionic radius propagate to quaternary structure through a "carboxylate shift" that rearranges second-sphere hydrogen bonding
+sensitive to rare-earth ionic radius [@mattocks2023enhanced]. The La(III)-induced
+dimer is more than 100-fold tighter than the Dy(III)-induced one, and the route
+by which a picometre-scale difference in ionic radius reaches a protein-protein
+interface is a "carboxylate shift" that rearranges second-sphere hydrogen
+bonding. The site itself barely notices which lanthanide it holds; the interface
+between two copies of the protein notices a great deal.
 
 **What the \>100-fold number is, and what it is not.** It is the ratio of two
 *dimerization* affinities, measured for La(III) against Dy(III). It is not a
@@ -181,9 +201,10 @@ distribution-ratio-based separation factor from the cited primary work.
 | LanD–E75Q/E78A [@larrinaga2024modulating] | Nd/Pr | 1.4 ± 0.2 | **Adjacent** | as above |
 | LanD–E75Q/E78A [@larrinaga2024modulating] | Nd/La | 7.3 ± 0.9 | Three elements apart | as above |
 
-The last three rows are the honest headline, and they are the only adjacent-pair
-separation factors any protein system has produced: **1.4 for Nd/Pr, 1.7 for
-Pr/Ce, 3.0 for Ce/La**. That range sits squarely inside the 1.5-3.0 band
+The last three rows are the honest headline: **1.4 for Nd/Pr, 1.7 for Pr/Ce,
+3.0 for Ce/La**. Until the dimerizing lanmodulins discussed below they were the
+only adjacent-pair separation factors any protein system had produced, and
+3.0 remains the largest. That range sits squarely inside the 1.5-3.0 band
 [](#solvent-extraction-fundamentals) gives for conventional organophosphorus
 extractants — not two orders of magnitude above it. The LanD authors make
 exactly this comparison themselves: their separation factors beat
@@ -223,21 +244,31 @@ handle on selectivity in its own right --- on-column dimerization nearly doubles
 SF(Nd/Dy) relative to the immobilized monomer.
 
 ### Protein Engineering and Variants
-Computational and experimental studies have revealed key engineering principles [@yao2025computationally]:
 
-**D9 Residue Mutations:**
+Two residues in each EF-hand loop have been mutated systematically, and between
+them they map what the protein is doing. The prolines, unique to lanmodulin
+among EF-hand proteins, are what keeps calcium out: replacing them with alanine
+moves the calcium response from near-millimolar into the micromolar range while
+the picomolar lanthanide affinity survives [@cotruvo2018lanmodulin]. The
+conserved aspartate at the ninth position of each loop (D9) sets the affinity
+itself, and the loss is graded by how much room the substitute takes up --- about
+2-fold for Asp→Asn, 20-fold for Asp→Ala, and up to 100-fold for the bulkier
+Met, SeMet and His, as tabulated by Yao and co-workers
+[@yao2025computationally].
 
-| Mutation | Effect on Affinity |
-| ---------- | ------------------- |
-| Asp→Asn | 2-fold decrease |
-| Asp→Ala | 20-fold decrease |
-| Bulky side chains | Up to 100-fold decrease |
-
-**Key Insights:**
-
-- Amino acids outside direct metal binding motif are crucial for coordination
-- Point mutations can induce long-range structural perturbations
-- Weak chelators can achieve high selectivity through allosteric mechanisms
+The computational work that assembled those numbers makes a point worth
+carrying beyond lanmodulin. Molecular dynamics on the wild-type protein and five
+EF-hand variants reproduces the measured apparent dissociation constants, and it
+does so only when residues *outside* the direct coordination motif are included:
+a point mutation at D9 propagates a long-range structural perturbation that
+shows up as altered helicity elsewhere in the chain, which circular dichroism
+also sees [@yao2025computationally]. The practical consequence is that a
+protein separation ligand cannot be designed by counting donors in the first
+coordination sphere, and the LanD result already made the same argument from the
+other direction --- a site supplying only four ligands, weak by any first-sphere
+standard, delivers the best adjacent-pair separation factors in the field
+because the discrimination lives in a dimer interface rather than in the site
+[@larrinaga2024modulating].
 
 ### Practical Implementation
 
@@ -367,531 +398,517 @@ alongside any separation factor: without the pair, a group number and an
 adjacent-pair number are indistinguishable on the page.
 
 ## Lanthanide Binding Tags and Peptide-Based Separation
-### EF-Hand Derived Peptides
-{index}`Lanthanide binding tags <lanthanide binding tags>` (LBTs) are short peptides derived from calcium-binding EF-hand loops that selectively coordinate REE cations [@li2024lanthanide].
 
-**Design Principles:**
+If the useful chemistry lives in a helix-loop-helix of about a dozen residues,
+there is an obvious question: does the rest of the protein have to be there?
+{index}`Lanthanide binding tags <lanthanide binding tags>` (LBTs) are the answer
+in its cheapest form --- short peptides lifted from the calcium-binding EF-hand
+loops of calmodulin, troponin and parvalbumin, of which a troponin-derived
+sequence optimized for Tb³⁺, YIDTNNDGWYEGDELLA, is the canonical example
+[@li2024lanthanide]. They are far easier to make than a protein, they can be
+synthesized rather than expressed, they can be evolved in a directed-evolution
+loop without worrying about folding, and they can be grafted onto a surface. The
+price is affinity, and the size of that price is the useful number.
 
-- Based on EF-hand metal binding loops from calmodulin, troponin, and parvalbumin
-- Typical sequence: YIDTNNDGWYEGDELLA (troponin-derived, Tb³⁺-optimized)
-- Net charge of -3 on binding loop creates neutral 1:1 cation:peptide complex
+### What a Peptide Costs You
 
-**Selectivity Characteristics:**
+Verma and co-workers took the first EF-hand loop of lanmodulin, called it LanM1,
+and measured what it does both free in solution and immobilized ---
+which is the condition that matters, because every separation technology built
+on these ligands puts them on a solid [@verma2024investigation]. In solution, by
+isothermal titration calorimetry, LanM1 binds Ce³⁺ with a dissociation constant
+of 3.84 ± 1.47 µM. Immobilized on gold and read by quartz-crystal microbalance
+fitted to a Langmuir isotherm, the surface-bound constants are about 0.9 µM for
+Ce³⁺ and about 1.8 µM for Nd³⁺ at pH ≈ 5.5. Set those beside the intact
+protein's tens-to-hundreds of picomolar and the cost of cutting the protein down
+to one loop is four to five orders of magnitude of affinity.
 
-- DGA resins: Selectivity at high acid (pH \<1)
-- Bioderived ligands: Selectivity at moderate pH (\>3)
-- LBT Kd range: 0.9-1.8 μM (immobilized) vs. 0.4-10 pM (full LanM protein)
-
-### Lanmodulin-Derived Peptides
-Mimicking lanmodulin with shorter peptides offers advantages [@verma2024investigation]:
-
-**LanM1 Peptide (from EF-hand loop 1):**
-
-- Simpler to produce and manipulate
-- Easier to optimize through directed evolution
-- Surface-immobilizable for separation technologies
-- Maintains REE binding when bound to solid substrates
-
-**Challenges:**
-
-- Lower affinity than full protein
-- High affinity doesn't necessarily correlate with high selectivity between REEs
+What survives the cut is the group selectivity, which is the more valuable half.
+Surface-bound LanM1 shows no measurable affinity for calcium or copper even at
+29 µM, and Ce³⁺ stops binding below pH 2, which supplies a pH-swing regeneration
+step for free. Grafted onto gold nanoparticles the peptide reaches a saturated
+capacity of about 3.5 µmol REE per gram --- and, critically, that figure is a
+saturation value, measured over feed concentrations from 20 to 125 µM where the
+isotherm has plateaued, not a single-point uptake quoted without its equilibrium
+concentration. Two cautions came out of the same work. Loading the peptide too
+densely on the surface almost eliminates REE binding, so surface coverage is a
+process variable and not a thing to maximize. And high affinity is not the same
+as high selectivity between rare earths: nothing in this work separates one
+lanthanide from another.
 
 ### Interfacial Separation with Peptide Surfactants
+
 Lanthanide binding tags are amphiphilic, so a solution of them will build a
 layer at an air-aqueous interface, and the composition of that layer need not
-match the bulk. Ortuno Macias and co-workers studied this on a *flat*
-interface -- surface tensiometry, X-ray reflectivity, X-ray fluorescence near
-total reflection, and molecular dynamics -- rather than in a foam
-[@li2024lanthanide]:
+match the bulk. Ortuno Macias and co-workers studied this on a *flat* interface
+--- surface tensiometry, X-ray reflectivity, X-ray fluorescence near total
+reflection, and molecular dynamics --- rather than in a foam
+[@li2024lanthanide]. The peptide complexes the trivalent cation in the bulk and
+the complex then adsorbs, with the binding pocket intact on adsorption. What
+decides whether the layer is selective is the net charge the complex carries. A
+negatively charged complex pulls excess cations to the interface by
+indiscriminate Coulombic attraction, and the selectivity is destroyed; at a
+peptide net charge of −3 the complex is neutral, and a 1:1 cation-to-peptide
+surface ratio is reached.
 
-**Mechanism:**
+The demonstrated separation is a switch rather than a fractionation. From an
+equimolar Tb³⁺/La³⁺ mixture the adsorbed layer enriches in Tb³⁺ when the bulk
+peptide is saturated, and inverts to La³⁺ when it is undersaturated, because the
+La³⁺ complex is the more surface-active of the two. That is an interesting
+handle and an awkward one: the direction of separation depends on a bulk
+concentration ratio that a real feed would not hold constant.
 
-1.  LBT peptides complex trivalent REE cations in the bulk
-2.  The metal-peptide complex adsorbs to the air/aqueous interface, with MD
-    showing the binding pocket stays intact on adsorption
-3.  Net charge decides what happens next. A negatively charged complex recruits
-    excess cations to the interface by nonselective Coulombic attraction, which
-    destroys the selectivity; at a peptide net charge of −3 the complex is
-    neutral and a 1:1 cation-to-peptide surface ratio is reached
+A foam column is the obvious vehicle and it does not yet exist. The nearest
+thing is a follow-up from the same group showing that glutaraldehyde
+cross-linking of the adsorbed peptide-REE complexes thickens the interfacial
+film and stiffens it in both dilation and shear, which is what a foam needs to
+survive drainage [@ortunomacias2024enhanced]. That work is still pendant-drop
+tensiometry and X-ray reflectivity on a flat interface; it substitutes a
+cross-linker for the polymers, surfactants and particles that usually stabilize
+a froth, and it stops short of reporting a foam separation.
 
-**Demonstrated Separations:**
+### Immobilized Peptides and Mineralizing Peptides
 
-- From an equimolar Tb³⁺/La³⁺ mixture, the adsorbed layer enriches in Tb³⁺ when
-  the bulk peptide is saturated and switches to La³⁺ when it is undersaturated
-- A flat-interface proof of principle. Turning it into a foam-flotation unit
-  operation is future work, not something this paper reports
+Two other peptide formats have been demonstrated at bench scale. Sree and
+co-workers immobilized lanthanide binding peptides on microbeads and let gravity
+do the phase separation, avoiding any external field or stimulus; they showed
+enrichment of europium and terbium, recovery by a change in solution conditions,
+and reuse of the beads over successive cycles, with no measurable binding of
+common industrial non-REE ions [@sree2023gravity].
 
-### Gravity-Driven Separation
-Microbead technology using immobilized lanthanide binding peptides (LBPs) [@sree2023gravity]:
+The mineralization route inverts the usual logic. Rather than holding the metal
+on a ligand and eluting it, the lanthanide ion mineralization peptide (Lamp) of
+Hatanaka and co-workers is designed to make the metal fall out of solution
+[@hatanaka2017rationally]. The sequence is short:
 
-- Selective adsorption of REEs onto functionalized microbeads
-- Gravity-based separation of bound vs. unbound REEs
-- Demonstrated enrichment of {index}`Europium <europium>` and {index}`Terbium <terbium>`
+1. Lamp promotes the formation of rare-earth hydroxide species in the aqueous
+   phase;
+2. it binds them into hydrophobic complexes;
+3. those complexes are insoluble and accumulate spontaneously as a precipitate,
+   at pH ≈ 6 and with no added energy.
 
-### Mineralization Peptides
-Lanthanide ion mineralization peptide (Lamp) enables direct extraction [@hatanaka2017rationally]:
+The attraction is that the product is a solid, so the separation and the
+recovery are the same step, and the concept transfers to peptides displayed on
+synthetic macromolecules and proteins. The authors propose it for seawater and
+industrial wastewater. The limitation is inherent to the mechanism: precipitating
+a hydroxide is a group operation, and nothing in this route offers a route to
+separating one lanthanide from another.
 
-**Mechanism:**
+## EF-Hand Proteins: Why Calcium Chemistry Nearly Works
 
-1.  Lamp promotes REE hydroxide species generation in aqueous solution
-2.  Binds to form hydrophobic complexes
-3.  Spontaneous accumulation as insoluble precipitates
-4.  Works under physiological conditions (pH \~6.0)
+Everything above is built on a motif that evolved to bind calcium, and it is
+worth being precise about why that motif is such a good starting point and why
+it is not, on its own, enough. The EF-hand is a helix-loop-helix that closes six
+or seven oxygen donors around a divalent ion. A trivalent lanthanide of similar
+radius is a better fit for that pocket by simple electrostatics, and ordinary
+EF-hand proteins reflect this by binding lanthanides only about 100- to
+1000-fold more tightly than calcium [@yao2025computationally]. Lanmodulin's
+eight orders of magnitude is therefore not a property of the EF-hand; it is what
+the prolines and the extra carboxylate add on top of one.
 
-**Applications:**
+Nikolova and co-workers computed the Ca²⁺/Ln³⁺ competition across the whole
+series in model calcium-signalling and calcium-buffering sites, and their result
+explains both halves of this chapter's argument at once [@nikolova2023lanthanides].
+The dominant determinant of whether a lanthanide displaces calcium is the *net
+charge* of the binding pocket: the more negative, the more the trivalent ion is
+favoured. Solvent exposure modulates it, with buried sites at net charge −3 or
+−4 strongly lanthanide-selective and sites at −1 preferring calcium. That is the
+group selectivity, and it is a charge argument, which is why it is large. Within
+the series, by contrast, the competition is set by the balance of two effects
+that pull in opposite directions --- an electronic term favouring the heavier
+lanthanides and a solvation term favouring the lighter ones. Two large opposed
+terms nearly cancelling is exactly the recipe for a small net preference, and
+that is the fivefold.
 
-- Selective separation from seawater
-- Industrial wastewater treatment
-- No additional energy input required
-
-## EF-Hand Calcium Binding Proteins
-### Structural Overview
-The EF-hand motif is a helix-loop-helix structural domain found in diverse calcium-binding proteins:
-
-**Key Proteins:**
-
-| Protein | Function | REE Binding |
-| --------- | ---------- | ------------- |
-| Calmodulin | Ca²⁺ signaling | Strong Ln³⁺ binding |
-| Troponin C | Muscle contraction | LBT source sequences |
-| Parvalbumin | Ca²⁺ buffering | NMR probe applications |
-| S100 proteins | Cell signaling | Eu³⁺ Kd = 660 nM |
-
-### Lanthanide Substitution Properties
-Lanthanides are routinely used as Ca²⁺ substitutes in EF-hand proteins -- as
-luminescent probes (Eu³⁺, Tb³⁺) and as heavy-atom replacements -- on the
-assumption that the substitution is isomorphous. Edington and co-workers tested
-that assumption on calmodulin with ultrafast 2D IR spectroscopy and found it
-does not hold [@edington2018coordination]:
-
-- The method is vibrational (FTIR and 2D IR) plus electronic-structure
-  calculation, not crystallography
-- Lanthanide coordination **distorts** the binding-site conformation: it
-  disrupts the bidentate Glu12 geometry and leaves greater conformational
-  flexibility and larger structural fluctuations than Ca²⁺ does
-- The caution generalizes: "seemingly innocuous ligand substitutions can
-  significantly alter protein conformation," so a lanthanide-substituted
-  structure is evidence about the substituted protein, not about the calcium
-  one
-
-**Calmodulin Studies:**
-
-- Ln³⁺ associates with the binding pockets more strongly than Ca²⁺ does
-- The perturbation is not negligible, which is exactly the point of the 2D IR
-  work above: it is large enough to matter for structure-function inference
-
-### Applications for REE Recovery
-**Calmodulin-Based Systems:**
-
-- Peptide binding loop conjugated to polymer scaffold particles
-- Applied to {index}`cerium` recovery from solution
-- Exploits natural EF-hand selectivity
+There is a second reason not to read too much into calcium-protein structures.
+Lanthanides are used routinely as calcium substitutes in EF-hand proteins, as
+luminescent probes and as heavy-atom replacements, on the assumption that the
+substitution is isomorphous. Edington and co-workers tested that assumption on
+calmodulin by ultrafast two-dimensional infrared spectroscopy backed by
+electronic-structure calculation --- a vibrational method, not crystallography
+--- and found it fails [@edington2018coordination]. Lanthanide coordination
+distorts the binding site: it disrupts the bidentate Glu12 geometry and leaves
+the site with greater conformational flexibility and larger structural
+fluctuations than calcium does. Their own generalization is the one to carry
+forward, that "seemingly innocuous ligand substitutions can significantly alter
+protein conformation." A lanthanide-substituted structure is evidence about the
+substituted protein, not about the calcium one, and a separation ligand designed
+from the calcium structure is being designed from the wrong geometry.
 
 ## Biosurfactants for REE Separation
-### Rhamnolipid Biosurfactants
-Rhamnolipids are glycolipid biosurfactants produced by *Pseudomonas aeruginosa* with strong REE complexation properties [@hogan2017rhamnolipid].
 
-**REE Binding Characteristics:**
+### Rhamnolipids: Group-Selective, but Not for the Group You Want
 
-Stability constants (log β) place REEs in the "strongly bound" group:
+Rhamnolipids are glycolipid biosurfactants from *Pseudomonas aeruginosa*, and
+Hogan and co-workers measured conditional stability constants for 26 metals
+against monorhamnolipid by a resin-based ion-exchange method
+[@hogan2017rhamnolipid]. The constants fall into three clean groups. The
+strongly bound group spans log β = 9.82 down to 8.20 and contains, in the
+paper's own order:
 
-The strongly bound group, in the paper's own order, runs log β = 9.82 down to
-8.20 and is **not** all rare earths:
-
-| Rank | Element |
+| Rank | Species |
 | ------ | --------- |
 | 1 | UO₂²⁺ (9.82, highest) |
 | 2-6 | Eu³⁺, Nd³⁺, Tb³⁺, Dy³⁺, La³⁺ |
 | 7-9 | **Cu²⁺, Al³⁺, Pb²⁺** |
 | 10-12 | Y³⁺, Pr³⁺, Lu³⁺ (8.20, lowest of the group) |
 
-**Key Finding:** rare earths bind far more strongly than the moderately bound
-metals (Cd²⁺, In³⁺, Zn²⁺, Fe³⁺, Hg²⁺, Ca²⁺ at log β = 7.17-4.10) and the weakly
-bound ones (Sr²⁺, Co²⁺, Ni²⁺, Ba²⁺, Mn²⁺, Mg²⁺, Rb⁺, K⁺ at 3.95-0.96), and a
-mixed-metal study confirms monorhamnolipids preferentially take the high-log β
-metals. But copper, aluminium and lead sit *inside* the rare earth band, above
-Y, Pr and Lu -- and uranyl sits above everything. Rhamnolipid is a
-group-selective collector for hard, highly charged cations, not a rare-earth
-selective one, and a real feed carrying Cu, Al or Pb will compete.
+Below them sit the moderately bound metals --- Cd²⁺, In³⁺, Zn²⁺, Fe³⁺, Hg²⁺ and
+Ca²⁺ at log β = 7.17-4.10 --- and the weakly bound ones, Sr²⁺, Co²⁺, Ni²⁺, Ba²⁺,
+Mn²⁺, Mg²⁺, Rb⁺ and K⁺ at 3.95-0.96. A mixed-metal study in the same work
+confirmed that monorhamnolipids preferentially take the high-log β metals, so
+the ranking is predictive and not just a table of constants.
 
-**Properties:**
+Read the ranking rather than the headline. Rare earths do sit in the strongly
+bound group, and they are separated from calcium by four to five orders of
+magnitude, which is a real group selectivity of the kind this chapter has been
+crediting. But copper, aluminium and lead sit *inside* the rare-earth band,
+above Y³⁺, Pr³⁺ and Lu³⁺, and uranyl sits above everything. Rhamnolipid is a
+group-selective collector for hard, highly charged cations; it is not a
+rare-earth-selective one, and a feed carrying Cu, Al or Pb --- which is to say
+most leach liquors, per [](#hydrometallurgical-leaching) --- will compete
+directly. The twelve strongly bound species span 1.6 log units in total, so the
+eight rare earths among them span less than that, which is why the comparison
+table at the end of this chapter rates biosurfactant intra-group selectivity as
+weak.
 
-- Hydrophilic surfactant
-- Biodegradable and environmentally friendly
-- Reduces surface tension more effectively than chemical surfactants at same CMC
-- Potential green technology for REE recovery
+### Sophorolipids and Saponin
 
-### Sophorolipid Biosurfactants
-Sophorolipids (produced by *Starmerella bombicola*) show promise for rare earth mineral flotation:
+Sophorolipids, from the yeast *Starmerella bombicola*, are the hydrophobic
+counterpart to the hydrophilic rhamnolipids, and mixtures of the two perform
+robustly in applications where neither alone does [@nguyen2011characterization].
+That complementarity is the argument for using them together as flotation
+collectors. It is also as far as the verified record goes here: no primary
+measurement of sophorolipid collector performance on a rare-earth mineral could
+be traced for this chapter, so no flotation recovery, contact angle or
+comparison against a petroleum-derived collector such as benzohydroxamic acid is
+quoted. The reader should treat sophorolipid flotation of rare-earth minerals as
+a proposal rather than a result.
 
-**Flotation Applications:**
+Saponin, a non-ionic plant biosurfactant, has been tested against rhamnolipid
+for leaching rare earths out of contaminated soils [@zhou2018leaching]. An
+earlier version of this chapter tabulated element-by-element removal
+efficiencies from that work in the 26-35 % range. Those figures could not be
+confirmed against the paper, which is not open access and carries no retrievable
+abstract, and they have been removed rather than repeated. What can be said is
+that soil washing with a biosurfactant is a remediation operation, not a
+production one: the target is lowering a soil concentration, the leachate is
+dilute, and the rare earths recovered are a by-product of the cleanup.
 
-- Evaluated as collectors for ultrafine ceria (model REE mineral)
-- Both acidic (ASL) and lactonic (LSL) forms tested
-- Compared favorably to petroleum-based collectors like benzohydroxamic acid (BHA)
+## Siderophores and the Boundary with Leaching
 
-**Complementary Properties:**
+Bioleaching of primary rare-earth ores --- the mechanisms of acidolysis,
+redoxolysis and complexolysis, the organisms that run them, and the blunt
+question of whether any of it dissolves an ore fast enough to displace acid ---
+belongs to [](#hydrometallurgical-leaching), and the quantitative answer given
+there is deflationary: measurably more dissolution than an abiotic control, over
+weeks rather than hours, into milligram-per-litre liquors. This section does not
+revisit that. It covers the *molecules* --- what the organisms secrete, and what
+those ligands do once isolated from the organism that made them.
 
-- Sophorolipids: Very hydrophobic
-- Rhamnolipids: Hydrophilic
-- Mixtures show robust performance in combined applications
+{index}`Siderophores <siderophore>` are the clearest case. They are extracellular
+chelators that aerobic microorganisms secrete to solubilize iron, and their
+affinity for hard trivalent cations does not stop at Fe³⁺. Osman and co-workers
+isolated the siderophore of a rhizosphere *Aspergillus niger* that produces
+87 % siderophore units under iron-deficient conditions, established from its
+FeCl₃ spectrum, its pH-independent absorbance maximum at 450 nm and its FTIR
+and NMR signatures that it is a trihydroxamate of the ferrichrome type, and then
+applied the *purified* ligand to Egyptian phosphorites from the Abu Tartur mine
+[@osman2019characterization]:
 
-### Saponin for Soil Remediation
-Non-ionic biosurfactant saponin has been evaluated for REE leaching from contaminated soils [@zhou2018leaching]:
-
-**Performance (25 g/L saponin, 400 mL):**
-
-| Element | Removal Efficiency |
+| Element | Removal efficiency |
 | --------- | ------------------- |
-| La | 35.3% |
-| Y | 31.5% |
-| Eu | 30.8% |
-| Ce | 26.1% |
+| Uranium | 69.5 % |
+| Samarium | 66.7 % |
+| Thorium | 55.0 % |
+| Lanthanum | 51.0 % |
+| Cerium | 50.1 % |
 
-Saponin outperformed rhamnolipid for soil leaching applications.
+Two features of that table matter more than the rare-earth numbers in it. The
+first is that this is a purified chelator applied to a phosphate rock, not a
+live-culture leach of a rare-earth ore, so it is not in tension with the ore
+result in [](#hydrometallurgical-leaching); it is a different experiment
+answering a different question. The second is the ordering. Uranium is removed
+better than any rare earth and thorium better than lanthanum or cerium.
+Hydroxamate siderophores are excellent hard-cation chelators and correspondingly
+indiscriminate among the actinides and lanthanides, which means any process
+built on them inherits a radionuclide-management problem of the sort
+[](#environment-techno-economics-and-life-cycle) describes, rather than escaping
+one.
 
-## Siderophore-Mediated Bioleaching
-### Siderophore Overview
-Siderophores are extracellular chelating compounds produced by aerobic microorganisms to acquire iron. They also complex REEs effectively for bioleaching applications [@osman2019characterization].
+Actinobacteria have also been screened on bastnäsite-bearing rock, with
+*Streptomyces* strains identified as siderophore producers and with secreted
+organic acids and complexing ligands assigned as the dominant extraction agents
+[@zhang2018bioleaching]. Specific siderophore titres previously quoted here
+could not be verified against that paper and have been removed.
 
-### Key Microorganisms
-**Aspergillus niger:**
-
-- Produces 87% siderophore units in iron-deficient conditions
-- Main siderophore identified as **ferrichrome** (FTIR/NMR confirmed)
-- Metabolites weather rock and destroy mineral crystal structures
-- REE dissolution via proton exchange, redox, and ligand complexation
-
-**Extraction Performance from Egyptian Phosphorites:**
-
-| Element | Removal Efficiency |
-| --------- | ------------------- |
-| Uranium | 69.5% |
-| Samarium | 66.7% |
-| Thorium | 55.0% |
-| Lanthanum | 51.0% |
-| Cerium | 50.1% |
-
-**Actinobacteria:**
-
-- Four strains tested for bastnäsite-bearing rock bioleaching
-- *Streptomyces* strains FXJ1.172 and FXJ1.532 produced 200 and 9.3 µmol/L siderophores
-- Secreted organic acids and complexing ligands as dominant extraction agents
-
-### Methylotrophic Bacteria
-*Methylobacterium extorquens* AM1 provides a unique approach:
-
-- Natural ability to acquire lanthanides from environment
-- First demonstration of REE bioaccumulation/biomineralization in mesophilic bacteria
-- Attractive for sustainable bioleaching due to inherent lanthanide metabolism
-
-### Mineral Source Selectivity
-
-Microorganism selection depends on mineral type:
-
-| Mineral Type | Preferred Organisms | Mechanism |
-| -------------- | -------------------- | ---------- |
-| Iron-bearing (sulfide/oxide) | Siderophore-producing chemoautotrophs | Sc extraction |
-| Phosphate-rich | Chemoheterotrophic bacteria | Organic acid secretion |
-| Carbonate minerals | Chemoheterotrophic bacteria | Acid dissolution |
+The methylotrophs are the interesting outlier, because they are the organisms
+that gave us lanmodulin in the first place. *Methylobacterium extorquens* AM1
+acquires lanthanides from its environment as a matter of metabolic necessity ---
+its methanol dehydrogenase needs one --- and it is therefore the only common
+bioleaching chassis whose selectivity for rare earths is native rather than
+engineered. What has been built on that is described under synthetic biology
+below.
 
 ## Microbial Biosorption
-### Overview
-Biosorption is a physicochemical, metabolically-independent process based on absorption, adsorption, {index}`ion-exchange <ion exchange>`, surface complexation, and {index}`precipitation`. It represents a cost-effective, biotechnological approach for REE recovery [@vitova2024microbial].
 
-**Advantages:**
+{index}`Biosorption` is passive: a metabolically independent physicochemical
+uptake onto cell-surface carboxylates, phosphates and hydroxyls, combining
+adsorption, {index}`ion exchange`, surface complexation and
+{index}`precipitation` [@vitova2024microbial; @giese2020biosorption]. Because
+the cells need not be alive, spent biomass from a fermentation industry is a
+legitimate feedstock, and that --- not performance --- is the argument for it.
+The surface area per unit mass is large, the functional groups are abundant, the
+material is biodegradable and non-toxic, and it costs nothing.
 
-- Large surface area per unit mass
-- Abundant cell surface functional groups (carboxylates, phosphates, hydroxyls)
-- Good metal coordination capacity
-- Biodegradable and non-toxic
+The selectivity is where the literature has to be read carefully, and the
+cleanest comparison is Breuker and co-workers, who ran bacteria, fungi and algae
+side by side under standardized acidic conditions of the sort a bioleaching
+liquor actually presents [@breuker2020biosorption]. Different organisms prefer
+different parts of the series: the Gram-positive *Bacillus subtilis* favours the
+heaviest elements, ytterbium and lutetium, more strongly than the Gram-negative
+*Leisingera methylohalidivorans* and *Phaeobacter inhibens*; the fungi
+*Catenulostroma chromoblastomyces* and *Pichia* sp. prefer the middle rare
+earths; algae performed poorly across the board. For *B. subtilis* and *Pichia*,
+living biomass outperformed dead. That is a genuine, mechanistically
+interesting spread, and it is also the whole of it: no element-pair separation
+factor is reported.
 
-### Bacterial Biosorption
-**Gram-Positive vs. Gram-Negative Selectivity:**
+The one biosorption result that reads as a separation is Bonificio and Clarke's
+[@bonificio2016rare]. *Roseobacter* sp. AzwK-3b immobilized on an assay filter
+adsorbs lanthanides and releases them as a function of pH, with the desorption
+order tracking the basicity of the individual lanthanides. Starting from a
+solution containing equal concentrations of every lanthanide --- so about 21 %
+of the three heaviest --- preprotonating the bacteria and running two passes
+concentrates the eluate to nearly 50 % Tm, Lu and Yb. The authors' comparison to
+industrial practice is on the specific basis of that enrichment in two passes.
+The important qualification is that a heavy-versus-light grouping is not an
+adjacent-pair split; two passes from 21 % to 50 % is real, and it is the coarse
+cut, not the cascade.
 
-*Bacillus subtilis* (Gram-positive) showed higher selectivity for heavy REEs (Yb, Lu) compared to Gram-negative species like *Leisingera methylohalidivorans* and *Phaeobacter inhibens* [@breuker2020biosorption].
+Engineering the surface improves the capture without changing that conclusion.
+Park and co-workers displayed 16 copies of a lanthanide binding tag on the *E.
+coli* OmpA protein and tested it on leachates from mine tailings and rare-earth
+deposits, where it raised the distribution coefficients of individual rare
+earths 2- to 10-fold over the unmodified control and raised the affinity of the
+cell surface for rare earths over every non-REE **except copper**
+[@park2017recovery]. The copper exception is the part usually dropped in
+retelling and the part a real feed would notice. The LBT display also
+strengthened binding monotonically with decreasing ionic radius, which is a
+genuine handle on separating heavies from lights.
 
-**Roseobacter-Based Separation [@bonificio2016rare]:**
+Among non-bacterial biomass, phosphorylated dry baker's yeast is the most
+developed. Ojima and co-workers treated *Saccharomyces cerevisiae* with
+cyclo-triphosphate to a total phosphorus content of about 1.0 mmol per gram dry
+cell weight, doubling the magnitude of the zeta potential to −45 mV
+[@ojima2018recovering]. The resulting cells adsorbed Cd²⁺, Cu²⁺, Pb²⁺ and Zn²⁺
+to about 1.0 mmol/g, and adsorbed Ce³⁺, Dy³⁺, Gd³⁺, La³⁺, Nd³⁺, Y³⁺ and Yb³⁺
+efficiently; from a mixed solution the trivalent rare earths were taken up
+preferentially over the divalent heavy metals, and 0.1 M HCl strips the metal
+back off. The mechanism is electrostatic, so the selectivity is a charge
+selectivity, and it is exactly as coarse as that implies.
 
-- *Roseobacter* sp. AzwK-3b immobilized on assay filter
-- pH-dependent adsorption/desorption
-- Preprotonation concentrates solution to \~50% of three heaviest lanthanides (Tm, Lu, Yb) in just two passes
-
-**Engineered E. coli Systems [@park2017recovery]:**
-
-- OmpA protein functionalized with 16 copies of LBT
-- 2-10-fold increase in distribution coefficients for individual REEs
-- LBT-display enhances affinity as function of decreasing atomic radius
-- Enables separation of high-value heavy REEs from common light REEs
-
-### Yeast Biosorption
-Phosphorylated dry baker's yeast (*Saccharomyces cerevisiae*) has demonstrated effective REE adsorption [@ojima2018recovering]:
-
-**Metals Adsorbed:**
-
-- Ce³⁺, Dy³⁺, Gd³⁺, La³⁺, Nd³⁺, Y³⁺, Yb³⁺
-
-**Advantages:**
-
-- Lower biomass requirement for relevant biosorption
-- Cost-effective and simple technique
-- Eukaryotes (especially fungi/yeasts like *Pichia* sp.) should be prioritized
-
-### Algal Biosorption
-**Seaweed (*Sargassum* sp.):**
-
-- Quick and efficient acquisition of Eu, Gd, La, Nd, Pr, Sm
-
-**Microalgae and Moss [@heilmann2021rare]:**
-
-| Organism | Nd³⁺ Capacity | Eu³⁺ Capacity |
-| ---------- | --------------- | --------------- |
-| *Physcomitrella patens* (moss) | 0.74 mmol/g | 0.48 mmol/g |
-| *Calothrix brevissima* | Lower | Lower |
-| *Chlorella kessleri* | Lower | Lower |
-
-**Two-Stage Adsorption Process:**
-
-1.  **Passive stage**: Rapid surface uptake
-2.  **Active stage**: Slow membrane transport to cytoplasm
-
-Cell wall chemistry determines biosorption efficiency.
+Phototrophic biomass illustrates the trap in quoting a capacity. Heilmann and
+co-workers measured maximum sorption capacities for the moss *Physcomitrella
+patens* and two microalgae from adsorption isotherms, and *P. patens* was the
+best of the three at 0.74 ± 0.05 mmol/g for Nd³⁺ and 0.48 ± 0.05 mmol/g for
+Eu³⁺ [@heilmann2021rare]. Those are isotherm-derived maxima rather than
+single-point uptakes, which is why they are quoted here. But the same paper
+measured the same biomass against metals that would share a wastewater with the
+rare earths, and found *higher* capacities for Au³⁺ (1.59 ± 0.07 mmol/g) and
+Pb²⁺ (0.83 ± 0.02 mmol/g). The microalgae showed the same ordering. A capacity
+figure for a single element, quoted alone, says nothing about whether the
+sorbent would pick that element out of a mixture --- and here it would not.
 
 ## Phytomining and Hyperaccumulator Plants
-### Overview
-Phytomining uses hyperaccumulator plants to extract REEs from soils, offering an ecologically sound technique for contaminated lands where traditional mining is not competitive.
 
-**Process Stages:**
+Phytomining grows a hyperaccumulator on ground that could not support a mine,
+harvests it, and treats the biomass as an ore. The sequence is
+phytoextraction into the plant tissue, enrichment of the harvested material into
+a "bio-ore", and extraction of the metal from that
+[@dinh2022phytomining]. The case for it is not throughput; it is that the land
+in question --- former tailings, contaminated soil --- has no competing use and
+that the operation remediates while it produces.
 
-1.  **Phytoextraction**: REE accumulation in plant tissues
-2.  **Enrichment**: Concentration into bio-ores
-3.  **Extraction**: REE recovery from harvested biomass
+The fern *Dicranopteris linearis* is the best-studied case. It grows naturally
+on former mine tailings in southern China, and the rare-earth concentration in
+its aerial parts exceeds that of common low-grade ore, which is what makes the
+biomass a candidate bio-ore rather than a curiosity [@jally2021method]. It
+survives its own uptake by fixing the metal in a silicon-pectin matrix, which is
+the detoxification mechanism [@zheng2023rare].
 
-### Dicranopteris linearis (Forked Fern)
-The best-studied REE hyperaccumulator. It grows naturally on former mine
-tailings in southern China, and the REE concentration in its aerial parts is
-higher than in common low-grade ore -- which is what makes the biomass a
-candidate "bio-ore" rather than a curiosity [@jally2021method].
+Jally and co-workers worked out what to do with the harvest, and the hard part
+turns out not to be the rare earths but the aluminium [@jally2021method]. The
+biomass is incinerated to ash, which raises the bio-ore grade and generates
+usable heat. Aluminium is then dissolved out of the ash with 6 M sodium
+hydroxide at 80 °C --- the step that limits the whole process, because insoluble
+aluminosilicates form and cap how much aluminium can be removed. The
+rare-earth-rich residue is rinsed, a step they designed carefully because it
+does most of the grade improvement. A mild nitric acid leach at 25 °C and pH 4.8
+then produces a solution free of aluminium and carrying 74 % of the rare earths.
+The interesting thing about that flowsheet is how conventional it is: a bio-ore
+still needs an incinerator, a caustic digest and an acid leach, and the plant has
+replaced the mine, not the hydrometallurgy.
 
-**Processing the bio-ore.** Jally and co-workers worked out the flowsheet after
-harvest, and the hard part is not the rare earths but the aluminium:
+A 2025 result may eventually change the last step. He and co-workers found
+nanoscale {index}`monazite` --- dendritic nanocrystals, formed in extracellular
+tissue at ambient temperature by biologically induced mineralization coupled to
+a non-equilibrium self-organization process --- in the living fern *Blechnum
+orientale* [@he2025discovery]. This is the first report of rare-earth mineral
+crystals forming inside a living plant. It matters twice over: it identifies a
+previously unrecognized, plant-mediated pathway for critical-mineral formation
+in the supergene environment, which bears on how rare earths are enriched and
+sequestered during chemical and biological weathering; and it raises the
+possibility of recovering a functional mineral directly from the plant instead
+of leaching the biomass, which is the paper's own argument for the feasibility
+of phytomining. Whether biogenic monazite carries the thorium and uranium that
+geological monazite does is not addressed, and that question decides whether the
+route avoids the radioactive-residue problem of
+[](#environment-techno-economics-and-life-cycle) or merely relocates it.
 
-- Incinerate the biomass to ash, which raises the bio-ore grade and generates
-  usable heat
-- Dissolve aluminium out of the ash with 6 M NaOH at 80 °C. This is the step
-  that limits the process: insoluble aluminosilicates form and cap how much Al
-  can be removed
-- Rinse the REE-rich residue, a step they designed carefully because it does
-  most of the grade improvement
-- Leach under mildly acidic conditions -- nitric acid, 25 °C, pH 4.8 -- giving
-  a solution free of aluminium and carrying **74 % of the REEs**
-
-**Detoxification Mechanism:** \[Silicon-pectin\] matrix fixation protects plant from REE toxicity [@zheng2023rare].
-
-### Blechnum orientale: Biomineralization Discovery (2025)
-A groundbreaking discovery of naturally formed REE minerals in living plants [@he2025discovery]:
-
-**Key Findings:**
-
-- **Nanoscale {index}`monazite`** crystals form within extracellular tissues
-- Ambient temperature biomineralization process
-- Dendritic nanocrystal morphology
-- First discovery of REE mineral crystals in living plants
-
-**Why it matters:**
-
-- It is a previously unrecognized, plant-mediated pathway for critical mineral
-  formation in the supergene environment, which bears on how REE are enriched
-  and sequestered during chemical and biological weathering
-- It raises the possibility of recovering a functional REE material directly
-  from the plant rather than leaching the biomass -- the paper's argument for
-  the feasibility of phytomining. Whether the biogenic monazite carries the
-  thorium and uranium that geological monazite does is not addressed
-- No mining-associated radioactive waste concerns
-
-### Challenges and Future Potential
-While promising, phytomining faces hurdles:
-
-- No peer-reviewed studies establishing commercial viability
-- Slow accumulation rates
-- Land requirements for large-scale operations
-- Need for optimized processing of plant biomass
+Against all of this stands the arithmetic. No peer-reviewed study establishes
+commercial viability for rare-earth phytomining; accumulation takes a growing
+season; the land area required to feed even a small separation plant is large;
+and the biomass processing above is itself a chemical plant. Phytomining is a
+remediation technology with a saleable by-product, and it is most defensible
+when described that way.
 
 ## Biopolymer Adsorbents
-### Chitosan-Based Adsorbents
-Chitosan, the second most abundant biopolymer, offers exceptional properties for REE recovery [@kore2024application]:
 
-**Properties:**
+Chitosan is the second most abundant biopolymer, it is non-toxic and
+biodegradable, and its amine and hydroxyl groups chelate trivalent cations, so
+it recurs constantly in the recovery literature as a support
+[@kore2024application]. Cellulose and alginate play the same role
+[@doyo2023advances]. The chemistry done to them is a short and repetitive list:
+cross-linking with glutaraldehyde, which forms covalent bonds through the amine
+groups and buys mechanical strength and chemical stability at the cost of some
+of those same binding sites; functionalization, most often with EDTA, to install
+a denser set of donors; ion imprinting, in which the polymer is cured around a
+template ion to leave a cavity shaped for it [@bulin2025preparation]; grafting,
+typically acrylic acid, sometimes onto a dialdehyde-cellulose-chitosan hybrid
+formed by a Schiff base reaction [@elsayed2023sustainable]; and compositing with
+graphene oxide, {index}`metal-organic frameworks <metal-organic framework
+(MOF)>`, layered double hydroxides, carbons or clays, usually to add surface
+area or a magnetic recovery handle.
 
-- Non-toxic and biodegradable
-- High adsorption capacity (85-100%)
-- Excellent surface area and porosity
-- High chelating power and hydrophilicity
+Earlier versions of this chapter carried a table of adsorption capacities for
+these materials --- several hundred milligrams per gram for Ce(III) and Nd(III),
+and a chitosan "adsorption capacity" of 85-100 %. Those numbers have been
+deleted, and the reason is worth stating because it applies to a large fraction
+of the adsorption literature. A capacity in mg/g is meaningless without the
+equilibrium concentration it was measured at and the model it was fitted with: a
+Langmuir *q*ₘₐₓ extrapolated from a 500 mg/L feed and a single-point uptake from
+a 5 mg/L feed differ by an order of magnitude and are routinely tabulated in the
+same column. None of the values previously quoted here could be traced to a
+primary measurement with its isotherm conditions attached. The "85-100 %" figure
+is worse than untraceable: it is a percentage, not a capacity, and a percentage
+removal without a feed concentration and a solid-to-liquid ratio is not a
+measurement of anything.
 
-**Modifications for Enhanced Performance:**
-
-| Modification                 | REE     | Capacity (mg/g) | Conditions   |
-|------------------------------|---------|-----------------|--------------|
-| EDTA-magnetic graphene oxide | Ce(III) | 353.28          | pH 7, 25 min |
-| Ion imprinted polymer        | Ce(III) | Selective       | pH 7         |
-| Acrylic acid graft           | Various | High            | Variable     |
-
-**Key Functional Groups:** C(=O)NH, CN, and C-O-C provide heterogeneous affinity for REE chemical adsorption.
-
-### Cellulose Composites
-
-**Graphene Oxide-Cellulose Systems:**
-
-| Adsorbent | Nd(III) Capacity | Ce(III) Capacity |
-| ----------- | ------------------ | ------------------ |
-| GO-sodium carboxymethyl cellulose | 661.21 mg/g | 436.55 mg/g |
-
-**Dialdehyde Cellulose-Chitosan:**
-
-- Chemically hybridized via Schiff base reaction
-- Followed by acrylic acid graft copolymerization
-- High adsorption efficiency for heavy metals
-
-### Modification Strategies
-**Cross-linking:**
-
-- Covalent bonds with amine groups
-- Increases mechanical strength and chemical stability
-- Glutaraldehyde commonly used
-
-**Functionalization:**
-
-- Introduction of new functional groups
-- EDTA functionalization creates high-capacity adsorbents
-- Example: EDTA-Fe₃O₄-chitosan-CMC nanocomposite: 432.34 mg/g for Pb²⁺
-
-**Composite Materials:**
-
-- {index}`Metal-organic frameworks <metal-organic framework (MOF)>` (MOFs)
-- Layered double hydroxides
-- Carbon materials
-- Clays
+What can be said without a number is the shape of the field. These are
+high-capacity, low-selectivity sorbents. They work at near-neutral pH, which
+puts them downstream of any acid leach and effectively confines them to
+wastewater polishing and dilute secondary streams. Not one of them has a
+reported element-pair separation factor. They are competing with ion exchange
+resins ([](#displacement-chromatography)) on cost of substrate rather than on
+performance, and the case for them is that chitin is a fishery waste.
 
 ## Synthetic Biology and Metabolic Engineering
-### Engineered Microbes for Bioleaching
-Systems biology-guided engineering has dramatically improved REE extraction [@schmitz2025high]:
 
-**Gluconobacter oxydans Engineering:**
+The most convincing biological results in this chapter come from treating the
+organism, not the ligand, as the thing to engineer. Two programmes show what
+that buys.
 
-- Whole-genome screening identified key genes
-- Deletion of *pstS* gene (phosphate transport)
-- Overexpression of *mgdh* gene
-- Result: **Up to 73% improvement** in REE extraction
+*Gluconobacter oxydans* is the workhorse for leaching secondary feedstocks
+because it excretes gluconic acid, and Schmitz and co-workers took a
+whole-genome approach to improving it. They first built a knockout collection of
+single-gene transposon disruption mutants and found 304 genes whose disruption
+alters production of the acidic biolixiviant [@schmitz2021generation]. The
+screen produced one negative result and one positive one, and both are
+mechanistically informative. Losing the biosynthesis of the cofactor
+pyrroloquinoline quinone, or losing the PQQ-dependent membrane-bound glucose
+dehydrogenase that uses it, nearly eliminates bioleaching --- so the entire
+effect runs through one enzyme. Disrupting the phosphate-specific transport
+genes *enhances* bioleaching, by up to 18 %. Acting on that, the same group
+deleted *pstS* and overexpressed *mgdh*, and the resulting strain improves
+rare-earth extraction by up to 73 % [@schmitz2025high]. A 73 % improvement on a
+process that dissolves milligram-per-litre quantities over weeks
+([](#hydrometallurgical-leaching)) is a genuine and useful gain that does not
+change the order of magnitude of the result.
 
-**Transposon Mutant Library [@schmitz2021generation]:**
+The methylotroph platform is the more radical proposal, because it
+consolidates leaching and recovery into one organism. Good and co-workers
+showed that *M. extorquens* AM1 grows on electronic waste as its sole source of
+rare earths and that this scales to 10 L with consistent metal yields, with no
+strong acid and no elevated temperature [@good2024scalable]. Adding organic
+acids raises leaching non-specifically; making it *specific* requires
+engineering, and they did it by overproducing the organism's own rare-earth
+binding ligands --- lanthanophores --- and pyrroloquinoline quinone. The
+recovered metal is stored intracellularly in polyphosphate granules, and
+knocking out exopolyphosphatase increases accumulation further, which ties the
+uptake directly to phosphate metabolism. The same organism grows on pulverized
+smartphones. Ten litres is the largest operation reported anywhere in this
+chapter, and it is a culture volume, not a separation.
 
-- A whole-genome collection of single-gene disruption mutants; 304 genes alter
-  biolixiviant production
-- Losing PQQ synthesis, or the PQQ-dependent membrane-bound glucose
-  dehydrogenase, nearly eliminates bioleaching
-- Disruption of phosphate-specific transport genes enhances bioleaching by up
-  to 18% -- the screen that pointed at *pstS* and led to the engineered strain
-  above
-
-### Scalable Microbial Platforms
-**Methylobacterium extorquens AM1 Platform [@good2024scalable]:**
-
-- Grows using electronic waste as sole REE source
-- Scalable to 10 L with consistent metal yields
-- No harsh acids or high temperatures required
-- Engineered overproduction of:
-  - REE-binding ligands (lanthanophores)
-  - Pyrroloquinoline quinone (PQQ)
-
-### Synthetic Biology for E-Waste Recovery
-Advanced approaches for sustainable e-waste processing [@bai2025harnessing]:
-
-**Capabilities Achieved:**
-
-- Higher metal selectivity
-- Enhanced tolerance to acidic conditions
-- Faster recovery kinetics in complex matrices
-- Selective bioleaching, biosorption, and bioaccumulation
-
-**Technologies Applied:**
-
-- Metabolic pathway engineering
-- Synthetic gene circuits
-- Cell surface display systems
-- Directed evolution
-
-### High-Purity REE Biomanufacturing
-Microbial synthesis systems achieve active biomanufacturing:
-
-**Affinity Column Systems:**
-
-- Bioconjugated with structurally engineered proteins
-- Outstanding separation achieved
-
-**Purity Results:**
-
-| Element Pair | Purity Achieved |
-| -------------- | ----------------- |
-| Eu recovery | 99.9% |
-| La recovery | 97.1% |
-| Dy recovery | 92.7% |
+The wider synthetic-biology toolkit being brought to bear on electronic waste
+--- metabolic pathway engineering, synthetic gene circuits, cell-surface
+display, directed evolution --- is surveyed by Bai and co-workers, whose stated
+targets are higher metal selectivity, better tolerance of acidic conditions and
+faster kinetics in complex matrices across bioleaching, biosorption and
+bioaccumulation [@bai2025harnessing]. Those are objectives rather than
+achievements, and the honest reading is that the field has demonstrated the
+front end of the problem and not the back end. An earlier version of this
+chapter tabulated single-element purities of 99.9 % for europium, 97.1 % for
+lanthanum and 92.7 % for dysprosium from a bioconjugated affinity column. No
+source for those figures could be identified and they have been removed.
 
 ## Green Solvents: Deep Eutectic Solvents and Ionic Liquids
-### Overview
-{index}`Deep eutectic solvents <deep eutectic solvent>` (DESs) and {index}`ionic liquids` (ILs) represent green alternatives to conventional organic solvents for REE separation [@deng2025application].
 
-**Shared Properties:**
+{index}`Deep eutectic solvents <deep eutectic solvent>` (DESs) and
+{index}`ionic liquids` (ILs) are adjacent to this chapter rather than in it ---
+they are not biological --- but they arrive with the same claim, that a
+sustainable medium can replace kerosene and organophosphorus extractants, and
+they are worth including because they are the case where that claim has been
+tested longest [@deng2025application; @okamura2020progress]. Both are liquid over
+a wide temperature range, non-volatile, non-flammable and ionically conductive,
+which removes the fire and vapour-emission hazards of a conventional solvent
+extraction house ([](#solvent-extraction-fundamentals)). DESs are the cheaper
+half of the pair: two components mixed, no synthesis, no purification, at the
+cost of being generally less stable than an IL. Natural deep eutectic solvents
+narrow the components further to sugars, organic acids, amino acids and organic
+bases. Both classes have been applied to rare earths as lixiviants for
+caustic-treated concentrates [@shakiba2023application] and as extractants from
+nitrate media [@zinoveva2024extraction; @lu2025separation; @alguacil2023work].
 
-- Liquid over wide temperature range
-- Non-volatile
-- Non-flammable
-- Good ionic conductivity
-
-**DES Advantages:**
-
-- Easier preparation (simple mixing of two components)
-- Much cheaper than ILs
-- Generally less stable than ILs
-
-### Natural Deep Eutectic Solvents (NADESs)
-NADESs use natural compounds as components:
-
-- Sugars
-- Organic acids
-- **Amino acids**
-- Organic bases
-
-**Amino Acid-Based DESs:**
-
-- Cheap and natural source
-- Biodegradable
-- **Important Caveat:** Recent studies show amino acid-based DESs can be unexpectedly toxic---up to 10⁵ times more toxic than conventional choline chloride-based DESs [@li2022high]
-
-### REE Extraction Performance
-
-**Choline Chloride-Urea-Malonic Acid System:**
-
-| Condition | Y Dissolution |
-| ----------- | -------------- |
-| Without activation | 49% |
-| 60 min mechanical activation | 85% |
-
-**IL Extraction Systems:**
-
-- Extracted complexes often different from organic solvent systems
-- REE extraction and separation efficiencies significantly enhanced
-- Synergistic IL extraction improves extractability and separability
+"Green" should not be read as "benign". Amino-acid-based DESs, chosen precisely
+because their components are natural and biodegradable, have been measured as up
+to 10⁵ times more toxic than conventional choline-chloride-based DESs
+[@li2022high]. The provenance of a molecule is not evidence about its toxicology.
 
 (industrial-challenges)=
-### Industrial Challenges
-Despite academic promise, commercial breakthroughs have been limited:
+### Why None of This Has Reached a Plant
 
-- High cost of some ILs
-- Stability issues with DESs
-- Scale-up challenges
-- Toxicity concerns with some formulations
-- Need for {index}`life cycle assessment`s
+After twenty years of academic work on ILs and DESs in extractive metallurgy
+there has been no commercial breakthrough, and Binnemans and Jones --- authors
+of a good deal of that work themselves --- set out eight reasons why
+[@binnemans2023ionic]. High viscosity, which penalizes mass transfer and pumping
+throughout a mixer-settler train. Limited chemical stability under real
+metallurgical conditions. Difficulty recycling and reusing the solvent, which is
+fatal when the solvent is the expensive part of the inventory. No demonstrated
+unit processes or flowsheets at pilot scale. Insufficient physical-property data
+to do engineering with. The administrative burden of licensing and safety
+permits for a novel substance. Very high cost at large scale. And, most
+damningly, minimal added value over state-of-the-art hydrometallurgy. Their
+conclusion is that innovation in hydrometallurgy is unlikely to come from
+these solvents, and that the community's expertise would be better spent on
+speciation and chemical thermodynamics of ordinary aqueous systems.
+
+That verdict is a useful calibration for this whole chapter. Every objection on
+Binnemans and Jones's list --- cost, stability, recyclability, missing
+engineering data, absence of pilot-scale flowsheets --- applies with at least
+equal force to a purified protein. The difference is that the protein has a
+demonstrated selectivity no conventional reagent can match, and the deep
+eutectic solvent, on the evidence, does not.
 
 ## Comparison of Biological Separation Technologies
 
@@ -906,7 +923,7 @@ useless in the second, and lanmodulin is.
 | Lanmodulin | Exceptional (~10⁸ vs. Ca²⁺) | Weak: ~5× light-over-heavy for the native protein; SF = 8-13 for Nd/Dy on a dimerizing-variant column | 0.9 mL immobilized-protein column [@mattocks2023enhanced] |
 | LanD (dimerizing chaperone) | Not characterized | SF 1.4 (Nd/Pr) to 3.0 (Ce/La) — the best protein adjacent-pair figures reported | Bench, µM scale |
 | LBT Peptides | High | Not demonstrated | Not reported |
-| Biosurfactants | Moderate | Weak (log β spans ~1.3 units across the series) | 400 mL at 25 g/L saponin |
+| Biosurfactants | Moderate: rare earths bind strongly, but Cu, Al, Pb and UO₂²⁺ bind as strongly or more so [@hogan2017rhamnolipid] | Weak: all eight rare earths measured fall inside a band under 1.6 log β units wide | Bench; no separation operation reported |
 | Siderophore Bioleaching | Moderate | Not demonstrated | Not reported |
 | Microbial Biosorption | Variable | Not demonstrated | Not reported |
 | Phytomining | Low-Moderate | None (bulk uptake) | Not reported |

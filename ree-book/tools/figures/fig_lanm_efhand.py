@@ -15,9 +15,9 @@ It does not, and the figure is laid out so that it cannot be read that way:
 *   Panel C is where the honesty lives. Affinity is plotted as -log Kd, so the
     ~10^8 preference for the rare earths over calcium is literally eight units
     of the same axis on which the entire lanthanide series is flat to within
-    the band's own width. The ~5x light-over-heavy tilt is drawn to scale
-    inside the band (0.7 log units), where it is visibly smaller than the
-    spread of the reported Kd values -- which is the point.
+    the band's own width. The four measured points span a factor of four from
+    Pr to Ho -- less than one unit on an axis where the gap to calcium is
+    eight, which is the point.
 
 Provenance of every drawn detail:
 
@@ -36,12 +36,28 @@ Provenance of every drawn detail:
     number 7. From Gifford, Walsh and Vogel, Biochem. J. 405, 199 (2007) --
     NOT yet in references.bib; the entry is filed in
     review/bib-additions/fig11.bib for the orchestrator to merge.
-*   Panel C numbers: Kd 0.4-10 pM for every Ln(III) and Y(III), and a calcium
-    response only near millimolar, from the chapter's binding-properties table
-    (cotruvo2018lanmodulin); ~5x light-over-heavy for the prototypal
-    Mex-LanM from mattocks2023enhanced; the 1.4-3.0 band for the best
-    adjacent-pair separation factor from any protein system is the chapter's
-    own summary of larrinaga2024modulating.
+*   Panel C numbers: the apparent dissociation constants of the prototypal
+    Mex-LanM, tabulated in yang2025emerging Table 2 from the primary
+    literature -- 70 +/- 10 pM (Pr), 100 +/- 10 (Gd), 200 +/- 50 (Dy),
+    260 +/- 60 (Ho), and 177 for Y(III). These are plotted as the measured
+    points they are, with their error bars, rather than as a schematic band.
+
+    An earlier version of this figure drew a band labelled "Kd = 0.4-10 pM
+    for every Ln(III) and Y(III)", attributed to cotruvo2018lanmodulin. That
+    band is too low by roughly two orders of magnitude and no source for it
+    could be found; it is withdrawn. The shape of the argument does not
+    change -- the series is flat to within a factor of four while the gap to
+    calcium is eight decades -- but the figure now shows measurements.
+
+*   Calcium's position is NOT independently measured here. It is *implied*:
+    the 10^8-fold Ln/Ca selectivity (yang2025emerging, cotruvo2018lanmodulin)
+    applied to a ~100 pM lanthanide affinity puts the calcium response near
+    10 mM, which is what "responds to calcium only near millimolar" means.
+    The panel says so, so that the arrow is not read as two measurements.
+
+*   The 1.4-3.0 band for the best adjacent-pair separation factor from any
+    protein system is the chapter's summary of larrinaga2024modulating, and
+    2.1 is the Nd-Lu average from choi2026near.
 
 Nothing here is a crystal structure. The donor positions are spaced evenly
 around a circle because the count is the message; the real geometry is not.
@@ -171,50 +187,72 @@ axC = fig.add_subplot(gs[1, :])
 SERIES = ["La", "Ce", "Pr", "Nd", "Pm", "Sm", "Eu", "Gd", "Tb", "Dy", "Ho",
           "Er", "Tm", "Yb", "Lu"]
 xs = np.arange(len(SERIES))
-X_CA = 18.0
+X_CA = 17.2
 
-# Kd = 0.4-10 pM  ->  -log10 Kd = 12.4 down to 11.0.
-axC.fill_between([-0.55, 14.55], 11.0, 12.4, color=LN, alpha=0.16, lw=0)
-axC.plot([-0.55, 14.55], [12.4, 12.4], color=LN, lw=0.9)
-axC.plot([-0.55, 14.55], [11.0, 11.0], color=LN, lw=0.9)
-axC.text(7.0, 12.52, "$K_\\mathrm{d}$ = 0.4$-$10 pM for every Ln$^{3+}$ "
-                     "and Y$^{3+}$",
-         ha="center", va="bottom", fontsize=8, color=LN)
+# Measured apparent dissociation constants for the prototypal Mex-LanM,
+# from yang2025emerging Table 2.  Plotted as -log10 Kd with the tabulated
+# uncertainty carried through, which is why the error bars are asymmetric.
+KD = {"Pr": (70.0, 10.0), "Gd": (100.0, 10.0),
+      "Dy": (200.0, 50.0), "Ho": (260.0, 60.0)}
+Y_KD = 177.0
 
-# The intra-series preference, drawn to scale and inside the band, because it
-# is a tilt within these affinities and not a separate, weaker set of them:
-# 5x is 0.7 log units, half the height of the band that contains it.
-axC.plot([0, 14], [12.05, 11.35], color=LN, lw=1.2, ls=(0, (4, 3)))
-axC.annotate("$\\approx$5$\\times$ light over heavy, whole series (Mex-LanM):\n"
-             "the tilt is half the width of the band that contains it",
-             xy=(11.0, 11.50), xytext=(7.0, 10.15), fontsize=8, color=LN,
-             ha="center", va="top",
+nlog = lambda pm: -np.log10(pm * 1e-12)
+px = [SERIES.index(e) for e in KD]
+py = [nlog(v) for v, _ in KD.values()]
+plo = [nlog(v) - nlog(v + e) for v, e in KD.values()]
+phi = [nlog(v - e) - nlog(v) for v, e in KD.values()]
+
+lo, hi = nlog(320.0), nlog(60.0)          # the full measured spread, 60-320 pM
+axC.fill_between([-0.55, 14.55], lo, hi, color=LN, alpha=0.13, lw=0)
+axC.plot([-0.55, 14.55], [hi, hi], color=LN, lw=0.8)
+axC.plot([-0.55, 14.55], [lo, lo], color=LN, lw=0.8)
+
+axC.errorbar(px, py, yerr=[plo, phi], fmt="o", ms=4.5, color=LN,
+             ecolor=LN, elinewidth=1.0, capsize=2.5, zorder=5)
+for e, x, y in zip(KD, px, py):
+    axC.annotate(e, (x, y), textcoords="offset points", xytext=(0, 9),
+                 ha="center", fontsize=7.5, color=LN)
+axC.plot([-0.55, 14.55], [nlog(Y_KD), nlog(Y_KD)], color=LN, lw=0.9,
+         ls=(0, (5, 3)), zorder=4)
+axC.annotate("Y$^{3+}$, 177 pM", (0.1, nlog(Y_KD)),
+             textcoords="offset points", xytext=(0, -11), ha="left",
+             va="center", fontsize=7.5, color=LN)
+
+axC.text(-0.55, 12.1, "measured $K_\\mathrm{d}$ for the prototypal Mex-LanM: "
+                    "70 to 260 pM from Pr to Ho, 177 pM for Y$^{3+}$",
+         ha="left", va="bottom", fontsize=8, color=LN)
+axC.annotate("a factor of four across nine elements --\n"
+             "less than one decade on this axis",
+             xy=(10.6, (lo + hi) / 2), xytext=(6.4, 8.62), fontsize=8,
+             color=LN, ha="center", va="top",
              arrowprops=dict(arrowstyle="-", color=LN, lw=0.7,
                              shrinkA=4, shrinkB=2))
-axC.text(7.0, 8.05, "best adjacent-pair separation factor from any protein\n"
-                    "system: 1.4 (Nd/Pr) to 3.0 (Ce/La)",
+
+axC.text(7.0, 7.15, "best adjacent-pair separation factor from any protein\n"
+                    "system: 1.4 (Nd/Pr) to 3.0 (Ce/La), averaging 2.1",
          ha="center", va="top", fontsize=8, color=style.MUTED)
 
-# Calcium: a response only near millimolar.
-axC.plot([X_CA - 0.75, X_CA + 0.75], [3.0, 3.0], color=CA, lw=3.0,
+# Calcium is not measured here -- it is where a 10^8 selectivity puts it.
+axC.plot([X_CA - 0.75, X_CA + 0.75], [2.0, 2.0], color=CA, lw=3.0,
          solid_capstyle="butt")
-axC.text(X_CA, 3.30, "response only\nnear millimolar", ha="center",
-         va="bottom", fontsize=7.5, color=CA)
+axC.text(X_CA, 1.72, "response only near millimolar:\n"
+                     "implied by the 10$^{8}$, not measured",
+         ha="center", va="top", fontsize=7.5, color=CA)
 
-axC.add_patch(FancyArrowPatch((16.2, 3.1), (16.2, 11.6), arrowstyle="<|-|>",
-                              mutation_scale=10, color=style.INK, lw=1.1,
-                              shrinkA=0, shrinkB=0))
-axC.text(16.55, 8.4, "$\\approx$10$^{8}$\nLn$^{3+}$ over Ca$^{2+}$\n"
-                     "(the group selectivity)",
+axC.add_patch(FancyArrowPatch((X_CA, 2.28), (X_CA, lo - 0.12),
+                              arrowstyle="<|-|>", mutation_scale=10,
+                              color=style.INK, lw=1.1, shrinkA=0, shrinkB=0))
+axC.text(X_CA + 0.45, 6.0, "$\\approx$10$^{8}$\nLn$^{3+}$ over Ca$^{2+}$\n"
+                           "(the group selectivity)",
          ha="left", va="center", fontsize=8, color=style.INK)
 
 axC.axvline(15.35, color=style.FAINT, lw=0.8)
 axC.set_xticks(list(xs) + [X_CA])
 axC.set_xticklabels(SERIES + ["Ca$^{2+}$"], fontsize=7.5)
 axC.get_xticklabels()[-1].set_color(CA)
-axC.set_xlim(-1.1, 19.8)
-axC.set_ylim(1.9, 13.2)
-axC.set_yticks([3, 5, 7, 9, 11, 13])
+axC.set_xlim(-1.1, 21.6)
+axC.set_ylim(0.0, 13.2)
+axC.set_yticks([2, 4, 6, 8, 10])
 axC.set_ylabel("affinity,  $-\\log_{10} K_\\mathrm{d}$\n"
                "(12 = 1 pM,  3 = 1 mM)", fontsize=8)
 axC.set_title("C   eight decades separate the group from calcium; across the "
