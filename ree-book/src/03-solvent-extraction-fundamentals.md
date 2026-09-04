@@ -34,7 +34,7 @@ in the organic phase — better than 99.99% of it).
 
 ## Aqueous Phase Composition and Additives
 ### Role of pH Control
-pH is the **primary control variable** in REE solvent extraction [@xie2014critical; @li2020hydration]. The extraction mechanism for acidic extractants ({index}`D2EHPA`, {index}`PC88A`) involves exchange of H⁺ for REE³⁺:
+pH is the **primary control variable** in REE solvent extraction [@xie2014critical]. The extraction mechanism for acidic extractants ({index}`D2EHPA`, {index}`PC88A`) involves exchange of H⁺ for REE³⁺:
 
 $$
 \mathrm{REE^{3+}(aq)} + 3\,\mathrm{HL(org)} \rightleftharpoons \mathrm{REEL_3(org)} + 3\,\mathrm{H^+(aq)}
@@ -61,7 +61,7 @@ Where:
 
 **Common salting agents**:
 
-1.  **NaCl** (0.5-3 M) [@agarwal2020comparative]:
+1.  **NaCl** [@rydberg2004solvent]:
     - Inexpensive and widely available
     - Moderate salting-out effect
     - Compatible with chloride media
@@ -92,7 +92,6 @@ Where:
     - Prevents pH drift during extraction
 2.  **Citrate/citric acid** (pH 2-6):
     - Can also act as complexing agent
-    - [@dewulf2022effect] shows solvent effects
 3.  **Direct acid addition**:
     - HCl or HNO₃ for low pH (\<2)
     - Continuous monitoring and adjustment needed
@@ -109,10 +108,9 @@ Where:
 #### Complexing Agents
 **Purpose**: Modify selectivity between REEs or suppress co-extraction of impurities [@thiele2020tuning].
 
-1.  **Lactic acid** [@dewulf2022effect]:
+1.  **Lactic acid**:
     - Forms aqueous complexes with REEs
     - Can enhance selectivity for certain REE pairs
-    - 0.01-0.1 M typical concentration
 2.  **EDTA/DTPA**:
     - Strong chelators for impurity removal
     - Can suppress {index}`thorium`, uranium extraction
@@ -177,7 +175,9 @@ The organic phase consists of:
     - Low water solubility prevents phase mixing
 2.  **Solvation properties**:
     - Provides favorable solvation for REE-extractant complexes
-    - [@dewulf2022effect] showed polar solvents can interfere
+    - @dewulf2022effect found extraction by a solvating extractant to
+      depend strongly on the polarity, donor strength and hydrogen-bonding
+      capability of the surrounding organic medium
     - Kerosene's low polarity minimizes interference
 3.  **Density difference**:
     - ρ(aqueous) ≈ 1.1-1.2 g/mL (with salts)
@@ -207,7 +207,7 @@ The organic phase consists of:
     - Phase separation is clean
 
 #### Alternative Diluents
-Other diluents used in specialized applications [@dewulf2022effect]:
+Other diluents used in specialized applications:
 
 1.  **n-Dodecane** (C₁₂H₂₆):
     - Pure compound (better for research)
@@ -279,7 +279,7 @@ $$
 $$
 
 ### pH Dependence (The "pH Swing")
-**Key observation**: log D has **strong pH dependence** with slope ≈ +3 [@tanaka2021revaluating; @li2020hydration].
+**Key observation**: log D has **strong pH dependence** with slope ≈ +3 [@tanaka2021revaluating].
 
 $$
 \frac{\partial (\log D)}{\partial\, \mathrm{pH}} \approx +3
@@ -293,8 +293,8 @@ This means:
 - Decreasing pH by 1 unit → D decreases by \~1000×
 
 **Illustrative slope-3 behaviour**, drawn for a lanthanide with pH₁/₂ = 2.5 at
-equal phase volumes; real D2EHPA systems sit close to this
-[@agarwal2020comparative]:
+equal phase volumes. The numbers are the mass-action expression evaluated, not
+measurements:
 
 | pH  | log D | D     | % Extraction |
 |-----|-------|-------|--------------|
@@ -378,12 +378,14 @@ $$
 \mathrm{REE(HL_2)_3(org)} + 3\,\mathrm{H^+(aq)} \rightarrow \mathrm{REE^{3+}(aq)} + 3\,\mathrm{(HL)_2(org)}
 $$
 
-**Stripping efficiency** [@agarwal2020comparative]:
-
-- pH 0.5: \~95% stripping
-- pH 1.0: \~85% stripping
-- pH 1.5: \~60% stripping
-- Complete stripping usually requires 2-3 stages
+**Stripping efficiency.** The same slope-3 dependence runs backwards here: a
+strip liquor one pH unit more acidic than the extraction stage drops D by about
+three orders of magnitude, which is why stripping is fast and why it is done
+with acid rather than by any change of extractant. For PC88A loaded with
+lanthanum, @agarwal2020comparative found 1 mol/L acid adequate for effective
+stripping. Complete stripping is nonetheless usually staged, since a single
+contact leaves the organic in equilibrium with the strip liquor it has just
+loaded.
 
 ### Where Do Extractants Go?
 **Critical insight**: Extractants remain predominantly in the organic phase throughout the cycle [@rydberg2004solvent; @xie2014critical].
@@ -504,36 +506,43 @@ why the split has to be won by staging rather than by chemistry. Drawn from
 `tools/figures/fig_logd_vs_ph.py`.
 :::
 
-**Typical separation windows** [@tanaka2021revaluating]. These are at the
-optimistic end of the published range; adjacent light-lanthanide pairs are
-commonly quoted nearer β = 1.5-2 (Δ pH₁/₂ ≈ 0.05-0.10), which is the value
-[](#why-rare-earths-are-hard-to-separate) uses and the one the stage counts in
-this chapter are built on. Treat the table as the best case a well-chosen
-extractant and diluent can reach, not as what an arbitrary circuit will deliver:
+**Typical separation windows.** Adjacent light-lanthanide pairs are commonly
+quoted near β = 1.5-2, which by the relation above is a window of
+Δ pH₁/₂ = (log β)/3 ≈ 0.06-0.10 pH units. That is the value
+[](#why-rare-earths-are-hard-to-separate) uses and the one every stage count in
+this chapter is built on. Windows widen where the lanthanide contraction has
+had more room to work -- across a gap of several atomic numbers rather than
+between neighbours -- and the largest factors quoted in the literature are for
+such pairs, not for the adjacent ones that actually set the size of a plant.
 
-| REE Pair | Δ pH₁/₂ (D2EHPA) | Separation Factor |
-|----------|------------------|-------------------|
-| La-Ce    | 0.2              | 4                 |
-| Ce-Pr    | 0.3              | 8                 |
-| Pr-Nd    | 0.2              | 4                 |
-| Nd-Sm    | 0.4              | 16                |
-| Gd-Tb    | 0.5              | 32                |
-| Y-Ho     | 0.1              | 2                 |
+A caution about quoted values themselves. @tanaka2021revaluating recalculated
+the extraction equilibria of La, Ce, Pr, Nd, Sm, Eu, Tb, Dy and Y with EHEHPA
+(PC-88A), correcting for the nonideality of the organic phase, and then
+compared the separation factors that fall out of those constants against the
+values already in the literature. The two disagreed, and the disagreement grew
+with the difference in atomic number between the pair: a published separation
+factor carries its measurement conditions with it, and pairs quoted from
+different studies are frequently not comparable. Treat any single tabulated β
+as conditional on the medium, the extractant concentration, the loading and the
+temperature it was measured at.
 
 **Challenges**:
 
-- Adjacent REEs have small Δ pH₁/₂ (0.1-0.3 pH units)
+- Adjacent REEs have small Δ pH₁/₂ (of order 0.1 pH unit)
 - Requires many stages for high purity separations
-- [@li2020hydration] shows hydration effects counteract separability
+- @li2020hydration shows hydration counteracts the separation of lanthanides
 
 ### Temperature Effects
-**Extraction is typically exothermic** [@khoshoei2025crown]:
+**The sign of the temperature effect is system-specific and should not be
+assumed.** For lanthanum with PC88A in kerosene over 25-55 °C,
+@agarwal2020comparative found extraction *increased* slightly with temperature
+-- weakly endothermic, not exothermic. Enthalpies for acidic organophosphorus
+extraction of the lanthanides are generally small, so temperature is a weak
+lever on the equilibrium compared with pH, and a circuit that runs warm usually
+does so for viscosity and phase-disengagement reasons rather than
+thermodynamic ones.
 
-$$
-\Delta H_\mathrm{extraction} \approx -20 \ \text{to} \ -40 \ \mathrm{kJ/mol} \quad \text{(D2EHPA systems)}
-$$
-
-**Temperature dependence**:
+**Temperature dependence** follows the van 't Hoff form:
 
 $$
 \log K_\mathrm{ex} = \frac{-\Delta H}{2.303\,RT} + \frac{\Delta S}{2.303\,R}
@@ -541,9 +550,12 @@ $$
 
 **Operational implications**:
 
-- Extraction: 20-30°C (ambient, favors exothermic forward reaction)
-- Stripping: 40-60°C (elevated T favors endothermic reverse reaction)
-- [@khoshoei2025crown] provides recent thermodynamic data
+- Extraction is usually run at ambient temperature, 20-30 °C
+- Stripping is often run warmer, 40-60 °C
+- @khoshoei2025crown reviews the thermodynamics of crown ether extractants,
+  a different extractant class from the acidic organophosphorus reagents
+  above, where the enthalpic and entropic contributions to selectivity are
+  larger and better characterised
 
 ## Liquid-Liquid Contactor Design
 ### Types of Contactors
@@ -667,11 +679,10 @@ $$
 - Pore wetting issues
 - Not yet widely commercial for REE
 
-**Research status** [@pramanik2024emerging]:
+**Research status**:
 
 - Emerging technology for REE separations
 - Demonstrated in lab/pilot scale
-- [@augustine2024advancing] may incorporate in future HT systems
 
 ### Phase Ratio and Material Balance
 The distribution ratio alone does not tell you how much metal a stage moves.
@@ -902,7 +913,8 @@ out, displacing the less-extractable element back off the extractant by mass
 action and returning it toward the feed. What makes this work is the choice of
 scrub liquor: not acid, and not a buffer, but a portion of the cascade's own
 strip product — the purified more-extractable element, returned to the head of
-the train [@banda2015separation].
+the train [@xu1985theory]. @banda2015separation is a worked example of the
+arrangement, separating Nd from Pr with saponified PC-88A and a scrub section.
 
 That is **REE-on-REE scrubbing**, and it is the exact liquid-liquid analogue of
 reflux in a distillation column. It is also the reason a cascade can be pure at
@@ -1022,7 +1034,7 @@ Where:
 - Increased residence time
 
 ### Process Control and Automation
-**Key control variables** [@augustine2024advancing]:
+**Key control variables**:
 
 1.  **pH control**:
     - In-line pH meters
@@ -1039,11 +1051,15 @@ Where:
     - Capacitance or conductivity sensors
     - Maintains interface in settler
 
-**Modern automation** [@augustine2024advancing]:
-
-- LANL Super Separator uses automated sampling and ICP-AES analysis
-- Closed-loop control with Bayesian optimization
-- Real-time adjustment of pH, flow rates based on analytical feedback
+**Automation in the laboratory.** Nothing above is specific to rare earths;
+what is newer is closing the loop around the *chemistry* rather than around the
+hydraulics. @augustine2024advancing built an automated high-throughput
+extraction platform with ICP-AES analysis and Bayesian optimization choosing
+the next condition, reaching some two hundred measurements a day and cutting
+the experimental effort for a thorium extraction optimisation by about
+three-quarters. That is a bench instrument for finding conditions, not a plant
+controller -- but it is the same feedback idea one level up, and
+[](#process-modeling-and-optimization) picks up where it leads.
 
 These are the actuators. What tells them where to go is a model of the cascade,
 and on an industrial train the controlled variable — component content partway

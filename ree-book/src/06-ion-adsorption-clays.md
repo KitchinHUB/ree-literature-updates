@@ -48,7 +48,7 @@ A crucial subtlety for everything downstream: REE attach to clay by **two mechan
 
 ### Formation and geography
 
-IAC form by deep chemical weathering of REE-bearing parent rocks (mostly felsic granites; some mafic-ultramafic for Sc) in warm, humid, subtropical climates. REE liberated from primary minerals migrate down the regolith and re-adsorb onto clays; as weathering advances, kaolinite converts to halloysite, lowering adsorption capacity and producing vertical zonation [@zhou2020genesis].
+IAC form by deep chemical weathering of REE-bearing parent rocks (mostly felsic granites; some mafic-ultramafic for Sc) in warm, humid, subtropical climates. REE liberated from primary minerals migrate down the regolith and re-adsorb onto clays [@zhou2020genesis]. The clay mineralogy changes with depth, and it is the *halloysite* that is the better host: in the upper pedolith halloysite coalesces and unrolls to form vermicular kaolinite, and the halloysite-abundant assemblages of the deeper regolith have significantly higher specific surface area and porosity than the kaolinite-dominant assemblages above them [@li2020role]. That mineralogical gradient is one of the reasons the ore is vertically zoned.
 
 - **Southern China** (Jiangxi/Ganzhou-Longnan, Guangdong, Fujian, Hunan, Guangxi): historic and dominant producer.
 - **Myanmar**: now a very large supplier of HREE-bearing ore/concentrate feeding Chinese separation plants.
@@ -81,11 +81,11 @@ One route to choosing a lixiviant is to screen candidates thermodynamically befo
 | MgSO4 | Maximum stability for La, Nd, Y at **all** 0.05-0.6 M; no unwanted species | **Best** |
 | Al2(SO4)3 | SO4(2-) forms LaSO4+ and hydrated Nd2(SO4)3.8H2O | Degrades |
 
-Stability falls as temperature rises (25 -\> 80 degrees C), so ambient leaching is optimal; the REE3+ stability order is La \> Nd \> Y, with acidic windows La (pH 0-5.8), Nd (0-5), Y (0-4.2). The modeled MgSO4-at-ambient conclusion agrees with experiment [@pan2024insights; @shi2022column] which is what lends the screening credibility. **Limitation**: single element, single solvent, no impurities, no kinetics -- a prediction tool, not validation.
+Stability falls as temperature rises (25 -\> 80 degrees C), so ambient leaching is optimal; the REE3+ stability order is La \> Nd \> Y, with acidic windows La (pH 0-5.8), Nd (0-5), Y (0-4.2). The modeled MgSO4-at-ambient conclusion agrees with experiment [@pan2024insights], which is what lends the screening credibility. **Limitation**: single element, single solvent, no impurities, no kinetics -- a prediction tool, not validation.
 
 ### Reagent substitution and impurity control
 
-The field is actively moving off ammonium sulfate. Magnesium sulfate gives comparable recovery with far less nitrogen pollution [@pan2024insights]; low-ammonium column leaching keeps recovery \>90% at much reduced reagent loads [@shi2022column]; and selective inhibitors (e.g., HMTA) suppress aluminum co-dissolution to cut the downstream impurity burden [@he2025stepwise]. "Ammonium-free extraction" and whole-process precipitation are explicit research directions for "green efficient development" [@luo2022development].
+The field is actively moving off ammonium sulfate. Magnesium sulfate gives comparable recovery with far less nitrogen pollution [@pan2024insights]; changing the leaching anion rather than its dose recovers rare earths well at much lower ammonium concentrations, because in ammonium citrate both ions take part in the exchange while sulfate does not [@shi2022column]; and selective inhibitors (e.g., HMTA) suppress aluminum co-dissolution to cut the downstream impurity burden [@he2025stepwise]. "Ammonium-free extraction" and whole-process precipitation are explicit research directions for "green efficient development" [@luo2022development].
 
 ### Clay ion exchange as a separation technology
 
@@ -123,7 +123,7 @@ A scorecard versus solvent extraction (SX):
 
 ### Ammonia-nitrogen pollution (the headline issue)
 
-In-situ ammonium-sulfate leaching discharges ammonia-nitrogen into groundwater and surface water -- the dominant environmental liability of Chinese IAC mining. This is the principal driver of the move to magnesium-sulfate and ammonium-free leaching [@pan2024insights; @shi2022column; @luo2022development]. Reduced-concentration leaching cuts the nitrogen load but needs longer times and larger solution volumes [@shi2022column].
+In-situ ammonium-sulfate leaching discharges ammonia-nitrogen into groundwater and surface water -- the dominant environmental liability of Chinese IAC mining. This is the principal driver of the move to magnesium-sulfate and ammonium-free leaching [@pan2024insights; @luo2022development], and, short of leaving ammonium behind altogether, of redesigning the ammonium salt so that less of it is needed [@shi2022column].
 
 #### Precedent: ammonia at the Moab UMTRA site
 
@@ -147,8 +147,8 @@ After leaching, the kaolinite/halloysite substrate survives intact (REE merely d
 
 Because the spent clay is essentially a depleted aluminosilicate (kaolinite/ halloysite plus quartz), it is chemically similar to ordinary construction-clay feedstocks, and several beneficial-reuse routes have been demonstrated at lab/ pilot scale:
 
-- **Geopolymer / alkali-activated binder (cement-like)** -- the best-developed route. Ion-adsorption REE tailings have been alkali-activated into geopolymer binders [@zhang2022ion; @hu2020synthesis]. Notably, the motivation is as much **heavy-metal immobilization** as construction: the geopolymer locks contaminants into the matrix, so it doubles as waste stabilization. (This is effectively the metakaolin/pozzolan chemistry -- calcined kaolinite as a supplementary cementitious material.)
-- **Glass-ceramics** -- tailings crystallized into diopside/anorthite glass-ceramic for building/decorative use [@zhao2010utilization].
+- **Geopolymer / alkali-activated binder (cement-like)** -- the best-developed route. Ion-adsorption REE tailings have been alkali-activated into geopolymer binders [@zhang2022ion], and the same alkali-activation chemistry has been applied to rare earth tailings more broadly [@hu2020synthesis]. Notably, the motivation is as much **heavy-metal immobilization** as construction: the geopolymer locks contaminants into the matrix, so it doubles as waste stabilization. (This is effectively the metakaolin/pozzolan chemistry -- calcined kaolinite as a supplementary cementitious material.)
+- **Glass-ceramics** -- rare earth tailings (demonstrated on hard-rock mill tailings rather than on leached clay) crystallized into glass-ceramics for building and decorative use [@zhao2010utilization].
 - **Zeolite synthesis** -- the aluminosilicate residue converted to high-crystallinity Zeolite A, which then adsorbs pollutants in the mine's own water -- a closed-loop, treat-your-own-waste reuse [@cheng2024synthesis].
 
 Two routes that **do not** fit, despite the obvious analogy:

@@ -180,10 +180,14 @@ the rest of the halide chemistry are developed in
 **Lamp phosphors** are the richest feed by grade, but the rare earths sit in
 refractory host lattices — Y₂O₃:Eu, LaPO₄:Ce,Tb — that resist direct acid
 attack. Tan and co-workers showed that the barrier is structural rather than
-thermodynamic: unactivated hydrochloric acid leaching dissolved under 3 % of
-the contained rare earths, while the same leach after mechanical activation at
-700 rpm for 120 minutes gave 89.4 %, 93.1 %, and 94.6 % dissolution for
-terbium, europium, and yttrium respectively [@tan2016innovative]. The
+thermodynamic, and that it is element-specific. After ball-milling at 700 rpm
+for 120 minutes, terbium, cerium, and lanthanum leached at better than 80 %,
+65 %, and 80 % respectively, against under 3 % for the same acids on unmilled
+phosphor -- but europium and yttrium leached the same either way, with any
+acid, because they are not held in the refractory phosphate. Under optimized
+conditions (600 rpm for 60 minutes, then 6 M HCl at 60 °C for 15 minutes) the
+process gave 89.4 %, 93.1 %, and 94.6 % dissolution for terbium, europium, and
+yttrium [@tan2016innovative]. The
 practical difficulty for this stream is now that it is shrinking — fluorescent
 lighting is being displaced by LEDs, which use far less rare earth per lumen.
 
@@ -201,13 +205,16 @@ metals subsequently split by D2EHPA and Cyanex 272 extraction
 plant is being built around the rare earths or around the nickel.
 
 **Spent FCC catalyst** is the largest single stream by tonnage and the leanest
-of the concentrated feeds. Sposato and co-workers found a ceiling on simple
-acid leaching — about 60 % lanthanum recovery, reached with 2 N hydrochloric
-acid at 20 °C over three hours, with dilute acid giving only 35-38 % — but
-showed that coupling the leach to oxalate precipitation produces a lanthanum
-solid of greater than 98 % w/w purity with negligible carryover of the nickel
-and vanadium poisons, best at 5 N nitric acid and 60 °C
-[@sposato2021towards]. Lanthanum is also the cheapest rare earth on the market,
+of the concentrated feeds. Sposato and co-workers mapped acid concentration
+and temperature against each other: at room temperature, lanthanum recovery
+plateaus around 60 % however strong the acid (35-38 % at 0.1 N), but heating
+lifts it, and 5 N nitric acid at 80 °C takes lanthanum recovery close to 100 %.
+The catch is that selectivity moves the other way — it peaks near 40 °C and
+falls off above it as aluminium and iron start dissolving too — so the working
+point they characterize is 5 N nitric acid at 60 °C. Coupling that leach to
+oxalate precipitation gives a lanthanum solid of greater than 98 % w/w purity,
+with the nickel and vanadium poisons together accounting for about 0.2 % of the
+precipitate [@sposato2021towards]. Lanthanum is also the cheapest rare earth on the market,
 at around \$1/kg for the oxide [@usgs2026mineral], which is the real constraint
 on this stream.
 

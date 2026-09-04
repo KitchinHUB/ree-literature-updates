@@ -147,13 +147,22 @@ basis must be stated before any two figures in this section are compared.
 | Reagent recovery | 90%             |
 
 ### Mining Project Cost Estimation
-**Simplified Cost Framework:** A framework for screening greenfield REE mining investments [@obrien2024simplified]:
+**Simplified Cost Framework:** Screening a greenfield project before a
+feasibility study exists is the problem @obrien2024simplified set out to solve.
+Their model approximates capital and operating expenditures for greenfield REE
+mines from a handful of project descriptors rather than from site knowledge,
+and covers open-pit and underground mines whose processing ranges from
+beneficiation alone through to individual REE separation. No single CAPEX range
+per project type is given, and none should be quoted: the point of the model is
+that the number is a function of scale and flowsheet depth, not a category.
 
-| Project Type               | CAPEX Range | Key Variables            |
-|----------------------------|-------------|--------------------------|
-| Open pit + concentrate     | \$100-300M  | Ore grade, strip ratio   |
-| Underground + concentrate  | \$150-400M  | Depth, ground conditions |
-| Integrated (mine to oxide) | \$300M-1B+  | Separation complexity    |
+What the model is for is visible in what it found. Of twelve projects outside
+China in early to advanced development, nine had a positive NPV at the 2011
+peak in rare earth prices, **none** had a positive NPV at the 2016 trough, and
+two were positive on 2022 and projected 2028 prices [@obrien2024simplified].
+The same flowsheet is economic or not depending on which year you price it in,
+which is the honest answer to why announced projects so rarely reach
+production.
 
 **Blended Product Economics:** Integrated mining and refining analysis ([Thunder Said Energy](https://thundersaidenergy.com/downloads/rare-earth-mining-and-refining-the-economics/)):
 
@@ -175,14 +184,17 @@ Techno-economic assessment of REE recovery from AMD using network sourcing [@lar
 - Economics improve with REE concentration in feed
 - Co-product credits (Co, Mn) enhance viability
 
-**Monte Carlo Sensitivity:**
-
-| Factor | Impact on IRR |
-| -------- | --------------- |
-| Capital cost | High |
-| HCl consumption | High |
-| REE price | Moderate-High |
-| Recovery rate | Moderate |
+**Monte Carlo Sensitivity:** The tornado analysis is unusually clean, and
+worth quoting for what it rules out as much as for what it finds: "only two
+project parameters have a significant impact on the profitability of the
+project, the capital cost of the project and the pricing of hydrochloric acid"
+[@larochelle2021fundamental]. Rare earth price was among the distributed inputs
+and did *not* emerge as a significant driver; recovery rate was not given a
+distribution at all. With raw-material and consumable prices sampled over their
+2014-2021 market ranges and capital cost given a normal distribution matching
+the ±40% precision of the estimate, the simulated rate of return is
+approximately normal between about **18% and 35%**, its shape set mostly by
+capital cost.
 
 ### Process Comparison Economics
 Separation factors, purities, demonstrated scale, and technology readiness levels
@@ -231,10 +243,15 @@ Mining → Beneficiation → Cracking/Leaching → Separation → {index}`Precip
 | Land Use | m²·year | Mining, waste storage |
 
 ### Carbon Footprint of REE Production
-**Global Warming Potential Ranges:** Carbon footprint varies significantly by ore
-type and process, and published cradle-to-gate estimates for rare earth oxide
-production span roughly an order of magnitude [@zapp2022environmental]. Two
-values with a clear published basis anchor that range:
+**Global Warming Potential Ranges:** Carbon footprint varies significantly by
+ore type and process. @zapp2022environmental put the reason plainly -- impacts
+are "mainly related to the geology of a deposit, mineral type and composition,
+the methods of extraction, local supply of energy and auxiliary materials, and
+regulatory conditions", so they "vary considerably" and no single figure
+represents the industry. That review compares process chains in normalized
+person-equivalents rather than tabulating absolute cradle-to-gate GWP across
+studies, so the spread has to be read from the individual studies. Two values
+with a clear published basis anchor it:
 
 | Source/Process                          | GWP (kg CO₂-eq/kg REO) | Source                   |
 |-----------------------------------------|------------------------|--------------------------|
@@ -246,15 +263,24 @@ when magnesium-salt leaching replaces ammonium-salt leaching: the substitution
 that relieves the ammonia problem described in [](#ion-adsorption-clays)
 increases the carbon footprint of the product [@wan2022lca].
 
-**Element-Specific GWP from {index}`Monazite <monazite>`:** The allocation of impacts to individual REEs reveals significant variation [@browning2017life]:
+**Element-Specific GWP from {index}`Monazite <monazite>`:** Allocating impacts
+to individual elements reveals a spread of nearly an order of magnitude across
+the fifteen rare earths produced from monazite [@browning2017life]:
 
-| Element      | GWP (kg CO₂-eq/kg) | Notes                            |
-|--------------|--------------------|----------------------------------|
-| Europium     | 21.3               | Lowest due to selective recovery |
-| Samarium     | 35-45              | Mid-range                        |
-| Neodymium    | 50-70              | High demand element              |
-| Praseodymium | 50-70              | Co-produced with Nd              |
-| Yttrium      | 197.9              | Energy-intensive separation      |
+| Quantity                        | Value | Element                     |
+|---------------------------------|-------|-----------------------------|
+| Average, 15 REEs from monazite  | 65.4  | --                          |
+| Lowest                          | 21.3  | Europium                    |
+| Highest                         | 197.9 | Yttrium                     |
+
+(kg CO₂-eq per kg of oxide.) The intermediate elements are reported
+graphically rather than numerically in that study, and its allocation groups
+several elements together -- samarium and gadolinium share a single flowsheet
+group, and so a single value -- so per-element figures between the two extremes
+should not be quoted from it. Browning and colleagues also caution that
+yttrium's position at the top is a consequence of how little heavy rare earth
+there is in monazite, and is not representative of heavies recovered from
+xenotime or from ion-adsorption clays.
 
 Which activities dominate each impact category is tabulated in the hotspot
 analysis later in this chapter. Percentage shares of total GWP are not given:
@@ -263,7 +289,9 @@ co-products differently, so shares taken from separate studies do not add up to 
 single accounting.
 
 ### Water Footprint
-**Water Consumption by Process:** REE production is highly water-intensive [@zaimes2015environmental]:
+**Water Consumption by Process:** REE production is highly water-intensive.
+The same monazite inventory that gives the carbon figures above also reports
+water [@browning2017life]:
 
 | Element            | Water Consumption (kg/kg REO) |
 |--------------------|-------------------------------|
@@ -272,9 +300,12 @@ single accounting.
 | Gadolinium         | 3,803 (lowest)                |
 | Yttrium            | 29,902 (highest)              |
 
-These inventories report water consumption per kilogram of oxide and per element;
-they do not resolve it by process stage, and no stage-by-stage split is given
-here.
+Samarium and gadolinium share the low figure because they share a flowsheet
+group, not because they were separately measured. Gross energy follows the same
+pattern -- 917 MJ/kg on average, 311 MJ/kg for the samarium-gadolinium group
+and 3,401 MJ/kg for yttrium. These inventories report water and energy per
+kilogram of oxide and per element; they do not resolve either by process stage,
+and no stage-by-stage split is given here.
 
 ### Ore-Specific Environmental Impacts
 **Bastnäsite Processing:**
@@ -316,15 +347,16 @@ routes have no cradle-to-gate LCA at boundaries that would let them be ranked
 against solvent extraction. A table ranking all five would be assertion rather
 than measurement, and none is given.
 
-**Recycling vs. Primary Production:** Secondary recovery from waste streams shows dramatic improvements [@mugion2025systematic]:
-
-| Impact Category | Recycling Reduction |
-|-----------------|---------------------|
-| GWP             | 64-96%              |
-| Acidification   | 70-95%              |
-| Water depletion | 50-80%              |
-| Human toxicity  | 60-90%              |
-| Land use        | \>95%               |
+**Recycling vs. Primary Production:** Secondary recovery from waste streams
+performs better than primary production, but the published evidence supports
+fewer numbers than the claim is usually made with. The systematic review of the
+LCA literature reports one headline figure: recycling NdFeB magnets reduces
+environmental impact by **64-96%** relative to virgin production, stated as a
+general impact reduction rather than for any one category
+[@mugion2025systematic]. Within that, acid-free dissolution is credited with a
+**73%** reduction in global warming impact against conventional routes. A
+category-by-category table of reductions -- acidification, water, toxicity,
+land use -- is not available from that review, and is not given here.
 
 ### Process Hotspot Analysis
 **Dominant Impact Contributors:** [@zapp2022environmental]
@@ -338,12 +370,19 @@ than measurement, and none is given.
 | Human toxicity     | Heavy metals, radionuclides        |
 | Water              | Process water, washing             |
 
-**Energy Intensity:** Only an aggregate figure is available. The integrated
-mining-and-refining estimate quoted earlier in this chapter puts total energy use
-above 100 MWh per ton of REO. The breakdown that would answer the question this
-chapter opened with — how much of that belongs to mining, how much to cracking,
-how much to the separation train itself — is not reported in the LCA literature,
-and is not given here.
+**Energy Intensity:** Two anchors are available, and neither is a breakdown.
+@browning2017life put the gross energy requirement for rare earths from monazite
+at 917 MJ/kg on average, spanning 311 MJ/kg for the samarium-gadolinium group to
+3,401 MJ/kg for yttrium; the integrated mining-and-refining estimate quoted
+earlier in this chapter puts total energy use above 100 MWh per ton of REO. For
+scale, @zaimes2015environmental find that producing heavy rare earth oxides
+consumes **over twenty times** more primary energy per unit mass than steel.
+Where that energy goes inside the flowsheet is the question this chapter opened
+with, and it is the one the literature does not answer. Mining together with
+extraction and roasting are identified as the dominant contributors for the
+Bayan Obo route [@zaimes2015environmental], but no study splits the total
+between mining, cracking, and the separation train itself, and no split is given
+here.
 
 ### Data Challenges and Uncertainties
 **Key Limitations:** ([Frontiers Energy 2014](https://www.researchgate.net/publication/273515425)):

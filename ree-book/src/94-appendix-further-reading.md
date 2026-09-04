@@ -27,8 +27,11 @@ per chapter.
 
 For the older literature — the chemistry that everything since rests on —
 @nash1993basic remains the clearest statement of trivalent f-element separation
-principles, and @moyer2011overview place rare earth extraction inside the
-wider solvent-extraction tradition it was borrowed from.
+principles. @moyer2011overview is about spent nuclear fuel rather than about
+rare earths, and is here for that reason: reprocessing is the neighbouring
+field that trivalent-f-element separation shares its reagents, its stagewise
+thinking, and much of its history with, and reading it shows how much of what
+this book treats as rare earth practice arrived from there.
 
 ## Ore, beneficiation, and leaching
 
@@ -113,10 +116,13 @@ feed in more detail. @fujita2022recycling is the recent perspective.
 
 @weber2012rare surveys production, processing, recycling, and the associated
 environmental issues together, which is the right framing for
-[](#environment-techno-economics-and-life-cycle). @navarro2014life and
-@zaimes2015environmental are the two life-cycle studies the chapter leans on
-most; @mugion2025systematic is the systematic review of the LCA literature and
-is the fastest way to see how little of it is comparable.
+[](#environment-techno-economics-and-life-cycle). @browning2017life is the
+inventory that chapter leans on hardest — it is the source of the carbon, water,
+and energy figures for monazite — with @navarro2014life and
+@zaimes2015environmental the two life-cycle studies behind its framing; @mugion2025systematic is the systematic review of that literature --
+seventy-eight studies gathered under PRISMA, covering primary and secondary
+production together -- and the fastest way to see the shape of the field and
+where its attention has gone.
 
 ## Reference works
 

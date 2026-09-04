@@ -401,7 +401,8 @@ Several extractant systems have been developed for REE extraction in sc-CO₂ ([
 ### Ore Processing Applications
 **{index}`Bastnäsite <bastnäsite>` Extraction:** Pretreatment is essential for efficient REE dissolution [@sinclair2017rare]:
 
-*Roasted Bastnäsite (500°C calcination):*
+*Roasted Bastnäsite (dry roasting at 730 °C for 3 hours), extracted in scCO₂
+at 34 MPa and 65 °C with a ~4 mol/L H⁺ TBP-nitric acid adduct:*
 
 | Element | 60 min | 90 min | 120 min |
 | --------- | -------- | -------- | --------- |
@@ -410,7 +411,8 @@ Several extractant systems have been developed for REE extraction in sc-CO₂ ([
 | Pr | 68% | 80% | 88% |
 | Nd | 72% | 83% | 90% |
 
-*NaOH-Digested Bastnäsite (caustic cracking):*
+*NaOH-Digested Bastnäsite (50 % NaOH at 150 °C for 4 hours), same scCO₂
+conditions:*
 
 | Element | 60 min | 90 min | 120 min |
 | --------- | -------- | -------- | --------- |
@@ -422,7 +424,7 @@ Several extractant systems have been developed for REE extraction in sc-CO₂ ([
 The NaOH digestion route achieves near-complete extraction in shorter times due to:
 
 - Conversion of fluorocarbonates to hydroxides
-- Enhanced REE accessibility to chelating agents
+- Enhanced REE accessibility to the TBP-nitrate adduct
 - Removal of CO₂ and fluorine barriers
 
 **Zircon-Rich Ore Processing:** Canadian ore concentrate containing REEs in zircon matrix [@li2024optimization]:

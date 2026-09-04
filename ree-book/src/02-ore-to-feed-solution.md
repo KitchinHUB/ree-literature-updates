@@ -65,7 +65,7 @@ $$
 - Chloride can interfere with some extractants
 - Environmental concerns with HCl vapor
 
-**Typical composition** [@agarwal2020comparative]:
+**Typical composition** of an industrial liquor:
 
 - REE concentration: 0.5-2.0 M (total mixed REEs)
 - Free HCl: 0.01-1.0 M (pH 0-2)
@@ -90,7 +90,7 @@ $$
 - Nitrate co-extraction can occur with some extractants
 - Decomposition risk at high temperatures
 
-**Typical composition** [@matveev2018solvent; @tanaka2021revaluating]:
+**Typical composition** [@matveev2018solvent]:
 
 - REE concentration: 0.2-1.0 M
 - Free HNO₃: 0.1-3.0 M

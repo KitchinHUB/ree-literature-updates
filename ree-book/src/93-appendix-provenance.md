@@ -265,7 +265,7 @@ was important, and the gap is better visible than silent.
 
 Three are nonetheless cited elsewhere in the book, from summaries written at
 the time rather than from the PDFs: @augustine2024advancing (eleven times),
-@an2024agile (five), and @gupta2025accelerating (three). The other three are in
+@an2024agile (five), and @gupta2025accelerating (four). The other three are in
 the bibliography but are cited nowhere in the text.
 
 **Automated and machine-learning separations.** @augustine2024advancing is the

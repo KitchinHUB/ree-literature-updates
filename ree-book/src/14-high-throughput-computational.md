@@ -192,8 +192,9 @@ matters here is what they cost per sample and where they fail under automation.
 ### Sample Throughput Requirements
 
 Meaningful high-throughput separations work needs on the order of **100-200+
-measurements per day** — the LANL platform's estimated 200 per day is a
-demonstrated figure at that scale [@augustine2024advancing]. Reaching it
+measurements per day** — the LANL platform reports an estimated 200 per day
+[@augustine2024advancing], which is an estimate from its automated cycle time
+rather than a sustained measured rate. Reaching it
 requires sample preparation, extraction and analysis all to be automated, and
 the ICP-AES or ICP-MS to be integrated with the liquid handler rather than
 operated as a separate queue.
@@ -287,7 +288,7 @@ unusable.
 
 *Diglycolamide (DGA) complexes.* Electrostatic interactions dominate Ln-DGA
 binding, with covalent character increasing along the lanthanide series and the
-binding pocket contracting from La to Nd to Eu — a contraction that tracks the
+binding pocket contracting from La to Pr to Eu — a contraction that tracks the
 observed selectivity trend [@liu2021theoretical].
 
 **Computational challenges.** Metal complexes can have many stable
@@ -394,8 +395,8 @@ argument above [@summers2024importance]:
 The computational methods above work at the scale of a molecule or a single
 contact. The other computational tradition in this field works at the scale of
 the plant: {index}`counter-current <countercurrent cascade>` cascade modeling
-[@turgeon2023simulation] built on stage-wise mass balances, equilibrium and
-kinetic closures, parameters estimated from laboratory data, and optimization of
+[@turgeon2023simulation] built on stage-wise mass balances and equilibrium
+closures, parameters estimated from laboratory data, and optimization of
 stage count and A/O ratio.
 
 That is a chapter of its own, and it is the next one.

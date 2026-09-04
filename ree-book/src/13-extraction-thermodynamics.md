@@ -630,10 +630,11 @@ The foundational work on two-phase calorimetry was developed using the **{index}
 
 #### Van't Hoff Analysis (Indirect Method)
 - Plot ln(D) vs 1/T to obtain ΔH and ΔS from slope and intercept
-- Valid over small temperature ranges (15-40°C) where ΔH and ΔS are approximately constant
-- Results typically agree with direct calorimetric measurements within experimental error
-
-**Reference:** [@distler2020thermodynamic]
+- Valid over small temperature ranges where ΔH and ΔS are approximately
+  constant. Distler and co-workers work over 15-45 °C, and take the reaction
+  enthalpy and entropy from the distribution coefficients measured there; note
+  that this is the indirect route throughout, with no calorimetry to check it
+  against [@distler2020thermodynamic]
 
 ### Thermodynamic Results by Extractant System
 #### HDEHP/D2EHPA Systems
@@ -674,7 +675,6 @@ not transferable.
 - **Enthalpy-driven extraction** for Am(III) and U(VI), with the entropy term
   working against extraction [@ansari2006extraction]
 - **Both enthalpy and entropy favorable** for Pu(IV) [@ansari2006extraction]
-- Novel unsymmetrical DGA: ΔH = −64.94 kJ/mol, ΔS = −144.42 J/(mol·K)
 - Complexation shows **negative ΔH with positive ΔS** - driven by both factors
 
 **References:** [@ansari2011chemistry; @sharov2024specific]
@@ -719,7 +719,7 @@ For stripping, this balance reverses - breaking organic-phase complexes and rehy
 #### Ion Transfer at Liquid-Liquid Interfaces
 MD simulations reveal:
 
-- **Water/nitrobenzene interface**: Energetic costs include interfacial deformation and co-transfer of hydration waters
+- **Water/nitrobenzene interface**: Energetic costs include interfacial deformation and co-transfer of hydration waters [@karnes2016geometric]
 - **Free energy profile**: Small local minimum (\~−5.9 kJ/mol) near interface, then monotonic increase into organic phase
 - **SCN⁻ at oil-water**: Transfer driven by **entropy increase** with minimal enthalpic contribution (different from air-water interfaces)
 

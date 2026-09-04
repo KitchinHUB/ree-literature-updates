@@ -89,12 +89,13 @@ The NMR solution structure reveals LanM's unique architecture [@cook2019structur
 
 - **Four EF-hand motifs**: Metal coordination sites typically associated with Ca²⁺ binding
 - **Unusual fusion of adjacent EF-hands**: Creates a compact fold unique among EF-hand proteins
-- **Coordination sphere**: La³⁺ ions coordinated by:
-  - Asparagine side chains (monodentate)
-  - Aspartate/glutamate carboxylates (bidentate)
-  - Backbone carbonyls
-  - Total coordination number: 10
-  - La³⁺-ligand distances: 2.5-2.7 Å
+- **Coordination sphere**: the structure was solved with Y³⁺, not with a
+  lanthanide, and the paper's point about the sphere is that an *additional*
+  carboxylate ligand beyond the canonical EF-hand set is what buys the picomolar
+  affinity. It also implicates unusual N$_{i+1}$-H···N$_i$ hydrogen bonds
+  involving the EF-hand prolines in selective Ln³⁺ recognition. Donor-by-donor
+  assignments and metal-ligand distances are in the deposited coordinates rather
+  than in the paper's own text, so they are not quoted here.
 
 **Critical Proline Residues:** Each EF-hand contains a crucial proline residue that hampers response to calcium while maintaining lanthanide selectivity. When prolines are mutated to alanine, calcium can induce conformational change at much lower concentrations, demonstrating proline's role in selectivity.
 
@@ -114,12 +115,13 @@ Why lanmodulin prefers rare earths to calcium, and why that preference says
 almost nothing about telling one rare earth from another. **(A, B)** Schematic
 coordination spheres — not crystal structures: the donor positions are spaced
 evenly for counting and are not real geometry. Both motifs are helix–loop–helix;
-the lanmodulin site closes ten oxygen donors around a trivalent ion instead of
-the canonical seven around Ca²⁺ [@gifford2007structures], and every lanmodulin
+the lanmodulin site closes more oxygen donors around a trivalent ion than the
+canonical seven around Ca²⁺ [@gifford2007structures], and every lanmodulin
 EF-hand carries a proline that blocks the calcium response, with Pro→Ala letting calcium back in. The
-donor types and the coordination number in (B) are from the NMR solution
-structure [@cook2019structural]; the sources cited here do not say how many
-donors of each type make up the ten, so the drawing does not assign them.
+extra carboxylate donor in (B) is the one the NMR solution structure singles out
+as the source of picomolar affinity [@cook2019structural] -- a structure solved
+with Y³⁺ rather than with a lanthanide; the sources cited here do not assign the
+sphere donor by donor, so neither does the drawing.
 **(C)** Both selectivities on one affinity axis. The ~10⁸-fold preference for
 Ln³⁺ over Ca²⁺ is eight units tall. Across the series the site is nearly flat —
 $K_\mathrm{d}$ = 0.4–10 pM for every lanthanide and Y³⁺ [@cotruvo2018lanmodulin], with
@@ -309,25 +311,30 @@ Mimicking lanmodulin with shorter peptides offers advantages [@verma2024investig
 - Lower affinity than full protein
 - High affinity doesn't necessarily correlate with high selectivity between REEs
 
-### Foam-Based Interfacial Separation
-A novel approach uses peptide surfactants for foam flotation separation [@li2024lanthanide]:
+### Interfacial Separation with Peptide Surfactants
+Lanthanide binding tags are amphiphilic, so a solution of them will build a
+layer at an air-aqueous interface, and the composition of that layer need not
+match the bulk. Ortuno Macias and co-workers studied this on a *flat*
+interface -- surface tensiometry, X-ray reflectivity, X-ray fluorescence near
+total reflection, and molecular dynamics -- rather than in a foam
+[@li2024lanthanide]:
 
 **Mechanism:**
 
-1.  LBT peptides selectively complex with trivalent REE cations
-2.  Metal-peptide complexes adsorb to air/aqueous interfaces of bubbles
-3.  Foam carries REE-enriched complexes for recovery
-
-**Glutaraldehyde Enhancement:**
-
-- Cross-linking of metal-peptide complexes in solution
-- Acts as "facilitating agent" for enhanced surface adsorption
-- Significantly improves separation efficiency
+1.  LBT peptides complex trivalent REE cations in the bulk
+2.  The metal-peptide complex adsorbs to the air/aqueous interface, with MD
+    showing the binding pocket stays intact on adsorption
+3.  Net charge decides what happens next. A negatively charged complex recruits
+    excess cations to the interface by nonselective Coulombic attraction, which
+    destroys the selectivity; at a peptide net charge of −3 the complex is
+    neutral and a 1:1 cation-to-peptide surface ratio is reached
 
 **Demonstrated Separations:**
 
-- Selective extraction from equimolar Tb³⁺/La³⁺ mixtures
-- Validated LBT-mediated interfacial REE separation
+- From an equimolar Tb³⁺/La³⁺ mixture, the adsorbed layer enriches in Tb³⁺ when
+  the bulk peptide is saturated and switches to La³⁺ when it is undersaturated
+- A flat-interface proof of principle. Turning it into a foam-flotation unit
+  operation is future work, not something this paper reports
 
 ### Gravity-Driven Separation
 Microbead technology using immobilized lanthanide binding peptides (LBPs) [@sree2023gravity]:
@@ -366,18 +373,27 @@ The EF-hand motif is a helix-loop-helix structural domain found in diverse calci
 | S100 proteins | Cell signaling | Eu³⁺ Kd = 660 nM |
 
 ### Lanthanide Substitution Properties
-Lanthanides can replace Ca²⁺ in EF-hand proteins isomorphously [@edington2018coordination]:
+Lanthanides are routinely used as Ca²⁺ substitutes in EF-hand proteins -- as
+luminescent probes (Eu³⁺, Tb³⁺) and as heavy-atom replacements -- on the
+assumption that the substitution is isomorphous. Edington and co-workers tested
+that assumption on calmodulin with ultrafast 2D IR spectroscopy and found it
+does not hold [@edington2018coordination]:
 
-- X-ray crystallography shows lanthanides bind more strongly than calcium
-- Proteins retain biochemical activity after Ln³⁺ substitution
-- Same degree of conformational changes as with Ca²⁺
-- Widely used as luminescent probes (Eu³⁺, Tb³⁺)
+- The method is vibrational (FTIR and 2D IR) plus electronic-structure
+  calculation, not crystallography
+- Lanthanide coordination **distorts** the binding-site conformation: it
+  disrupts the bidentate Glu12 geometry and leaves greater conformational
+  flexibility and larger structural fluctuations than Ca²⁺ does
+- The caution generalizes: "seemingly innocuous ligand substitutions can
+  significantly alter protein conformation," so a lanthanide-substituted
+  structure is evidence about the substituted protein, not about the calcium
+  one
 
 **Calmodulin Studies:**
 
-- Ln³⁺ associates with binding pockets more strongly than Ca²⁺
-- Though coordination distorts structure slightly, perturbations are small
-- Useful for structure-function studies
+- Ln³⁺ associates with the binding pockets more strongly than Ca²⁺ does
+- The perturbation is not negligible, which is exactly the point of the 2D IR
+  work above: it is large enough to matter for structure-function inference
 
 ### Applications for REE Recovery
 **Calmodulin-Based Systems:**
@@ -394,18 +410,24 @@ Rhamnolipids are glycolipid biosurfactants produced by *Pseudomonas aeruginosa* 
 
 Stability constants (log β) place REEs in the "strongly bound" group:
 
-| Element | log β |
-| --------- | ------- |
-| UO₂²⁺ | 9.82 (highest) |
-| Eu³⁺ | \~9.5 |
-| Nd³⁺ | \~9.3 |
-| Tb³⁺ | \~9.1 |
-| Dy³⁺ | \~9.0 |
-| La³⁺ | \~8.8 |
-| Y³⁺ | \~8.5 |
-| Lu³⁺ | 8.20 |
+The strongly bound group, in the paper's own order, runs log β = 9.82 down to
+8.20 and is **not** all rare earths:
 
-**Key Finding:** REEs are bound more strongly than common soil/water cations, enabling selective recovery.
+| Rank | Element |
+| ------ | --------- |
+| 1 | UO₂²⁺ (9.82, highest) |
+| 2-6 | Eu³⁺, Nd³⁺, Tb³⁺, Dy³⁺, La³⁺ |
+| 7-9 | **Cu²⁺, Al³⁺, Pb²⁺** |
+| 10-12 | Y³⁺, Pr³⁺, Lu³⁺ (8.20, lowest of the group) |
+
+**Key Finding:** rare earths bind far more strongly than the moderately bound
+metals (Cd²⁺, In³⁺, Zn²⁺, Fe³⁺, Hg²⁺, Ca²⁺ at log β = 7.17-4.10) and the weakly
+bound ones (Sr²⁺, Co²⁺, Ni²⁺, Ba²⁺, Mn²⁺, Mg²⁺, Rb⁺, K⁺ at 3.95-0.96), and a
+mixed-metal study confirms monorhamnolipids preferentially take the high-log β
+metals. But copper, aluminium and lead sit *inside* the rare earth band, above
+Y, Pr and Lu -- and uranyl sits above everything. Rhamnolipid is a
+group-selective collector for hard, highly charged cations, not a rare-earth
+selective one, and a real feed carrying Cu, Al or Pb will compete.
 
 **Properties:**
 
@@ -504,13 +526,13 @@ Biosorption is a physicochemical, metabolically-independent process based on abs
 
 *Bacillus subtilis* (Gram-positive) showed higher selectivity for heavy REEs (Yb, Lu) compared to Gram-negative species like *Leisingera methylohalidivorans* and *Phaeobacter inhibens* [@breuker2020biosorption].
 
-**Roseobacter-Based Separation:**
+**Roseobacter-Based Separation [@bonificio2016rare]:**
 
 - *Roseobacter* sp. AzwK-3b immobilized on assay filter
 - pH-dependent adsorption/desorption
 - Preprotonation concentrates solution to \~50% of three heaviest lanthanides (Tm, Lu, Yb) in just two passes
 
-**Engineered E. coli Systems [@bonificio2016rare]:**
+**Engineered E. coli Systems [@park2017recovery]:**
 
 - OmpA protein functionalized with 16 copies of LBT
 - 2-10-fold increase in distribution coefficients for individual REEs
@@ -561,19 +583,23 @@ Phytomining uses hyperaccumulator plants to extract REEs from soils, offering an
 3.  **Extraction**: REE recovery from harvested biomass
 
 ### Dicranopteris linearis (Forked Fern)
-The strongest known REE hyperaccumulator [@jally2021method]:
+The best-studied REE hyperaccumulator. It grows naturally on former mine
+tailings in southern China, and the REE concentration in its aerial parts is
+higher than in common low-grade ore -- which is what makes the biomass a
+candidate "bio-ore" rather than a curiosity [@jally2021method].
 
-**Accumulation Capacity:**
+**Processing the bio-ore.** Jally and co-workers worked out the flowsheet after
+harvest, and the hard part is not the rare earths but the aluminium:
 
-- Up to **0.7 wt% REEs** in above-ground tissues
-- Total REE concentrations: 2-3 mg/g in fronds
-- Most abundant: La, Nd, Ce, Pr
-
-**Processing:**
-
-- 92.3% weight reduction after incineration (550°C, 3 hours)
-- REEs enriched to **30,000 mg/kg** in ash
-- \~11-fold concentration vs. original woody biomass
+- Incinerate the biomass to ash, which raises the bio-ore grade and generates
+  usable heat
+- Dissolve aluminium out of the ash with 6 M NaOH at 80 °C. This is the step
+  that limits the process: insoluble aluminosilicates form and cap how much Al
+  can be removed
+- Rinse the REE-rich residue, a step they designed carefully because it does
+  most of the grade improvement
+- Leach under mildly acidic conditions -- nitric acid, 25 °C, pH 4.8 -- giving
+  a solution free of aluminium and carrying **74 % of the REEs**
 
 **Detoxification Mechanism:** \[Silicon-pectin\] matrix fixation protects plant from REE toxicity [@zheng2023rare].
 
@@ -587,10 +613,15 @@ A groundbreaking discovery of naturally formed REE minerals in living plants [@h
 - Dendritic nanocrystal morphology
 - First discovery of REE mineral crystals in living plants
 
-**Advantages of "Biological Monazite":**
+**Why it matters:**
 
-- **Pure and non-radioactive** (unlike natural monazite containing U/Th)
-- Strong potential for green extraction
+- It is a previously unrecognized, plant-mediated pathway for critical mineral
+  formation in the supergene environment, which bears on how REE are enriched
+  and sequestered during chemical and biological weathering
+- It raises the possibility of recovering a functional REE material directly
+  from the plant rather than leaching the biomass -- the paper's argument for
+  the feasibility of phytomining. Whether the biogenic monazite carries the
+  thorium and uranium that geological monazite does is not addressed
 - No mining-associated radioactive waste concerns
 
 ### Challenges and Future Potential
@@ -667,11 +698,15 @@ Systems biology-guided engineering has dramatically improved REE extraction [@sc
 - Overexpression of *mgdh* gene
 - Result: **Up to 73% improvement** in REE extraction
 
-**Transposon Mutant Library:**
+**Transposon Mutant Library [@schmitz2021generation]:**
 
-- High-throughput genome editing approach
-- Disruption of phosphate-specific transport genes
-- 18% increase in bioleaching rates
+- A whole-genome collection of single-gene disruption mutants; 304 genes alter
+  biolixiviant production
+- Losing PQQ synthesis, or the PQQ-dependent membrane-bound glucose
+  dehydrogenase, nearly eliminates bioleaching
+- Disruption of phosphate-specific transport genes enhances bioleaching by up
+  to 18% -- the screen that pointed at *pstS* and led to the engineered strain
+  above
 
 ### Scalable Microbial Platforms
 **Methylobacterium extorquens AM1 Platform [@good2024scalable]:**

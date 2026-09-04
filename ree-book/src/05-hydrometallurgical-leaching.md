@@ -93,7 +93,7 @@ downstream of both.
     - Iron oxides (contaminate products)
 
 ## Ore Beneficiation and Pre-Concentration
-Before leaching, physical separation methods concentrate REEs from gangue [@jordens2013processing; @chelgani2015rare].
+Before leaching, physical separation methods concentrate REEs from gangue [@jordens2013beneficiation; @chelgani2015rare].
 
 ### Crushing and Grinding
 **Purpose**: Liberate REE minerals from host rock
@@ -156,7 +156,7 @@ Before leaching, physical separation methods concentrate REEs from gangue [@jord
 - Recovery: 70-85%
 
 ### Froth Flotation
-**Most important beneficiation method** for bastnäsite and monazite [@chelgani2015rare; @jordens2013processing]
+**The principal beneficiation method** for bastnäsite and monazite [@chelgani2015rare; @jordens2013beneficiation]
 
 #### Bastnäsite Flotation
 **Collectors** (promote hydrophobicity):
@@ -177,11 +177,10 @@ Before leaching, physical separation methods concentrate REEs from gangue [@jord
 - Quebracho, tannin: Depress calcite
 - NaF: Selective depression
 
-**Performance** [@jordens2013processing]:
-
-- REE recovery: 70-90%
-- Grade: 60-75% REO (from 10-30% feed)
-- Requires multiple stages (rougher, scavenger, cleaner)
+**Circuit structure**: rougher, scavenger and cleaner stages in series, as in
+any sulphide flotation plant. Grades and recoveries are strongly deposit- and
+mineralogy-specific; the Mountain Pass figures below are given as one sourced
+example rather than as a general band.
 
 #### Monazite/Xenotime Flotation
 **Collectors**:
@@ -210,14 +209,11 @@ Before leaching, physical separation methods concentrate REEs from gangue [@jord
 - Overall recovery: 60-80%
 - Produces "concentrate" suitable for leaching
 
-These bands do not reconcile with the flotation performance quoted above, which
-takes a 10-30 % REO feed [@jordens2013processing]; a flotation circuit cannot be
-fed above the grade of the ore going into it unless something concentrates it
-first, and no such step is described in either source. Read the two as separate
-sources describing separate deposits rather than as two points on one flowsheet.
-The one internally consistent chain here is the Mountain Pass case immediately
-below, where feed grade, product grade and recovery all come from the same
-source.
+Treat those bands as an order-of-magnitude orientation across deposits, not as
+a flowsheet: feed grade, product grade and recovery are only meaningful
+together, from one operation. The Mountain Pass case immediately below is such
+a chain -- feed grade, product grade and recovery all from the same source --
+and is the one to reason from.
 
 **Mountain Pass (USA) beneficiation** [@kim2025rare]:
 
@@ -279,7 +275,7 @@ $$
 - HF emission requires treatment
 
 #### Alkaline Roasting (Sodium Carbonate Process)
-**Process**: Mix bastnäsite with Na₂CO₃, roast [@xu2012decomposition; @kim2025rare]
+**Process**: Mix bastnäsite with Na₂CO₃, roast [@kim2025rare]
 
 Step 1, defluorination at 400-500 °C:
 
@@ -356,7 +352,9 @@ $$
 
 **Advantages**:
 
-- Fluorine captured as NH₄F (can be recovered for HF production)
+- Fluorine is deactivated rather than volatilised, which is the point of the
+  route; whether the fluoride is recovered as a product or disposed of is a
+  separate question this source does not settle
 - REECl₃ directly water-soluble
 - Lower temperature than Na₂CO₃ roasting
 - NH₃ can be recycled
@@ -421,12 +419,12 @@ $$
 Roasted bastnäsite is contacted with supercritical CO₂ carrying a complexing
 agent, which is what makes the rare earths CO₂-soluble at all.
 
-**Conditions**:
-
-- Pressure: 10-30 MPa
-- Temperature: 40-80°C
-- Complexing agent: {index}`TBP <TBP (tributyl phosphate)>`, organophosphates
-- CO₂ flow rate: 1-5 mL/min
+**Conditions**: a single laboratory operating point, not a process window.
+@sinclair2017rare work well above the CO₂ critical point (7.4 MPa, 31 °C) and
+only modestly above ambient temperature, with an organophosphate — TBP and
+relatives — as the complexing agent. The pressures and flows quoted for
+supercritical extraction vary widely between studies and should be taken from
+the specific study being cited rather than from a general band.
 
 **Advantages**:
 
@@ -572,7 +570,7 @@ that hydroxide in HCl. The hydroxide dissolves in dilute acid in minutes; the
 phosphate never would.
 
 #### Nitric Acid Leaching
-Used in some processes [@borai2016modified]:
+Used in some processes:
 
 $$
 \mathrm{REEPO_4} + 3\,\mathrm{HNO_3} \rightarrow \mathrm{REE(NO_3)_3} + \mathrm{H_3PO_4}
@@ -595,7 +593,7 @@ $$
 
 ### Alkaline Decomposition Methods
 #### Sodium Hydroxide Digestion
-**Process** [@borai2016modified; @shahreldin2018selective]:
+**Process** [@xu2012decomposition; @shahreldin2018selective]:
 
 Step 1, alkaline digestion at 140-150 °C in 60-70 wt% NaOH at atmospheric
 pressure, converts the phosphates to hydroxides:
@@ -655,7 +653,7 @@ solid NaOH; do not carry them into a description of the industrial digestion.
 - Thorium still co-precipitates with REE
 
 #### Sodium Carbonate Roasting
-Similar to bastnäsite [@xu2012decomposition]:
+Similar to bastnäsite:
 
 $$
 2\,\mathrm{REEPO_4} + 3\,\mathrm{Na_2CO_3} \rightarrow
@@ -678,19 +676,22 @@ $$
 
 Strategy: Exploit different solubilities in specific conditions
 
-**Method 1: Low-temperature H₂SO₄**
+**Method 1: Modified acid leaching.** @borai2016modified separate thorium,
+phosphate and a rare earth concentrate from Egyptian crude monazite by
+controlling the leaching conditions rather than by adding a separation step:
+the strategy is to exploit the different solubilities of the thorium and rare
+earth phases under a chosen acidity, and take them off in sequence.
 
-- 2-4 M H₂SO₄, 40-60°C, 4 hours
-- Preferentially dissolves thorium (5-15% Th extraction)
-- REEs remain in solid (refractory)
-- Follow with high-T leaching for REE
-
-**Method 2: Alkaline decomposition + selective dissolution** [@shahreldin2018selective]:
-
-1.  NaOH digest → mixed hydroxides
-2.  Dissolve in dilute HCl or HNO₃
-3.  Adjust pH to precipitate Th(OH)₄ (pH 4-5)
-4.  REEs remain in solution (precipitate at higher pH 6-8)
+**Method 2: Alkaline processing, then extraction.** @shahreldin2018selective
+process Egyptian monazite concentrate through alkali solution and remove the
+phosphate first — an early washing step takes out 92.8 % of the P₂O₅, which is
+what makes the rest of the separation tractable, and recovers it as a product
+rather than a waste. Thorium is then taken out by solvent extraction with a
+**secondary amine**, which removes Th and Fe at 100 % and 98 % efficiency
+respectively while leaving uranium and the rare earths behind; the rare earths
+are precipitated quantitatively as the oxalate and separated from the uranium.
+Note that the thorium here leaves by extraction, not by hydroxide
+precipitation.
 
 (thorium-management)=
 ### Thorium Management
@@ -706,14 +707,16 @@ Th(SO₄)₄⁴⁻, UO₂(SO₄)₂²⁻ — in the sulfuric liquor that comes o
 digestion, while REE(III) does not to any comparable degree. That difference,
 not a size effect, is what makes the separation work.
 
-- Extractant: a **primary** amine (Primene JM-T) in kerosene, applied directly
-  to monazite sulfuric acid liquor. Amaral and Morais report Th and U
-  extraction with rare earths left in the raffinate.
-- Amine class matters and is often misreported. Primary (Primene JM-T),
-  secondary (Amberlite LA-2) and tertiary (**Alamine 336**, a
-  tri-C₈/C₁₀-alkylamine, not a primary amine) amines have different basicities
-  and different affinities for the sulfato complexes; the primary amines are
-  the ones used industrially for Th/U from sulfate.
+- @amaral2010thorium apply amine solvent extraction directly to monazite
+  sulfuric acid liquor and report thorium and uranium extracted with the rare
+  earths left in the raffinate.
+- Amine class matters and is often misreported, so it is worth naming the
+  classes rather than the trade names alone. Primary (Primene JM-T), secondary
+  (Amberlite LA-2) and tertiary (Alamine 336, a tri-C₈/C₁₀-alkylamine, and
+  *not* a primary amine however often it is called one) amines differ in
+  basicity and in their affinity for the sulfato complexes. Any account of a
+  Th/U circuit that does not say which class was used has not said enough to
+  be reproduced.
 - Strip with a salt or acid solution that breaks the anionic complex
   (Na₂CO₃ or dilute acid, depending on the amine).
 
@@ -741,8 +744,6 @@ not a size effect, is what makes the separation work.
 5.  Thorium extraction with amine extractants
 6.  REE precipitation as hydroxides or carbonates
 7.  Redissolve for individual REE separation
-
-**Production**: \~3000 tons/year REO (historical)
 
 (ion-adsorption-clay-leaching-the-gentle-approach)=
 ## Ion-Adsorption Clay Leaching: The Gentle Approach
@@ -793,11 +794,16 @@ mg/L REE at pH 4-6, with Al, Fe and Ca as the impurities that matter. That
 dilution, not the chemistry, is the engineering problem this route creates, and
 it propagates straight into the solution volumes tabulated later in the chapter.
 
-Column work shows the counter-intuitive result that *less* reagent recovers
-*more* — 0.2 % (NH₄)₂SO₄ gave 93 % recovery against 85 % at 1.0 %, because
-excess electrolyte competes for the same exchange sites — and that temperature
-barely matters (88 % at 15 °C, 92 % at 25 °C), which is why the route runs cold
-[@shi2022column]. The rate is set by diffusion through the clay particle pores
+Because the mechanism is cation exchange, ammonium sulfate needs a *high*
+ammonium concentration to work, and the sulfate anion contributes essentially
+nothing to the leach — it is along for the ride, and it is part of the effluent
+problem. That is the argument @shi2022column make for changing the anion rather
+than the concentration: column leaching with **ammonium citrate**, where both
+the cation and the anion take part, recovered rare earths well at a
+substantially lower ammonium concentration, at a liquid-to-solid ratio of 4:1
+and pH 6 (against pH 2 for ammonium sulfate). The lever is the molecular
+structure of the leaching agent, not the dose. The rate is set by diffusion
+through the clay particle pores
 rather than by the exchange itself, so the leach follows the
 product-layer-diffusion form of the shrinking-core model set out in
 [](#leaching-kinetics-models) [@long2019kinetics].
@@ -832,10 +838,11 @@ leach liquor, it has to be concentrated before anything downstream can use it
 - **Precipitation.** Add oxalic acid, REE³⁺ + 1.5 H₂C₂O₄ → REE₂(C₂O₄)₃↓, or
   ammonium bicarbonate, REE³⁺ + 3 NH₄HCO₃ → REE(OH)CO₃↓ + 3 NH₄⁺, and calcine
   the precipitate to REE₂O₃.
-- **Solvent extraction applied directly to the PLS**, with P507 or D2EHPA. This
-  concentrates the liquor 10-50× and produces a purified feed for the separation
-  circuit — the same unit operation that will later do the separating
-  [@han2024efficient].
+- **Solvent extraction applied directly to the PLS.** This concentrates the
+  liquor and produces a purified feed for the separation circuit — the same
+  unit operation that will later do the separating. @han2024efficient do this
+  on the sulfate leachate of an ion-adsorption ore with HPOAc, chosen over the
+  conventional acidic organophosphorus reagents for this duty.
 
 ## Xenotime Processing
 ### Challenges
@@ -1035,7 +1042,7 @@ $$
 **Solvent extraction** [@amaral2010thorium]:
 
 - Before REE extraction
-- Primary amine (Primene JM-T) from sulfate liquor, or TBP from nitrate
+- An amine from sulfate liquor, or TBP from nitrate
 - Th extracts preferentially
 - See [](#thorium-management)
 
@@ -1119,7 +1126,7 @@ that needs a serious scrubbing train, and with a precipitation-redissolution
 cycle it cannot avoid.
 
 The two monazite lanes are the Indian sulfuric route [@gupta2004extractive;
-@jha2016hydrometallurgical] and the caustic alternative [@borai2016modified;
+@jha2016hydrometallurgical] and the caustic alternative [@xu2012decomposition;
 @shahreldin2018selective]. What distinguishes them from the bastnäsite routes is
 structural, not numerical. Thorium is pulled out as a separate stream *before*
 the rare earths are separated from one another, because a thorium-bearing
@@ -1597,10 +1604,10 @@ Essential reviews:
 
 By ore type. **Bastnäsite**: [@chi2004recovery] (NH₄Cl roasting),
 [@xu2012decomposition] (alkali decomposition), [@sinclair2017rare]
-(supercritical CO₂). **Monazite**: [@borai2016modified] (selective thorium
+(supercritical CO₂). **Monazite**: [@borai2016modified] (modified acid leaching for thorium
 separation), [@amaral2010thorium] (thorium extraction), [@brisson2015bioleaching]
 (bioleaching). **Ion-adsorption clays**: [@xiao2015leaching] (ammonia-free
-MgSO₄ leaching), [@shi2022column] (column leaching optimization),
+MgSO₄ leaching), [@shi2022column] (ammonium citrate as a low-ammonium lixiviant),
 [@long2019kinetics] (kinetics modeling), [@han2024efficient] (recent sulfate
 leaching advances).
 
