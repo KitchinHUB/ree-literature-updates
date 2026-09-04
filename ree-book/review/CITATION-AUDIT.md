@@ -152,3 +152,82 @@ year, container title against every `container-title` the registry returns
 (proceedings return `[series, volume-title]`), volume and pages. An entry whose
 `note` field already explains a divergence is reported separately rather than
 as an unexamined mismatch.
+
+## Stage three: the entries that have no DOI
+
+A DOI check cannot touch an agency report, a company page or a book, and the
+earlier passes settled for resolving the URL. That establishes that a page
+exists. It does not establish that the page says what the entry claims, and for
+a book that is going to be read in public it is the weaker half of the
+question. Every one of the twenty-one cited entries without a DOI was therefore
+opened and read against the sentence citing it.
+
+Six failed.
+
+| Key | What it was cited for | What the source actually is |
+|---|---|---|
+| `fmi2024titanium` | carbochlorination of rutile in fluidized beds at 900--1050 °C | a market-research preview page containing no carbochlorination, no fluidized bed and no temperature |
+| `lomon2024titanium` | "safely and economically at very large scale ... over seven decades" | a corporate key-facts page giving capacity numbers and nothing else |
+| `engell2023could` | integrated Al/REE carbochlorination of end-of-life material | a SINTEF blog post of 28 March 2019 **by Bjarte Øye**, about aluminium, with no mention of rare earths |
+| `tic2024processing` | cascade distillation of REE chlorides | tanb.org: "Membership Required --- You must be a member to access this content" |
+| `osti2021process` | coal fly ash at 250--800 ppm REE, Appalachian average 591 ppm | OSTI 1808739 is Zhang and Honaker on **acid mine leachate**; the entry's author, title and year were all invented and the record contains none of these figures |
+| `csiro2024minerals` | chlorination "one of several established industrial options" in China | the report says the opposite: chlorination roasting "is being investigated at lab scale" |
+
+Two more were weak rather than wrong. `energy2011critical` was cited for the
+definition of the rare earths by a DOE strategy document that never mentions
+scandium, and the two `britannica*` entries were encyclopaedia articles doing
+the work of technical sources.
+
+### What replaced them
+
+Where the claim was true and only the citation was bad, a real source was
+found; where the claim was the problem, the claim went.
+
+- The fly ash grades are Taggart, Hower, Dwyer and Hsu-Kim, *Environmental
+  Science & Technology* **50**(11) 5919--5926 (2016), who measured more than a
+  hundred U.S. ashes and report 591 mg/kg for Appalachian, 403 for Illinois
+  basin and 337 for Powder River basin [@taggart2016trends].
+- The fluidized-bed chlorinator is Morris and Jensen, who measured rutile
+  chlorination rates over 1143--1311 K [@morris1976fluidized], and Zhou and
+  Sohn, who modelled the same reactor [@zhou1996mathematical]; the process
+  context is the USGS Minerals Yearbook titanium chapter [@usgs2020titanium]
+  and Zhang, Zhu and Cheng's review [@zhang2011literature].
+- The list of chloride-process producers now comes from the USGS rather than
+  from Britannica, and the Kroll magnesium-chlorine loop from Habashi.
+- The Nb/Ta cascade-distillation sentence and the Al/REE co-processing sentence
+  were rewritten to say plainly that they are conjectures of ours, which is
+  what they always were.
+- The UNEP figure was misquoted. The report's finding is that fewer than a
+  third of some sixty metals surveyed have an end-of-life recycling rate above
+  50 % and thirty-four are below 1 %; the book had said "32 of the 37 specialty
+  metals" and put quotation marks around a phrase that is not in the report.
+
+Six entries went to `references-rejected.bib`, four peer-reviewed replacements
+were added, and `engell2023could` and `anon2024technology` were rewritten under
+their real authorship as `oye2019chloride` and `rer2026technology`.
+
+### The fifteen that hold
+
+The rest were read and stand: the two DOE Moab pages, which the text follows
+closely enough to be near-quotation (ammonia and uranium as the groundwater
+contaminants of concern, young-of-year endangered fish in the backwater
+channels, 1,002,109 lb of ammonia and 5,816 lb of uranium kept out of the
+Colorado); the EPA rare earth review, EPA/600/R-12/572, by Reisman and Weber;
+the USGS titanium chapter, by Joseph Gambogi; Castor and Hedrick in *Industrial
+Minerals and Rocks*; Habashi's *Handbook of Extractive Metallurgy*; the CRC
+Handbook, 97th edition; Chi and Tian's Nova monograph; the CEA Atalante paper;
+and the INL FY 2010 summary report.
+
+Four entries were corrected in passing: `usgs2020titanium` now credits Gambogi
+rather than the agency, `csiro2024minerals` credits its six named authors and
+carries the report's real title, and `chi2008weathered` carries an ISBN and a
+library record because the publisher's own page refuses automated requests.
+
+### Uncited web sources
+
+Seventeen uncited entries were also removed --- two Britannica articles, a
+Wikipedia page, six vendor and supplier pages, three content-marketing blogs, a
+paywalled consultancy note, and one whose URL was a bare domain with no
+document behind it. None of them was cited anywhere in the book, so none
+reached the site, but a bibliography that carries them invites the reader to
+wonder what else is in it.

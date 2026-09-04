@@ -1,7 +1,7 @@
 # Citation verification report
 
-- Entries checked: **577**
-- Verified: **577** (506 by resolving a CrossRef DOI, 1 by resolving a DataCite DOI, 67 by live URL, 3 by ISBN, 0 kept unchecked because nothing answered)
+- Entries checked: **558**
+- Verified: **558** (510 by resolving a CrossRef DOI, 1 by resolving a DataCite DOI, 44 by live URL, 3 by ISBN, 0 kept unchecked because nothing answered)
 - Rejected: **0**
 - Author fields repaired from CrossRef: **1**
 - Titles diverging from CrossRef: **0**

@@ -60,9 +60,11 @@ below one percent, and it is worth knowing where it comes from, because the
 number is often cited to reviews that are themselves citing it.
 
 The primary assessment is the UNEP International Resource Panel's status report
-on metal recycling rates, which found that for 32 of the 37 specialty metals it
-surveyed the end-of-life recycling rate was "very close to zero (\< 1 %)"; the
-rare earths are in that group [@unep2011recycling]. The peer-reviewed
+on metal recycling rates, which found that of some sixty metals surveyed fewer
+than a third had an end-of-life recycling rate above 50 %, while thirty-four
+were below 1 %; the rare earths are in that lowest group, and the report singles
+out neodymium and dysprosium for wind turbine magnets and lanthanum for hybrid
+vehicle batteries [@unep2011recycling]. The peer-reviewed
 statements of the same work-up are Graedel and co-workers in the *Journal of
 Industrial Ecology* [@graedel2011what] and Reck and Graedel in *Science*
 [@reck2012challenges]. Binnemans and co-workers' critical review is the

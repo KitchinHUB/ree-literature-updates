@@ -149,9 +149,11 @@ the rest of the book: any claim resting solely on a rejected citation had to be
 removed or rewritten, not left standing without support.
 
 The bibliography has grown since, as chapters were repaired and the claims that
-survived acquired real sources. It now holds 577 entries, all 577 verified — 506
-by resolving a DOI in CrossRef, one by resolving a DOI in DataCite, 67 by
-fetching a live URL, and three books by ISBN.
+survived acquired real sources, and shrunk again as sources that could not carry
+their claims were removed. It now holds 558 entries, all 558 verified — 510 by
+resolving a DOI in CrossRef, one by resolving a DOI in DataCite, 44 by fetching
+a live URL, and three books by ISBN. Ninety entries sit in
+`references-rejected.bib`.
 
 That last group taught the tool something. An earlier version of the checker
 rejected all three, which looked like a verdict on the books and was in fact a
@@ -214,6 +216,40 @@ corrected in place — either by substituting what the source actually reports,
 or, where nothing in the literature supported the claim, by deleting it. More
 than a dozen data tables were deleted outright during this pass, because their
 entries could not be traced to any source.
+
+The last part of that review to be done was the hardest to automate. Forty-four
+entries have no DOI — agency reports, standards, company pages, a handful of
+books — and for those, stage 1 could only fetch the URL. A URL that returns 200
+proves a page exists. It says nothing about what is on it, and that gap is
+exactly where a fabricated citation survives longest: the identifier is live,
+the checker is satisfied, and no one has read the page. All twenty-one such
+entries that the book actually cites were therefore opened and read against the
+sentence citing them.
+
+Six could not carry their claim. A market-research preview page was supporting
+a fluidized-bed reactor temperature it does not mention; a corporate key-facts
+page was supporting a sentence about seven decades of safe operation that it
+does not contain; a blog post attributed to "Engell, K." in 2023 turned out to
+be by Bjarte Øye in 2019 and to be about aluminium, with no mention of rare
+earths, while it propped up a claim about rare earth co-recycling; a
+membership-gated page was supporting a distillation cascade nobody outside the
+membership can check; an OSTI identifier attributed to a Department of Energy
+report on coal-based resources belongs to Zhang and Honaker's paper on acid
+mine leachate and contains none of the fly ash grades cited to it; and a CSIRO
+assessment was cited for chlorination being an established industrial route in
+China when what it says is that chlorination roasting is being investigated at
+laboratory scale.
+
+Where the claim was sound and only the citation was bad, a real source replaced
+it — Taggart and co-workers in *Environmental Science & Technology* for the fly
+ash grades, Morris and Jensen and Zhou and Sohn for the fluidized-bed
+chlorinator, the USGS Minerals Yearbook for the chloride process and its
+operators. Where the claim was the problem, the claim went, or was rewritten to
+say plainly that it is a conjecture of ours. Two encyclopaedia citations were
+replaced by technical ones, and seventeen uncited vendor pages, blogs and
+encyclopaedia articles were removed from the bibliography as well: none of them
+reached the book, but a bibliography that carries them invites the reader to
+wonder what else is in it. The full account is in `review/CITATION-AUDIT.md`.
 
 Claims that survive as numbers in this book should therefore be traceable. That
 is a lower standard than *correct*, and it is the standard this book can

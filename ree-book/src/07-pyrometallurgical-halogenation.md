@@ -277,7 +277,7 @@ The heavy rare earth elements (HREEs) include {index}`europium` (Eu), gadolinium
 The HREEs follow similar carbochlorination chemistry to the LREEs, with thermodynamic calculations indicating spontaneous reaction over the 500-1000 °C window [@xue2025carbochlorination]. Europium and ytterbium are the special cases: both can be reduced to the divalent chlorides (EuCl₂, YbCl₂) under strongly reducing conditions, and the europium reaction has been resolved stage by stage [@pomiro2014study]. Note that the table above lists europium with the heavies for continuity with the source literature; the boundary used in this book's glossary places Eu on the light side of Gd.
 
 ### Scandium and Yttrium
-Scandium (Sc) and yttrium (Y), while not lanthanides, are classified as rare earth elements due to their similar chemical properties and occurrence with lanthanides in mineral deposits [@energy2011critical].
+Scandium (Sc) and yttrium (Y) are not lanthanides, but both are counted among the rare earths because their chemistry resembles that of the lanthanides and they occur alongside them in the ore minerals; see the [](#glossary) entry.
 
 Yttrium oxide (Y₂O₃) carbochlorination has been studied in detail by thermogravimetry [@gavira2010carbochlorination]:
 
@@ -598,15 +598,19 @@ environmental burden and demonstrated scale — is given once, for all of them, 
 ## Industrial Implementation
 
 ### Technology Readiness Level
-Readiness for rare earth carbochlorination differs sharply by region. In China
-the chlorination route is one of several established industrial options for
-bastnäsite, practised alongside oxidation roasting-acid leaching, sulfuric acid
-bake-water leaching and caustic soda decomposition, and the Baotou facilities
-produce chlorides alongside oxides, carbonates and alloys
-[@csiro2024minerals]. Outside China it has not been commercially deployed, and
-the recycling variants remain at laboratory and pilot scale. We give no TRL
-numbers for the route, because the specific ratings that circulate for it are
-not traceable to a published assessment.
+Readiness for rare earth carbochlorination is lower than its long history
+suggests. CSIRO's 2024 assessment of mid-stream processing places chlorination
+roasting at laboratory scale: the chemistry is "generally well understood", but
+the processes "are being investigated at lab scale", some of them on the Baotou
+mixed bastnäsite-monazite concentrate, and corrosion of the equipment and the
+energy intensity of the route are named as the obstacles to commercial use
+[@csiro2024minerals]. The industrially established routes for the same
+concentrates are the ones treated in [](#hydrometallurgical-leaching) --
+oxidation roasting followed by acid leaching, the sulfuric acid bake, and
+caustic decomposition. The recycling variants of carbochlorination are likewise
+at laboratory and pilot scale. We give no TRL numbers for the route, because
+the specific ratings that circulate for it are not traceable to a published
+assessment.
 
 ### Scale-Up Challenges
 Key challenges for industrial-scale implementation include:
@@ -652,27 +656,37 @@ Operating temperatures of 600-900 °C are elevated relative to an autoclave but 
 Carbochlorination has been practiced at massive industrial scale for decades in the production of titanium and nuclear-grade zirconium. These established industries provide invaluable precedent, proven technology, and potential synergies for rare earth element processing. The infrastructure, expertise, and equipment developed for Ti and Zr chloride production represent a foundation upon which REE carbochlorination could be built.
 
 ### Titanium Production via Carbochlorination
-The titanium industry represents the largest and most mature application of carbochlorination. Roughly half of global TiO₂ pigment production goes through the chloride process, which relies on carbochlorination as its first step [@usgs2020titanium].
+The titanium industry represents the largest and most mature application of
+carbochlorination. TiO₂ pigment is made by either the chloride process or the
+sulfate process, and it is the chloride process that begins with a
+carbochlorination step; the USGS expects the split between chloride- and
+sulfate-process pigment capacity to reach parity, driven mainly by the
+expansion of chloride capacity in China [@usgs2020titanium]. The route and its
+place in titanium metallurgy are reviewed by Zhang and co-workers
+[@zhang2011literature].
 
 > The Chloride Process for TiO₂/Ti Metal:
 
-The process begins with carbochlorination of titanium ores (rutile or upgraded ilmenite) in fluidized bed reactors at 900-1050°C [@fmi2024titanium]:
+In the chloride process, natural rutile, synthetic rutile, chloride-grade
+ilmenite or titanium slag is converted to TiCl₄ by chlorination in the presence
+of petroleum coke; the TiCl₄ is then oxidized with air or oxygen at about
+1000 °C and the resulting TiO₂ is calcined to strip residual chlorine
+[@usgs2020titanium]:
 
 > TiO₂ + 2C + 2Cl₂ → TiCl₄ + 2CO
 
-Key industrial parameters include:
+The chlorinator is a fluidized bed. Morris and Jensen measured chlorination
+rates of Australian rutile in a fluidized bed with CO and with coke as the
+reductant over 1143--1311 K, that is roughly 870--1040 °C
+[@morris1976fluidized], and Zhou and Sohn built a bubble-assemblage model of
+the same reactor that reproduces both the reaction rate and the evolving
+particle size distribution [@zhou1996mathematical]. Those two papers are the
+closest analogue in the open literature to what an REE chlorinator would have
+to be designed as.
 
-- Temperature: 900-1050°C in fluidized bed reactors
-
-- Feedstock: Rutile (\>95% TiO₂) or synthetic rutile/upgraded ilmenite slag (\>90% TiO₂)
-
-- Reductant: Petroleum coke or anthracite coal
-
-- Product: TiCl₄ (liquid, boiling point 136°C)
-
-- Scale: Major plants produce hundreds of thousands of tonnes of TiCl₄ annually
-
-- Energy efficiency: Optimized to \~500 × 10³ kcal per tonne TiCl₄ (down from 1,560 × 10³ kcal historically)
+Feedstock grades run from rutile (\>95 % TiO₂) through synthetic rutile and
+upgraded ilmenite slag; the reductant is petroleum coke; and the product is
+liquid TiCl₄, boiling at 136 °C.
 
 > Purification and Metal Production:
 
@@ -688,19 +702,23 @@ The crude TiCl₄ contains impurities including FeCl₃, AlCl₃, VOCl₃, SnCl�
 
 > Major Global Producers:
 
-The titanium chloride industry is dominated by major multinational corporations with decades of operational experience [@britannica2024titanium]:
+The chloride process is run by a small number of large firms. The USGS lists
+the U.S. chloride-process pigment producers as Chemours, INEOS Pigments,
+Louisiana Pigment (a Kronos-Venator joint venture) and Tronox, with no domestic
+sulfate-process producer at all [@usgs2020titanium]. The largest single
+chloride operator outside the United States is Lomon Billions in China, which
+reports roughly 660 kt/y of chloride-process capacity within about 1,510 kt/y
+of total TiO₂ capacity [@lomon2024titanium].
 
-- Chemours (USA) - Major TiO₂ and TiCl₄ producer
-
-- Tronox (USA/Global) - Vertically integrated Ti operations
-
-- Lomon Billions (China) - \~660 kt/year chloride TiO₂ capacity
-
-- Venator Materials (Global) - Significant chloride process capacity
-
-- Kronos Worldwide (Global) - Major TiO₂ producer
-
-The titanium industry demonstrates that carbochlorination can be operated safely and economically at very large scale, with continuous improvements in energy efficiency, chlorine recycling, and environmental performance over seven decades of industrial operation [@lomon2024titanium].
+What the titanium industry establishes for our purposes is narrower than it is
+often made to sound. It shows that a carbochlorination step can be run
+continuously at the scale of hundreds of kilotonnes a year on an oxide
+feedstock, in a fluidized bed, with coke as the reductant and chlorine
+recovered downstream --- commercial Kroll-process production dates from 1948
+[@usgs2020titanium]. It does not show that the same is true for a mixed rare
+earth concentrate, whose chlorides are far less volatile and far more
+hygroscopic than TiCl₄, and which has to be separated after chlorination rather
+than simply purified.
 
 ### The Zr/Hf Separation Challenge
 Zirconium is an ideal material for nuclear reactor fuel cladding due to its exceptionally low thermal neutron absorption cross-section. However, zirconium ores (primarily zircon sand, ZrSiO₄) naturally contain 1-3 wt% hafnium, which has a very high neutron absorption cross-section [@xu2015production]. For nuclear applications, the hafnium content must be reduced to less than 100 ppm---a challenging separation given the remarkable chemical similarity between Zr and Hf (same group, nearly identical ionic radii).
@@ -815,7 +833,16 @@ The aluminum chloride process has garnered renewed interest as a potential alter
 
 > Relevance to REE Recycling:
 
-The aluminum chloride process is particularly relevant to REE recycling from aluminum-containing secondary sources. End-of-life materials containing both aluminum and rare earths (e.g., certain catalysts, electronics) could potentially be processed through integrated carbochlorination, enabling simultaneous recovery of both Al and REE values [@engell2023could].
+Øye's account of the chloride route is concerned with aluminium alone and says
+nothing about rare earths [@oye2019chloride]. The extension is ours, and it is
+a conjecture rather than a result: end-of-life materials that carry both
+aluminium and rare earths --- spent {index}`FCC catalyst <FCC catalyst>`,
+some electronic scrap --- present both metals as oxides to the same chlorinating
+atmosphere, so a single carbochlorination step would in principle chloridize
+both. Whether the resulting AlCl₃/REECl₃ mixture is easier or harder to work up
+than the separate streams is unstudied, and the volatility gap between AlCl₃,
+which sublimes at 180 °C, and the rare earth chlorides, which do not boil below
+about 1500 °C, is the obvious place to start.
 
 ### Magnesium Production via Chlorination
 Magnesium production via the chloride route has a long industrial history, with carbochlorination serving as an important alternative to the seawater route for producing anhydrous MgCl₂ feedstock for electrolysis [@gaballah1999chlorination]. The carbochlorination reaction is:
@@ -848,7 +875,7 @@ Carbochlorination of magnesium oxide from magnesite, silicates, or hydroxides wa
 
 > Integration with Titanium/Zirconium Production:
 
-Magnesium and chlorine are intimately linked with titanium and zirconium production through the Kroll process, which uses magnesium to reduce TiCl₄ and ZrCl₄ to metals, producing MgCl₂ as a byproduct. This MgCl₂ is electrolyzed to regenerate magnesium and chlorine, creating a closed-loop system. REE carbochlorination could potentially integrate into this existing infrastructure [@britannica2024magnesium].
+Magnesium and chlorine are intimately linked with titanium and zirconium production through the Kroll process, which uses magnesium to reduce TiCl₄ and ZrCl₄ to metals, producing MgCl₂ as a byproduct [@usgs2020titanium]. That MgCl₂ is electrolyzed to regenerate magnesium and chlorine, closing the loop [@habashi1997handbook]. A rare earth chlorinator sited next to such a plant would have a chlorine supply and a magnesium supply already in place; we know of no attempt to do it.
 
 ### Niobium and Tantalum Separation via Chlorination
 The separation of niobium and tantalum by chlorination and distillation represents one of the most successful applications of chloride-based separation for chemically similar elements---directly analogous to the REE separation challenge [@habashi1997handbook]. The carbochlorination reactions are:
@@ -885,7 +912,7 @@ The key advantage of the chloride route for Nb/Ta is the ability to separate the
 
 > Lessons for REE Processing:
 
-The Nb/Ta separation precedent is particularly instructive for REE processing because it demonstrates successful industrial separation of chemically similar elements via chloride distillation. While REE separation is more complex (17 elements vs. 2), the fundamental principle of exploiting vapor pressure differences among chlorides is directly applicable. The development of cascade distillation systems for REE chloride separation could build on this established technology base [@tic2024processing]. The analogy should not be pressed too far, though: most Nb/Ta separation practised today is not chloride distillation but MIBK solvent extraction from HF media, and the reason is the same one that keeps the rare earths in solvent extraction — a liquid-liquid contactor buys many more theoretical stages per unit of capital than a high-temperature column does.
+The Nb/Ta separation precedent is particularly instructive for REE processing because it demonstrates successful industrial separation of chemically similar elements via chloride distillation. While REE separation is more complex (17 elements vs. 2), the fundamental principle of exploiting vapor pressure differences among chlorides is directly applicable. Whether a cascade of distillation stages could be made to do the same for the rare earth chlorides is an open question and not one the Nb/Ta precedent settles. The analogy should not be pressed too far, though: most Nb/Ta separation practised today is not chloride distillation but MIBK solvent extraction from HF media, and the reason is the same one that keeps the rare earths in solvent extraction — a liquid-liquid contactor buys many more theoretical stages per unit of capital than a high-temperature column does.
 
 > Summary of Industrial Carbochlorination Precedents:
 
