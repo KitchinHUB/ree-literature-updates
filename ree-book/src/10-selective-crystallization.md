@@ -286,34 +286,31 @@ solids, so they are controlled by how much iron and aluminium there is and by
 the sulfate that bridges the metal to the oxide surface — not by the rare earth
 hydroxide solubility products.
 
-[](#fig-precipitation-ph) shows the consequence for selectivity within the
-series, which is the point at which hydroxide precipitation stops being useful.
+[](#fig-precipitation-ph) lays those windows out on the one axis they share,
+which is where the consequence for selectivity becomes visible.
 
 :::{figure} ../figures/10-precipitation-ph.svg
 :name: fig-precipitation-ph
 :width: 100%
 
-Where the rare earths come out as hydroxide. The bands are flat because no
-per-element data supports anything else. The figure was drawn from group
-precipitation windows — light rare earth 6.8–7.5, heavy rare earth 7.0–8.0,
-yttrium 6.5–7.5 — which are widely quoted as process figures but which this
-book was unable to trace to a primary source; they are shown here for the
-overlap they display rather than for their exact values, and the sourced
-thermodynamic modelling in the text puts rare earth hydroxide precipitation
-across the whole series in the single band pH 7.0–10.0 [@zhang2018rare], which
-supports the same conclusion more directly: one hydroxide step returns a group,
-not an element. No solubility product is used, and nothing here is a fitted or
-interpolated curve. Cerium is drawn as a discontinuity rather than a trend,
-because that is what it is: oxidised to Ce(IV) it comes out around pH 3–5,
-several pH units below its neighbours — oxidation state is a threshold where
-radius is only a gradient. The same pH window takes Fe, Th, Al and U, which is
-why the industrial sequence oxidises cerium only after those are gone. Yttrium
-is placed between Ho and Er by six-coordinate ionic radius, 0.900 Å against
-0.901 and 0.890 [@shannon1976revised]; note that the hydroxide-solubility
-modelling cited in the text places Y(OH)₃ between the Ce and Pr hydroxides
-instead [@liu2024modeling], so this placement reflects radius, not measured
-hydroxide behaviour. Promethium is greyed because it appears in no real feed.
-Drawn by `tools/figures/fig_precipitation.py`.
+What comes out of an acidic rare earth liquor, and at what pH. Every window
+drawn here is one the sources give: iron over 2.0–3.5 and aluminium over
+3.5–4.5, thorium about 95 % removed at 3.6, and the rare earth hydroxides
+thermodynamically favourable over 7.0–10.0 [@zhang2018rare; @li2025iron]. That
+last is a single band for the whole series, and it is the argument: if all
+fifteen lanthanides precipitate in one window, a hydroxide step returns a group
+and not an element. There is no per-element trend drawn because the sourced
+literature contains none — no solubility product is plotted, nothing is fitted,
+and nothing is interpolated. Cerium is the exception, and its oxidative window
+of pH 1.0–4.0 [@elizalde2019oxidative] sits on top of iron, aluminium and
+thorium rather than clear of them, which is why the industrial sequence
+oxidises cerium after those are gone rather than before. Between the two lies
+the result that matters most: treating a coal-refuse leachate, more than 80 %
+of the rare earths were recovered over pH 4.85–6.11 — well below any hydroxide
+window — by adsorption onto the iron and aluminium hydroxysulfate solids
+forming there, not by precipitation at all [@zhang2018rare]. Drawn by
+`tools/figures/fig_precipitation.py`, which records what the earlier version of
+this figure asserted and why those numbers were withdrawn.
 :::
 
 ### Removing thorium, uranium and aluminium
