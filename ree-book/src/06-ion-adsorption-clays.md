@@ -5,159 +5,566 @@ title: Ion-Adsorption Clays
 (ion-adsorption-clays)=
 # Ion-Adsorption Clays
 
-{index}`Ion-adsorption clays <ion-adsorption clay>` are the odd deposit type in rare earth processing, and the
-questions they raise are as much chemical-engineering questions as geological
-ones: where are these clays mined, how are they processed, can they be bought on
-the open market, what chemistry makes them work, and are they recyclable? This
-chapter answers those in turn, then assesses the state of the art, the research
-opportunities, and the environmental implications.
+Every other ore in this book is a mineralogical problem. Bastnäsite has to be
+defluorinated, monazite and xenotime have a phosphate lattice that must be
+broken with concentrated acid or concentrated caustic, and all three arrive at the
+leach as a beneficiated concentrate. {index}`Ion-adsorption clays <ion-adsorption clay>`
+have none of that. They contain no crystalline rare earth mineral at all. The
+rare earths sit on the surfaces of weathered clay as hydrated cations, held there
+by nothing stronger than electrostatics, and a salt solution at room temperature
+takes them off. There is no beneficiation step, no cracking step, and no
+radiological programme: the ore goes straight to chemical treatment without any
+beneficiation, and its thorium and uranium oxide contents are about 0.005 %, which
+puts the activity concentration below 1 Bq/g and, in the IAEA's assessment, below
+the level at which regulatory control is warranted [@iaea2011radiation]. This is the easiest rare earth ore in the world to process,
+and it supplies more than 90 % of the world's heavy rare earth production
+[@zhou2020genesis].
 
-It draws on the thermodynamic-screening work of
-@mohamadsobri2025enhancing and on the broader ion-adsorption-clay literature
-[@borst2020adsorption; @zhou2020genesis; @moldoveanu2016overview; @luo2022development; @wu2023rare; @alshameri2019understanding]. Leaching
-of these ores is also treated from the flowsheet side in
-[](#ion-adsorption-clay-leaching-the-gentle-approach); this chapter takes the
-deposit and the {index}`ion-exchange <ion exchange>` chemistry as its subject.
+The price of that easy chemistry is grade. The rare earth content is a few tenths
+of a percent REO and does not exceed 1 % [@iaea2011radiation] — two to three
+orders of magnitude below a bastnäsite concentrate — so the tonnage of rock, the
+volume of solution and the area of hillside per tonne of product are all enormous.
+That single trade defines the deposit type. Everything difficult about
+ion-adsorption clay follows from it, and almost none of the difficulty is
+chemical: it is a matter of moving lixiviant through a low-permeability regolith,
+of keeping the solution inside the orebody, of what the leaving reagent does to
+the groundwater, and of what happens to the land afterwards. The chemistry is
+solved. The engineering and the environmental accounting are not.
 
-## Summary
+The deposit and its {index}`ion-exchange <ion exchange>` chemistry are this
+chapter's subject. The leach considered as a unit operation — lixiviant
+chemistry, liquid-to-solid ratios, kinetics, and the reagent and solution-volume
+arithmetic — belongs to [](#ion-adsorption-clay-leaching-the-gentle-approach) and
+is not repeated here.
 
-- Ion-adsorption clays (IAC) -- also "ion-adsorption deposits," "regolith-hosted REE deposits," or "weathered-crust elution-deposited ores" -- are the dominant global source of the **heavy** rare earths (Dy, Tb, Y). Their value is that the REE are held as loosely bound, hydrated, **exchangeable** ions on clay surfaces, so they can be recovered by a simple salt solution at room temperature -- no roasting or strong-acid cracking [@borst2020adsorption].
-- The clay is **not** an open-market commodity: it is low-grade, processed near-source, and supply is dominated by China and Myanmar. The host minerals (kaolinite, halloysite) are cheap industrial clays, but those are sold **without** the adsorbed REE.
-- The chemical-engineering pain is dilute, high-volume hydrometallurgy with impurity co-extraction (Al, Fe), speciation/{index}`precipitation` yield losses, and reagent-driven pollution. Thermodynamic screening is one response to it: compute the aqueous stability fields and pick a reagent (MgSO4) and conditions (ambient, acidic) that keep the freed REE soluble [@mohamadsobri2025enhancing].
-- The most interesting forward direction is to use **clay/ion exchange itself as a separation technology** -- as a preconcentrator ahead of {index}`solvent extraction`, and (with imported selectivity) as a partial replacement for it.
-- The headline environmental issue is ammonia-nitrogen pollution from in-situ ammonium-sulfate leaching, plus landscape destruction and a large spent-clay residue stream whose fate (reuse vs landfill) is unresolved.
+## The Deposit and the Adsorbed State
 
-## What the clays are and the chemistry that makes them work
+### What the rare earths are attached to
 
-REEs in these ores sit primarily in the **ion-exchangeable** phase, typically \~60-90% of total REE content, adsorbed on clay minerals -- chiefly kaolinite and halloysite, with contributions from illite, smectite, and Fe-oxyhydroxides. Synchrotron spectroscopy shows the REE are held as 8- to 9-coordinated **outer-sphere hydrated complexes** on kaolinite: weak, electrostatic, with the hydration shell intact and not bound into a mineral lattice [@borst2020adsorption].
+The rare earths in these ores are adsorbed on clay minerals — chiefly kaolinite
+and halloysite, with contributions from illite, smectite and Fe-oxyhydroxides —
+and the adsorption is genuinely surface adsorption, not a substitution into a
+lattice. That was demonstrated directly by synchrotron X-ray absorption
+spectroscopy on economic Chinese ore from the Zhaibei granite and on prospective
+Malagasy regolith: the rare earths occur as **eight- to nine-coordinated, hydrated,
+outer-sphere complexes** sitting on the basal surfaces of kaolinite, with their
+hydration shells intact, rather than as inner-sphere or interlayer complexes
+[@borst2020adsorption]. The same study leached its samples with ammonium sulfate
+and re-measured them, and the collapse in Y absorption intensity after leaching
+confirms that what the spectroscopy had characterised was the leachable fraction
+itself — the economically relevant one. What survives the leach shows spectral
+features typical of high-symmetry sites, consistent with the residual rare earths
+being structurally bound rather than adsorbed.
 
-The clay surface carries net negative charge (isomorphic substitution plus pH-dependent broken-edge silanol/aluminol sites). Recovery is therefore **cation exchange** driven by mass action -- a more concentrated electrolyte cation displaces the loosely held REE3+:
+The clay surface carries a net negative charge, from isomorphic substitution in
+the lattice and from pH-dependent broken-edge silanol and aluminol sites, and
+recovery is therefore cation exchange driven by mass action. A more concentrated
+electrolyte cation displaces the loosely held REE³⁺:
 
-```text
-2 Clay-REE + 3 M2SO4  ->  2 Clay-M3 + REE2(SO4)3      (M = NH4+, ½ Mg2+, ...)
-```
+$$
+2\,\mathrm{Clay}\text{-}\mathrm{REE} + 3\,\mathrm{M_2SO_4} \rightleftharpoons
+  2\,\mathrm{Clay}\text{-}\mathrm{M_3} + \mathrm{REE_2(SO_4)_3}
+  \qquad (\mathrm{M} = \mathrm{NH_4^+},\ \tfrac{1}{2}\mathrm{Mg^{2+}},\ \ldots)
+$$
 
-Because the REE is exchangeable and hydrated, a salt solution at ambient temperature liberates it with fast kinetics and no acid attack on the mineral [@borst2020adsorption; @moldoveanu2016overview]. This is the entire economic basis of the deposit type, and what distinguishes it from hard-rock bastnäsite/{index}`monazite`.
+Because the bond is electrostatic and the ion is already hydrated, the exchange
+needs no acid attack on the mineral and no elevated temperature. Moldoveanu and
+Papangelakis put a standardised leaching procedure across ores of several
+different origins and found that, regardless of variation in origin and rare earth
+content, all the rare earths reached peak extraction under ambient conditions with
+fast kinetics [@moldoveanu2016overview]. That result is the whole economic basis
+of the deposit type, and the reason a 0.1 % ore competes with a 60 % concentrate.
 
-A crucial subtlety for everything downstream: REE attach to clay by **two mechanisms with opposite consequences** [@wu2023rare]:
+A second consequence is less often stated and matters more downstream than the
+first. Because the exchange is selective for the trivalent cations over the
+matrix, the pregnant solution is *clean*. The IAEA's assessment is blunt about it:
+leaching is quite selective, very few impurities are present in the solution, and
+the rare earth concentrate precipitated from it contains a minimum of 90 % REO and
+typically 95 % [@iaea2011radiation]. An ion-adsorption operation therefore reaches
+a concentrate purity, in one ambient-temperature contacting step, that the
+hard-rock routes reach only after flotation, cracking, leaching and a purification
+circuit. Aluminium and iron are the impurities that intrude on that picture, and
+they intrude because the liquor is so dilute that they are not two orders of
+magnitude behind the rare earths the way they would be in an acid leach.
 
-- **Ion exchange** (outer-sphere) -- dominant, but **cannot fractionate** the REE; it grabs the whole REE block without discriminating among adjacent lanthanides.
-- **Surface complexation** (inner-sphere, at edge sites) -- **does** fractionate, enriching HREE over LREE.
+### Two mechanisms, one of which fractionates
 
-## Where they are mined, how they are processed, and market availability
+Rare earths attach to clay by two distinct mechanisms, and the distinction has
+opposite consequences for a separation engineer [@wu2023rare]. **Ion exchange**,
+which is the outer-sphere mechanism and does most of the loading, cannot cause
+evident fractionation: it grabs the rare earth block as a block, without
+discriminating among adjacent lanthanides. **Surface complexation**, the
+inner-sphere mechanism at edge and defect sites, *does* fractionate, and it
+enriches the heavies over the lights.
 
-### Formation and geography
+The practical reading is that the abundant mechanism is the useless one and the
+selective mechanism is the minor one. That is why the leach recovers essentially
+the whole rare earth suite in one pass and hands the separation problem
+untouched to solvent extraction, and it is also why any proposal to use clay
+itself as a separating medium has to find a way to make the minor mechanism
+dominate. Borst and co-workers see the same split in their spectra from the other
+side: the outer-sphere complexes are the ones that leach, and the inner-sphere or
+interlayer ones are the ones that stay behind [@borst2020adsorption]. The
+fractionating sites and the leachable sites are largely different sites.
 
-IAC form by deep chemical weathering of REE-bearing parent rocks (mostly felsic granites; some mafic-ultramafic for Sc) in warm, humid, subtropical climates. REE liberated from primary minerals migrate down the regolith and re-adsorb onto clays [@zhou2020genesis]. The clay mineralogy changes with depth, and it is the *halloysite* that is the better host: in the upper pedolith halloysite coalesces and unrolls to form vermicular kaolinite, and the halloysite-abundant assemblages of the deeper regolith have significantly higher specific surface area and porosity than the kaolinite-dominant assemblages above them [@li2020role]. That mineralogical gradient is one of the reasons the ore is vertically zoned.
+## How the Deposit Forms, and Where
 
-- **Southern China** (Jiangxi/Ganzhou-Longnan, Guangdong, Fujian, Hunan, Guangxi): historic and dominant producer.
-- **Myanmar**: now a very large supplier of HREE-bearing ore/concentrate feeding Chinese separation plants.
-- **Emerging/exploration**: Madagascar (mineralogically genuine analogues of the Chinese ores [@borst2020adsorption]), plus Brazil, Malaysia, Laos, Vietnam, Tanzania.
+### Weathering, migration, and vertical zonation
 
-Regolith-hosted deposits supply **over 90% of global heavy-REE production** despite low grade (commonly \~0.03-0.3 wt% total REO); the economics come from the cheap extraction and from geologic pre-concentration, not from grade [@zhou2020genesis].
+Ion-adsorption deposits form by deep chemical weathering of rare-earth-bearing
+parent rock in warm, humid, subtropical climates. The favourable protoliths are
+felsic — granites, syenites and volcanic rocks — with the rare earths held in
+weathering-susceptible minerals: synchysite, gadolinite and hingganite for the
+heavies, allanite, titanite and apatite for the lights. Scandium deposits of the
+same regolith-hosted type form instead on clinopyroxene-rich mafic-ultramafic
+protoliths. Weathering decomposes those minerals, the liberated cations migrate
+downward with groundwater, and they re-adsorb onto the clays formed in the same
+process [@zhou2020genesis].
 
-### Processing chain
+The ore is vertically zoned, and the reason is mineralogical rather than
+hydrological. Weathering converts poorly crystalline, nano-sized halloysite and
+kaolinite into much more crystalline, larger vermicular kaolinite, and the
+adsorption capacity of the clay drops sharply across that transformation
+[@zhou2020genesis]. Halloysite-abundant assemblages in the deeper regolith have
+significantly higher specific surface area and porosity than the
+kaolinite-dominant assemblages above them [@li2020role]. The consequence is that
+adsorption is favoured in the deep regolith while desorption dominates in the
+shallow soils — the orebody concentrates itself downward, and the mineable horizon
+sits under a barren cap. The IAEA describes the resulting bodies as loose layers
+3-10 m thick of completely weathered granitic rock [@iaea2011radiation].
 
-1.  **Leaching**: historically heap/tank leaching of excavated ore; now predominantly **in-situ leaching** -- ammonium sulfate (or magnesium sulfate) solution injected into the orebody, pregnant leach solution collected.
-2.  **Purification**: impurity removal (Al, Fe) from the pregnant solution.
-3.  **Precipitation**: REE recovered as carbonate or oxalate, then calcined to mixed oxide.
-4.  **Separation**: individual elements separated downstream, conventionally by solvent extraction.
+The same slow process leaves a compositional signature that is commercially
+decisive. Cerium is characteristically low — 0.3-5.5 % of the rare earth content —
+while yttrium is generally high [@iaea2011radiation]. Cerium is the cheap,
+abundant lanthanide that hard-rock producers cannot avoid co-producing; the clays
+have already discarded most of it, in place, over geologic time, and deliver a
+suite weighted toward the elements that are actually scarce.
 
-The general envelope -- ambient temperature, fast kinetics, salt-driven -- holds across ores of varying origin [@moldoveanu2016overview].
+### Geography, and whether the ore can be bought
 
-### Can they be procured on the open market?
+The commercially attractive deposits are in the south-eastern Chinese provinces —
+the IAEA names Jiangxi, Guangdong and Fujian [@iaea2011radiation], and Hunan and
+Guangxi host them as well. Myanmar's Kachin State is the other major source, and
+the conventional account of it — that China's 2012 shift toward value-added
+processing pushed primary extraction across the border — turns out to be only half
+right. A Landsat study of two mines on either side of the Myanmar-China border
+found mining footprints growing on *both* sides between 2005 and 2020, by 130 % on
+the Chinese side and 327 % on the Myanmar side, taking the combined footprint in
+the study area from 1.22 km² to 3.78 km², with a continuous decline in vegetated
+cover [@chinkaka2023unexpected]. National-level generalisations about where this
+ore comes from do not survive contact with the imagery. Outside that core,
+Madagascar's Ambohimirahavavy regolith is a genuine structural analogue at the
+atomic level rather than a loose one [@borst2020adsorption], and Brazil, Malaysia,
+Laos, Vietnam and Tanzania host prospects.
 
-Largely **no**. The ore is low-grade, processed near-source, and subject to Chinese export and technology restrictions, with Myanmar ore feeding Chinese supply chains. What trades openly are the downstream **separated REE oxides**. A common point of confusion: kaolinite and halloysite are cheap, widely sold industrial clays, but the commercial product is purified clay **without** adsorbed REE -- not a substitute for the ore.
+Whether any of this can be bought is a question with a short answer: essentially
+no. The ore is low grade, it is processed near the source because moving hundreds
+of tonnes of rock per tonne of product is absurd, and Chinese output is governed by
+quotas allocated to two state-consolidated groups ([](#the-industrial-landscape)).
+What trades openly is the downstream separated oxide, not the clay. A recurring
+point of confusion deserves flagging: kaolinite and halloysite are cheap,
+widely traded industrial clays, but the commercial product is *purified* clay,
+sold specifically without adsorbed cations. Buying a tonne of kaolin gets you the
+substrate and none of the value.
 
-## State of the art
+## Mining It: In Situ or on a Heap
 
-### Reagent and condition selection by thermodynamic screening
+The clays were originally mined by excavation — open pits worked with power
+shovels, the ore going straight to leaching without beneficiation
+[@iaea2011radiation] — and leached in heaps or tanks. The dominant modern method
+is **in-situ leaching**: lixiviant is injected through shallow wells drilled into
+the orebody and the pregnant solution is collected downslope, with no ore mined at
+all. The change removed the excavation, the haulage and the visible pit, and it
+introduced three problems that are the substance of the modern engineering
+literature.
 
-One route to choosing a lixiviant is to screen candidates thermodynamically before touching an ore. @mohamadsobri2025enhancing is a purely **thermodynamic** (Eh-pH / Pourbaix) study of exactly this kind, not an experimental one. Using HSC Chemistry 10.0 it computes the stability fields of La, Nd, and Y in three sulfate leaching solutions over 0.05-0.6 M and 25-80 degrees C, asking which conditions keep the freed REE soluble as REE3+ rather than precipitating or complexing.
+### Permeability decides the outcome
 
-| Leaching solution | Behavior across concentration | Verdict |
+The first is that in-situ leaching is a flow problem in a material that fights
+flow, and it gets worse as the leach proceeds. Constant-head permeability tests
+on undisturbed ore during simulated in-situ leaching, with the three-dimensional
+pore structure imaged by X-ray computed tomography before, during and after,
+show permeability falling in three distinct stages — rapid reduction, then less
+rapid, then little further change. Of seven pore-structure parameters measured,
+the permeability tracked the average coordination number most closely, and pore
+throats larger than about 30 µm were the effective seepage channels. The cause of
+the decline is mechanical rather than chemical: clay particles migrate and new
+clay forms during the leach, and both clog the pore throats, with the newly formed
+clays then swelling. The hydraulic head of the injected solution influenced the
+degradation more strongly than its concentration did [@zhang2024variations].
+
+That result explains a great deal. It is why in-situ recovery is uneven, why
+lixiviant finds preferential paths and leaves ore untouched, and why raising the
+injection pressure to push more solution through is self-defeating — it accelerates
+the clogging that caused the problem. It also means the permeability at the end
+of a leach is not the permeability at the start, so a containment design validated
+on virgin ore is validating the wrong material.
+
+### The slope
+
+The second is mechanical stability. In-situ leaching saturates a weathered
+regolith on a hillside and chemically alters it while it is saturated, and the
+strength parameters of the weathered ore layer fall as a result. A finite-element
+seepage-and-stability analysis of an in-situ leaching operation found that the
+slope safety factor stayed above the required 1.1 throughout leaching and the
+subsequent push-water stage — so the studied slope remained stable overall — but
+that the factor fell before it recovered, and that substantial deformation
+concentrated in the topsoil and the fully weathered granite zone and at the
+interfaces between layers. The authors' conclusion is that the risk window is the
+middle and late stages of leaching, which is where prevention measures should be
+targeted [@yuan2025analysis]. This is a single modelled case and not a general
+result; what it establishes is that slope stability under in-situ leaching is a
+time-dependent quantity, not a site property fixed at the design stage.
+
+### What a heap buys back
+
+The third problem is containment, and it is the one that has no engineering fix
+in the in-situ mode: solution is injected into an unlined hillside aquifer, and
+what does not report to the collection point reports to the groundwater. Heap
+leaching gives that back. An excavated heap sits on an impermeable pad, so the
+solution inventory is bounded and recoverable, the permeability is set by how the
+heap was built rather than by what the leach does to undisturbed regolith, and
+there is a defined solid residue at the end instead of a contaminated landscape.
+
+The counter-argument has always been that the excavation is exactly the landscape
+destruction the industry moved to in-situ leaching to avoid, and that heaps cost
+more. A semi-industrial trial at 200 t of ore is the most substantial recent test
+of the alternative. Using biosynthetic sodium citrate as the lixiviant at
+50 mmol/L and a solid-to-liquid ratio of 1:2, heap leaching reached 98 % rare
+earth extraction; oxalic acid then precipitated the rare earths from the leachate
+at 94.5 % yield while carrying only 7.4 % of the aluminium, and — the point of the
+design — the residual solution was regenerated and cycled back as fresh lixiviant.
+Roasting the precipitate gave a concentrate of 96 % REO [@meng2023heap]. That is
+a closed reagent loop demonstrated at a scale well past the bench, and it is the
+strongest available argument that the containment advantage of a heap need not be
+paid for in reagent cost.
+
+## The Ammonium Problem
+
+### Why ammonium, and what it leaves behind
+
+Ammonium sulfate became the industry's lixiviant because NH₄⁺ is a cheap,
+monovalent cation that competes well for clay exchange sites, and because
+displacing one REE³⁺ takes three of them, so the reagent is consumed in quantity
+and its cost per tonne of ore matters. The reagent arithmetic and the
+alternatives — magnesium sulfate, ammonium citrate, ferrous sulfate, sodium
+chloride, organic acids, and the aluminium-suppression additives — are set out in
+[](#ion-adsorption-clay-leaching-the-gentle-approach).
+
+What concerns this chapter is what happens to the ammonium afterwards, and the
+answer is that it stays. The exchange that liberates the rare earths necessarily
+loads the clay with NH₄⁺ in their place, and that ammonium is held by the same
+weak electrostatic mechanism that held the rare earths — which is to say, it comes
+off again with the next rainfall. In in-situ mining the loaded clay is left in
+the ground, in an unlined aquifer, in a wet subtropical climate. The mechanism
+that makes the deposit cheap to mine is the mechanism that makes it impossible to
+decontaminate.
+
+### Choosing the salt on thermodynamic grounds
+
+There is a second, less obvious cost to ammonium, and it shows up in a purely
+thermodynamic screening study. @mohamadsobri2025enhancing computed Eh-pH
+(Pourbaix) stability fields for La, Nd and Y in three sulfate lixiviants using HSC
+Chemistry 10.0, across 0.05-0.6 M and 25-80 °C, asking a narrow question: which
+conditions keep the liberated rare earth in solution as REE³⁺ rather than
+complexed or precipitated? The answer separates the three reagents cleanly.
+
+| Lixiviant | Behaviour across 0.05-0.6 M at 25 °C | Verdict |
 |----|----|----|
-| (NH4)2SO4 | Good when dilute; \>\~0.25-0.3 M, nitrate from nitrification forms LaNO3(2+)/NdNO3(2+) | Degrades |
-| MgSO4 | Maximum stability for La, Nd, Y at **all** 0.05-0.6 M; no unwanted species | **Best** |
-| Al2(SO4)3 | SO4(2-) forms LaSO4+ and hydrated Nd2(SO4)3.8H2O | Degrades |
+| (NH₄)₂SO₄ | La³⁺ maximally stable only to 0.25 M; at 0.3 M and above, nitrate from nitrification of the ammonium forms LaNO₃²⁺. Nd³⁺ maximally stable only at 0.05 M, forming NdNO₃²⁺ from 0.1 M upward. Y³⁺ stable across the whole range | Degrades with dose |
+| MgSO₄ | La³⁺, Nd³⁺ and Y³⁺ maximally stable at every concentration tested, with no unwanted species formed | Best |
+| Al₂(SO₄)₃ | Sulfate complexes La³⁺ to LaSO₄⁺ and precipitates Nd as Nd₂(SO₄)₃·8H₂O, both regions expanding with concentration. Y³⁺ unaffected | Degrades with dose |
 
-Stability falls as temperature rises (25 -\> 80 degrees C), so ambient leaching is optimal; the REE3+ stability order is La \> Nd \> Y, with acidic windows La (pH 0-5.8), Nd (0-5), Y (0-4.2). The modeled MgSO4-at-ambient conclusion agrees with experiment [@pan2024insights], which is what lends the screening credibility. **Limitation**: single element, single solvent, no impurities, no kinetics -- a prediction tool, not validation.
+The ammonium result is the interesting one, because the species that spoils it is
+not ammonium at all. It is nitrate — produced by nitrifying bacteria oxidising the
+NH₄⁺ that the leach put into the ground — and it complexes the light rare earths
+out of the ionic form the process needs. The nitrogen pollution and a loss of
+process yield are the same phenomenon seen from two directions. Note also that the
+threshold is element-dependent and much lower for neodymium than for lanthanum,
+which is not what a single "safe concentration" rule of thumb would suggest.
 
-### Reagent substitution and impurity control
+The stability windows are acidic and element-specific — La from pH 0 to 5.8, Nd
+from 0 to 5, Y from 0 to 4.2, in all three lixiviants — and stability falls as
+temperature rises from 25 to 80 °C, so ambient leaching is thermodynamically
+optimal as well as cheap [@mohamadsobri2025enhancing]. The screening's credibility
+rests on agreeing with experiments it did not perform, and the study its authors
+take as the confirmation is Chen and co-workers, who leached a low-grade
+weathered-crust ore with MgSO₄ to 75.48 % extraction in a single stage and up to
+96.19 % after a second stage — slightly better than ammonium sulfate achieved on
+the same ore — with cerium the worst-leaching element [@chen2018leaching].
 
-The field is actively moving off ammonium sulfate. Magnesium sulfate gives comparable recovery with far less nitrogen pollution [@pan2024insights]; changing the leaching anion rather than its dose recovers rare earths well at much lower ammonium concentrations, because in ammonium citrate both ions take part in the exchange while sulfate does not [@shi2022column]; and selective inhibitors (e.g., HMTA) suppress aluminum co-dissolution to cut the downstream impurity burden [@he2025stepwise]. "Ammonium-free extraction" and whole-process precipitation are explicit research directions for "green efficient development" [@luo2022development].
+The limitation of the screening should be stated as plainly as the result. It
+treats one element and one solvent at a time, with no impurities and no kinetics.
+It cannot tell you what aluminium does, and aluminium is the impurity that
+actually decides the downstream burden. It is a tool for narrowing a reagent list
+before an experiment, not a substitute for one.
 
-### Clay ion exchange as a separation technology
+### Nitrogen in the watershed
 
-Beyond primary leaching, clay/IX can act as a **separation** unit operation. Its competitiveness depends entirely on the job:
+The pollution is real and measurable at catchment scale. A coupled SWAT-WASP
+hydrological and water-quality model of the upper Dongjiang River Basin,
+calibrated and validated against 2016-2018 monthly monitoring, simulated ammonia
+nitrogen concentrations above 1.8 mg/L near mining zones against below 0.5 mg/L in
+upstream natural areas [@wu2026swat]. Ammonia nitrogen is described there as the
+dominant water pollutant of ionic rare earth mining basins, and the spatial
+signature is unambiguous even though the model attributes the largest single share
+of the variance to population density combined with industrial and agricultural
+activity rather than to mining alone.
 
-- **Group separation / preconcentration** (pull REE-as-a-block out of a dilute, dirty stream; reject Na/K/Ca/Mg/Al/Fe): driven by **charge** selectivity -- strong. Natural clays are explicitly proposed as adsorbents/recovery media for REE from solution [@alshameri2019understanding].
-- **Individual-element separation** (resolve adjacent lanthanides): bare clay is intrinsically weak (adjacent {index}`separation factors <separation factor>` \~1.0-1.3 vs \~1.5-4 per stage for tailored solvent-extraction reagents). Adjacent selectivity must be **imported** -- from surface-complexation sites [@wu2023rare] a complexing eluent, or a grafted ligand.
-
-The proof-of-concept is the orebody itself: the regolith is vertically fractionated (LREE/HREE zonation, Ce anomalies) by clay loading plus carbonate-complexing groundwater acting as a mobile phase -- clay ion-exchange {index}`chromatography` run over geologic time [@zhou2020genesis]. Feasibility is settled; throughput and control are the engineering questions.
-
-A scorecard versus solvent extraction (SX):
-
-| Task | Clay / ion exchange | Solvent extraction |
-|----|----|----|
-| Adjacent-element purity at scale | weak (needs ligand) | **incumbent** |
-| Group / matrix separation | **strong** | moderate |
-| Dilute feeds (mine water, recycle, ash) | **strong** | weak |
-| Preconcentration | **strong** | weak |
-| HSE footprint (no diluent/crud/VOC) | **strong** | weak |
-| Throughput, bulk individual separation | weak (unless SMB) | **strong** |
-| Capacity / kinetics | clay-dependent | strong |
-
-(clay-research-opportunities)=
-## Research opportunities
-
-1.  **Clay as a preconcentrator ahead of SX (strongest near-term).** Load dilute leachate, reject monovalent/divalent matrix ions by charge selectivity, strip a 10-100x concentrated, de-salted REE eluate into a much smaller SX plant or direct precipitation. Directly attacks the dilute, high-volume penalty [@alshameri2019understanding; @moldoveanu2016overview].
-2.  **LREE/HREE rough cut.** Exploit the surface-complexation HREE-over-LREE enrichment [@wu2023rare] for a binary roughing split -- apt because IAC feeds are already HREE-enriched.
-3.  **Functionalized clay = extraction chromatography on a cheap support.** Graft an SX-grade ligand (phosphonic acid; a {index}`diglycolamide` such as {index}`TODGA`/DMDODGA) onto clay to combine "the selectivity of SX with the convenience of column IX." This is demonstrated on porous supports with diglycolamide extractants as a cleaner alternative to liquid-liquid SX [@momen2019extraction]; clay is the cheap, benign support variant.
-4.  **Continuous chromatography (simulated moving bed).** Batch single-column operation is what costs chromatography its throughput; SMB makes it {index}`counter-current <countercurrent cascade>` and continuous (as it is industrially for sugars and enantiomers). A title search of the REE literature for "simulated moving bed" returns essentially nothing -- a genuine white space.
-5.  **Synthetic / engineered clay analogues.** Technically feasible (synthetic smectites, pillared clays, LDHs have high exchange capacity), but the value of a natural **deposit** is the geologic pre-concentration onto already-mined regolith [@zhou2020genesis]; synthesizing and then loading from a dilute stream inverts that economy. The realistic role is selective **polishing/concentration** of leachates and effluents, not a synthetic orebody.
-6.  **Experimental validation of thermodynamic screening.** Extend Pourbaix-style models to multi-element, impurity-bearing systems with kinetics, and validate against column data [@mohamadsobri2025enhancing].
-7.  **Measured separation factors** on smectite/vermiculite vs kaolinite, and how far edge-site density, pH, and ionic strength can push adjacent-REE selectivity [@wu2023rare].
-
-## Environmental implications
-
-### Ammonia-nitrogen pollution (the headline issue)
-
-In-situ ammonium-sulfate leaching discharges ammonia-nitrogen into groundwater and surface water -- the dominant environmental liability of Chinese IAC mining. This is the principal driver of the move to magnesium-sulfate and ammonium-free leaching [@pan2024insights; @luo2022development], and, short of leaving ammonium behind altogether, of redesigning the ammonium salt so that less of it is needed [@shi2022column].
+What a residual process-ammonia inventory costs when it is fully accounted for is
+better shown outside rare earths altogether.
 
 #### Precedent: ammonia at the Moab UMTRA site
 
-A sobering precedent for what residual process ammonia costs comes from uranium, not rare earths. The Moab uranium mill tailings pile near Moab, Utah -- roughly 16 million tons of tailings on the bank of the Colorado River, left by the former Atlas Minerals mill -- is being remediated by the U.S. Department of Energy under the Uranium Mill Tailings Radiation Control Act [@doe2025moaboverview]. Its two main **groundwater** contaminants of concern are **ammonia and uranium**, and ammonia is the driver of the active groundwater remediation: elevated ammonia in the backwater channels beside the pile is toxic to young-of-year endangered fish [@doe2025moaboverview], among them the razorback sucker and Colorado pikeminnow, for which measured chronic values for un-ionized ammonia lie below the concentrations found in those backwaters [@fairchild2005chronic]. Since 2003 DOE has run a groundwater interim action -- currently eight extraction wells plus more than thirty freshwater injection wells that dilute what still reaches the river -- and reports that it has kept roughly **1.0 million pounds of ammonia** and about **5,800 pounds of uranium** out of the Colorado, ammonia outweighing uranium by some **170-fold** [@doe2025moabgroundwater; @doe2025moaboverview].
+The Moab uranium mill tailings pile in Utah — some 12 million cubic yards, about
+16 million tons, of tailings on the bank of the Colorado River, left by the former
+Atlas Minerals mill and now being relocated by the U.S. Department of Energy under
+the Uranium Mill Tailings Radiation Control Act — has two contaminants driving its
+groundwater programme, and only one of them is uranium [@doe2025moaboverview].
+The tailings were pumped to an unlined impoundment, and excess water in the pile
+drained through the underlying soils into the aquifer for decades. Ammonia is what
+drives the active remediation: elevated ammonia in the backwater channels beside
+the pile threatens young-of-year endangered fish [@doe2025moaboverview], among them
+the razorback sucker and Colorado pikeminnow, whose measured chronic values for
+un-ionized ammonia lie below the concentrations found in those backwaters
+[@fairchild2005chronic].
 
-The ammonia is **process** ammonia: the tailings pile and the former mill area are DOE's identified sources of ammonia to soil and groundwater, and it has leached from the pile into the aquifer for decades [@doe2025moaboverview] -- the same root cause as ammonium-sulfate REE leaching, differing only in unit operation (milling vs leaching). If anything the REE case is harder to contain: Moab is a **point source** (one pile) that can be ringed with extraction wells, whereas in-situ REE leaching injects ammonium **directly into a hillside aquifer over large areas** with no engineered liner. Moab is thus the multi-decade, million-pound, still-pumping illustration of the bill that ammonium hydrometallurgy can incur, and a concrete argument for the magnesium-sulfate / ammonium-free direction [@pan2024insights; @luo2022development; @mohamadsobri2025enhancing].
+Since 2003 DOE has run a groundwater interim action — now eight extraction wells
+and more than thirty freshwater injection wells that dilute what still reaches the
+river [@doe2025moaboverview]. Over the life of the project it has extracted
+288.5 million gallons of groundwater and reports keeping **1,002,109 pounds of
+ammonia** and **5,816 pounds of uranium** out of the Colorado
+[@doe2025moabgroundwater]. Ammonia outweighs uranium in that ledger by a factor of
+about 170. The tailings removal is currently estimated to finish in 2029, more
+than a quarter century after the pumping started [@doe2025moaboverview].
 
-### Landscape destruction and slope failure
+The analogy to rare earth leaching is exact in cause and unfavourable in
+geometry. Both are process ammonia introduced by a hydrometallurgical operation
+and left in contact with an aquifer. But Moab is a *point* source — one pile,
+which can be ringed with extraction wells and eventually dug up and moved — whereas
+in-situ rare earth leaching injects ammonium directly into a hillside aquifer over
+a large area with no engineered liner and nothing to relocate. Moab is the
+multi-decade, million-pound, still-pumping illustration of the bill that ammonium
+hydrometallurgy can incur, and it is the most concrete argument available for the
+magnesium-sulfate and ammonium-free direction [@xiao2015leaching; @pan2024insights;
+@luo2022development].
 
-Excavation and in-situ leaching of weathered regolith cause deforestation, soil loss, and landslide risk; in-situ operations suffer uneven contacting and seepage/mass-transfer limits in low-permeability regolith, leaving REE behind and solution uncontrolled [@luo2022development].
+## Recovering the Rare Earths from a Very Dilute Liquor
 
-### Reagent, energy, and yield footprint
+The pregnant leach solution from an ion-adsorption operation is roughly two orders
+of magnitude more dilute than an acid leach liquor — the arithmetic is worked in
+[](#ion-adsorption-clay-leaching-the-gentle-approach) — and concentrating it is
+the one genuinely hard unit operation the route contains. Precipitation with
+oxalic acid or ammonium bicarbonate and direct solvent extraction of the pregnant
+solution are both used; those are treated as unit operations in the leaching
+chapter [@han2024efficient; @liu2017enrichment].
 
-Dilute, high-volume hydrometallurgy means large reagent and water inventories. Choosing reagent/pH/temperature to keep REE soluble (MgSO4, ambient, acidic) reduces precipitation yield losses and avoids the energy of external heating [@mohamadsobri2025enhancing]. Reagent recovery/recycle (ammonium or magnesium sulfate) and leachate recirculation onto fresh ore are central to both cost and pollution [@moldoveanu2016overview; @luo2022development].
+What belongs here is the deposit-level lever, which is that liquor concentration
+and extraction efficiency trade directly against one another and the trade can be
+made deliberately. Moldoveanu and Papangelakis tested three ways of raising the
+rare earth concentration in the leachate — decreasing the liquid-to-solid ratio,
+re-using leachate on fresh ore, and counter-current leaching — and all three
+worked, all three at the expense of the extraction level achieved
+[@moldoveanu2016overview]. A plant can have a strong liquor or a high recovery
+and must choose, and the right choice depends on whether the cost driver
+downstream is solution volume or metal loss. This is the same argument that
+justifies the closed lixiviant loop in the heap trial above [@meng2023heap]: the
+reagent is only cheap the first time through.
 
-### Spent clay residue: reuse vs landfill (the recyclability question)
+The same study turns up a loss that flowsheets routinely omit. The water trapped
+in the leached solid contains significant quantities of both rare earths and
+residual lixiviant, and the residue therefore needs thorough washing
+[@moldoveanu2016overview]. In a heap that is an extra wash stage and a recoverable
+loss. In an in-situ operation, where the leached solid is the hillside, it is
+neither: the entrained liquor stays in the ground, and it is both the metal that
+was not recovered and the ammonium that will later appear in a stream.
 
-After leaching, the kaolinite/halloysite substrate survives intact (REE merely desorbs) -- it becomes depleted regolith, not a closed-loop recycled material. Its fate splits between **landfill** and **beneficial reuse** (land reclamation/ revegetation, construction fill, geopolymer/ceramic feedstock), and residue valorization is part of the green-development agenda [@luo2022development]. **If landfill dominates, the environmental case weakens markedly**, and which fate prevails in practice is poorly documented -- the most decision-relevant open question about these deposits, and the one with the thinnest published evidence behind it. By contrast, true REE **circularity** comes from end-products ({index}`NdFeB` magnets, phosphors, e-waste) via urban mining, a separate stream.
+## Clay Ion Exchange as a Separation Technology
 
-### Spent-clay valorization routes
+The forward-looking question about these deposits is whether the clay itself,
+which is doing an excellent job of holding rare earths out of a very dilute
+aqueous stream, could be used as a separation medium rather than merely as an
+orebody. The answer depends entirely on which separation is meant, and the two
+cases point in opposite directions.
 
-Because the spent clay is essentially a depleted aluminosilicate (kaolinite/ halloysite plus quartz), it is chemically similar to ordinary construction-clay feedstocks, and several beneficial-reuse routes have been demonstrated at lab/ pilot scale:
+For **group separation and preconcentration** — pulling the rare earths out as a
+block from a dilute, dirty stream while rejecting sodium, potassium, calcium,
+magnesium, aluminium and iron — the selectivity required is charge selectivity,
+and clay has it in abundance. Natural clay minerals have been characterised
+explicitly as adsorbents and as an alternative recovery medium for rare earths
+from solution, with the operative parameters mapped [@alshameri2019understanding].
+This is the mechanism the orebody already demonstrates at industrial scale.
 
-- **Geopolymer / alkali-activated binder (cement-like)** -- the best-developed route. Ion-adsorption REE tailings have been alkali-activated into geopolymer binders [@zhang2022ion], and the same alkali-activation chemistry has been applied to rare earth tailings more broadly [@hu2020synthesis]. Notably, the motivation is as much **heavy-metal immobilization** as construction: the geopolymer locks contaminants into the matrix, so it doubles as waste stabilization. (This is effectively the metakaolin/pozzolan chemistry -- calcined kaolinite as a supplementary cementitious material.)
-- **Glass-ceramics** -- rare earth tailings (demonstrated on hard-rock mill tailings rather than on leached clay) crystallized into glass-ceramics for building and decorative use [@zhao2010utilization].
-- **Zeolite synthesis** -- the aluminosilicate residue converted to high-crystallinity Zeolite A, which then adsorbs pollutants in the mine's own water -- a closed-loop, treat-your-own-waste reuse [@cheng2024synthesis].
+For **individual-element separation** — resolving adjacent lanthanides — bare clay
+is intrinsically weak, and the reason is the mechanism split of the previous
+section: the dominant outer-sphere exchange cannot fractionate at all
+[@wu2023rare]. No measured adjacent-pair separation factor for clay could be
+verified for this chapter, and none is asserted; the qualitative statement that
+the dominant mechanism does not fractionate is what the literature supports, and
+it is sufficient to rule the approach out in its bare form. Adjacent selectivity
+would have to be imported — from the minority surface-complexation sites, from a
+complexing eluent, or from a ligand grafted onto the clay.
 
-Two routes that **do not** fit, despite the obvious analogy:
+The existence proof for the clay-as-chromatography idea is the orebody itself.
+Regolith profiles are vertically fractionated, with light/heavy zonation and
+cerium anomalies, produced by clay loading against carbonate-complexing
+groundwater acting as a mobile phase [@zhou2020genesis]. That is ion-exchange
+{index}`chromatography` run over geologic time on a column kilometres wide. The
+feasibility question is settled; throughput and control are the engineering
+questions, and geologic time is not an available residence time.
 
-- **Asphalt**: clays are generally avoided as asphalt filler -- they are moisture-sensitive and promote stripping (binder-aggregate debonding).
-- **Drywall**: drywall is gypsum (CaSO4.2H2O); the only link is the gypsum **byproduct** of sulfate leaching, not the clay residue itself.
+Set against solvent extraction, then, clay ion exchange is strong exactly where
+solvent extraction is weak and weak exactly where it is strong. Solvent extraction
+is the incumbent for adjacent-element purity at scale and for bulk throughput, and
+nothing about clay threatens that. Clay's advantages are group and matrix
+separation, dilute feeds of the kind that make an extraction circuit uneconomic —
+mine water, recycle streams, ash leachates — and the absence of a diluent, a crud
+layer or a volatile organic inventory. Those are complementary strengths, which
+argues for clay ahead of a solvent-extraction plant rather than instead of one.
 
-The decisive practical caveat: the dominant modern method is **in-situ** leaching, in which the clay is never excavated -- so for those operations there is no solid residue stream to send to a kiln, and the real residue question is in-place **land reclamation and revegetation** [@liu2022biogeochemical]. Reusable tailings exist mainly for older heap/tank (excavated) operations, and even then residual reagent, Al, and occasional radioactivity must be managed, while low-value bulk materials do not travel far from remote mining regions. Net: valorization is real and locally attractive (especially for waste stabilization), but it is not yet a mainstream fate, and in-situ mining structurally limits how much residue is ever collectable.
+(clay-research-opportunities)=
+## Research Opportunities
 
-### Net assessment
+**Clay as a preconcentrator ahead of solvent extraction.** This is the strongest
+near-term opportunity and the one that follows most directly from the mechanism.
+Load a dilute leachate onto clay, reject the monovalent and divalent matrix ions
+on charge selectivity, and strip a concentrated, de-salted rare earth eluate into a
+much smaller extraction plant or straight into precipitation
+[@alshameri2019understanding; @moldoveanu2016overview]. It attacks the dilute,
+high-volume penalty at its source rather than downstream of it. What is missing is
+a demonstrated loading and stripping cycle with a measured concentration factor;
+none could be verified here, and none is claimed.
 
-IAC are environmentally double-edged: extraction chemistry is mild (no roasting, no strong acid, low radioactivity), but the **process** footprint -- nitrogen pollution, landscape damage, dilute effluents, and a large residue stream -- is substantial. The research frontier (MgSO4/ammonium-free leaching, impurity control, preconcentration, residue valorization) is largely an effort to keep the mild chemistry while shrinking that footprint.
+**A light/heavy rough cut on the fractionating mechanism.** The surface-complexation
+sites enrich heavies over lights [@wu2023rare]. A binary roughing split exploiting
+that would be well matched to ion-adsorption feeds, which are already heavy-enriched,
+and a rough cut does not need the stage selectivity that a pure product needs.
+
+**Functionalised clay as extraction chromatography on a cheap support.** Grafting a
+solvent-extraction-grade ligand — a phosphonic acid, or a {index}`diglycolamide`
+such as {index}`TODGA` — onto clay would combine the selectivity of solvent
+extraction with the convenience of a column. The approach is demonstrated on
+porous supports with diglycolamide extractants, explicitly as a cleaner
+alternative to liquid-liquid contacting [@momen2019extraction]; clay would be the
+cheap and benign support variant, and the open questions are ligand loading,
+attachment chemistry and cycle life rather than feasibility in principle.
+
+**Continuous chromatography.** Batch single-column operation is what costs
+chromatography its throughput, and simulated moving bed (SMB) operation is the
+standard industrial answer — it is how sugars and enantiomers are separated at
+scale. Applied to lanthanides it is nearly untried: a title search of the
+literature returns two studies, both from the same group and both on resins rather
+than clays, modelling SMB separation of lanthanides on a tertiary pyridine resin
+and on Reillex HPQ, with the former predicting 118 g of solute per litre of resin
+per day at 99.5 % purity for a neodymium-samarium pair
+[@sreedhar2014evaluation; @sreedhar2014simulated]. Neither addresses a clay
+stationary phase or an ion-adsorption feed. That is a genuine white space, and it
+is adjacent to
+{index}`counter-current <countercurrent cascade>` practice the field already knows.
+
+**Synthetic and engineered clay analogues.** Synthetic smectites, pillared clays
+and layered double hydroxides all have high exchange capacity, so the materials
+question is not in doubt. The economic question is, because the value of a natural
+deposit is precisely the geologic pre-concentration that put the rare earths onto
+already-weathered rock for free [@zhou2020genesis]. Synthesising a sorbent and then
+loading it from a dilute stream inverts that economy. The realistic role for
+engineered sorbents is polishing and concentrating leachates and effluents, not
+substituting for an orebody.
+
+**Multi-element thermodynamic screening with kinetics.** Extending Pourbaix-style
+modelling to multi-element, impurity-bearing systems with rate information, and
+validating it against column data, would turn a reagent-narrowing exercise into a
+design tool [@mohamadsobri2025enhancing]. The aluminium behaviour is the specific
+gap: it is the impurity that governs the downstream purification burden, and the
+current screening does not include it.
+
+**Measured selectivity data.** Adjacent-pair separation factors on smectite and
+vermiculite against kaolinite, as a function of edge-site density, pH and ionic
+strength, would establish how far the fractionating mechanism can be pushed
+[@wu2023rare]. At present the question cannot be answered quantitatively from the
+published literature, which is itself the reason it is worth doing.
+
+## The Residue Question
+
+After leaching, the kaolinite and halloysite substrate is still there. The rare
+earths desorbed; the clay did not dissolve. What is left is depleted regolith,
+loaded with residual lixiviant cations, and the honest description of it is a
+waste stream rather than a recycled material — true rare earth circularity comes
+from end-of-life magnets, phosphors and electronic scrap
+([](#recycling-and-urban-mining)), which is a different stream entirely.
+
+The residue is not inert. Column and batch leaching experiments on tailings from
+an ion-adsorption mining area found manganese, zinc and lead at 431.67, 155.05
+and 264.33 mg/kg respectively, several times their local background values, with
+manganese and lead released under rainfall at concentrations far exceeding
+environmental limits and migrating into adjacent paddy soil. Ammonia nitrogen was
+identified, alongside chemical speciation, rainfall pH and mineral properties, as
+one of the primary controls on that release [@tian2024leaching]. The residual
+ammonium is therefore not only a pollutant in its own right; it mobilises other
+things.
+
+### Valorisation routes that work
+
+The spent clay is a depleted aluminosilicate — kaolinite and halloysite plus
+quartz — and therefore chemically close to ordinary construction-clay feedstocks.
+Three reuse routes have been demonstrated at laboratory or pilot scale, and in
+most of them the motivation is not the construction value.
+
+The best developed is **alkali activation into a geopolymer binder**.
+Ion-adsorption rare earth tailings have been alkali-activated into geopolymers
+[@zhang2022ion], and the same chemistry has been applied to rare earth tailings
+more broadly [@hu2020synthesis]. In both cases the stated motivation is heavy-metal
+immobilisation as much as construction: the geopolymer locks contaminants into its
+matrix, so the route doubles as waste stabilisation. Given what
+@tian2024leaching measured coming out of these tailings under rainfall, that is
+the more valuable of the two functions. **Glass-ceramics** for building and
+decorative use have been produced from rare earth tailings, though on hard-rock
+mill tailings rather than on leached clay [@zhao2010utilization]. And the
+aluminosilicate residue has been converted to high-crystallinity **Zeolite A**,
+which then adsorbs pollutants in the mine's own water — a closed loop in which the
+waste treats the waste [@cheng2024synthesis].
+
+Two analogies that suggest themselves do not survive inspection. Clays are
+generally avoided as **asphalt** filler because they are moisture-sensitive and
+promote stripping at the binder-aggregate interface. And **drywall** is gypsum,
+CaSO₄·2H₂O; the only connection to this flowsheet is the gypsum byproduct of
+sulfate neutralisation, not the clay residue.
+
+### In-situ mining leaves nothing to valorise
+
+The decisive practical objection is structural. In the dominant modern method the
+clay is never excavated, so there is no solid residue stream to send anywhere.
+For those operations the residue question is not valorisation but in-place land
+reclamation and revegetation, which is a soil-science and agronomy problem —
+restoring nutrient cycling and plant cover on a substrate stripped of its
+exchangeable cations and loaded with ammonium and aluminium
+[@liu2022biogeochemical]. Collectable tailings exist mainly at older excavated
+operations, and even there the residual reagent and aluminium have to be managed,
+while low-value bulk construction materials do not travel far from remote mining
+regions.
+
+The net position is that valorisation is real, locally attractive, and most
+valuable for its stabilisation function rather than its product value — but it is
+not a mainstream fate, and in-situ mining structurally limits how much residue is
+ever collectable in the first place. Which fate actually dominates in practice is
+poorly documented. It is the most decision-relevant open question about these
+deposits and the one with the thinnest published evidence behind it, and this
+chapter cannot resolve it.
+
+## Net Assessment
+
+Ion-adsorption clays are environmentally double-edged in a way that resists
+summary. The extraction chemistry is the mildest in this book: no roasting, no
+strong acid, no fluorine, no thorium programme, ambient temperature, and a 90-95 %
+REO concentrate out of a 0.1 % ore in a single selective contacting step
+[@iaea2011radiation]. Against that, the *process* footprint is large and diffuse —
+nitrogen in the groundwater, permeability loss and uneven recovery underground,
+slope deformation, hundreds of tonnes of disturbed regolith per tonne of product,
+and a residue stream whose fate is undocumented.
+
+The whole research frontier is an attempt to keep the first while shrinking the
+second: magnesium sulfate and ammonium-free lixiviants, aluminium suppression,
+closed reagent loops, preconcentration ahead of solvent extraction, and residue
+stabilisation. What makes that frontier tractable is that none of the difficulties
+are chemical. They are containment, transport and land-use problems attached to a
+chemistry that already works.
