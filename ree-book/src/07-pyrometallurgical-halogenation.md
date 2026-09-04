@@ -506,6 +506,16 @@ reduction [@holcombe2024sustainable]. The eutectic melts below 400 °C, so the
 cell runs several hundred degrees cooler than the fluoride pot and can be built
 from cheaper materials.
 
+That temperature gap decides what form the product comes out in. Neodymium
+metal melts at 1,021 °C [@goodfellow2026neodymium], so the oxide-fluoride pot
+near 1,050 °C operates just above the melting point of the metal it is making
+and the chloride cell operates hundreds of degrees below it: one produces
+neodymium as a liquid, the other as a solid deposit on the cathode. That is a
+difference in the harvesting step downstream, not a defect in either cell. In
+both cases the atmosphere is not optional — neodymium oxidises rapidly in air
+above about 150 °C, so the metal has to be kept under argon or vacuum from the
+cell onward.
+
 The chloride cell is not free of problems. Chlorine at temperature is corrosive
 to everything, RECl₃ salts are hygroscopic enough that moisture ingress
 hydrolyses the melt to oxychloride, and the demonstrated cells are laboratory

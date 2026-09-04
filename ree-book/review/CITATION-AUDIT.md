@@ -423,3 +423,67 @@ extraction — are named in a short subsection that says plainly that the book
 takes no figures from them and that a reader who needs their numbers should go
 to the papers. That is the honest treatment for a paper whose existence is
 verified and whose content is not.
+
+### A supplied reading list, checked before use
+
+Thirteen references were supplied for ingestion after the chapters were
+written. Checking them against CrossRef, OSTI, OpenLibrary and the deposited
+full texts before citing any of them turned up four discrepancies, three of
+them in the supplied list and one already sitting in `references.bib`.
+
+**Eight were already in the bibliography** and already cited: `klise2019parmest`,
+`xie2014critical`, `jha2016hydrometallurgical`, `lyon2017dynamic`,
+`srivastava2023design`, `turgeon2023simulation`, `lee2021idaes`, and the Lyon
+thesis discussed below.
+
+**The Lyon thesis: wrong name, wrong year, wrong degree — in both records.**
+The list gave it as "Lyon, K. L. *Separation of Adjacent Rare Earth Elements
+using Solvent Extraction*, Ph.D. Thesis, University of Idaho, 2016."
+`references.bib` held it as `lyon2015separation`, a 2015 Master's thesis by
+"Kyle L. Lyon". Neither is right. The deposited PDF at
+`objects.lib.uidaho.edu` opens on a title page reading *A Thesis Presented in
+Partial Fulfillment of the Requirements for the Degree of Master of Science …
+by Kevin L. Lyon … May 2016*. The entry is now `lyon2016separation`, author
+Kevin L. Lyon, `@mastersthesis`, 2016. The URL in the old entry was correct
+throughout, which is why nothing ever failed to resolve: the identifier was
+fine and everything a human reads was wrong.
+
+The ProQuest-style code in that filename, `0089N`, is the tell — `N` denotes a
+Master's deposit. It is not proof on its own, and it was not used as proof; the
+title page was.
+
+**The IUPAC Red Book: a DOI belonging to a different work.** The list gave
+Connelly, Damhus, Hartshorn and Hughes, *Nomenclature of Inorganic Chemistry:
+IUPAC Recommendations 2005*, RSC Publishing, with DOI
+`10.1515/pac-2014-0718`. That DOI resolves to "Brief guide to the nomenclature
+of inorganic chemistry", a 2015 *Pure and Applied Chemistry* technical report
+by Hartshorn, Hellwich, Yerin, Damhus and Hutton — eleven pages summarising the
+book, not the book. The book has no DOI; it has ISBN 978-0-85404-438-2, and
+IUPAC hosts a free PDF. Both are now in the bibliography as separate entries:
+`connelly2005nomenclature` (the book, by ISBN) and `hartshorn2015brief` (the
+report, by its DOI). The nomenclature claim added to
+`src/01-why-separation-is-hard.md` and the glossary was read out of section
+IR-3.5, page 51, of the book's own text — "lanthanoids (La … Lu), rare earth
+metals (Sc, Y and the lanthanoids)" — not out of the summary.
+
+This is the failure mode the whole audit exists for. The DOI resolves, the
+authors are plausible, four of the five names overlap between the two works,
+and the summary really is about the book. Nothing short of reading what the
+DOI returns catches it.
+
+**The DOE report: a surname read as a given name.** The list gave "Keim, S.;
+Hans, N." The OSTI record for `10.2172/1569277` gives Steven Anthony Keim and
+**Hans Naumann**, both of Marshall Miller & Associates. "Hans" is the second
+author's given name, not his surname. The entry is `keim2019production`.
+
+**The remaining four new entries.** `guo2026acidic` (`10.1016/j.mineng.2026.110270`),
+`srivastava2021modeling` (the University of Kentucky doctoral dissertation
+behind `srivastava2023design`, DOI `10.13023/etd.2021.220`, confirmed as a
+Doctoral Dissertation from the UKnowledge record), `keim2019production`, and
+`goodfellow2026neodymium` — a supplier datasheet with no DOI and no date,
+verified by fetching the page and cited only for elemental constants.
+
+**One unreachable abstract.** `guo2026acidic` is Elsevier, has no abstract in
+CrossRef, OpenAlex or Semantic Scholar, and is not open access per Unpaywall.
+It is cited for no more than its title asserts, in the same way as the five
+sources listed in the previous section.

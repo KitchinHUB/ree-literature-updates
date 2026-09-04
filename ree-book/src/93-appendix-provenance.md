@@ -327,6 +327,27 @@ Claims that survive as numbers in this book should therefore be traceable. That
 is a lower standard than *correct*, and it is the standard this book can
 honestly claim.
 
+**A later batch, and what checking it turned up.** A reading list of thirteen
+references supplied after the chapters were written was checked the same way
+before any of it was used. Eight were already in the bibliography. Of the
+remaining five, three needed correcting against the record before they could be
+cited. The Lyon thesis was supplied as a 2016 Ph.D. thesis and the bibliography
+already held it as a 2015 Master's thesis by "Kyle" Lyon; the title page of the
+deposited copy settles it as a Master of Science thesis by *Kevin* L. Lyon,
+accepted May 2016, so the entry now carries the right name, the right year and
+the right degree, and its key changed with them. The IUPAC *Nomenclature of
+Inorganic Chemistry* was supplied with DOI `10.1515/pac-2014-0718`, which
+belongs not to the book but to a 2015 *Pure and Applied Chemistry* technical
+report summarising it, by a different set of authors; both are now in the
+bibliography as separate entries, the book by ISBN and the report by its DOI,
+and the definition quoted in [](#why-rare-earths-are-hard-to-separate) was read
+out of section IR-3.5 of the book itself. The DOE final report was supplied as
+"Keim, S.; Hans, N."; the second author's name is Hans Naumann.
+
+@guo2026acidic is the one source in that batch whose abstract no route could
+reach, so it is cited for no more than its title asserts, as the recent review
+of solvent extraction from acidic media.
+
 (sources-not-synthesized)=
 ## Sources collected but not synthesized
 

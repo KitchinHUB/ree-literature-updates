@@ -51,6 +51,18 @@ The 17 rare earth elements (15 lanthanides plus {index}`scandium` and {index}`yt
 - Similar complexation behavior with common ligands
 - Requirement for extremely high purity (\>99.99%) for many applications
 
+**A note on names.** Which seventeen elements are meant is not left to
+convention. IUPAC's *Nomenclature of Inorganic Chemistry* approves
+*lanthanoids* as the collective name for the fifteen elements lanthanum through
+lutetium, and *rare earth metals* for scandium, yttrium and the lanthanoids
+together — exactly the group this book is about [@connelly2005nomenclature].
+The same recommendations prefer *lanthanoid* to the far more common
+*lanthanide*, on the grounds that an *-ide* ending normally signals a negative
+ion. This book uses *lanthanide* throughout, because that is what the
+separations literature uses and nothing in the chemistry turns on the choice.
+A short free summary of the recommendations is published as an IUPAC technical
+report [@hartshorn2015brief].
+
 (supply-chain-concerns)=
 ## Supply Chain Concerns
 China dominates the global rare earth supply chain, and it is worth being

@@ -156,6 +156,15 @@ laboratory equilibrium data as its only input. The authors used it to design a
 flowsheet producing high-purity neodymium from a 25 wt % Pr / 75 wt % Nd feed
 with PC88A, and then validated it against laboratory mixer-settlers.
 
+The M.S. thesis behind that paper [@lyon2016separation] carries the experimental
+half in more detail. Mixer-settler testing of the same PC88A chemistry showed
+that better than 99 % neodymium purity required a neodymium scrub solution and a
+twelve-stage scrubbing circuit, and the flowsheet was designed to produce
+didymium and high-purity neodymium simultaneously rather than one at the expense
+of the other. Twelve stages for scrubbing alone, on what is effectively a
+two-component feed, is a useful number to hold against the Fenske bound in
+[](#countercurrent-cascade-design).
+
 What makes the paper useful here is its account of where the agreement stops.
 Steady-state concentration profiles across the cascade were predicted
 accurately. Transient predictions deviated more, and the authors attribute the
@@ -330,6 +339,19 @@ stage counts, meanwhile, are a useful reality check against the Fenske bound in
 [](#countercurrent-cascade-design) — twenty-three stages for one clean split of a
 mixture, and this is a single train among the several a full fan-out needs.
 
+The dissertation behind that paper [@srivastava2021modeling] is the fuller
+account and states the design problem the paper then solves. Its argument is
+that McCabe-Thiele construction, which works on a binary, becomes impractical on
+a rare-earth feed precisely because so many components extract alike that there
+is no single distributing pair to draw against — and that what has to replace it
+is a modular process model assembled from separately fitted loading, scrubbing
+and stripping blocks. The experimental base is the same DEHPA-plus-TBP system,
+measured over a range of equilibrium pH values and phase ratios on a
+seven-component solution of yttrium, gadolinium, samarium, praseodymium,
+neodymium, cerium and lanthanum whose composition was taken from a rare earth
+oxide product made from a coal-based source. That feed is what connects this
+work to the section below.
+
 ### Integrated Flowsheets from Coal Refuse
 
 @honaker2018conception assembled an integrated flowsheet for recovering rare
@@ -343,6 +365,21 @@ baseline the optimization work is trying to improve on, and because the
 feedstock it addresses is the one
 [](#recycling-and-urban-mining) and [](#the-industrial-landscape) treat as the
 most credible non-Chinese source of heavy rare earths.
+
+What that ambition costs to test is recorded in the final technical report of
+the Minerals Refining and Rare Earth Consortium [@keim2019production]. The DOE
+award, under the 2016 solicitation *Production of Rare Earth Elements from
+Domestic U.S. Coal and Coal By-Products*, was to design and build a
+demonstration plant yielding at least three individual rare earths at 90-99 %
+purity and more than ten pounds a day of composite product as oxides, alongside
+premium solid fuels and magnetite to carry the economics. Over the project the
+feedstock moved from a Lower Kittanning coal in West Virginia to Fire Clay seam
+rejects in Kentucky, and the report states plainly that none of the efforts
+produced an economically viable venture: the principals elected not to move to a
+pilot plant and did not request funding for one. It is the counterweight to
+every flowsheet in this chapter that ends at a converged solution. The model can
+close and the project can still not be worth building, and the reason is almost
+never the solvent-extraction train.
 
 ### Surrogate Models for the Leach
 

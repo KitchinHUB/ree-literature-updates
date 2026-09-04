@@ -32,6 +32,12 @@ ask: why kerosene and not something else, what the salting-out agents are
 doing there, and where the extractant goes over the course of a cycle (it stays
 in the organic phase — better than 99.99% of it).
 
+Two reviews cover the same ground at greater length. @xie2014critical is the
+critical review of rare earth solvent extraction and is cited throughout this
+chapter; @guo2026acidic is the recent one, aimed specifically at extraction from
+acidic media and organised around mechanism, process control and outlook
+together.
+
 ## Aqueous Phase Composition and Additives
 ### Role of pH Control
 pH is the **primary control variable** in REE solvent extraction [@xie2014critical]. The extraction mechanism for acidic extractants ({index}`D2EHPA`, {index}`PC88A`) involves exchange of H⁺ for REE³⁺:

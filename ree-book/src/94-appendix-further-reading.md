@@ -55,7 +55,14 @@ the natural companion to [](#solvent-extraction-fundamentals).
 @li2019development is the one to read after it: it traces the development of
 the acidic phosphorus extractants — D2EHPA, PC88A, Cyanex 272 — as a historical
 argument rather than a list, which is the best way to understand why the
-industry settled where it did.
+industry settled where it did. @guo2026acidic is the recent addition, narrower
+than @xie2014critical in that it takes acidic media as its subject, and broader
+in that it puts mechanism and process control in the same frame.
+
+For process modelling of the cascade rather than chemistry within it, the two
+theses are better starting points than the papers drawn from them:
+@lyon2016separation on a Pr/Nd flowsheet with PC88A, and @srivastava2021modeling
+on designing a multi-component train when McCabe-Thiele no longer applies.
 
 For ion exchange, which this book covers only in outline,
 @elouardi2023progress is the recent survey.
@@ -157,6 +164,10 @@ production together -- and the fastest way to see the shape of the field and
 where its attention has gone.
 
 ## Reference works
+
+@connelly2005nomenclature — the IUPAC "Red Book" — is the authority on what the
+group is called and which elements are in it; it is freely available and worth
+having to hand for the lanthanoid/lanthanide question if nothing else.
 
 @habashi1997handbook and @gupta2003chemical are the extractive-metallurgy
 reference works. Neither is about rare earths specifically, and both are the

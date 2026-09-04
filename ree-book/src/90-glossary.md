@@ -281,6 +281,15 @@ lanthanide contraction
   built on them ([](#precipitation-and-selective-crystallization)) are the
   sharpest in industrial use precisely because they do not depend on radius.
 
+lanthanoid
+: IUPAC's preferred collective name for the fifteen elements lanthanum through
+  lutetium, on the grounds that the *-ide* ending of *lanthanide* normally
+  signals a negative ion [@connelly2005nomenclature]. The same recommendations
+  approve *rare earth metals* as the collective name for scandium, yttrium and
+  the lanthanoids together. This book writes *lanthanide* throughout, following
+  the separations literature rather than the recommendation; nothing in the
+  chemistry turns on the choice.
+
 leaching
 : Dissolution of a target metal out of a solid into a solution. The solution
   used is the lixiviant.
@@ -408,7 +417,9 @@ raffinate
 rare earth elements (REE)
 : The fifteen lanthanides plus scandium and yttrium. Yttrium is included
   because its ionic radius places it among the heavy lanthanides
-  chemically, and it separates alongside them.
+  chemically, and it separates alongside them. The grouping is not informal:
+  *rare earth metals* is the IUPAC-approved collective name for exactly these
+  seventeen [@connelly2005nomenclature]. See {term}`lanthanoid`.
 
 roasting
 : Heating an ore or concentrate in a controlled atmosphere to convert minerals
