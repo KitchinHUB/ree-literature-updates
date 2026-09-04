@@ -675,9 +675,12 @@ not transferable.
 - **Enthalpy-driven extraction** for Am(III) and U(VI), with the entropy term
   working against extraction [@ansari2006extraction]
 - **Both enthalpy and entropy favorable** for Pu(IV) [@ansari2006extraction]
-- Complexation shows **negative ΔH with positive ΔS** - driven by both factors
+- The **temperature dependence of TODGA extraction is acid-specific** — Am(III),
+  Eu(III) and Lu(III) were studied across mineral acid media for exactly that
+  reason [@sharov2024specific] — so a ΔH measured in one acid should not be
+  carried across to another
 
-**References:** [@ansari2011chemistry; @sharov2024specific]
+**Reference:** [@ansari2011chemistry] is the general review of DGA chemistry.
 
 #### Ionic Liquid Systems
 Lanthanide extraction into **Bumim·Tf₂N** with HTTA:
@@ -692,7 +695,10 @@ Lanthanide extraction into **Bumim·Tf₂N** with HTTA:
 
 Key insight: **Endothermic complexation** driven by **favorable entropy** in ionic liquid media.
 
-**Reference:** [@gujar2023complexation]
+**Reference:** [@gujar2023complexation]. The four species, the endothermic sign
+convention and the ionic-liquid medium are confirmed against the paper's
+abstract; the individual ΔH° and ΔS° values in the table above have not been
+checked against its tables, because the full text could not be reached.
 
 ### Thermodynamics of Stripping (Reverse Extraction)
 #### General Principles
@@ -721,12 +727,10 @@ MD simulations reveal:
 
 - **Water/nitrobenzene interface**: Energetic costs include interfacial deformation and co-transfer of hydration waters [@karnes2016geometric]
 - **Free energy profile**: Small local minimum (\~−5.9 kJ/mol) near interface, then monotonic increase into organic phase
-- **SCN⁻ at oil-water**: Transfer driven by **entropy increase** with minimal enthalpic contribution (different from air-water interfaces)
-
-**References:**
-
-- [@devlin2022mechanisms]
-- [@benjamin1993mechanism]
+- **SCN⁻ at oil-water**: Transfer driven by **entropy increase** with minimal enthalpic contribution (different from air-water interfaces) [@devlin2022mechanisms]
+- **Water/1,2-dichloroethane**: surface roughness and capillary distortion of the
+  interface control the crossing, and transfer is an **activated process rather
+  than a diffusive one** [@benjamin1993mechanism]
 
 #### Synergistic Extraction
 - Synergy enhances extraction by increasing **entropy of the extracted ion** (final state)

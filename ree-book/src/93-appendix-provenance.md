@@ -262,7 +262,7 @@ re-verified by hand against a primary source before a word was changed, because
 an agent's report is a lead and not a verdict, and several of those leads did
 not survive the check.
 
-Fifty-seven claims did not survive it, in four kinds. Most often the claim is
+Fifty-nine claims did not survive it, in four kinds. Most often the claim is
 simply not in the paper — a table, a number, or a mechanism attributed to a
 work that contains no such thing. Sometimes the paper is about something else
 entirely: @murase1995recovery is chemical vapour transport with AlCl₃ rather

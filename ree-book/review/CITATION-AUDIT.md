@@ -250,7 +250,7 @@ abstract, accepted manuscript, repository copy, or full PDF where one could be
 reached --- before a word was changed. Several agent findings did not survive
 that check and were discarded.
 
-Fifty-seven claims did not survive it. They fall into four kinds.
+Fifty-nine claims did not survive it. They fall into four kinds.
 
 **The claim is not in the paper at all.** The largest group, and the least
 interesting individually: a number, a table, or a mechanism attributed to a
@@ -275,7 +275,10 @@ is real and usually worth citing somewhere.
 
 **The paper says the opposite.** The most damaging kind, because the sentence
 reads as though it has support. `zhang2022driving` was cited for counterion
-release and argues against it. `dessimoz2008liquid` was cited for a mass-transfer
+release and argues against it. A DGA bullet in chapter 13 asserted "negative
+ΔH with positive ΔS, driven by both factors" and contradicted the bullet three
+lines above it, which correctly reports DGA extraction of Am(III) and U(VI) as
+enthalpy-driven with entropy opposing; neither cited work contains it. `dessimoz2008liquid` was cited for a mass-transfer
 coefficient specific to slug flow, and its headline finding is that slug and
 parallel flow give the *same* coefficient. `csiro2024minerals`, caught in stage
 three, said chlorination is at lab scale where the book had it established
