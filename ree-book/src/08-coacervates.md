@@ -63,6 +63,38 @@ Key polymer systems for coacervation include:
 
 Phase diagrams for coacervate systems typically show a two-phase region at intermediate ionic strengths, bounded by a single-phase region at very low salt (kinetically trapped precipitates) and at high salt (electrostatic screening suppresses coacervation) [@sing2020progress].
 
+That window is the whole process. [](#fig-coacervate-phase-diagram) draws it
+next to the loop it supports. Inside the window the system splits into a dense
+coacervate and a dilute supernatant at the same ionic strength — the ends of a
+horizontal tie line — and the metal goes with the dense phase. Push the salt
+concentration up past the critical value and the two ends merge: the coacervate
+redissolves and gives the metal back. One variable therefore does both jobs,
+which is what makes the cycle a cycle rather than a one-way capture.
+
+:::{figure} ../figures/08-coacervate-phase-diagram.svg
+:name: fig-coacervate-phase-diagram
+:width: 100%
+
+**(a)** where a coacervate exists, and **(b)** the loop that its existence is
+supposed to buy. **The phase boundary is schematic.** No measured binodal for
+an REE-relevant coacervate is reported in this chapter or in the sources it
+draws on, so neither axis carries values and no distance in the figure should
+be read as a number. What is taken from the literature is the topology: a
+two-phase region at intermediate ionic strength, closing at a critical salt
+concentration above which screening suppresses coacervation, and bounded below
+by a low-salt regime in which the complex is a kinetically trapped precipitate
+rather than a liquid [@sing2020progress; @spruijt2014polyelectrolyte]. Tie
+lines are horizontal because the two coexisting phases share an ionic strength.
+From the chapter: that the metal partitions into the dense phase, and that
+salt, temperature past a cloud point, or a pH change all move the system out of
+the two-phase region and release it. Drawn for illustration only: the shape of
+the dome, where the operating tie line sits on it, and how far apart the two
+coexisting compositions are. Panel (b) is the flowsheet sketched in
+[](#process-considerations); its return leg is the claim the whole approach
+rests on, since every stream in it is water. Drawn by
+`tools/figures/fig_coacervate.py`.
+:::
+
 ### Simple Coacervation
 Simple coacervation involves a single polyelectrolyte species that undergoes phase separation induced by salt, solvent, or temperature changes. This process is particularly relevant for intrinsically disordered proteins (IDPs), which can self-coacervate due to their unique charge patterns and low-complexity sequences [@uversky2015intrinsically].
 
@@ -272,12 +304,15 @@ DTPA, EDTA, and related ligands provide strong lanthanide binding with modest si
 
 ### Case Studies: Specific REE Pair Separations
 #### Light REE: La/Ce and Ce/Pr Separations
-Cerium is unique among lanthanides in exhibiting stable ~~4 oxidation state, enabling oxidative separation. Ce4~~ can be selectively precipitated as CeO2 or extracted with different partition coefficients than Ce3+.
+Cerium is the one lanthanide whose +4 state is stable enough in aqueous
+solution to separate on, which is what makes the oxidative route available.
+Ce⁴⁺ can be selectively precipitated as CeO₂, or extracted with a partition
+coefficient quite unlike Ce³⁺'s.
 
-The ionic radius differences (La3+ = 1.03 Å, Ce3+ = 1.01 Å, Pr3+ = 0.99 Å) are sufficient for protein-based separation but challenging for conventional extractants [@pramanik2024emerging].
+The ionic radius differences (La³⁺ = 1.03 Å, Ce³⁺ = 1.01 Å, Pr³⁺ = 0.99 Å) are sufficient for protein-based separation but challenging for conventional extractants [@pramanik2024emerging].
 
 #### Nd/Pr Separation
-The Nd/Pr separation ("didymium" problem) is critical for permanent magnet recycling. These elements have nearly identical ionic radii (Nd3+ = 0.98 Å, Pr3+ = 0.99 Å) and similar coordination chemistry, making separation extremely difficult [@zhang2024remarkably].
+The Nd/Pr separation ("didymium" problem) is critical for permanent magnet recycling. These elements have nearly identical ionic radii (Nd³⁺ = 0.98 Å, Pr³⁺ = 0.99 Å) and similar coordination chemistry, making separation extremely difficult [@zhang2024remarkably].
 
 Recent advances:
 
@@ -362,6 +397,7 @@ Machine learning offers opportunities for:
 
 Bridging theoretical frameworks (field theory, ion pairing, explicit simulations) remains an active area providing unified understanding of polyelectrolyte complexation [@qin2023bridging; @li2024thermodynamic].
 
+(process-considerations)=
 ## Process Considerations
 Translation of coacervate-based separations from laboratory to industrial scale requires addressing process engineering challenges.
 
@@ -383,6 +419,10 @@ Coacervate extraction could be integrated with existing REE processing:
 - Coacervate extraction: selective partitioning into polymer-rich phase
 - Back-extraction: stimuli-triggered release to stripping solution
 - Polymer recovery: regeneration for reuse
+
+These four steps are panel (b) of [](#fig-coacervate-phase-diagram), and the
+middle two are the same move on the phase diagram read in opposite directions:
+into the two-phase window to load, back out of it to strip.
 
 ### Environmental and Economic Factors
 #### Comparison with Organic Solvent Extraction

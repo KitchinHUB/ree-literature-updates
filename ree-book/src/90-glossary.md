@@ -137,10 +137,6 @@ displacement chromatography
   separation than solvent extraction and far less throughput, which is why it
   survives only for high-value, low-tonnage product.
 
-distribution ratio
-: The ratio of the total analytical concentration of a metal in the organic
-  phase to that in the aqueous phase at equilibrium, usually written $D$.
-
 distribution ratio (D)
 : The ratio of the total analytical concentration of an element in the organic
   phase to that in the aqueous phase at equilibrium. It is not an equilibrium
@@ -229,8 +225,10 @@ ion-imprinted polymer
 isotachophoresis
 : An electrophoretic technique in which analytes migrate between a leading and
   a trailing electrolyte and self-sharpen into contiguous bands of constant
-  velocity. On-chip, it has resolved all fourteen lanthanides into
-  elementally pure bands.
+  velocity. The self-sharpening is what makes it interesting here: band edges
+  stay sharp instead of diffusing, so resolution does not decay along the
+  channel. What has actually been separated this way, and at what scale, is in
+  [](#microfluidic-and-flow-separations).
 
 lanmodulin
 : A bacterial protein whose EF-hand sites bind trivalent lanthanides with
@@ -240,6 +238,14 @@ lanmodulin
   dissociation constant varies only about 25-fold from La to Lu, so lanmodulin
   is a group-capture agent rather than an adjacent-pair separating agent. See
   [](#biological-and-biomimetic-separations).
+
+lanthanide-binding tag (LBT)
+: A short peptide derived from the calcium-binding loop of an EF-hand,
+  engineered to bind trivalent lanthanides. LBTs are the fragment, lanmodulin
+  the whole protein, and the difference costs affinity: immobilized LBTs bind
+  in the micromolar range against picomolar for the intact protein. Like
+  {term}`lanmodulin` they capture the group; they do not resolve adjacent
+  pairs.
 
 lanthanide contraction
 : The steady decrease in ionic radius across the lanthanide series, roughly
@@ -283,9 +289,12 @@ McCabe-Thiele diagram
 
 metal-organic framework (MOF)
 : A crystalline solid built from metal nodes bridged by organic linkers, with
-  permanent porosity and pore dimensions tunable by linker choice. Pursued for
-  REE separation on the hope that a pore can discriminate between hydrated
-  radii that a solution-phase ligand cannot.
+  permanent porosity and pore dimensions tunable by linker choice. The REE
+  results in this book do not come from a pore sieving one ion and rejecting
+  the next: they come from binding sites built into the framework — free
+  carboxyl groups, triazole nitrogens — whose response to ionic radius is
+  sharper than a dissolved ligand's. The pore holds the site in place; it is
+  not itself the discriminator. See [](#metal-organic-framework-mof-nanotraps).
 
 mixer-settler
 : The workhorse solvent extraction contactor: a stirred chamber where the

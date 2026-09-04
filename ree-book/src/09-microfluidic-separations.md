@@ -70,6 +70,12 @@ Microfluidic liquid-phase extraction miniaturizes traditional liquid-liquid extr
 | Contact time control | Sub-second | Minutes |
 | Reagent consumption | Minimal | High |
 
+The two extraction times in that first row are the same rate law evaluated with
+two mass transfer coefficients, and [](#fig-09-kinetics) draws it. The second
+panel is the part that has no conventional counterpart: a contact time short
+enough to stop the extraction before equilibrium is a contact time at which two
+lanthanides that share an equilibrium can still be told apart.
+
 ## Extraction Architectures
 
 Three primary microfluidic extraction architectures have emerged for REE separation, each optimized for different kinetic regimes [@fernandezmaza2024high; @zhang2019mechanistic; @zhang2019enabling].
@@ -84,7 +90,7 @@ Droplet-based systems generate discrete organic droplets within continuous aqueo
 Slug flow configurations create alternating liquid segments of aqueous and organic phases, allowing precise control of slug length and specific surface area [@dessimoz2008liquid]. This approach has demonstrated {index}`separation factors <separation factor>` of **1,289 for Zn/Mn** in 45 seconds of microfluidic extraction versus 233 in 25 minutes of batch extraction---a five-fold improvement with 33× faster processing [@touma2024intensification]. Novel reactor designs include serpentine microreactors, rotating microchannel extractors, and 3D reticulated hollow-strut SiC foam microreactors achieving **98.7% extraction efficiency** for {index}`praseodymium` and 97.0% for {index}`cerium` [@zhang2022solvent].
 
 ### Flow Regimes and Configurations
-Microfluidic extractors operate in the laminar flow regime (Reynolds number \<2300), with several distinct configurations [@kolar2016microfluidic]:
+Microfluidic extractors operate in the laminar flow regime (Reynolds number \<2300), with several distinct configurations [@kolar2016microfluidic], drawn in [](#fig-09-flow-regimes). The four differ in one thing that matters for extraction: how much liquid-liquid interface the same two phases present inside the same channel.
 
 **Co-Laminar (Parallel) Flow:**
 
@@ -112,6 +118,25 @@ Microfluidic extractors operate in the laminar flow regime (Reynolds number \<23
 - Retains dispersed droplets for enhanced contact
 - Achieves equilibrium within 30 seconds at phase ratios of 50-250
 - At extreme 500:1 phase ratio: 77% extraction efficiency
+
+:::{figure} ../figures/09-flow-regimes.svg
+:name: fig-09-flow-regimes
+:width: 100%
+
+The four regimes, in the order listed above, with this section's own numbers
+beside each. The drawing is schematic — nothing is to scale, and the channel is
+deliberately identical in all four so that the only thing changing is what the
+two phases do inside it. The coloured line is the liquid-liquid interface, and
+following it down the figure is the argument for why the regime matters: one
+flat plane in co-laminar flow, the caps of a slug train, then the perimeter of
+every drop in a dispersion, which is the order the reported mass transfer
+efficiencies follow. What separates the first three is increasing flow rate and
+shear; the sources cited for the regime maps [@dessimoz2010quantitative;
+@kashid2007hydrodynamics] locate those boundaries, but this chapter quotes no
+capillary number or transition velocity, so no threshold is drawn. Pore-throat
+is set apart because it is a change of channel geometry rather than of flow
+rate. Drawn by `tools/figures/fig_flow_regimes.py`.
+:::
 
 ### Droplet-Based Microfluidic Systems
 Droplet microfluidics has emerged as a powerful platform for REE separation [@zhang2019mechanistic]:
@@ -189,6 +214,28 @@ slug-flow literature actually uses, it is about 57 cm²/cm³ — an order of
 magnitude lower, from the same technology. No interfacial area for a stirred
 dispersion is reported on a comparable basis in the sources cited here, so no
 ratio is given for that row.
+
+:::{figure} ../figures/09-kinetics.svg
+:name: fig-09-kinetics
+:width: 100%
+
+Approach to equilibrium against contact time. **(a)** The first-order model
+$E/E_{eq} = 1 - \exp(-k_L a\,t)$, evaluated with the two volumetric mass
+transfer coefficients of the table above: 0.19–0.41 s⁻¹, measured for slug flow
+in 269–400 µm rectangular glass channels [@dessimoz2008liquid], and the
+10⁻³–10⁻² s⁻¹ order-of-magnitude figure quoted for a conventional contactor.
+Neither band is data: the curves are the rate law and the bands are the reported
+spread in $k_L a$. The two vertical strips are operating times quoted elsewhere
+in the chapter — 3–60 s residence time in a flow-focusing droplet reactor
+[@fernandezmaza2024high], 10–25 min in a mixer-settler — and the model
+reproduces both without adjustment, reaching 95% of equilibrium at 7–16 s and at
+5–50 min respectively. **(b)** Why stopping short can separate what equilibrium
+cannot. Two lanthanides with the same equilibrium but different rates are
+furthest apart at $t^* = \ln(k_f/k_s)/(k_f - k_s)$ and indistinguishable once
+both have finished. The threefold rate ratio drawn here is illustrative: the
+chapter names Eu³⁺/La³⁺ as a kinetically distinguished pair but reports no rate
+ratio for it, so none is claimed. Drawn by `tools/figures/fig_kinetics.py`.
+:::
 
 The table carries no generic separation-factor row, because no generic figure is
 supportable: selectivity is a property of an element pair and a chemistry, not of

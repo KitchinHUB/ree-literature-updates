@@ -98,6 +98,39 @@ The NMR solution structure reveals LanM's unique architecture [@cook2019structur
 
 **Critical Proline Residues:** Each EF-hand contains a crucial proline residue that hampers response to calcium while maintaining lanthanide selectivity. When prolines are mutated to alanine, calcium can induce conformational change at much lower concentrations, demonstrating proline's role in selectivity.
 
+[](#fig-lanm-efhand) sets the lanmodulin site beside the canonical calcium
+EF-hand it is built from, and puts both selectivities on one axis. The three
+differences that matter — an extra unit of charge on the ion, three more donors
+in the first coordination sphere, and the proline in the loop — are all reasons
+to prefer a rare earth over calcium. None of them is a reason to prefer one
+rare earth over the next, which is exactly what the flat picomolar profile in
+panel C shows.
+
+:::{figure} ../figures/11-lanm-efhand.svg
+:name: fig-lanm-efhand
+:width: 100%
+
+Why lanmodulin prefers rare earths to calcium, and why that preference says
+almost nothing about telling one rare earth from another. **(A, B)** Schematic
+coordination spheres — not crystal structures: the donor positions are spaced
+evenly for counting and are not real geometry. Both motifs are helix–loop–helix;
+the lanmodulin site closes ten oxygen donors around a trivalent ion instead of
+the canonical seven around Ca²⁺ [@gifford2007structures], and every lanmodulin
+EF-hand carries a proline that blocks the calcium response, with Pro→Ala letting calcium back in. The
+donor types and the coordination number in (B) are from the NMR solution
+structure [@cook2019structural]; the sources cited here do not say how many
+donors of each type make up the ten, so the drawing does not assign them.
+**(C)** Both selectivities on one affinity axis. The ~10⁸-fold preference for
+Ln³⁺ over Ca²⁺ is eight units tall. Across the series the site is nearly flat —
+$K_\mathrm{d}$ = 0.4–10 pM for every lanthanide and Y³⁺ [@cotruvo2018lanmodulin], with
+only about a fivefold light-over-heavy preference for the prototypal protein
+[@mattocks2023enhanced], drawn to scale as the dashed line inside the band,
+where the tilt is half the width of the band that contains it. The binding site
+does not sharply distinguish neighbouring rare earths: the best adjacent-pair
+separation factors any protein system has produced are 1.4 (Nd/Pr) to 3.0
+(Ce/La) [@larrinaga2024modulating].
+:::
+
 ### Metal-Sensitive Dimerization
 
 If the binding site cannot distinguish neighbouring lanthanides, something else

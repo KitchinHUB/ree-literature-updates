@@ -59,27 +59,17 @@ Rare earth elements do not occur as native metals but are found in approximately
     - Advantage: Easy leaching with mild electrolytes
 
 ### Processing Overview
-The general hydrometallurgical flowsheet [@jha2016hydrometallurgical; @kim2025rare]:
+Every route in this chapter has the same skeleton: mine, beneficiate, decompose
+the mineral, leach, separate the solids from the liquor, purify that liquor, and
+hand it to solvent extraction [@jha2016hydrometallurgical; @kim2025rare].
+[](#fig-leaching-flowsheet), at the end of the chapter, draws that skeleton for
+each of the ore types at once, so the routes can be compared step by step
+instead of read one after another.
 
-``` example
-Mining
-  ↓
-Beneficiation (crushing, grinding, flotation, magnetic separation)
-  ↓
-Pre-treatment (roasting, calcination) ← [if needed for bastnasite/monazite]
-  ↓
-Leaching (acid or alkali)
-  ↓
-Solid-liquid separation (filtration, settling)
-  ↓
-Purification (remove Fe, Th, Ca, Al, etc.)
-  ↓
-Solvent Extraction (REE separation)
-  ↓
-Product (individual REE oxides or mixed REO)
-```
-
-**This chapter covers steps 2-5**: beneficiation through purification, which produce the aqueous REE feed for solvent extraction.
+**This chapter covers beneficiation through purification** — the steps that
+produce the aqueous REE feed. The separation of that feed into individual
+elements is [](#solvent-extraction-fundamentals), and the finished oxides are
+downstream of both.
 
 ### Challenges in REE Ore Processing
 1.  **Refractory nature**: REE minerals resist decomposition [@kim2025rare]
@@ -1141,144 +1131,83 @@ This solution is the feed for the solvent extraction circuit described in
 [](#solvent-extraction-fundamentals).
 
 ## Complete Process Flowsheets
-### Bastnasite, Chloride Route (Mountain Pass Type)
 
-The unit operations, in order [@gupta2004extractive; @castor2006rare]:
+Everything above comes together in [](#fig-leaching-flowsheet), which puts the
+routes on one grid rather than drawing each separately. Side by side they show
+something none of them shows alone: the routes differ only in how the mineral is
+*cracked*. From the leach onward they converge on a single purified liquor with
+a single specification, and that liquor is what
+[](#solvent-extraction-fundamentals) takes as its input.
 
-``` example
-Mining (open pit)
-  ↓
-Crushing and grinding
-  ↓
-Flotation (rougher, scavenger, cleaner)
-  ├─→ Tailings (to pond)
-  └─→ Bastnasite concentrate
-        ↓
-      Dilute HCl pre-leach (dissolves carbonate gangue)
-        └─→ Upgraded concentrate
-              ↓
-            Oxidative roast (air; decarbonation + Ce(III) → Ce(IV))
-              ↓
-            HCl leach
-              ├─→ Residue: cerium concentrate (Ce(IV) does not dissolve)
-              └─→ REE chloride solution (Ce-depleted)
-                    ↓
-                  Purification (raise pH; precipitate Fe, Al)
-                    ↓
-                  Solvent extraction (D2EHPA or PC88A, chloride medium)
-                    ↓
-                  Individual REE oxides
-```
+:::{figure} ../figures/05-flowsheet.svg
+:name: fig-leaching-flowsheet
+:width: 100%
 
-Read the flowsheet for its logic rather than for numbers. Two design decisions
-carry the whole thing: the roast is *oxidative* so that cerium is removed for
-free as an insoluble residue rather than as fifteen more extraction stages, and
-the acid is HCl end to end so that the liquor never has to be converted between
-media before it reaches the extractant.
+Schematic flowsheet for the ore types this chapter treats, drawn on one grid:
+bastnäsite by the Mountain Pass chloride route and by the Bayan Obo
+concentrated-sulfuric route, monazite by sulfuric digestion and by caustic
+digestion, and ion-adsorption clay by ion exchange. Colour marks the medium a
+stream is in — black for solids, purple for a sulfate liquor, blue for a
+chloride one — because the medium is what decides whether a route needs a
+conversion step. Unit operations and their order only: this is not a mass
+balance and it is not to scale. Steps whose numbers this chapter gives
+inconsistently are drawn unlabelled. Drawn from
+`tools/figures/fig_flowsheet.py`.
+:::
 
-### Monazite, Sulfuric Route (Indian Process)
+The two bastnäsite lanes are the Mountain Pass chloride route
+[@gupta2004extractive; @castor2006rare] and the Bayan Obo concentrated-sulfuric
+route [@kim2025rare]. Two design decisions carry the first: the roast is
+*oxidative*, so cerium leaves for free as an insoluble residue rather than as
+fifteen more extraction stages, and the acid is HCl end to end, so the liquor
+never has to be converted between media before it reaches the extractant. The
+second route gives up the cerium separation and buys tolerance for a
+lower-grade, more variable concentrate; it pays for that with a fluorine off-gas
+that needs a serious scrubbing train, and with a precipitation-redissolution
+cycle it cannot avoid.
 
-The unit operations, in order [@gupta2004extractive; @jha2016hydrometallurgical]:
+The two monazite lanes are the Indian sulfuric route [@gupta2004extractive;
+@jha2016hydrometallurgical] and the caustic alternative [@borai2016modified;
+@shahreldin2018selective]. What distinguishes them from the bastnäsite routes is
+structural, not numerical. Thorium is pulled out as a separate stream *before*
+the rare earths are separated from one another, because a thorium-bearing
+organic phase would contaminate every stage of the cascade downstream. And a
+sulfate liquor is converted to chloride the only way it can be — precipitate the
+rare earths as hydroxide, filter, redissolve the solid in HCl — rather than by
+trying to drive the sulfuric acid out of solution. The caustic route arrives at
+the same place in a different order, dropping the phosphate out first as a
+soluble trisodium salt that can be sold.
 
-``` example
-Beach sand mining
-  ↓
-Gravity separation (spiral concentrators)
-  ↓
-Magnetic separation (HIMS)
-  ↓
-Electrostatic separation
-  ├─→ Monazite concentrate (55% REO)
-  ├─→ Ilmenite (TiO₂ source)
-  └─→ Zircon (ZrO₂ source)
-        ↓ (Monazite)
-      Grinding (to 100 μm)
-        ↓
-      Sulfuric acid digestion (93% H₂SO₄, 220°C, 4 h)
-        ↓
-      Water leaching + filtration
-        ↓
-      Thorium separation (amine extraction)
-        ├─→ Th concentrate (to disposal/storage)
-        └─→ REE sulfate solution
-              ↓
-            Precipitation as hydroxide (pH 8, NaOH)
-              ↓
-            REE(OH)₃ solid
-              ↓
-            Dissolution in HCl
-              ↓
-            REE chloride solution
-              ↓
-            Solvent extraction (separation into La, Ce, Pr, Nd, Sm, etc.)
-              ↓
-            Individual REE oxides
-```
+That conversion node is why the figure colours streams by medium. Three of the
+four mineral routes leach into sulfate, and every one of the three has to go
+back through a solid before it can feed a chloride circuit. Only the Mountain
+Pass route, which never leaves chloride, runs straight across the conversion
+column, and that unbroken arrow is the strongest argument the flowsheet makes
+for it.
 
-The two features that distinguish this route are structural, not numerical.
-Thorium is pulled out as a separate stream *before* the rare earths are
-separated from one another, because a thorium-bearing organic phase would
-contaminate every stage of the cascade downstream. And the sulfate liquor is
-converted to chloride the only way it can be — precipitate the rare earths as
-hydroxide, filter, redissolve the solid in HCl — rather than by trying to remove
-the sulfuric acid from solution.
-
-### Ion-Adsorption Clay (Southern China)
-
-The unit operations, in order [@chi2008weathered; @shi2022column]:
-
-``` example
-In-situ leaching:
-  Injection wells
-    ↓
-  (NH₄)₂SO₄ solution (2-3%, ambient temp)
-    ↓
-  Percolation through ore body (20-100 days)
-    ↓
-  Collection wells
-    ↓
-  Pregnant leach solution (200-1000 mg/L REE)
-    ↓
-  Solvent extraction (P507, concentration + separation)
-    ├─→ Loaded organic (concentrated REE)
-    └─→ Raffinate (recycle as lixiviant)
-          ↓
-        Stripping (HCl)
-          ↓
-        REE chloride (concentrated, 0.5-1 M)
-          ↓
-        Precipitation (oxalic acid or carbonate)
-          ↓
-        Calcination
-          ↓
-        REE oxide (enriched in heavy REE: Y, Dy, Tb)
-
-Or heap leaching:
-  Mined ore (minimal processing)
-    ↓
-  Heap on pad
-    ↓
-  Drip irrigation with (NH₄)₂SO₄
-    ↓
-  Collect PLS
-    ↓
-  [Same as above from PLS]
-```
-
-The distinguishing feature here is that there is no decomposition step at all.
-Nothing is roasted and nothing is digested; the entire flowsheet is an ion
-exchange followed by a concentration step. That is why these deposits are
-economic at grades two to three orders of magnitude below a bastnasite ore, and
+The ion-adsorption lane [@chi2008weathered; @shi2022column] is drawn as a long
+arrow across two empty columns, and the emptiness is the content: there is no
+beneficiation and no decomposition step at all. Nothing is roasted and nothing
+is digested; the whole route is an ion exchange followed by a concentration
+step, and the solvent extraction that does the concentrating is the same
+operation that will later do the separating. That is why these deposits are
+economic at grades two to three orders of magnitude below a bastnäsite ore, and
 also why the environmental problem they create is a solution-management problem
-(ammonium in groundwater, slope stability) rather than an emissions problem.
+— ammonium in groundwater, slope stability — rather than an emissions problem.
+
+Read the figure for its logic rather than for its numbers. Where this chapter
+states a quantity in two incompatible ways — the ore grade feeding flotation,
+the acid strength of the bastnäsite leach, the lixiviant strength for the clays,
+and every leach residence time — the step is drawn without a number rather than
+committed to one of the values.
 
 ## Process Optimization and Kinetics
 ### Key Operating Parameters
 #### Acid Leaching
 **Temperature effect**:
 
-- Arrhenius relationship: k = A exp(-E~a~/RT)
-- Typical E~a~: 40-80 kJ/mol (diffusion-controlled)
+- Arrhenius relationship: k = A exp(-$E_\mathrm{a}$/RT)
+- Typical $E_\mathrm{a}$: 40-80 kJ/mol (diffusion-controlled)
 - Doubling temperature → 2-5× faster leaching
 - But: equipment limits, energy cost
 
@@ -1351,7 +1280,7 @@ For solid particle dissolution [@long2019kinetics]:
 Where:
 
 - X = fraction leached
-- k~s~, k~d~ = rate constants
+- $k_\mathrm{s}$, $k_\mathrm{d}$ = rate constants
 - t = time
 
 **Determining rate-limiting step**:
@@ -1517,9 +1446,9 @@ loaded with residual ammonium and structurally weakened by the leach.
 ### Energy and Carbon: Where the Burden Sits
 
 Leaching itself is not the energy-intensive step. Qualitatively, and this much
-is safe to say from the flowsheets above, the energy is concentrated in the
-operations that move or heat large masses: comminution in beneficiation, and the
-roast. Everything downstream of the roast happens at 25-95 °C in aqueous
+is safe to say from [](#fig-leaching-flowsheet), the energy is concentrated in
+the operations that move or heat large masses: comminution in beneficiation, and
+the roast. Everything downstream of the roast happens at 25-95 °C in aqueous
 solution, and the solvent extraction cascade — which has hundreds of stages —
 consumes energy mostly as pumping and mixing, not as heat.
 

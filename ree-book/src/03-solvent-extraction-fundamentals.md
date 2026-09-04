@@ -63,7 +63,7 @@ Where:
     - Inexpensive and widely available
     - Moderate salting-out effect
     - Compatible with chloride media
-    - Increases ionic strength: I = 0.5 Σ c~i~ z~i²~
+    - Increases ionic strength: $I = \tfrac{1}{2} \sum_i c_i z_i^2$
 2.  **Ca(NO₃)₂** (1-3 M) [@matveev2018solvent]:
     - Strong salting-out effect (divalent cation)
     - Enhances {index}`TBP <TBP (tributyl phosphate)>` extraction via nitrate complex formation
@@ -287,7 +287,10 @@ equal phase volumes; real D2EHPA systems sit close to this
 
 Half a pH unit takes the system from 3% to 97% extraction. That steepness is
 what makes the pH swing work, and it is also why pH control is the single most
-demanding part of running a cascade.
+demanding part of running a cascade. [](#fig-logd-vs-ph) draws the same
+relation for two neighbouring lanthanides at once, which is where the steepness
+stops being an unmixed blessing: the slope is +3 for both of them, and the two
+lines are parallel.
 
 ### Extraction Cycle
 #### Extraction Stage (Forward Transfer)
@@ -329,8 +332,8 @@ For 1.0 M REE feed, 90% extraction:
 
 **Selectivity**:
 
-- Impurities with lower K~ex~ values strip preferentially
-- REEs remain in organic (high K~ex~ at this pH)
+- Impurities with lower $K_\mathrm{ex}$ values strip preferentially
+- REEs remain in organic (high $K_\mathrm{ex}$ at this pH)
 
 #### Stripping Stage (Reverse Transfer)
 **Conditions** [@xie2014critical; @zhang2016rare]:
@@ -367,7 +370,7 @@ For 1.0 M REE feed, 90% extraction:
 **D2EHPA** (di-2-ethylhexyl phosphoric acid):
 
 - Water solubility: \~5 ppm (very low)
-- Partition coefficient: P~HL~ = \[HL\]~org~ / \[HL\]~aq~ \> 10,000
+- Partition coefficient: $P_\mathrm{HL}$ = $[\mathrm{HL}]_\mathrm{org}$ / $[\mathrm{HL}]_\mathrm{aq}$ \> 10,000
 - Organic phase loss: \<0.01% per cycle
 
 **PC88A** (2-ethylhexyl phosphonic acid mono-2-ethylhexyl ester):
@@ -427,9 +430,9 @@ For 1.0 M REE feed, 90% extraction:
 
 pH₁/₂ is defined as the pH where D = 1 (50% extraction).
 
-From: log D = log K~ex~ + 3 log[(HL)₂] + 3 pH
+From: log D = log $K_\mathrm{ex}$ + 3 log[(HL)₂] + 3 pH
 
-At D = 1: pH₁/₂ = −(log K~ex~ + 3 log[(HL)₂]) / 3
+At D = 1: pH₁/₂ = −(log $K_\mathrm{ex}$ + 3 log[(HL)₂]) / 3
 
 A *lower* pH₁/₂ means a more strongly extracted element, since it reaches
 D = 1 while the aqueous phase is still more acidic.
@@ -455,11 +458,29 @@ the gap between two elements' half-extraction pH values:
 
 A gap of 0.1 pH units is a separation factor of 2; a gap of 0.2 is a factor of 4.
 This is why pH control to ±0.05 units is a real engineering requirement and not
-a counsel of perfection.
+a counsel of perfection. Run the same arithmetic at the value that actually
+governs an adjacent light-lanthanide pair, β = 1.5, and the gap is
+Δ pH₁/₂ = (log 1.5)/3 = 0.06 pH units — the whole of the chemistry the industry
+is built on, drawn to scale in [](#fig-logd-vs-ph).
+
+:::{figure} ../figures/03-logd-vs-ph.svg
+:name: fig-logd-vs-ph
+:width: 100%
+
+Two neighbouring lanthanides under an acidic organophosphorus extractant. The
+lines are the mass-action expression `log D = log Kₑₓ + 3 log[(HL)₂] + 3 pH`
+evaluated for β = 1.5, not fitted data; the constants are chosen only to put
+D = 1 in the middle of the panel. The triangle is drawn to scale: one pH unit
+buys three decades in D. The inset is also at true scale, not exaggerated —
+that is its point. The horizontal separation between the two elements,
+Δ pH₁/₂ = (log β)/3 = 0.06 pH units, is invisible in the main panel, which is
+why the split has to be won by staging rather than by chemistry. Drawn from
+`tools/figures/fig_logd_vs_ph.py`.
+:::
 
 **Typical separation windows** [@tanaka2021revaluating]. These are at the
 optimistic end of the published range; adjacent light-lanthanide pairs are
-commonly quoted nearer β = 1.5-2 (Δ pH₁/₂ ≈ 0.05-0.10), which is the figure
+commonly quoted nearer β = 1.5-2 (Δ pH₁/₂ ≈ 0.05-0.10), which is the value
 [](#why-rare-earths-are-hard-to-separate) uses and the one the stage counts in
 this chapter are built on. Treat the table as the best case a well-chosen
 extractant and diluent can reach, not as what an arbitrary circuit will deliver:
@@ -676,7 +697,7 @@ Graphical method for determining stage requirements:
 
 **Construction**:
 
-1.  Plot equilibrium curve: y\* = f(x) where y = \[REE\]~org~, x = \[REE\]~aq~
+1.  Plot equilibrium curve: y\* = f(x) where y = $[\mathrm{REE}]_\mathrm{org}$, x = $[\mathrm{REE}]_\mathrm{aq}$
 2.  Draw operating line: y = (A/O)x + y₀
 3.  Step off stages between equilibrium curve and operating line
 
@@ -780,27 +801,41 @@ The sensitivity is worth seeing, because it explains what plants actually do.
 Relaxing both ends to 99.9% drops `N_min` from 45 to 34. Doubling β to 3.0 — the
 gap between an adjacent pair and a pair two apart — drops it to 17. Choosing a
 better extractant and choosing a less demanding purity target are the two levers,
-and the logarithm means neither one is dramatic.
+and the logarithm means neither one is dramatic. The lower panel of
+[](#fig-cascade) draws both cases: plotted against stage number on a log-ratio
+axis the profile is a straight line whose slope is log β, so the stage count is
+read off as a length, and the whole of what β buys is the difference between two
+slopes.
 
 #### Fractional Extraction: Extract, Scrub and Strip
 A recovery cascade has the aqueous feed entering at one end. A **{index}`fractional
 extraction`** cascade — the configuration every rare earth separation plant
 actually runs — has it entering somewhere in the middle, which is what splits the
-train into two sections that do different jobs:
+train into two sections that do different jobs ([](#fig-cascade)).
 
-    less-extractable                                    more-extractable
-    product (raffinate)                                 product (strip liquor)
-         ↑                                                        ↑
-      ───┴──── EXTRACTION SECTION ──┬── SCRUB SECTION ────┐   ┌────┴────┐
-      aqueous  →→→→→→→→→→→→→→→→→→→→ │ →→→→→→→→→→→→→→→→→→→ │   │  STRIP  │
-      organic  ←←←←←←←←←←←←←←←←←←←← │ ←←←←←←←←←←←←←←←←←←← │   │ SECTION │
-      ───┬──────────────────────────┴─────────────────────┘   └────┬────┘
-         │                          ↑                loaded        │
-    fresh/stripped                FEED               organic  ──→──┘
-      organic in                                                   │
-                                     scrub liquor  ←──── split ←────┤
-                                     (part of the strip product)    ↓
-                                                              product out
+:::{figure} ../figures/03-cascade.svg
+:name: fig-cascade
+:width: 100%
+
+**Above**, the fractional extraction cascade — a schematic of the configuration
+described here, not of any particular plant. The phases run counter to each
+other, organic left to right and aqueous right to left, so the raffinate leaves
+the left end and the loaded organic the right; the feed enters partway along,
+and the feed point is what divides the extraction section from the scrub
+section. The scrub liquor is drawn as what it is, a split of the cascade's own
+strip product. The two curved arrows are the sections' jobs: on the left the
+more-extractable element pulled into the organic, on the right the co-extracted
+less-extractable element displaced back off the extractant and returned toward
+the feed. **Below**, the stage profile that goes with it, drawn from the Fenske
+relation rather than measured: at total reflux each equilibrium stage multiplies
+the ratio of the two elements by β, so on a log-ratio axis the profile is a
+straight line of slope log β and the stage count is read off as a length. The
+endpoints are this chapter's specification of 99.99% at both ends, and the two
+slopes give the 45 and 17 stages derived above — floors, for the reasons given
+there. The feed stage is where the profile crosses 50/50, which for an equimolar
+binary feed is the middle of the train. Drawn from
+`tools/figures/fig_cascade.py`.
+:::
 
 In the **extraction section**, between the feed point and the raffinate outlet,
 the organic flowing counter to the aqueous pulls the more-extractable element
@@ -896,7 +931,7 @@ three equivalents of base per mole of rare earth moved.
 
 Where:
 
-- K~overall~ = overall mass transfer coefficient (cm/s)
+- $K_\mathrm{overall}$ = overall mass transfer coefficient (cm/s)
 - a = interfacial area per unit volume (cm²/cm³)
 - C\* - C = driving force (concentration difference)
 

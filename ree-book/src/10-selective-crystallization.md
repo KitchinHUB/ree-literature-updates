@@ -93,6 +93,38 @@ Hydroxide precipitation exploits the decreasing solubility of lanthanide hydroxi
 | Heavy REEs    | 7.0-8.0          | Slightly higher pH         |
 | Y             | 6.5-7.5          | Behaves as HREE            |
 
+[](#fig-precipitation-ph) puts those thresholds on the series, and what it
+cannot show is the point of it. There is no per-element curve to draw: the
+numbers above are group ranges, La through Eu sharing one and Gd through Lu
+another, and the two overlap between pH 7.0 and 7.5. Their midpoints are 0.35
+pH apart across fourteen elements, which is less than the 0.4-unit window a
+plant holding pH to ±0.2 can even resolve. A single hydroxide step therefore
+returns a group, not an element. Cerium is the one place the trend breaks, and it breaks by
+three pH units rather than by hundredths.
+
+:::{figure} ../figures/10-precipitation-ph.svg
+:name: fig-precipitation-ph
+:width: 100%
+
+Where the rare earths come out as hydroxide, drawn from this chapter's own pH
+thresholds. The bands are flat because the data is: the chapter reports light
+REE 6.8–7.5, heavy REE 7.0–8.0 and Y 6.5–7.5, and no per-element values, so
+nothing here is a fitted or interpolated curve. No solubility product is used
+either — the chapter tabulates saturation indices for lanthanum alone, and a
+computed solubility series would be numbers this book cannot source. All three
+ranges contain pH 7.0–7.5, which is why one step gives a group split. Cerium is
+drawn as a discontinuity rather than a trend, because that is what it is:
+oxidised to Ce(IV) it comes out at pH 3–5, some three pH units below its
+neighbours, against the 0.35 units that separate the two group midpoints —
+oxidation state is a threshold where radius is only a gradient. The same pH
+window takes Fe, Th, Al and U, which is why the industrial sequence oxidises
+cerium only after those are gone. Yttrium is placed between Ho and Er by
+six-coordinate ionic radius, 0.900 Å against 0.901 and 0.890
+[@shannon1976revised]; the chapter itself says only that it behaves as a heavy.
+Promethium is greyed because it appears in no real feed. Drawn by
+`tools/figures/fig_precipitation.py`.
+:::
+
 **Staged Hydroxide Precipitation:** Industrial processes use multi-stage precipitation to sequentially remove impurities before REE recovery:
 
 1.  **Stage 1 (pH 3-4)**: Remove Fe, Al, Th
@@ -174,6 +206,10 @@ Cerium separation by oxidation to Ce(IV) is a critical first step in REE purific
 
     Ce³⁺ → Ce⁴⁺ + e⁻     E° = 1.74 V
     Ce⁴⁺ + 4OH⁻ → Ce(OH)₄ ↓
+
+That is the discontinuity in [](#fig-precipitation-ph): a three pH unit drop
+where the lanthanide contraction, working across the whole series, is worth
+about a third of one.
 
 **Oxidizing Agents:**
 

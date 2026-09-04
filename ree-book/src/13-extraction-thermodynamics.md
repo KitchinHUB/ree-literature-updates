@@ -25,7 +25,7 @@ The chapter closes by linking extraction thermodynamics back to the mineral it
 started from, writing dissolution and extraction in one set of chemical
 potentials.
 
-## Predicting K~ex~ from First Principles
+## Predicting $K_\mathrm{ex}$ from First Principles
 
 We want to predict the extraction equilibrium constant:
 
@@ -44,9 +44,9 @@ At 298 K:
 - RT = 8.314 J/(mol·K) × 298 K = 2.478 kJ/mol
 - 2.303 RT = 5.706 kJ/mol
 
-So: **log K~ex~ = -ΔG°~extraction~ / 5.706** (if ΔG in kJ/mol)
+So: $\log K_\mathrm{ex} = -\Delta G^\circ_\mathrm{extraction} / 5.706$, with $\Delta G$ in kJ/mol.
 
-### Problem: Can't Compute ΔG~extraction~ Directly
+### Problem: Can't Compute $\Delta G_\mathrm{extraction}$ Directly
 
 We **cannot** directly compute the free energy for the overall reaction:
 
@@ -113,7 +113,7 @@ on the right — is short by three gas-phase deprotonations, roughly
 
       ΔG_solv ≈ -(z²e²N_A)/(8πε₀r_ion) × (1 - 1/ε_r)
 
-  Where z=3, r~ion~ ≈ 1.0-1.2 Å for REE³⁺, ε~r~ = 78.4 for water
+  Where z=3, $r_\mathrm{ion}$ ≈ 1.0-1.2 Å for REE³⁺, $\varepsilon_r$ = 78.4 for water
 
 **Key insight**: ΔG₁ varies across the lanthanide series with ionic radius.
 Experimental hydration free energies [@marcus1991thermodynamics]:
@@ -196,7 +196,7 @@ a few kJ/mol, and that difference is the entire selectivity.
 
 ****Option 1: Implicit solvation****
 
-- SMD model with ε~r~ ≈ 2 (kerosene dielectric constant)
+- SMD model with $\varepsilon_r$ ≈ 2 (kerosene dielectric constant)
 
 - Treats kerosene as uniform dielectric medium
 
@@ -238,8 +238,8 @@ a few kJ/mol, and that difference is the entire selectivity.
 
 ****Option 2: Experimental vaporization enthalpy****
 
-- For D2EHPA, TBP: ΔH~vap~ data available from literature
-- Approximate ΔG₄ ≈ 3 × ΔH~vap~ (neglecting entropy)
+- For D2EHPA, TBP: $\Delta H_\mathrm{vap}$ data available from literature
+- Approximate ΔG₄ ≈ 3 × $\Delta H_\mathrm{vap}$ (neglecting entropy)
 
 ****Option 3: Cancel with ΔG₃ in first approximation****
 
@@ -281,7 +281,7 @@ a few kJ/mol, and that difference is the entire selectivity.
 
 **Key insight**: The pH appears explicitly here!
 
-### Summing the Cycle: Total ΔG~extraction~
+### Summing the Cycle: Total $\Delta G_\mathrm{extraction}$
 
 #### The Sum
 
@@ -314,20 +314,20 @@ of four large terms whose near-cancellation is the entire physical content.
 | ΔG°₅ | Proton hydration       | −3312 kJ/mol | experiment [@tissandier1998proton] |
 | Sum of the four known terms |         | **−87 kJ/mol** |                       |
 
-#### Converting to K~ex~
+#### Converting to $K_\mathrm{ex}$
 
     log K_ex = -ΔG°_extraction / (2.303 RT)
 
 with 2.303 RT = 5.706 kJ/mol at 298 K.
 
-Now run the requirement backwards. Experimental log K~ex~ for these systems
-falls between roughly 0 and 10, so ΔG°~extraction~ must land between 0 and
+Now run the requirement backwards. Experimental log $K_\mathrm{ex}$ for these systems
+falls between roughly 0 and 10, so $\Delta G^\circ_\mathrm{extraction}$ must land between 0 and
 −57 kJ/mol. With the four known terms summing to −87, **ΔG₂ has to fall between
 +30 and +87 kJ/mol** — a window 57 kJ/mol wide, on a quantity assembled from a
 +4,000 kJ/mol deprotonation and a −4,200 kJ/mol association.
 
 That is the real difficulty, and it is worth stating as a number: predicting
-log K~ex~ from first principles requires ΔG₂ to about **1% of its own
+log $K_\mathrm{ex}$ from first principles requires ΔG₂ to about **1% of its own
 constituents**. It has nothing to do with the chemistry being subtle and
 everything to do with the arithmetic being a difference of large numbers.
 
@@ -362,7 +362,7 @@ Once the cycle balances, the honest error budget is:
   ±25 kJ/mol on top of whatever the training data inherited
 
 Taken in quadrature this is ±60-120 kJ/mol, or **±10-20 log units** on an
-absolute log K~ex~ whose true value is between 0 and 10. Absolute prediction is
+absolute log $K_\mathrm{ex}$ whose true value is between 0 and 10. Absolute prediction is
 therefore out of reach, and saying so plainly is more useful than reporting a
 number to three figures.
 
@@ -384,7 +384,7 @@ Given the absolute uncertainty, we focus on **relative** values:
 
 #### Approach 1: Predict ΔΔG (Selectivity)
 
-Instead of absolute K~ex~, predict selectivity:
+Instead of absolute $K_\mathrm{ex}$, predict selectivity:
 
     ΔΔG = ΔG_extraction(REE1) - ΔG_extraction(REE2)
 
@@ -430,7 +430,7 @@ an otherwise identical complex, so most of the error is genuinely common and
 does cancel. But it is a premise, not a result. It should be *demonstrated* —
 by predicting a whole series and checking that the ordering and the spacing come
 out, not by reporting an absolute number to three figures. A method validated
-only on absolute K~ex~ has been validated on the quantity that does not matter.
+only on absolute $K_\mathrm{ex}$ has been validated on the quantity that does not matter.
 
 #### Approach 2: Calibrate with Experimental Data
 
@@ -438,7 +438,7 @@ Use experimental data to correct the absolute scale:
 
     ΔG_extraction(predicted) = ΔG_extraction(computed) + C
 
-Where C is fitted to match experimental log K~ex~ for 1-2 reference systems.
+Where C is fitted to match experimental log $K_\mathrm{ex}$ for 1-2 reference systems.
 
 **This is what an experimental validation dataset is for.**
 
@@ -465,17 +465,17 @@ For a given system (e.g., La³⁺ + D2EHPA in kerosene at pH 3, 298 K):
 4.  Compute ΔG₄ using SMD (D2EHPA in kerosene)
 5.  Use literature value for ΔG°₅ = -3300 kJ/mol (or fit to data)
 
-#### Step 2: Sum to Get ΔG°~extraction~
+#### Step 2: Sum to Get $\Delta G^\circ_\mathrm{extraction}$
 
     ΔG°_extraction = ΔG₁ + ΔG₂ + ΔG₃ + ΔG₄ + ΔG°₅
 
-#### Step 3: Convert to K~ex~
+#### Step 3: Convert to $K_\mathrm{ex}$
 
     log K_ex = -ΔG°_extraction / (2.303 RT)
 
 #### Step 4: Convert to a Distribution Ratio
 
-There is no separate "pH correction" to apply. K~ex~ is an equilibrium constant
+There is no separate "pH correction" to apply. $K_\mathrm{ex}$ is an equilibrium constant
 and does not depend on pH; the pH dependence appears when the mass-action
 expression is rearranged for D, because H⁺ is a product of the extraction
 reaction:
@@ -511,11 +511,11 @@ Calculate:
 
 ### Key Takeaways
 
-1.  **The thermodynamic cycle connects atomistic calculations (DFT, or a learned surrogate for the binding step) to measurable K~ex~**
+1.  **The thermodynamic cycle connects atomistic calculations (DFT, or a learned surrogate for the binding step) to measurable $K_\mathrm{ex}$**
 
 2.  **ΔG₂ (binding energy) is the term computed with machine learning** — this is where different REEs and extractants differ most
 
-3.  **Absolute K~ex~ prediction is out of reach** — ±60-120 kJ/mol on the sum is ±10-20 log units on a quantity whose true value spans 0-10
+3.  **Absolute $K_\mathrm{ex}$ prediction is out of reach** — ±60-120 kJ/mol on the sum is ±10-20 log units on a quantity whose true value spans 0-10
 
 4.  **Selectivity lives on a 1-3 kJ/mol scale** (ΔΔG = RT ln β; β = 1.5 is 1.0 kJ/mol), so every computational claim about separation rests on 96-99 % error cancellation between two nearly identical calculations — see [](#the-energy-scale-of-selectivity)
 
@@ -525,7 +525,7 @@ Calculate:
 
 6.  **Focus on trends and rankings** rather than absolute values
 
-7.  **The pH dependence (+3 slope) comes from the stoichiometry**, not from the cycle: K~ex~ itself is pH-independent, and the slope appears only when the mass-action expression is rearranged for D
+7.  **The pH dependence (+3 slope) comes from the stoichiometry**, not from the cycle: $K_\mathrm{ex}$ itself is pH-independent, and the slope appears only when the mass-action expression is rearranged for D
 
 The workflow is:
 
