@@ -12,7 +12,7 @@ So salt is the vertical axis, total polymer the horizontal one, tie lines are
 horizontal (both coexisting phases sit at the same ionic strength), and the
 two-phase dome closes at a critical salt concentration above which the charges
 are screened and there is nothing to separate. That much is standard for
-complex coacervation [spruijt2014polyelectrolyte, sing2020progress].
+complex coacervation [wang2014polyelectrolyte, sing2020progress].
 
 **The binodal here is schematic.** The chapter reports no measured binodal for
 any REE-relevant system, so drawing one with numbers on it would be an

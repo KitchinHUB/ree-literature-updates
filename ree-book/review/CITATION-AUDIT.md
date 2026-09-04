@@ -324,10 +324,33 @@ numeric figures of exactly that kind. They are the obvious next thing to check,
 and they need a different query --- find the numbers, then find their sources ---
 rather than another pass over the bibliography.
 
-Separately, seven entry keys have a stem that does not match the first author in
-the registry: `spruijt2014polyelectrolyte` (Wang & Schlenoff), `kim2022facile`
-(Bediako), `depierro2008cloud` (Mustafina), `pal2019complete` (McCarty),
-`zhang2022driving` (Chen & Wang), `gao2023separation` (Zhang & Azimi) and
-`chen2025lanmodulin` (Chhantyal). The entries themselves are correct --- these
-are key-naming artefacts from an earlier draft, invisible in the rendered book
---- but they mislead anyone reading the source, and renaming them is cheap.
+### Seven keys renamed
+
+Separately, seven entry keys had a stem naming someone who is not the paper's
+first author --- artefacts of an earlier draft, invisible in the rendered book
+but misleading to anyone reading `references.bib`. The entries themselves were
+correct; only the labels were wrong. All seven were renamed, in
+`references.bib`, in `src/08-coacervates.md`, in `src/93-appendix-provenance.md`
+and in `tools/figures/fig_coacervate.py`:
+
+| Old key | New key | Registry first author |
+|---|---|---|
+| `spruijt2014polyelectrolyte` | `wang2014polyelectrolyte` | Wang & Schlenoff |
+| `kim2022facile` | `bediako2022facile` | Bediako |
+| `depierro2008cloud` | `mustafina2006cloud` | Mustafina |
+| `pal2019complete` | `mccarty2019complete` | McCarty |
+| `zhang2022driving` | `chen2022driving` | Chen & Wang |
+| `gao2023separation` | `zhang2023separation` | Zhang & Azimi |
+| `chen2025lanmodulin` | `chhantyal2025lanmodulin` | Chhantyal |
+
+`depierro2008cloud` carried a wrong year as well as a wrong name --- the paper
+is 2006 --- so the new key corrects both.
+
+### Nine `&amp;` leaks in journal names
+
+Fixing the keys turned up a second cosmetic defect from the same source. Nine
+entries whose journal name contains an ampersand had it stored as `\&amp;` ---
+the HTML entity CrossRef returns, escaped for BibTeX --- and it was rendering
+in the public bibliography as *Environmental Science &amp; Technology*, *ACS
+Applied Materials &amp; Interfaces*, and so on, in seven of the visible
+entries. All nine now hold `\&`.

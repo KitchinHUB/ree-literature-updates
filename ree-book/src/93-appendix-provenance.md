@@ -202,10 +202,15 @@ versions were found and substituted: @afonin2024extraction is *Compounds*
 **4**(1) 172–181, not *Minerals*, and @yang2024investigation is *Materials*
 **18**, 1538, not "PMC" — which is a repository, not a journal.
 
-Citation keys were left as they were. A key like `moyer2011overview` is a
-label, not a claim; the author and year the book prints come from the entry's
-fields, and those are now right. The full audit, including the table of every
-entry whose authorship was corrected, is in `review/CITATION-AUDIT.md`.
+Citation keys were left as they were at this stage. A key like
+`moyer2011overview` is a label, not a claim; the author and year the book prints
+come from the entry's fields, and those are now right. Seven were eventually
+renamed anyway --- `spruijt2014polyelectrolyte` became `wang2014polyelectrolyte`,
+`gao2023separation` became `zhang2023separation`, and five more --- not because
+anything rendered wrongly, but because a key that names the wrong person misleads
+whoever opens the `.bib`, and renaming is cheap. The full audit, including the
+table of every entry whose authorship was corrected, is in
+`review/CITATION-AUDIT.md`.
 
 **Stage 3 — does the reference say what the text claims?** A resolving DOI
 proves a paper exists; it proves nothing about whether that paper supports the
@@ -271,7 +276,7 @@ MgCl₂–KCl study rather than chlorination roasting, and @suli2017rare — the
 case where a full PDF could be read rather than an abstract — has no
 chlorination content whatever, though a stoichiometric chlorine feed had been
 cited to it. Twice the paper says the opposite of the sentence citing it:
-@zhang2022driving argues *against* counterion release as the driving force, and
+@chen2022driving argues *against* counterion release as the driving force, and
 @dessimoz2008liquid's headline finding is that slug and parallel flow give the
 *same* mass-transfer coefficient, where the book had used it to distinguish
 them. And once a real number was wearing the wrong unit — the "49 % conversion"

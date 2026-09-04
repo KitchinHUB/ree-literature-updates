@@ -49,14 +49,14 @@ Driving forces for coacervation include:
   partly entropic, and in coarse-grained simulation of symmetric polyelectrolyte
   mixtures at monovalent ionic strength and room temperature it is *this*
   contribution, rather than counterion release, that dominates
-  [@zhang2022driving]
+  [@chen2022driving]
 - Hydrophobic interactions
 - Hydrogen bonding
 
-The properties of coacervates can be controlled by adjusting parameters such as pH, polymer ratio, ionic strength, and molecular characteristics [@spruijt2014polyelectrolyte; @sing2025polyelectrolyte].
+The properties of coacervates can be controlled by adjusting parameters such as pH, polymer ratio, ionic strength, and molecular characteristics [@wang2014polyelectrolyte; @sing2025polyelectrolyte].
 
 ### Complex Coacervation
-Complex coacervation occurs when two oppositely charged polyelectrolytes (polycation and polyanion) are mixed in aqueous solution. At appropriate stoichiometries and ionic strengths, the system phase-separates into a polymer-rich coacervate phase and a polymer-dilute supernatant [@spruijt2014polyelectrolyte].
+Complex coacervation occurs when two oppositely charged polyelectrolytes (polycation and polyanion) are mixed in aqueous solution. At appropriate stoichiometries and ionic strengths, the system phase-separates into a polymer-rich coacervate phase and a polymer-dilute supernatant [@wang2014polyelectrolyte].
 
 The earliest theoretical framework for complex coacervation was developed by Overbeek and Voorn in 1957, who estimated the total free energy of mixing as a sum of Flory-Huggins mixing entropy terms and Debye-Hückel electrostatic interactions [@overbeek1957phase; @priftis2012early]. This mean-field approach captures the essential physics: the electrostatic free energy provides the driving force, while entropic mixing favors the disordered homogeneous state.
 
@@ -89,7 +89,7 @@ be read as a number. What is taken from the literature is the topology: a
 two-phase region at intermediate ionic strength, closing at a critical salt
 concentration above which screening suppresses coacervation, and bounded below
 by a low-salt regime in which the complex is a kinetically trapped precipitate
-rather than a liquid [@sing2020progress; @spruijt2014polyelectrolyte]. Tie
+rather than a liquid [@sing2020progress; @wang2014polyelectrolyte]. Tie
 lines are horizontal because the two coexisting phases share an ionic strength.
 From the chapter: that the metal partitions into the dense phase, and that
 salt, temperature past a cloud point, or a pH change all move the system out of
@@ -112,7 +112,7 @@ Temperature and pH are critical parameters:
 The cloud point (temperature at which the solution becomes turbid due to coacervate formation) is a key characteristic of thermoresponsive coacervate systems.
 
 ## Coacervates for Metal Ion Separations
-The dense, water-rich environment of coacervates provides a unique medium for metal ion partitioning. Unlike organic solvents used in conventional liquid-liquid extraction, coacervates maintain aqueous compatibility while offering distinct chemical environments in the polymer-rich and polymer-dilute phases [@kim2022facile].
+The dense, water-rich environment of coacervates provides a unique medium for metal ion partitioning. Unlike organic solvents used in conventional liquid-liquid extraction, coacervates maintain aqueous compatibility while offering distinct chemical environments in the polymer-rich and polymer-dilute phases [@bediako2022facile].
 
 ### Mechanism of Ion Uptake
 Metal ions partition into coacervates through multiple mechanisms:
@@ -122,7 +122,7 @@ Metal ions partition into coacervates through multiple mechanisms:
 3.  **{index}`Ion exchange <ion exchange>`**: Displacement of polymer-bound counterions (Na+, K+) by metal ions with higher affinity
 4.  **Hydrophobic partitioning**: Neutral metal complexes preferentially partition into the less polar coacervate interior
 
-Polyelectrolyte complex resins fabricated from PDADMAC-PSS coacervates show outstanding performance for heavy metal adsorption, with significant uptakes of Cu2+, Pb2+, and Cd2+ and easy phase separation [@kim2022facile]. PEC capsules have demonstrated selective Au(III) recovery from multimetal mixtures containing Pt, Pd, Cu, Co, and Zn [@wang2023polyelectrolyte].
+Polyelectrolyte complex resins fabricated from PDADMAC-PSS coacervates show outstanding performance for heavy metal adsorption, with significant uptakes of Cu2+, Pb2+, and Cd2+ and easy phase separation [@bediako2022facile]. PEC capsules have demonstrated selective Au(III) recovery from multimetal mixtures containing Pt, Pd, Cu, Co, and Zn [@wang2023polyelectrolyte].
 
 ### Selectivity and Separation Factors
 Selectivity in coacervate-based separations arises from:
@@ -150,7 +150,7 @@ Key features of IDP phase separation:
 - Charge patterning---clustering of like charges into "patches" amplifies phase separation [@wang2025role]
 - Responsiveness to ionic strength, pH, and temperature [@lin2019intrinsically]
 
-Complete phase diagrams for IDP coacervation reveal that block-charged sequences have larger coacervation windows than randomly patterned sequences [@pal2019complete]. This insight guides the design of synthetic polymers with optimized phase behavior.
+Complete phase diagrams for IDP coacervation reveal that block-charged sequences have larger coacervation windows than randomly patterned sequences [@mccarty2019complete]. This insight guides the design of synthetic polymers with optimized phase behavior.
 
 ### Protein-Polyelectrolyte Coacervates
 Protein-polymer coacervates combine the structural selectivity of proteins with the processability of synthetic polymers. Key systems include:
@@ -200,7 +200,7 @@ Note carefully what that \>100-fold number is and is not. It is a ratio of dimer
 
 For an adjacent pair the honest numbers are smaller still. Applying the same dimerization strategy to *Methylorubrum extorquens* LanD — a related periplasmic lanthanide chaperone, not lanmodulin — an engineered variant enriches Pr³⁺ and Nd³⁺ relative to La³⁺ and Ce³⁺ in an all-aqueous ultrafiltration step, with SF Ce/La = 3.0 ± 0.4, Pr/Ce = 1.7 ± 0.2 and Nd/Pr = 1.4 ± 0.2 [@larrinaga2024modulating]. Those are the best protein-based adjacent-pair separation factors reported, they sit inside the conventional 1.5-3.0 band, and they were measured on micromolar solutions at bench scale.
 
-Recent computational studies provide structural insights into REE selectivity in lanmodulin variants, which is the groundwork for rational design of engineered proteins aimed at specific separation challenges [@yao2025computationally]. Wild-type lanmodulin is meanwhile being tested as a sorbent in its own right: crude LanM from *Methylorubrum extorquens* takes up lanthanum from a synthetic acidic leachate at 70 mg La per gram of protein, with chemisorption kinetics and an optimum at pH 5 [@chen2025lanmodulin].
+Recent computational studies provide structural insights into REE selectivity in lanmodulin variants, which is the groundwork for rational design of engineered proteins aimed at specific separation challenges [@yao2025computationally]. Wild-type lanmodulin is meanwhile being tested as a sorbent in its own right: crude LanM from *Methylorubrum extorquens* takes up lanthanum from a synthetic acidic leachate at 70 mg La per gram of protein, with chemisorption kinetics and an optimum at pH 5 [@chhantyal2025lanmodulin].
 
 ## Stimuli-Responsive Coacervates
 Stimuli-responsive coacervates undergo phase transitions in response to external triggers, enabling controlled capture and release of metal ions. This "smart" behavior is essential for practical separation processes requiring both extraction and stripping steps.
@@ -223,7 +223,7 @@ For metal extraction, PNIPAM copolymers with metal-binding groups (acrylic acid,
 
 Cloud point extraction (CPE) uses temperature-induced phase separation of non-ionic surfactants for metal preconcentration [@favrerguillon2004cloud]. At temperatures above the cloud point, micellar solutions separate into surfactant-rich and surfactant-dilute phases. Metal complexes with hydrophobic ligands preferentially partition into the surfactant-rich phase.
 
-For lanthanide separation, CPE with Triton X-114 and 8-hydroxyquinoline achieves Gd3+/La3+ selectivity \> 30 and decontamination factors of 50 [@favrerguillon2004cloud]. Water-soluble calixarenes as chelating agents with Triton X-100 enable CPE of La3+, Gd3+, and Yb3+ with tunable selectivity [@depierro2008cloud].
+For lanthanide separation, CPE with Triton X-114 and 8-hydroxyquinoline achieves Gd3+/La3+ selectivity \> 30 and decontamination factors of 50 [@favrerguillon2004cloud]. Water-soluble calixarenes as chelating agents with Triton X-100 enable CPE of La3+, Gd3+, and Yb3+ with tunable selectivity [@mustafina2006cloud].
 
 ### pH-Responsive Coacervates
 pH-responsive coacervates exploit the charge-switching behavior of weak polyelectrolytes above and below their pKa values [@love2020reversible].
@@ -262,7 +262,7 @@ For {index}`cerium` specifically, the Ce3+/Ce4+ redox couple enables selective o
 The application of coacervate-based systems specifically to REE separations is an emerging field, with most work focusing on aqueous biphasic systems, cloud point extraction, and protein-based approaches rather than classical polyelectrolyte coacervates.
 
 ### Polyelectrolyte Systems for REE
-While PEC coacervates have been extensively studied for heavy metal removal [@kim2022facile; @wang2023polyelectrolyte] their application to REE separation is limited. The similar chemistry of lanthanides means that non-specific electrostatic binding provides poor selectivity.
+While PEC coacervates have been extensively studied for heavy metal removal [@bediako2022facile; @wang2023polyelectrolyte] their application to REE separation is limited. The similar chemistry of lanthanides means that non-specific electrostatic binding provides poor selectivity.
 
 Design strategies for improved selectivity include:
 
@@ -323,7 +323,7 @@ The Nd/Pr separation ("didymium" problem) is critical for permanent magnet recyc
 Recent advances:
 
 - Ionic liquid extraction with β-diketones achieves unprecedented separation factor \>500 [@zhang2024remarkably]
-- PC88A-impregnated surfaces separate Pr+Nd *as a group* from the heavy rare earths --- not from each other --- at SF = 171, reaching 92% Pr+Nd purity at 96% yield from a 10 mg/L all-REE feed at pH 2.5 [@gao2023separation]
+- PC88A-impregnated surfaces separate Pr+Nd *as a group* from the heavy rare earths --- not from each other --- at SF = 171, reaching 92% Pr+Nd purity at 96% yield from a 10 mg/L all-REE feed at pH 2.5 [@zhang2023separation]
 - Kinetic separation strategies with specific ion effects achieve SF \> 8 [@sui2023kinetic]
 - Push-and-pull systems with \[A336\]\[NO3\]-DTPA enhance separation in column extractors [@wang2019enhanced]
 
@@ -360,14 +360,14 @@ A critical review of Sc/Fe separation emphasizes the importance of functional li
 Computational methods provide fundamental understanding of coacervate thermodynamics, structure, and metal ion interactions, guiding the rational design of separation systems.
 
 ### Molecular Dynamics Simulations
-Molecular dynamics simulations of coacervates are mostly coarse-grained rather than atomistic, and the level of description determines what can be asked of them. The coacervation study this chapter leans on uses a coarse-grained, implicit-solvent model with thermodynamic analysis of the potential of mean force along the coacervation pathway [@zhang2022driving]; solvent enters it only through the dielectric constant, so it speaks to polymer-ion interactions and free energies but not to solvation shells or water structure. An all-atom explicit-solvent treatment would be needed for those. What the two levels between them address:
+Molecular dynamics simulations of coacervates are mostly coarse-grained rather than atomistic, and the level of description determines what can be asked of them. The coacervation study this chapter leans on uses a coarse-grained, implicit-solvent model with thermodynamic analysis of the potential of mean force along the coacervation pathway [@chen2022driving]; solvent enters it only through the dielectric constant, so it speaks to polymer-ion interactions and free energies but not to solvation shells or water structure. An all-atom explicit-solvent treatment would be needed for those. What the two levels between them address:
 
 - Ion solvation and coordination environments (all-atom only)
 - Polymer-polymer and polymer-ion interactions
 - Water structure in coacervate vs supernatant phases (all-atom only)
 - Free energy profiles for ion transfer between phases
 
-A key finding from MD simulations is that the thermodynamic driving force for coacervation is entropy-dominated under typical aqueous conditions. The temperature dependence of the dielectric constant of water contributes substantially to the entropic term in electrostatic interactions [@zhang2022driving].
+A key finding from MD simulations is that the thermodynamic driving force for coacervation is entropy-dominated under typical aqueous conditions. The temperature dependence of the dielectric constant of water contributes substantially to the entropic term in electrostatic interactions [@chen2022driving].
 
 ### Thermodynamic Modeling
 #### Voorn-Overbeek Theory
@@ -392,7 +392,7 @@ Key advantages of FTS:
 - Prediction of spinodal and binodal boundaries
 - Extension to multicomponent and multiphase systems [@chen2022multiphase]
 
-FTS has been applied to IDP coacervation, revealing how charge patterning affects phase boundaries [@pal2019complete].
+FTS has been applied to IDP coacervation, revealing how charge patterning affects phase boundaries [@mccarty2019complete].
 
 ### Machine Learning Approaches
 Machine learning offers opportunities for:
@@ -514,7 +514,7 @@ Key conclusions:
 
 3.  **Stimuli-responsive coacervates enable process integration**: Temperature, pH, and redox triggers allow controlled capture and release essential for continuous processes [@love2020reversible; @kumar2023comprehensive].
 
-4.  **Computational methods guide rational design**: MD simulations, field-theoretic methods, and machine learning accelerate the discovery of improved coacervate systems [@zhang2022driving; @lee2008complex].
+4.  **Computational methods guide rational design**: MD simulations, field-theoretic methods, and machine learning accelerate the discovery of improved coacervate systems [@chen2022driving; @lee2008complex].
 
 5.  **Significant challenges remain**: Selectivity for adjacent lanthanides (especially Nd/Pr), polymer cost and recyclability, and scale-up require further development.
 

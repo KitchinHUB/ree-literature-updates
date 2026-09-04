@@ -5,6 +5,16 @@ inherited from the source documents onto the verified bibliography,
 matching on DOI first and normalized title second. Regenerate rather
 than editing by hand.
 
+Note: this map predates the citation audit, and the generator no longer
+matches the book's current `[@key]` syntax, so it is kept as a historical
+record rather than regenerated. Seven of the keys below were later renamed to
+name the paper's actual first author -- `spruijt2014polyelectrolyte` ->
+`wang2014polyelectrolyte`, `kim2022facile` -> `bediako2022facile`,
+`depierro2008cloud` -> `mustafina2006cloud`, `pal2019complete` ->
+`mccarty2019complete`, `zhang2022driving` -> `chen2022driving`,
+`gao2023separation` -> `zhang2023separation`, and `chen2025lanmodulin` ->
+`chhantyal2025lanmodulin`. See `review/CITATION-AUDIT.md`.
+
 - Distinct keys used in `src/`: **128**
 - Resolved to a verified entry: **128**
 - Cite a paper deleted in Phase 1: **0**
