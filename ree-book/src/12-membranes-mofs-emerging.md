@@ -431,7 +431,7 @@ is also the clearest illustration of why a separation factor is the number that
 matters.
 
 The incumbent extractant for adjacent light lanthanides is PC88A, and its
-separation factor for the Nd/Pr pair is about 1.2 [@laboratory2024game]. Most
+separation factor for the Nd/Pr pair is about 1.2 [@laboratory2021game]. Most
 rare earth extractants sit around 1.5 across the series. A β that close to unity
 is what forces the hundred-stage cascades of
 [](#solvent-extraction-fundamentals); the chemistry is barely selective and the
@@ -441,7 +441,7 @@ preference for the smaller, heavier ions, and TODGA — the standard DGA — rea
 about 2.5. That is a large improvement, and for two decades it did not matter,
 because TODGA could be loaded to only about a fifth of the metal concentration
 PC88A tolerates before the organic phase gels or a third phase forms
-[@laboratory2024game]. A cascade run at one-fifth the loading needs five times
+[@laboratory2021game]. A cascade run at one-fifth the loading needs five times
 the solvent circulation for the same throughput, which erases the benefit of the
 better selectivity.
 
@@ -451,7 +451,7 @@ oxygens — twelve new ligands beyond the three the literature had been recyclin
 — to separate the steric from the electronic contribution to selectivity. The
 resulting ligands hold selectivity in the 2.5–3.1 range while staying
 homogeneous at extractant concentrations high enough to be industrially useful
-[@laboratory2024game]. The technology was licensed to Marshallton Research
+[@laboratory2021game]. The technology was licensed to Marshallton Research
 Laboratories in 2021 under an exclusive field-of-use agreement, with the process
 design developed at Idaho National Laboratory.
 
