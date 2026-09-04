@@ -27,7 +27,7 @@ per chapter.
 
 For the older literature — the chemistry that everything since rests on —
 @nash1993basic remains the clearest statement of trivalent f-element separation
-principles, and @moyer2011overview places rare earth extraction inside the
+principles, and @moyer2011overview place rare earth extraction inside the
 wider solvent-extraction tradition it was borrowed from.
 
 ## Ore, beneficiation, and leaching
@@ -62,7 +62,7 @@ For ion exchange, which this book covers only in outline,
 @pomiro2021panoramic is the panoramic review of chlorination and
 carbochlorination of light rare earth oxides, and the closest thing
 [](#pyrometallurgical-and-halogenation-routes) has to a single source.
-@zheng2019mechanism covers chlorination treatment of ores more generally.
+@zheng2019mechanism cover chlorination treatment of ores more generally.
 For the electrowinning end, @liao2024research reviews fluoride molten-salt
 electrolysis as practised industrially and @li2023extraction covers molten-salt
 electrolysis for critical metals more broadly.

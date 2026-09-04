@@ -135,33 +135,77 @@ could not be trusted: an early pass found references whose DOIs resolved to
 unrelated papers, hand-typed entries with wrong volumes and page ranges, and at
 least one paper attributed to the wrong authors.
 
-Verification ran in two stages.
+Verification ran in three stages.
 
 **Stage 1 — does the reference exist?** Every entry was checked against
-CrossRef by DOI, or, for entries with no DOI (reports, standards, agency web
-pages), by fetching the URL. Entries that could not be resolved either way were
+CrossRef by DOI, or, for a DOI CrossRef does not know, against DataCite —
+software and dataset records are minted there rather than in CrossRef, and
+which registry issued a DOI says nothing about the source — or, for entries
+with no DOI at all (reports, standards, agency web pages), by fetching the
+URL. Entries that could not be resolved either way were
 removed to `references-rejected.bib` rather than left in place. Sixty-seven
 entries were removed this way. The rule that followed from that removal governs
 the rest of the book: any claim resting solely on a rejected citation had to be
 removed or rewritten, not left standing without support.
 
 The bibliography has grown since, as chapters were repaired and the claims that
-survived acquired real sources. It now holds 577 entries, all 577 verified — 507
-by resolving the DOI and 67 by fetching a live URL. Three are books with an ISBN
-and no DOI or URL, and they are the honest exception: no ISBN registry could be
-reached from the machine that runs the check, so they are kept, listed by ISBN
-in `verification-report.md`, and marked there as not machine-checked. That is
-deliberate. An earlier version of the checker rejected them, which looked like a
-verdict on the books and was in fact a verdict on the network — it reported
-"ISBN not found" when the truth was that nothing had answered. Silence from a
-lookup service is not evidence, and the tool no longer treats it as any.
+survived acquired real sources. It now holds 577 entries, all 577 verified — 506
+by resolving a DOI in CrossRef, one by resolving a DOI in DataCite, 67 by
+fetching a live URL, and three books by ISBN.
 
-One title diverges from CrossRef's record: `gupta2003chemical` is catalogued by
-CrossRef as *Chemical Metallurgy* and carries the subtitle *Principles and
-Practice* on the book itself. The full record, including the sixty-seven
-rejected entries, is in `verification-report.md` at the root of the book source.
+That last group taught the tool something. An earlier version of the checker
+rejected all three, which looked like a verdict on the books and was in fact a
+verdict on the network: it reported "ISBN not found" when the truth was that
+nothing had answered. Silence from a lookup service is not evidence. The
+checker now distinguishes a service that says *no* from a service that says
+nothing, keeps an entry in the second case, and lists it in
+`verification-report.md` so it can be checked by hand. On the run that produced
+the current report every lookup answered and nothing needed that exemption, but
+the distinction is the difference between a check and a coin toss.
 
-**Stage 2 — does the reference say what the text claims?** A resolving DOI
+No title now diverges from the registry's record. Two appeared to: CrossRef
+files a monograph's subtitle in a field of its own, so `gupta2003chemical`
+(*Chemical Metallurgy: Principles and Practice*) and `biegler2010nonlinear`
+(*Nonlinear Programming: Concepts, Algorithms, and Applications to Chemical
+Processes*) were being compared against a bare *Chemical Metallurgy* and a bare
+*Nonlinear Programming*. The checker now compares against title and subtitle
+together, which is the honest comparison; checking the second of those by hand
+also caught a real error, a title that had been transcribed with its last words
+missing. The full record, including the sixty-seven rejected entries, is in
+`verification-report.md` at the root of the book source.
+
+**Stage 2 — does the entry describe the work it points at?** A DOI that
+resolves to a paper with the right title still says nothing about the rest of
+the entry, and the rest of the entry is most of what a reader uses to find the
+work. Every entry with a DOI was therefore compared field by field against its
+registry record: first author against the whole author list, year, container
+title against every container the registry returns — a proceedings paper
+returns both its series and its volume title, and either may be the right one —
+volume, and pages.
+
+One hundred and fifty entries disagreed, and the pattern was consistent: the
+DOI was right, the title was right, and the bibliographic apparatus around them
+was invented. Eighty-five had wrong page ranges, fifty-eight a wrong year,
+fifty-one credited authors who had nothing to do with the paper.
+`moyer2011overview` is by Tachimori and Morita, not Moyer and Jansone-Popova;
+*Minerals* **10**(2) 178 is by Han alone, not Kim and Osseo-Asare; the 2022
+*PNAS* coacervation paper is by Chen and Wang, not by Zhang and three
+co-authors. All 150 were rewritten from the registry record. Only three titles
+were touched, and only to restore a subtitle the entry had dropped. The prose
+was checked separately for passages that name one of the wrong surnames beside
+its citation; none does, so the error never reached the text.
+
+Two entries pointed at a preprint while naming a journal. Both published
+versions were found and substituted: @afonin2024extraction is *Compounds*
+**4**(1) 172–181, not *Minerals*, and @yang2024investigation is *Materials*
+**18**, 1538, not "PMC" — which is a repository, not a journal.
+
+Citation keys were left as they were. A key like `moyer2011overview` is a
+label, not a claim; the author and year the book prints come from the entry's
+fields, and those are now right. The full audit, including the table of every
+entry whose authorship was corrected, is in `review/CITATION-AUDIT.md`.
+
+**Stage 3 — does the reference say what the text claims?** A resolving DOI
 proves a paper exists; it proves nothing about whether that paper supports the
 sentence citing it. A chapter-by-chapter review checked cited claims against
 the cited work. It found the two failure modes that matter: citations attached
