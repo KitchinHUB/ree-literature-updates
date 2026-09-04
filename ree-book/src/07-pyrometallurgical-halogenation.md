@@ -136,7 +136,7 @@ For rare earth oxides, the primary reactions are:
 
 - 2CeO₂ + 4C + 3Cl₂ → 2CeCl₃ + 4CO (for tetravalent {index}`cerium`; the extra carbon supplies the electrons for Ce(IV) → Ce(III))
 
-Research has shown that direct contact between metal oxides and carbon is not necessary for effective chlorination [@gavira2010carbochlorination]. The reaction proceeds through gaseous intermediates, with carbon providing catalytic activity sites for the formation of highly reactive species. Proposed intermediates include phosgene (COCl₂), monatomic chlorine, and carbon tetrachloride (CCl₄) [@murase1995recovery].
+Research has shown that direct contact between metal oxides and carbon is not necessary for effective chlorination [@gavira2010carbochlorination]. The reaction proceeds instead through gaseous intermediates generated at the carbon surface. The clearest evidence for what those intermediates are comes from the europium system, where the second-stage kinetics show an anomalous form that is traced to the generation of chlorine radicals when Cl₂ interacts with the carbon [@pomiro2014study] -- monatomic chlorine, not molecular Cl₂, is what reaches the oxide.
 
 ### Thermodynamic Considerations
 Thermodynamic analysis using Gibbs free energy calculations demonstrates that carbochlorination of rare earth oxides is spontaneous (ΔG \< 0) over a wide temperature range of 500-1000°C [@xue2025carbochlorination; @pomiro2021panoramic]. The Gibbs free energy becomes increasingly negative with rising temperature, indicating enhanced thermodynamic driving force.
@@ -152,7 +152,7 @@ Key thermodynamic findings include:
 - Pelletizing the concentrate with the reductant before chlorination improves gas-solid contact and prevents the fine feed from being entrained out of the bed [@xia2024experimental].
 
 ### Reaction Mechanisms and Kinetics
-The carbochlorination reaction proceeds through distinct mechanisms depending on the specific rare earth element. For cerium oxide (CeO₂), phase stability diagrams show a direct boundary between the CeO₂ and CeCl₃ phases, indicating that the oxide can convert directly to the chloride without intermediate phases; {index}`neodymium` oxide (Nd₂O₃) must instead pass through an intermediate oxychloride (NdOCl) before complete conversion to NdCl₃ [@anderson2015investigation]. The difference matters for process design, because the oxychloride is the slow step and it is more important in neodymium processing than in cerium processing. {index}`Europium <europium>` is a third case again: its carbochlorination proceeds in resolvable stages through EuOCl and can terminate at the divalent chloride EuCl₂ under reducing conditions [@pomiro2014study].
+The carbochlorination reaction proceeds through distinct mechanisms depending on the specific rare earth element. For cerium oxide (CeO₂), phase stability diagrams show a direct boundary between the CeO₂ and CeCl₃ phases, indicating that the oxide can convert directly to the chloride without intermediate phases; {index}`neodymium` oxide (Nd₂O₃) must instead pass through an intermediate oxychloride (NdOCl) before complete conversion to NdCl₃ [@anderson2015investigation]. The difference matters for process design, because the oxychloride is the slow step and it is more important in neodymium processing than in cerium processing. {index}`Europium <europium>` is a third case again: its carbochlorination resolves into three thermogravimetric stages, forming the oxychloride EuOCl first, carbochlorinating that to liquid EuCl₃ in the second stage, and evaporating the EuCl₃ in the third [@pomiro2014study].
 
 For {index}`yttrium` oxide (Y₂O₃), the reaction mechanism involves the initial formation of YOCl through nucleation and growth. At temperatures above 715°C, the final product is liquid YCl₃, which can evaporate from the reaction zone [@gavira2010carbochlorination].
 
@@ -168,15 +168,18 @@ absorbing a change in reactive surface area. It is a discrepancy in the primary
 literature, not a settled result, and any scale-up model should treat the
 control regime as an open question.
 
-Under the same study's optimum — 800 °C, 60 min, 10 % fluorine-fixing agent and
-10 L/min of chlorine at laboratory scale — the chlorination rates reached 96 %
-for the rare earths and 98-99 % for the Ca, Ba and Fe in the concentrate
-[@xue2025carbochlorination].
+The same group has published two optima at laboratory scale, and the difference
+between them is the honest measure of how tight this window is. At 800 °C for
+60 min with 10 L/min of chlorine and a carbon-to-oxide molar ratio
+n(C)/n(RE₂O₃) of 4.2, the chlorination rates were 93 % for the rare earths and
+99 %, 95 % and 99 % for Ca, Ba and Fe [@xue2026clean]. At 700 °C for 60 min
+with the same chlorine flow, 12 % reductant and 150 μm feed, they were 91 %,
+99 %, 98 % and 100 % [@xue2025onestep].
 
-Mechanistically the reaction runs through the gas phase. Direct contact between oxide and carbon particles is not required [@gavira2010carbochlorination]; the carbon generates reactive intermediates — phosgene (COCl₂), monatomic chlorine, and carbon tetrachloride (CCl₄) have all been proposed — which then attack the oxide [@murase1995recovery].
+Mechanistically the reaction runs through the gas phase. Direct contact between oxide and carbon particles is not required [@gavira2010carbochlorination]; the carbon generates reactive chlorine species — chlorine radicals liberated by the Cl₂-carbon interaction [@pomiro2014study] — which then attack the oxide.
 
 ### Industrial Applications
-Carbochlorination has been demonstrated for multiple feedstocks. Bastnäsite \[(Ce,La)(CO₃)F\] requires special consideration of its fluorine content, and silicon tetrachloride (SiCl₄) is used as a defluorinating agent to prevent the loss of fluorine as volatile rare earth fluorides [@huang2002rare]. End-of-life {index}`NdFeB` magnets are handled by chlorination roasting followed by water leaching, exploiting the fact that the rare earths chlorinate while iron can be held as the oxide [@hua2014selective]. Both are treated in detail below.
+Carbochlorination has been demonstrated for multiple feedstocks. Bastnäsite \[(Ce,La)(CO₃)F\] requires special consideration of its fluorine content, and silicon tetrachloride (SiCl₄) is used as a defluorinating agent to prevent the loss of fluorine as volatile rare earth fluorides [@huang2002rare]. End-of-life {index}`NdFeB` magnets are handled by selective chlorination: immersed in a molten MgCl₂-KCl bath at 600-1200 °C under dry argon, the rare earths in the scrap convert to RECl₃ and dissolve in the melt while the iron does not, giving better than 90 % overall rare earth extraction under optimized conditions [@hua2014selective]. Both are treated in detail below.
 
 ### Stepwise Carbochlorination-Chemical Vapor Transport (SC-CVT)
 A breakthrough process combining carbochlorination with chemical vapor transport (CVT) enables both extraction and separation of individual REEs [@huang2002rare].
@@ -186,7 +189,7 @@ A breakthrough process combining carbochlorination with chemical vapor transport
 - **Carbon**: Reducing agent
 - **Cl₂ gas**: Primary chlorinating agent
 - **SiCl₄**: Defluorination agent for fluorocarbonate minerals
-- **AlCl₃**: Vapor complex former for transport
+- **AlCl₃**: Vapor complex former for transport [@murase1995recovery]
 
 **Mechanism:**
 
@@ -226,8 +229,8 @@ The most recent line of work collapses chlorination and product recovery into a
 single operation: chlorinate the concentrate in a chlorine-rich atmosphere, then
 wash the cake with water to take the rare earth chlorides into solution
 [@xue2025onestep; @xue2026clean]. The claim on the process is not a higher
-recovery — the chlorination rates are the 96 % rare earth and 98-99 % Ca, Ba and
-Fe figures quoted above — but the absence of an acidic effluent. There is no
+recovery — the chlorination rates are the 91-93 % rare earth and 95-100 % Ca, Ba
+and Fe figures quoted above — but the absence of an acidic effluent. There is no
 sulfuric acid bake and no caustic digestion, the only liquid input is wash water,
 and the off-gas (excess Cl₂, CO/CO₂, and the volatile impurity chlorides) is
 recycled or condensed rather than scrubbed into a waste stream. Its authors
@@ -257,7 +260,7 @@ The light rare earth elements (LREEs) comprise {index}`lanthanum` (La), cerium (
 | Promethium (Pm) | Pm₂O₃ | PmCl₃ | Theoretical - Radioactive, limited studies |
 | Samarium (Sm) | Sm₂O₃ | SmCl₃ | Good - Follows LREE pattern |
 
-Cerium and neodymium have received the most research attention due to their industrial importance. Cerium is the most abundant REE and is used in catalysts and glass polishing, while neodymium is critical for NdFeB permanent magnets [@long2010principal]. Studies have confirmed that both oxides can be efficiently converted to anhydrous chlorides via carbochlorination at 700°C with \>93% conversion rates [@anderson2015investigation].
+Cerium and neodymium have received the most research attention due to their industrial importance. Cerium is the most abundant REE and is used in catalysts and glass polishing, while neodymium is critical for NdFeB permanent magnets [@long2010principal]. Both oxides have been studied systematically as carbochlorination feeds, with conversion measured by water-leaching the soluble chloride away from the unreacted oxide and oxychloride [@anderson2015investigation]. Temperature is the dominant variable for both, and four hours is the optimal reaction time for both; the conversions reported are high but not quantitative, and no condition converts either oxide completely.
 
 ### Heavy Rare Earth Elements
 The heavy rare earth elements (HREEs) include {index}`europium` (Eu), gadolinium (Gd), {index}`terbium` (Tb), {index}`dysprosium` (Dy), holmium (Ho), erbium (Er), thulium (Tm), ytterbium (Yb), and lutetium (Lu). These elements are generally less abundant but often more valuable than LREEs [@tunsu2016hydrometallurgical].
@@ -299,9 +302,11 @@ Bastnäsite \[(Ce,La)(CO₃)F\] is a fluorocarbonate mineral, dominated by the l
 Carbochlorination of bastnäsite requires special consideration of the fluorine content. Wang and co-workers developed the carbochlorination route that uses carbon as the reducing agent, chlorine as the chlorinating agent, and silicon tetrachloride (SiCl₄) as a defluorinating agent [@huang2002rare]. Fixing the fluorine as SiF₄ stops it leaving as rare earth fluoride and makes it recoverable as a by-product.
 
 Operating parameters for bastnäsite carbochlorination are given above under
-Reaction Mechanisms and Kinetics; the chlorine feed is typically run at roughly
-twice the stoichiometric requirement to keep the bed in a chlorine-rich regime
-[@suli2017rare].
+Reaction Mechanisms and Kinetics. The chlorine feed is run in excess to hold the
+bed in a chlorine-rich regime; the published laboratory work reports the flow
+rate rather than a stoichiometric ratio -- 10 L/min at the optima quoted above
+[@xue2025onestep; @xue2026clean] -- and no reliable multiple of stoichiometry is
+given in the literature reviewed here.
 
 
 ### Monazite Processing
@@ -331,12 +336,14 @@ Multiple chlorination approaches have been investigated for NdFeB recycling [@ya
 
 - Solid-state chlorination with NH₄Cl, FeCl₂, or MgCl₂-KCl
 
-- {index}`Flash Joule heating <flash Joule heating>` combined with chlorination (FJH-Cl₂)
+- {index}`Flash Joule heating <flash Joule heating>` combined with chlorination (FJH-Cl₂) [@xu2025sustainable]
 
-Chlorination roasting runs cooler and faster than oxidation roasting, and the selective chlorination of the rare earths to RECl₃ separates them from iron, which is held as the oxide under appropriate conditions [@hua2014selective]. Chlorination followed by distillation of the rare earth chlorides has also been demonstrated on magnet scrap [@lorenz2023recovery]. The flash Joule heating variant is the newest of these and is treated separately in [](#flash-joule-heating-with-chlorination).
+What all of these share is that the rare earths chlorinate and the iron does not, so the separation is made by the chemistry of the chlorination step rather than by a downstream purification: in the molten MgCl₂-KCl route the rare earths pass into the melt as RECl₃ at better than 90 % extraction while the iron stays behind [@hua2014selective]. Chlorination followed by distillation of the rare earth chlorides has been developed as a process concept for magnet scrap and evaluated by simulation -- an in-situ chlorination stage feeding a twelve-stage total-reflux column, shown to be *potentially* feasible on two literature compositions rather than demonstrated experimentally [@lorenz2023recovery]. The flash Joule heating variant is the newest of these and is treated separately in [](#flash-joule-heating-with-chlorination); it postdates the 2016 review above, which is why it is cited to its own source.
 
 ### Other Secondary Sources
-Carbochlorination has also been investigated for REE recovery from [@binnemans2017solvometallurgy]:
+Beyond magnets, the secondary streams that a halide route might be pointed at
+are the ones the recycling literature already treats as rare earth resources
+[@tanaka2013recycling]:
 
 - Fluorescent lamp phosphors (primarily Y, Eu, Tb)
 
@@ -350,7 +357,12 @@ Carbochlorination has also been investigated for REE recovery from [@binnemans20
 
 - Mining tailings and processing residues
 
-The carbochlorination approach suits secondary sources with complex compositions, because it does not require a high-grade feedstock and tolerates wide variation in composition [@tanaka2013recycling]. A cascade condensation train downstream of the reactor sorts the resulting chlorides by boiling point, which is where the volatility spread in the table at the head of this chapter earns its keep.
+Carbochlorination is attractive for these in principle, because it does not
+require a high-grade feedstock and tolerates wide variation in composition. That
+is an argument from the chemistry rather than a report of practice: apart from
+magnet scrap, treated above, none of these streams has a published
+carbochlorination flowsheet at any scale, and the halide route for them should
+be read as a proposal. A cascade condensation train downstream of the reactor sorts the resulting chlorides by boiling point, which is where the volatility spread in the table at the head of this chapter earns its keep.
 
 ## Fluorination
 
@@ -851,15 +863,17 @@ Magnesium production via the chloride route has a long industrial history, with 
 
 Thermogravimetric studies have characterized the carbochlorination of MgO [@gaballah1999chlorination]:
 
-- Optimal temperature range: 500-675°C (conversion decreases above 700°C due to MgCl₂ melting)
+- Studied at temperatures below 1000 °C; oxychlorination of MgO sets in above the carbochlorination window
 
 - Activation energy: 49 kJ/mol (between 425-600°C)
 
-- Optimal Cl₂/CO molar ratio: approximately 0.6
+- Optimal Cl₂/CO molar ratio: approximately 0.6, at 550 °C
 
-- Maximum conversion: 82% at 675°C
+- Apparent reaction orders at 550 °C: 2.37 in Cl₂ + CO, 1.47 in Cl₂, 0.89 in CO
 
-- Carbon presence enhances MgO conversion by up to 49%
+Note that the reductant in this study is carbon *monoxide*, not solid carbon:
+these are Cl₂ + CO gas mixtures, and the numbers should not be read as
+solid-carbon reduction results. No conversion percentages are reported.
 
 > Historical Industrial Implementation:
 
@@ -900,7 +914,7 @@ Research on tin slag processing has demonstrated the effectiveness of carbochlor
 
 > Separation by Distillation:
 
-The key advantage of the chloride route for Nb/Ta is the ability to separate these very similar elements by fractional distillation [@yang1999carbochlorination]:
+The chlorination step itself has been characterized kinetically in a fixed bed between 800 and 1000 °C, where the products are gaseous and thermodynamics gives the pentachlorides; solid carbon is markedly more reactive than CO as the reductant [@yang1999carbochlorination]. The key advantage of the chloride route for Nb/Ta is what comes after: these very similar elements can be separated by fractional distillation of the pentachlorides [@gupta1984extractive; @habashi1997handbook]:
 
 - NbCl₅ boiling point: 248°C
 
