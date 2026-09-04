@@ -164,10 +164,17 @@ removed or rewritten, not left standing without support.
 
 The bibliography has grown since, as chapters were repaired and the claims that
 survived acquired real sources, and shrunk again as sources that could not carry
-their claims were removed. It now holds 558 entries, all 558 verified — 510 by
-resolving a DOI in CrossRef, one by resolving a DOI in DataCite, 44 by fetching
-a live URL, and three books by ISBN. Ninety entries sit in
-`references-rejected.bib`.
+their claims were removed. On the last full re-run, on 2026-09-04, it held 637
+entries, all 637 verified — 586 by resolving a DOI in CrossRef, two by resolving
+a DOI in DataCite, 46 by fetching a live URL, and three books by ISBN. Nothing
+was rejected in that run, no title disagreed with the registry, and ninety
+entries sit in `references-rejected.bib` from earlier ones.
+
+That date matters more than the count. The checker is re-run whenever
+`references.bib` changes, and `verification-report.md` carries the date of the
+run that produced it, so a reader who finds this paragraph disagreeing with the
+bibliography is looking at a stale sentence rather than at an unchecked entry —
+and can tell which by comparing the two dates.
 
 That last group taught the tool something. An earlier version of the checker
 rejected all three, which looked like a verdict on the books and was in fact a

@@ -129,113 +129,73 @@ oxides for optical and electronic use, and, historically, the Manhattan-era and
 early Ames Laboratory separations that first produced weighable quantities of the
 individual lanthanides in pure form [@spedding1947separation].
 
-### Conventional Ion Exchange Resins
-**Advantages:**
+### The Resins Themselves
 
-- Capable of refining all REEs
-- Adaptable to various raw material compositions
-- Can achieve 5N-6N purities (99.999-99.9999%)
+The chemistry underneath is the same acid-base and coordination chemistry that
+solvent extraction uses, immobilized on a bead. A strong-acid sulfonic resin
+exchanges cations without discriminating much among them; it separates the
+lanthanides only when an eluent does the discriminating, which is the
+displacement scheme above. A weak-acid carboxylic resin is ionized only above
+its pKa, so loading and stripping are set by pH rather than by an added
+complexant. A chelating resin carries the ligand itself — iminodiacetic,
+aminophosphonic, {index}`diglycolamide` — and brings the selectivity of the
+corresponding extractant onto a solid. An anion exchanger works from the other
+side, holding rare earths only in media concentrated enough to form anionic
+sulfate or chloride complexes.
 
-**Disadvantages:**
+The chelating family is where most of the recent work sits, and its ligands are
+borrowed rather than invented. The diglycolamides were developed for
+partitioning minor actinides from lanthanides in spent fuel reprocessing
+[@ansari2011chemistry]; the same molecules now appear supported on beads.
+@croft2024polymer puts the case for the class plainly, and it is worth
+repeating here: the advantage is using the *same* extractants as commercial
+solvent extraction, with far less of them. What none of this changes is the
+throughput arithmetic of the section above. Ion exchange is reviewed as a route
+for secondary resources — recycled magnets, mine and metallurgical waste
+streams — on the strength of its selectivity and the simplicity of running it,
+not of its capacity [@elouardi2023progress].
 
-- Low throughput
-- Prolonged batch processes (up to a month)
-- High operational costs
-- Low concentrations of REEs in solutions
+### Solid Phases Under Development
 
-**Resin Types:**
+Three directions are worth naming. The honest summary of all three is that they
+are laboratory results.
 
-| Resin Type | Functional Group | Application |
-|----|----|----|
-| Strong acid cation | Sulfonic acid (-SO₃H) | General REE separation |
-| Weak acid cation | Carboxylic acid (-COOH) | pH-selective extraction |
-| Chelating | Iminodiacetic acid, aminophosphonic | High selectivity |
-| Anion exchange | Quaternary ammonium | REE-anionic complex capture |
+**Magnetic adsorbents.** Superparamagnetic nanoparticles functionalized as rare
+earth ion adsorbents — magnetic nanohydrometallurgy — replace filtration with a
+magnet [@molinacaldern2022advances]. The attraction is mechanical rather than
+chemical. The binding chemistry is the resin chemistry above; what changes is
+that recovering a sub-micron particle from a slurry stops being the step that
+decides whether the material can be used at all.
 
-### Magnetic Ion Exchange Adsorbents
-Magnetic adsorbents combine polymer ion-exchange functionality with magnetic particles for easy recovery, representing an emerging approach for REE separation [@molinacaldern2022advances].
+**Polymer inclusion beads.** @croft2024online packed micro
+{index}`polymer inclusion beads <polymer inclusion membranes>` — 60 wt%
+D2EHPA in 40 wt% PVC — into a column, the first time these beads had been run
+in that format. The column separated La³⁺ from Gd³⁺, then took a digest of
+end-of-life {index}`NdFeB` permanent magnets in 2 M sulfuric acid containing
+Fe³⁺, Co²⁺ and Ni²⁺, diluted it to 0.03 M acid, reduced the iron to Fe²⁺ with
+ascorbic acid, and recovered Nd³⁺ and Dy³⁺ by selective back-extraction into
+0.3 M and 2 M sulfuric acid respectively. Thermogravimetry after six cycles
+showed negligible loss of D2EHPA from the beads. The extractant is the ordinary
+industrial one; what the bead contributes is holding a small quantity of it in a
+form that can be packed, run and reused.
 
-**Design Approaches:**
-
-| Approach | Description | Advantages |
-|----|----|----|
-| Impregnated beads | Magnetite (Fe₃O₄) grown or embedded in polymer beads | Simple fabrication |
-| Core-shell | Magnetic core with polymer shell | High magnetic response |
-| Composite | Magnetic particles dispersed in polymer matrix | Tunable properties |
-
-**Functional Groups:**
-
-- Sulfonic acid groups for general cation exchange
-- Chelating groups (iminodiacetic acid, EDTA-type) for selectivity
-- Phosphonic acid groups for enhanced REE binding
-
-**Operational Benefits:**
-
-- Magnetic collection after use eliminates filtration/centrifugation
-- Rapid solid-liquid separation
-- Reusable through desorption and regeneration
-- Demonstrated for heavy metal removal (Cu²⁺, Pb²⁺) with translation to REE recovery
-
-### Polymer Inclusion Beads (µPIBs)
-Micro {index}`polymer inclusion beads <polymer inclusion membranes>` represent a recent advance for online separation of critical rare-earth elements from end-of-life permanent magnets [@croft2024online].
-
-**Features:**
-
-- Functionalized polymer phase for selective REE binding
-- Magnetic responsiveness for easy recovery
-- Designed specifically for magnet recycling applications
-- Online separation capability
-
-**Target Applications:**
-
-- {index}`NdFeB` permanent magnet recycling
-- Recovery of Nd, Pr, Dy from e-waste
-- Separation of critical REEs from non-critical elements
-
-### Ion-Imprinted Polymers (IIPs)
-{index}`Ion-imprinted polymers <ion-imprinted polymer>` create binding cavities complementary in size and coordination to target REE ions, enabling high selectivity [@zhao2025ultra].
-
-**Imprinting Process:**
-
-1.  Template REE ion complexed with functional monomers
-2.  Cross-linking polymerization around template
-3.  Template removal creates selective cavities
-4.  Rebinding occurs with high specificity
-
-**Multi-Ion Imprinted Polymers (MIIPs):** Recent developments enable simultaneous imprinting for multiple REEs:
-
-- Cavities for both light and heavy REEs
-- Group selectivity (LREE vs. HREE)
-- Higher capacity than single-ion IIPs
-
-**Performance Characteristics:**
-
-| Parameter               | Typical Value             |
-|-------------------------|---------------------------|
-| Selectivity coefficient | 10-100× vs. non-imprinted |
-| Adsorption capacity     | 20-100 mg/g               |
-| Reusability             | \>10 cycles               |
-| Equilibrium time        | 30-120 minutes            |
-
-### Advanced Chelating Resins
-Modern chelating resins offer improved selectivity through tailored functional groups:
-
-**Aminophosphonic Acid Resins:**
-
-- Strong affinity for trivalent REEs
-- pH-dependent selectivity
-- Effective for HREE enrichment
-
-**Diglycolamic Acid Resins:**
-
-- Selective for middle and heavy REEs
-- Applied in spent nuclear fuel processing
-- High radiation stability
-
-**Bis-picolinic Acid Resins:**
-
-- Exceptionally high selectivity for Am/Cm over lanthanides
-- Used in minor actinide separations
+**Ion-imprinted polymers.** Polymerize around a template ion, then remove it,
+and the cavity left behind matches that ion in size and coordination.
+{index}`Ion-imprinted polymers <ion-imprinted polymer>` are the sharpest
+statement of the idea that selectivity can be built into a solid rather than
+tuned by solution chemistry. The strongest recent result is a
+thulium-imprinted polymer bridged by alkyne linkages, reported with a maximum
+capacity of 58.6 mg/g, a Tm³⁺/La³⁺ separation factor of 161, retention of 95%
+of capacity over ten adsorption-desorption cycles, and 12.6 mg/g still
+available in 1 M HCl [@zhao2025ultra]. That separation factor needs the
+convention this chapter states below applied to it: Tm and La sit at opposite
+ends of the series, so 161 is a whole-series number and not an adjacent-pair
+one, and it comes from a single laboratory report on a synthetic acidic
+wastewater with a cavity imprinted for one element. Read it as what an
+imprinted cavity can do, not as what a process does. Comparable figures for
+imprinted polymers as a class are not given here: no source consulted reports
+them for the class, and the class is young and heterogeneous enough that an
+average across it would not mean much.
 
 (technology-comparison)=
 ## Comparison of Separation Technologies

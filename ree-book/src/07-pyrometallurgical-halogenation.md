@@ -182,47 +182,37 @@ Mechanistically the reaction runs through the gas phase. Direct contact between 
 Carbochlorination has been demonstrated for multiple feedstocks. Bastnäsite \[(Ce,La)(CO₃)F\] requires special consideration of its fluorine content, and silicon tetrachloride (SiCl₄) is used as a defluorinating agent to prevent the loss of fluorine as volatile rare earth fluorides [@huang2002rare]. End-of-life {index}`NdFeB` magnets are handled by selective chlorination: immersed in a molten MgCl₂-KCl bath at 600-1200 °C under dry argon, the rare earths in the scrap convert to RECl₃ and dissolve in the melt while the iron does not, giving better than 90 % overall rare earth extraction under optimized conditions [@hua2014selective]. Both are treated in detail below.
 
 ### Stepwise Carbochlorination-Chemical Vapor Transport (SC-CVT)
-A breakthrough process combining carbochlorination with chemical vapor transport (CVT) enables both extraction and separation of individual REEs [@huang2002rare].
 
-**Process Components:**
+Chlorination gets the rare earths out of the mineral; it does not separate them
+from each other. Stepwise carbochlorination-chemical vapour transport is an
+attempt to make one high-temperature operation do both, and it was demonstrated
+on a mixed bastnäsite-monazite concentrate [@huang2002rare].
 
-- **Carbon**: Reducing agent
-- **Cl₂ gas**: Primary chlorinating agent
-- **SiCl₄**: Defluorination agent for fluorocarbonate minerals
-- **AlCl₃**: Vapor complex former for transport [@murase1995recovery]
+Four reagents do four jobs. Carbon is the reductant. Chlorine is the
+chlorinating agent. Silicon tetrachloride handles the fluorine that bastnäsite
+brings, for the reason given above. Aluminium chloride is the one that makes
+separation possible: rare earth chlorides form vapour complexes with it, of the
+general form RAl*n*Cl₃₊₃*n*, and a vapour complex can be moved. Volatilized at
+the hot end of a tube and carried down a temperature gradient, each complex
+condenses where its own vapour pressure runs out, so a gradient becomes a
+separation the way a column of resin does — and the impurity chlorides that
+matter most here, AlCl₃ and FeCl₃, are far more volatile than the rare earth
+complexes and stay in the vapour when those have already condensed
+[@huang2002rare; @murase1995recovery]. The reported implementation is two
+stages: chlorination near 800 °C for half an hour under Cl₂ with SiCl₄ and
+AlCl₃, then transport near 1000 °C for six hours under Cl₂ and AlCl₃ with the
+gradient imposed. Chlorination itself runs from about 500 °C, against the
+1000-1200 °C of the older Goldschmidt route to anhydrous RECl₃ [@huang2002rare].
 
-**Mechanism:**
-
-REE chlorides form vapor complexes with aluminum chloride: RAlₙCl₃₊₃ₙ (where R = rare earth). These complexes transport along temperature gradients, with selective condensation enabling separation:
-
-| Species       | Condensation Temperature |
-|---------------|--------------------------|
-| REE chlorides | 1220-730 K               |
-| AlCl₃, FeCl₃  | \< 400 K                 |
-
-**Performance:**
-
-- **LaCl₃ and CeCl₃ purity**: \~80% achieved through selective condensation
-- **{index}`Thorium <thorium>` removal**: Complete (critical for {index}`monazite` processing)
-- **REE recovery**: 92-99 mol% with SiCl₄ addition (vs. 56-88% without)
-
-### Processing of Mixed Bastnäsite-Monazite Concentrates
-The SC-CVT process is particularly effective for mixed bastnäsite (REFCO₃) and monazite (REPO₄) concentrates:
-
-**Optimized Conditions:**
-
-| Parameter | Value |
-| ----------- | ------- |
-| Chlorination temperature | 500-800°C |
-| Atmosphere | Cl₂ + SiCl₄ |
-| REE chloride yield | 92-99 mol% |
-
-**Two-Stage CVT Separation:**
-
-1.  **Stage 1** (800°C, 0.5 h): Cl₂ + SiCl₄ + AlCl₃ atmosphere
-2.  **Stage 2** (1000°C, 6 h): Cl₂ + AlCl₃ atmosphere with temperature gradients
-
-This approach operates at temperatures as low as 500°C, against 1000-1200°C for the older Goldschmidt carbochlorination route to anhydrous RECl₃ [@huang2002rare].
+What SC-CVT achieves quantitatively is not stated here. The separation and
+recovery figures in circulation for this process — a purity for the condensed
+light rare earth chlorides, and a yield with and without SiCl₄ — all trace to
+that single 2002 paper, which is closed access and could not be read for this
+book. Its title and its registry metadata confirm the process and the
+feedstock; they do not confirm any number, so no number is quoted. Someone with
+access to *Metallurgical and Materials Transactions B* can close this gap in an
+afternoon, and the same paper is the only source given for the thorium
+behaviour, which for a {index}`monazite` feed is the claim most worth checking.
 
 ### One-Step Carbochlorination-Washing
 The most recent line of work collapses chlorination and product recovery into a
@@ -246,51 +236,48 @@ rests on a flowsheet comparison, not on an operating plant.
 
 ## Application Across the Rare Earth Series
 
-Carbochlorination has been investigated for various rare earth elements with thermodynamic and experimental evidence supporting its applicability across the entire lanthanide series plus {index}`scandium` and yttrium.
+Carbochlorination has been investigated across the series, but unevenly: a few oxides have been studied experimentally and the rest rest on thermodynamic calculation. This section says which is which.
 
 ### Light Rare Earth Elements
 The light rare earth elements (LREEs) comprise {index}`lanthanum` (La), cerium (Ce), {index}`praseodymium` (Pr), neodymium (Nd), promethium (Pm), and {index}`samarium` (Sm). These elements are more abundant in the principal REE minerals bastnäsite and monazite, making them the primary targets for industrial carbochlorination [@gupta1992extractive].
 
-| **Element** | **Oxide** | **Chloride** | **Carbochlorination Feasibility** |
-|----|----|----|----|
-| Lanthanum (La) | La₂O₃ | LaCl₃ | Excellent - Demonstrated at lab and pilot scale |
-| Cerium (Ce) | CeO₂ | CeCl₃ | Excellent - Direct conversion, no intermediate phases |
-| Praseodymium (Pr) | Pr₆O₁₁ | PrCl₃ | Good - Thermodynamically favorable |
-| Neodymium (Nd) | Nd₂O₃ | NdCl₃ | Excellent - Proceeds via NdOCl intermediate |
-| Promethium (Pm) | Pm₂O₃ | PmCl₃ | Theoretical - Radioactive, limited studies |
-| Samarium (Sm) | Sm₂O₃ | SmCl₃ | Good - Follows LREE pattern |
+Not all of them arrive as the sesquioxide. La₂O₃, Nd₂O₃ and Sm₂O₃ do, but
+cerium is CeO₂ and praseodymium is Pr₆O₁₁, so for those two the reaction has to
+reduce the metal to the trivalent state as well as chlorinate it, and the carbon
+is doing both jobs at once. Promethium has no stable isotope and does not appear
+in any of this work.
 
 Cerium and neodymium have received the most research attention due to their industrial importance. Cerium is the most abundant REE and is used in catalysts and glass polishing, while neodymium is critical for NdFeB permanent magnets [@long2010principal]. Both oxides have been studied systematically as carbochlorination feeds, with conversion measured by water-leaching the soluble chloride away from the unreacted oxide and oxychloride [@anderson2015investigation]. Temperature is the dominant variable for both, and four hours is the optimal reaction time for both; the conversions reported are high but not quantitative, and no condition converts either oxide completely.
 
 ### Heavy Rare Earth Elements
 The heavy rare earth elements (HREEs) include {index}`europium` (Eu), gadolinium (Gd), {index}`terbium` (Tb), {index}`dysprosium` (Dy), holmium (Ho), erbium (Er), thulium (Tm), ytterbium (Yb), and lutetium (Lu). These elements are generally less abundant but often more valuable than LREEs [@tunsu2016hydrometallurgical].
 
-| **Element** | **Oxide** | **Chloride** | **Carbochlorination Feasibility** |
-|----|----|----|----|
-| Europium (Eu) | Eu₂O₃ | EuCl₃/EuCl₂ | Good - May reduce to Eu(II) |
-| Gadolinium (Gd) | Gd₂O₃ | GdCl₃ | Good - Follows lanthanide pattern |
-| Terbium (Tb) | Tb₄O₇ | TbCl₃ | Good - Critical element for magnets |
-| Dysprosium (Dy) | Dy₂O₃ | DyCl₃ | Good - Important for high-temp magnets |
-| Holmium (Ho) | Ho₂O₃ | HoCl₃ | Good - Limited specific studies |
-| Erbium (Er) | Er₂O₃ | ErCl₃ | Good - Thermodynamically favorable |
-| Thulium (Tm) | Tm₂O₃ | TmCl₃ | Theoretical - Rarest stable lanthanide |
-| Ytterbium (Yb) | Yb₂O₃ | YbCl₃/YbCl₂ | Good - May reduce to Yb(II) |
-| Lutetium (Lu) | Lu₂O₃ | LuCl₃ | Good - Highest melting point REE |
-
-The HREEs follow similar carbochlorination chemistry to the LREEs, with thermodynamic calculations indicating spontaneous reaction over the 500-1000 °C window [@xue2025carbochlorination]. Europium and ytterbium are the special cases: both can be reduced to the divalent chlorides (EuCl₂, YbCl₂) under strongly reducing conditions, and the europium reaction has been resolved stage by stage [@pomiro2014study]. Note that the table above lists europium with the heavies for continuity with the source literature; the boundary used in this book's glossary places Eu on the light side of Gd.
+These are sesquioxides throughout, except terbium, which is Tb₄O₇ and so needs
+reducing as well as chlorinating in the way cerium and praseodymium do. The
+heavies otherwise follow the same carbochlorination chemistry as the lights,
+with thermodynamic calculations indicating spontaneous reaction over the
+500-1000 °C window [@xue2025carbochlorination]. Europium and ytterbium are the
+special cases in the other direction: both can be *over*-reduced to the divalent
+chlorides EuCl₂ and YbCl₂ under strongly reducing conditions, and the europium
+reaction has been resolved stage by stage [@pomiro2014study]. What the
+literature does not offer is element-by-element data. The systematic
+carbochlorination studies are on a handful of oxides — Ce, Nd, Y, Eu — and the
+rest of the series is covered by thermodynamic calculation and by the
+expectation that neighbours behave alike. That expectation is usually right in
+lanthanide chemistry and is the reason the series is hard to separate at all,
+but it is not a measurement. Note also that europium is grouped with the heavies
+here for continuity with the source literature; the boundary used in this book's
+glossary places Eu on the light side of Gd.
 
 ### Scandium and Yttrium
 Scandium (Sc) and yttrium (Y) are not lanthanides, but both are counted among the rare earths because their chemistry resembles that of the lanthanides and they occur alongside them in the ore minerals; see the [](#glossary) entry.
 
 Yttrium oxide (Y₂O₃) carbochlorination has been studied in detail by thermogravimetry [@gavira2010carbochlorination]:
 
-- The reaction proceeds via nucleation and growth of YOCl intermediate
-
-- At temperatures above 715°C, the final product is liquid YCl₃
-
-- Evaporation of YCl₃ is observed in thermogravimetric analysis at high temperatures
-
-- Complete conversion to anhydrous YCl₃ is achievable under optimized conditions
+The reaction proceeds by nucleation and growth of a YOCl intermediate rather
+than in one step; above 715 °C the product YCl₃ is liquid, and at higher
+temperatures the thermogram shows it evaporating as fast as it forms. Complete
+conversion to anhydrous YCl₃ is reached under optimized conditions.
 
 Scandium has not been studied for carbochlorination in comparable detail. Its chemical similarity to yttrium makes similar behaviour plausible, but that is an expectation, not a measurement.
 

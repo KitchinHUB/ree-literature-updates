@@ -353,8 +353,9 @@ by fixing the fluorine somewhere else before the acid ever arrives
 
 ### Thermal Decomposition (Roasting)
 #### Simple Calcination
-**Process**: Heat bastnäsite in air [@kim2025rare]. Decarbonation to the
-oxyfluoride comes first, between 300 and 500 °C:
+The simplest route is to heat bastnäsite in air and let the mineral take itself
+apart in two steps [@kim2025rare]. Decarbonation to the oxyfluoride comes first,
+between 300 and 500 °C:
 
 $$
 \mathrm{REE}\cdot\mathrm{FCO_3} \rightarrow \mathrm{REEOF} + \mathrm{CO_2}\uparrow
@@ -389,7 +390,8 @@ follow both exist to avoid that outcome, by roasting the mineral into something
 soluble rather than into an oxide.
 
 #### Alkaline Roasting (Sodium Carbonate Process)
-**Process**: Mix bastnäsite with Na₂CO₃, roast [@kim2025rare]
+The alkaline route mixes the concentrate with sodium carbonate before roasting,
+which gives the fluorine somewhere to go that is not the off-gas [@kim2025rare].
 
 Step 1, defluorination at 400-500 °C:
 
@@ -446,7 +448,9 @@ whether that is an improvement depends entirely on the local regulatory regime
 and on whether there is a fluoride offtake nearby.
 
 #### Ammonium Chloride Roasting (Fluorine Deactivation)
-**Process developed by Chinese researchers** [@chi2004recovery]
+The third roasting route, developed by Chinese researchers, uses ammonium
+chloride and converts the mineral straight to a soluble chloride
+[@chi2004recovery]:
 
 $$
 \mathrm{REE}\cdot\mathrm{FCO_3} + 3\,\mathrm{NH_4Cl} \rightarrow
@@ -676,7 +680,9 @@ puts the thorium as by how much rare earth it recovers.
 
 ### Acid Leaching Methods
 #### Sulfuric Acid Digestion (Classical Method)
-**Process** [@jha2016hydrometallurgical]:
+Concentrated sulfuric acid attacks the phosphate lattice directly, taking the
+rare earths and the thorium into solution together and leaving phosphoric acid
+behind [@jha2016hydrometallurgical]:
 
 $$
 2\,\mathrm{REEPO_4} + 3\,\mathrm{H_2SO_4} \rightarrow \mathrm{REE_2(SO_4)_3} + 2\,\mathrm{H_3PO_4}
@@ -768,7 +774,9 @@ chloride-based, the nitrate offers nothing and the extra reagent cost is wasted.
 
 ### Alkaline Decomposition Methods
 #### Sodium Hydroxide Digestion
-**Process** [@xu2012decomposition; @shahreldin2018selective]:
+The alkaline route inverts the order: it converts the phosphates to hydroxides
+first, and only then chooses an acid
+[@xu2012decomposition; @shahreldin2018selective].
 
 Step 1, alkaline digestion at 140-160 °C in 60-70 wt% NaOH at atmospheric
 pressure, converts the phosphates to hydroxides:

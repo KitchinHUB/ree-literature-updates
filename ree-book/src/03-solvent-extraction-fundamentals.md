@@ -698,6 +698,7 @@ solution is about 0.9 M in monomer, so it saturates near 0.3 M REE and is run at
 half that. A phase ratio that would load the organic past saturation does not
 give the `D` the equilibrium data predict, no matter what the pH is.
 
+(countercurrent-cascade-design)=
 ### Countercurrent Cascade Design
 
 **Principle**: Multiple extraction stages in series maximize REE transfer [@rydberg2004solvent].
@@ -992,6 +993,7 @@ mesh, well-designed weirs and baffles — and they are the reason the settler is
 large as it is. Where a system is prone to stable emulsions, a phase modifier or
 a change of contactor family is a better answer than a bigger settler.
 
+(process-control-and-automation)=
 ### Process Control and Automation
 
 The controlled variables in a solvent extraction circuit follow directly from

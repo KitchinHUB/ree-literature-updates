@@ -50,34 +50,32 @@ relying on any specific number here.
 
 ## Why Microfluidics Changes the Problem
 
-Microfluidic technology represents a transformative approach to REE separation, offering precise control, enhanced mass transfer, and significant process intensification. This section provides a comprehensive overview of microfluidic approaches for rare earth separation.
-
 ### Fundamentals and Advantages
-Microfluidic liquid-phase extraction miniaturizes traditional liquid-liquid extraction within microchannels (typically tens of µm cross-section), offering several key advantages [@song2025mine]:
 
-**Core Benefits:**
+Microfluidic liquid-liquid extraction is the same chemistry as a mixer-settler
+run in a channel tens of micrometres across, and everything that follows from
+that is geometric [@song2025mine]. Shrinking the channel raises the interfacial
+area per unit volume, which raises the volumetric mass transfer coefficient,
+which shortens the time to equilibrium from minutes to seconds. It also makes
+the residence time a controlled quantity rather than an emergent one: flow rate
+and channel length set contact time directly, to sub-second resolution. And
+because the whole device holds microlitres, screening a reagent costs almost
+nothing in material, which is the argument [](#the-mine-on-a-chip-vision) is
+built on.
 
-- **High surface-to-volume ratio**: Dramatically increases mass transfer rates
-- **Precise flow control**: Sub-second contact time resolution
-- **Low reagent consumption**: Minimizes chemical waste
-- **Rapid testing**: Enables high-throughput reagent screening
-- **Process intensification**: 2-3× higher extraction rates than conventional methods
+Two consequences deserve to be separated, because they are usually run together.
+The first is intensification: the same separation, faster and in a smaller
+volume. The numbers behind that claim are collected and their basis given in
+[](#process-intensification-the-numbers), where the enhancement factors are
+computed from measured coefficients rather than quoted. The second has no
+conventional counterpart at all. A contact time short enough to stop the
+extraction before equilibrium is a contact time at which two lanthanides that
+share an equilibrium can still be told apart, and [](#fig-09-kinetics) draws
+exactly that: two approaches to the same endpoint, distinguishable only while
+they are still on the way. Kinetic selectivity is available to a chip and not to
+a mixer-settler, and it is the more interesting of the two claims.
 
-**Performance Metrics:**
-
-| Parameter | Microfluidic | Conventional Mixer-Settler |
-| ----------- | ------------- | --------------------------- |
-| Extraction time | 3-60 seconds | 10-25 minutes |
-| Extraction rate | 2-3× higher | Baseline |
-| Contact time control | Sub-second | Minutes |
-| Reagent consumption | Minimal | High |
-
-The two extraction times in that first row are the same rate law evaluated with
-two mass transfer coefficients, and [](#fig-09-kinetics) draws it. The second
-panel is the part that has no conventional counterpart: a contact time short
-enough to stop the extraction before equilibrium is a contact time at which two
-lanthanides that share an equilibrium can still be told apart.
-
+(extraction-architectures)=
 ## Extraction Architectures
 
 Microfluidic extractors run in the laminar regime (Reynolds number \<2300), and
@@ -224,6 +222,7 @@ The **Dy/Nd separation** critical for permanent magnet recycling has seen dramat
 
 Microfluidic intensification exploits kinetic rather than equilibrium differences [@zhang2019mechanistic]. For lanthanide pairs with distinguished kinetics (Eu³⁺/La³⁺), extraction proceeds to different degrees before equilibrium is reached. For pairs with similar kinetics (Eu³⁺/Sm³⁺), Damköhler number manipulation via flow rate, concentration, and temperature enables separation through precise control of non-equilibrium conditions---impossible in conventional batch systems [@zhang2019enabling].
 
+(process-intensification-the-numbers)=
 ## Process Intensification: The Numbers
 
 Quantitative comparisons between microfluidic and conventional solvent extraction
@@ -232,7 +231,6 @@ channel and which conventional contactor are being compared. The flow-regime
 definitions that underlie these measurements are given by
 [@dessimoz2010quantitative; @kashid2007hydrodynamics].
 
-**Table 2: Performance Comparison**
 
 | **Parameter** | **Microfluidic** | **Conventional** | **Enhancement** |
 |----|----|----|----|
@@ -333,17 +331,20 @@ However, a substantial gap remains between current demonstrations and industrial
 ### Mini-Channel Counter-Current Extractors
 For intermediate scale, mini-channel extractors (4-6 mm diameter) bridge the gap between microfluidics and conventional equipment [@he2024intensifying]:
 
-**Design Parameters:**
+The design result that matters is a length: beyond about 250 mm of channel the
+extractor delivers more than one theoretical stage, which is the threshold at
+which the device stops being a contactor and starts being a cascade element
+[@he2024intensifying]. Below it, no amount of channel improvement substitutes
+for adding another unit.
 
-- Channel length \>250 mm provides \>1 extraction stage
-- Guidance for novel extractor design
-- Improved REE extraction efficiency
-
-**Novel Continuous Countercurrent Micro-Extractor:** Hydrodynamic characteristics studied for continuous operation, addressing the challenges of:
-
-- Large input/output volumes
-- Time delays
-- Nonlinear, multivariable behavior
+Continuous counter-current operation at this scale has been characterized
+hydrodynamically rather than only demonstrated, which is what a scale-up
+calculation needs. The problems it has to solve are the ones any continuous
+contactor has — the volumes going in and out are large relative to the holdup,
+the response to a change at the inlet arrives at the outlet only after a delay,
+and the behaviour is nonlinear in several variables at once — and they are the
+reason [](#process-control-and-automation) treats control as a design problem
+rather than an afterthought.
 
 ## Reported REE Microfluidic Systems
 
@@ -480,51 +481,62 @@ A specific application demonstrating microfluidic strategy for rapid Sc extracti
 ### Leading Research Groups
 **Tsinghua University's State Key Laboratory of Chemical Engineering** leads global research, with Prof. Jianhong Xu's group pioneering hollow droplet extraction and Janus nanoparticle-stabilized systems [@chen2022efficient]. Prof. Yundong Wang's team focuses on continuous REE recovery from wastewater
 
+(the-mine-on-a-chip-vision)=
 ## The Mine-on-a-Chip Vision
 
-The concept of "mine-on-a-chip" envisions leveraging microfluidics for critical materials recovery [@song2025mine]:
+"Mine-on-a-chip" is a perspective piece rather than a process, and it is worth
+reading as an argument about where microfluidics is most likely to pay
+[@song2025mine]. Its case rests on three properties of the format — small sample
+and reagent consumption, parallel processing, and testing that is fast and
+cheap — and it points them not only at separation but at everything around it:
+characterizing a material, screening reagents, developing a chemical analysis,
+and defining a resource in the first place. That framing is a useful corrective
+to the rest of this chapter. The intensification numbers above are about a
+contactor, but the strongest near-term argument for a chip may be that it lets a
+hundred conditions be tried on a gram of feed rather than that it separates
+better than a mixer-settler.
 
-**Opportunities:**
+## Choosing Among the Configurations
 
-- Materials characterization at microscale
-- Reagent screening and optimization
-- Process development with minimal material
-- Analytical sample preparation
-- Rapid separation method development
+The four contactor architectures in [](#extraction-architectures) trade the same
+three things against each other, and the earlier sections give the reasoning for
+each in its own terms rather than as a scorecard. Co-laminar flow has the
+simplest device and the cleanest phase separation, and the slowest mass transfer,
+because nothing stirs. Slug flow adds internal circulation within each segment
+and gets a large gain for a small change in hardware. Droplet flow goes further
+still and buys the highest interfacial area per volume, at the cost of having to
+break the emulsion afterwards. Pore-throat channels exist to reach phase ratios
+no other format can hold. Electrophoretic separation is not a contactor at all
+and belongs in the analytical column of the ledger.
 
-**Challenges Addressed:**
-
-- Natural REE co-occurrence
-- Association with major cations (Ca, Al, Fe)
-- Co-existence with radionuclides
-- Physicochemical similarity across lanthanide series
-
-## Comparison of Microfluidic Configurations
-| Configuration | Mass Transfer | Phase Ratio | Scale | Best Application |
-|----|----|----|----|----|
-| Co-laminar | Moderate | 1:5 to 5:1 | Lab-Pilot | Bulk waste extraction |
-| Slug flow | High (86-95%) | Moderate | Small-Medium | High-efficiency transfer |
-| Micro-droplet | Highest (93-97%) | High | Small-Medium | Trace REE separation |
-| Pore-throat | High | 50-500:1 | Lab | Ultra-high phase ratio |
-| Electrophoretic | Excellent resolution | N/A | Analytical | 14-element separation |
+No table of efficiencies by configuration is given here. The per-architecture
+extraction percentages and phase-ratio ranges that circulate for this comparison
+could not be traced to sources that state them, and they would be misleading
+even if they could: the numbers reported in the studies cited above are each
+tied to a particular extractant, feed and residence time, and moving one of
+those moves the efficiency more than changing the architecture does.
 
 (limitations-and-outlook)=
 ## Limitations and Outlook
 
-**Challenges:**
+Four things stand between the results in this chapter and a process. Interfaces
+that are stable in a clean laboratory system are hard to keep stable at the high
+phase ratios that make the format attractive. Real feedstocks foul and clog
+channels whose whole advantage is that they are small. A chip has to be
+integrated with a leach upstream and a stripping and precipitation train
+downstream, and the intensification is only worth what the slowest neighbouring
+unit allows. And precision fabrication is cheap per device and expensive per
+tonne of throughput, which is the arithmetic that numbering-up has to beat.
 
-- Maintaining stable interfaces at high phase ratios
-- Fouling and clogging with real feedstocks
-- Integration with upstream/downstream processes
-- Cost of precision fabrication at scale
-
-**Future Developments:**
-
-- Machine learning for flow optimization
-- 3D-printed microfluidic devices for rapid prototyping
-- Integration with online analytics (ICP-MS, etc.)
-- Hybrid systems combining multiple flow regimes
-- Automated multi-stage counter-current operation
+The directions being pursued follow from those four. Machine learning is being
+used to optimize flow conditions, and computer vision to read the droplets
+directly, both treated above. 3D printing shortens the prototype cycle.
+Coupling a chip to online ICP-MS closes the loop between running a condition and
+knowing what it did. Hybrid devices combine flow regimes, using one architecture
+for contacting and another for separation. Automated multi-stage
+counter-current operation is the one that matters most, because it is what turns
+a single-stage demonstration into something a cascade calculation applies to,
+and it is the least demonstrated of the five.
 
 Microfluidic rare earth separation has progressed from fundamental kinetic studies to pilot-scale demonstrations numbered up a hundredfold without loss of extraction efficiency. The technology delivers genuine intensification---volumetric mass transfer coefficients 20-500× those assumed for a conventional contactor, extraction rates 2-3× faster [@kolar2016microfluidic], and, in specific pairs, separation factors far above a single conventional stage (279 for Dy/La in a flow-focusing droplet reactor [@fernandezmaza2024high])---by exploiting kinetic differences between lanthanides under precisely controlled non-equilibrium conditions.
 
@@ -540,24 +552,25 @@ Based on this literature review, several promising research directions emerge:
 ### Real-Time Colorimetric Monitoring of REE Extraction
 **Concept**: Develop microfluidic devices with integrated colorimetric indicator zones for real-time monitoring of rare earth element extraction efficiency.
 
-**Precedent**:
-
-- Micro-Raman monitoring demonstrated for two-phase extraction [@nelson2018micro]
-- Smartphone colorimetric detection established [@lopezruiz2014smartphone]
-- REE extraction kinetics characterized via microfluidics [@nichols2011mechanistic]
+The pieces exist separately. Micro-Raman monitoring of a two-phase extraction
+has been demonstrated [@nelson2018micro], smartphone colorimetric detection is
+established [@lopezruiz2014smartphone], and rare earth extraction kinetics have
+been characterized in a microfluidic device [@nichols2011mechanistic]. Nobody
+has put the three together.
 
 ### Machine Learning-Optimized Extraction Screening
 **Concept**: Combine high-throughput droplet generation with computer vision analysis for automated extraction optimization.
 
-**Precedent**:
-
-- Deep learning for droplet detection demonstrated [@hadikhani2019learning; @gelado2023enhancing]
-- Droplet-based extraction fundamentals established [@mary2008microfluidic]
+Deep learning for droplet detection is demonstrated
+[@hadikhani2019learning; @gelado2023enhancing] and droplet-based extraction is
+well founded [@mary2008microfluidic]; what is missing is a loop that closes
+between them, where the vision output changes the next condition tried.
 
 ### Smartphone-Based Field Detection
 **Concept**: Portable microfluidic extraction kit with smartphone colorimetric readout for field applications.
 
-**Precedent**:
-
-- Smartphone platforms demonstrated for multi-analyte detection [@lopezruiz2014smartphone]
-- Paper-based colorimetric devices for heavy metals [@idros2018triple; @chauhan2021barrier]
+Smartphone platforms handle multi-analyte detection [@lopezruiz2014smartphone]
+and paper-based colorimetric devices work for heavy metals
+[@idros2018triple; @chauhan2021barrier]. Neither has been demonstrated on a
+rare earth, where the analytical problem is discriminating between elements that
+a colorimetric reagent sees as identical.

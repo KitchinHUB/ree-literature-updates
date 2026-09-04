@@ -652,7 +652,7 @@ below.
 
 ## Microbial Biosorption
 
-{index}`Biosorption` is passive: a metabolically independent physicochemical
+{index}`Biosorption <biosorption>` is passive: a metabolically independent physicochemical
 uptake onto cell-surface carboxylates, phosphates and hydroxyls, combining
 adsorption, {index}`ion exchange`, surface complexation and
 {index}`precipitation` [@vitova2024microbial; @giese2020biosorption]. Because

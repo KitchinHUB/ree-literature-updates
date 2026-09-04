@@ -201,11 +201,11 @@ third option, but their published errors are for structures and formation
 energies of solids, not for lanthanide-organic binding, and should not be
 assumed to transfer to this quantity without a test set of its own.
 
-**Key variations**:
-
-- Different REEs have different binding strengths
-- Different extractants ({index}`D2EHPA` vs. {index}`PC88A` vs. {index}`TBP <TBP (tributyl phosphate)>`) give different ΔG₂
-- This is the **primary source of selectivity** in gas phase
+This is the term that carries the selectivity. ΔG₁ and ΔG₅ are properties of
+the ion and the proton in water and do not depend on which extractant is used;
+ΔG₂ depends on both the metal and the ligand, so it is where {index}`D2EHPA`,
+{index}`PC88A` and {index}`TBP <TBP (tributyl phosphate)>` differ from one
+another and where one lanthanide differs from its neighbour.
 
 **Magnitudes**: with the protons conserved, ΔG₂ for the lanthanides with
 acidic organophosphorus extractants is on the order of ±100 kJ/mol — a residual,
@@ -250,11 +250,10 @@ $$
 - ΔG₃ ≈ -50 to -200 kJ/mol
 - Mainly dispersion interactions
 
-**Key consideration**:
-
-- This term allows you to screen different solvents!
-- Kerosene vs. dodecane vs. {index}`ionic liquids`
-- Different solvents → different ΔG₃ → different extraction efficiency
+This is the only term in the cycle that depends on the diluent, which makes it
+the one to compute when the question is whether to run in kerosene, in dodecane
+or in an {index}`ionic liquid <ionic liquids>`. Everything else in the cycle is
+unchanged by that choice.
 
 ##### ΔG₄: Desolvation of Extractant from Organic Phase
 
@@ -288,9 +287,8 @@ $$
 - If same solvation model used for both
 - Partial cancellation of organic phase solvation effects
 
-**Typical values**:
-
-- ΔG₄ ≈ +150 to +300 kJ/mol (for 3 × HL)
+For three extractant molecules together, ΔG₄ falls in the range of about +150
+to +300 kJ/mol.
 
 ##### ΔG₅: Proton Solvation in Aqueous Phase
 
@@ -333,7 +331,9 @@ $$
 \end{aligned}
 $$
 
-**Key insight**: The pH appears explicitly here!
+The pH enters the cycle here and nowhere else. Every other term is a property
+of a species; this one is a property of the solution the process is run in,
+which is why a cation-exchange extraction curve is a function of pH at all.
 
 ### Summing the Cycle: Total $\Delta G_\mathrm{extraction}$
 
@@ -457,11 +457,13 @@ $$
 \beta = \frac{K_\mathrm{ex}(\mathrm{REE}_1)}{K_\mathrm{ex}(\mathrm{REE}_2)} = \exp\left(-\frac{\Delta\Delta G}{RT}\right)
 $$
 
-**Why this works**:
-
-- Many systematic errors cancel (ΔG°₅ identical for both REEs)
-- ΔG₃, ΔG₄ similar (same extractant, same solvent)
-- Main difference: ΔG₁ (different ionic radii) and ΔG₂ (different binding)
+Taking the difference between two lanthanides is what makes the calculation
+tractable. ΔG₅ is identical for both, so it cancels exactly. ΔG₃ and ΔG₄ involve
+the same extractant in the same solvent and very nearly cancel. What survives is
+the difference in ΔG₁, which the ionic radii set, and the difference in ΔG₂,
+which the binding sets — and with it most of the systematic error in the
+underlying method, since both calculations are wrong in the same direction by
+approximately the same amount.
 
 (the-energy-scale-of-selectivity)=
 ##### The energy scale this has to reach
@@ -782,11 +784,9 @@ sections above depend on.
 3.  **Crown ether systems** for group/individual REE separation with full thermodynamic data
 4.  **Nonaqueous solvent extraction (NASX)** systems - quantitative thermodynamic studies still lacking
 
-**References:**
-
-- [@papadopoulou2025extraction]
-- [@coquil2022interactions]
-- [@li2021nonaqueous]
+The sources for those four are @papadopoulou2025extraction on thermomorphic
+systems, @coquil2022interactions on extractant-diluent interactions, and
+@li2021nonaqueous on nonaqueous extraction.
 
 
 (linking-dissolution-and-extraction-thermodynamically)=

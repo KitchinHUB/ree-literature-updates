@@ -189,6 +189,63 @@ Work one chapter per commit, so each is reviewable:
 to SEC 10-Ks, company releases, and USGS rather than through bib keys. That was
 a deliberate choice and it is the right one for that material. Do not "fix" it.
 
+## Phase B-bis — the six chapters the survey got wrong
+
+Done 2026-09-04, after Phase B closed. The table above put ch04, ch07, ch09,
+ch13, ch14 and ch19 in the "already fine" group on the strength of their overall
+prose share. That measure was misleading: a chapter can be 80 % prose and still
+carry a self-contained bullet catalogue in the middle of it, and all six did.
+The catalogues were the same defect Phase B targeted, and in two cases they were
+worse than anything Phase B found, because they were performance tables with no
+source at all.
+
+What was removed, and why:
+
+- **ch04** — an ion-exchange catalogue with `**Advantages:**` /
+  `**Disadvantages:**` blocks, a resin-type applications table, and an
+  ion-imprinted-polymer performance table (`Selectivity coefficient 10-100×`,
+  `Adsorption capacity 20-100 mg/g`, `Reusability >10 cycles`,
+  `Equilibrium time 30-120 minutes`) with nothing behind any of the four rows.
+  Rewritten as prose. The IIP numbers now given are the measured ones from
+  @zhao2025ultra — 58.6 mg/g, Tm/La separation factor 161, 95 % of capacity over
+  ten cycles, 12.6 mg/g in 1 M HCl — with the chapter's own "a separation factor
+  without an element pair is not a number" convention applied to the 161. The
+  µPIB section now carries @croft2024online's actual experiment (60 wt% D2EHPA
+  in PVC, La/Gd, then Nd and Dy from a magnet digest) instead of a feature list.
+  Note this chapter hosts the book's single comparison table and states that
+  convention, which made the unsourced table in it the worst instance in the
+  book.
+- **ch07** — the SC-CVT section's performance bullets and both
+  "Carbochlorination Feasibility" tables. The feasibility tables graded all
+  fourteen lanthanides `Excellent` / `Good` / `Theoretical` against no source,
+  including entries that were not feasibility statements at all. The SC-CVT
+  numbers all traced to one closed-access 2002 paper whose full text could not
+  be reached through CrossRef, OpenAlex, Europe PMC, OSTI or the publisher; the
+  process description stays, attributed, and the section now says in the body
+  which numbers were withdrawn and where to check them.
+- **ch09** — an unsourced configuration-comparison table (`86-95 %`, `93-97 %`,
+  `50-500:1`) that duplicated, less carefully, the sourced intensification table
+  earlier in the same chapter; plus the mine-on-a-chip, limitations and
+  research-opportunity bullet stacks.
+- **ch13** — tutorial-slide residue in the thermodynamic cycle
+  (`This term allows you to screen different solvents!`) and a bare
+  `**References:**` list of three keys.
+- **ch14** — the melt-amidation platform specification and the DFT
+  applications list.
+- **ch19** — `**Critical Success Factors:**` / `**Risk Factors:**` generic
+  bullets, the four ore-specific impact lists, and a `Key Limitations` block
+  cited to a ResearchGate link rather than a bibliography entry. The
+  uncertainty ranges quoted there (`GWP estimates vary by 5×`,
+  `Water footprint estimates vary by 8×`) had no source and are gone; the
+  chapter now says why no aggregate range is quoted.
+
+Route worth recording: **OpenAlex returns abstracts for Elsevier papers that
+CrossRef, Semantic Scholar and Europe PMC all report as having none.** It is
+what made the ch04 rewrite possible, after the other three had failed on all
+four keys. It is not universal — it returned nothing for the three older
+metallurgy papers in ch07 — but it should be tried before a claim is written off
+as unverifiable.
+
 ## Phase C — final pass
 
 1. Full clean build; both verification layers green.

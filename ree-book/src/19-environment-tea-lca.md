@@ -202,23 +202,25 @@ for the technologies covered in Parts II and III are compared in a single table 
 [](#technology-comparison), and are not repeated here.
 
 ### Key Economic Drivers
-**Critical Success Factors:**
+The drivers divide into two groups: what is in the ground, and what is done to
+it. The first group is fixed before a process is chosen. Grade sets how much
+rock must be moved and crushed per kilogram of product, and the distribution
+within the ore decides what that product is worth — a heavy-rich deposit
+commands a premium because the heavies are where the value and the scarcity
+are. The second group is what engineering can act on: recovery across the
+flowsheet, reagent consumption (extractant and acid, which the AMD analysis
+above found dominant), whatever credit can be taken for by-products such as
+thorium, uranium, iron, phosphorus and fluorine, the scale of the facility, and
+where it is built, which sets infrastructure, labour and permitting costs.
 
-1.  **Ore grade**: Higher grades dramatically improve economics
-2.  **REE distribution**: HREE-rich deposits command premium
-3.  **Recovery rates**: Each 1% improvement significant
-4.  **Reagent costs**: Extractant and acid consumption dominant
-5.  **By-product credits**: Th/U, Fe, P, F recovery offsets costs
-6.  **Scale**: Larger facilities benefit from economies of scale
-7.  **Location**: Infrastructure, labor, permitting costs vary
-
-**Risk Factors:**
-
-- REE price volatility (historical swings \>10×)
-- Permitting delays (radioactive waste concerns)
-- Technology scale-up risk
-- Geopolitical/trade policy changes
-- Environmental compliance costs
+Against those sit risks that no flowsheet controls. Rare earth prices have
+historically moved by an order of magnitude within a few years, and
+[](#the-industrial-landscape) is where that volatility and its causes are
+treated. Permitting is slow where radioactive residues
+are involved. Any process not yet built at scale carries scale-up risk, which is
+the thing a techno-economic assessment of a laboratory result systematically
+underprices. And trade policy can change the price of the product and the
+availability of the reagents at once.
 
 ## Life Cycle Assessment
 
@@ -308,30 +310,31 @@ kilogram of oxide and per element; they do not resolve either by process stage,
 and no stage-by-stage split is given here.
 
 ### Ore-Specific Environmental Impacts
-**Bastnäsite Processing:**
+The four feedstocks fail in four different directions, and the mineralogy
+predicts which.
 
-- Lower radioactive waste concerns (low Th/U content)
-- Higher SO₂ emissions from sulfuric acid roasting
-- Dust emissions during mining significant for PM
+Bastnäsite carries little thorium or uranium, so the radioactive residue problem
+that dominates monazite is largely absent. What it has instead is a
+sulfuric-acid roast, and with it SO₂, and open-pit mining dust that shows up in
+the particulate-matter category.
 
-**Monazite Processing:**
+Monazite is the opposite case. The thorium and uranium that come with it have to
+be managed as radioactive waste, which drives both the human toxicity result and
+the permitting timeline; the caustic cracking route adds a sodium hydroxide
+waste stream on top.
 
-- Radioactive waste management challenges (Th, U)
-- Caustic cracking generates NaOH waste
-- Higher human toxicity potential
+{index}`Ion-adsorption clays <ion-adsorption clay>` avoid hard-rock mining
+altogether and their energy intensity is correspondingly lower, but in-situ
+leaching puts ammonium sulfate into the ground and it does not stay there. The
+consequence is ammonia in groundwater and marine eutrophication, which is why
+that impact category has a different dominant contributor for this route than
+for any other. [](#ion-adsorption-clays) treats the chemistry and the remediation
+problem.
 
-**{index}`Ion-Adsorption Clays <ion-adsorption clay>` (IACs):**
-
-- In-situ leaching causes ammonia contamination
-- Marine eutrophication from NH₄⁺ emissions
-- Soil and groundwater impacts
-- Lower energy intensity than hard rock mining
-
-**Eudialyte Processing:**
-
-- High gangue element content increases waste
-- Complex mineralogy increases chemical consumption
-- Lower radioactivity than monazite
+Eudialyte has neither monazite's radioactivity nor bastnäsite's grade. Its
+difficulty is that the rare earths are a small fraction of a complex silicate,
+so the gangue-to-product ratio is high and the chemical consumption per kilogram
+of oxide rises with it.
 
 ### Comparative LCA of Technologies
 
@@ -385,39 +388,57 @@ between mining, cracking, and the separation train itself, and no split is given
 here.
 
 ### Data Challenges and Uncertainties
-**Key Limitations:** ([Frontiers Energy 2014](https://www.researchgate.net/publication/273515425)):
 
-- Majority of REE production in China limits data access
-- Proprietary process information
-- Allocation challenges for multi-output processes
-- Temporal and geographical variability
-- Inconsistent system boundaries across studies
+Every number in this chapter should be read with the same caveat, and it is
+worth stating once rather than attaching to each. Most rare earth production is
+in China, and the process data behind a life cycle inventory for it is not
+generally available; what circulates instead is a small number of inventories,
+reused, adapted and re-aggregated. Process information that is available is
+often proprietary in its details. Rare earth flowsheets are multi-output by
+nature — a mixed oxide is separated into fourteen products of wildly differing
+value — so the allocation choice between mass, economic value and exergy moves
+the answer per kilogram of any one element by more than most process
+improvements would. Studies differ in vintage, in the grid mix they assume, and
+in where they draw the system boundary, and those three differences are enough
+to explain much of the spread between published figures without anyone having
+made an error.
 
-**Uncertainty Ranges:**
-
-- GWP estimates vary by 5× or more
-- Water footprint estimates vary by 8×
-- Regional electricity grid mix dominates variability
+The honest consequence is that the *ordering* of impacts is more robust than
+their magnitudes. That chemical production dominates global warming potential,
+that ammonium emissions dominate eutrophication for the ion-adsorption clay
+route, and that heavy rare earths cost far more energy per kilogram than light
+ones, are conclusions that survive the assumptions. The absolute values do not
+travel as well, and no aggregate uncertainty range is quoted here, because none
+of the sources consulted for this chapter reports one in a form that could be
+carried across studies.
 
 ### Improvement Opportunities
-**Process Optimization:**
 
-- Reagent recycling and recovery
-- Heat integration
-- Renewable energy adoption
-- Wastewater treatment and reuse
-- By-product valorization
+The reductions available divide into three kinds, and they differ in how much
+evidence stands behind them.
 
-**Technology Substitution:**
+The first is ordinary process engineering applied to the flowsheet that already
+exists: recycling reagents rather than neutralizing them, integrating heat
+between the roasting and the leaching steps, moving the electricity supply off
+coal, treating and reusing process water, and finding buyers for by-products
+that are currently waste. These are unglamorous, and they act directly on the
+hotspots identified above — chemical production and energy generation — which is
+what makes them the most reliable of the three.
 
-- Supercritical CO₂ for solvent extraction
-- Bioseparation for selective recovery
-- Membrane processes for bulk separation
-- Electrochemical methods for metal production
+The second is substituting a technology for one of the unit operations, which is
+what most of this book is about. Supercritical CO₂ in place of an organic
+diluent, a biological or biomimetic system in place of a cascade, a membrane for
+a bulk split, an electrochemical route to the metal. The chapters on each treat
+what has actually been demonstrated, and the summary that applies here is that
+none has yet been shown at a scale where a life cycle assessment of it would
+mean much. The environmental case for them is a projection.
 
-**Circular Economy:**
-
-- Urban mining from e-waste
-- Industrial symbiosis ({index}`red mud`, coal ash)
-- Product design for recyclability
-- Extended producer responsibility
+The third is not a process change at all but a change in what is fed to the
+process: urban mining from e-waste, industrial symbiosis that treats
+{index}`red mud` and coal ash as feedstocks rather than tailings, designing
+products so the magnets can be recovered, and extended producer responsibility
+to make someone accountable for the end of life.
+[](#recycling-and-urban-mining) treats the recovery chemistry; the point
+here is that a secondary feed skips mining, comminution and cracking altogether,
+and that is where the impacts of the primary route are concentrated. It is the
+only one of the three that changes the denominator rather than the numerator.

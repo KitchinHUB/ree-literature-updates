@@ -42,25 +42,20 @@ main way this literature gets over-sold.
 
 #### Platform Specifications
 
-**Hardware configuration:**
+The platform is a customized Big Kahuna instrument (Unchained Laboratories) with
+two robotic arms dispensing liquid to ±10 μL and ±5% precision, up to 10 mL per
+dispense; six vortexers, two of them temperature-controlled; and integrated
+centrifugation to break the phases. The whole thing is built to be
+radiologically compatible, which is not a detail — it is what allows actinides
+to be run on the same platform as the lanthanides, and it is why the analytical
+problems below include plutonium.
 
-- Custom Big Kahuna automated instrument (Unchained Laboratories Inc.)
-- Two robotic arms with automated liquid dispensing
-  - Delivery accuracy: ±10 μL
-  - Precision: ±5%
-  - Maximum volume: 10 mL per dispense
-- Six vortexers (2 temperature-controlled, 4 ambient)
-- Integrated centrifugation for phase separation
-- Radiologically compatible design for worker safety
-
-**Throughput capability:**
-
-- Estimated **200 measurements per day**
-- Automated sample preparation, extraction, and characterization
-- Rigorous control over experimental variables:
-  - Analyte, extractant and holdback concentrations
-  - pH and temperature
-  - Contact times and mixing rates
+The estimated throughput is 200 measurements per day, and the reason that number
+is worth more than it looks is the list of variables the automation holds fixed
+while it varies one: analyte, extractant and holdback concentrations, pH,
+temperature, contact time and mixing rate. A distribution ratio measured by hand
+carries the uncertainty of all seven. Measured this way it carries the
+uncertainty of the dispense.
 
 #### Bayesian Optimization as the Control Loop
 
@@ -140,32 +135,26 @@ to automated evaluation in one research, development and deployment loop.
 
 #### Green Chemistry Approach: Melt-Amidation
 
-**Innovation:**
+The synthesis is the part that makes the rest possible. Diglycolic acid and a
+secondary amine are heated together without solvent until they melt and react;
+at 200 °C the conversion is complete, and because nothing else is in the pot
+there is nothing to separate out afterwards. No pre-activation of the acid, no
+organic solvent, no toxic by-product, no column. The reported scope is nine DGA
+variants, at yields of 85-96% and purities of 88-96%, on a scale as large as
+200 grams [@an2024agile].
 
-- Solvent-free melt-amidation coupling diglycolic acid with secondary amines
-- No post-reaction workup or purification required
-- Full conversion at 200°C
+Every one of those is a claim about convenience rather than about chemistry, and
+convenience is exactly what decides whether a structure-activity study of
+twenty ligands happens or does not. The route that melt-amidation replaces
+requires activating the acid, running in solvent, and purifying each product,
+which is enough friction to keep most groups working with the three or four
+diglycolamides they can buy.
 
-**Performance:**
-
-- Scalable to **200 grams**
-- Yields: 85-96%
-- Purities: 88-96%
-- Substrate scope: 9 different DGA variants
-
-**Environmental impact:** {index}`Life cycle assessment <life cycle assessment>`
-found a **67% reduction in global warming potential** compared with prior
-synthetic pathways [@an2024agile]. A life-cycle comparison against the route it
-replaces is the part usually missing from papers of this kind.
-
-**Advantages over prior art:**
-
-- No pre-activation of diglycolic acid required
-- Eliminates toxic organic solvents
-- No toxic side-products or waste
-- No tedious purification steps
-- Reduced cost and process time
-- Feasible industrial scale-up
+The environmental case is made the same way and, unusually, is measured:
+{index}`life cycle assessment <life cycle assessment>` puts the reduction in
+global warming potential at 67% against the prior synthetic pathways
+[@an2024agile]. A life-cycle comparison against the route being replaced is the
+part usually missing from papers of this kind.
 
 #### Automated Extraction Screening
 
@@ -228,19 +217,21 @@ should be read as such.
 
 ### Element-Specific Analytical Challenges
 
-**For actinides (Th, U, Pu):**
+The actinides and the lanthanides fail differently, and both failures are
+carry-over problems rather than chemistry problems.
 
-- Surface adhesion to sample introduction systems
-- Extended wash protocols required (50 s with HF [@augustine2024advancing])
-- Radiological safety considerations
-- Specialized facilities and protocols
+Thorium, uranium and plutonium stick to the sample introduction system, so what
+the instrument reports for one sample is contaminated by the one before it. The
+fix is a longer wash — 50 seconds with hydrofluoric acid in the protocol reported
+here [@augustine2024advancing] — which costs throughput directly, and the whole
+of it has to happen inside a facility licensed for the material.
 
-**For lanthanides:**
-
-- Spectral interferences in ICP-MS
-- Matrix effects from high salt concentrations
-- Need for appropriate sample dilution strategies
-- Calibration across wide concentration ranges
+The lanthanides do not adhere, but they interfere. Their ICP-MS spectra overlap
+each other and their oxides overlap the next elements along; the high salt
+loading of a real extraction raffinate suppresses the signal; and the
+concentrations across a distribution-ratio measurement span orders of magnitude,
+so both the dilution strategy and the calibration have to be designed rather than
+defaulted.
 
 ### Data Quality and Validation
 
@@ -262,13 +253,19 @@ trained on data follow in the two sections after it.
 DFT calculations provide atomic-level insight into metal-ligand interactions and
 extraction mechanisms [@summers2024importance].
 
-**Applications:**
-
-- Geometry optimization of REE-ligand complexes
-- Binding energy calculations
-- Charge distribution analysis (Mulliken, NBO)
-- Molecular orbital interactions
-- Selectivity prediction
+What DFT is asked to do here is a short list: optimize the geometry of a
+lanthanide-ligand complex, compute a binding energy, look at where the charge
+sits and which orbitals overlap, and from those predict which of two neighbouring
+lanthanides a ligand will prefer. The last item is the one that matters and the
+one that is hard, for the reason @summers2024importance make central: the energy
+differences that set lanthanide selectivity are smaller than the energy
+differences between alternative stable configurations of the same complex, so a
+calculation that models the wrong configuration can get the selectivity trend
+backwards while looking perfectly converged. Their answer is to automate the
+construction and search of the configuration space rather than build structures
+by hand, and they show across a crown ether, a phenanthroline monocarboxamide
+and a malonamide that the search is what decides whether the predicted trend
+matches experiment.
 
 *{index}`D2EHPA` extractant selectivity.* DFT combined with Born-Haber
 thermodynamics has been used to rationalise the heavy-REE preference of D2EHPA

@@ -267,7 +267,7 @@ which is what the foam needs [@ortunomacias2024enhanced]. That paper reports
 interfacial mechanics, not separation factors, and is evidence about foam
 stability rather than about REE selectivity.
 
-Isolated EF-hand loop peptides dimerize when saturated with lanthanide ions, reproducing the structure of native protein domains [@shaw1997isolated]; that metal-induced self-assembly could be exploited for coacervate formation. The same motif has a separate use in structural biology: a twelve-residue EF-hand grafted onto a folded protein's N-terminus binds a lanthanide specifically and weakly aligns the protein in the magnetic field without perturbing its structure, yielding residual dipolar couplings for solution NMR [@ma2000lanthanide].
+Isolated EF-hand loop peptides dimerize when saturated with lanthanide ions, reproducing the structure of native protein domains [@shaw1997isolated]; that metal-induced self-assembly could be exploited for coacervate formation. The same motif has a separate use in structural biology: a twelve-residue EF-hand grafted onto the N-terminus of a membrane protein in lipid micelles binds a lanthanide specifically and weakly aligns the protein in the magnetic field without perturbing its structure, yielding residual dipolar couplings for solution NMR [@ma2000lanthanide].
 
 #### Lanmodulin (LanM)
 
