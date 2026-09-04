@@ -27,38 +27,62 @@ throughput for environmental burden in ways that are not yet resolved at
 industrial scale.
 
 ## Introduction: REE Mineralogy and Processing Challenges
+
+Rare earth elements do not occur as native metals. They are found in roughly 250
+minerals, of which four matter economically, and those four divide neatly by the
+bond that has to be broken to get the metal out
+[@jha2016hydrometallurgical; @kim2025rare].
+
 ### Major REE Minerals
-Rare earth elements do not occur as native metals but are found in approximately 250 minerals, with only four types being economically viable for large-scale extraction [@jha2016hydrometallurgical; @kim2025rare].
 
-#### Primary Minerals
+**Bastnäsite**, (Ce,La,Nd,Pr)CO₃F, is a fluorocarbonate and the principal light
+rare earth mineral: it is what is mined at {index}`Mountain Pass` in California
+and, with monazite, at {index}`Bayan Obo` in Inner Mongolia. The pure cerium
+end-member is 74.9 % rare earth oxide straight from the formula weights — 164.12 g
+of Ce₂O₃ in 219.13 g of CeFCO₃ — but a concentrate carries gangue and runs lower,
+60-65 % REO at Mountain Pass and 61 % at Bayan Obo [@iaea2011radiation]. The same
+formula weights give the mineral's defining problem: fluorine is 8.7 wt% of it,
+and acid attack on a fluoride releases HF, so the fluorine has to be dealt with
+before or during the leach rather than after.
 
-1.  **Bastnäsite** (REE·FCO₃) - Carbonate-fluoride
-    - Composition: (Ce,La,Nd,Pr)CO₃F
-    - REO content: 60-75%
-    - Light REE enriched (La, Ce, Pr, Nd)
-    - Major source: {index}`Mountain Pass` (USA), {index}`Bayan Obo` (China)
-    - Challenge: Fluorine content requires defluorination
-2.  **Monazite** ((REE,Th)PO₄) - Phosphate
-    - Composition: (Ce,La,Nd,Th)PO₄
-    - REO content: 50-70%
-    - Contains 0.1-12 wt% ThO₂ (radioactive)
-    - Mixed light and middle REEs
-    - Major source: Beach placers (India, Brazil, Australia)
-    - Challenge: Thorium management, refractory phosphate matrix
-3.  **Xenotime** (YPO₄) - {index}`Yttrium <yttrium>` phosphate
-    - Composition: YPO₄ with heavy REEs
-    - REO content: 50-67%
-    - Heavy REE enriched (Y, Dy, Er, Yb)
-    - Associated with monazite in placers
-    - Challenge: Very refractory, difficult to decompose
-4.  **Ion-Adsorption Clays** (Southern China deposits)
-    - REEs weakly bound to clay surfaces [@shi2022column; @han2024efficient]
-    - REO content: 0.05-0.3% (very low grade)
-    - Heavy REE enriched (Y, Dy, Tb, Eu)
-    - Unique: No crystalline REE minerals
-    - Advantage: Easy leaching with mild electrolytes
+**Monazite**, (Ce,La,Nd,Th)PO₄, is a phosphate carrying both light and middle
+rare earths, and it occurs as a heavy mineral in beach placers in India, Brazil
+and Australia. Pure CePO₄ is 69.8 % REO by stoichiometry; natural material is
+lower, and Steenkampskraal in South Africa, one of the few deposits for which a
+full analysis is published, assays 57 % REO [@iaea2011radiation]. Monazite's
+problem is thorium, which substitutes for the rare earths in the same lattice
+site and therefore follows them through every physical separation. It is
+typically 5-6 wt% ThO₂, rising to 8-10 % at Manavalakurichi in India and at
+Steenkampskraal; across rare earth concentrates generally the thorium content
+spans from under 0.1 % to about 10 %, with uranium up to about 1 %
+[@iaea2011radiation]. That makes a monazite plant a radiological facility, and
+the licensing consequences run through the whole flowsheet.
+
+**Xenotime**, YPO₄, is the same phosphate chemistry built on yttrium, and it
+carries the heavy lanthanides — dysprosium, erbium, ytterbium — that bastnäsite
+and monazite do not. It occurs alongside monazite in the same placers. Pure YPO₄
+is 61.4 % REO expressed as Y₂O₃, and natural xenotime assays *higher*, about 67 %
+[@iaea2011radiation], because the heavy lanthanides substituting for yttrium are
+much heavier than yttrium while the phosphate group they sit on is not. Xenotime
+is the most refractory of the four and the hardest to decompose.
+
+**Ion-adsorption clays**, the weathered granites of southern China, are not a
+mineralogical problem at all: they contain no crystalline rare earth mineral. The
+rare earths sit as hydrated cations held electrostatically on clay surfaces
+[@shi2022column; @han2024efficient], which means a dilute salt solution displaces
+them at ambient temperature and no cracking step is needed. The deposits are
+loose layers of completely weathered granitic rock, 3-10 m thick, enriched in the
+heavy elements and in yttrium, europium and terbium. The price of that easy
+chemistry is grade: a few tenths of a percent REO and never above 1 %
+[@iaea2011radiation], two to three orders of magnitude below a bastnäsite ore, so
+the tonnage of rock and of lixiviant per tonne of product is enormous. The
+arithmetic later in this chapter uses 0.05-0.3 % REO, which sits inside that
+bound. Thorium and uranium are both around 0.005 % [@iaea2011radiation], low
+enough that the radiological burden that dominates monazite processing does not
+arise here.
 
 ### Processing Overview
+
 Every route in this chapter has the same skeleton: mine, beneficiate, decompose
 the mineral, leach, separate the solids from the liquor, purify that liquor, and
 hand it to solvent extraction [@jha2016hydrometallurgical; @kim2025rare].
@@ -66,179 +90,266 @@ hand it to solvent extraction [@jha2016hydrometallurgical; @kim2025rare].
 each of the ore types at once, so the routes can be compared step by step
 instead of read one after another.
 
-**This chapter covers beneficiation through purification** — the steps that
-produce the aqueous REE feed. The separation of that feed into individual
-elements is [](#solvent-extraction-fundamentals), and the finished oxides are
-downstream of both.
+This chapter covers beneficiation through purification — the steps that produce
+the aqueous rare earth feed. The separation of that feed into individual elements
+is [](#solvent-extraction-fundamentals), and the finished oxides are downstream
+of both.
 
 ### Challenges in REE Ore Processing
-1.  **Refractory nature**: REE minerals resist decomposition [@kim2025rare]
-    - Strong REE-O, REE-P, REE-F bonds
-    - High thermal stability
-    - Resistant to acid attack
-2.  **Fluorine in bastnäsite**: Environmental concern [@chi2004recovery]
-    - HF released during acid leaching (toxic, corrosive)
-    - Requires defluorination pre-treatment
-3.  **Thorium in monazite**: Radioactive [@borai2016modified; @amaral2010thorium]
-    - 0.1-12 wt% ThO₂
-    - Regulatory challenges
-    - Requires separate disposal/recovery
-4.  **Low grade ores**: Economic challenge
-    - Ion-adsorption clays: 0.05-0.3% REO
-    - Requires processing large volumes
-    - High reagent consumption
-5.  **Complex gangue minerals**: Processing difficulty
-    - Calcite, dolomite (consume acid)
-    - Silicates (form gels)
-    - Iron oxides (contaminate products)
+
+Four difficulties recur across all four ores, and they are worth stating together
+because most of the process choices in this chapter are responses to them.
+
+The minerals are *refractory*. Rare earth-oxygen, rare earth-phosphate and rare
+earth-fluoride bonds are strong, the minerals are thermally stable, and none of
+the three crystalline ores dissolves in dilute acid [@kim2025rare]. Decomposition
+therefore means concentrated acid at elevated temperature, a high-temperature
+roast, or concentrated caustic — all of which are expensive, and all of which
+dissolve the gangue along with the target.
+
+The *problem elements travel with the product*. Fluorine in bastnäsite comes off
+as HF, toxic and corrosive, and forces either a defluorinating pre-treatment or a
+scrubber on the leach [@chi2004recovery]. Thorium in monazite is radioactive,
+chemically similar enough to the rare earths to resist physical separation, and
+subject to a regulatory obligation that outlasts the plant
+[@borai2016modified; @amaral2010thorium; @iaea2011radiation]. Neither is a trace
+contaminant that can be polished out downstream; both are structural features of
+the mineral.
+
+The *ores are dilute*, most extremely so for ion-adsorption clay at a few tenths
+of a percent [@iaea2011radiation]. Large volumes of rock and of reagent must be
+handled per tonne of oxide, which puts reagent consumption and water use at the
+centre of the economics rather than at the margins.
+
+And the *gangue is chemically active*. Calcite and dolomite consume acid without
+yielding anything; silicates form gels that will not filter; iron oxides dissolve
+and contaminate the liquor. The purification circuit later in this chapter exists
+almost entirely to undo what these minerals do during the leach.
 
 ## Ore Beneficiation and Pre-Concentration
-Before leaching, physical separation methods concentrate REEs from gangue [@jordens2013beneficiation; @chelgani2015rare].
+Before any of that chemistry starts, physical separation concentrates the rare
+earth minerals away from the gangue, so that the acid or the caustic is spent on
+a tonne of concentrate rather than a hundred tonnes of rock
+[@jordens2013beneficiation; @chelgani2015rare].
 
 ### Crushing and Grinding
-**Purpose**: Liberate REE minerals from host rock
 
-**Typical process**:
+Comminution has exactly one purpose: to break the rock until each rare earth
+grain is free of the gangue it grew against, and no further. Grinding past
+liberation costs energy, makes slimes that report to the tailings and are never
+recovered, and leaves a pulp that filters badly downstream. Grinding short of it
+leaves locked particles that no separation can pull apart. Where the liberation
+size sits is a property of the deposit and not of the mineral, so the useful
+thing here is not a general size band but what two large operations actually do.
 
-1.  Primary crushing: Jaw crusher (1 m → 10 cm)
-2.  Secondary crushing: Cone crusher (10 cm → 1 cm)
-3.  Grinding: Ball mill or rod mill (1 cm → 100-200 μm)
-4.  Classification: Cyclones or screens
+At Mountain Pass the ore is crushed in three stages to a maximum of about 10 mm
+and stockpiled; different grades are then blended to a uniform 7-9 % REO
+feedstock and ground in a ball mill to 100 % passing a 150-mesh screen, roughly
+100 μm, before conditioning and flotation [@iaea2011radiation]. At Bayan Obo the
+ore is crushed, ground and classified to 90 % below 74 μm before flotation,
+magnetic separation, tabling and washing [@iaea2011radiation]. The two targets
+agree to within a factor of two, which is about as much agreement as
+ore-specific grinding ever shows.
 
-**Target particle size**:
-
-- Flotation feed: 75-150 μm (optimal)
-- Gravity separation: 100-500 μm
-- Magnetic separation: 50-200 μm
+Grinding also reappears much later in the flowsheet, for a different reason.
+Monazite fed to caustic digestion is dry-ground to 90 % below about 50 μm and
+50 % below 10 μm — finer than any flotation target — because the digestion is a
+topochemical reaction and a coarse grain becomes coated with sodium hydroxide
+and stops reacting [@iaea2011radiation]. There the grind is set by the
+chemistry, not by liberation, and that distinction is worth keeping in mind
+whenever a particle size is quoted for a rare earth process.
 
 ### Gravity Separation
-**Principle**: Density difference between REE minerals and gangue [@zhou2024gravity]
 
-**Density values**:
+Every rare earth ore mineral is heavy and the common gangue is not. Measured
+densities are 4.9-5.2 g/cm³ for bastnäsite-(Ce), 4.98-5.43 for monazite-(Ce) and
+4.4-5.1 for xenotime-(Y), against 2.65 for quartz, 2.71 for calcite and 3.18 for
+fluorite [@anthony2001handbook]. A density contrast approaching two to one is
+large by mineral-processing standards, and it is why gravity separation is the
+primary operation on a placer and a pre-concentration step on hard rock
+[@jordens2013beneficiation; @jordens2013processing; @zhou2024gravity].
 
-- Bastnäsite: 4.9-5.2 g/cm³
-- Monazite: 4.9-5.3 g/cm³
-- Xenotime: 4.4-5.1 g/cm³
-- Gangue (quartz, calcite): 2.6-2.9 g/cm³
+The equipment is conventional — shaking tables, spiral concentrators, jigs, and
+dense-medium separation — and the choice among them turns on particle size
+rather than on mineralogy, because the settling velocity that all of these
+machines exploit depends on size as strongly as on density. That is also the
+method's limitation: a fine dense grain and a coarse light one fall at the same
+rate, so a gravity circuit only separates within a narrow size fraction, and a
+plant runs several in parallel.
 
-**Methods**:
+What gravity separation delivers is best read from a placer circuit, where it is
+the main operation rather than a scalping step. In a heavy-mineral sand plant,
+oversize is screened out and slimes below about 75 μm are removed by
+hydrocyclone; the sand then passes through banks of spirals that produce a
+pre-concentrate of 80-85 % heavy minerals, which further spirals and wet tables
+upgrade to 90-98 % [@iaea2011radiation]. Note what that circuit concentrates:
+*heavy minerals* collectively — ilmenite, rutile, zircon, monazite, xenotime —
+not rare earths. Pulling monazite out of that mixture is a magnetic problem, and
+it happens dry and downstream.
 
-1.  Shaking tables
-2.  Spiral concentrators
-3.  Jigs
-4.  Heavy media separation (DMS)
-
-**Performance**:
-
-- Recovery: 60-80% REE
-- Grade improvement: 2-5× enrichment
-- Used as pre-concentration before flotation
+No general recovery or enrichment factor is quoted here. Bands of that kind are
+widely repeated for rare earth gravity separation but could not be traced to a
+study that measures them, and they would be meaningless in any case without the
+feed grade and the deposit they came from. @zhou2024gravity shows the
+alternative: on the Balzhe niobium-zirconium-rare earth ore they compare a
+dense-medium cyclone, a shaking table and a Knelson centrifuge across three size
+fractions and report the grade each achieves, reaching total rare earth oxide
+grades of 0.41-0.44 % on a feed of a few tenths of a percent. Those are small
+numbers because the ore is poor, which is exactly the point: an enrichment ratio
+is a statement about an ore, not about a machine.
 
 ### Magnetic Separation
-**Principle**: Magnetic susceptibility differences [@chen2023various]
 
-**Magnetic properties**:
+Monazite and xenotime are paramagnetic [@anthony2001handbook], bastnäsite only
+weakly so, and the silicate and carbonate gangue is effectively non-magnetic.
+That is enough of a difference to sort them, and because magnetic separation is
+a dry operation it is normally placed after a wet gravity circuit has already
+discarded most of the mass [@chen2023various]. Published susceptibility values
+for these minerals vary with iron substitution and with how the measurement was
+made, and none is quoted here; what the flowsheet actually relies on is the
+ordering — ferromagnetic, paramagnetic, non-magnetic — not the magnitudes.
 
-- Monazite: Paramagnetic (χ ≈ 500-900 × 10⁻⁶ CGS)
-- Xenotime: Paramagnetic (χ ≈ 100-300 × 10⁻⁶ CGS)
-- Bastnäsite: Weakly paramagnetic
-- Gangue: Typically diamagnetic or weakly paramagnetic
+Three classes of machine work that ordering at three field strengths. A
+low-intensity separator takes out ferromagnetic material: magnetite, and the
+tramp iron every mill sheds. A high-intensity separator recovers the
+paramagnetic rare earth phosphates. A high-gradient separator, in which the
+field is concentrated onto a matrix of steel wool or expanded metal, extends the
+same principle to particles too fine for a uniform field to move.
 
-**Equipment**:
+The industrially decisive use is the monazite-zircon split in a mineral sands
+plant. Ilmenite, which has the highest susceptibility, comes out first; rutile
+and zircon are then separated electrostatically on their conductivity
+difference; and magnetic separation is what finally removes the paramagnetic
+monazite from the non-magnetic zircon. Where that monazite is destined for
+chemical processing, its concentrate is upgraded magnetically to 97-99 % purity
+[@iaea2011radiation]. That figure is worth holding onto, because it means the
+feed to a monazite cracking plant is close to a pure mineral rather than an ore,
+and every digestion condition discussed later in this chapter assumes it.
 
-1.  Low-intensity magnetic separator (LIMS): Remove magnetite, hematite
-2.  High-intensity magnetic separator (HIMS): Concentrate paramagnetic REE minerals
-3.  High-gradient magnetic separator (HGMS): Fine particle separation
-
-**Industrial application**:
-
-- Bayan Obo (China): Magnetic separation of bastnäsite-magnetite ore
-- Recovery: 70-85%
+At Bayan Obo magnetic separation does something else entirely. The deposit is an
+iron ore that happens to carry rare earths, and the beneficiation circuit
+recovers magnetite and haematite, together with fluorite and niobium oxide,
+alongside the rare earth concentrate [@iaea2011radiation]. No overall rare earth
+recovery for that circuit is reported by the sources used here, and none is
+given.
 
 ### Froth Flotation
 **The principal beneficiation method** for bastnäsite and monazite [@chelgani2015rare; @jordens2013beneficiation]
 
 #### Bastnäsite Flotation
-**Collectors** (promote hydrophobicity):
 
-- Fatty acids: Oleic acid, tall oil, hydroxamic acids
-- Optimal pH: 8-10 (alkaline)
-- Concentration: 500-2000 g/ton
+Bastnäsite is floated with anionic collectors — fatty acids such as oleic acid
+and tall oil, and increasingly hydroxamic acids — which bind through a
+carboxylate or hydroxamate head group to rare earth cations exposed on the
+fracture surface and leave a hydrocarbon tail pointing into the water
+[@jordens2013beneficiation; @chelgani2015rare]. Making that surface complex is
+the whole of the chemistry; everything else in the reagent suite exists to stop
+the same thing happening on the gangue. Sodium silicate depresses silicates,
+quebracho and other tannins depress calcite, and fluoride is used for selective
+depression.
 
-**Mechanism**:
+The difficulty is structural rather than a matter of dosage. The principal
+gangue minerals of a rare earth carbonatite — calcite, barite, fluorite — are
+themselves alkaline-earth salts presenting hard divalent cations at their
+surfaces, and a carboxylate collector is perfectly happy to bind those too.
+Bastnäsite flotation is therefore a selectivity problem, not a recovery problem,
+and it is why hydroxamates, which chelate the rare earth cation rather than
+merely ion-pairing with it, have displaced plain fatty acids where the ore can
+afford them. Collector dosages and operating pH windows are deposit-specific and none is
+quoted here; no primary source could be traced for a general value.
 
-- COO⁻ groups adsorb on REE-F surface sites
-- Forms hydrophobic REE-oleate surface complex
-- Enables bubble attachment
+One operating detail deserves naming because it is unusual outside this
+industry: Mountain Pass floats *hot*. Conditioning and flotation are run at
+elevated temperature [@iaea2011radiation], which sharpens the difference between
+the collector's affinity for bastnäsite and its affinity for calcite in a way
+that no reagent addition at ambient temperature achieves.
 
-**Depressants** (suppress gangue):
+The circuit itself is conventional — rougher, scavenger and cleaner stages in
+series, as in any sulphide plant. Grades and recoveries are strongly deposit-
+and mineralogy-specific, and no general band is given. One sourced result
+conveys the flavour: in a selective-flotation study on Bayan Obo ore, 84.7 % of
+the bastnäsite was recovered into a concentrate assaying 97.2 % bastnäsite and
+69.5 % REO [@iaea2011radiation]. Even that does not close the problem, because
+bastnäsite and monazite are partly intergrown in this ore, so a third product —
+a mixed bastnäsite-monazite concentrate of 40-60 % REO — is unavoidable, and it
+is that mixed material which feeds the sulfuric route described later.
 
-- Na₂SiO₃ (sodium silicate): Depresses silicates
-- Quebracho, tannin: Depress calcite
-- NaF: Selective depression
+#### Monazite and Xenotime Flotation
 
-**Circuit structure**: rougher, scavenger and cleaner stages in series, as in
-any sulphide flotation plant. Grades and recoveries are strongly deposit- and
-mineralogy-specific; the Mountain Pass figures below are given as one sourced
-example rather than as a general band.
+Monazite and xenotime are floated with hydroxamic acids and alkyl phosphates
+rather than with plain fatty acids, and the reason is apatite [@chelgani2015rare].
+Apatite is another phosphate, it occurs with the rare earth phosphates in most
+deposits that carry them, and its surface chemistry is close enough that a
+carboxylate collector cannot tell the two apart. A hydroxamate chelates the rare
+earth cation instead of simply ion-pairing with it, which buys some selectivity;
+the rest has to come from depressants chosen against the particular gangue.
 
-#### Monazite/Xenotime Flotation
-**Collectors**:
+Below about 20 μm the problem changes character rather than degree. Fine
+particles carry too little mass to hold a bubble reliably and too much surface
+area per tonne to be worth collecting, so they are lost to the tailings whatever
+the reagent scheme — which is the same slimes penalty that made the gravity
+circuit reject everything below 75 μm. The circuit is the usual
+rougher-cleaner-scavenger arrangement, roughers sized for recovery and cleaners
+for grade; the number of stages is deposit-specific and no figure is given here.
 
-- Hydroxamic acids (more selective than fatty acids)
-- Alkyl phosphates
-- Optimal pH: 6-9
+It is worth being blunt that flotation is not how most of the world's monazite
+has actually been recovered. Placer monazite — the Indian, Brazilian and
+Australian beach sands that supplied the industry for decades — is concentrated
+by wet gravity separation followed by dry magnetic and electrostatic separation,
+with flotation appearing only for the fine cleaning of particular minerals
+[@iaea2011radiation]. Flotation is the hard-rock route. On a placer, geology has
+already done the liberation, and physics is cheaper than chemistry.
 
-**Challenges**:
+### What Beneficiation Hands Over
 
-- Similar flotation behavior to gangue apatite
-- Requires selective depressants
-- Fine particle losses (\<20 μm)
+The product of everything above is a *concentrate*, and the single number that
+matters to the rest of this chapter is its grade, because the grade is what
+fixes the reagent bill and the residue tonnage per tonne of oxide made. Feed
+grade, product grade and recovery are only meaningful together and from one
+operation, so rather than a general band, here are two chains taken whole from a
+single source.
 
-**Typical flowsheet**:
+At **Mountain Pass** the ore carries 10-15 % bastnäsite, 12 % on average, and
+2-12 % REO. Stockpiles of different grades are blended to a uniform 7-9 % REO
+feed; the ore is crushed in three stages to about 10 mm, ball-milled to roughly
+100 μm, conditioned, and floated hot; and the product is a bastnäsite
+concentrate of 60-65 % REO [@iaea2011radiation].
 
-1.  Rougher flotation (high recovery)
-2.  Cleaner flotation (high grade)
-3.  Scavenger flotation (treat rougher tailings)
-4.  3-6 stages total
+At **Bayan Obo** the ore is crushed, ground and classified to 90 % below 74 μm,
+then treated by flotation, magnetic separation, tabling and washing to a mineral
+concentrate containing 65-67 % bastnäsite and 14-15 % monazite and assaying 61 %
+REO [@iaea2011radiation]. Further dressing splits that into separate bastnäsite
+and monazite products plus the unavoidable mixed concentrate noted above.
 
-### Beneficiation Summary
-**Typical concentration factors**:
-
-- Raw ore: 5-15% REO → Concentrate: 50-75% REO
-- Overall recovery: 60-80%
-- Produces "concentrate" suitable for leaching
-
-Treat those bands as an order-of-magnitude orientation across deposits, not as
-a flowsheet: feed grade, product grade and recovery are only meaningful
-together, from one operation. The Mountain Pass case immediately below is such
-a chain -- feed grade, product grade and recovery all from the same source --
-and is the one to reason from.
-
-**Mountain Pass (USA) beneficiation** [@kim2025rare]:
-
-- Feed: 7-9% REO bastnäsite ore
-- Crushing → grinding → flotation (3 stages)
-- Product: 60% REO concentrate
-- Recovery: 70%
+Neither chain carries a recovery figure, and that omission is deliberate. The
+source that documents these grades does not report the overall rare earth
+recovery of either plant, so none is asserted. The "60-80 % overall recovery"
+that circulates for rare earth beneficiation could not be traced to a
+measurement and has been removed rather than re-attributed; where a recovery is
+needed later in this chapter, the arithmetic is done at perfect recovery to give
+a floor, and the shortfall is left explicit.
 
 ## Bastnäsite Processing: Roasting and Leaching
 ### The Fluorine Problem
-Bastnäsite (REE·FCO₃) contains 5-10% fluorine. Direct acid leaching releases HF gas [@kim2025rare]:
+Fluorine is 8.7 wt% of pure bastnäsite by formula weight (19.00 g of F in
+219.13 g of CeFCO₃), and somewhat less of a concentrate diluted by gangue. It is
+stoichiometrically unavoidable, and direct acid leaching releases it as HF gas
+[@kim2025rare]:
 
 $$
 2\,\mathrm{REE}\cdot\mathrm{FCO_3} + 3\,\mathrm{H_2SO_4} \rightarrow
   \mathrm{REE_2(SO_4)_3} + 2\,\mathrm{HF}\uparrow + 2\,\mathrm{CO_2}\uparrow + 2\,\mathrm{H_2O}
 $$
 
-**Problems with HF**:
-
-- Highly toxic (PEL = 3 ppm)
-- Corrosive to equipment (requires specialized alloys)
-- Environmental regulations restrict emission
-- Causes fluorosis in surrounding areas
-
-**Solution**: Pre-roasting to defluorinate [@chi2004recovery; @kim2025rare]
+Hydrogen fluoride is acutely toxic, attacks glass and most alloys, and is
+tightly regulated as an emission; chronic exposure of populations near
+uncontrolled plants causes fluorosis. (Occupational exposure limits are set by
+national regulators and are not quoted here.) An HF-generating leach therefore
+buys three obligations at once — specialised materials of construction, a
+scrubbing train on the off-gas, and a fluoride-bearing effluent to neutralise —
+and the point of the roasting routes below is to discharge one or more of them
+by fixing the fluorine somewhere else before the acid ever arrives
+[@chi2004recovery; @kim2025rare].
 
 ### Thermal Decomposition (Roasting)
 #### Simple Calcination
@@ -256,23 +367,26 @@ $$
 2\,\mathrm{REEOF} + \mathrm{H_2O} \rightarrow \mathrm{REE_2O_3} + 2\,\mathrm{HF}\uparrow
 $$
 
-**Conditions**:
+Calcination is the cheapest option available, because it adds no reagent at all:
+heat, air, and a scrubber. Two operating points are on record. Mountain Pass
+calcines its acid-washed concentrate at 600-800 °C, which decomposes any
+remaining carbonate and converts about half of the Ce(III) present to Ce(IV),
+producing an oxide mixture assaying 85-90 % REO [@iaea2011radiation]. In the
+laboratory, @sinclair2017rare dry-roast bastnäsite concentrate at 730 °C for
+three hours as a pretreatment. No general window is given: the roast is set on the
+particular concentrate, and those two operating points are what the sources
+actually report.
 
-- Temperature: 500-700°C
-- Time: 2-4 hours
-- Atmosphere: Air or O₂-enriched
-
-**Advantages**:
-
-- Simple process
-- No reagent addition
-- Fluorine removed as HF (needs scrubbing)
-
-**Disadvantages**:
-
-- REE₂O₃ is highly refractory (difficult to leach)
-- Requires concentrated H₂SO₄ at high temperature for dissolution
-- HF emission requires treatment
+What the calcine costs is set by where the fluorine goes and by what the product
+is. The fluorine leaves as HF, so the scrubbing obligation is not discharged, it
+is merely moved from the leach to the furnace — which is at least an easier
+place to put it, because the off-gas is dry, hot and of known composition rather
+than mixed with acid mist. The larger price is the product. A calcined
+sesquioxide is refractory: having driven off the carbonate that made the mineral
+vulnerable, the roast leaves a lattice that dilute acid does not attack quickly,
+and dissolution then wants concentrated acid at temperature. The two routes that
+follow both exist to avoid that outcome, by roasting the mineral into something
+soluble rather than into an oxide.
 
 #### Alkaline Roasting (Sodium Carbonate Process)
 **Process**: Mix bastnäsite with Na₂CO₃, roast [@kim2025rare]
@@ -290,17 +404,15 @@ $$
 \mathrm{REE_2O_2CO_3} + \mathrm{Na_2CO_3} \rightarrow 2\,\mathrm{NaREEO_2} + 2\,\mathrm{CO_2}\uparrow
 $$
 
-**Conditions**:
+The soda-ash charge and the residence time are process variables set on the
+particular concentrate, and no representative values are asserted. What the
+stoichiometry does fix is the minimum: one mole of Na₂CO₃ per two moles of mineral for the defluorination
+step, and a second mole per two moles for the conversion to sodium rare earth
+oxide, so a soda-ash charge below about 0.5 mol per mole of REE cannot complete
+the reaction whatever the temperature.
 
-- Temperature: 700-900°C
-- Na₂CO₃:REO mass ratio: 1.5-2.5:1
-- Time: 1-2 hours
-- Atmosphere: Air
-
-**Product**: NaREEO₂ (sodium rare earth oxide)
-
-- Water soluble!
-- Easy to dissolve
+The product, NaREEO₂, is the reason for the route: unlike a calcined
+sesquioxide it is attacked by water and by dilute acid.
 
 **Water leaching of roasted product**:
 
@@ -319,17 +431,19 @@ $$
   \mathrm{REE_2(SO_4)_3} + \mathrm{Na_2SO_4} + 4\,\mathrm{H_2O}
 $$
 
-**Advantages**:
-
-- Fluorine captured as NaF (solid, easier to handle than HF gas)
-- Product more easily leached
-- Lower acid consumption for subsequent leaching
-
-**Disadvantages**:
-
-- High Na₂CO₃ consumption (cost)
-- NaF and Na₂SO₄ byproducts (disposal)
-- Requires high temperature furnace
+Two things are bought here and both are real. The fluorine is captured as solid
+sodium fluoride in the calcine rather than evolved as HF, which converts a
+gas-handling problem into a solids-handling one; and the roasted product
+dissolves under conditions a calcined oxide would not yield to, which cuts the
+acid consumption and the corrosion duty of the leach that follows. The price is
+paid three times over: soda ash is a bulk reagent bought by the tonne, the
+furnace still has to reach the higher of the two reaction temperatures, and the
+sodium that captured the fluorine leaves in the effluent as sodium fluoride and,
+once sulfuric acid is used downstream, as sodium sulfate. Neither salt has much
+value, and the fluoride is the one that constrains discharge. In effect the
+route trades an air-emission problem for a solid- and liquid-waste problem, and
+whether that is an improvement depends entirely on the local regulatory regime
+and on whether there is a fluoride offtake nearby.
 
 #### Ammonium Chloride Roasting (Fluorine Deactivation)
 **Process developed by Chinese researchers** [@chi2004recovery]
@@ -339,30 +453,21 @@ $$
   \mathrm{REECl_3} + \mathrm{NH_4F} + 2\,\mathrm{NH_3}\uparrow + \mathrm{CO_2}\uparrow + \mathrm{H_2O}
 $$
 
-**Conditions**:
+The stoichiometry fixes the reagent demand at three moles of NH₄Cl per mole of
+mineral and nothing else about the operating point. What can be said without a
+number is why the route is attractive. It converts the mineral directly to REECl₃, which water alone will
+dissolve — no acid leach at all, and no medium conversion before a chloride-based
+extraction circuit. And the fluorine is *deactivated* rather than volatilised: it
+leaves in the solid as ammonium fluoride instead of leaving up the stack as HF.
+Whether that fluoride is sold, converted, or disposed of is a question the source
+does not settle, and it matters, because ammonium fluoride is soluble and will
+follow the water leach unless it is deliberately removed.
 
-- Temperature: 400-600°C
-- NH₄Cl:bastnäsite molar ratio: 3-4:1
-- Time: 1-2 hours
-
-**Product**:
-
-- REECl₃ (water soluble)
-- NH₄F (ammonium fluoride, byproduct)
-
-**Advantages**:
-
-- Fluorine is deactivated rather than volatilised, which is the point of the
-  route; whether the fluoride is recovered as a product or disposed of is a
-  separate question this source does not settle
-- REECl₃ directly water-soluble
-- Lower temperature than Na₂CO₃ roasting
-- NH₃ can be recycled
-
-**Disadvantages**:
-
-- NH₄Cl cost
-- NH₃ emissions (need scrubbing)
+The cost side has two entries. Ammonium chloride is the more expensive reagent
+per tonne of the three roasting routes here, and the reaction liberates ammonia,
+which has to be scrubbed and is worth recycling as NH₄Cl if the plant is large
+enough to justify the loop. The route is Chinese in origin and is not, so far as
+the sources here establish, operated at Western plants [@chi2004recovery].
 
 ### Acid Leaching of Roasted Bastnäsite
 #### Sulfuric Acid Leaching
@@ -374,19 +479,22 @@ $$
 \mathrm{REE_2O_3} + 3\,\mathrm{H_2SO_4} \rightarrow \mathrm{REE_2(SO_4)_3} + 3\,\mathrm{H_2O}
 $$
 
-**Conditions**:
+No operating window is given here, and no extraction efficiency. Both belong to a
+specific concentrate under specific conditions rather than to the route as such,
+and neither could be traced to a primary measurement. One qualitative dependence
+is worth keeping: leaching efficiency depends on the roast that preceded it, and
+there is an optimum rather than a monotone improvement, because a roast hot
+enough to sinter the charge closes the porosity the acid needs.
 
-- H₂SO₄ concentration: 2-6 M (20-60 wt%)
-- Temperature: 60-95°C
-- Time: 1-4 hours
-- Solid:liquid ratio: 1:3 to 1:5 (w/v)
-- Agitation: 200-400 rpm
-
-**Leaching efficiency**:
-
-- REE extraction: 90-98%
-- Depends on roasting temperature (optimal 700-800°C)
-- Over-roasting (\>900°C) reduces leaching (sintering)
+The industrial version of this chemistry is not a dilute-acid leach at all. At
+Bayan Obo the concentrate is mixed with *concentrated* sulfuric acid and reacted
+in a kiln; 200 °C is enough for the reaction to proceed, but the mass is taken to
+as much as 600 °C on purpose, because at that temperature thorium and iron
+sulfates decompose to insoluble products while the rare earth sulfates survive
+[@iaea2011radiation]. The high-temperature bake is therefore doing a separation,
+not just a dissolution. Water then leaches the rare earth sulfate out of the
+calcine and leaves thorium, iron, barium sulfate, calcium sulfate and silica in
+the cake.
 
 #### Hydrochloric Acid Leaching
 
@@ -394,24 +502,27 @@ $$
 \mathrm{REE_2O_3} + 6\,\mathrm{HCl} \rightarrow 2\,\mathrm{REECl_3} + 3\,\mathrm{H_2O}
 $$
 
-**Conditions**:
+The industrial operating point is a 30 % hydrochloric acid leach of the calcined
+material at Mountain Pass [@iaea2011radiation]. No general band is given for the
+others.
 
-- HCl concentration: 4-8 M (15-30 wt%)
-- Temperature: 60-90°C
-- Time: 1-3 hours
-- S/L ratio: 1:4 to 1:6
+The case for hydrochloric acid over sulfuric is almost entirely about what
+happens downstream. Rare earth chlorides are considerably more soluble than the
+sulfates, so the leach liquor can be more concentrated and the circuit smaller;
+and the acidic organophosphorus extractants that do the separation work —
+{index}`D2EHPA`, {index}`PC88A` — are operated in chloride medium, so a chloride
+leach hands solvent extraction a feed it can use without a precipitation and
+redissolution cycle in between. That is the whole of the argument, and it is
+enough: the conversion step avoided is a real capital and yield cost, treated in
+[](#solvent-extraction-fundamentals).
 
-**Advantages**:
-
-- Faster leaching than H₂SO₄
-- Higher REE solubility
-- Better for {index}`D2EHPA`/{index}`PC88A` solvent extraction (chloride medium)
-
-**Disadvantages**:
-
-- More corrosive (requires glass-lined or Ti equipment)
-- HCl vapor emission issues
-- Higher reagent cost
+What is paid for it is corrosion. Hot concentrated HCl attacks stainless steel,
+so the leach train is rubber- or glass-lined or titanium, and the vapour above it
+is itself a corrosive emission requiring containment and scrubbing. Hydrochloric
+acid is also the more expensive reagent per mole of protons delivered. A plant
+choosing between the two acids is choosing between paying at the leach (HCl) and
+paying at the conversion (H₂SO₄), and the two large bastnäsite operations went
+opposite ways — which is why they are worth comparing directly.
 
 ### Alternative: Supercritical CO₂ Extraction
 **Emerging method** [@sinclair2017rare]
@@ -419,27 +530,42 @@ $$
 Roasted bastnäsite is contacted with supercritical CO₂ carrying a complexing
 agent, which is what makes the rare earths CO₂-soluble at all.
 
-**Conditions**: a single laboratory operating point, not a process window.
-@sinclair2017rare work well above the CO₂ critical point (7.4 MPa, 31 °C) and
-only modestly above ambient temperature, with an organophosphate — TBP and
-relatives — as the complexing agent. The pressures and flows quoted for
-supercritical extraction vary widely between studies and should be taken from
-the specific study being cited rather than from a general band.
+What follows is a single laboratory operating point, not a process window, and it
+is worth giving in full because the supercritical literature is usually quoted as
+a vague band. @sinclair2017rare pretreat bastnäsite concentrate two ways — dry
+roasting at 730 °C for three hours, or decomposition in 50 % NaOH at 150 °C for
+four hours — and extract the pretreated powder in supercritical CO₂ at **34 MPa
+and 65 °C** using nitric acid/{index}`TBP` adducts. Adduct composition is the
+variable that matters: across 2 to 6 mol/L H⁺, extraction is fastest at about
+**4 M HNO₃**, and *more* acid is worse, cutting the extraction of cerium,
+praseodymium and neodymium — the authors attribute this either to aqueous
+droplets forming and imposing an equilibrium limit, or to nitric acid competing
+with the rare earth nitrates for coordination to TBP.
 
-**Advantages**:
+The recoveries are the reason to take the method seriously. With the 4 mol/L H⁺
+adduct at 5.0 mol %, the *roasted* material gave 72 % La, 96 % Ce, 88 % Pr and
+90 % Nd after 120 minutes; the *NaOH-digested* material, at 5.1 mol % adduct,
+gave 93 % La, 100 % Ce, 99 % Pr and 101 % Nd after only 90 minutes
+[@sinclair2017rare]. (The 101 % is theirs, and it is the honest indication of the
+uncertainty on these assays.) Note that the caustic pretreatment beats the roast
+on every element and is faster — the same conclusion the monazite literature
+reached by a different road.
+The attraction is the solvent. Carbon dioxide is cheap, non-toxic,
+non-flammable, and depressurises to a gas that can be recompressed and reused,
+so the extraction leaves no spent aqueous stream to neutralise — the rare earths
+come out of the vessel with the complexing agent and the CO₂ simply leaves. The
+temperature is mild by hydrometallurgical standards.
 
-- "Green" solvent (CO₂)
-- Lower temperature than traditional leaching
-- Selective REE extraction
-- No liquid waste
-
-**Disadvantages**:
-
-- High pressure equipment (expensive)
-- Requires pre-roasting
-- Lower extraction rates than aqueous leaching
-- Not yet commercial scale
-
+The catch is that none of that removes the pretreatment. The concentrate still
+has to be roasted or caustic-digested before the extraction works at all, so the
+furnace and its off-gas train stay in the flowsheet: supercritical CO₂ replaces
+the leach tank, not the plant. Against that, the vessel is now a pressure vessel
+at 34 MPa, which is a different capital class from a stirred tank, and it is a
+batch unit where the aqueous route is continuous. The method is at laboratory
+scale — the authors themselves describe their results as a step toward
+demonstrating applicability rather than as a demonstration — and no comparison of
+extraction rate against aqueous leaching under matched conditions is available to
+quote [@sinclair2017rare].
 ### Two Industrial Routes Compared: Mountain Pass and Bayan Obo
 
 The two large bastnäsite operations chose opposite acids, and the choice
@@ -453,24 +579,35 @@ The Molycorp route is a *chloride* route throughout
 [@gupta2004extractive; @castor2006rare]:
 
 1.  **Beneficiation**: flotation of the carbonatite ore to a bastnäsite
-    concentrate of roughly 60 % REO.
-2.  **Acid pre-leach**: dilute HCl dissolves the carbonate gangue — calcite and
-    strontianite — upgrading the concentrate before it ever sees a furnace.
-    This is a gangue-removal step, not a REE-dissolution step: the bastnäsite
-    itself is barely touched by dilute acid at ambient temperature, and the
-    barite is not touched at all.
-3.  **Oxidative roast**: calcination in air at roughly 600 °C decomposes the
-    fluorocarbonate and, critically, oxidises Ce(III) to Ce(IV). Cerium is
-    close to half of the REE inventory in this ore, so this one step does the
-    single largest separation in the flowsheet.
-4.  **HCl leach**: the roasted material is leached with hydrochloric acid. The
-    trivalent rare earths dissolve as REECl₃; Ce(IV) does not, and stays in
-    the residue as a cerium concentrate. The leach liquor is therefore already
-    cerium-depleted before solvent extraction begins.
-5.  **Purification and hand-off**: pH adjustment to precipitate Fe(OH)₃,
-    filtration, and the resulting mixed REE chloride solution goes directly to
-    the solvent extraction cascade — no medium conversion is required, because
-    the circuit never left chloride.
+    concentrate of 60-65 % REO [@iaea2011radiation].
+2.  **Acid pre-leach**: hydrochloric acid dissolves the carbonate gangue —
+    calcite and strontianite — raising the concentrate from 60-65 % to a leached
+    concentrate of 68-72 % rare earths before it ever sees a furnace
+    [@iaea2011radiation]. This is a gangue-removal step, not a REE-dissolution
+    step: the bastnäsite itself is barely touched by dilute acid at ambient
+    temperature, and the barite is not touched at all.
+3.  **Oxidative roast**: calcination at 600-800 °C decomposes any carbonate that
+    survived the pre-leach and converts about half the Ce³⁺ present to Ce⁴⁺,
+    giving an oxide mixture of 85-90 % REO [@iaea2011radiation]. Cerium is close
+    to half of the REE inventory in this ore, so this one step does the single
+    largest separation in the flowsheet.
+4.  **HCl leach**: the calcine is slurried with water and leached in 30 %
+    hydrochloric acid [@iaea2011radiation]. The trivalent rare earths dissolve
+    as REECl₃; Ce(IV) does not, and stays in the residue with the fluorides. The
+    leach liquor is therefore already cerium-depleted before solvent extraction
+    begins.
+5.  **Cerium by-product**: that residue becomes a low-grade cerium concentrate
+    of 65-70 % REO and 55-60 % CeO₂, sold as-is for glass polishing or upgraded
+    to a 96 % cerium product by digesting the fluorides with sodium hydroxide
+    and releaching in HCl [@iaea2011radiation]. The upgrade is not free: it
+    generates barium sulfates, a residue of mixed rare earth fluorides, and a
+    sodium chloride wastewater.
+6.  **Purification and hand-off**: the leachate, carrying Ce³⁺, the other rare
+    earths, iron and lead, is contacted with soda ash and tailings slurry to
+    convert iron chloride to insoluble iron hydroxide, which reports to the
+    tailings [@iaea2011radiation]. The iron-free mixed REE chloride solution
+    goes to the solvent extraction cascade — no medium conversion is required,
+    because the circuit never left chloride.
 
 Note what this flowsheet does *not* contain: there is no sulfuric acid bake and
 no sulfate-to-chloride conversion. Descriptions that leach Mountain Pass with
@@ -486,31 +623,56 @@ redissolving the solid in HCl.
 The sulfuric route is the Chinese practice for bastnäsite and mixed
 bastnäsite-monazite concentrates [@kim2025rare]:
 
-1.  Mix the concentrate with concentrated H₂SO₄ and roast at 400-600 °C. The
-    rare earths convert to water-soluble sulfates; fluorine leaves as HF (and
-    SiF₄ if silica is present), which is the reason the route needs a serious
-    off-gas train.
-2.  Water-leach the calcine to dissolve REE₂(SO₄)₃.
-3.  Precipitate as double sulfate or hydroxide, then redissolve in HCl if a
-    chloride feed is wanted for the extraction circuit.
+1.  Mix the mixed bastnäsite-monazite concentrate, 40-60 % REO, with
+    concentrated H₂SO₄ and react it in a furnace or kiln. Two hundred degrees is
+    enough for the decomposition to proceed, but the mass is taken to as much as
+    600 °C deliberately, because at that temperature the thorium and iron
+    sulfates convert to insoluble products while the rare earth sulfates remain
+    stable [@iaea2011radiation]. HF, CO₂ and SO₃ leave together, and the off-gas
+    is scrubbed through milk of lime.
+2.  Water-leach the calcine to dissolve REE₂(SO₄)₃, filtering off a cake of
+    thorium, iron, barium sulfate, calcium sulfate and silica.
+3.  Recover the rare earths from the sulfate liquor — historically by
+    precipitating the sodium double sulfate, now preferentially by solvent
+    extraction — and strip with HCl if a chloride feed is wanted for the
+    separation circuit [@iaea2011radiation].
 
 The sulfuric route tolerates a lower-grade, more variable concentrate and does
 not require the cerium oxidation step; it pays for that with fluorine and
-sulfate management, and with the extra precipitation-redissolution cycle if
-the downstream extractant wants chloride.
+sulfate management, and with the extra recovery-and-strip cycle if the
+downstream extractant wants chloride. It also pays in slag: the slag-to-
+concentrate mass ratio runs as high as 0.66, so thousands of tonnes a year of
+material assaying 0.2 % Th must be stored as a radioactive residue
+[@iaea2011radiation]. That number is the honest measure of what the route costs,
+and it is the kind of figure that a comparison table of "advantages and
+disadvantages" never carries.
 
 ## Monazite Processing: Phosphate Decomposition
 ### The Phosphate and Thorium Problems
-Monazite ((REE,Th)PO₄) presents two major challenges [@borai2016modified; @amaral2010thorium]:
+Monazite is a rare earth orthophosphate, (REE,Th)PO₄, and both halves of that
+formula are a problem [@borai2016modified; @amaral2010thorium].
 
-1.  **Refractory phosphate matrix**:
-    - Very stable REE-PO₄ bonds
-    - Resistant to acid attack at ambient conditions
-    - Requires harsh conditions or pre-treatment
-2.  **Radioactive thorium** (0.1-12 wt% ThO₂):
-    - Regulatory restrictions on processing
-    - Many countries banned monazite processing
-    - Requires thorium separation and disposal
+The phosphate is the chemical problem. It is a dense, thermodynamically stable
+lattice that a strong acid does not attack at ambient conditions, because there
+is no anion in it that protonation can carry away as a gas or a weak acid at
+moderate temperature — the contrast with a carbonate, which gives up CO₂ and
+falls apart, is exactly the point. Every monazite route in industrial use is
+therefore a *decomposition* rather than a leach: something has to break the
+RE–PO₄ bond before any dissolution chemistry begins, and the two candidates are
+concentrated sulfuric acid at 200 °C and above, or concentrated caustic. Which
+one a plant picks determines the rest of its flowsheet, including where the
+thorium ends up.
+
+The thorium is the regulatory problem, and it is not a trace. Monazite from
+heavy-mineral sands typically carries 5-6 wt% ThO₂; Indian monazite runs 6-11 %,
+while the 'black monazite' of Taiwan, China is unusually low at 0.2-0.9 %
+[@iaea2011radiation]. At 5-6 % ThO₂ the ²³²Th activity concentration is around
+200 Bq/g, an order of magnitude or more above the levels at which material
+enters regulatory control in most jurisdictions. Thorium has no large market, so
+a monazite plant produces a radioactive residue it must store rather than sell —
+which is the reason monazite processing was abandoned in several countries that
+had the ore, and the reason a monazite flowsheet is judged as much by where it
+puts the thorium as by how much rare earth it recovers.
 
 ### Acid Leaching Methods
 #### Sulfuric Acid Digestion (Classical Method)
@@ -524,33 +686,45 @@ $$
 \mathrm{Th_3(PO_4)_4} + 6\,\mathrm{H_2SO_4} \rightarrow 3\,\mathrm{Th(SO_4)_2} + 4\,\mathrm{H_3PO_4}
 $$
 
-**Conditions**:
+This is the oldest industrial monazite route and it is worth understanding
+properly, because it explains both why it dominated for decades and why it was
+displaced. Ground monazite is mixed with 98 % sulfuric acid and digested at
+200-220 °C [@iaea2011radiation]. The decomposition is exothermic and the charge
+does not stay a slurry: it thickens into a pasty mass of sulfates and acid
+sulfates suspended in the phosphoric acid the reaction has just liberated and in
+the excess sulfuric acid. That paste is the defining feature of the process. It
+is why the vessel is a heavy, acid-resistant digester with a substantial agitator
+rather than a leach tank, why the residence time is long, and why the step is
+hard to run continuously. The reagent charge and the residence time are set on
+the particular concentrate and no general band is given. The stoichiometry sets a
+floor
+of 1.5 mol H₂SO₄ per mole of rare earth, and industrial practice runs in excess
+of that, but by how much is a plant variable.
 
-- Concentrated H₂SO₄: 93-98 wt%
-- Temperature: 200-250°C (high!)
-- Time: 2-8 hours
-- Monazite:H₂SO₄ ratio: 1:1.5 to 1:2 (w/w)
+Water then dissolves the sulfates. Historically the rare earths were taken out of
+that liquor by adding sodium sulfate, which precipitates the light rare earths
+selectively as the double sulfate RE₂(SO₄)₃·Na₂SO₄·3H₂O and leaves thorium, some
+of the heavy rare earths, iron and uranium in solution [@iaea2011radiation]. The
+double sulfate is converted to hydroxide with NaOH, and fractional dissolution in
+hydrochloric acid then reprecipitates the residual thorium, uranium and iron and
+gives a rare earth chloride solution — the classical starting point for
+commercial products.
 
-**Process details**:
-
-1.  Mix ground monazite with concentrated H₂SO₄
-2.  Heat in cast iron vessel or glass-lined reactor
-3.  Temperature increases exothermically to 200-250°C
-4.  Cool, add water to dissolve sulfates
-5.  Filter to remove insoluble residues
-
-**Leaching efficiency**:
-
-- REE extraction: 90-98%
-- Th co-extracted
-- Phosphate remains as H₃PO₄ in solution
-
-**Challenges**:
-
-- Very corrosive conditions (hot concentrated acid)
-- High energy requirement
-- Phosphate removal needed (gypsum {index}`precipitation`)
-- Thorium separation required
+Three things killed this route, and they are all visible in that description.
+The first is the thorium: the separation is not clean, a significant part of the
+thorium comes down with the rare earth double sulfate, and the rare earth
+fraction then needs extensive purification to reach market specification
+[@iaea2011radiation]. The second is yield: the fractional-dissolution version
+gives a low recovery of rare earths, which is why solvent extraction from the
+sulfate liquor, stripped with HCl to give the chloride, replaced it where the
+route survived at all. The third is the phosphate, which does not leave as a
+product but stays in solution as H₃PO₄ mixed into the rare earth liquor, from
+which it must be removed — usually by gypsum co-precipitation — as a waste rather
+than sold as a by-product. Add hot concentrated acid as the working fluid, with
+the corrosion and energy that implies, and the caustic route's advantages become
+obvious. No extraction efficiency is quoted: the sources that describe this route describe
+its recovery as poor in the classical form, and no measured figure for it could
+be traced.
 
 #### Why There Is No Direct Hydrochloric Acid Route
 
@@ -580,22 +754,23 @@ $$
 \mathrm{Th_3(PO_4)_4} + 12\,\mathrm{HNO_3} \rightarrow 3\,\mathrm{Th(NO_3)_4} + 4\,\mathrm{H_3PO_4}
 $$
 
-**Conditions**:
+No operating conditions are given, because nitric acid is not a primary monazite
+decomposition reagent in industrial practice — the IAEA
+describes it as a *variation* on the caustic route, in which the hydroxide cake
+from a NaOH digestion is leached with HNO₃ instead of HCl to give rare earth
+nitrates rather than chlorides [@iaea2011radiation].
 
-- HNO₃: 6-10 M
-- Temperature: 100-150°C
-- Time: 4-8 hours
-
-**Advantages**:
-
-- Nitrate medium suitable for TBP extraction
-- Easier thorium separation (TBP preferentially extracts Th)
+The reason to want nitrates is entirely downstream. {index}`TBP` extracts from
+nitrate medium and extracts thorium preferentially over the trivalent rare
+earths, so a nitrate liquor lets one extractant do the thorium separation and the
+rare earth recovery in the same circuit. If the plant's separation train is
+chloride-based, the nitrate offers nothing and the extra reagent cost is wasted.
 
 ### Alkaline Decomposition Methods
 #### Sodium Hydroxide Digestion
 **Process** [@xu2012decomposition; @shahreldin2018selective]:
 
-Step 1, alkaline digestion at 140-150 °C in 60-70 wt% NaOH at atmospheric
+Step 1, alkaline digestion at 140-160 °C in 60-70 wt% NaOH at atmospheric
 pressure, converts the phosphates to hydroxides:
 
 $$
@@ -618,15 +793,16 @@ $$
 \mathrm{Th(OH)_4} + 4\,\mathrm{HCl} \rightarrow \mathrm{ThCl_4} + 4\,\mathrm{H_2O}
 $$
 
-**Conditions for NaOH digestion**:
-
-- NaOH concentration: 60-70 wt% (a hot caustic melt-slurry, not a dilute solution)
-- NaOH:monazite ratio: 3-5:1 (w/w)
-- Temperature: 140-150 °C at **atmospheric pressure**
-- Time: 2-6 hours
-- Particle size: below ~45 μm; the reaction is topochemical and coarse grains
-  do not fully decompose
-- Product: mixed hydroxides + Na₃PO₄ solution
+Industrial practice is well documented, and the numbers are worth having exactly
+[@iaea2011radiation]. The monazite is dry ground in a ball mill to 90 % below
+about 50 µm and 50 % below about 10 µm — not for surface area alone, but because
+coarse grains become coated with sodium hydroxide and stop reacting, so the
+digestion is incomplete. The ground material is digested at 140-160 °C for 3-9 h
+in a 60-70 % sodium hydroxide solution, at atmospheric pressure. The caustic
+charge is about **0.75 kg of NaOH per kilogram of monazite**, an excess of
+roughly 50 % over stoichiometry, and that excess is recovered and reused. The
+"3-5:1 NaOH-to-monazite ratio" that circulates in secondary accounts is high by a
+factor of about five against this figure.
 
 The atmospheric-pressure operation is the point of the concentrated caustic and
 deserves a sentence of its own, because it is routinely misreported. A 60-70 wt%
@@ -640,17 +816,32 @@ in the 300-400 °C range belong to *caustic fusion*, a different (and much
 harsher) laboratory and analytical procedure in which the sample is fused with
 solid NaOH; do not carry them into a description of the industrial digestion.
 
-**Advantages** [@shahreldin2018selective]:
+Hot water then dissolves the trisodium phosphate, and the numbers here are the
+reason the route won. The phosphate solution carries **99.7 % of the phosphate
+originally in the monazite**, along with sodium hydroxide at 47 %; it is
+clarified, vacuum-evaporated, and the Na₃PO₄ crystals are centrifuged and dried
+for sale as a by-product containing 17.5-19 % P₂O₅. The entire thorium and rare
+earth content stays behind as a hydroxide cake.
 
-- Separates phosphate (as soluble Na₃PO₄)
-- REE/Th hydroxides easily leached with dilute acid
-- Lower acid consumption than direct acid leaching
-- Phosphate recovered for fertilizer use
+The hydroxide cake is then leached selectively, and this is where the caustic
+route earns its second advantage. The cake is slurried in water and 30 %
+hydrochloric acid is added while the pH is held at 3-4 and the temperature at
+70-80 °C. Because the rare earth and thorium hydroxides differ in basicity,
+**97.7 % of the rare earths dissolve as chlorides** while most of the thorium
+stays behind in the solid hydroxide residue [@iaea2011radiation]. Thorium
+separation, which the sulfuric route could only achieve by extensive downstream
+purification, here falls out of a pH-controlled dissolution.
 
-**Disadvantages**:
-
-- High NaOH consumption
-- Thorium still co-precipitates with REE
+So the caustic route wins on four counts: the phosphate leaves as a saleable
+product rather than as a contaminant in the liquor, the acid demand collapses
+because dissolving a fresh hydroxide is trivial next to decomposing a phosphate
+lattice, the thorium is rejected early and as a solid, and the digester is an
+open vessel. What it costs is caustic soda — a bulk reagent, though half the
+excess is recycled — and the fact that the thorium rejection is not complete:
+residual rare earths stay locked in the thorium cake and can only be recovered by
+processing that cake, which most plants do not do. Two independent studies of
+Egyptian monazite reach the same conclusion about phosphate-first processing
+[@xu2012decomposition; @shahreldin2018selective].
 
 #### Sodium Carbonate Roasting
 Similar to bastnäsite:
@@ -665,16 +856,19 @@ $$
   3\,\mathrm{ThO_2} + 4\,\mathrm{Na_3PO_4} + 6\,\mathrm{CO_2}\uparrow
 $$
 
-**Conditions**:
-
-- Temperature: 800-900°C
-- Time: 1-2 hours
-- Na₂CO₃:monazite ratio: 2:1 to 3:1
+No operating conditions are given: soda-ash roasting of monazite is not, on the
+evidence assembled here, in industrial use — the caustic digestion above
+displaced it. The stoichiometry fixes a floor of 1.5
+mol Na₂CO₃ per mole of rare earth phosphate, and the roast has to be hot enough
+to drive CO₂ off, which puts it above the caustic digestion's temperature and
+back into a furnace. The attraction, as with bastnäsite, is that the phosphate
+leaves as Na₃PO₄ and the rare earths are left as an oxide the acid can reach.
 
 ### Modified Leaching for Thorium Separation
-**Selective thorium extraction** [@borai2016modified]:
-
-Strategy: Exploit different solubilities in specific conditions
+Both routes above leave thorium and rare earths together in the same solid, and
+both then rely on a difference in solubility rather than on a dedicated
+separation unit to pull them apart. Two published variants show how far that can
+be pushed.
 
 **Method 1: Modified acid leaching.** @borai2016modified separate thorium,
 phosphate and a rare earth concentrate from Egyptian crude monazite by
@@ -720,30 +914,45 @@ not a size effect, is what makes the separation work.
 - Strip with a salt or acid solution that breaks the anionic complex
   (Na₂CO₃ or dilute acid, depending on the amine).
 
-**TBP extraction** (from HNO₃ medium):
+**TBP extraction** (from nitrate medium). {index}`TBP` is a neutral solvating
+extractant, so it works on the neutral nitrate complex rather than on an anion.
+Th(NO₃)₄ is a tetravalent nitrate and is solvated far more strongly than the
+trivalent RE(NO₃)₃, which is what gives the separation; the same chemistry, at
+the same concentration in kerosene, is what the nuclear industry uses to separate
+tetravalent actinides, and it is the reason a nitrate leach liquor is worth
+having if thorium is the problem. No extractant concentration or separation
+factor is quoted: both depend on the aqueous nitrate activity and on the rare
+earth distribution of the particular liquor.
 
-- 30% TBP in kerosene
-- Th(NO₃)₄ very soluble in TBP
-- REE(NO₃)₃ less soluble
-- Efficient Th/REE separation
-
-#### Ion Exchange
-
-- Strong acid cation resin
-- Th⁴⁺ more strongly retained than REE³⁺
-- Elute REE with dilute HCl
-- Elute Th with stronger acid or EDTA
+**Ion exchange.** On a strong-acid cation resin the retention order follows
+charge density, so Th⁴⁺ is held more strongly than RE³⁺ and the rare earths can
+be eluted with dilute acid while thorium requires a stronger acid or a
+complexant such as {index}`EDTA`. This is the laboratory and small-scale answer;
+resin inventory and elution volumes make it uncompetitive against solvent
+extraction at plant throughput, which is why the two industrial descriptions
+above both use amines.
 
 ### Industrial Practice
-**Indian Rare Earths Ltd (IREL)** [@jha2016hydrometallurgical]:
+The Indian plants are the reference case for monazite, because India has both
+the placer resource and a long operating history with it
+[@jha2016hydrometallurgical; @iaea2011radiation]. The chain runs: beach sand
+mining of monazite placers; gravity, magnetic and electrostatic separation to a
+monazite concentrate; decomposition — historically the 200-220 °C concentrated
+sulfuric acid digestion, now the caustic route described above; water leaching
+and filtration to take out the phosphate; thorium removal, by amine extraction
+from a sulfate liquor or by pH-controlled selective dissolution from a hydroxide
+cake; and precipitation of the rare earths as hydroxide or carbonate for
+redissolution and individual separation.
 
-1.  Beach sand mining (monazite placers)
-2.  Gravity + magnetic + electrostatic separation
-3.  Sulfuric acid digestion (220°C, concentrated H₂SO₄)
-4.  Water leaching, filtration
-5.  Thorium extraction with amine extractants
-6.  REE precipitation as hydroxides or carbonates
-7.  Redissolve for individual REE separation
+Two numbers from that circuit are worth carrying, because they say what a
+monazite plant actually generates. The effluent treatment cake — the settled
+solids from co-precipitating residual radionuclides, phosphate and fluoride with
+lime and calcium chloride — amounts to about **10 % of the original monazite
+mass**, and India generates roughly 250 t (300 m³) of it a year, bagged and
+buried in earthen trenches with soil cover and periodic groundwater monitoring
+[@iaea2011radiation]. Annual ²²⁸Ra discharge is reported as under 1 GBq. That is
+what "thorium management" means in practice: not a unit operation, but a
+permanent storage obligation and a monitoring programme.
 
 (ion-adsorption-clay-leaching-the-gentle-approach)=
 ## Ion-Adsorption Clay Leaching: The Gentle Approach
@@ -777,20 +986,23 @@ $$
   \mathrm{Clay}\text{-}\mathrm{(NH_4)_3} + \mathrm{REE^{3+}} + 1.5\,\mathrm{SO_4^{2-}}
 $$
 
-**Conditions**:
-
-- (NH₄)₂SO₄ concentration: 2-5 wt%
-- Temperature: ambient (15-25°C)
-- Contact time: 2-8 hours
-- pH: 4-6
+The leach runs at ambient temperature — that is the whole point of it — and
+@shi2022column operate ammonium sulfate at pH 2 and a liquid-to-solid ratio of
+4:1. Reagent concentrations, contact times and pH windows vary with the deposit and
+with the contacting mode, and no representative band is given.
 
 Contacting is either **in situ** — lixiviant injected through wells drilled into
 the orebody, pregnant leach solution collected downslope, and no ore mined at
-all — or **heap leaching** of excavated ore crushed to 5-20 mm, heaped 2-5 m
-deep on an impermeable pad, drip-irrigated at 5-10 L/(m²·h) and drained over a
-residence time of 20-100 days. Either way the pregnant leach solution (PLS) is
-dilute: 200-1000
-mg/L REE at pH 4-6, with Al, Fe and Ca as the impurities that matter. That
+all, which is now the dominant mode — or **heap leaching** of excavated ore on
+an impermeable pad. Heap geometry, irrigation rate and residence time are
+site-specific and no representative values are asserted.
+
+What can be stated is the consequence of the grade, because it follows from
+arithmetic rather than from practice. At an ore grade of 0.05-0.3 % REO and the
+4:1 liquid-to-solid ratio of @shi2022column, complete extraction would give a
+pregnant leach solution of only **125-750 mg/L REE**, and real recoveries put it
+below that. Aluminium, iron and calcium are the impurities that matter at those
+concentrations, because they are not two orders of magnitude dilute. That
 dilution, not the chemistry, is the engineering problem this route creates, and
 it propagates straight into the solution volumes tabulated later in the chapter.
 
@@ -810,7 +1022,7 @@ product-layer-diffusion form of the shrinking-core model set out in
 
 The ammonium is also the route's liability: the NH₄⁺ left on the clay after the
 rare earths are gone leaches into groundwater [@xiao2015recovery]. The
-alternatives are magnesium sulfate at 1-3 wt%,
+alternatives are magnesium sulfate,
 
 $$
 \mathrm{Clay}\text{-}\mathrm{REE^{3+}} + 1.5\,\mathrm{MgSO_4} \rightarrow
@@ -821,9 +1033,10 @@ which carries no nitrogen and is a somewhat weaker competitor for the exchange
 sites, needing 1.5 mol of divalent Mg²⁺ per mole of REE³⁺ against 3 mol of NH₄⁺
 [@xiao2015leaching; @pan2024insights]; ferrous sulfate, which adds a reducing
 environment that helps mobilise cerium [@xiao2016reduction]; sodium chloride,
-environmentally the mildest of all but weaker (60-75 % recovery) and needing
-higher concentrations; and organic acids such as citric, which combine
-complexation with exchange at higher reagent cost [@wang2017effects].
+environmentally the mildest of all but a weaker competitor for the exchange
+sites, so it needs higher concentrations for a given recovery; and organic acids
+such as citric, which combine complexation with exchange at higher reagent cost
+[@wang2017effects].
 Suppressing aluminium co-dissolution — with hexamethylenetetramine, or by
 staging the leach — is the other active line [@pan2024insights; @he2025stepwise].
 [](#ion-adsorption-clays) weighs these reagents against one another and against
@@ -845,35 +1058,39 @@ leach liquor, it has to be concentrated before anything downstream can use it
   conventional acidic organophosphorus reagents for this duty.
 
 ## Xenotime Processing
-### Challenges
-Xenotime (YPO₄) is the most refractory REE mineral [@hung2020separation]:
+Xenotime is YPO₄, the heavy-rare-earth counterpart of monazite, and it is the
+most refractory of the four minerals in this chapter [@hung2020separation]. The
+reason is the same phosphate lattice, made tighter: yttrium and the heavy rare
+earths are the smallest of the trivalent ions, so the charge density at the
+cation site is highest and the RE–O–P framework is correspondingly harder to
+break. It carries about 67 % REO and, unlike monazite, it is recovered largely as
+a by-product — of heavy-mineral sand separation in Australia, and of tin mining
+residues in southeast Asia [@iaea2011radiation]. Its radioactivity is elevated
+but less so than monazite's: Australian xenotime runs about 60 Bq/g of ²³²Th and
+about 50 Bq/g of ²³⁸U [@iaea2011radiation], against monazite's 140-250 Bq/g of
+²³²Th. That difference is why xenotime is processed commercially in places where
+monazite is not.
 
-- Very stable Y-O-P bonds
-- Higher crystallinity than monazite
-- Heavy REEs (higher charge density, stronger bonds)
+The two routes are the two monazite routes, and Malaysia has run both
+[@iaea2011radiation]. In the sulfuric route the xenotime is milled and roasted
+before digestion — the roast is there specifically to secure yttrium recovery in
+the digestion that follows — the yttrium phosphate is converted to water-soluble
+sulfate, water leaches it out, oxalic acid precipitates yttrium oxalate, and
+calcination gives an yttrium oxide concentrate assaying **60 % yttrium**. In the
+caustic route, finely ground xenotime is fused with sodium hydroxide at 400 °C —
+a true fusion, not the 140-160 °C slurry digestion used for monazite, which is
+the concrete sense in which xenotime demands more severe conditions — then water
+extracts the trisodium phosphate and residual caustic, the hydroxide cake is
+dissolved in hydrochloric acid, and oxalate precipitation and calcination give a
+concentrate of **40-60 % yttrium**. The hydroxide residue is managed exactly as
+the monazite residue is.
 
-### Leaching Methods
-Similar to monazite but requires more severe conditions:
-
-**Concentrated H₂SO₄ digestion**:
-
-- Temperature: 250-300°C (higher than monazite)
-- H₂SO₄: 95-98%
-- Time: 6-12 hours
-- Extraction: 85-95%
-
-**Alkaline decomposition**:
-
-- NaOH at 180-220°C, 4-8 hours
-- More effective than acid for xenotime
-
-### Thorium and Uranium Co-extraction
-Xenotime often contains [@hung2020separation]:
-
-- ThO₂: 0.1-3%
-- U₃O₈: 0.5-5%
-
-Requires similar separation strategies as monazite.
+Note that the sulfuric route gives the higher-grade product here, which is the
+reverse of the monazite case, and note also that neither figure is a recovery:
+they are product grades. No digestion temperatures, acid
+strengths, residence times or extraction efficiencies are given; none could be
+traced to a primary measurement. Thorium and uranium follow the rare earths
+through both routes and are separated by the same means described for monazite.
 
 ## Bioleaching: Emerging Green Technology
 
@@ -973,17 +1190,23 @@ flowsheet has to live with.
 After leaching, the solution requires purification before solvent extraction [@jha2016hydrometallurgical].
 
 ### Common Impurities
-From leaching [@jha2016hydrometallurgical]:
 
-| Impurity | Source                  | Typical Conc. | Issue                       |
-|----------|-------------------------|---------------|-----------------------------|
-| Fe³⁺     | Gangue iron oxides      | 1-10 g/L      | Co-extracts, colors product |
-| Al³⁺     | Clay minerals           | 0.5-5 g/L     | Co-extracts                 |
-| Ca²⁺     | Calcite, dolomite       | 2-20 g/L      | Sulfate precipitation       |
-| Th⁴⁺     | Monazite/xenotime       | 0.1-5 g/L     | Radioactive, must remove    |
-| PO₄³⁻    | Phosphate minerals      | 5-50 g/L      | Precipitates REE, foaming   |
-| F⁻       | Bastnäsite (if present) | 0.1-2 g/L     | Corrosion, precipitates REE |
+Which impurities a liquor carries follows from the ore and the route, not from a
+general table, and their concentrations vary over orders of magnitude between deposits, so no table
+of "typical" values is given. What *is* general is the list and the reason each
+entry matters. Iron comes from gangue oxides and
+co-extracts with the rare earths, colouring the product. Aluminium comes from
+clays and co-extracts. Calcium comes from calcite and dolomite and, in a sulfate
+liquor, precipitates as gypsum wherever it is not wanted. Thorium comes from
+monazite and xenotime and is radioactive. Phosphate comes from the phosphate
+minerals themselves and will precipitate the rare earths back out of solution.
+Fluoride comes from bastnäsite, corrodes, and does the same.
 
+Of these, the four that industry finds most troublesome are aluminium, iron,
+thorium and uranium, and the controlling insight from the review literature is
+that how hard they are to remove depends on their concentration, their redox
+ratio, and how pure the product has to be — not on the element alone
+[@pak2020progress]. That single sentence organises everything below.
 ### Iron Removal
 **pH adjustment method** (most common):
 
@@ -991,66 +1214,86 @@ $$
 \mathrm{Fe^{3+}} + 3\,\mathrm{H_2O} \rightleftharpoons \mathrm{Fe(OH)_3}\downarrow + 3\,\mathrm{H^+}
 $$
 
-**Conditions**:
+The method works because ferric iron hydrolyses at a lower pH than the trivalent
+rare earths do, so raising the pH with sodium or ammonium hydroxide precipitates
+Fe(OH)₃ and leaves the rare earths in solution [@pak2020progress]. The window is real but narrow, and where it sits
+depends on the liquor, so no pH, temperature or removal figure is given. What
+controls the rare earth loss is the same thing in every case — how far the pH is
+allowed to overshoot before the base is stopped — which is why this step is a
+controlled titration and not a batch addition.
 
-- Add NaOH or NH₄OH to increase pH
-- Target pH: 3.5-4.5 (Fe precipitates, REE remain soluble)
-- Temperature: 60-80°C (improves settling)
-- Time: 1-2 hours
+The redox state is the complication. **Ferrous** iron does not hydrolyse in the
+same range, and it also does not usually co-extract with the rare earths in an
+ion exchange or solvent extraction circuit [@pak2020progress] — so an Fe(II)
+liquor can sometimes simply be left alone. If the iron has to go, it must first
+be oxidised to Fe(III), by air or peroxide, and then hydrolysed. A liquor
+carrying both oxidation states is the awkward case, and it is the reason the
+review makes redox ratio one of its three controlling variables.
 
-**Performance**:
-
-- Fe removal: \>99%
-- REE loss: \<2% (if pH controlled)
-
-**Alternative: Oxidation-precipitation**:
-
-- If Fe²⁺ present, oxidize to Fe³⁺ first (air, H₂O₂)
-- Then pH adjustment
-
+At Mountain Pass this step is done without a hydroxide reagent at all: the
+leachate is contacted with soda ash and tailings slurry, which converts the iron
+chloride to insoluble iron hydroxide and precipitates it into the tailings
+[@iaea2011radiation]. The waste stream absorbs the impurity.
 ### Aluminum Removal
 More challenging than Fe (Al(OH)₃ soluble at low and high pH):
 
-**Selective precipitation**:
+Like ferric iron, most aluminium precipitates as the hydroxide before the rare
+earths do [@pak2020progress], so hydroxide precipitation is the first answer. But
+aluminium hydroxide is amphoteric — it redissolves as aluminate if the pH goes
+too high — so the window has a ceiling as well as a floor, and it is narrower
+than iron's. No pH values are quoted.
 
-- pH 4.5-5.5: Al(OH)₃ precipitates
-- REE remain soluble (precipitate at pH 6-8)
-- Narrow operating window
+Where the window is too narrow to hold, the alternative is to change the
+chemistry rather than the pH. @wang2020removal precipitate aluminium from an
+ion-adsorption rare earth leach solution as its 8-hydroxyquinoline complex,
+using 1.25 times the theoretical reagent requirement, ten minutes at 60 °C and a
+final pH of 4.5: **94.4 % of the aluminium is removed for an 8.2 % rare earth
+loss**, and the aluminium leaves as a large-crystal, fast-filtering solid with a
+value of its own as an optoelectronic material. That is a real number for a real
+liquor, and it also shows the honest cost of the step — eight per cent of the
+rare earths go with it.
 
-**Alternative: Solvent extraction**:
-
-- Some extractants selective against Al
-- Or preferential REE extraction leaves Al in raffinate
+The third option is to do nothing at the purification stage and let the solvent
+extraction circuit reject the aluminium, either by choosing an extractant that
+discriminates against it or by extracting the rare earths preferentially and
+leaving aluminium in the raffinate.
 
 ### Calcium Removal
-**Sulfate precipitation** (if H₂SO₄ leach):
+
+Calcium is the one impurity that a sulfuric leach largely removes by itself.
+Calcium sulfate is sparingly soluble, so
 
 $$
 \mathrm{Ca^{2+}} + \mathrm{SO_4^{2-}} \rightarrow \mathrm{CaSO_4}\downarrow \quad \text{(gypsum)}
 $$
 
-- Occurs naturally during leaching
-- Filter to remove
-
-**Carbonate precipitation**:
+proceeds during the leach and the gypsum leaves with the residue — which is
+convenient here and is a nuisance elsewhere, since the same reaction scales
+pipework and coats unreacted mineral. In a chloride or nitrate liquor there is no
+sulfate to do the work, and calcium is taken out as the carbonate instead:
 
 $$
 \mathrm{Ca^{2+}} + \mathrm{CO_3^{2-}} \rightarrow \mathrm{CaCO_3}\downarrow
 $$
 
+Calcium is a nuisance rather than a hazard: it does not co-extract strongly, so
+the reason to remove it is scaling and crud in the extraction circuit rather than
+product contamination. That is also why it tolerates the crudest available
+method.
+
 ### Thorium Removal
-**Solvent extraction** [@amaral2010thorium]:
+Thorium admits both answers, and which one a plant uses depends on how clean the
+product has to be. Because Th(IV) hydrolyses before the trivalent rare earths, a
+controlled pH rise takes most of it out as Th(OH)₄ [@pak2020progress] — this is
+the same chemistry that makes the caustic route's selective HCl dissolution work,
+seen from the other side. It is cheap and it is adequate for a partial removal.
 
-- Before REE extraction
-- An amine from sulfate liquor, or TBP from nitrate
-- Th extracts preferentially
-- See [](#thorium-management)
-
-**Selective precipitation**:
-
-- pH 4-5: Th(OH)₄ precipitates
-- REE remain soluble
-
+But taking thorium and uranium out to the *highest* degree requires a dedicated
+solvent extraction or ion exchange step designed specifically for them, usually
+by anion exchange of their anionic complexes [@pak2020progress]. That is the
+circuit described in [](#thorium-management): an amine from a sulfate liquor
+[@amaral2010thorium], or {index}`TBP` from a nitrate one, run *before* the rare
+earth extraction so that the thorium never enters it.
 ### Phosphate Removal
 **Gypsum co-precipitation** (H₂SO₄ leach):
 
@@ -1067,35 +1310,39 @@ $$
 
 the gypsum occluding residual phosphate as it forms.
 
-**Precipitation as FePO₄**:
-
-- If Fe present, FePO₄ precipitates
-- Remove during Fe removal step
-
+Where iron is present, phosphate will also leave as ferric phosphate during the
+iron removal step, which is convenient when it happens and is not something to
+rely on when it does not: the two impurities are then coupled, and a liquor
+short of iron keeps its phosphate.
 ### Purified Solution Specification
-**Target composition for solvent extraction feed**:
 
-| Parameter | Typical Value         |
-|-----------|-----------------------|
-| Total REE | 0.5-2.0 M             |
-| Free acid | 0.1-1.0 M             |
-| Fe        | \<100 ppm             |
-| Al        | \<500 ppm             |
-| Ca        | \<1000 ppm            |
-| Th        | \<10 ppm (regulated)  |
-| PO₄³⁻     | \<500 ppm             |
-| Clarity   | \<100 NTU (turbidity) |
+There is no universal specification for a solvent extraction feed, so none is
+tabulated here. It is set by the extractant, the number of stages, and the purity
+the product must reach; @pak2020progress make exactly this point in reviewing the
+impurity-removal literature — the required degree of removal is one of the three
+variables that decides the method.
+
+What can be said without numbers is the shape of the requirement, and it is
+worth stating because it explains why this section exists at all. The feed must
+be **clarified**, because entrained solids stabilise emulsions and a crudded
+solvent is the most common way a rare earth extraction circuit fails. It must be
+**consistent** in acidity, because the extraction equilibrium of an acidic
+organophosphorus extractant is a function of pH and a cascade tuned at one
+acidity will not hold at another. It must be low enough in the co-extracting
+impurities — iron and aluminium above all — that they do not accumulate in the
+organic phase over many cycles. And it must be low enough in thorium to satisfy
+the regulator, which is a limit set by law rather than by chemistry, and
+therefore varies by jurisdiction.
 
 This solution is the feed for the solvent extraction circuit described in
 [](#solvent-extraction-fundamentals).
-
 ## Complete Process Flowsheets
 
 Everything above comes together in [](#fig-leaching-flowsheet), which puts the
 routes on one grid rather than drawing each separately. Side by side they show
 something none of them shows alone: the routes differ only in how the mineral is
-*cracked*. From the leach onward they converge on a single purified liquor with
-a single specification, and that liquor is what
+*cracked*. From the leach onward they converge on the same kind of stream — a
+clarified aqueous liquor of mixed rare earth salts — and that liquor is what
 [](#solvent-extraction-fundamentals) takes as its input.
 
 :::{figure} ../figures/05-flowsheet.svg
@@ -1172,70 +1419,78 @@ surrogate-modeling work it discusses exists precisely because a detailed leach
 model is too expensive to embed in a flowsheet optimization directly.
 
 ### Key Operating Parameters
-#### Acid Leaching
-**Temperature effect**:
 
-- Arrhenius relationship: k = A exp(-$E_\mathrm{a}$/RT)
-- Typical $E_\mathrm{a}$: 40-80 kJ/mol (diffusion-controlled)
-- Doubling temperature → 2-5× faster leaching
-- But: equipment limits, energy cost
+Five variables set an acid leach, and each is a trade rather than a maximisation.
+No representative values are given for any of them: activation energies, particle
+sizes, agitation speeds, acid molarities and roasting windows are precisely the
+quantities a plant determines on its own ore. What generalises is the *shape* of
+each trade.
 
-**Acid concentration**:
+**Temperature.** The rate follows Arrhenius, $k = A\exp(-E_\mathrm{a}/RT)$, so
+heat buys rate cheaply in principle. What limits it is the vessel — a leach above
+the atmospheric boiling point of the liquor needs a pressure vessel, and that is
+a step change in capital, not an increment — and the energy bill. The activation
+energy itself is diagnostic rather than something to look up: a value in the
+range typical of chemical control tells you the surface reaction is limiting and
+that temperature will help; a low value tells you the process is
+diffusion-limited and that stirring or finer grinding will help more than heat
+will. No "typical" value is given, because a typical value would defeat the
+diagnosis.
 
-- Higher \[H⁺\] → faster kinetics
-- Optimal depends on mineral:
-  - Bastnäsite (roasted): 2-6 M H₂SO₄
-  - Monazite: 6-12 M H₂SO₄ or HCl
-- Excess acid wasteful, increases neutralization cost
+**Acid concentration.** More protons means faster attack, up to the point where
+the limiting step stops being the surface reaction. Past that, extra acid does
+nothing for the leach and everything for the neutralisation bill and the
+corrosion allowance — every mole of excess acid is a mole of base later, and a
+mole of salt in the effluent. The optimum is mineral-specific, and the contrast
+runs through this whole chapter: roasted bastnäsite yields to dilute acid because
+the roast has already done the hard part, while unroasted monazite needs
+concentrated sulfuric acid at 200 °C and above because nothing has.
 
-**Particle size**:
+**Particle size.** Finer particles leach faster, and grinding is one of the two
+largest energy consumers in the plant, as the beneficiation section above set
+out. It also
+makes the residue harder to filter and wash, which shows up as lost rare earth in
+the entrained liquor rather than as a grinding cost. Grinding to the point where
+the leach is fast and the filter cake is unmanageable is a real and common
+failure, and the optimum sits well short of "as fine as possible" — except in the
+caustic monazite digestion, where the grind is set by a different constraint
+entirely: coating of coarse grains by NaOH stops the reaction, which is why that
+route specifies 90 % below about 50 µm [@iaea2011radiation].
 
-- Smaller particles → faster leaching (higher surface area)
-- But: grinding cost, filtration difficulty
-- Optimal: 100-200 μm for most applications
+**Solid-to-liquid ratio.** A thinner pulp mass-transfers better and leaches more
+completely; it also means bigger tanks, more water to heat, and a more dilute
+liquor for everything downstream to concentrate again. Since dilution is already
+this chapter's recurring engineering complaint, the pull is toward the densest
+pulp the agitator and the rheology will carry.
 
-**Solid/liquid ratio**:
+**Agitation.** Enough to keep the solids suspended and the boundary layer thin;
+past that, more power buys attrition of the particles and, if organics are
+present anywhere in the circuit, emulsions.
 
-- Lower S/L → better mass transfer
-- But: larger vessels, more water
-- Typical: S/L = 1:3 to 1:5 (w/v)
-
-**Agitation**:
-
-- Maintain particles in suspension
-- Typical: 200-400 rpm
-- Too high → attrition, emulsions
-
-#### Roasting
-**Temperature**:
-
-- Underroasting → incomplete decomposition
-- Overroasting → sintering (reduced leaching)
-- Optimal: 700-800°C for most REE minerals
-
-**Time**:
-
-- Sufficient for complete reaction
-- Typical: 1-2 hours
-- Depends on particle size, bed depth
-
-**Atmosphere**:
-
-- Air vs. O₂-enriched vs. inert
-- Oxidizing for sulfide-containing ores
-- Reducing for selective Ce oxidation
-
+Roasting has its own three, and only the first is subtle. **Temperature** has an
+optimum rather than a monotone benefit, because an underroast leaves the mineral
+undecomposed and an overroast sinters the charge and closes the porosity the acid
+needs — the same non-monotonicity noted for roasted bastnäsite above. Where that
+optimum lies is a property of the concentrate. **Time** must be long enough for
+the reaction front to cross the particle, which couples it to grind size and to
+bed depth in the kiln. **Atmosphere** is the one that does chemistry rather than
+kinetics: an oxidising roast is what converts Ce(III) to Ce(IV) at Mountain Pass
+and hands the flowsheet its largest single separation for free
+[@iaea2011radiation], so air, or oxygen-enriched air, is not a detail here but a
+design decision.
 (leaching-kinetics-models)=
 ### Leaching Kinetics Models
 #### Shrinking Core Model
 
-For solid particle dissolution [@long2019kinetics]:
-
-**Three steps**:
-
-1.  Diffusion through solution film (external)
-2.  Reaction at solid surface
-3.  Diffusion through product layer (internal)
+A dissolving mineral particle is modelled as a shrinking unreacted core inside a
+growing shell of product and depleted solid, and the rate is set by whichever of
+three steps in series is slowest: diffusion of reagent through the liquid film
+around the particle, reaction at the core surface, or diffusion through the
+product layer. Which one controls is not a detail — it decides what to change.
+Film control responds to agitation; surface-reaction control responds to
+temperature and acid concentration; product-layer control responds to particle
+size and to almost nothing else, because the diffusion path is inside the
+particle.
 
 **Rate equations**:
 
@@ -1257,12 +1512,21 @@ Where:
 - $k_\mathrm{s}$, $k_\mathrm{d}$ = rate constants
 - t = time
 
-**Determining rate-limiting step**:
+The diagnosis is empirical and cheap: plot the extraction data both ways and see
+which form is linear in time. The activation energy from a temperature series is
+the cross-check, since chemical control carries a substantially larger $E_a$ than
+diffusion control does. No claim is made about which mechanism controls
+"most" rare earth leaching: the answer depends on the mineral, the roast and the
+grind.
 
-- Plot both equations
-- Linear fit indicates controlling mechanism
-- Most REE leaching: diffusion-controlled
-
+The ion-adsorption clays need a different model altogether, and this is worth
+noting because it is a case where the standard shrinking-core forms do not apply.
+@long2019kinetics treat the clay leach as three steps — ammonium diffusing
+through the boundary layer to the particle, reversible ion exchange at the
+surface, and rare earth diffusing back out — with Fick's law for the diffusion
+and the Kerr model for the exchange, and with the particle size held *constant*,
+since nothing dissolves. The core does not shrink because there is no core: the
+rare earths are surface-adsorbed, not lattice-bound.
 ### Process Intensification
 **Ultrasound and microwaves.** Stojković and co-workers combined both on a
 secondary feedstock — coal fly and bottom ash rather than an ore — using
@@ -1275,12 +1539,14 @@ recovered about 80 % of the rare earths, and they note explicitly that it is
 honest characterisation of most intensification work in this area, and it is not
 the same as the "faster and better" claim these techniques usually attract.
 
-**High-pressure leaching**:
-
-- Autoclaves allow higher temperature
-- Faster kinetics
-- Requires pressure vessels
-
+**High-pressure leaching.** An autoclave lifts the temperature ceiling above the
+atmospheric boiling point of the liquor and the rate follows. The cost is the
+vessel, and it is not incremental: a pressure vessel with the corrosion
+resistance an acid rare earth leach needs is among the most expensive items in
+the plant, and it brings its own maintenance and safety regime. Hence the
+insistence above that the caustic monazite digestion runs at atmospheric
+pressure — the cheapest way to win on kinetics is chemistry that does not need
+the pressure at all.
 ## Environmental and Sustainability Considerations
 ### Waste Generation
 
@@ -1303,48 +1569,56 @@ $$
 $$
 
 with grade as the mass fraction REO in that feed and recovery the fraction of
-contained REO that survives to product. Every figure below is computed that way
-from grades and recoveries stated elsewhere in this chapter; none is taken from
-a secondary compilation.
+contained REO that survives to product. The grades below are all plant figures
+with a source. The recoveries are not: as the beneficiation section explained, no
+traceable overall recovery figure could be found, so **every number here is
+computed at 100 % recovery** and is therefore a *floor* — the true feed
+requirement is larger by however much the plant loses, and the shortfall is left
+explicit rather than filled with an invented efficiency.
 
-**Leach feed, per tonne of REO:**
+**Leach feed, per tonne of REO, at perfect recovery:**
 
-| Ore type       | Basis           | Grade (REO)  | Recovery | Feed per t REO |
-|----------------|-----------------|--------------|----------|----------------|
-| Bastnäsite     | **concentrate** | 60-75 %      | 90-98 %  | 1.4-1.9 t      |
-| Monazite       | **concentrate** | 50-70 %      | 85-95 %  | 1.5-2.4 t      |
-| Ion-adsorption | **ore**         | 0.05-0.3 %   | 80-95 %  | 350-2,500 t    |
+| Ore type       | Basis           | Grade (REO)  | Source              | Feed per t REO |
+|----------------|-----------------|--------------|---------------------|----------------|
+| Bastnäsite     | **concentrate** | 60-65 %      | Mountain Pass       | ≥1.5-1.7 t     |
+| Monazite       | **concentrate** | 44-60 %      | Steenkampskraal, placer | ≥1.7-2.3 t |
+| Ion-adsorption | **ore**         | 0.05-0.3 %   | grade range         | ≥330-2,000 t   |
 
-Worked, so the reader can check it: a bastnäsite concentrate at the bottom of
-its grade range and the bottom of its recovery range needs
-1/(0.60 × 0.90) = 1.85 t per tonne of REO, and at the top of both,
-1/(0.75 × 0.98) = 1.36 t. An ion-adsorption ore at 0.3 % REO leached at 95 %
-recovery needs 1/(0.003 × 0.95) = 351 t; the same calculation at 0.05 % and 80 %
-gives 1/(0.0005 × 0.80) = 2,500 t. Three orders of magnitude separate the two
-feeds, which is the single most important fact about ion-adsorption mining and
-the reason its environmental footprint is a land-and-groundwater problem rather
-than a reagent problem.
+Grades from @iaea2011radiation except the ion-adsorption range, which is the
+deposit grade used throughout this chapter [@zhou2020genesis]. Worked, so the
+reader can check it: a Mountain Pass bastnäsite concentrate at 60 % REO needs
+1/0.60 = 1.67 t per tonne of REO and at 65 % needs 1.54 t. An ion-adsorption ore
+at 0.3 % REO needs 1/0.003 = 333 t; at 0.05 % it needs 2,000 t. Three orders of
+magnitude separate the two feeds, which is the single most important fact about
+ion-adsorption mining and the reason its environmental footprint is a
+land-and-groundwater problem rather than a reagent problem.
 
-**Ore behind the concentrate.** For bastnäsite, the chapter's own flotation
-numbers — a 10-30 % REO flotation feed recovered at 70-90 % — put the mined ore
-at 1/(0.10 × 0.70 × 0.90) = 16 t down to 1/(0.30 × 0.90 × 0.98) = 3.8 t per
-tonne of REO, so roughly **4-16 t of ore**, with the difference between that and
-the 1.4-1.9 t of concentrate reporting to the flotation tailings pond. For
+**Ore behind the concentrate.** Mountain Pass blended its crushed stockpiles to a
+uniform flotation feed of 7-9 % REO [@iaea2011radiation], so at perfect recovery
+the mined ore behind a tonne of REO is 1/0.09 = 11.1 t to 1/0.07 = 14.3 t —
+**at least 11-14 t of ore** — against 1.5-1.7 t of concentrate, with the
+difference reporting to the flotation tailings pond. Real flotation does not
+recover everything, so the true figure is higher; no recovery is asserted. For
 monazite the question is not well posed: beach placers are mined for ilmenite,
-rutile and zircon, and monazite is recovered as a minor byproduct of a
-separation that would happen anyway, so attributing a placer ore tonnage to the
-rare earths is an allocation choice, not a measurement.
-
+rutile and zircon, and monazite is recovered as a minor byproduct of a separation
+that would happen anyway, so attributing a placer ore tonnage to the rare earths
+is an allocation choice, not a measurement.
 **Reagents.** Two of the three follow from stoichiometry:
 
 - *Bastnäsite, sulfuric route.* REE₂O₃ + 3 H₂SO₄ gives 3 × 98 / 328 = 0.90 t of
   H₂SO₄ per tonne of REO as a floor. Real consumption is higher, by an amount
   set by the carbonate gangue, which is why the HCl pre-leach that removes
   calcite before the roast pays for itself.
-- *Monazite.* The digestion recipe in this chapter is 1.5-2 parts H₂SO₄ per part
-  of concentrate by weight, which on 1.5-2.4 t of concentrate is **2.3-4.8 t of
-  H₂SO₄** per tonne of REO. This is a genuinely large number and it is the main
-  argument for the caustic route.
+- *Monazite, sulfuric route.* 2 REEPO₄ + 3 H₂SO₄ is the same 1.5 mol of acid per
+  mole of rare earth, so the floor is the same **0.89 t of H₂SO₄ per tonne of
+  REO** (6.06 kmol RE × 147.1 g). Actual plant consumption is much higher,
+  because the digestion is run in a large excess — the charge must stay workable
+  as it thickens to a paste, and the thorium and any carbonate gangue take their
+  own share. How much higher is a plant variable, and no figure is asserted.
+- *Monazite, caustic route.* This one is a plant figure rather than a floor:
+  0.75 kg of NaOH per kilogram of monazite [@iaea2011radiation], which on
+  1.7-2.3 t of concentrate is **1.3-1.7 t of NaOH per tonne of REO**, of which
+  the ~50 % stoichiometric excess is recovered and reused.
 - *Ion-adsorption.* Displacing REE³⁺ takes three equivalents of NH₄⁺, so
   1.5 mol of (NH₄)₂SO₄ per mol of REE. A tonne of REO is about 6.1 kmol of REE
   (Ln₂O₃ ≈ 330 g/mol), giving 9.2 kmol × 132 g/mol = **1.2 t of (NH₄)₂SO₄ as a
@@ -1353,24 +1627,33 @@ rare earths is an allocation choice, not a measurement.
   not just its rare earth loading. Figures below 1.2 t are below the
   thermodynamic floor and cannot be right.
 
-**Solution volumes.** For the acid routes, a solid-to-liquid ratio of 1:3 to 1:5
-on 1.4-2.4 t of concentrate gives **4-12 m³** of leach liquor per tonne of REO.
+**Solution volumes.** No plant solid-to-liquid ratio could be sourced for the
+acid routes, so no leach volume is given for them. Order of magnitude:
+with only 1.5-2.3 t of concentrate to wet, the acid routes are *cubic metres* per
+tonne of REO, not thousands of them.
+
 For ion-adsorption ore the volume is set by the pregnant leach solution
-concentration instead: at 200-1,000 mg/L REE, a tonne of REO is dissolved in
-**1,000-5,000 m³**. Cross-checking against the ore tonnage at a typical
-liquid-to-solid ratio of 1-2 m³/t gives 350-5,000 m³, which agrees. Most of that
-volume is recirculated rather than discharged, but it is all in contact with the
-ore body and all of it is a containment problem.
+concentration instead, and that follows from the grade. At the 4:1
+liquid-to-solid ratio of @shi2022column and complete extraction, an ore of
+0.05-0.3 % REO gives a PLS of 125-750 mg/L, so a tonne of REO arrives dissolved
+in **1,300-8,000 m³** — three to four orders of magnitude more solution than an
+acid leach for the same metal. Most of that volume is recirculated rather than
+discharged, but it is all in contact with the ore body and all of it is a
+containment problem.
 
-**Solid residues.** The acid routes leave 0.4-0.9 t (bastnäsite) and 0.5-1.4 t
-(monazite) of leach residue per tonne of REO, simply as the difference between
-concentrate in and REO dissolved, plus any gypsum precipitated to fix phosphate.
-The monazite residue carries the thorium and is the regulated stream. The
-ion-adsorption case has no leach residue in the usual sense and is often
+**Solid residues.** At perfect recovery the acid routes leave 0.5-0.7 t
+(bastnäsite) and 0.7-1.3 t (monazite) of leach residue per tonne of REO, simply
+as the difference between concentrate in and REO dissolved, plus any gypsum
+precipitated to fix phosphate. Bayan Obo's sulfuric route reports the same
+quantity from the other direction: a slag-to-concentrate mass ratio of up to
+0.66, containing 0.2 % Th and stored as radioactive residue
+[@iaea2011radiation]. The monazite residue is likewise the regulated stream, and
+the Indian effluent treatment cake — about 10 % of the monazite mass, roughly
+250 t/a — is what that obligation looks like in practice [@iaea2011radiation].
+The ion-adsorption case has no leach residue in the usual sense and is often
 tabulated as "minimal", which is misleading: the solid left behind is the entire
-350-2,500 t of ore, either in place after in-situ leaching or as a spent heap,
+330-2,000 t of ore, either in place after in-situ leaching or as a spent heap,
 loaded with residual ammonium and structurally weakened by the leach.
-
 ### Major Environmental Concerns
 The burdens follow the route, and each one has already been named where it
 arises. Monazite leaves thorium-bearing residues and tailings that need licensed
@@ -1425,18 +1708,21 @@ properly, and is the place to look for figures.
 
 ## Emerging Technologies and Future Directions
 ### Green Leaching Methods
-**Deep eutectic solvents (DES)**:
 
-- Mixtures of a hydrogen-bond acceptor (typically a quaternary ammonium salt)
-  and a hydrogen-bond donor, liquid well below the melting points of either
-- Low vapour pressure, tunable, in principle recyclable
-- The demonstrated rare-earth-adjacent application is **thorium**, not the rare
-  earths: Ni and co-workers used a hydrophobic DES to extract Th selectively
-  from a radioactive waste leachate [@ni2023sustainable], which is the impurity
-  problem monazite processing has rather than the separation problem
-- Cost, viscosity and the difficulty of stripping the loaded phase currently
-  limit application
+**Deep eutectic solvents.** A DES is a mixture of a hydrogen-bond acceptor —
+typically a quaternary ammonium salt — and a hydrogen-bond donor, which together
+melt far below either component. The attraction for hydrometallurgy is a liquid
+with negligible vapour pressure, a composition that can be tuned rather than
+selected from a catalogue, and, in principle, recyclability.
 
+It is worth being precise about what has actually been shown, because the
+literature is often read as more than it is. The demonstrated rare-earth-adjacent
+application is **thorium**, not the rare earths: Ni and co-workers extract
+thorium selectively from a radioactive waste leachate with a hydrophobic DES
+[@ni2023sustainable]. That is the impurity problem monazite processing has, which
+makes it directly relevant to this chapter — but it is not a rare earth
+separation and should not be cited as one. Cost, viscosity, and the difficulty of
+stripping the loaded phase are what keep DES out of production.
 **Ionic liquids**: task-specific ionic liquids can in principle combine the
 leach and the extraction in one liquid, at the price of cost and scale-up.
 [](#biological-and-biomimetic-separations) covers them alongside deep eutectic
@@ -1444,51 +1730,45 @@ solvents as green solvent systems, and
 [](#environment-techno-economics-and-life-cycle) weighs the environmental claim.
 
 ### Process Integration
-**Combined roasting-leaching**:
 
-- Single-step process
-- Reduced equipment and energy
-- Under development
-
-**Leaching + solvent extraction** [@liu2017enrichment]:
-
-- Direct extraction from lean leach solutions
-- Eliminates precipitation step
-- Higher extractant consumption
+Both candidates here delete a step rather than improve one. **Roasting and
+leaching in one vessel** is the more ambitious and the less advanced: the roast
+is the energy-intensive step and the leach the corrosive one, each with its own
+equipment train, but the conditions the two want are close to incompatible and
+the work remains at development stage. **Extraction directly from the leach
+liquor** is nearer term and attacks the dilution problem that runs through this
+chapter. @liu2017enrichment extract from a lean leach solution instead of
+precipitating the rare earths and redissolving them, removing a precipitation, a
+filtration and a redissolution. It costs extractant — a dilute feed means more
+organic phase circulating per tonne of metal — so the trade is favourable exactly
+when the liquor is lean, which is why the ion-adsorption route is where it has
+been pursued.
 
 ### Selective Leaching
-**Targeted dissolution** [@he2025stepwise]:
 
-- Multi-stage leaching with different conditions
-- Separate REE from major impurities
-- Reduces purification cost
-
-**Electrochemical-assisted leaching**:
-
-- Apply potential during leaching
-- Selective oxidation/reduction
-- Enhanced kinetics
-- Research stage
-
+If the leach itself could reject the impurities, the purification section above
+would largely disappear. @he2025stepwise pursue this by staging the leach, so
+that impurities and rare earths come off in different fractions — the
+pH-controlled selective dissolution of the caustic monazite cake, generalised.
+The difficulty is that leaching selectivity is blunt compared with extraction
+selectivity, and a partial separation that still needs a purification circuit has
+bought little. **Electrochemically assisted leaching** applies a potential during
+the leach to drive a redox change at the mineral surface — the lever the Mountain
+Pass oxidative roast uses on cerium, applied *in situ*. It is at research stage,
+and no performance data are quoted.
 ### Artificial Intelligence and Process Control
-**Machine learning optimization**:
 
-- Predict optimal conditions for new ore batches
-- Real-time process adjustment
-- Still prospective for leaching; the demonstrated applications of machine
-  learning in this book are in extractant design and separation modelling
-  rather than in plant control
-
-**Automated monitoring**:
-
-- In-line sensors for REE, pH, impurities
-- Closed-loop control
-- Consistent product quality
-
-Where closed-loop control of a rare-earth operation *has* been demonstrated is
-downstream, on the solvent-extraction cascade rather than on the leach; see
-[](#process-modeling-and-optimization).
-
+The argument for machine learning on a leach is that ore is variable and the
+optimum moves with it. The argument against is data: a leach is slow, its assays
+are offline, and a plant generates few well-labelled operating points a year,
+which is the opposite of the regime these methods want. Nothing in this book
+demonstrates machine learning controlling a leach; what has been demonstrated is
+adjacent — extractant design and separation modelling
+([](#machine-learning-in-rare-earth-separations)) and closed-loop control of the
+solvent extraction cascade ([](#process-modeling-and-optimization)). In-line
+sensing for rare earths, pH and impurities is the precondition for any of it
+reaching the leach, and it is the genuinely hard part: there is no cheap online
+assay for a mixed rare earth liquor.
 ### Urban Mining
 Magnet scrap, spent phosphors, catalysts, polishing powders and
 {index}`coal fly ash <coal fly ash>` are leached with much the same acids and
@@ -1502,13 +1782,21 @@ nevertheless still under one percent.
 ## Comparison of Leaching Methods
 ### Summary Table
 
-| Ore Type | Pre-treatment | Leaching Method | Conditions | REE Recovery | Major Challenge |
-|----|----|----|----|----|----|
-| Bastnäsite | Roasting (700°C) | H₂SO₄ or HCl | 2-6M, 60-90°C, 2-4h | 90-98% | Fluorine emissions |
-| Monazite | Optional alkali roast | Conc. H₂SO₄ (220°C) | 93%, 220°C, 4-8h | 85-95% | Thorium separation |
-| Xenotime | Alkali roast preferred | H₂SO₄ or NaOH (high T) | 250-300°C, 6-12h | 80-95% | Very refractory |
-| Ion-adsorption | None | (NH₄)₂SO₄ or MgSO₄ | 2-5%, ambient, 4-8h | 80-95% | Ammonia pollution |
-| Bioleaching (all) | None | Microbial organic acids | Ambient, weeks | Not established; mg/L liquors in the published monazite work | Slow kinetics, dilute liquor |
+The table below carries no recovery column. Recoveries for these routes could not
+be traced to sources that actually measure them, and a column of plausible
+percentages is exactly the kind of thing this book exists to avoid; what is
+tabulated instead is the operating point a named plant actually runs, with its
+source.
+
+| Ore type | What must be broken | Industrial cracking step | Governing burden |
+|----|----|----|----|
+| Bastnäsite (Mountain Pass) | Fluorocarbonate | HCl pre-leach; calcine 600-800 °C; leach in 30 % HCl [@iaea2011radiation] | Fluorine; cerium disposition |
+| Bastnäsite-monazite (Bayan Obo) | Fluorocarbonate + phosphate | Conc. H₂SO₄ in a kiln, to 600 °C; water leach [@iaea2011radiation] | HF off-gas; slag at 0.66 t/t concentrate, 0.2 % Th [@iaea2011radiation] |
+| Monazite (classical) | Phosphate | 98 % H₂SO₄ at 200-220 °C [@iaea2011radiation] | Thorium follows the product; phosphate is a waste |
+| Monazite (current) | Phosphate | 60-70 % NaOH at 140-160 °C, 3-9 h, 0.75 kg NaOH/kg [@iaea2011radiation] | Caustic consumption; Th cake |
+| Xenotime | Phosphate (tighter) | Roast then H₂SO₄, or NaOH fusion at 400 °C [@iaea2011radiation] | Most refractory of the four |
+| Ion-adsorption clay | Nothing — ion exchange | Ammonium or magnesium salt at ambient [@shi2022column] | Ammonium in groundwater; land area |
+| Bioleaching (any) | Varies | Microbial organic acids, ambient, weeks | Milligram-per-litre liquors [@brisson2015bioleaching] |
 
 ### On Cost Comparisons
 
@@ -1518,76 +1806,104 @@ logistics, the disposal regime for thorium, and above all the value of the
 particular basket of rare earths a given ore yields — and a cost table that
 omits those is not a comparison of processes but a comparison of assumptions.
 What can be said structurally, from the reagent arithmetic above, is that the
-sulfuric monazite route buys its high recovery with 2-5 t of acid per tonne of
-REO plus a regulated radioactive residue, that the bastnäsite chloride route
-spends its money on the roast, and that the ion-adsorption route spends almost
-nothing on reagents or energy and almost everything on land, water and
-remediation. Techno-economics is treated in
+sulfuric monazite route pays in acid — at least 0.89 t per tonne of REO by
+stoichiometry and considerably more in practice — plus a regulated radioactive
+residue; that the caustic monazite route substitutes 1.3-1.7 t of NaOH per tonne
+of REO for that acid and gets a saleable phosphate by-product in return; that the
+bastnäsite chloride route spends its money on the roast; and that the
+ion-adsorption route spends almost nothing on reagents or energy and almost
+everything on land, water and remediation. Techno-economics is treated in
 [](#environment-techno-economics-and-life-cycle).
 
 ## Conclusions and Recommendations
 ### Key Findings
-1.  **Ore-specific processing is essential**:
-    - Bastnäsite: Requires defluorination (roasting) before acid leaching
-    - Monazite: Needs thorium management; alkaline pre-treatment advantageous
-    - Ion-adsorption clays: Mild salt leaching at ambient conditions
-2.  **Leaching chemistry sets the shape of the process economics**:
-    - Reagent consumption is fixed by stoichiometry and gangue, and for the
-      monazite sulfuric route it is several tonnes of acid per tonne of REO
-    - The roast, where there is one, is the energy-intensive step
-    - Waste treatment is a significant cost component, and for ion-adsorption
-      ore it is most of the cost
-3.  **Environmental challenges drive innovation**:
-    - Fluorine capture from bastnäsite
-    - Ammonia-free leaching for ion-adsorption ores
-    - Bioleaching as green alternative (but slow)
-4.  **Industrial practice is mature but evolving**:
-    - Established flowsheets for major ore types
-    - Incremental improvements in efficiency
-    - New methods (DES, ionic liquids) not yet commercial
+**The mineral dictates the route, and it does so through one bond.** Bastnäsite
+is a fluorocarbonate, so the fluorine has to be dealt with before any acid
+arrives — volatilised as HF and scrubbed, fixed as NaF by a soda-ash roast, or
+deactivated as NH₄F by an ammonium chloride roast. Monazite and xenotime are
+phosphates, so the RE–PO₄ bond has to be broken by concentrated sulfuric acid at
+200 °C and above or by concentrated caustic, and the thorium that rides in the
+same lattice has to go somewhere. Ion-adsorption clay is not a mineral problem at
+all: the rare earths are surface-adsorbed cations and a dilute salt solution
+displaces them at ambient temperature. Everything else in this chapter follows
+from those three facts.
 
+**The chemistry sets the economics, and stoichiometry sets the floor.** Reagent
+consumption cannot be argued below what the reaction requires — 0.89 t of H₂SO₄
+per tonne of REO on either acid route, 1.2 t of ammonium sulfate on the
+ion-adsorption route — and real consumption sits above it by an amount the gangue
+determines. The roast, where there is one, is the energy-intensive step, which is
+why every proposal to eliminate it survives even when it recovers less. And waste
+treatment is not a line item at the end: for the monazite routes it is the
+thorium obligation that decides whether the plant can be licensed at all, and for
+ion-adsorption ore it is most of the cost.
+
+**The industry's open problems are environmental, and they are specific.**
+Fluorine capture from bastnäsite, ammonium-free lixiviants for ion-adsorption
+clay, and something to do with thorium other than store it. Bioleaching is the
+most-discussed green alternative and, on the evidence assembled here, the least
+ready: it dissolves measurably more than an abiotic control, on a timescale of
+weeks, into milligram-per-litre liquors.
+
+**Practice is mature and moving slowly.** The flowsheets for all four ore types
+are established and most of them are decades old; the caustic displacement of the
+sulfuric monazite route is the last change of that magnitude. Deep eutectic
+solvents, ionic liquids and supercritical CO₂ are all at laboratory scale, and
+none of them removes the step that costs the most.
 (research-gaps)=
 ### Research Gaps
-1.  **Selective leaching**:
-    - Separate REEs from gangue in single step
-    - Reduce acid consumption
-    - Minimize waste generation
-2.  **Refractory ore processing**:
-    - More efficient xenotime decomposition
-    - Lower energy roasting methods
-    - Alternative to high-temperature acid digestion
-3.  **Bioleaching scale-up**:
-    - Faster kinetics (strain engineering)
-    - Process intensification
-    - Economic analysis at industrial scale
-4.  **Closed-loop processes**:
-    - Reagent recycling
-    - Water reuse
-    - Zero-discharge systems
+Four gaps are worth naming, and each of them is a gap in the same sense: a place
+where the current answer is known to be poor and no better one has been
+demonstrated at scale.
 
+**Leach selectivity.** Every flowsheet in this chapter dissolves the rare earths
+along with iron, aluminium, calcium, thorium and phosphate, and then spends a
+purification circuit undoing that. A leach that discriminated at the dissolution
+step would remove the purification section, cut the acid, and shrink the waste
+together. Staged leaching is the current best attempt [@he2025stepwise].
+
+**Refractory decomposition.** Xenotime needs a caustic fusion at 400 °C or a
+roast-plus-digestion, and monazite needs concentrated acid at 200 °C or
+concentrated caustic. A lower-energy way to break a rare earth phosphate would
+change both, and nothing in the current literature offers one.
+
+**Bioleaching at scale.** The kinetics are the barrier, not the chemistry:
+strain engineering, process intensification, and — conspicuously absent from the
+literature — an economic analysis at industrial scale that takes the fermentable
+carbon feed and the vessel residence time seriously.
+
+**Closing the loop.** Reagent regeneration, water reuse, and a genuinely
+zero-discharge circuit. Sulfate roasting to recover H₂SO₄ and the ~50 % caustic
+recycle of the monazite digestion [@iaea2011radiation] show the principle works;
+neither is close to closing a whole plant.
 ## The Feed Handed to Solvent Extraction
 
-After leaching and purification, a typical purified liquor arriving at the
-solvent extraction circuit looks like this [@jha2016hydrometallurgical]:
+What leaves this chapter is a clarified aqueous solution of mixed rare earth
+salts, low in iron, aluminium and thorium, at a controlled acidity. The
+concentration, free acidity and impurity ceilings are not specified: as the
+purification section above explains, no single specification exists, and no
+sourced general values could be traced.
 
-- **REE concentration**: 0.5-2.0 M (total mixed REEs)
-- **Acid medium**: chloride (from HCl) or nitrate (from HNO₃)
-- **pH**: 0.5-2.0
-- **Temperature**: ambient to 40 °C
-- **Major impurities**: Fe (\<100 ppm), Al (\<500 ppm), Ca (\<1000 ppm)
+What *is* fixed, and what matters most for the chapter that follows, is the
+**medium**. It is not a free choice made at the extraction circuit; it was
+decided at the leach, several unit operations earlier, and changing it later
+costs a precipitation and a redissolution.
 
-Turning that liquor into separated products means adjusting the pH into the
-extraction range (2.5-4.0) with base and contacting it with an organic phase —
-D2EHPA, PC88A, or TBP in kerosene. [](#solvent-extraction-fundamentals) takes
-the story from there.
+- A **chloride** medium suits the acidic organophosphorus extractants, D2EHPA
+  and PC88A. Mountain Pass leaches in HCl for exactly this reason and never
+  leaves chloride [@iaea2011radiation].
+- A **nitrate** medium suits {index}`TBP`, which extracts the neutral nitrate
+  complex and takes thorium preferentially. Nitric acid appears in monazite
+  processing as a variant of the caustic route, chosen when the separation
+  circuit wants nitrate [@iaea2011radiation].
+- A **sulfate** medium is what the Bayan Obo route and the ion-adsorption clays
+  deliver, and it usually has to be converted — precipitate as hydroxide,
+  carbonate or oxalate, redissolve in HCl — before an organophosphorus circuit
+  can use it.
 
-The choice of acid in leaching is not independent of the extractant chosen
-downstream, which is the main reason the two steps have to be designed together:
-
-- A chloride medium suits D2EHPA and PC88A.
-- A nitrate medium suits TBP.
-- Ion-adsorption leachates arrive as sulfates and may need conversion.
-
+That coupling is the main reason the leach and the extraction cascade have to be
+designed together, and it is why the flowsheet figure above colours streams by
+medium. [](#solvent-extraction-fundamentals) takes the story from there.
 A thermodynamic treatment of this same handoff — dissolution and extraction
 written in one set of chemical potentials, so that a leaching condition and an
 extraction constant can be computed on the same footing — appears in
