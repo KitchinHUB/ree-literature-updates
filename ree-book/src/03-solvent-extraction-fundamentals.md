@@ -30,7 +30,7 @@ molecules.
 Along the way the chapter answers the questions that new researchers reliably
 ask: why kerosene and not something else, what the salting-out agents are
 doing there, and where the extractant goes over the course of a cycle (it stays
-in the organic phase — better than 99.99% of it).
+in the organic phase, and the reason it does is worked out below).
 
 Two reviews cover the same ground at greater length. @xie2014critical is the
 critical review of rare earth solvent extraction and is cited throughout this
@@ -39,253 +39,255 @@ acidic media and organised around mechanism, process control and outlook
 together.
 
 ## Aqueous Phase Composition and Additives
+
 ### Role of pH Control
-pH is the **primary control variable** in REE solvent extraction [@xie2014critical]. The extraction mechanism for acidic extractants ({index}`D2EHPA`, {index}`PC88A`) involves exchange of H⁺ for REE³⁺:
+
+pH is the primary control variable in rare earth solvent extraction, and the
+reason is the stoichiometry of the exchange itself. For an acidic extractant —
+{index}`D2EHPA`, {index}`PC88A` — extraction is a cation exchange of three
+protons for one trivalent metal ion [@xie2014critical]:
 
 $$
 \mathrm{REE^{3+}(aq)} + 3\,\mathrm{HL(org)} \rightleftharpoons \mathrm{REEL_3(org)} + 3\,\mathrm{H^+(aq)}
 $$
 
-Where:
+with HL the extractant in its acidic form and REEL₃ the metal complex in the
+organic phase. Everything in the rest of this chapter — the reversibility, the
+reagent bill, the effluent problem, the difficulty of running a hundred stages
+in series — follows from the fact that protons appear on the right-hand side.
 
-- HL = Extractant in organic phase (acidic form)
-- REEL₃ = REE-extractant complex in organic phase
+Where the working pH window sits depends on how acidic the extractant is, and
+the three organophosphorus reagents the industry runs on form an ordered series.
+Replacing the P–O–C linkages of the phosphoric acid diester D2EHPA with P–C
+bonds gives first the phosphonic acid monoester PC88A (also sold as P507 and
+described in the literature as EHEHPA), and then the phosphinic acid
+{index}`Cyanex 272`; acidity falls along that sequence, and the pH at which each
+reagent will load and unload a rare earth climbs correspondingly
+[@li2019development; @zhang2016rare]. That ordering is more useful in practice
+than any table of windows, because it tells you what to reach for. A feed too
+acidic to extract from with a given reagent is not usually fixed by raising the
+pH — neutralising a
+strong acid liquor costs base and risks hydrolysing the metal — but by moving to
+a more acidic extractant. A loaded organic that will not strip without punishing
+acid concentrations calls for a move the other way.
 
-**pH ranges by extractant type** [@xie2014critical; @zhang2016rare]:
+Concrete windows do exist, but they are conditional on the medium, the extractant
+concentration and the loading, and they should be read that way. Working at
+pilot scale with 10 vol% D2EHPA in kerosene on a liquor derived from an apatite
+concentrate, @alemrajabi2022separation operated across pH 1.5–3.2 and stripped
+with 3 M HCl. For lanthanum with PC88A in kerosene, @agarwal2020comparative
+scanned initial pH from 1.5 to 7 and found 1 mol/L acid adequate to strip the
+loaded organic. Neutral extractants sit outside this framework altogether:
+{index}`TBP <TBP (tributyl phosphate)>` exchanges no protons, it solvates a
+neutral nitrate complex, so it extracts from strongly acidic nitrate media and is
+stripped by dilution with water rather than by acid.
 
-| Extractant    | Optimal Extraction pH | Stripping pH |
-|---------------|-----------------------|--------------|
-| D2EHPA        | 2.5-5.0               | 0.5-1.5      |
-| PC88A         | 2.0-4.0               | 0.5-1.0      |
-| TBP (neutral) | 0.5-2.0 (high NO₃⁻)   | dilution     |
-| Cyanex 272    | 4.0-6.0               | 1.0-2.0      |
-| DGA (amides)  | 0.5-3.0               | 0.1-0.5      |
+### Aqueous Phase Additives and What They Are For
 
-### Aqueous Phase Additives and Their Functions
-#### Salting-Out Agents
-**Purpose**: Increase extraction efficiency by reducing water activity and suppressing extractant hydration [@rydberg2004solvent].
+Three kinds of additive appear in a rare earth extraction liquor, and it is
+worth being clear about which problem each one solves.
 
-**Common salting agents**:
+**Salting-out agents** are neutral salts added in bulk. They work by competing
+for water: a concentrated salt solution ties up water molecules in hydration
+shells, lowers the activity of free water, and so shifts every equilibrium that
+consumes water to the right — including the dehydration of the aqueous metal ion
+that has to happen before it can be coordinated by an extractant
+[@rydberg2004solvent]. For neutral solvating extractants the effect is not merely
+thermodynamic but structural, because the anion is part of the extracted species:
+TBP takes up a rare earth as a neutral nitrate adduct, so a nitrate salt supplies
+the ligands that build the extractable complex as well as suppressing hydration.
+@matveev2018solvent studied precisely this system, extracting rare earths with
+tri-n-butyl phosphate and tri-iso-amyl phosphate from nitrate media in the
+presence of Ca(NO₃)₂. At equal molarity a divalent or trivalent cation salts out
+more strongly than a monovalent one, because it immobilises more water per mole
+and contributes more to ionic strength; that is why calcium and aluminium
+nitrates appear where sodium chloride would not be enough. The counter-argument
+is that aluminium is itself extractable by acidic organophosphorus reagents and
+will compete for the extractant, and that everything added to the aqueous phase
+has to leave in the raffinate. The saponification discussion later in this
+chapter is the same trade made over a different cation.
 
-1.  **NaCl** [@rydberg2004solvent]:
-    - Inexpensive and widely available
-    - Moderate salting-out effect
-    - Compatible with chloride media
-    - Increases ionic strength: $I = \tfrac{1}{2} \sum_i c_i z_i^2$
-2.  **Ca(NO₃)₂** (1-3 M) [@matveev2018solvent]:
-    - Strong salting-out effect (divalent cation)
-    - Enhances {index}`TBP <TBP (tributyl phosphate)>` extraction via nitrate complex formation
-    - Creates REE(NO₃)₃·nTBP extractable species
-    - Used industrially for TBP processes
-3.  **Al(NO₃)₃** (0.5-2 M):
-    - Very strong salting effect (trivalent)
-    - Can interfere if Al³⁺ is also extracted
-    - Useful for selective extractions
+**Buffers** hold the pH where the extraction reaction is trying to move it. The
+useful ones are the ones whose pKa falls inside the extraction window: acetate
+buffers about one unit either side of acetic acid's pKa near 4.8, which overlaps
+the D2EHPA and PC88A windows, and citrate, whose three pKa values span roughly
+3 to 6, buffers more broadly and also complexes rare earths in the aqueous
+phase — a feature or a nuisance depending on what you are doing. Below about
+pH 2 there is no useful carboxylate buffer, and pH is simply set by direct
+addition of HCl or HNO₃ and held by continuous titration. This is a bench
+technique. What replaces it at plant scale is the subject of the section on
+{index}`saponification` below, and the reason it has to be replaced is the same
+stoichiometry as before: extraction releases protons and drives the pH down,
+stripping consumes them and drives it up, and neither drift is small.
 
-**Mechanism** [@rydberg2004solvent]:
-
-- Salts compete for water of hydration
-- Reduces free water available to solvate extractant
-- Shifts equilibrium toward organic phase
-- Can provide 1-2 orders of magnitude improvement in {index}`distribution ratio`
-
-#### Buffers and pH Control Agents
-**Buffering systems** [@xie2014critical]:
-
-1.  **Acetate buffer** (pH 3.5-5.5):
-    - CH₃COOH/CH₃COONa
-    - Good for D2EHPA, PC88A systems
-    - Prevents pH drift during extraction
-2.  **Citrate/citric acid** (pH 2-6):
-    - Can also act as complexing agent
-3.  **Direct acid addition**:
-    - HCl or HNO₃ for low pH (\<2)
-    - Continuous monitoring and adjustment needed
-
-**pH adjustment during operation**:
-
-- **Extraction stage**: H⁺ released, pH decreases
-  - Add base (NaOH, NH₃) to maintain pH
-  - Typically 0.2-0.5 pH units drift acceptable
-- **Stripping stage**: H⁺ consumed, pH increases
-  - Add acid (HCl, HNO₃) to maintain low pH
-  - Target pH \< 1.0 for complete stripping
-
-#### Complexing Agents
-**Purpose**: Modify selectivity between REEs or suppress co-extraction of impurities [@thiele2020tuning].
-
-1.  **Lactic acid**:
-    - Forms aqueous complexes with REEs
-    - Can enhance selectivity for certain REE pairs
-2.  **EDTA/DTPA**:
-    - Strong chelators for impurity removal
-    - Can suppress {index}`thorium`, uranium extraction
-    - Used in pre-treatment
-3.  **Thiocyanate (SCN⁻)**:
-    - Modifies selectivity in some systems
-    - Less common in industrial practice
+**Complexing agents** are added to change selectivity rather than to change
+capacity, by binding rare earths in the aqueous phase and so competing with the
+extractant [@thiele2020tuning]. Hydroxycarboxylates such as lactate and citrate
+are the classical choice and are the same chemistry that makes ion-exchange
+[](#displacement-chromatography) work. Aminopolycarboxylates — EDTA,
+DTPA — bind far more strongly and are used less for tuning lanthanide-lanthanide
+selectivity than for holding back an impurity, {index}`thorium` and uranium in
+particular, and are more often applied in pre-treatment than in the cascade
+itself. The design freedom here is real but under-used: an aqueous complexant
+whose size selectivity runs opposite to the extractant's adds its selectivity to
+the extractant's rather than cancelling it, which is the point @thiele2020tuning
+make for the light lanthanides.
 
 ### Ionic Strength Effects
-Ionic strength (I) affects activity coefficients [@rydberg2004solvent]:
+
+All of the above act partly through ionic strength, which sets the activity
+coefficients that the mass-action expressions of the next section quietly assume
+away [@rydberg2004solvent]:
 
 $$
 I = \tfrac{1}{2} \sum_i c_i z_i^2
 $$
 
-**Effects on extraction**:
-
-- High ionic strength (I \> 1 M): Salting-out effect dominates
-- Low ionic strength (I \< 0.1 M): Activity coefficient corrections needed
-- Industrial practice: I = 1-3 M for robust extraction
-
-**Distribution ratio dependence**:
-
-$$
-\log D = \log D_0 + f(I)
-$$
-
-Where f(I) is ionic strength correction (typically positive for REE extraction)
+At the ionic strengths a real liquor runs at — molar, not millimolar — activity
+coefficients are far from unity and are not reliably predictable, which is why
+equilibrium constants measured in one medium transfer poorly to another. The
+practical consequences are two. First, distribution data must carry the medium
+they were measured in or they mean very little; this is the same warning
+@tanaka2021revaluating make about separation factors, discussed below. Second, an
+extraction circuit is more reproducible at high ionic strength than at low,
+because the activity coefficients are then at least slowly varying, which is one
+reason concentrated chloride and nitrate liquors are the industrial norm.
+[](#thermodynamics-of-extraction) takes up how badly the underlying
+thermodynamics is actually known.
 
 ## Organic Phase: Why Kerosene?
-### Diluent Requirements for REE Extraction
-The organic phase consists of:
 
-1.  **Diluent** (typically 70-95% by volume)
-2.  **Extractant** (5-30% by volume)
-3.  **Phase modifier** (0-10%, optional)
+### What the Diluent Has to Do
 
-**Key diluent requirements** [@rydberg2004solvent; @xie2014critical]:
+The organic phase is mostly diluent. A working solution is typically a few tens
+of volume percent extractant, the balance diluent, plus a few percent of a phase
+modifier where one is needed — the industrial example at the end of this chapter
+uses 30 vol% D2EHPA with 10 vol% TBP, which is representative of the proportions
+involved.
 
-| Property                    | Requirement                    | Kerosene Value |
-|-----------------------------|--------------------------------|----------------|
-| Density                     | \< 1.0 g/mL (phase separation) | 0.78-0.82 g/mL |
-| Viscosity                   | Low (0.5-3 cP)                 | 1-2 cP (25°C)  |
-| Water solubility            | \< 100 ppm                     | \~10 ppm       |
-| Flash point                 | \> 60°C (safety)               | 60-80°C        |
-| Dielectric constant         | 2-3 (low polarity)             | 1.8-2.1        |
-| Chemical stability          | Resistant to acids/bases       | Excellent      |
-| Interfacial tension         | 15-40 mN/m                     | 25-35 mN/m     |
-| Cost                        | \< \$2/kg                      | \$1-2/kg       |
-| Environmental acceptability | Low toxicity, biodegradable    | Moderate       |
+The diluent is not inert packing. It has a list of jobs, and the list is what
+selects it:
 
-### Why Kerosene is Preferred
-#### Chemical Properties
-**Composition**: Kerosene is a mixture of C₉-C₁₆ alkanes (linear and branched) with some aromatic content (10-20%) [@rydberg2004solvent].
+- **It must let the phases separate under gravity.** That means a density well
+  away from the aqueous phase. A rare earth chloride liquor carrying molar
+  concentrations of salt sits near 1.1–1.2 g/mL; a light hydrocarbon sits near
+  0.8; the difference of roughly 0.3 g/mL is what drives settling in every
+  gravity-based contactor in this chapter.
+- **It must separate quickly.** Settling velocity falls as viscosity rises, and
+  settler volume — the single largest contributor to solvent inventory in a
+  mixer-settler train — is set by how long the dispersion takes to break.
+- **It must not dissolve in water.** Anything that dissolves leaves in the
+  raffinate, as both a reagent loss and a discharge.
+- **It must be chemically inert** to strong acid and strong base at temperature,
+  through years of continuous recycling.
+- **It must not compete with the extractant.** A polar diluent solvates the
+  metal-extractant complex, and in doing so changes the extraction equilibrium
+  it was supposed to be neutral toward.
+- **It must be safe to hold in bulk**, which for a plant holding tens of cubic
+  metres of it means a flash point comfortably above the operating temperature.
+- **It must be cheap**, for the same reason.
 
-**Advantages for REE extraction** [@xie2014critical; @zhang2016rare]:
+### Why Kerosene
 
-1.  **Appropriate polarity**:
-    - Dielectric constant ε ≈ 2.0
-    - Dissolves extractants (D2EHPA, PC88A) well
-    - Does not compete for extractant coordination
-    - Low water solubility prevents phase mixing
-2.  **Solvation properties**:
-    - Provides favorable solvation for REE-extractant complexes
-    - @dewulf2022effect found extraction by a solvating extractant to
-      depend strongly on the polarity, donor strength and hydrogen-bonding
-      capability of the surrounding organic medium
-    - Kerosene's low polarity minimizes interference
-3.  **Density difference**:
-    - ρ(aqueous) ≈ 1.1-1.2 g/mL (with salts)
-    - ρ(kerosene) ≈ 0.8 g/mL
-    - Δρ ≈ 0.3-0.4 g/mL enables gravity separation
-4.  **Viscosity**:
-    - Low viscosity → fast phase disengagement
-    - Reduces pumping energy
-    - Improves mass transfer rates
+Kerosene — the roughly C₉–C₁₆ petroleum distillate cut — meets that list better
+than the alternatives, and the reasons are worth spelling out because they are
+the reasons a research paper's choice of n-dodecane does not automatically
+transfer to a plant.
 
-#### Operational Advantages
-1.  **Cost-effectiveness**:
-    - Petroleum refinery product
-    - \$1-2 per kg (vs. \$5-20/kg for specialized solvents)
-    - Critical for industrial-scale operations (1000s of L/day)
-2.  **Safety**:
-    - Flash point 60-80°C (vs. 40°C for hexane)
-    - Reduces fire hazard in large-scale plants
-    - Lower vapor pressure than light alkanes
-3.  **Chemical stability**:
-    - Resistant to acid and base hydrolysis
-    - No reaction with extractants
-    - Long service life (months to years with purification)
-4.  **Low water solubility**:
-    - Minimal organic loss to aqueous raffinate
-    - Reduces environmental discharge issues
-    - Phase separation is clean
+Its polarity is right. An alkane mixture has a dielectric constant near 2, which
+is low enough that the diluent does not coordinate the metal or hydrogen-bond to
+the extractant's phosphoryl oxygen, and yet the extractants themselves — large
+branched alkyl esters — are entirely soluble in it. That the surrounding medium
+is not neutral is not a hypothetical concern: @dewulf2022effect found extraction
+by a solvating extractant to depend strongly on the polarity, donor strength and
+hydrogen-bonding capability of the organic medium around it. Kerosene's
+contribution is to be as close to nothing as a liquid can be.
 
-#### Alternative Diluents
-Other diluents used in specialized applications:
+Its density and viscosity are right, which is the same statement as saying the
+phases disengage. At roughly 0.8 g/mL against a salt-loaded aqueous phase near
+1.1–1.2, the density difference is large by liquid-liquid extraction standards,
+and the low viscosity of a light hydrocarbon means the dispersion breaks quickly
+rather than persisting as a stable band.
 
-1.  **n-Dodecane** (C₁₂H₂₆):
-    - Pure compound (better for research)
-    - More expensive than kerosene
-    - Similar properties to kerosene
-2.  **Isopar series** (branched alkanes):
-    - Lower odor than kerosene
-    - Higher flash point (\>100°C)
-    - 2-3× cost of kerosene
-    - Used in pharmaceutical/food applications
-3.  **{index}`Ionic liquids <ionic liquids>`**:
-    - Negligible vapor pressure
-    - Tunable properties
-    - Very expensive (\$100-1000/kg)
-    - Research stage for REE separations
-4.  **Supercritical CO₂**:
-    - Green solvent
-    - Requires high pressure equipment
-    - Not yet commercial for REE
+It is safe and cheap enough to hold in bulk. A petroleum refinery fraction costs
+what fuel costs, and its flash point is high enough that it need not be handled
+the way a light alkane such as hexane must. Neither statement is true of the
+specialist solvents that outperform it on any single property.
+
+And it is stable. Kerosene does not hydrolyse in acid or base and does not react
+with the extractants, so the organic inventory can be recycled indefinitely; what
+limits its service life is accumulated degradation product from the *extractant*
+and entrained crud, both of which are removed by periodic washing rather than by
+replacing the diluent.
+
+**Alternatives, and what they are for.** *n*-Dodecane is a pure compound with
+essentially kerosene's properties and none of its batch-to-batch variability,
+which is why research papers use it and plants do not — a defined composition is
+worth paying for when you are measuring an equilibrium constant and worth nothing
+when you are running a cascade. Branched-alkane products sold under trade names
+such as Isopar are narrow, low-odour, higher-flash-point cuts used where
+workplace exposure or product contamination matters.
+{index}`Ionic liquids <ionic liquids>` and supercritical CO₂ are research
+diluents rather than alternatives at present, the first because of cost and
+viscosity and the second because it requires pressure equipment; both are treated in
+[](#membranes-mofs-and-emerging-approaches) and
+[](#coacervates-and-aqueous-biphasic-systems), where the argument for them is not
+that they are better diluents but that they change the separation chemistry.
 
 ### Phase Modifiers
-**Purpose**: Prevent third-phase formation and improve phase separation [@rydberg2004solvent].
 
-**Common modifiers**:
-
-1.  **TBP** (tributyl phosphate): 5-10 vol%
-    - Increases organic phase polarity
-    - Prevents aggregation of metal-extractant complexes
-    - Critical when loading \> 20 g/L REE
-2.  **1-Decanol, 1-dodecanol**: 3-5 vol%
-    - Reduces interfacial viscosity
-    - Improves coalescence
-    - Prevents emulsion formation
-
-**When needed**:
-
-- High extractant concentration (\>30%)
-- High metal loading (\>50% of extractant capacity)
-- Systems prone to third-phase formation ({index}`Cyanex 272`, DEHPA)
+At high extractant concentration or high metal loading the organic phase can
+split into two: a dense, extractant-rich third phase separates out and the
+circuit stops working. The metal-extractant complexes are polar species held in a
+non-polar medium, they aggregate, and beyond some loading the aggregates cease to
+be soluble. The fix is a modifier — a small addition of something more polar than
+the diluent that solvates the aggregates and keeps them dispersed
+[@rydberg2004solvent]. TBP is the usual choice in rare earth circuits, at a few
+to ten volume percent, and it is the reason the "30% D2EHPA + 10% TBP" recipe
+recurs; long-chain alcohols such as 1-decanol and 1-dodecanol do the same job and
+also lower interfacial viscosity, which improves coalescence and suppresses
+stable emulsions. The modifier is a cost and a complication — one more component
+to analyse, degrade and lose — so it is added when third-phase formation or slow
+disengagement demands it, not by default.
 
 ## pH Swing Mechanism for Phase Transfer
+
 ### Extraction Step: Aqueous → Organic
-The fundamental extraction reaction for acidic extractants [@xie2014critical; @tanaka2021revaluating]:
+
+Acidic organophosphorus extractants are hydrogen-bonded dimers in a non-polar
+diluent, so the reaction written earlier is more accurately
+[@xie2014critical; @tanaka2021revaluating]:
 
 $$
 \mathrm{REE^{3+}(aq)} + 3\,\mathrm{(HL)_2(org)} \rightleftharpoons \mathrm{REE(HL_2)_3(org)} + 3\,\mathrm{H^+(aq)}
 $$
 
-Where:
-
-- (HL)₂ represents dimeric extractant (D2EHPA, PC88A form dimers)
-- REE(HL₂)₃ is the extracted tris-complex
-
-**Equilibrium constant**:
+where (HL)₂ is the dimeric extractant and REE(HL₂)₃ the extracted tris-complex.
+The equilibrium constant is
 
 $$
 K_\mathrm{ex} = \frac{[\mathrm{REE(HL_2)_3}]_\mathrm{org}\,[\mathrm{H^+}]_\mathrm{aq}^{3}}
                      {[\mathrm{REE^{3+}}]_\mathrm{aq}\,[\mathrm{(HL)_2}]_\mathrm{org}^{3}}
 $$
 
-**Distribution ratio** [@iloeje2019gibbs]:
+and the quantity actually measured is the {index}`distribution ratio`
+[@iloeje2019gibbs]
 
 $$
 D = \frac{[\mathrm{REE}]_\mathrm{org}}{[\mathrm{REE}]_\mathrm{aq}}
 $$
 
+which, taking logarithms of the mass-action expression, gives the working
+relation of the whole chapter:
+
 $$
 \log D = \log K_\mathrm{ex} + 3 \log [\mathrm{(HL)_2}]_\mathrm{org} + 3\,\mathrm{pH}
 $$
 
-### pH Dependence (The "pH Swing")
-**Key observation**: log D has **strong pH dependence** with slope ≈ +3 [@tanaka2021revaluating].
+### pH Dependence: The "pH Swing"
+
+The last term is the pH swing. Because three protons are released per metal ion,
+log D moves three units for every unit of pH [@tanaka2021revaluating]:
 
 $$
 \frac{\partial (\log D)}{\partial\, \mathrm{pH}} \approx +3
@@ -293,10 +295,11 @@ $$
 \left( \text{equivalently,} \ \frac{\partial (\log D)}{\partial \log [\mathrm{H^+}]} \approx -3 \right)
 $$
 
-This means:
-
-- Increasing pH by 1 unit → D increases by \~1000×
-- Decreasing pH by 1 unit → D decreases by \~1000×
+A single pH unit therefore moves the distribution ratio by a factor of a
+thousand, in either direction. That is an unusually steep lever for a chemical
+process, and it is what makes the same reagent do both halves of the cycle: the
+metal is loaded at one pH and unloaded at another, with no change of chemistry in
+between.
 
 **Illustrative slope-3 behaviour**, drawn for a lanthanide with pH₁/₂ = 2.5 at
 equal phase volumes. The numbers are the mass-action expression evaluated, not
@@ -317,183 +320,138 @@ relation for two neighbouring lanthanides at once, which is where the steepness
 stops being an unmixed blessing: the slope is +3 for both of them, and the two
 lines are parallel.
 
-### Extraction Cycle
-#### Extraction Stage (Forward Transfer)
-**Conditions** [@xie2014critical]:
+### The Extraction Cycle
 
-- pH: 2.5-4.0 (for D2EHPA/PC88A)
-- Phase ratio: O/A = 1/1 to 1/5
-- Contact time: 2-10 minutes
-- Temperature: 20-40°C
+The cycle is one argument, not four operations, and it is easiest to follow as a
+single pass of the organic phase around the loop.
 
-**Process**:
-
-1.  Aqueous feed (pH 3.0, REE³⁺ = 1.0 M) contacts organic (30% D2EHPA in kerosene)
-2.  REE³⁺ transfers to organic, releasing H⁺
-3.  Aqueous pH drops (3.0 → 2.5)
-4.  Caustic (NaOH) added to maintain pH at 3.0
-5.  Raffinate (depleted in REE) exits at pH 3.0
-6.  Loaded organic (REE-extractant complex) advances to scrubbing
-
-**Material balance**:
+**Forward transfer.** Aqueous feed meets the organic phase somewhere in the
+D2EHPA/PC88A window — the worked example below uses pH 3.0 — and the metal moves
+into the organic. In doing so it releases protons, and the pH of the aqueous
+phase falls; because of the slope-3 dependence, a drift of even a few tenths of a
+pH unit is a substantial loss of D, so the pH has to be held. The material
+balance that says how much holding is required is exact and follows from the
+stoichiometry alone:
 
 $$
-n(\mathrm{H^+})_\text{released} = 3\, n(\mathrm{REE})_\text{extracted} = n(\mathrm{NaOH})_\text{required}
+n(\mathrm{H^+})_\text{released} = 3\, n(\mathrm{REE})_\text{extracted} = n(\mathrm{base})_\text{required}
 $$
 
-For 1.0 M REE feed, 90% extraction:
+Three equivalents of base per mole of rare earth moved. That is not a detail;
+it is one of the two largest reagent costs in a separation plant and, as the
+saponification section shows, the origin of its worst effluent problem.
 
-- H⁺ released: 3 × 0.9 = 2.7 M
-- NaOH requirement: 2.7 M (significant operating cost)
+**Scrubbing.** The loaded organic is next washed with an aqueous stream before it
+is stripped. Two entirely different operations go by this name and conflating
+them causes confusion. Washing co-extracted Fe³⁺, Al³⁺ or Ca²⁺ off the organic is
+impurity removal, and it is a minor operation — iron in particular binds D2EHPA
+more strongly than any rare earth and has to be removed upstream rather than
+scrubbed off here ([](#from-ore-to-feed-solution)). The scrubbing that matters in
+a rare earth cascade is REE-on-REE scrubbing, and it is treated below as part of
+fractional extraction, because it is not an auxiliary step but the liquid-liquid
+analogue of reflux.
 
-#### Scrubbing Stage (Optional)
-**Purpose**: Remove co-extracted impurities (Fe³⁺, Al³⁺, Ca²⁺) from loaded organic.
-
-**Conditions**:
-
-- pH: 2.0-3.0 (intermediate between extraction and stripping)
-- Scrub solution: dilute HCl or buffer
-- O/A ratio: 5/1 to 20/1
-- Contact stages: 1-2
-
-**Selectivity**:
-
-- Impurities with lower $K_\mathrm{ex}$ values strip preferentially
-- REEs remain in organic (high $K_\mathrm{ex}$ at this pH)
-
-#### Stripping Stage (Reverse Transfer)
-**Conditions** [@xie2014critical; @zhang2016rare]:
-
-- pH: 0.0-1.5 (strong acid)
-- Stripping agent: 2-6 M HCl or HNO₃
-- O/A ratio: 2/1 to 10/1
-- Contact time: 5-15 minutes
-- Temperature: 40-60°C (elevated T improves stripping)
-
-**Process**:
-
-1.  Loaded organic contacts strong acid (e.g., 4 M HCl, pH ≈ 0)
-2.  High \[H⁺\] drives equilibrium backward (Le Chatelier)
-3.  REE³⁺ transfers back to aqueous phase
-4.  Extractant (HL) regenerated in organic phase
-5.  Stripped organic (regenerated) recycled to extraction
-
-**Stripping reaction**:
+**Reverse transfer.** Stripping runs the same equation backwards:
 
 $$
 \mathrm{REE(HL_2)_3(org)} + 3\,\mathrm{H^+(aq)} \rightarrow \mathrm{REE^{3+}(aq)} + 3\,\mathrm{(HL)_2(org)}
 $$
 
-**Stripping efficiency.** The same slope-3 dependence runs backwards here: a
-strip liquor one pH unit more acidic than the extraction stage drops D by about
-three orders of magnitude, which is why stripping is fast and why it is done
-with acid rather than by any change of extractant. For PC88A loaded with
-lanthanum, @agarwal2020comparative found 1 mol/L acid adequate for effective
-stripping. Complete stripping is nonetheless usually staged, since a single
-contact leaves the organic in equilibrium with the strip liquor it has just
-loaded.
+Contacting the loaded organic with strong acid raises [H⁺] by orders of
+magnitude, and the slope-3 dependence collapses D by three orders of magnitude
+per pH unit. That is why stripping is fast, why it is done with acid rather than
+by any change of extractant, and why it regenerates the extractant in its acidic
+form ready to recycle. For PC88A loaded with lanthanum, @agarwal2020comparative
+found 1 mol/L acid adequate for effective stripping; the pilot-scale D2EHPA
+system of @alemrajabi2022separation used 3 M HCl. Complete stripping is
+nonetheless staged, because a single contact leaves the organic in equilibrium
+with the strip liquor it has just loaded — the same arithmetic as for extraction,
+run in the other direction, and quantified by the stripping factor in the phase
+ratio section below.
+
+**Recycle.** The stripped organic returns to the head of the cascade. Nothing
+about the extractant has changed; what has happened is that three protons were
+picked up in the strip section and released in the extraction section, and the
+metal made the opposite journey.
 
 ### Where Do Extractants Go?
-**Critical insight**: Extractants remain predominantly in the organic phase throughout the cycle [@rydberg2004solvent; @xie2014critical].
 
-#### Extractant Solubility
-**D2EHPA** (di-2-ethylhexyl phosphoric acid):
+New researchers reliably ask where the extractant ends up, and the answer is
+that it stays in the organic phase [@rydberg2004solvent; @xie2014critical]. The
+reason is worth working out rather than asserting, because it is the same
+argument that says what the makeup rate is set by.
 
-- Water solubility: \~5 ppm (very low)
-- Partition coefficient: $P_\mathrm{HL}$ = $[\mathrm{HL}]_\mathrm{org}$ / $[\mathrm{HL}]_\mathrm{aq}$ \> 10,000
-- Organic phase loss: \<0.01% per cycle
+D2EHPA and PC88A are large branched dialkyl esters of phosphorus acids. They are
+surfactants, not salts, and their solubility in water is at the parts-per-million
+level, while their concentration in the organic phase is a few tens of volume
+percent — hundreds of thousands of parts per million. The partition coefficient
+between the phases is therefore enormous, and the fraction of the inventory that
+dissolves into the aqueous phase at each contact is correspondingly tiny. What
+actually consumes extractant is not dissolution but chemistry: slow hydrolysis of
+the ester linkages, oxidative and, in nuclear service, radiolytic degradation.
+The degradation products are themselves surface-active and accumulate, which is
+why an operating circuit carries a carbonate wash to strip them out rather than
+relying on dilution.
 
-**PC88A** (2-ethylhexyl phosphonic acid mono-2-ethylhexyl ester):
+TBP is the exception among common reagents. It is appreciably more water-soluble
+than the acidic organophosphorus extractants, enough that a TBP circuit needs an
+organic-recovery step on its aqueous effluent that a D2EHPA circuit does not.
 
-- Water solubility: \~10 ppm
-- Similar partition behavior to D2EHPA
-- Slightly higher aqueous loss due to phosphonic acid group
+The metal, meanwhile, does cross. The picture to hold is that the extractant is
+dissolved in the organic phase and never leaves it; the reaction happens at or
+near the interface; the metal-extractant complex forms on the organic side and
+stays there; and what actually traverses the boundary is the aqueous metal ion in
+one direction and protons in the other. The rate-limiting step in that sequence
+is usually diffusion on the aqueous side rather than the complexation reaction,
+which is fast — a fact that matters for contactor design, because it means
+interfacial area, not chemistry, sets how long a stage has to be contacted.
 
-**TBP** (tributyl phosphate):
-
-- Water solubility: \~400 ppm (higher than acidic extractants)
-- More significant aqueous loss
-- Requires organic wash/recovery step
-
-#### Extractant Cycling
-**Form during extraction**:
-
-- Free extractant: (HL)₂ (dimer in organic phase)
-- Metal-loaded: REE(HL₂)₃ (tris-complex)
-
-**Form during stripping**:
-
-- Metal complex dissociates: REE(HL₂)₃ → REE³⁺(aq) + (HL)₂(org)
-- Extractant regenerated in free form
-
-**Loading capacity** [@xie2014critical]:
-
-- Maximum loading: \~50-70% of extractant molecules coordinated
-- Typical operation: 30-40% loading
-- Higher loading → increased viscosity, third-phase risk
-
-**Degradation and makeup**:
-
-- Hydrolysis: HL + H₂O → H₃PO₄ + organics (slow)
-- Oxidation: exposure to air, radiolysis
-- Makeup rate: 0.1-1% per cycle (depends on conditions)
-- Purification: carbonate wash to remove degradation products
-
-#### Phase Transfer Dynamics
-**Extractant never "crosses" into aqueous permanently**:
-
-1.  Extractant dissolved in kerosene at molecular level
-2.  At interface, extractant adsorbs and reacts with REE³⁺
-3.  REE-extractant complex remains in organic phase
-4.  Only dissolved REE³⁺ moves between phases
-5.  H⁺ exchanges across interface
-
-**Mass transfer mechanism** [@rydberg2004solvent]:
-
-- Diffusion of REE³⁺ to interface (aqueous side)
-- Interfacial complexation reaction (fast)
-- Diffusion of REE-complex away from interface (organic side)
-- Rate-limiting step: usually aqueous diffusion
+**Loading limits.** The extractant is a finite, shared resource, and this is the
+constraint that most often bites in practice. Three monomers are consumed per
+REE³⁺. A 30 vol% D2EHPA solution is about 0.9 M in monomer and therefore
+saturates near 0.3 M rare earth; circuits are run at a fraction of that, because
+approaching saturation raises the organic viscosity, invites third-phase
+formation, and — since the elements compete for the same ligand — destroys the
+selectivity the cascade was built on. Where the operating loading sits is a
+design choice, and the industrial example below runs at about half of capacity.
 
 ### Selectivity Between REEs
-**pH1/2 concept** [@tanaka2021revaluating; @xie2014critical]:
 
-pH₁/₂ is defined as the pH where D = 1 (50% extraction).
+The convenient way to compare elements is not through D, which depends on
+conditions, but through the pH at which D = 1 [@tanaka2021revaluating;
+@xie2014critical]. Setting log D = 0 in the working relation above,
 
-From: log D = log $K_\mathrm{ex}$ + 3 log[(HL)₂] + 3 pH
-
-At D = 1: pH₁/₂ = −(log $K_\mathrm{ex}$ + 3 log[(HL)₂]) / 3
+$$
+\mathrm{pH}_{1/2} = -\tfrac{1}{3}\left( \log K_\mathrm{ex} + 3 \log [\mathrm{(HL)_2}] \right)
+$$
 
 A *lower* pH₁/₂ means a more strongly extracted element, since it reaches
 D = 1 while the aqueous phase is still more acidic.
 
 **The order across the series.** For acidic organophosphorus extractants —
 D2EHPA, PC88A, Cyanex 272, the workhorses of the industry — the distribution
-ratio rises monotonically from La to Lu, and pH₁/₂ falls correspondingly. The
-smaller, more charge-dense heavy ion binds the phosphoryl oxygens more tightly.
+ratio rises monotonically from La to Lu, and pH₁/₂ falls correspondingly
+[@nash1993basic]. The smaller, more charge-dense heavy ion binds the phosphoryl
+oxygens more tightly.
 So in any cascade built on these reagents the heavies load into the organic
 phase and the lights report to the raffinate. Yttrium is the exception that
 matters industrially: it has no 4f electrons and sits by size near Ho, but its
 extraction behaviour varies with the extractant and it can fall anywhere from
 Dy to Er in the sequence, which is what makes Y/Ho separations awkward.
 
-**Selectivity**:
+**What the gap is worth.** Because log D moves with slope +3 for both members of
+a pair, the separation factor follows directly from the gap between their
+half-extraction pH values:
 
 $$
+\beta = 10^{\,3\,\Delta \mathrm{pH}_{1/2}}, \qquad
 \Delta \mathrm{pH}_{1/2} = \mathrm{pH}_{1/2}(\mathrm{REE}_1) - \mathrm{pH}_{1/2}(\mathrm{REE}_2)
 $$
 
-Because log D moves with slope +3, the separation factor follows directly from
-the gap between two elements' half-extraction pH values:
-
-$$
-\beta = 10^{\,3\,\Delta \mathrm{pH}_{1/2}}
-$$
-
 A gap of 0.1 pH units is a separation factor of 2; a gap of 0.2 is a factor of 4.
-This is why pH control to ±0.05 units is a real engineering requirement and not
-a counsel of perfection. Run the same arithmetic at the value that actually
-governs an adjacent light-lanthanide pair, β = 1.5, and the gap is
+This is why pH control at the hundredth of a unit is a real engineering
+requirement and not a counsel of perfection. Run the same arithmetic at the value
+that actually governs an adjacent light-lanthanide pair, β = 1.5, and the gap is
 Δ pH₁/₂ = (log 1.5)/3 = 0.06 pH units — the whole of the chemistry the industry
 is built on, drawn to scale in [](#fig-logd-vs-ph).
 
@@ -532,13 +490,18 @@ different studies are frequently not comparable. Treat any single tabulated β
 as conditional on the medium, the extractant concentration, the loading and the
 temperature it was measured at.
 
-**Challenges**:
-
-- Adjacent REEs have small Δ pH₁/₂ (of order 0.1 pH unit)
-- Requires many stages for high purity separations
-- @li2020hydration shows hydration counteracts the separation of lanthanides
+There is also a physical reason not to expect the gaps to be large. The ion that
+has to be extracted is not a bare cation but a hydrated one, and the same
+contraction in ionic radius that strengthens binding to the extractant also
+strengthens binding to water. @li2020hydration make this quantitative: hydration
+counteracts the separation of the lanthanides, so a large part of the
+selectivity built into a ligand is paid back to the aqueous phase before it can
+be collected. Designing an extractant is therefore not a matter of maximising
+affinity but of maximising the *difference* between two affinities that a
+competing solvation equilibrium is working to erase.
 
 ### Temperature Effects
+
 **The sign of the temperature effect is system-specific and should not be
 assumed.** For lanthanum with PC88A in kerosene over 25-55 °C,
 @agarwal2020comparative found extraction *increased* slightly with temperature
@@ -554,143 +517,135 @@ $$
 \log K_\mathrm{ex} = \frac{-\Delta H}{2.303\,RT} + \frac{\Delta S}{2.303\,R}
 $$
 
-**Operational implications**:
+The scale of RT is worth holding on to when reading enthalpies of extraction:
+at 298 K, RT is 2.48 kJ/mol, so the free-energy difference corresponding to
+β = 1.5 is RT ln 1.5 ≈ 1.0 kJ/mol. That is the energy budget the whole industry
+operates inside, and [](#the-energy-scale-of-selectivity) is about what it means
+for ligand design.
 
-- Extraction is usually run at ambient temperature, 20-30 °C
-- Stripping is often run warmer, 40-60 °C
-- @khoshoei2025crown reviews the thermodynamics of crown ether extractants,
-  a different extractant class from the acidic organophosphorus reagents
-  above, where the enthalpic and entropic contributions to selectivity are
-  larger and better characterised
+**Operational implications.** Extraction is generally run at ambient
+temperature; stripping is often run warmer, which speeds phase disengagement and
+reduces organic viscosity whatever it does to the equilibrium. Extractant classes
+other than the acidic organophosphorus reagents behave differently:
+@khoshoei2025crown reviews the thermodynamics of crown ether extractants, where
+the enthalpic and entropic contributions to selectivity are both larger and
+better characterised.
 
 ## Liquid-Liquid Contactor Design
-### Types of Contactors
-#### Mixer-Settler
-**Most common industrial design** [@rydberg2004solvent; @zhang2016rare].
 
-**Mixer section**:
+### Choosing a Contactor
 
-- Intense agitation (turbine impeller, 100-300 rpm)
-- Residence time: 2-10 minutes
-- Disperses one phase into other (typically organic dispersed in aqueous)
-- Creates high interfacial area for mass transfer
+Every contactor does the same two things in some order: it creates interfacial
+area so the metal can cross, and it then destroys that area again so the phases
+can be separated and sent on. The families differ in how they do each half, and
+almost every engineering property that matters — residence time, solvent
+inventory, footprint, startup time, tolerance of dirt — falls out of those two
+choices. @zhang2016equipment and @qi2018equipment are the equipment-side
+treatments written specifically for rare earths.
 
-**Settler section**:
+**{index}`Mixer-settlers <mixer-settler>`** do the two jobs in two connected
+boxes: an agitated mixer that disperses one phase into the other, and a
+quiescent settler where gravity pulls the dispersion apart again. Because gravity settling of a fine dispersion is
+slow, the settler is the larger of the two vessels, often by a wide margin, and
+it dominates both the footprint and the solvent inventory of the train. That is
+the standing criticism of the design and it is entirely fair. What is bought with
+it is robustness of an unusual kind. A mixer-settler tolerates solids and crud
+that would foul anything with a small passage in it; it can be stopped and
+restarted; it scales by getting bigger rather than by getting more numerous; and,
+decisively, every stage is a vessel with a liquid level in it that can be
+sampled, assayed and reasoned about individually. On a train of tens to hundreds
+of stages splitting a pair with β near 1.5, the ability to walk the cascade and
+find the stage that is misbehaving is worth more than compactness. That is why
+mixer-settlers are the industry standard despite being worst on almost every
+other axis, and the capability is real rather than notional: @dewulf2022separation
+took a heavy rare earth hydroxide concentrate from mining waste and, in sixteen
+stages of laboratory mixer-settlers, raised a thulium group from 34% to 99.8%
+purity and a dysprosium group from 54% to 98.7% in the same operation.
 
-- Quiescent zone for phase separation
-- Gravity settling (Δρ = 0.3-0.4 g/mL)
-- Residence time: 10-30 minutes
-- Collect separated phases from different heights
+The cost of the settler volume is paid twice. Once as capital and inventory —
+the organic held up in a hundred settlers is extractant that has been bought and
+is not extracting — and once as time. A cascade with large holdup has a long time
+constant, so it takes a long time to reach steady state after a startup or a
+disturbance, and during that time it is producing off-specification product. The
+dynamics of rare earth mixer-settler cascades have accordingly been studied as a
+problem in their own right [@wichterlova1999dynamic], and the dynamic cascade
+models in [](#process-modeling-and-optimization) exist largely because of it.
 
-**Advantages**:
+**Pulsed columns** stack the contacting vertically. A single column packed with
+perforated plates or with discs and doughnuts does the work of several
+mixer-settler stages on a fraction of the floor area, and the agitation is
+supplied by pulsing the whole liquid inventory from an external pump, so there
+are no moving parts inside the column at all. The gains are footprint and
+mechanical simplicity, and in a nuclear context also containment: nothing has to
+penetrate the vessel. What is given up is the property that made the
+mixer-settler attractive. A column has no stages to sample. Its performance is
+described by a height equivalent to a theoretical stage, which is not a design
+constant but an outcome of the hydrodynamics — dispersed-phase holdup and drop
+size, which depend on the pulse in ways that are still being characterised.
+@li2025extraction is the current rare earth example, a pulsed disc-and-doughnut
+column run on NdFeB acid leachate with saponified PC-88A: dispersed-phase holdup
+fell and then rose again as pulse intensity increased, while drop diameter fell
+monotonically, and the height of a mass transfer unit came out near two metres.
+A stage height that responds non-monotonically to the main control handle is an
+uncomfortable thing to put many of in series, and it is a large part of why
+columns are common in nuclear reprocessing and rare in rare earth separation.
 
-- Simple, robust design
-- Easy to scale (demonstrated up to 100 m³ units)
-- Handles solids, impurities well
-- Low maintenance
+**Centrifugal extractors** replace gravity with a few hundred times gravity.
+Mixing and separation happen in the same spinning rotor, so the settler
+disappears entirely and with it most of the inventory and the footprint.
+@maertens2023design, describing the design of laboratory-scale annular
+centrifugal contactors, state the appeal exactly: high throughput at short
+residence times, small liquid holdup, and a small footprint. Residence time falls
+from minutes to seconds, and startup from days to minutes — which for a
+laboratory or a pilot campaign is the whole argument, since a mixer-settler
+train may spend longer approaching steady state than running at it.
 
-**Disadvantages**:
+The short residence time is more than an economy. It can be a separation
+mechanism in its own right: @duan2015separation separated Nd³⁺ from Fe³⁺ in an
+annular centrifugal contactor by deliberately *not* reaching equilibrium,
+exploiting the difference in extraction rate rather than the difference in
+equilibrium constant. That is a lever nothing else in this chapter has, because
+everything else here is thermodynamic. Against it stands the reason the industry
+has not adopted them: a centrifugal extractor is a machine, with a rotor, a
+motor, bearings and seals, and a rare earth cascade needs a great many stages of
+it. Capital cost and maintenance scale with stage count in a way that tankage
+does not, solids are not tolerated, and the drivers that made nuclear
+reprocessing pay for them — inventory as a criticality and safeguards concern,
+and solvent degradation that accumulates with residence time — simply do not
+apply to rare earths. The comparison is not "compact versus bulky" but "a hundred
+machines versus a hundred tanks", and for a commodity separation the tanks win.
 
-- Large footprint (long settling tanks)
-- High holdup volume (inventory costs)
-- Slow startup/shutdown
-- Energy intensive mixing
+**Membrane contactors** take the argument to its limit by never dispersing the
+phases at all. The two liquids flow on opposite sides of a microporous membrane
+and meet only at the interfaces pinned in its pores, so the interfacial area is
+set by the fibre geometry rather than by agitation, and no coalescence step is
+needed because there is nothing to coalesce. Emulsions and entrainment, the two
+chronic operating problems of every design above, cannot occur. The price is that
+an interface which no longer has to be made now has to be *maintained*, and the
+failure modes are all failures of that maintenance: pore wetting, displacement of
+the organic film, and chemical degradation of the membrane. @alemrajabi2022separation
+is the most informative rare earth test at scale — a hollow-fibre module of 8 m²
+mass transfer area with 10 vol% D2EHPA in kerosene and 3 M HCl strip, comparing a
+plain supported liquid membrane against renewal and emulsion-pertraction
+configurations. The plain configuration was the most selective and the least
+durable: its performance decayed rapidly with time, while the renewal and
+pertraction configurations held up much better, with gel formation identified as
+an important degradation mechanism. That is the state of the technology — real
+selectivity, unsettled durability — and [](#membrane-separation-technologies)
+takes it up in full.
 
-**Typical dimensions** (per stage):
-
-- Mixer: 1-5 m³
-- Settler: 5-20 m³ (settler larger than mixer)
-- Number of stages: 4-8 extraction, 2-4 stripping *for a bulk-recovery duty*; an
-  adjacent-pair separation needs tens to hundreds (see below)
-
-#### Pulsed Columns
-**Design**:
-
-- Vertical column packed with perforated plates
-- Pulsing action (sinusoidal flow) provides agitation
-- Countercurrent flow: heavy phase down, light phase up
-
-**Advantages**:
-
-- Compact vertical design (small footprint)
-- No moving parts in column (pulse from external pump)
-- High throughput per unit volume
-- Better stage efficiency than {index}`mixer-settlers <mixer-settler>`
-
-**Disadvantages**:
-
-- Sensitive to fouling (requires clean feeds)
-- More difficult to troubleshoot
-- Limited turndown ratio
-- Emulsion-prone systems problematic
-
-**Operating parameters**:
-
-- Pulse frequency: 60-120 cycles/min
-- Pulse amplitude: 5-25 mm
-- Superficial velocity: 5-15 m/h
-- HETS (height equivalent to theoretical stage): 0.5-1.5 m
-
-#### Centrifugal Extractors
-**Design**:
-
-- High-speed rotor (2000-4000 rpm)
-- Centrifugal force accelerates phase separation
-- Compact design
-
-**Examples**:
-
-- Podbielniak extractor
-- Robatel CINC extractors
-- Alfa Laval extractors
-
-**Advantages**:
-
-- Very compact (10-100× smaller than mixer-settlers)
-- Fast startup/shutdown (minutes vs. hours)
-- Low holdup volume
-- Excellent for emulsion-prone systems
-
-**Disadvantages**:
-
-- High capital cost
-- Maintenance of rotating seals
-- Power consumption
-- Not suitable for solids-containing feeds
-
-**Applications**:
-
-- High-value products (justified cost)
-- Space-constrained installations
-- Pilot plants and research (fast testing)
-
-#### Membrane Contactors
-**Design**:
-
-- Microporous hollow fiber membranes
-- Phases flow on opposite sides of membrane
-- Mass transfer through membrane pores
-
-**Advantages**:
-
-- Very high interfacial area (500-2000 m²/m³)
-- No emulsion formation
-- Modular, compact design
-- Low energy consumption
-
-**Disadvantages**:
-
-- Membrane fouling and degradation
-- Limited to clean systems
-- Pore wetting issues
-- Not yet widely commercial for REE
-
-**Research status**:
-
-- Emerging technology for REE separations
-- Demonstrated in lab/pilot scale
+The shape of the comparison, then, is this. On residence time, inventory and
+footprint the ranking runs membrane and centrifugal at one end and mixer-settlers
+at the other, and it is not close. On robustness, observability, tolerance of a
+dirty feed and cost per stage the ranking is exactly reversed. Rare earth
+separation is a low-margin commodity operation that needs an enormous number of
+stages of a thermodynamically marginal separation on feeds that are never clean,
+which weights the second list far above the first. The alternatives are better on
+paper on the axes that a laboratory notices and worse on the axes that a plant
+does.
 
 ### Phase Ratio and Material Balance
+
 The distribution ratio alone does not tell you how much metal a stage moves.
 That depends on how much of each phase is present, and the quantity that
 combines the two is the **{index}`extraction factor`** [@rydberg2004solvent]:
@@ -744,6 +699,7 @@ half that. A phase ratio that would load the organic past saturation does not
 give the `D` the equilibrium data predict, no matter what the pH is.
 
 ### Countercurrent Cascade Design
+
 **Principle**: Multiple extraction stages in series maximize REE transfer [@rydberg2004solvent].
 
 #### McCabe-Thiele Diagram
@@ -824,11 +780,10 @@ N &= \frac{\ln[1000 \times (1 - 0.30) + 0.30]}{\ln 3.33} \\
 \end{aligned}
 $$
 
-Six stages, and at 100% stage efficiency. That is where the "4-8 extraction
-stages" figure quoted for a mixer-settler train comes from: it is a **recovery**
-duty — one solute, a large `D`, a target expressed as percent recovered. It is
-not a separation duty, and none of it carries over to the problem of splitting
-two neighbouring lanthanides.
+Six stages, and at 100% stage efficiency. That is the kind of duty a short
+extraction train is sized for: one solute, a large `D`, a target expressed as
+percent recovered. It is not a separation duty, and none of it carries over to
+the problem of splitting two neighbouring lanthanides.
 
 #### How Many Stages for Separation? A Fenske Bound
 When two rare earths with separation factor β are to be split so that one is
@@ -863,9 +818,15 @@ strictly binary feed, and equilibrium in every stage. A working circuit has
 none of those: it runs at **finite reflux**, since the scrub and strip returns
 that play the role of reflux are finite streams that cost reagent and pumping;
 it splits a feed of eight or ten lanthanides rather than two, so each cut
-carries the others through it; and its mixers reach 90-95% of equilibrium, not
-100%. Installed stage counts are accordingly two to three times `N_min`. That
-is the derivation behind the "hundreds of stages" of
+carries the others through it; and its mixers approach equilibrium without
+reaching it, which is why cascade models carry an empirical stage efficiency
+that is fitted rather than predicted ([](#process-modeling-and-optimization)).
+Installed stage counts are accordingly larger than `N_min`, and the published
+model-based designs bear that out: @dewulf2022separation needed sixteen
+mixer-settler stages for a *group* split of heavy rare earths, and the
+optimization study of @srivastava2023design settled on loading-scrubbing-stripping
+combinations totalling around twenty-three stages for one clean cut
+([](#process-modeling-and-optimization)). That is the derivation behind the "hundreds of stages" of
 [](#why-rare-earths-are-hard-to-separate): it follows from β ≈ 1.5 and the
 purity specification, and is not an assertion about industrial habit.
 
@@ -968,10 +929,11 @@ hydroxides and stabilise emulsions, and it has to be dosed and controlled
 separately in every one of dozens of stages. Industrial circuits instead
 neutralise the extractant *before* it enters the cascade, a step called
 **{index}`saponification`**. The organic is contacted with NaOH, aqueous ammonia,
-or a magnesium base, converting 30-50% of the acidic extractant from HL to its
-sodium, ammonium, or magnesium salt. Extraction then proceeds by exchanging
-RE³⁺ for Na⁺, NH₄⁺, or Mg²⁺ rather than for H⁺, and the aqueous pH stays where
-it was set without any in-stage dosing [@banda2015separation; @xie2014critical].
+or a magnesium base, converting a substantial fraction of the acidic extractant
+from HL to its sodium, ammonium, or magnesium salt. Extraction then proceeds by
+exchanging RE³⁺ for Na⁺, NH₄⁺, or Mg²⁺ rather than for H⁺, and the aqueous pH
+stays where it was set without any in-stage dosing
+[@banda2015separation; @xie2014critical].
 
 The cost is that the saponifying cation has to go somewhere, and where it goes
 is the raffinate. Ammonia saponification — long the standard for P507 circuits,
@@ -990,72 +952,70 @@ chosen, the reagent bill and the effluent are set by the same stoichiometry:
 three equivalents of base per mole of rare earth moved.
 
 ### Operational Considerations
-#### Phase Continuity
-**Choice**: Organic continuous vs. aqueous continuous
 
-**Aqueous continuous** (typical for REE):
+**Which phase is continuous** is a choice, not an accident, and it is made in the
+mixer by how the impeller is started and by which phase is in excess. Running
+aqueous-continuous, with the organic dispersed as droplets, is the usual choice
+in rare earth circuits: it keeps the organic holdup in the mixer low, which
+matters because the organic is the expensive phase, and it is the natural state
+when the organic flow is the smaller of the two. Organic-continuous operation is
+used where the organic flow is the larger, and it changes the mass transfer
+behaviour and the entrainment pattern with it. A circuit that flips
+unintentionally between the two — phase inversion — behaves quite differently
+before and after, which is one of the reasons flow ratios are controlled tightly.
 
-- Organic dispersed as droplets
-- Better when O/A \< 1
-- Lower organic holdup and inventory
-- Easier to control
-
-**Organic continuous**:
-
-- Used when O/A \> 1
-- Can reduce aqueous reagent consumption
-
-#### Interfacial Area and Mass Transfer
-**Mass transfer rate**:
+**Interfacial area** is one of the two factors in the rate at which anything
+crosses:
 
 $$
 \text{Rate} = K_\mathrm{overall} \, a \, (C^* - C)
 $$
 
-Where:
+with `K` the overall mass transfer coefficient, `a` the interfacial area per unit
+volume, and `C* − C` the departure from equilibrium. Since the chemistry is fast
+and the resistance is diffusional, `K` is not readily manipulated: what a
+contactor designer actually controls is `a`, and the contactor comparison above
+is in large part an argument about how each family manufactures `a` and what it
+charges for it — an impeller and a large settler, a pulse and a tall column, a
+rotor and a motor, or a membrane and its fragility. The same variable is what
+microfluidic devices attack directly, by making channels small enough that the
+area-to-volume ratio is large without any agitation at all;
+[](#microfluidic-separations) takes that up.
 
-- $K_\mathrm{overall}$ = overall mass transfer coefficient (cm/s)
-- a = interfacial area per unit volume (cm²/cm³)
-- C\* - C = driving force (concentration difference)
-
-**Typical values**:
-
-- Mixer-settlers: a = 50-200 cm²/cm³
-- Pulsed columns: a = 100-500 cm²/cm³
-- Centrifugal extractors: a = 500-2000 cm²/cm³
-
-#### Entrainment and Coalescence
-**Entrainment**: Carryover of one phase into the other
-
-**Mitigation**:
-
-- Adequate settling time (residence time in settler)
-- Coalescers (packed beds, mesh pads)
-- Proper settler design (weirs, baffles)
-
-**Coalescence aids**:
-
-- Glass fiber beds
-- Membrane coalescers
-- Increased residence time
+**Entrainment** is the carryover of droplets of one phase into the bulk of the
+other, and it is the standing loss mechanism of any dispersive contactor: organic
+entrained in the raffinate is reagent lost and an effluent problem, and aqueous
+entrained in the loaded organic carries unwanted metal forward into the scrub
+section, degrading the separation the cascade just achieved. The remedies are all
+ways of buying coalescence — longer settler residence time, coalescing packing or
+mesh, well-designed weirs and baffles — and they are the reason the settler is as
+large as it is. Where a system is prone to stable emulsions, a phase modifier or
+a change of contactor family is a better answer than a bigger settler.
 
 ### Process Control and Automation
-**Key control variables**:
 
-1.  **pH control**:
-    - In-line pH meters
-    - Automatic acid/base addition
-    - Critical for consistent distribution ratios
-2.  **Flow rate control**:
-    - Mass flow controllers
-    - Maintain O/A ratio within ±5%
-    - Prevents flooding or phase inversion
-3.  **Temperature control**:
-    - Heat exchangers
-    - Especially important for stripping stage
-4.  **Interface level control**:
-    - Capacitance or conductivity sensors
-    - Maintains interface in settler
+The controlled variables in a solvent extraction circuit follow directly from
+the chemistry above, and the ordering of their importance is not a matter of
+taste.
+
+**pH comes first.** The Δ pH₁/₂ = 0.06 result derived earlier says that the whole
+of an adjacent-pair separation factor is worth six hundredths of a pH unit; a pH
+excursion of a tenth of a unit is therefore larger than the effect the cascade
+exists to exploit. In-line pH measurement and automatic acid or base addition are
+consequently not refinements but the primary control loop, and saponification
+exists precisely because dosing that loop in every mixer of a large train does
+not work.
+
+**Flow ratio comes second**, because `O/A` enters the extraction factor
+multiplicatively alongside `D`, so an error in the phase ratio is an error in
+every stage's transfer simultaneously. Drifting flow ratios also move the
+operating point toward flooding or phase inversion.
+
+**Temperature and interface level** are supporting loops. Temperature matters
+more for viscosity and disengagement than for equilibrium, as the temperature
+section argued, and matters most in the strip section where circuits are often
+run warm. Interface level in each settler is held by capacitance or conductivity
+sensing, and losing it means sending one phase out of the wrong weir.
 
 **Automation in the laboratory.** Nothing above is specific to rare earths;
 what is newer is closing the loop around the *chemistry* rather than around the
@@ -1074,138 +1034,134 @@ directly. [](#process-modeling-and-optimization) covers the soft sensors and
 predictive controllers built for that problem, and the process models they run
 on.
 
-## Industrial Example: Complete Process Flow
-### Typical REE Separation Plant (Simplified)
-**Feed**: {index}`Bastnäsite <bastnäsite>` concentrate (60% REO, mostly La, Ce, Pr, Nd)
+## A Worked Illustration: One Cascade, End to End
 
-#### Step 1: Dissolution
+The example below is a *worked illustration*, in the same spirit as the
+slope-3 table earlier in this chapter. Its numbers are chosen to be internally
+consistent with the relations derived above — the loading limit of a 30 vol%
+D2EHPA solution, the extraction factor, the pH window — and are not taken from
+any operating plant. Read it as an exercise in how the pieces fit together, not
+as a specification.
 
-- Roast concentrate at 500°C (convert to oxides)
-- Dissolve in HCl: 6 M HCl, 80°C, 4 hours
-- Result: 1.5 M total REE in 1 M HCl (pH ≈ 0)
+**Feed**: a {index}`bastnäsite <bastnäsite>` concentrate, light-rare-earth
+dominated (La, Ce, Pr, Nd).
 
-#### Step 2: Purification
+**Step 1 — dissolution.** Roast the concentrate to convert carbonate and fluoride
+to oxide, then dissolve in hydrochloric acid. The product is a strongly acidic
+chloride liquor of mixed rare earths. [](#hydrometallurgical-leaching) treats
+this step properly.
 
-- Adjust pH to 3.5 with NaOH
-- Precipitate Fe(OH)₃, filter
-- Result: Clean 1.0 M REE solution in 0.01 M HCl
+**Step 2 — purification.** Raise the pH to precipitate ferric hydroxide and
+filter it out. Iron has to go here rather than in the cascade, for the reason
+given above: it binds D2EHPA more strongly than any rare earth and will not
+scrub off.
 
-#### Step 3: Group Separation (Ce removal)
+**Step 3 — cerium removal.** Cerium is the one lanthanide with an accessible
+tetravalent state. Oxidising Ce³⁺ to Ce⁴⁺ and precipitating it removes the
+single largest component of a light-rare-earth feed in one non-extractive step,
+before any solvent extraction is done. This is the largest single simplification
+available in the whole flowsheet, and it is available only for cerium.
 
-- Oxidize Ce³⁺ to Ce⁴⁺ (add NaOCl at pH 9)
-- Ce(OH)₄ precipitates
-- Filter, wash
-- Result: La-Pr-Nd mixture (Ce-free)
+**Step 4 — La from Pr/Nd.** With acidic organophosphorus extractants the heavier
+lanthanides extract more strongly, so **La is the element left behind**: the
+split takes lanthanum out of the raffinate, not out of the organic phase. A
+concrete arrangement:
 
-#### Step 4: Individual Separation (La from Pr-Nd)
-With acidic organophosphorus extractants the heavier lanthanides are extracted
-more strongly, so **La is the element left behind**. The split takes La out of
-the raffinate, not out of the organic phase.
+- Feed: 0.3 M (La+Pr+Nd) at pH near 3, diluted from Step 3.
+- Organic: 30 vol% D2EHPA with 10 vol% TBP in kerosene — about 0.9 M in monomer,
+  and so saturating near 0.3 M rare earth.
+- Extraction: several stages at O/A = 2/1 with the pH held. Pr and Nd extract
+  preferentially, having the lower pH₁/₂. The organic leaves at roughly 0.15 M,
+  about half of its capacity, which is where these circuits are run for the
+  loading reasons given earlier.
+- Scrub: a small number of stages using a split of the strip product — REE-on-REE
+  scrubbing, displacing co-extracted La back toward the feed.
+- Strip: several stages with strong hydrochloric acid, run warm. The strip liquor
+  is enriched in Pr and Nd, and concentrated relative to the feed by the phase
+  ratio, as the concentration-factor arithmetic above describes.
+- The lanthanum product is recovered from the raffinate by oxalate precipitation
+  and calcination.
 
-- Feed: 0.3 M (La+Pr+Nd), pH 2.8, diluted from Step 3
+**Step 5 — Pr from Nd.** The strip liquor from Step 4 becomes the feed to a
+second cascade, and this is the hard one. Pr and Nd are adjacent, their
+separation factor is in the range this chapter has been using throughout, and the
+Fenske bound applies in full: a bulk split takes a modest number of stages, and a
+high-purity neodymium takes many times more. The dynamic modelling work discussed
+in [](#process-modeling-and-optimization) was done on exactly this split, and
+found that better than 99% neodymium purity required a dedicated neodymium scrub
+solution and a twelve-stage scrubbing circuit on what is effectively a
+two-component feed [@lyon2016separation].
 
-- Organic: 30% D2EHPA + 10% TBP in kerosene (≈0.9 M monomer, saturating near
-  0.3 M REE)
-
-- Extraction: 6 stages, O/A = 2/1, pH 3.0 (controlled)
-
-  - Pr and Nd extract preferentially (lower pH₁/₂, higher D)
-  - Loaded organic: ≈0.15 M, enriched in Pr and Nd — about half of the
-    extractant's capacity, which is where these circuits are run
-  - Raffinate: enriched in La
-
-- Scrub: 2 stages, pH 2.5, with dilute strip liquor (removes co-extracted La
-  from the organic; the scrub is REE-on-REE here, not impurity removal)
-
-- Strip: 3 stages, 4 M HCl, 50°C
-
-  - Product: ≈0.45 M Pr+Nd in HCl at A/O = 1/3
-
-- La product: recovered from the raffinate by oxalate precipitation and
-  calcination
-
-#### Step 5: Repeat for the Pr/Nd Separation
-
-- The Pr-Nd strip liquor becomes the feed to a second cascade
-- Pr/Nd is the hardest split in this sequence: β ≈ 1.4-1.5
-- Typically requires 8-12 stages for a bulk split, and many more for
-  99.9%-grade Nd
-
-### Material and Energy Balance (Approximate)
-**For 1000 kg/day REO production**:
-
-**Materials**:
-
-- Concentrate: 1700 kg/day (60% REO)
-- HCl (37%): 3000 kg/day
-- NaOH (50%): 2500 kg/day (pH control)
-- Extractant: 5000 L (inventory, makeup 50 L/day)
-- Kerosene: 15,000 L (inventory, makeup 100 L/day)
-- Water: 50,000 L/day
-
-**Energy**:
-
-- Roasting: 1.5 GJ/day
-- Heating (dissolution, stripping): 3 GJ/day
-- Pumping: 500 kWh/day
-- Mixing: 1000 kWh/day
-- Total: \~2000 kWh/day + 4.5 GJ thermal
+The whole fan-out of a fifteen-component feed into individual oxides is this
+pattern repeated, cascade after cascade, with the raffinate of one becoming the
+feed of the next. What that costs in reagents, energy and effluent is the subject
+of [](#environment-techno-economics-and-life-cycle), which draws on published
+life-cycle inventories rather than on an illustration.
 
 ## Summary and Key Takeaways
-### Critical Parameters Summary
-| Parameter         | Extraction   | Stripping   | Impact                        |
-|-------------------|--------------|-------------|-------------------------------|
-| pH                | 2.5-4.0      | 0.0-1.0     | Primary control variable      |
-| Temperature       | 20-30°C      | 40-60°C     | Modest effect (ΔH = -30 kJ)   |
-| Extractant conc.  | 20-40% (v/v) | Same        | Linear effect on log D        |
-| Salting agent     | 1-3 M        | Not needed  | 1-2 order improvement in D    |
-| Phase ratio (O/A) | 1/1 to 1/5   | 2/1 to 10/1 | Determines concentration      |
-| Contact time      | 2-10 min     | 5-15 min    | Usually adequate for kinetics |
-| Number of stages  | 4-8          | 2-4         | Bulk recovery only; an adjacent-pair split needs ≥45 (Fenske, β = 1.5) |
 
-### Why Kerosene?
-In summary:
+### The Argument in One Page
 
-1.  **Low cost** (\$1-2/kg) for large-scale operations (1000s L)
-2.  **Appropriate polarity** (ε ≈ 2) dissolves extractants, not too polar
-3.  **Low water solubility** (\<10 ppm) prevents phase mixing
-4.  **Density** (0.78-0.82 g/mL) enables gravity separation
-5.  **Low viscosity** (1-2 cP) for fast phase disengagement
-6.  **Chemical stability** resistant to acids/bases, long service life
-7.  **Safety** (flash point 60-80°C) reduces fire hazard
-8.  **Environmental** moderate toxicity, acceptable for industrial use
+An acidic organophosphorus extractant is a weak acid that exchanges three protons
+for one trivalent rare earth ion. Everything follows:
 
-### pH Swing Mechanism
-The fundamental principle:
+- Because three protons are exchanged, log D moves with slope +3 against pH, so
+  a single pH unit is three decades in D. That makes the process reversible by pH
+  alone, and it makes pH the primary control variable.
+- Because the same slope applies to every lanthanide, the lines for two adjacent
+  elements are *parallel*. Their separation factor is fixed by the horizontal gap
+  between them, and for adjacent light lanthanides that gap is around 0.06 pH
+  units, or β ≈ 1.5.
+- Because β ≈ 1.5, purity has to be bought by staging. The Fenske bound puts the
+  floor at 45 equilibrium stages for 99.99% at both ends, and a real cascade needs
+  more, because it runs at finite reflux on a multicomponent feed with imperfect
+  stages.
+- Because a cascade is that long, the contactor is chosen for robustness and
+  observability rather than for compactness, which is why mixer-settlers remain
+  the industry standard despite losing to every alternative on footprint,
+  inventory and startup time.
+- Because three equivalents of base are consumed per mole of rare earth moved,
+  the reagent bill and the effluent are set by stoichiometry rather than by
+  efficiency, and saponification is where that cost is paid.
+
+### Why Kerosene
+
+Kerosene is not chosen for any property it maximises but for the set it satisfies
+at once: density far enough below a salt-loaded aqueous phase for the two to
+disengage under gravity; viscosity low enough that they disengage quickly;
+negligible water solubility; polarity low enough not to interfere with the
+extraction chemistry, yet sufficient to dissolve large alkyl phosphorus esters;
+chemical inertness to acid and base over years of recycling; a flash point safe
+for bulk storage; and a price set by the refinery rather than by a specialty
+supplier. Every alternative beats it on one of these and loses on another.
+
+### The pH Swing
 
 ```text
-High pH (3-4) → REE extracts into organic (D >> 1)
+Higher pH → REE extracts into organic (D >> 1)
          ↓
     Loaded organic
          ↓
-Low pH (0-1) → REE strips back to aqueous (D << 1)
+Strong acid → REE strips back to aqueous (D << 1)
          ↓
  Regenerated organic (recycle)
 ```
 
-Slope: ∂(log D)/∂pH ≈ +3 for trivalent REE with dimeric acidic extractants
-
-### Extractant Behavior
-**Throughout the cycle**:
-
-- Extractants stay in organic phase (\>99.99%)
-- Aqueous solubility: 5-10 ppm for D2EHPA/PC88A
-- Form transitions: free (HL)₂ ⇌ loaded REE(HL₂)₃
-- Degradation slow, makeup \~0.1-1% per cycle
-- Never "transfer" to aqueous permanently
+Slope: ∂(log D)/∂pH ≈ +3 for trivalent REE with dimeric acidic extractants.
 
 ### Practical Implementation
+
 For successful REE solvent extraction:
 
-1.  Control pH tightly (±0.1 units) - this is the primary variable
-2.  Match the salting agent to the acid medium
-3.  Maintain O/A ratio consistently
-4.  Design for adequate contact time (not rate-limiting)
-5.  Size settlers for clean phase separation
-6.  Monitor extractant quality, purify periodically
-7.  Use countercurrent cascades for high recovery/purity
+1.  Control pH tightly — the tolerance is set by Δ pH₁/₂, not by convenience,
+    and for an adjacent pair that means hundredths of a unit
+2.  Match the salting agent to the acid medium, and count what it costs in the
+    raffinate
+3.  Hold the phase ratio: it enters the extraction factor as directly as D does
+4.  Keep the organic well below its loading limit, or lose the selectivity the
+    cascade was built on
+5.  Size settlers for clean phase separation, and expect them to dominate the
+    inventory
+6.  Monitor extractant quality and wash out degradation products periodically
+7.  Use countercurrent, and for a separation rather than a recovery use
+    fractional extraction with REE-on-REE scrub
