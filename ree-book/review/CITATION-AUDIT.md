@@ -354,3 +354,31 @@ the HTML entity CrossRef returns, escaped for BibTeX --- and it was rendering
 in the public bibliography as *Environmental Science &amp; Technology*, *ACS
 Applied Materials &amp; Interfaces*, and so on, in seven of the visible
 entries. All nine now hold `\&`.
+
+### One paper read in full: Dong et al. 2021
+
+`dong2021bridging` — *ACS Cent. Sci.* **7**, 1798-1808, DOI
+`10.1021/acscentsci.1c00724` — was retrieved as open-access full text (Europe
+PMC, PMC8614107; the publisher's own PDF endpoint is blocked) and read end to
+end. It was cited once in the book, in the landscape table in
+`src/04-technology-landscape.md`, while `src/11-biological-biomimetic.md`
+paraphrased it in uncited
+bullets.
+
+Reading it falsified one statement the audit had itself written. The
+biological row of the landscape table asserted that "no column dimensions,
+throughput or duration are given anywhere." The paper gives all three: bed
+volumes of 0.80, 0.94 and 1.0 mL, a flow rate of 0.5 mL/min, 29.1 bed volumes
+of fly ash leachate in the largest run, and ten adsorption/desorption cycles
+without loss of capacity. The claim was written from abstracts, because the
+full text could not be reached at the time; that is precisely the failure mode
+`src/93-appendix-provenance.md` warns about, and it is worth recording that
+it happened here.
+
+The paper's real numbers now appear in
+`src/11-biological-biomimetic.md` (immobilization chemistry, capacity
+and the 2:1 versus 3:1 stoichiometry discrepancy, the pH window, base-metal
+rejection, four pair separations with both purity *and* yield, the Powder River
+Basin result and the grouped heavy/light split) and in
+`src/17-recycling-urban-mining.md` (the 95:5 Nd:Dy magnet-scrap ratio needing two
+cycles; the fly ash leachate as an answer to the aluminium problem).

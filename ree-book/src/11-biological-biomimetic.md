@@ -240,24 +240,101 @@ Computational and experimental studies have revealed key engineering principles 
 - Weak chelators can achieve high selectivity through allosteric mechanisms
 
 ### Practical Implementation
-**Immobilized Lanmodulin Systems:**
 
-- Conjugated onto porous support materials via thiol-maleimide chemistry
-- Enables tandem REE purification and separation under flow-through conditions
-- Column systems with multiple adsorption (pH 3) and desorption (pH \<1.7) cycles
-- Protein can be reused for many cycles
+The column form of this chemistry was established by Dong and co-workers at
+Lawrence Livermore and Penn State, and it is the paper to read if the question
+is what a protein separation looks like as a unit operation rather than as a
+binding curve [@dong2021bridging]. A lanmodulin carrying a C-terminal cysteine
+on a GSG spacer is clicked onto agarose microbeads by thiol-maleimide
+chemistry — chosen over physical adsorption or entrapment because a
+site-specific covalent link presents the protein accessibly and survives the low
+pH and high ionic strength the column is meant to see. Roughly 97 % of the added
+protein loads within three hours, giving an immobilization density of 2.47 ±
+0.54 µmol LanM per mL of resin.
 
-**Performance from Real Feedstocks:**
+**Capacity, and a discrepancy worth carrying forward.** The column adsorbs 5.77
+± 0.67 µmol Nd per mL, close to a 2:1 stoichiometry of Nd per immobilized LanM.
+In solution the same protein binds three equivalents. The authors attribute the
+missing site to EF hand 1, the weakest of the three, which they argue is not
+stably occupied under flow at pH ≤ 5. A third of the nominal capacity is
+therefore lost on immobilization, and any capacity estimate carried over from
+solution binding will be optimistic by about that much.
 
-- Transforms low-grade leachate (0.043 mol% REEs) into 88 mol% purity fractions
-- Uses \~90% of column capacity in single run
-- Achieves tandem extraction and grouped separation without organic solvents
+**The pH window is the whole process.** Immobilized LanM binds Nd down to pH
+2.4; binding is halved at pH 2.2 and insignificant at pH ≤ 1.7. Breakthrough at
+pH 5 comes at \~25 bed volumes, against 1 bed volume — the void volume — for
+bare agarose. Desorption at pH ≤ 1.7 gives a sharp peak between 1 and 6 bed
+volumes, with the neodymium concentrated more than tenfold relative to the feed;
+at pH 2.0 the same elution tails badly and needs 16.5 bed volumes to recover
+\>95 %. Ten consecutive adsorption (pH 3.0) and desorption (pH 1.5) cycles
+produced no reduction in capacity, and breakthrough curves for Y, La, Dy and Lu
+at pH 3 were indistinguishable from Nd's.
 
-Note the shape of that last result: 0.043 mol% to 88 mol% is a concentration
+**Against base metals the separation is essentially complete.** With Mg, Al, Ca,
+Co, Ni, Cu and Zn present at millimolar levels against 0.2 mM Nd at pH 3, Nd
+broke through at 24 bed volumes and every non-REE left in the void volume; the
+breakthrough and desorption profiles were indistinguishable from the
+impurity-free case. This is the flat picomolar profile doing the work it is good
+at, and what it is doing is a group separation.
+
+**Within the series the results are real but bounded.** Two handles separate the
+adsorbed rare earths: a stepped pH gradient, or citrate, which outcompetes LanM
+for the heavies before the lights.
+
+**Pair separations on immobilized LanM columns** [@dong2021bridging]:
+
+| Feed | Method | Result |
+| ---- | ------ | ------ |
+| 78:22 Nd:Y | Two-step pH | 95.6 % Y purity and 99.8 % Nd purity |
+| 78:22 Nd:Y | Citrate, then pH | 95.8 % of the Y at 99.4 %, then 99.7 % of the Nd at \>99.9 % |
+| 50:50 Nd:Dy | Two-step pH | 76.2 % of the Dy at 99.9 %, 76.8 % of the Nd at 99.9 % |
+| 95:5 Nd:Dy | One cycle, pH 2.2 elution | 88.6 % of the Dy, but at only 46.1 % purity |
+| 95:5 Nd:Dy | Second cycle on the pooled fraction | 88 % of the Dy at 99.2 % and 82 % of the Nd at 99.9 % |
+
+Read the yields as carefully as the purities. The 50:50 Dy/Nd result clears the
+99.5 % REO salability threshold on both products, but does so on about
+three-quarters of each element; the remainder sits in the overlap between the
+two elution peaks. And the 95:5 feed — the composition of NdFeB magnet scrap,
+where the Nd/Dy split actually matters
+([](#recycling-and-urban-mining)) — does not separate in one pass at all. It
+takes two. A single-stage purity quoted without its feed ratio says very little
+here.
+
+**Performance from a real and very poor feedstock.** The industrial test was a
+leachate from Powder River Basin coal fly ash: about 150 µM total rare earths
+against millimolar Na, Mg, Al, Ca and Sr, plus significant Zn, Ni, Cu and Mn —
+0.043 mol % REE excluding monovalent ions. Rare earths broke through after 30
+bed volumes while the non-REEs left in the void volume. Non-selective desorption
+at pH 1.5 recovered more than 96.5 % of them in 3.9 bed volumes at 88.2 mol %
+total REE purity, a 2,040-fold increase over the feed. Uranium was not
+concentrated. Benchmarked against single-stage DEHPA extraction on an ash
+leachate of comparable composition, purification factors against base metals ran
+from 100 to 500,000 depending on the element, against 10 to 5,000 for the
+solvent route — with the exception of Fe and Si, which the authors attribute to
+unfilterable colloids that accumulate on the column and dissolve during the
+low-pH strip, and which therefore have to be removed upstream of it.
+
+The same PRB feed run with a two-pH desorption gave a grouped split in a single
+cycle: 82 % of the heavies at 72.6 % purity at pH 2.3, then 80 % of the lights
+at 98.8 % purity at pH 1.7, at about 90 % column loading. Every number in this
+section comes from a column of roughly 1 mL bed volume — 0.80 to 1.0 mL — run at
+0.5 mL/min, with the fly ash experiment passing 29.1 bed volumes through 0.94 mL
+of resin. That is the scale at which the process exists.
+
+Note the shape of the purity result: 0.043 mol% to 88 mol% is a concentration
 factor of about 2,000, achieved in one aqueous pass. It is a *purity* figure —
 rare earths against everything else — not an individual-element figure. Reading
 it as an intra-series result is the same error as reading the 10⁸-fold Ca²⁺
-number that way.
+number that way. The intra-series numbers are the ones in the
+table above, and they are far more modest.
+
+The authors' own framing is the right scale check, and it is unusually candid:
+the process "should not be considered as a direct competitor for liquid-liquid
+extraction — particularly with regard to processing concentrated feed solutions
+from high-grade ore sources," but a scaled continuous version "would be uniquely
+positioned to unlock low-grade leachate solutions that are not currently
+profitable" [@dong2021bridging]. That is the conclusion the next section reaches
+independently, from the binding data.
 
 #### Where Lanmodulin Belongs in a Flowsheet
 

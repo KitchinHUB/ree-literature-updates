@@ -133,6 +133,18 @@ magnet leachate is a light-rare-earth mixed feed like any other, and the
 downstream Nd/Pr split is conventional {index}`solvent extraction`
 ([](#solvent-extraction-fundamentals)).
 
+The Nd/Dy split, which matters more for magnet scrap than Nd/Pr does, has one
+non-solvent demonstration on a realistic ratio, and it is instructive about
+where the difficulty lies. Dong and co-workers loaded a 95:5 Nd:Dy feed —
+magnet-scrap composition — onto an immobilized-lanmodulin column and found that
+it does not separate in a single pass: one adsorption/desorption cycle gave
+88.6 % of the dysprosium at only 46.1 % purity. Passing the pooled fraction
+through a second cycle gave 88 % of the Dy at 99.2 % purity and 82 % of the Nd
+at 99.9 % [@dong2021bridging]. On a 50:50 feed the same column reaches 99.9 %
+purity on both products in one cycle, at about 76 % recovery of each. The feed
+ratio, not the chemistry, sets how many cycles are needed
+([](#biological-and-biomimetic-separations)).
+
 ### Acid-free leaching with copper salts
 
 An alternative avoids mineral acids entirely by using a copper(II) salt as the
@@ -234,6 +246,21 @@ already a disposal liability; and the annual arisings are enormous. The
 argument for coal ash is tonnage and pre-existing handling, not concentration,
 and any process proposed for it has to survive a leach of a very dilute,
 aluminosilicate-dominated feed ([](#hydrometallurgical-leaching)).
+
+One separation has been shown on exactly that feed. Dong and co-workers pumped
+29.1 bed volumes of a Powder River Basin fly ash leachate — 0.043 mol % rare
+earths, about 150 µM total REE against millimolar Na, Mg, Al, Ca and Sr —
+through a 0.94 mL immobilized-lanmodulin column and recovered more than 96.5 %
+of the rare earths in 3.9 bed volumes of pH 1.5 acid at 88.2 mol % purity, a
+2,040-fold enrichment, with uranium left behind [@dong2021bridging]
+([](#biological-and-biomimetic-separations)). That is a direct answer to the
+aluminium problem, which selective precipitation does not solve because rare
+earth hydroxides co-precipitate with aluminium hydroxide. Two things temper it:
+the column is one millilitre, and iron and silicon are the two impurities it
+does not reject, because they arrive as colloids that lodge in the bed and
+redissolve in the acid strip. The demonstration does not improve coal ash's
+grade. What it shows is that a low grade need not disqualify a feed, provided
+the separation is selective enough against everything else that is in it.
 
 ## What Actually Limits It
 
