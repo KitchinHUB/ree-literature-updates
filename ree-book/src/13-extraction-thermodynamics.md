@@ -27,17 +27,24 @@ potentials.
 
 ## Predicting $K_\mathrm{ex}$ from First Principles
 
-We want to predict the extraction equilibrium constant:
+We want to predict the equilibrium constant $K_\mathrm{ex}$ of the extraction
+reaction
 
-    REE³⁺(aq) + 3 HL(org) ⇌ REEL₃(org) + 3 H⁺(aq)     K_ex
+$$
+\mathrm{REE}^{3+}(\mathrm{aq}) + 3\,\mathrm{HL}(\mathrm{org}) \rightleftharpoons \mathrm{REEL}_3(\mathrm{org}) + 3\,\mathrm{H}^{+}(\mathrm{aq})
+$$
 
-The standard thermodynamic relationship is:
+The standard thermodynamic relationship is
 
-    ΔG°_extraction = -RT ln(K_ex)
+$$
+\Delta G^\circ_\mathrm{extraction} = -RT \ln K_\mathrm{ex}
+$$
 
-    Therefore:
+and therefore
 
-    log K_ex = -ΔG°_extraction / (2.303 RT)
+$$
+\log K_\mathrm{ex} = -\frac{\Delta G^\circ_\mathrm{extraction}}{2.303\,RT}
+$$
 
 At 298 K:
 
@@ -48,9 +55,11 @@ So: $\log K_\mathrm{ex} = -\Delta G^\circ_\mathrm{extraction} / 5.706$, with $\D
 
 ### Problem: Can't Compute $\Delta G_\mathrm{extraction}$ Directly
 
-We **cannot** directly compute the free energy for the overall reaction:
+We **cannot** directly compute the free energy for the overall reaction
 
-    REE³⁺(aq) + 3 HL(org) → REEL₃(org) + 3 H⁺(aq)
+$$
+\mathrm{REE}^{3+}(\mathrm{aq}) + 3\,\mathrm{HL}(\mathrm{org}) \rightarrow \mathrm{REEL}_3(\mathrm{org}) + 3\,\mathrm{H}^{+}(\mathrm{aq})
+$$
 
 Why not?
 
@@ -68,7 +77,9 @@ We construct a cycle where all species pass through the gas phase:
 
 The reaction we are trying to reach is
 
-    REE³⁺(aq) + 3 HL(org) ⇌ REEL₃(org) + 3 H⁺(aq)
+$$
+\mathrm{REE}^{3+}(\mathrm{aq}) + 3\,\mathrm{HL}(\mathrm{org}) \rightleftharpoons \mathrm{REEL}_3(\mathrm{org}) + 3\,\mathrm{H}^{+}(\mathrm{aq})
+$$
 
 and the protons on the right are not optional bookkeeping: they carry three
 units of charge and are the reason the equilibrium responds to pH at all. Every
@@ -84,19 +95,25 @@ down the two right arrows. The figure is drawn from
 `tools/figures/fig_thermo_cycle.py`.
 :::
 
-Read around the loop. Charge is +3 on both sides at every point, and three
-protons enter the top-right corner and leave at the bottom. The version of this
-cycle that omits them — writing ΔG₂ as `REE³⁺(g) + 3HL(g) → REEL₃(g)`, neutral
-on the right — is short by three gas-phase deprotonations, roughly
+Read around the loop in [](#fig-thermo-cycle). Charge is +3 on both sides at
+every point, and three protons enter the top-right corner and leave at the
+bottom. The version of this
+cycle that omits them — writing ΔG₂ as
+$\mathrm{REE}^{3+}(\mathrm{g}) + 3\,\mathrm{HL}(\mathrm{g}) \rightarrow \mathrm{REEL}_3(\mathrm{g})$,
+neutral on the right — is short by three gas-phase deprotonations, roughly
 +4,000 kJ/mol, and no amount of care with the other four terms will recover it.
 
 #### Step-by-Step Breakdown
 
 ##### ΔG₁: Dehydration of REE³⁺
 
-    REE³⁺(aq) → REE³⁺(gas)
+$$
+\mathrm{REE}^{3+}(\mathrm{aq}) \rightarrow \mathrm{REE}^{3+}(\mathrm{g})
+$$
 
-    ΔG₁ = G[REE³⁺(gas)] - G[REE³⁺(aq)]
+$$
+\Delta G_1 = G[\mathrm{REE}^{3+}(\mathrm{g})] - G[\mathrm{REE}^{3+}(\mathrm{aq})]
+$$
 
 **Physical meaning**: Remove REE³⁺ from water (break ion-dipole interactions)
 
@@ -107,11 +124,15 @@ on the right — is short by three gas-phase deprotonations, roughly
 
 - Option 1: Implicit solvation (SMD model in Gaussian/ORCA)
 
-      ΔG₁ = E(REE³⁺ in vacuum) - E(REE³⁺ with SMD water)
+  $$
+  \Delta G_1 = E(\mathrm{REE}^{3+}\ \text{in vacuum}) - E(\mathrm{REE}^{3+}\ \text{with SMD water})
+  $$
 
 - Option 2: Empirical correlations (Born model)
 
-      ΔG_solv ≈ -(z²e²N_A)/(8πε₀r_ion) × (1 - 1/ε_r)
+  $$
+  \Delta G_\mathrm{solv} \approx -\frac{z^2 e^2 N_A}{8 \pi \varepsilon_0 r_\mathrm{ion}} \left( 1 - \frac{1}{\varepsilon_r} \right)
+  $$
 
   Where z=3, $r_\mathrm{ion}$ ≈ 1.0-1.2 Å for REE³⁺, $\varepsilon_r$ = 78.4 for water
 
@@ -129,24 +150,31 @@ hydration by roughly 1.7× and is useful for trends, not for magnitudes.
 
 ##### ΔG₂: Gas-Phase Complexation (THE CRITICAL TERM)
 
-    REE³⁺(gas) + 3 HL(gas) → REEL₃(gas) + 3 H⁺(gas)
+$$
+\mathrm{REE}^{3+}(\mathrm{g}) + 3\,\mathrm{HL}(\mathrm{g}) \rightarrow \mathrm{REEL}_3(\mathrm{g}) + 3\,\mathrm{H}^{+}(\mathrm{g})
+$$
 
-    ΔG₂ = G[REEL₃(g)] + 3×G[H⁺(g)] - G[REE³⁺(g)] - 3×G[HL(gas)]
+$$
+\Delta G_2 = G[\mathrm{REEL}_3(\mathrm{g})] + 3\,G[\mathrm{H}^{+}(\mathrm{g})] - G[\mathrm{REE}^{3+}(\mathrm{g})] - 3\,G[\mathrm{HL}(\mathrm{g})]
+$$
 
 **Physical meaning**: The extractant gives up three protons and its three
 conjugate bases coordinate the metal. It is useful to split this into the two
 physical processes it contains:
 
-    ΔG₂ = 3 × ΔG_acid(HL)              gas-phase deprotonation, ≈ +1300-1400 each
-        + ΔG_assoc(REE³⁺ + 3L⁻ → REEL₃)  ion-ion association, ≈ -4200
+$$
+\Delta G_2 = \underbrace{3\,\Delta G_\mathrm{acid}(\mathrm{HL})}_{\text{gas-phase deprotonation}} + \underbrace{\Delta G_\mathrm{assoc}(\mathrm{REE}^{3+} + 3\,\mathrm{L}^{-} \rightarrow \mathrm{REEL}_3)}_{\text{ion-ion association}}
+$$
 
-The first piece is around +4,000 kJ/mol for three protons and the second around
-−4,200, so **ΔG₂ is a small residual between two enormous numbers**. Its sign is
-not obvious in advance and neither piece can be dropped.
+The first piece runs about +1,300 to +1,400 kJ/mol per proton, so around
++4,000 kJ/mol for three, and the second is around −4,200, so **ΔG₂ is a small
+residual between two enormous numbers**. Its sign is not obvious in advance and
+neither piece can be dropped.
 
 **This is the term a machine-learned binding model predicts** — which makes it
 essential to state which of the two reactions a published "binding energy"
-refers to. A model trained on `REE³⁺ + 3L⁻ → REEL₃` is not interchangeable with
+refers to. A model trained on
+$\mathrm{REE}^{3+} + 3\,\mathrm{L}^{-} \rightarrow \mathrm{REEL}_3$ is not interchangeable with
 one trained on the proton-conserving reaction above; they differ by ~4,000
 kJ/mol, and papers are not always explicit about which they report.
 
@@ -156,7 +184,9 @@ The direct route is DFT: optimize the geometry of the REEL₃ complex and of eac
 isolated species, then take the difference of the electronic energies with the
 appropriate thermal and entropic corrections,
 
-    ΔG₂ = G[REEL₃(g)] + 3×G[H⁺(g)] - G[REE³⁺(g)] - 3×G[HL(g)]
+$$
+\Delta G_2 = G[\mathrm{REEL}_3(\mathrm{g})] + 3\,G[\mathrm{H}^{+}(\mathrm{g})] - G[\mathrm{REE}^{3+}(\mathrm{g})] - 3\,G[\mathrm{HL}(\mathrm{g})]
+$$
 
 which for a complex of three bulky organophosphorus ligands is hours of compute
 per candidate, and more if conformers are searched properly
@@ -184,9 +214,13 @@ a few kJ/mol, and that difference is the entire selectivity.
 
 ##### ΔG₃: Solvation of Complex in Organic Phase
 
-    REEL₃(gas) → REEL₃(org)
+$$
+\mathrm{REEL}_3(\mathrm{g}) \rightarrow \mathrm{REEL}_3(\mathrm{org})
+$$
 
-    ΔG₃ = G[REEL₃ in kerosene] - G[REEL₃(gas)]
+$$
+\Delta G_3 = G[\mathrm{REEL}_3\ \text{in kerosene}] - G[\mathrm{REEL}_3(\mathrm{g})]
+$$
 
 **Physical meaning**: Stabilization of neutral complex in organic solvent
 
@@ -200,7 +234,9 @@ a few kJ/mol, and that difference is the entire selectivity.
 
 - Treats kerosene as uniform dielectric medium
 
-      ΔG₃ = E(REEL₃ with SMD, ε=2) - E(REEL₃ in vacuum)
+  $$
+  \Delta G_3 = E(\mathrm{REEL}_3\ \text{with SMD}, \varepsilon_r = 2) - E(\mathrm{REEL}_3\ \text{in vacuum})
+  $$
 
 ****Option 2: COSMO-RS**** (more accurate)
 
@@ -222,9 +258,13 @@ a few kJ/mol, and that difference is the entire selectivity.
 
 ##### ΔG₄: Desolvation of Extractant from Organic Phase
 
-    3 HL(org) → 3 HL(gas)
+$$
+3\,\mathrm{HL}(\mathrm{org}) \rightarrow 3\,\mathrm{HL}(\mathrm{g})
+$$
 
-    ΔG₄ = 3 × [G[HL(gas)] - G[HL in kerosene]]
+$$
+\Delta G_4 = 3 \left( G[\mathrm{HL}(\mathrm{g})] - G[\mathrm{HL}\ \text{in kerosene}] \right)
+$$
 
 **Physical meaning**: Remove extractant from kerosene (break HL-solvent interactions)
 
@@ -234,7 +274,9 @@ a few kJ/mol, and that difference is the entire selectivity.
 
 ****Option 1: Implicit solvation (same as ΔG₃)****
 
-    ΔG₄ = 3 × [E(HL vacuum) - E(HL with SMD, ε=2)]
+$$
+\Delta G_4 = 3 \left( E(\mathrm{HL}\ \text{in vacuum}) - E(\mathrm{HL}\ \text{with SMD}, \varepsilon_r = 2) \right)
+$$
 
 ****Option 2: Experimental vaporization enthalpy****
 
@@ -252,9 +294,13 @@ a few kJ/mol, and that difference is the entire selectivity.
 
 ##### ΔG₅: Proton Solvation in Aqueous Phase
 
-    3 H⁺(gas) → 3 H⁺(aq)
+$$
+3\,\mathrm{H}^{+}(\mathrm{g}) \rightarrow 3\,\mathrm{H}^{+}(\mathrm{aq})
+$$
 
-    ΔG₅ = 3 × [G[H⁺(aq)] - G[H⁺(gas)]]
+$$
+\Delta G_5 = 3 \left( G[\mathrm{H}^{+}(\mathrm{aq})] - G[\mathrm{H}^{+}(\mathrm{g})] \right)
+$$
 
 **Physical meaning**: Hydration of protons released during extraction
 
@@ -264,8 +310,12 @@ a few kJ/mol, and that difference is the entire selectivity.
 
 ****Standard state correction****: The free energy of H⁺(aq) depends on pH:
 
-    G[H⁺(aq)] = G°[H⁺(aq)] + RT ln[H⁺]
-              = G°[H⁺(aq)] - 2.303 RT × pH
+$$
+\begin{aligned}
+G[\mathrm{H}^{+}(\mathrm{aq})] &= G^\circ[\mathrm{H}^{+}(\mathrm{aq})] + RT \ln [\mathrm{H}^{+}] \\
+&= G^\circ[\mathrm{H}^{+}(\mathrm{aq})] - 2.303\,RT \cdot \mathrm{pH}
+\end{aligned}
+$$
 
 **Standard value** (literature):
 
@@ -274,10 +324,14 @@ a few kJ/mol, and that difference is the entire selectivity.
 
 **Total for 3 protons**:
 
-    ΔG₅ = 3 × [G°[H⁺(aq)] - 2.303 RT × pH - G[H⁺(gas)]]
-        = 3 × G°_hydration - 3 × 2.303 RT × pH
-        ≈ -3312 kJ/mol - 5.706 × 3 × pH  kJ/mol
-        ≈ -3312 - 17.1 × pH  kJ/mol
+$$
+\begin{aligned}
+\Delta G_5 &= 3 \left( G^\circ[\mathrm{H}^{+}(\mathrm{aq})] - 2.303\,RT \cdot \mathrm{pH} - G[\mathrm{H}^{+}(\mathrm{g})] \right) \\
+&= 3\,\Delta G^\circ_\mathrm{hydration} - 3 \times 2.303\,RT \cdot \mathrm{pH} \\
+&\approx -3312 - 5.706 \times 3 \times \mathrm{pH} \quad \text{kJ/mol} \\
+&\approx -3312 - 17.1\,\mathrm{pH} \quad \text{kJ/mol}
+\end{aligned}
+$$
 
 **Key insight**: The pH appears explicitly here!
 
@@ -285,7 +339,9 @@ a few kJ/mol, and that difference is the entire selectivity.
 
 #### The Sum
 
-    ΔG°_extraction = ΔG₁ + ΔG₂ + ΔG₃ + ΔG₄ + ΔG°₅
+$$
+\Delta G^\circ_\mathrm{extraction} = \Delta G_1 + \Delta G_2 + \Delta G_3 + \Delta G_4 + \Delta G^\circ_5
+$$
 
 Tracing the path, with orders of magnitude for a light lanthanide and an acidic
 organophosphorus extractant:
@@ -316,7 +372,9 @@ of four large terms whose near-cancellation is the entire physical content.
 
 #### Converting to $K_\mathrm{ex}$
 
-    log K_ex = -ΔG°_extraction / (2.303 RT)
+$$
+\log K_\mathrm{ex} = -\frac{\Delta G^\circ_\mathrm{extraction}}{2.303\,RT}
+$$
 
 with 2.303 RT = 5.706 kJ/mol at 298 K.
 
@@ -338,11 +396,14 @@ Two failure modes, and it is important to keep them apart.
 #### Failure 1: The cycle does not close (mis-specification)
 
 If the cycle is written without the three protons on ΔG₂ — as
-`REE³⁺(g) + 3HL(g) → REEL₃(g)`, neutral on the right — then the three gas-phase
+$\mathrm{REE}^{3+}(\mathrm{g}) + 3\,\mathrm{HL}(\mathrm{g}) \rightarrow \mathrm{REEL}_3(\mathrm{g})$,
+neutral on the right — then the three gas-phase
 deprotonations, roughly +4,000 kJ/mol, are simply missing. The sum comes out
 near −4,450 kJ/mol and
 
-    log K_ex = 4450 / 5.706 ≈ 780
+$$
+\log K_\mathrm{ex} = 4450 / 5.706 \approx 780
+$$
 
 which is not a large error, it is a different reaction. **A result of 10⁷⁸⁰ is
 never noise**; it is a diagnostic that a term of ~4,000 kJ/mol is absent. Check
@@ -386,9 +447,15 @@ Given the absolute uncertainty, we focus on **relative** values:
 
 Instead of absolute $K_\mathrm{ex}$, predict selectivity:
 
-    ΔΔG = ΔG_extraction(REE1) - ΔG_extraction(REE2)
+$$
+\Delta\Delta G = \Delta G_\mathrm{extraction}(\mathrm{REE}_1) - \Delta G_\mathrm{extraction}(\mathrm{REE}_2)
+$$
 
-    Separation factor β = K_ex(REE1) / K_ex(REE2) = exp(-ΔΔG/RT)
+from which the separation factor follows as
+
+$$
+\beta = \frac{K_\mathrm{ex}(\mathrm{REE}_1)}{K_\mathrm{ex}(\mathrm{REE}_2)} = \exp\left(-\frac{\Delta\Delta G}{RT}\right)
+$$
 
 **Why this works**:
 
@@ -436,7 +503,9 @@ only on absolute $K_\mathrm{ex}$ has been validated on the quantity that does no
 
 Use experimental data to correct the absolute scale:
 
-    ΔG_extraction(predicted) = ΔG_extraction(computed) + C
+$$
+\Delta G_\mathrm{extraction}(\text{predicted}) = \Delta G_\mathrm{extraction}(\text{computed}) + C
+$$
 
 Where C is fitted to match experimental log $K_\mathrm{ex}$ for 1-2 reference systems.
 
@@ -448,7 +517,8 @@ Even if absolute values are off, trends should be correct:
 
 - pH dependence (slope = +3)
 - Temperature dependence, via the Gibbs-Helmholtz relation
-  `∂(ΔG/T)/∂(1/T) = ΔH` — equivalently `ΔS = −∂ΔG/∂T`, which is the identity
+  $\partial(\Delta G/T)/\partial(1/T) = \Delta H$ — equivalently
+  $\Delta S = -\partial \Delta G/\partial T$, which is the identity
   the van't Hoff analysis later in this chapter uses
 - Solvent effects (relative ΔG₃ for different solvents)
 - Extractant comparison (relative ΔG₂ for D2EHPA vs PC88A)
@@ -467,11 +537,15 @@ For a given system (e.g., La³⁺ + D2EHPA in kerosene at pH 3, 298 K):
 
 #### Step 2: Sum to Get $\Delta G^\circ_\mathrm{extraction}$
 
-    ΔG°_extraction = ΔG₁ + ΔG₂ + ΔG₃ + ΔG₄ + ΔG°₅
+$$
+\Delta G^\circ_\mathrm{extraction} = \Delta G_1 + \Delta G_2 + \Delta G_3 + \Delta G_4 + \Delta G^\circ_5
+$$
 
 #### Step 3: Convert to $K_\mathrm{ex}$
 
-    log K_ex = -ΔG°_extraction / (2.303 RT)
+$$
+\log K_\mathrm{ex} = -\frac{\Delta G^\circ_\mathrm{extraction}}{2.303\,RT}
+$$
 
 #### Step 4: Convert to a Distribution Ratio
 
@@ -480,15 +554,23 @@ and does not depend on pH; the pH dependence appears when the mass-action
 expression is rearranged for D, because H⁺ is a product of the extraction
 reaction:
 
-    K_ex = ([REEL₃]_org × [H⁺]³_aq) / ([REE³⁺]_aq × [(HL)₂]³_org)
+$$
+K_\mathrm{ex} = \frac{[\mathrm{REEL}_3]_\mathrm{org}\,[\mathrm{H}^{+}]^3_\mathrm{aq}}{[\mathrm{REE}^{3+}]_\mathrm{aq}\,[(\mathrm{HL})_2]^3_\mathrm{org}}
+$$
 
-    D = [REEL₃]_org / [REE³⁺]_aq = K_ex × [(HL)₂]³_org / [H⁺]³_aq
+$$
+D = \frac{[\mathrm{REEL}_3]_\mathrm{org}}{[\mathrm{REE}^{3+}]_\mathrm{aq}} = K_\mathrm{ex}\,\frac{[(\mathrm{HL})_2]^3_\mathrm{org}}{[\mathrm{H}^{+}]^3_\mathrm{aq}}
+$$
 
-    log D = log K_ex + 3 log[(HL)₂]_org + 3 pH
+$$
+\log D = \log K_\mathrm{ex} + 3 \log [(\mathrm{HL})_2]_\mathrm{org} + 3\,\mathrm{pH}
+$$
 
 Substituting the result of Step 3,
 
-    log D = -(ΔG₁ + ΔG₂ + ΔG₃ + ΔG₄ + ΔG°₅)/(2.303RT) + 3 log[(HL)₂]_org + 3 pH
+$$
+\log D = -\frac{\Delta G_1 + \Delta G_2 + \Delta G_3 + \Delta G_4 + \Delta G^\circ_5}{2.303\,RT} + 3 \log [(\mathrm{HL})_2]_\mathrm{org} + 3\,\mathrm{pH}
+$$
 
 One cycle calculation therefore predicts a whole family of log D values — one
 for every pH and extractant loading. Only the intercept comes from the
@@ -498,11 +580,9 @@ the part of this expression experiment agrees with
 
 #### Step 5: Compare with Experimental log D
 
-A validation dataset supplies experimental log D values. Compare:
-
-    Error = log D_predicted - log D_experimental
-
-Calculate:
+A validation dataset supplies experimental log D values. Compare them term by
+term, $\text{error} = \log D_\mathrm{predicted} - \log D_\mathrm{experimental}$, and
+report:
 
 - MAE (mean absolute error)
 - RMSE
@@ -519,8 +599,6 @@ Calculate:
 
 4.  **Selectivity lives on a 1-3 kJ/mol scale** (ΔΔG = RT ln β; β = 1.5 is 1.0 kJ/mol), so every computational claim about separation rests on 96-99 % error cancellation between two nearly identical calculations — see [](#the-energy-scale-of-selectivity)
 
-4.  **Relative predictions (selectivity) are more robust** - systematic errors cancel
-
 5.  **Calibration against experimental data** is essential
 
 6.  **Focus on trends and rankings** rather than absolute values
@@ -529,7 +607,7 @@ Calculate:
 
 The workflow is:
 
-``` example
+```text
 DFT or learned surrogate → ΔG₂ → sum cycle → ΔG°_extraction → log K_ex → add pH and extractant concentration → log D → compare with expt.
 ```
 
@@ -540,11 +618,15 @@ Microcalorimetry, particularly **Isothermal Titration Calorimetry (ITC)**, has e
 #### Two-Phase Calorimetry (Direct ITC Measurement)
 The foundational work on two-phase calorimetry was developed using the **{index}`HDEHP` (bis(2-ethylhexyl) phosphoric acid)/lanthanide** system as a model. Key findings:
 
-- Enthalpies of extraction of lanthanide ions by HDEHP from aqueous nitrate solutions have been determined using isothermal titration microcalorimetry
-- Validation: Calorimetric ΔH values agree well with **van't Hoff analysis** of temperature-dependent distribution coefficients
-- First direct calorimetric measurements of heat of liquid-liquid partitioning for transuranic elements (Am³⁺)
-
-**Reference:** [@zalupski2008two]
+- Enthalpies of extraction of lanthanide ions by HDEHP from aqueous nitrate
+  solutions have been determined using isothermal titration microcalorimetry
+  [@zalupski2008two]
+- Validation: calorimetric ΔH values agree well with **van't Hoff analysis** of
+  temperature-dependent distribution coefficients
+- The same methodology gave the first direct calorimetric measurement of the
+  heat of liquid-liquid partitioning of a transuranic element, Am³⁺ transferred
+  from pH 3.2 nitrate solution into 0.2 M HDEHP in *n*-dodecane
+  [@martin2010thermodynamics]
 
 #### Van't Hoff Analysis (Indirect Method)
 - Plot ln(D) vs 1/T to obtain ΔH and ΔS from slope and intercept
@@ -555,37 +637,47 @@ The foundational work on two-phase calorimetry was developed using the **{index}
 
 ### Thermodynamic Results by Extractant System
 #### HDEHP/D2EHPA Systems
+
+Two-phase calorimetry on HDEHP in *n*-dodecane gives an exothermic heat of
+transfer opposed by an unfavourable entropy term, the entropy penalty coming
+from the ordering of the extracted complex together with the rehydration of the
+three protons exchanged back into the aqueous phase [@martin2010thermodynamics].
+Am³⁺ falls on the lanthanide ΔG, ΔH and ΔS trend lines at the radius where
+Pm³⁺ would sit, which is what a purely electrostatic picture of a hard-donor
+extractant predicts.
+
+#### Malonamide Diamide (DMDBTDMA) Systems
+
+Malonamide diamides extract the neutral metal nitrate rather than exchanging
+cations, and one of the few enthalpy series measured right across the
+lanthanides belongs to them, so they are worth putting alongside the
+organophosphorus numbers. For 0.5 M DMDBTDMA in TPH — a
+hydrogenated-tetrapropylene kerosene diluent — extracting La, Nd, Eu, Er, Yb and
+Am nitrates from 3 M HNO₃ [@charbonnel2000thermodynamics]:
+
 | Parameter | Observation                                              |
 |-----------|----------------------------------------------------------|
 | ΔH_extr   | Exothermic: −35 kJ/mol (La³⁺) to −27 kJ/mol (Yb³⁺)       |
 | Am³⁺      | ΔH_extr ≈ −36 kJ/mol                                     |
 | Trend     | Slight increase (less negative) across lanthanide series |
-| Entropy   | Negative ΔS (increase in order)                          |
+| Method    | van't Hoff, cross-checked against titration calorimetry  |
 
-The **entropy-enthalpy compensation effect** has been observed - less compact hydration zones of light lanthanides are disrupted more readily, reducing the energetic cost of dehydration.
-
-#### TOPO Systems
-| Parameter | Value                                                        |
-|-----------|--------------------------------------------------------------|
-| ΔH_extr   | Constant \~29 kJ/mol from La³⁺-Er³⁺                          |
-| Tm³⁺-Lu³⁺ | Slight decrease observed                                     |
-| Method    | Complete ΔG, ΔH, ΔS sets for Eu(NO₃)₃, Am(NO₃)₃ and Cm(NO₃)₃ |
-
-**Reference:** [OSTI Thermodynamics Studies](https://www.osti.gov/etdeweb/servlets/purl/20176396)
+The van't Hoff and calorimetric enthalpies for Nd³⁺ agree to within a few
+kJ/mol, which is the cross-validation the two methods exist to provide. The same
+work shows that the diamide concentration and the aqueous-phase composition move
+the reaction enthalpy substantially, so a single ΔH quoted without its medium is
+not transferable.
 
 #### Diglycolamide (DGA) Systems
 {index}`TODGA` and related DGAs show:
 
-- **Enthalpy-driven extraction** for Am(III) and U(VI)
-- **Both enthalpy and entropy favorable** for Pu(IV)
+- **Enthalpy-driven extraction** for Am(III) and U(VI), with the entropy term
+  working against extraction [@ansari2006extraction]
+- **Both enthalpy and entropy favorable** for Pu(IV) [@ansari2006extraction]
 - Novel unsymmetrical DGA: ΔH = −64.94 kJ/mol, ΔS = −144.42 J/(mol·K)
 - Complexation shows **negative ΔH with positive ΔS** - driven by both factors
 
-**References:**
-
-- [@ansari2011chemistry]
-- [@sharov2024specific]
-- [TODGA Thermodynamics (IAEA)](https://inis.iaea.org/records/5cbkn-fw635)
+**References:** [@ansari2011chemistry; @sharov2024specific]
 
 #### Ionic Liquid Systems
 Lanthanide extraction into **Bumim·Tf₂N** with HTTA:
@@ -642,22 +734,18 @@ MD simulations reveal:
 
 **Reference:** [@spadina2019synergistic]
 
-### Key Research Groups & Resources
-#### Kenneth Nash Group (Washington State University)
+### Where This Body of Work Comes From
 
-- Extensive work on actinide/lanthanide thermodynamics
-- Two-phase calorimetry methodology development
-- TALSPEAK process thermodynamics
-
-**Reference:** [Nash Group Publications](https://nash.chem.wsu.edu/publications/)
-
-#### Idaho National Laboratory
-
-- Thermodynamics and kinetics of advanced separations
-- HDEHP, TOPO, and DGA systems
-- First transplutonium calorimetric measurements
-
-**Reference:** [INL Technical Report](https://inldigitallibrary.inl.gov/sites/sti/sti/4781579.pdf)
+Most of the two-phase calorimetry cited above traces to one lineage. The
+solution chemistry of the trivalent f-elements that the method rests on was set
+out by Nash [@nash1993basic]; the two-phase calorimetric methodology itself was
+developed on the HDEHP/lanthanide system by Zalupski and Nash
+[@zalupski2008two]; and it was carried into the TALSPEAK-relevant regime and
+extended to Am³⁺ at Idaho National Laboratory [@martin2010thermodynamics]. The
+diamide numbers come from an independent French line of work on the DIAMEX
+process [@charbonnel2000thermodynamics]. Nothing here should be read as a
+survey of the field's activity — these are the specific measurements the
+sections above depend on.
 
 ### Experimental Considerations for ITC in Two-Phase Systems
 #### Challenges
@@ -677,8 +765,8 @@ MD simulations reveal:
 ### Summary of Thermodynamic Trends
 | System          | ΔH_extr                        | ΔS_extr     | Driving Force |
 |-----------------|--------------------------------|-------------|---------------|
-| HDEHP/Ln³⁺      | Exothermic (−27 to −36 kJ/mol) | Negative    | Enthalpy      |
-| TOPO/Ln³⁺       | Exothermic (\~29 kJ/mol)       | Negative    | Enthalpy      |
+| HDEHP/Ln³⁺      | Exothermic                     | Negative    | Enthalpy      |
+| DMDBTDMA/Ln³⁺   | Exothermic (−27 to −36 kJ/mol) | Negative    | Enthalpy      |
 | TODGA/Am³⁺,U⁶⁺  | Exothermic                     | Unfavorable | Enthalpy      |
 | TODGA/Pu⁴⁺      | Exothermic                     | Favorable   | Both          |
 | HTTA/Ln³⁺ in IL | Endothermic (+4 to +42 kJ/mol) | Positive    | Entropy       |
@@ -700,64 +788,123 @@ MD simulations reveal:
 (linking-dissolution-and-extraction-thermodynamically)=
 ## Linking Dissolution and Extraction Thermodynamically
 
-### Overview
-
-This document presents a unified thermodynamic framework that connects (i) mineral dissolution of {index}`bastnäsite` (REECO3F) using acid leaching, and (ii) liquid--liquid extraction (LLE) of rare-earth elements (REEs) using acidic organophosphorus extractants such as D2EHPA and related phosphates. The framework integrates atomistic thermodynamics inspired by first-principles mineral dissolution modeling with empirical and semi-empirical extraction models, providing a pathway toward chemically grounded, computationally extensible benchmarks.
+The cycle above begins with REE³⁺ already dissolved. That ion had to come from a
+mineral, and [](#hydrometallurgical-leaching) is where it did. The two halves of
+the process share one variable — the chemical potential of REE³⁺ in the aqueous
+phase — so they can be written in a single set of books. This section does that
+for {index}`bastnäsite` leached in acid and then extracted with an acidic
+organophosphorus extractant. It is deliberately the crudest version that closes:
+atomistic thermodynamics on the mineral side, an empirical cation-exchange model
+on the extraction side, and the aqueous chemical potential as the quantity the
+two must agree on. What it buys is a benchmark in which a change to the mineral
+chemistry and a change to the ligand chemistry are expressed in the same units.
 
 ### Bastnäsite Dissolution as a Source of Aqueous REE Chemical Potentials
-Bastnäsite (REECO3F, where REE = Y, La, Ce, Pr, Nd, Sm, Gd) is a major rare-earth mineral. Under acidic leaching conditions, it dissolves to release trivalent REE ions into solution. A simplified dissolution reaction is:  
-  
-REECO3F(s) + 3H+ ⇌ REE3+ + CO2(g) + HF(aq) + H2O  
-  
-In an atomistic thermodynamics framework, the free energy of dissolution can be written as:  
-  
-ΔG_diss(pH) = μ_REE3+(aq) − μ_REE(solid) + contributions from carbonate and fluoride speciation.  
-  
-Density functional theory (DFT) provides the solid-state and surface energetics of REE release, while aqueous thermodynamics (hydration, complexation, activity coefficients) provides solution terms. This establishes the aqueous chemical potential μ_REE3+ as a function of pH, ionic strength, and ligand environment.
+
+Bastnäsite (REECO₃F, where REE is dominantly La, Ce, Pr and Nd) is a major
+rare-earth mineral. Under acidic leaching conditions it dissolves to release
+trivalent REE ions into solution; a simplified dissolution reaction is
+
+$$
+\mathrm{REECO_3F(s)} + 3\,\mathrm{H}^{+} \rightleftharpoons \mathrm{REE}^{3+} + \mathrm{CO_2(g)} + \mathrm{HF(aq)} + \mathrm{H_2O}
+$$
+
+In an atomistic thermodynamics framework the free energy of dissolution is
+
+$$
+\Delta G_\mathrm{diss}(\mathrm{pH}) = \mu_{\mathrm{REE}^{3+}(\mathrm{aq})} - \mu_\mathrm{REE(solid)} + \text{carbonate and fluoride speciation terms}
+$$
+
+Density functional theory supplies the solid-state and surface energetics of REE
+release, while aqueous thermodynamics (hydration, complexation, activity
+coefficients) supplies the solution terms. Together they fix the aqueous
+chemical potential $\mu_{\mathrm{REE}^{3+}}$ as a function of pH, ionic strength
+and ligand environment.
 
 ### Acidic Phosphate Extraction Thermodynamics
-Extraction with acidic organophosphorus extractants (HA) proceeds via cation exchange. The dominant extraction reaction for trivalent REEs is:  
-  
-REE3+(aq) + 3HA(org) ⇌ REEA3(org) + 3H+(aq)  
-  
-The corresponding extraction equilibrium constant is:  
-  
-K_ex = (a_REEA3 · a_H+\^3) / (a_REE3+ · a_HA\^3)  
-  
-The distribution coefficient D is then:  
-  
-D = C_REE,org / C_REE,aq ≈ K_ex · (a_HA\^3 / a_H+\^3)  
-  
-Taking logarithms gives a practical working equation:  
-  
-log D ≈ log K_ex + 3 log[HA] + 3 pH + Δγ  
-  
-where Δγ captures solvent and activity-coefficient effects.
+
+Extraction with acidic organophosphorus extractants (HA) proceeds by cation
+exchange. The dominant extraction reaction for trivalent REEs is
+
+$$
+\mathrm{REE}^{3+}(\mathrm{aq}) + 3\,\mathrm{HA}(\mathrm{org}) \rightleftharpoons \mathrm{REEA_3}(\mathrm{org}) + 3\,\mathrm{H}^{+}(\mathrm{aq})
+$$
+
+with extraction equilibrium constant
+
+$$
+K_\mathrm{ex} = \frac{a_{\mathrm{REEA_3}}\,a_{\mathrm{H}^{+}}^{3}}{a_{\mathrm{REE}^{3+}}\,a_{\mathrm{HA}}^{3}}
+$$
+
+The distribution coefficient follows as
+
+$$
+D = \frac{C_\mathrm{REE,org}}{C_\mathrm{REE,aq}} \approx K_\mathrm{ex}\,\frac{a_{\mathrm{HA}}^{3}}{a_{\mathrm{H}^{+}}^{3}}
+$$
+
+and taking logarithms gives the practical working equation
+
+$$
+\log D \approx \log K_\mathrm{ex} + 3 \log [\mathrm{HA}] + 3\,\mathrm{pH} + \Delta\gamma
+$$
+
+where $\Delta\gamma$ absorbs solvent and activity-coefficient effects. This is
+the working equation the cycle produced earlier in the chapter, written in
+activities rather than concentrations and with dimerisation folded into
+$[\mathrm{HA}]$ instead of shown explicitly.
 
 ### Solvent and Extractant Effects
-Acidic phosphates such as D2EHPA commonly dimerize in nonpolar diluents. Rather than explicitly modeling aggregation equilibria, a simple effective-extractant model can be used:  
-  
-\[HA\]\_free = \[HA\]\_tot / (1 + K_d \[HA\]\_tot)  
-  
-Solvent polarity and modifiers are absorbed into solvent-specific K_ex values or activity corrections. This keeps the model simple while retaining predictive capability.
+
+Acidic phosphates such as D2EHPA dimerise in nonpolar diluents. Rather than
+model the aggregation equilibria explicitly, a simple effective-extractant form
+can be used,
+
+$$
+[\mathrm{HA}]_\mathrm{free} = \frac{[\mathrm{HA}]_\mathrm{tot}}{1 + K_d\,[\mathrm{HA}]_\mathrm{tot}}
+$$
+
+with solvent polarity and modifiers absorbed into solvent-specific
+$K_\mathrm{ex}$ values or activity corrections. That keeps the model small at
+the price of making $K_\mathrm{ex}$ non-transferable between diluents.
 
 ### Linking Dissolution and Extraction via Chemical Potentials
-Both dissolution and extraction can be expressed in terms of chemical potentials. The extraction free energy satisfies:  
-  
-ΔG_ex = −RT ln K_ex  
-  
-and can be decomposed as:  
-  
-ΔG_ex ≈ ΔG_bind,org(REEA3) − ΔG_hyd/spec,aq(REE3+) + 3RT ln a_H+  
-  
-DFT and machine-learning models (e.g., equivariant neural networks trained on REE--ligand binding energies) provide scalable estimates of ΔG_bind,org. Mason-style atomistic dissolution thermodynamics provides μ_REE3+(aq) and its pH dependence. Together, these define a consistent thermodynamic loop from mineral to organic phase.
+
+Both dissolution and extraction can be written in chemical potentials. The
+extraction free energy satisfies
+
+$$
+\Delta G_\mathrm{ex} = -RT \ln K_\mathrm{ex}
+$$
+
+and decomposes as
+
+$$
+\Delta G_\mathrm{ex} \approx \Delta G_\mathrm{bind,org}(\mathrm{REEA_3}) - \Delta G_\mathrm{hyd/spec,aq}(\mathrm{REE}^{3+}) + 3RT \ln a_{\mathrm{H}^{+}}
+$$
+
+DFT and machine-learning models — equivariant neural networks trained on
+REE-ligand binding energies, for instance [@gupta2025accelerating] — give
+scalable estimates of $\Delta G_\mathrm{bind,org}$, and atomistic dissolution
+thermodynamics gives $\mu_{\mathrm{REE}^{3+}(\mathrm{aq})}$ and its pH
+dependence. Together they close a loop from mineral to organic phase. The
+caveats of the first half of this chapter apply here in full: the loop closes on
+paper, and the absolute numbers it produces are not yet trustworthy.
 
 ### Practical Benchmark Workflow
-1\. Compute or parameterize bastnäsite dissolution free energies to define aqueous REE availability.  
-2. Perform aqueous speciation to obtain free REE3+ activities as a function of pH.  
-3. Apply the extraction equilibrium model to compute D values for each REE.  
-4. Enforce extractant mass balance for competitive extraction.  
-5. Replace fitted K_ex values with atomistically or ML-derived free energies as models mature.
+
+1.  Compute or parameterise bastnäsite dissolution free energies to define
+    aqueous REE availability.
+2.  Perform aqueous speciation to obtain free REE³⁺ activities as a function of
+    pH.
+3.  Apply the extraction equilibrium model to compute D values for each REE.
+4.  Enforce extractant mass balance for competitive extraction.
+5.  Replace fitted $K_\mathrm{ex}$ values with atomistically or ML-derived free
+    energies as the models earn it.
 
 ### Scope and Extensions
-This framework provides a minimal, extensible benchmark for rare-earth processing. It can be expanded to include Ce redox chemistry, sulfate media, mixed extractants, or kinetic limitations. Most importantly, it enables a chemically interpretable bridge between first-principles mineral chemistry and data-driven ligand discovery for separation science.
+
+That is a minimal, extensible benchmark for rare-earth processing, not a
+predictive model. It can be widened to Ce redox chemistry, sulfate media, mixed
+extractants or kinetic limitations, and its value is that mineral chemistry and
+ligand chemistry are stated in one currency — so a claim made on either side can
+be checked against the other.

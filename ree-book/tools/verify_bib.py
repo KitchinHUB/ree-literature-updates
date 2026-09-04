@@ -112,20 +112,48 @@ def url_alive(url: str) -> bool:
     return 200 <= status < 400 or status in ACCESS_REFUSED
 
 
-def isbn_title(isbn: str) -> str | None:
-    """Resolve an ISBN through OpenLibrary. Returns the title, or None."""
-    key = "ISBN:" + re.sub(r"[^0-9Xx]", "", isbn)
+def isbn_title(isbn: str) -> tuple[str, str | None]:
+    """Resolve an ISBN to a title.
+
+    Returns one of ("found", title), ("absent", None) or ("unreachable", None).
+    The three are not interchangeable: a registry that cannot be reached is
+    silence, not a verdict, and rejecting an entry on it would delete a real
+    book because a host was down or firewalled. Only "absent" — a registry that
+    answered and did not have the ISBN — is evidence against an entry.
+
+    Two registries are tried, because either can be blocked where this runs.
+    """
+    digits = re.sub(r"[^0-9Xx]", "", isbn)
+    reached = False
+
+    key = "ISBN:" + digits
     url = ("https://openlibrary.org/api/books?format=json&jscmd=data"
            f"&bibkeys={urllib.parse.quote(key)}")
     status, body = _get(url, timeout=20)
-    if status != 200 or not body:
-        return None
-    try:
-        data = json.loads(body)
-    except json.JSONDecodeError:
-        return None
-    rec = data.get(key)
-    return rec.get("title") if rec else None
+    if status == 200 and body:
+        reached = True
+        try:
+            rec = json.loads(body).get(key)
+        except json.JSONDecodeError:
+            rec = None
+        if rec and rec.get("title"):
+            return "found", rec["title"]
+
+    url = f"https://www.googleapis.com/books/v1/volumes?q=isbn:{digits}"
+    status, body = _get(url, timeout=20)
+    if status == 200 and body:
+        reached = True
+        try:
+            data = json.loads(body)
+        except json.JSONDecodeError:
+            data = {}
+        items = data.get("items") or []
+        if items:
+            title = (items[0].get("volumeInfo") or {}).get("title")
+            if title:
+                return "found", title
+
+    return ("absent" if reached else "unreachable"), None
 
 
 def format_authors(msg: dict) -> str:
@@ -161,7 +189,7 @@ def main() -> int:
     print(f"verifying {total} entries")
 
     verified, rejected = [], []
-    repaired_authors, mismatched_titles = [], []
+    repaired_authors, mismatched_titles, unreachable = [], [], []
 
     for i, e in enumerate(db.entries, 1):
         doi = norm_doi(e.get("doi", ""))
@@ -215,9 +243,17 @@ def main() -> int:
 
         isbn = (e.get("isbn") or "").strip().strip("{}")
         if isbn:
-            title = isbn_title(isbn)
+            verdict, title = isbn_title(isbn)
             time.sleep(args.delay)
-            if title:
+            if verdict == "unreachable":
+                # No registry answered. Keep the entry and say so; silence from
+                # a lookup service is not evidence about the book.
+                e["_verified"] = "isbn-unreachable"
+                verified.append(e)
+                unreachable.append((e["ID"], isbn, e.get("title", "")[:60]))
+                print(f"  [{i}/{total}] {e['ID']}: kept (ISBN registry unreachable)")
+                continue
+            if verdict == "found":
                 # An ISBN names the book. For a chapter, that is `booktitle`;
                 # comparing it to the chapter title reports a false mismatch.
                 recorded = e.get("booktitle") or e.get("title", "")
@@ -280,7 +316,9 @@ def main() -> int:
         f"{sum(1 for e in verified if e.get('_verified') == 'url-live')} "
         f"by live URL, "
         f"{sum(1 for e in verified if e.get('_verified') == 'isbn')} "
-        "by ISBN)",
+        f"by ISBN, "
+        f"{sum(1 for e in verified if e.get('_verified') == 'isbn-unreachable')} "
+        "kept unchecked because no ISBN registry answered)",
         f"- Rejected: **{len(rejected)}**",
         f"- Author fields repaired from CrossRef: **{len(repaired_authors)}**",
         f"- Titles diverging from CrossRef: **{len(mismatched_titles)}**",
@@ -291,6 +329,15 @@ def main() -> int:
         "",
         *(f"- `{e['ID']}` — {why} — {(e.get('title') or '')[:75]}"
           for e, why in rejected),
+        "",
+        "## Kept, but not machine-checked",
+        "",
+        "These entries carry an ISBN and no DOI or URL, and no ISBN registry",
+        "could be reached to look it up. That is silence, not a verdict: the",
+        "entries are kept and the ISBN is printed here so it can be checked by",
+        "hand.",
+        "",
+        *(f"- `{i}` — ISBN {isbn} — {t}" for i, isbn, t in unreachable),
         "",
         "## Titles that disagree with CrossRef (check these by hand)",
         "",

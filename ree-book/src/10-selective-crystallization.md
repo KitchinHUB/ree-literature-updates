@@ -53,7 +53,9 @@ Oxalic acid is the most widely used precipitant for high-purity REE recovery due
 
 **Reaction Stoichiometry:**
 
-    2RE³⁺ + 3C₂O₄²⁻ + 10H₂O → RE₂(C₂O₄)₃·10H₂O ↓
+$$
+2\,\mathrm{RE}^{3+} + 3\,\mathrm{C_2O_4^{2-}} + 10\,\mathrm{H_2O} \rightarrow \mathrm{RE_2(C_2O_4)_3}\!\cdot\!10\,\mathrm{H_2O} \downarrow
+$$
 
 **Key Characteristics:**
 
@@ -204,8 +206,13 @@ Cerium separation by oxidation to Ce(IV) is a critical first step in REE purific
 
 **Principle:** Ce³⁺ is readily oxidized to Ce⁴⁺, which has much lower solubility:
 
-    Ce³⁺ → Ce⁴⁺ + e⁻     E° = 1.74 V
-    Ce⁴⁺ + 4OH⁻ → Ce(OH)₄ ↓
+$$
+\mathrm{Ce}^{3+} \rightarrow \mathrm{Ce}^{4+} + \mathrm{e}^- \qquad E^\circ = 1.74~\mathrm{V}
+$$
+
+$$
+\mathrm{Ce}^{4+} + 4\,\mathrm{OH}^- \rightarrow \mathrm{Ce(OH)_4} \downarrow
+$$
 
 That is the discontinuity in [](#fig-precipitation-ph): a three pH unit drop
 where the lanthanide contraction, working across the whole series, is worth
@@ -231,7 +238,7 @@ about a third of one.
 
 **Industrial Molycorp Process:**
 
-1.  Calcination of bastnaesite at 620°C to oxidize Ce³⁺ to Ce⁴⁺
+1.  Calcination of bastnäsite at 620°C to oxidize Ce³⁺ to Ce⁴⁺
 2.  Acidic treatment with 30% HCl to leach trivalent lanthanides
 3.  Filtration yields solid CeO₂ concentrate and LREE solution
 

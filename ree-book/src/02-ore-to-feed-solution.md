@@ -27,7 +27,7 @@ sense of [](#solvent-extraction-fundamentals).
 ## Primary REE Minerals
 Rare-earth elements do not occur as native metals but are found in oxide or phosphate minerals [@jha2016hydrometallurgical; @xie2014critical]. The most important industrial sources are:
 
-1.  **{index}`Bastnasite <bastnäsite>`** (REE·FCO₃): Carbonate-fluoride mineral
+1.  **{index}`Bastnäsite <bastnäsite>`** (REE·FCO₃): Carbonate-fluoride mineral
     - Primary source in US ({index}`Mountain Pass`, CA) and China ({index}`Bayan Obo`)
     - Enriched in light REEs: La, Ce, Pr, Nd
     - Typical composition: 60-70% REO (rare earth oxides)
@@ -48,7 +48,9 @@ Rare-earth elements do not occur as native metals but are found in oxide or phos
 ### Chloride Solutions
 **Preparation**: REE concentrates are roasted and dissolved in hydrochloric acid [@xie2014critical]:
 
-    REE₂O₃ + 6 HCl → 2 REECl₃ + 3 H₂O
+$$
+\mathrm{REE_2O_3} + 6\,\mathrm{HCl} \rightarrow 2\,\mathrm{REECl_3} + 3\,\mathrm{H_2O}
+$$
 
 **Advantages**:
 
@@ -72,7 +74,9 @@ Rare-earth elements do not occur as native metals but are found in oxide or phos
 ### Nitrate Solutions
 **Preparation**: REE carbonates or hydroxides dissolved in nitric acid [@matveev2018solvent]:
 
-    REE₂O₃ + 6 HNO₃ → 2 REE(NO₃)₃ + 3 H₂O
+$$
+\mathrm{REE_2O_3} + 6\,\mathrm{HNO_3} \rightarrow 2\,\mathrm{REE(NO_3)_3} + 3\,\mathrm{H_2O}
+$$
 
 **Advantages**:
 
@@ -95,7 +99,9 @@ Rare-earth elements do not occur as native metals but are found in oxide or phos
 ### Sulfate Solutions (Ion-Adsorption Ores)
 **Preparation**: Direct leaching of clay ores with ammonium sulfate [@han2024efficient]:
 
-    Clay−[REE³⁺] + 3 NH₄⁺ → Clay−[NH₄⁺]₃ + REE³⁺(aq)
+$$
+\mathrm{Clay}\text{--}[\mathrm{REE}^{3+}] + 3\,\mathrm{NH_4^+} \rightarrow \mathrm{Clay}\text{--}[\mathrm{NH_4^+}]_3 + \mathrm{REE}^{3+}(\mathrm{aq})
+$$
 
 **Advantages**:
 

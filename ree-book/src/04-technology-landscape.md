@@ -52,12 +52,24 @@ Key industrial extractants include:
   cascade with enough stages; the limit is stage count and reflux, not chemistry
 - For optical/phosphor-grade materials (5-6 nines purity), ion exchange post-processing is required
 
+(separation-groups)=
 ### Separation Groups
-Industrial processes typically separate REEs into groups:
+A commercial plant rarely splits the whole series in one cascade. The common
+industrial practice is a first cut into three groups, each then separated
+internally. The grouping below is that convention; it is a commercial habit
+rather than a chemical boundary, and operators do not draw it identically:
 
 - **Light REEs (LREEs)**: La, Ce, Pr, Nd
-- **Medium REEs**: Sm, Eu, Gd
+- **Medium REEs (MREEs)**: Sm, Eu, Gd
 - **Heavy REEs (HREEs)**: Tb, Dy, Ho, Er, Tm, Yb, Lu, Y
+
+Gadolinium is where the conventions disagree, and it is worth flagging because
+this book uses both. In the three-group industrial split above, Gd sits in the
+middle group. Where the book speaks of two groups — the light/heavy division
+used in the glossary and in [](#fig-precipitation-ph) — the light group runs La
+through Eu and Gd is counted with the heavies. Neither placement is more
+correct than the other; see the [](#glossary) entry for *heavy rare earth
+elements (HREE)*.
 
 ## Ion Exchange
 Ion exchange was the predominant method before the 1960s and remains important for ultra-high purity applications [@elouardi2023progress].
@@ -92,15 +104,17 @@ reaches purities a cascade struggles with: the separation is not the ratio of tw
 distribution coefficients repeated across dozens of stages, it is a
 thermodynamically self-correcting front.
 
-    EDTA eluent in                              direction of travel  →
-         │
-         ▼
-    ┌────────────┬──────┬──────┬──────┬──────┬──────┬───────────┬────────┐
-    │  eluent    │  La  │  Ce  │  Pr  │  Nd  │  Sm  │ retaining │ resin  │
-    │  front     │      │      │      │      │      │ ion, Cu²⁺ │ ahead  │
-    └────────────┴──────┴──────┴──────┴──────┴──────┴───────────┴────────┘
-      rear of band   ←── weakest EDTA complex to strongest ──→   band front
-                         (each zone one element, self-sharpening)
+```text
+EDTA eluent in                              direction of travel  →
+     │
+     ▼
+┌────────────┬──────┬──────┬──────┬──────┬──────┬───────────┬────────┐
+│  eluent    │  La  │  Ce  │  Pr  │  Nd  │  Sm  │ retaining │ resin  │
+│  front     │      │      │      │      │      │ ion, Cu²⁺ │ ahead  │
+└────────────┴──────┴──────┴──────┴──────┴──────┴───────────┴────────┘
+  rear of band   ←── weakest EDTA complex to strongest ──→   band front
+                     (each zone one element, self-sharpening)
+```
 
 What limits the method is not resolution, which is excellent, but throughput.
 The band occupies the whole bed, so the quantity separated per cycle is set by
@@ -251,7 +265,7 @@ cell says "not reported", and that absence is itself a finding.
 |----|----|----|----|----|----|
 | **Solvent extraction** — [](#solvent-extraction-fundamentals) | 1.3-2 per stage for adjacent pairs (Nd/Pr ≈ 1.4-1.5); 4-10 for pairs two or more apart [@xie2014critical] | Real: purified chloride or nitrate liquor from any ore route | 0.3-1.5 M REE; 20-40 °C; pH 2.5-4.0 extraction, \<1 stripping | Commercial; tens of thousands of t/y REO worldwide | 9 [^trl-sx] |
 | **Ion exchange (displacement)** — [](#displacement-chromatography) | Not expressed as β; adjacent zones separate on EDTA complex stability [@powell1956basic] | Real: mixed REE loaded on cation resin | Chelating eluent (EDTA/HEDTA/DTPA), ambient, Cu²⁺ or Zn²⁺ retaining ion | Commercial polishing step; pilot plants since 1947 [@spedding1947separation] | 9 [^trl-ix] |
-| **Hydrometallurgical leaching** — [](#hydrometallurgical-leaching) | Not reported. The chapter's only quantified split is Fe/REE at iron removal (\>99 % Fe out, \<2 % REE lost) | Real ores: bastnäsite concentrate 60-75 % REO (7-9 % REO ore), monazite 50-70 % REO with 0-12 % ThO₂, clay 0.05-0.3 % REO | H₂SO₄ 2-6 M at 60-95 °C (bastnäsite); conc. H₂SO₄ at 200-250 °C (monazite); Fe removal pH 3.5-4.5 | Commercial; IREL ~3,000 t/y REO [@jha2016hydrometallurgical] | 9 [^trl-leach] |
+| **Hydrometallurgical leaching** — [](#hydrometallurgical-leaching) | Not reported. The chapter's only quantified split is Fe/REE at iron removal (\>99 % Fe out, \<2 % REE lost) | Real ores: bastnäsite concentrate 60-75 % REO (7-9 % REO ore), monazite 50-70 % REO with 0.1-12 wt% ThO₂, clay 0.05-0.3 % REO | H₂SO₄ 2-6 M at 60-95 °C (bastnäsite); conc. H₂SO₄ at 200-250 °C (monazite); Fe removal pH 3.5-4.5 | Commercial; IREL ~3,000 t/y REO [@jha2016hydrometallurgical] | 9 [^trl-leach] |
 | **Ion-adsorption clays** — [](#ion-adsorption-clays) | ~1.0-1.3, adjacent lanthanide pairs on bare clay — reported as a *limitation*, against 1.5-4 for a tailored extractant [@wu2023rare] | Real regolith ore, 0.03-0.3 wt % REO, REE in the ion-exchangeable phase | (NH₄)₂SO₄ or MgSO₄, 0.05-0.6 M; ambient (25 °C optimal); leachate pH 4-6 | Leaching: commercial in-situ, \>90 % of global HREE supply [@zhou2020genesis]. Clay as a separation medium: not demonstrated | 9 leaching / 2-3 as a separation step [^trl-iac] |
 | **Pyrometallurgy and halogenation** — [](#pyrometallurgical-and-halogenation-routes) | Not reported for any lanthanide pair. The best quantified split is a La+Ce group cut, ~80 % chloride purity, by selective condensation in stepwise carbochlorination-chemical vapour transport [@huang2002rare] | Real: bastnäsite ~70 wt % REO, monazite 55-65 % REO, xenotime 52-62 % REO, NdFeB scrap | Carbochlorination 600-900 °C (optimum 700 °C, 60 min, 12 wt % C, Cl₂); anhydrous, no pH | Pilot-to-commercial in China (Baotou); pilot elsewhere | 7-8 China / 6-7 elsewhere [^trl-pyro] |
 | **Coacervates and aqueous biphasic systems** — [](#coacervates-and-aqueous-biphasic-systems) | \>30, Gd/La, by cloud-point extraction with Triton X-114 and 8-hydroxyquinoline [@favrerguillon2004cloud]. No β is reported for a polyelectrolyte coacervate on any REE pair | Synthetic, composition not reported. One real feed: NdFeB magnet leachate, for Fe/REE rejection (Fe \>99 % extracted, REE \<10 %) [@liu2022one] | Not reported. Isolated values: PNIPAM LCST ~32 °C; Sc-selective phosphonate at pH 0.78 | Bench. The chapter lists pilot demonstration on real feedstock as an unmet need | 3-4 [^trl-coac] |

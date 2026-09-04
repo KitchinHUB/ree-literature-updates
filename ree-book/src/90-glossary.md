@@ -104,7 +104,7 @@ Damköhler number
   reach equilibrium before they leave: a large value means the stage is
   equilibrium-limited, a small one that it is kinetics-limited — the
   distinction microfluidic contactors exploit
-  ([](#microfluidic-and-flow-separations)).
+  ([](#microfluidic-separations)).
 
 decontamination factor
 : The factor by which a named impurity is reduced from feed to product at
@@ -191,7 +191,10 @@ heavy rare earth elements (HREE)
   clays matter out of proportion to their grade. The Gd boundary is a
   convention, not a chemical fact, and commerce is inconsistent: some
   classifications place Gd with the lights, and a middle group (Sm-Gd, "MREE")
-  is also in use. This book puts Gd with the heavies throughout.
+  is also in use. Where this book speaks of two groups it puts Gd with the
+  heavies; where a passage reports the three-group split that industry actually
+  separates into, Gd sits in the middle group, and the passage says so. See
+  [](#separation-groups).
 
 hydrometallurgy
 : Metal extraction through aqueous solution chemistry — leaching, solvent
@@ -228,7 +231,7 @@ isotachophoresis
   velocity. The self-sharpening is what makes it interesting here: band edges
   stay sharp instead of diffusing, so resolution does not decay along the
   channel. What has actually been separated this way, and at what scale, is in
-  [](#microfluidic-and-flow-separations).
+  [](#microfluidic-separations).
 
 lanmodulin
 : A bacterial protein whose EF-hand sites bind trivalent lanthanides with

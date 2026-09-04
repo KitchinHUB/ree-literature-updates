@@ -13,7 +13,7 @@ uncited remainder would misrepresent what the book actually rests on.
 The page is generated, not edited. Re-run after adding citations.
 
 A companion `src/references-cited.bib` is written alongside the page: the same
-315 entries, verbatim, as a file a reader can download and import into Zotero.
+entries, verbatim, as a file a reader can download and import into Zotero.
 Entries are copied byte-for-byte out of `references.bib` rather than
 re-serialized, so nothing is lost in a round trip.
 

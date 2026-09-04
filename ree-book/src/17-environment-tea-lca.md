@@ -215,7 +215,7 @@ for the technologies covered in Parts II and III are compared in a single table 
 ### LCA Framework for REE Production
 **System Boundaries:** REE LCA studies typically employ cradle-to-gate boundaries [@navarro2014life]:
 
-    Mining → Beneficiation → Cracking/Leaching → Separation → {index}`Precipitation <precipitation>` → Calcination → REO
+Mining → Beneficiation → Cracking/Leaching → Separation → {index}`Precipitation <precipitation>` → Calcination → REO
 
 **Functional Unit:** Most studies use 1 kg of rare earth oxide (REO) as the functional unit, though some analyze individual elements.
 

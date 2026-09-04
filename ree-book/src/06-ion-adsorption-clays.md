@@ -33,11 +33,11 @@ REEs in these ores sit primarily in the **ion-exchangeable** phase, typically \~
 
 The clay surface carries net negative charge (isomorphic substitution plus pH-dependent broken-edge silanol/aluminol sites). Recovery is therefore **cation exchange** driven by mass action -- a more concentrated electrolyte cation displaces the loosely held REE3+:
 
-``` example
+```text
 2 Clay-REE + 3 M2SO4  ->  2 Clay-M3 + REE2(SO4)3      (M = NH4+, ½ Mg2+, ...)
 ```
 
-Because the REE is exchangeable and hydrated, a salt solution at ambient temperature liberates it with fast kinetics and no acid attack on the mineral [@borst2020adsorption; @moldoveanu2016overview]. This is the entire economic basis of the deposit type, and what distinguishes it from hard-rock bastnaesite/{index}`monazite`.
+Because the REE is exchangeable and hydrated, a salt solution at ambient temperature liberates it with fast kinetics and no acid attack on the mineral [@borst2020adsorption; @moldoveanu2016overview]. This is the entire economic basis of the deposit type, and what distinguishes it from hard-rock bastnäsite/{index}`monazite`.
 
 A crucial subtlety for everything downstream: REE attach to clay by **two mechanisms with opposite consequences** [@wu2023rare]:
 

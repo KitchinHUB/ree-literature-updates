@@ -34,11 +34,12 @@ that gap requires four to five orders of magnitude of further parallelization.
 That is the honest headline of this chapter: the science is demonstrated and the
 engineering economics are not.
 
-This chapter merges three source documents. Where they disagree on a number, the
-disagreement is noted rather than averaged.
+Three of the internal reviews this book was assembled from
+([](#appendix-a-source-provenance)) covered microfluidics, and where they
+disagree on a number the disagreement is noted below rather than averaged.
 
 :::{warning} Citation reliability in this chapter
-One of the source documents for this chapter carried an explicit unresolved
+One of those three carried an explicit unresolved
 warning from its author that references without a URL might be fabricated. Its
 citations went through the verification pipeline described in the prologue, and
 the ones that failed were deleted — but the base rate of trouble in this
@@ -78,46 +79,79 @@ lanthanides that share an equilibrium can still be told apart.
 
 ## Extraction Architectures
 
-Three primary microfluidic extraction architectures have emerged for REE separation, each optimized for different kinetic regimes [@fernandezmaza2024high; @zhang2019mechanistic; @zhang2019enabling].
+Microfluidic extractors run in the laminar regime (Reynolds number \<2300), and
+within it the same two phases can be arranged in the same channel in several
+ways [@kolar2016microfluidic; @fernandezmaza2024high; @zhang2019mechanistic;
+@zhang2019enabling]. Four arrangements account for most of the REE work, and
+they are drawn in [](#fig-09-flow-regimes). They differ in one thing that
+matters for extraction: how much liquid-liquid interface the same two phases
+present inside the same channel. Each is therefore suited to a different kinetic
+regime.
 
-### Co-laminar (Parallel) Flow Systems
-These systems establish stable interfaces between aqueous and organic phases flowing side-by-side in microchannels at velocities of 40-400 mm/s [@kolar2016microfluidic]. The configuration is optimal for fast-kinetics extraction reactions, enabling contact times as short as 0.03-10 seconds with sub-second resolution [@nichols2011mechanistic]; measured extraction rates in such chips run roughly double those of the corresponding bulk contact, which their authors attribute to the higher interfacial area per unit volume [@kolar2016microfluidic].
+### Co-Laminar (Parallel) Flow
 
-### Droplet-Based (Segmented) Systems
-Droplet-based systems generate discrete organic droplets within continuous aqueous phases, inducing internal vortexes through shear stress that enhance mass transfer by 10-1000× compared to conventional contactors [@zhou2019controlled]. Recent innovations include Janus nanoparticle-stabilized droplets using snowman-shaped magnetic particles that serve as emulsifiers enabling uniform extractant dispersion and rapid magnetic demulsification in under 3 minutes [@chen2022efficient]. Hollow droplet systems introduce a gas phase (gas-in-oil-in-water) so that a thin organic shell contacts a large aqueous volume: working at a phase ratio of 200:1 with P507, this configuration concentrated neodymium from a \~100 ppm waste water to about 9 g/L, roughly a hundredfold enrichment in a single pass [@chen2017fast].
+Both phases move as continuous side-by-side streams at velocities of 40-400
+mm/s, separated by a single stable interface across which mass transfer proceeds
+by diffusion [@kolar2016microfluidic]. Holding that interface in place limits the
+configuration to relatively low phase ratios, roughly 5:1 to 1:5. It suits
+fast-kinetics extractions, where contact times as short as 0.03-10 seconds with
+sub-second resolution are enough [@nichols2011mechanistic]; measured extraction
+rates in such chips run roughly double those of the corresponding bulk contact,
+which their authors attribute to the higher interfacial area per unit volume
+[@kolar2016microfluidic].
 
-### Slug Flow Configurations
-Slug flow configurations create alternating liquid segments of aqueous and organic phases, allowing precise control of slug length and specific surface area [@dessimoz2008liquid]. This approach has demonstrated {index}`separation factors <separation factor>` of **1,289 for Zn/Mn** in 45 seconds of microfluidic extraction versus 233 in 25 minutes of batch extraction---a five-fold improvement with 33× faster processing [@touma2024intensification]. Novel reactor designs include serpentine microreactors, rotating microchannel extractors, and 3D reticulated hollow-strut SiC foam microreactors achieving **98.7% extraction efficiency** for {index}`praseodymium` and 97.0% for {index}`cerium` [@zhang2022solvent].
+### Slug (Segmented) Flow
 
-### Flow Regimes and Configurations
-Microfluidic extractors operate in the laminar flow regime (Reynolds number \<2300), with several distinct configurations [@kolar2016microfluidic], drawn in [](#fig-09-flow-regimes). The four differ in one thing that matters for extraction: how much liquid-liquid interface the same two phases present inside the same channel.
+Slug flow creates alternating aqueous and organic segments, which makes slug
+length---and with it the specific surface area---a variable the operator sets
+[@dessimoz2008liquid]. Internal circulation within each segment adds convective
+mixing to diffusion, and reported mass transfer efficiencies are 86.9-94.8%,
+enough for small-to-medium scale duties. In a Zn/Mn system the regime gave a
+{index}`separation factor <separation factor>` of **1,289** in 45 seconds of
+microfluidic extraction against 233 in 25 minutes of batch extraction---a
+five-fold improvement with 33× faster processing [@touma2024intensification].
+Reactor geometries in this family include serpentine microreactors, rotating
+microchannel extractors and 3D reticulated hollow-strut SiC foam microreactors,
+the last reaching **98.7% extraction efficiency** for {index}`praseodymium` and
+97.0% for {index}`cerium` [@zhang2022solvent].
 
-**Co-Laminar (Parallel) Flow:**
+### Droplet (Micro-Droplet) Flow
 
-- Both phases flow as continuous streams
-- Stable interface maintained between phases
-- Limited to relatively low phase ratios (5:1 to 1:5)
-- Mass transfer via diffusion across interface
+Breaking one phase into discrete drops in the other replaces the flat interface
+with the surface of every drop, and the shear that forms the drops drives
+internal vortexes inside them; together these enhance mass transfer by 10-1000×
+relative to a conventional contactor [@zhou2019controlled]. Reported mass
+transfer efficiencies, 92.9-97.4%, are the highest of the four regimes, and it
+is the regime reported for high-selectivity separation of trace REEs.
 
-**Droplet/Slug Flow:**
+The REE case reported in most detail is a flow-focusing droplet microreactor
+run on a binary Dy-La system, with the aqueous REE solution dispersed as
+monodisperse droplets in a continuous organic phase of Cyanex 572 in Shellsol
+D70 [@fernandezmaza2024high]. Residence times of 3-60 seconds produced droplets
+presenting 49.2-61.4 cm²/cm³ of interfacial area; at pH 1, 90% of the
+{index}`dysprosium` was extracted and the two elements were separated almost
+completely, at a reported {index}`separation factor <separation factor>` of
+**279**.
 
-- Dispersed phase forms discrete droplets in continuous phase
-- Internal circulation within droplets enhances mixing
-- Higher mass transfer efficiency: 86.9-94.8%
-- Suitable for small-to-medium scale applications
+Two variants extend the regime to dilute feeds. Hollow droplets introduce a gas
+phase (gas-in-oil-in-water) so that a thin organic shell contacts a large
+aqueous volume: working at a phase ratio of 200:1 with P507, this configuration
+concentrated neodymium from a \~100 ppm waste water to about 9 g/L, roughly a
+hundredfold enrichment in a single pass [@chen2017fast]. Snowman-shaped magnetic
+Janus nanoparticles added as emulsifiers disperse the extractant uniformly, hold
+their emulsification performance over three or more cycles, and allow rapid
+magnetic demulsification in under 3 minutes---a route to enriching
+low-concentration REE streams [@chen2022efficient].
 
-**Micro-Droplet Flow:**
+### Pore-Throat Microchannels
 
-- Highest mass transfer efficiency: 92.9-97.4%
-- Large specific surface area
-- Excellent for high-selectivity separation of trace REEs
-
-**Pore-Throat Microchannels:**
-
-- Sequential pore-throat geometry creates capillary barriers
-- Retains dispersed droplets for enhanced contact
-- Achieves equilibrium within 30 seconds at phase ratios of 50-250
-- At extreme 500:1 phase ratio: 77% extraction efficiency
+A sequential pore-throat geometry---a serial converging-diverging
+channel---creates capillary barriers that retain dispersed droplets and so lower
+the apparent aqueous-to-organic volume ratio where mass transfer actually
+happens [@ge2024enhanced]. A double pore-throat channel reaches extraction
+equilibrium within 30 seconds at phase ratios of 50-250, and a quadruple one
+reaches 77% extraction efficiency at an extreme 500:1 phase ratio, concentrating
+100 mg/L aqueous feeds into organic solutions of up to 6 g/L.
 
 :::{figure} ../figures/09-flow-regimes.svg
 :name: fig-09-flow-regimes
@@ -137,26 +171,6 @@ capillary number or transition velocity, so no threshold is drawn. Pore-throat
 is set apart because it is a change of channel geometry rather than of flow
 rate. Drawn by `tools/figures/fig_flow_regimes.py`.
 :::
-
-### Droplet-Based Microfluidic Systems
-Droplet microfluidics has emerged as a powerful platform for REE separation [@zhang2019mechanistic]:
-
-**Flow-Focusing Droplet Microreactors:** Research on Dy-La binary separation systems demonstrates exceptional performance:
-
-- Monodispersed aqueous droplets with high interfacial area
-- Residence times: 3-60 seconds
-- At pH 1: **90% {index}`dysprosium` extraction**
-- **Separation factor: 279** achieved
-- Nearly complete Dy/La separation
-
-**Hollow Droplet Systems:** Fast extraction and enrichment from wastewater using hollow droplets enables rapid REE recovery from dilute solutions [@chen2017fast].
-
-**Janus Nanoparticle-Enhanced Systems:** Snowman-shaped magnetic Janus nanoparticles added as emulsifiers provide:
-
-- Uniform extractant dispersion
-- Rapid phase separation
-- Good emulsification performance after 3+ cycles
-- Feasible path for low-concentration REE enrichment
 
 ## Separation Mechanisms and Extractants
 
@@ -179,7 +193,7 @@ Beyond solvent extraction, electrophoretic methods, particularly capillary zone 
 
 Separating adjacent lanthanides differing by only 0.01-0.02 Å in ionic radius represents the field's hardest problem [@nash1993basic]. For the industrially critical **Nd/Pr separation**, optimized D2EHPA systems at pH 5 in hydrochloric acid achieve separation factors of only 2.72---requiring many stages for high purity [@safarzadeh2018insights]. pH emerges as the dominant variable affecting Nd/Pr selectivity.
 
-The **Dy/Nd separation** critical for permanent magnet recycling has seen dramatic advances through non-conventional approaches. {index}`Lanmodulin <lanmodulin>` protein variants (Hans-LanM R100K) achieve **\>98% purity and \>99% yield in a single stage**---a result unachievable with conventional solvent extraction [@mattocks2023enhanced]. {index}`MOF <metal-organic framework (MOF)>` nanotraps (NCU-1) with carboxyl groups and triazole nitrogen atoms demonstrate **separation factors of 273 for Nd/Er and 796 for Pr/Lu** in single-step separations [@hu2024rationally]. Flow-focusing droplet microreactors achieve 90% Dy extraction with separation factor of 279 for Dy/La at pH 1 in 3-60 seconds residence time [@fernandezmaza2024high].
+The **Dy/Nd separation** critical for permanent magnet recycling has seen dramatic advances through non-conventional approaches. {index}`Lanmodulin <lanmodulin>` protein variants (Hans-LanM R100K) achieve **\>98% purity and \>99% yield in a single stage**---a result unachievable with conventional solvent extraction [@mattocks2023enhanced]. {index}`MOF <metal-organic framework (MOF)>` nanotraps (NCU-1) with carboxyl groups and triazole nitrogen atoms demonstrate **separation factors of 273 for Nd/Er and 796 for Pr/Lu** in single-step separations [@hu2024rationally]. Flow-focusing droplet microreactors reach a Dy/La separation factor of 279 [@fernandezmaza2024high], but Dy and La sit at opposite ends of the series; none of the microfluidic studies cited in this chapter reports a separation factor for an adjacent lanthanide pair.
 
 Microfluidic intensification exploits kinetic rather than equilibrium differences [@zhang2019mechanistic]. For lanthanide pairs with distinguished kinetics (Eu³⁺/La³⁺), extraction proceeds to different degrees before equilibrium is reached. For pairs with similar kinetics (Eu³⁺/Sm³⁺), Damköhler number manipulation via flow rate, concentration, and temperature enables separation through precise control of non-equilibrium conditions---impossible in conventional batch systems [@zhang2019enabling].
 
@@ -211,7 +225,10 @@ typical value. And surface-to-volume is not an intrinsic property of
 it must be quoted against a channel size. At the tens-of-µm scale described above
 that is several hundred cm²/cm³; at a 0.7 mm capillary, which is what much of the
 slug-flow literature actually uses, it is about 57 cm²/cm³ — an order of
-magnitude lower, from the same technology. No interfacial area for a stirred
+magnitude lower, from the same technology. The flow-focusing droplet reactor
+that supplies the 279 separation factor quoted above reports 49.2-61.4 cm²/cm³
+[@fernandezmaza2024high], which is the capillary end of that range rather than
+the tens-of-µm end. No interfacial area for a stirred
 dispersion is reported on a comparable basis in the sources cited here, so no
 ratio is given for that row.
 
@@ -480,11 +497,11 @@ Three key developments will determine commercial trajectory: (1) successful scal
 The most promising near-term applications target high-value, low-volume separations---particularly adjacent heavy REE pairs critical for permanent magnets where conventional SX requires dozens of stages. Phoenix Tailings, RETi, and IBC Advanced Technologies are positioning related technologies for commercial deployment, though true microfluidic processing at scale remains 5-10 years away. The fundamental science is proven; the engineering and economics of massive parallelization will determine whether microfluidics transforms REE processing or remains a powerful laboratory tool.
 
 (microfluidic-research-opportunities)=
-### Research Opportunities
+## Research Opportunities
 
 Based on this literature review, several promising research directions emerge:
 
-#### Real-Time Colorimetric Monitoring of REE Extraction
+### Real-Time Colorimetric Monitoring of REE Extraction
 **Concept**: Develop microfluidic devices with integrated colorimetric indicator zones for real-time monitoring of rare earth element extraction efficiency.
 
 **Precedent**:
@@ -493,7 +510,7 @@ Based on this literature review, several promising research directions emerge:
 - Smartphone colorimetric detection established [@lopezruiz2014smartphone]
 - REE extraction kinetics characterized via microfluidics [@nichols2011mechanistic]
 
-#### Machine Learning-Optimized Extraction Screening
+### Machine Learning-Optimized Extraction Screening
 **Concept**: Combine high-throughput droplet generation with computer vision analysis for automated extraction optimization.
 
 **Precedent**:
@@ -501,7 +518,7 @@ Based on this literature review, several promising research directions emerge:
 - Deep learning for droplet detection demonstrated [@hadikhani2019learning; @gelado2023enhancing]
 - Droplet-based extraction fundamentals established [@mary2008microfluidic]
 
-#### Smartphone-Based Field Detection
+### Smartphone-Based Field Detection
 **Concept**: Portable microfluidic extraction kit with smartphone colorimetric readout for field applications.
 
 **Precedent**:

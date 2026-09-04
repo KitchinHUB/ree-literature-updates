@@ -467,7 +467,7 @@ Siderophores are extracellular chelating compounds produced by aerobic microorga
 
 **Actinobacteria:**
 
-- Four strains tested for bastnaesite-bearing rock bioleaching
+- Four strains tested for bastnäsite-bearing rock bioleaching
 - *Streptomyces* strains FXJ1.172 and FXJ1.532 produced 200 and 9.3 µmol/L siderophores
 - Secreted organic acids and complexing ligands as dominant extraction agents
 
@@ -780,24 +780,32 @@ rare-earths-versus-everything-else; *intra-group* selectivity is one lanthanide
 versus its neighbour. A technology can be world-leading in the first column and
 useless in the second, and lanmodulin is.
 
-| Technology | Group selectivity (REE vs. non-REE) | Intra-group selectivity (Ln vs. Ln) | Scalability | Cost | Environmental Impact | TRL |
-|----|----|----|----|----|----|----|
-| Lanmodulin | Exceptional (~10⁸ vs. Ca²⁺) | Weak: ~5× light-over-heavy for the native protein; SF = 8-13 for Nd/Dy on a dimerizing-variant column | Pilot scale | Moderate | Very Low | 4-5 |
-| LanD (dimerizing chaperone) | Not characterized | SF 1.4 (Nd/Pr) to 3.0 (Ce/La) — the best protein adjacent-pair figures reported | Bench, µM scale | Moderate | Very Low | 2-3 |
-| LBT Peptides | High | Not demonstrated | Lab scale | Moderate | Very Low | 3-4 |
-| Biosurfactants | Moderate | Weak (log β spans ~1.3 units across the series) | Pilot scale | Low | Very Low | 4-5 |
-| Siderophore Bioleaching | Moderate | Not demonstrated | Pilot scale | Low | Very Low | 5-6 |
-| Microbial Biosorption | Variable | Not demonstrated | Lab-Pilot | Low | Very Low | 4-6 |
-| Phytomining | Low-Moderate | None (bulk uptake) | Field trials | Low | Very Low | 3-4 |
-| Chitosan Adsorbents | Moderate | Not demonstrated | Industrial | Low | Very Low | 6-7 |
-| Engineered Microbes | High | Not demonstrated | Lab scale | Moderate | Very Low | 3-4 |
-| DES/IL Systems | Variable | Variable | Pilot scale | Moderate | Low | 5-6 |
+| Technology | Group selectivity (REE vs. non-REE) | Intra-group selectivity (Ln vs. Ln) | Largest scale reported in this chapter |
+|----|----|----|----|
+| Lanmodulin | Exceptional (~10⁸ vs. Ca²⁺) | Weak: ~5× light-over-heavy for the native protein; SF = 8-13 for Nd/Dy on a dimerizing-variant column | 0.9 mL immobilized-protein column [@mattocks2023enhanced] |
+| LanD (dimerizing chaperone) | Not characterized | SF 1.4 (Nd/Pr) to 3.0 (Ce/La) — the best protein adjacent-pair figures reported | Bench, µM scale |
+| LBT Peptides | High | Not demonstrated | Not reported |
+| Biosurfactants | Moderate | Weak (log β spans ~1.3 units across the series) | 400 mL at 25 g/L saponin |
+| Siderophore Bioleaching | Moderate | Not demonstrated | Not reported |
+| Microbial Biosorption | Variable | Not demonstrated | Not reported |
+| Phytomining | Low-Moderate | None (bulk uptake) | Not reported |
+| Chitosan Adsorbents | Moderate | Not demonstrated | Not reported |
+| Engineered Microbes | High | Not demonstrated | 10 L culture [@good2024scalable] |
+| DES/IL Systems | Variable | Variable | Not reported |
 
-*TRL = Technology Readiness Level (1-9 scale). "Not demonstrated" means no
-element-pair separation factor is reported for that technology anywhere in this
-chapter; it is not a claim that the selectivity is zero.*
+*"Not demonstrated" means no element-pair separation factor is reported for that
+technology anywhere in this chapter; it is not a claim that the selectivity is
+zero. "Not reported" in the last column means the same about scale.*
 
-The pattern in the second column is the chapter's real conclusion. Biology has
+An earlier version of this table also carried columns for scalability, cost,
+environmental impact and Technology Readiness Level, rating several of these
+technologies at pilot or industrial scale with TRLs of 5 to 7. Nothing in this
+chapter supports those ratings. The largest operation described anywhere above
+is a ten-litre culture; the separations themselves run in millilitre columns.
+The columns were removed rather than corrected, because a cost or a TRL that
+cannot be traced to a source is a number the reader has no way to check.
+
+The pattern in the intra-group column is the chapter's real conclusion. Biology has
 produced outstanding group-separation chemistry and, so far, only the beginnings
 of intra-group separation. That is a reason to put biological ligands into the
 front end of a flowsheet, not a reason to expect them to retire the cascade.

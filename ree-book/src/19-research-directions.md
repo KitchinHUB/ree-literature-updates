@@ -15,9 +15,11 @@ where each is discussed in detail.
 Two cautions about reading a list like this. First, a research gap in the
 literature is not the same as an opportunity — some gaps exist because the
 obvious experiment was tried and did not work, and the result was never
-published. Second, the timelines below are the source reviews' estimates, and
-review-article timelines are systematically optimistic. Treat them as an
-ordering, not as dates.
+published. Second, the timelines below are not drawn from any published
+roadmap. They are the judgments of the group's own internal literature
+reviews, the documents this book was assembled from
+([](#appendix-a-source-provenance)), and estimates made that way run
+optimistic. Treat them as an ordering, not as dates.
 
 ## What Is Driving the Field
 
@@ -126,8 +128,11 @@ The high-throughput and computational literature has its own specific gaps
 
 ## Priorities by Horizon
 
-The source reviews group the work as follows. These are the reviews'
-judgments, retained here for orientation.
+The grouping below is taken from the concluding section of the group's broad
+internal review of the field ([](#appendix-a-source-provenance)), which offered
+no citation for it. It is that document's judgment of what should come first,
+retained here for orientation, and it should be read as one group's ordering
+rather than as a schedule anyone has committed to.
 
 ### Short term (1–3 years)
 
@@ -168,7 +173,7 @@ the chapters that provide the context needed to judge them:
 | Biological systems: expression cost, stability, regeneration | [](#industrial-challenges) |
 | Leaching: reagent recycle, kinetics on refractory minerals | [](#research-gaps) |
 | Halogenation: chlorine handling, materials of construction | [](#outlook) |
-| Thermodynamics: transferable K_ex models across media | [](#thermodynamics-of-extraction) |
+| Thermodynamics: transferable $K_\mathrm{ex}$ models across media | [](#thermodynamics-of-extraction) |
 | Characterization: speciation under process conditions | [](#characterization-methods) |
 
 ## The Question Behind All of Them

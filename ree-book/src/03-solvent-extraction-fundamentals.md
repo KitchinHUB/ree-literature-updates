@@ -36,7 +36,9 @@ in the organic phase — better than 99.99% of it).
 ### Role of pH Control
 pH is the **primary control variable** in REE solvent extraction [@xie2014critical; @li2020hydration]. The extraction mechanism for acidic extractants ({index}`D2EHPA`, {index}`PC88A`) involves exchange of H⁺ for REE³⁺:
 
-    REE³⁺(aq) + 3 HL(org) ⇌ REEL₃(org) + 3 H⁺(aq)
+$$
+\mathrm{REE^{3+}(aq)} + 3\,\mathrm{HL(org)} \rightleftharpoons \mathrm{REEL_3(org)} + 3\,\mathrm{H^+(aq)}
+$$
 
 Where:
 
@@ -122,7 +124,9 @@ Where:
 ### Ionic Strength Effects
 Ionic strength (I) affects activity coefficients [@rydberg2004solvent]:
 
-    I = 0.5 Σ cᵢ zᵢ²
+$$
+I = \tfrac{1}{2} \sum_i c_i z_i^2
+$$
 
 **Effects on extraction**:
 
@@ -132,7 +136,9 @@ Ionic strength (I) affects activity coefficients [@rydberg2004solvent]:
 
 **Distribution ratio dependence**:
 
-    log D = log D₀ + f(I)
+$$
+\log D = \log D_0 + f(I)
+$$
 
 Where f(I) is ionic strength correction (typically positive for REE extraction)
 
@@ -246,7 +252,9 @@ Other diluents used in specialized applications [@dewulf2022effect]:
 ### Extraction Step: Aqueous → Organic
 The fundamental extraction reaction for acidic extractants [@xie2014critical; @tanaka2021revaluating]:
 
-    REE³⁺(aq) + 3 (HL)₂(org) ⇌ REE(HL₂)₃(org) + 3 H⁺(aq)
+$$
+\mathrm{REE^{3+}(aq)} + 3\,\mathrm{(HL)_2(org)} \rightleftharpoons \mathrm{REE(HL_2)_3(org)} + 3\,\mathrm{H^+(aq)}
+$$
 
 Where:
 
@@ -255,18 +263,29 @@ Where:
 
 **Equilibrium constant**:
 
-    Kₑₓ = ([REE(HL₂)₃]ₒᵣ𝓰 × [H⁺]³ₐ𝓆) / ([REE³⁺]ₐ𝓆 × [(HL)₂]³ₒᵣ𝓰)
+$$
+K_\mathrm{ex} = \frac{[\mathrm{REE(HL_2)_3}]_\mathrm{org}\,[\mathrm{H^+}]_\mathrm{aq}^{3}}
+                     {[\mathrm{REE^{3+}}]_\mathrm{aq}\,[\mathrm{(HL)_2}]_\mathrm{org}^{3}}
+$$
 
 **Distribution ratio** [@iloeje2019gibbs]:
 
-    D = [REE]ₒᵣ𝓰 / [REE]ₐ𝓆
+$$
+D = \frac{[\mathrm{REE}]_\mathrm{org}}{[\mathrm{REE}]_\mathrm{aq}}
+$$
 
-    log D = log Kₑₓ + 3 log[(HL)₂]ₒᵣ𝓰 + 3 pH
+$$
+\log D = \log K_\mathrm{ex} + 3 \log [\mathrm{(HL)_2}]_\mathrm{org} + 3\,\mathrm{pH}
+$$
 
 ### pH Dependence (The "pH Swing")
 **Key observation**: log D has **strong pH dependence** with slope ≈ +3 [@tanaka2021revaluating; @li2020hydration].
 
-    ∂(log D) / ∂pH ≈ +3          (equivalently, ∂(log D)/∂log[H⁺] ≈ -3)
+$$
+\frac{\partial (\log D)}{\partial\, \mathrm{pH}} \approx +3
+\qquad
+\left( \text{equivalently,} \ \frac{\partial (\log D)}{\partial \log [\mathrm{H^+}]} \approx -3 \right)
+$$
 
 This means:
 
@@ -312,8 +331,9 @@ lines are parallel.
 
 **Material balance**:
 
-    H⁺ released = 3 × (moles REE extracted)
-    NaOH required = 3 × (moles REE extracted)
+$$
+n(\mathrm{H^+})_\text{released} = 3\, n(\mathrm{REE})_\text{extracted} = n(\mathrm{NaOH})_\text{required}
+$$
 
 For 1.0 M REE feed, 90% extraction:
 
@@ -354,7 +374,9 @@ For 1.0 M REE feed, 90% extraction:
 
 **Stripping reaction**:
 
-    REE(HL₂)₃(org) + 3 H⁺(aq) → REE³⁺(aq) + 3 (HL)₂(org)
+$$
+\mathrm{REE(HL_2)_3(org)} + 3\,\mathrm{H^+(aq)} \rightarrow \mathrm{REE^{3+}(aq)} + 3\,\mathrm{(HL)_2(org)}
+$$
 
 **Stripping efficiency** [@agarwal2020comparative]:
 
@@ -449,12 +471,16 @@ Dy to Er in the sequence, which is what makes Y/Ho separations awkward.
 
 **Selectivity**:
 
-    Δ pH₁/₂(REE1-REE2) = pH₁/₂(REE1) - pH₁/₂(REE2)
+$$
+\Delta \mathrm{pH}_{1/2} = \mathrm{pH}_{1/2}(\mathrm{REE}_1) - \mathrm{pH}_{1/2}(\mathrm{REE}_2)
+$$
 
 Because log D moves with slope +3, the separation factor follows directly from
 the gap between two elements' half-extraction pH values:
 
-    β = 10^(3 × Δ pH₁/₂)
+$$
+\beta = 10^{\,3\,\Delta \mathrm{pH}_{1/2}}
+$$
 
 A gap of 0.1 pH units is a separation factor of 2; a gap of 0.2 is a factor of 4.
 This is why pH control to ±0.05 units is a real engineering requirement and not
@@ -503,11 +529,15 @@ extractant and diluent can reach, not as what an arbitrary circuit will deliver:
 ### Temperature Effects
 **Extraction is typically exothermic** [@khoshoei2025crown]:
 
-    ΔH_extraction ≈ -20 to -40 kJ/mol (for D2EHPA systems)
+$$
+\Delta H_\mathrm{extraction} \approx -20 \ \text{to} \ -40 \ \mathrm{kJ/mol} \quad \text{(D2EHPA systems)}
+$$
 
 **Temperature dependence**:
 
-    log K_ex = -ΔH / (2.303RT) + ΔS / (2.303R)
+$$
+\log K_\mathrm{ex} = \frac{-\Delta H}{2.303\,RT} + \frac{\Delta S}{2.303\,R}
+$$
 
 **Operational implications**:
 
@@ -648,13 +678,17 @@ The distribution ratio alone does not tell you how much metal a stage moves.
 That depends on how much of each phase is present, and the quantity that
 combines the two is the **{index}`extraction factor`** [@rydberg2004solvent]:
 
-    E = D × (O/A)
+$$
+E = D \times (O/A)
+$$
 
 `E` is the ratio of metal in the organic phase to metal in the aqueous phase at
 equilibrium, counting volumes. The fraction of the entering metal that a single
 equilibrium stage transfers is then
 
-    fraction extracted = E / (1 + E)
+$$
+\text{fraction extracted} = \frac{E}{1 + E}
+$$
 
 and the same algebra run backwards gives the stripping factor
 `S = (A/O)_strip / D_strip` with `fraction stripped = S / (1 + S)`.
@@ -675,7 +709,10 @@ alone. Getting to 99%+ is what the extra stages are for.
 the metal on extraction; running the strip liquor lean (small `A/O`) concentrates
 it again. Both enrichments are capped by the fraction actually transferred:
 
-    CF = [REE]_product / [REE]_feed = (A/O)_extraction × (O/A)_stripping × f × g
+$$
+\mathrm{CF} = \frac{[\mathrm{REE}]_\text{product}}{[\mathrm{REE}]_\text{feed}}
+     = (A/O)_\text{extraction} \times (O/A)_\text{stripping} \times f \times g
+$$
 
 where `f` and `g` are the overall extracted and stripped fractions. For the
 numbers above, taken as single stages: 3 × 5 × 0.77 × 0.67 ≈ **7.7×**. Note the
@@ -734,11 +771,19 @@ metal, and let
 
 Then for `N` ideal countercurrent stages,
 
-    (x_in − y_in/m) / (x_out − y_in/m) = (E^(N+1) − 1) / (E − 1)
+$$
+\frac{x_\mathrm{in} - y_\mathrm{in}/m}{x_\mathrm{out} - y_\mathrm{in}/m}
+   = \frac{E^{N+1} - 1}{E - 1}
+$$
 
 and inverting for the stage count,
 
-    N = ln[ ((x_in − y_in/m) / (x_out − y_in/m)) × (1 − 1/E) + 1/E ] / ln E
+$$
+N = \frac{\ln\left[
+      \dfrac{x_\mathrm{in} - y_\mathrm{in}/m}{x_\mathrm{out} - y_\mathrm{in}/m}
+      \left(1 - \dfrac{1}{E}\right) + \dfrac{1}{E}
+    \right]}{\ln E}
+$$
 
 Three checks. At `N = 1` the first expression gives `x_out/x_in = 1/(1 + E)`
 for fresh solvent — the single-stage result of the previous section, recovered.
@@ -754,9 +799,13 @@ at `E = 1` for recovery duty. At `E >> 1` the `1/E` terms drop out and
 `O/A = 1/3`, so `E = 3.33`, with fresh organic (`y_in = 0`). One stage extracts
 77%. For 99.9% recovery, `x_in/x_out = 1000`:
 
-    N = ln[1000 × (1 − 0.30) + 0.30] / ln 3.33
-      = ln(700.3) / 1.204
-      = 5.4  →  6 theoretical stages
+$$
+\begin{aligned}
+N &= \frac{\ln[1000 \times (1 - 0.30) + 0.30]}{\ln 3.33} \\
+  &= \frac{\ln(700.3)}{1.204} \\
+  &= 5.4 \ \rightarrow \ 6 \ \text{theoretical stages}
+\end{aligned}
+$$
 
 Six stages, and at 100% stage efficiency. That is where the "4-8 extraction
 stages" figure quoted for a mixer-settler train comes from: it is a **recovery**
@@ -772,7 +821,11 @@ number of equilibrium stages at total reflux. It transfers to a fractional
 extraction cascade unchanged, because the underlying algebra is the same: a
 constant relative separation applied stage after stage.
 
-    N_min = ln[ (x_P/(1 − x_P)) × ((1 − x_R)/x_R) ] / ln β
+$$
+N_\mathrm{min} = \frac{\ln\left[
+    \dfrac{x_P}{1 - x_P} \cdot \dfrac{1 - x_R}{x_R}
+  \right]}{\ln \beta}
+$$
 
 `x_P` is the mole fraction of the more-extractable element in the product taken
 from the extract end; `x_R` is that same element's mole fraction in the
@@ -784,7 +837,9 @@ tightening either end costs stages.
 Put in the numbers this book keeps returning to. Demand 99.99% at both ends
 (`x_P = 0.9999`, `x_R = 0.0001`) of a pair with β = 1.5:
 
-    N_min = ln(9999 × 9999) / ln 1.5 = 18.42 / 0.405 = 45 stages
+$$
+N_\mathrm{min} = \frac{\ln(9999 \times 9999)}{\ln 1.5} = \frac{18.42}{0.405} = 45 \ \text{stages}
+$$
 
 Forty-five, and that is a floor, not a design. `N_min` assumes total reflux, a
 strictly binary feed, and equilibrium in every stage. A working circuit has
@@ -927,7 +982,9 @@ three equivalents of base per mole of rare earth moved.
 #### Interfacial Area and Mass Transfer
 **Mass transfer rate**:
 
-    Rate = K_overall × a × (C* - C)
+$$
+\text{Rate} = K_\mathrm{overall} \, a \, (C^* - C)
+$$
 
 Where:
 
@@ -982,7 +1039,7 @@ Where:
 
 ## Industrial Example: Complete Process Flow
 ### Typical REE Separation Plant (Simplified)
-**Feed**: {index}`Bastnasite <bastnäsite>` concentrate (60% REO, mostly La, Ce, Pr, Nd)
+**Feed**: {index}`Bastnäsite <bastnäsite>` concentrate (60% REO, mostly La, Ce, Pr, Nd)
 
 #### Step 1: Dissolution
 
@@ -1084,13 +1141,15 @@ In summary:
 ### pH Swing Mechanism
 The fundamental principle:
 
-    High pH (3-4) → REE extracts into organic (D >> 1)
-             ↓
-        Loaded organic
-             ↓
-    Low pH (0-1) → REE strips back to aqueous (D << 1)
-             ↓
-     Regenerated organic (recycle)
+```text
+High pH (3-4) → REE extracts into organic (D >> 1)
+         ↓
+    Loaded organic
+         ↓
+Low pH (0-1) → REE strips back to aqueous (D << 1)
+         ↓
+ Regenerated organic (recycle)
+```
 
 Slope: ∂(log D)/∂pH ≈ +3 for trivalent REE with dimeric acidic extractants
 

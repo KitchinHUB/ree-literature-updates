@@ -20,9 +20,9 @@ and the chapters that follow on process economics
 ([](#environment-techno-economics-and-life-cycle)) and industrial status
 ([](#the-industrial-landscape)) are the place to calibrate expectations.
 
-{index}`Microfluidic <microfluidics>` separation, which the source review treated as one more emerging
-technology, has grown enough to warrant its own chapter —
-[](#microfluidic-separations).
+{index}`Microfluidic <microfluidics>` separation belongs to the same family of
+emerging approaches, but it has grown enough to warrant its own chapter and is
+treated there rather than here — [](#microfluidic-separations).
 
 (membrane-separation-technologies)=
 ## Membrane Separation Technologies

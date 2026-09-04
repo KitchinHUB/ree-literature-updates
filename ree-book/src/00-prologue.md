@@ -237,7 +237,7 @@ paper is the thing this whole section exists to prevent:
 An earlier draft of this page used a plausible-looking Elsevier DOI here instead
 of a placeholder. It resolved — to a review of pyrite flotation, which has
 nothing to do with rare earths. The template that teaches DOI hygiene shipped
-with a wrong DOI, and the verification pass that checked all 500 entries in the
+with a wrong DOI, and the verification pass that checks every entry in the
 bibliography did not flag it, because it resolved. That is
 the failure mode: not a broken link, which any script catches, but a working
 link to the wrong paper, which only a reader who opens it catches. Open it.

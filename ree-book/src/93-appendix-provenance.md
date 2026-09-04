@@ -41,7 +41,7 @@ document changes will shift them.
 | `microfluidic-colorimetric.md` | `colorimetric-microfluidic-separation.org` |
 | `carbochlorination-report.md` | `carbochlorination/Carbochlorination_Rare_Earth_Processing_Report.docx` |
 | `carbohalogenation-review.md` | `carbohalogenation/Carbohalogenation_Comprehensive_Review.docx` |
-| `bastnasite-framework.md` | `leaching/Bastnasite_Dissolution_to_Acidic_Phosphate_Extraction_Framework.docx` |
+| `bastnäsite-framework.md` | `leaching/Bastnäsite_Dissolution_to_Acidic_Phosphate_Extraction_Framework.docx` |
 
 ## Chapter map
 
@@ -59,7 +59,7 @@ document changes will shift them.
 | 10. Precipitation and Selective Crystallization | `broad-review.md` 185–482 (§2.3 Precipitation) + `crystallization.md` 7–122 |
 | 11. Biological and Biomimetic Separations | `broad-review.md` 1261–1789 (§10) |
 | 12. Membranes, MOFs, and Emerging Approaches | `broad-review.md` 484–584, 753–929 (§3, less the microfluidics subsection) |
-| 13. Thermodynamics of Extraction | `thermodynamic-cycle.md` 3–441 and 462–end + `broad-review.md` 2733–2897 (§16 Microcalorimetry) + `bastnasite-framework.md` |
+| 13. Thermodynamics of Extraction | `thermodynamic-cycle.md` 3–441 and 462–end + `broad-review.md` 2733–2897 (§16 Microcalorimetry) + `bastnäsite-framework.md` |
 | 14. High-Throughput and Computational Methods | `high-throughput.md` 13–256 + `broad-review.md` 2514–2714 (§14 Computational) |
 | 15. Characterization Methods | `broad-review.md` 1791–2236 (§11) |
 | 16. Recycling and Urban Mining | `broad-review.md` 1110–1148 (§5) |
@@ -124,12 +124,21 @@ entries were removed this way. The rule that followed from that removal governs
 the rest of the book: any claim resting solely on a rejected citation had to be
 removed or rewritten, not left standing without support.
 
-Of the 500 entries that remained, all 500 verified — 435 by resolving the DOI
-and 63 by fetching a live URL. One title diverges from CrossRef's record:
-`gupta2003chemical` is catalogued by CrossRef as *Chemical Metallurgy* and
-carries the subtitle *Principles and Practice* on the book itself. The full
-record, including the rejected entries, is in `verification-report.md` at the
-root of the book source.
+The bibliography has grown since, as chapters were repaired and the claims that
+survived acquired real sources. It now holds 554 entries, all 554 verified — 484
+by resolving the DOI and 67 by fetching a live URL. Three are books with an ISBN
+and no DOI or URL, and they are the honest exception: no ISBN registry could be
+reached from the machine that runs the check, so they are kept, listed by ISBN
+in `verification-report.md`, and marked there as not machine-checked. That is
+deliberate. An earlier version of the checker rejected them, which looked like a
+verdict on the books and was in fact a verdict on the network — it reported
+"ISBN not found" when the truth was that nothing had answered. Silence from a
+lookup service is not evidence, and the tool no longer treats it as any.
+
+One title diverges from CrossRef's record: `gupta2003chemical` is catalogued by
+CrossRef as *Chemical Metallurgy* and carries the subtitle *Principles and
+Practice* on the book itself. The full record, including the sixty-seven
+rejected entries, is in `verification-report.md` at the root of the book source.
 
 **Stage 2 — does the reference say what the text claims?** A resolving DOI
 proves a paper exists; it proves nothing about whether that paper supports the

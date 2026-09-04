@@ -83,7 +83,7 @@ Whether that reaction needs help depends on the oxide. For the sesquioxides it i
 already downhill: from the standard free energies of formation of La₂O₃ and
 LaCl₃, La₂O₃ + 3 Cl₂ → 2 LaCl₃ + 1.5 O₂ has ΔG° ≈ −290 kJ at 298 K and stays
 negative to about 1,000 K. It is CeO₂ — tetravalent, and the most abundant rare
-earth in bastnaesite — together with the gangue oxides TiO₂, ZrO₂ and Al₂O₃ for
+earth in bastnäsite — together with the gangue oxides TiO₂, ZrO₂ and Al₂O₃ for
 which direct chlorination is uphill at accessible temperatures. Carbon fixes all
 of them at once. It converts the liberated oxygen to CO or CO₂, which removes the
 product-side penalty, and for the rare earths it also drives the reaction past
@@ -143,7 +143,7 @@ Thermodynamic analysis using Gibbs free energy calculations demonstrates that ca
 
 Key thermodynamic findings include:
 
-- Operating temperatures of 600-900°C are typical. This window is set by kinetics and by the melting point of the chloride product, not by any comparison with roasting: oxidative roasting of bastnaesite runs at 500-700 °C and sulfuric acid baking at 200-500 °C (see [](#hydrometallurgical-leaching)), so carbochlorination is not the lower-temperature option.
+- Operating temperatures of 600-900°C are typical. This window is set by kinetics and by the melting point of the chloride product, not by any comparison with roasting: oxidative roasting of bastnäsite runs at 500-700 °C and sulfuric acid baking at 200-500 °C (see [](#hydrometallurgical-leaching)), so carbochlorination is not the lower-temperature option.
 
 - Above about 700°C the Boudouard equilibrium C + CO₂ ⇌ 2 CO moves to the right, so the primary carbon product switches from CO₂ to CO. This doubles the carbon demand per mole of oxygen removed but makes the chlorination itself more favourable.
 
@@ -156,7 +156,7 @@ The carbochlorination reaction proceeds through distinct mechanisms depending on
 
 For {index}`yttrium` oxide (Y₂O₃), the reaction mechanism involves the initial formation of YOCl through nucleation and growth. At temperatures above 715°C, the final product is liquid YCl₃, which can evaporate from the reaction zone [@gavira2010carbochlorination].
 
-Kinetics for a real bastnaesite feed, measured between 600 and 800 °C, resolve
+Kinetics for a real bastnäsite feed, measured between 600 and 800 °C, resolve
 two successive stages with apparent activation energies of 12.54 kJ/mol and
 11.22 kJ/mol; the authors assign both stages to chemical-reaction control
 [@xue2025carbochlorination]. That assignment deserves a caution, because
@@ -176,7 +176,7 @@ for the rare earths and 98-99 % for the Ca, Ba and Fe in the concentrate
 Mechanistically the reaction runs through the gas phase. Direct contact between oxide and carbon particles is not required [@gavira2010carbochlorination]; the carbon generates reactive intermediates — phosgene (COCl₂), monatomic chlorine, and carbon tetrachloride (CCl₄) have all been proposed — which then attack the oxide [@murase1995recovery].
 
 ### Industrial Applications
-Carbochlorination has been demonstrated for multiple feedstocks. Bastnaesite \[(Ce,La)(CO₃)F\] requires special consideration of its fluorine content, and silicon tetrachloride (SiCl₄) is used as a defluorinating agent to prevent the loss of fluorine as volatile rare earth fluorides [@huang2002rare]. End-of-life {index}`NdFeB` magnets are handled by chlorination roasting followed by water leaching, exploiting the fact that the rare earths chlorinate while iron can be held as the oxide [@hua2014selective]. Both are treated in detail below.
+Carbochlorination has been demonstrated for multiple feedstocks. Bastnäsite \[(Ce,La)(CO₃)F\] requires special consideration of its fluorine content, and silicon tetrachloride (SiCl₄) is used as a defluorinating agent to prevent the loss of fluorine as volatile rare earth fluorides [@huang2002rare]. End-of-life {index}`NdFeB` magnets are handled by chlorination roasting followed by water leaching, exploiting the fact that the rare earths chlorinate while iron can be held as the oxide [@hua2014selective]. Both are treated in detail below.
 
 ### Stepwise Carbochlorination-Chemical Vapor Transport (SC-CVT)
 A breakthrough process combining carbochlorination with chemical vapor transport (CVT) enables both extraction and separation of individual REEs [@huang2002rare].
@@ -203,8 +203,8 @@ REE chlorides form vapor complexes with aluminum chloride: RAlₙCl₃₊₃ₙ 
 - **{index}`Thorium <thorium>` removal**: Complete (critical for {index}`monazite` processing)
 - **REE recovery**: 92-99 mol% with SiCl₄ addition (vs. 56-88% without)
 
-### Processing of Mixed Bastnaesite-Monazite Concentrates
-The SC-CVT process is particularly effective for mixed bastnaesite (REFCO₃) and monazite (REPO₄) concentrates:
+### Processing of Mixed Bastnäsite-Monazite Concentrates
+The SC-CVT process is particularly effective for mixed bastnäsite (REFCO₃) and monazite (REPO₄) concentrates:
 
 **Optimized Conditions:**
 
@@ -246,7 +246,7 @@ rests on a flowsheet comparison, not on an operating plant.
 Carbochlorination has been investigated for various rare earth elements with thermodynamic and experimental evidence supporting its applicability across the entire lanthanide series plus {index}`scandium` and yttrium.
 
 ### Light Rare Earth Elements
-The light rare earth elements (LREEs) comprise {index}`lanthanum` (La), cerium (Ce), {index}`praseodymium` (Pr), neodymium (Nd), promethium (Pm), and {index}`samarium` (Sm). These elements are more abundant in the principal REE minerals bastnaesite and monazite, making them the primary targets for industrial carbochlorination [@gupta1992extractive].
+The light rare earth elements (LREEs) comprise {index}`lanthanum` (La), cerium (Ce), {index}`praseodymium` (Pr), neodymium (Nd), promethium (Pm), and {index}`samarium` (Sm). These elements are more abundant in the principal REE minerals bastnäsite and monazite, making them the primary targets for industrial carbochlorination [@gupta1992extractive].
 
 | **Element** | **Oxide** | **Chloride** | **Carbochlorination Feasibility** |
 |----|----|----|----|
@@ -293,12 +293,12 @@ Scandium has not been studied for carbochlorination in comparable detail. Its ch
 
 ## Primary Ore Processing
 
-### Bastnaesite Processing
-Bastnaesite \[(Ce,La)(CO₃)F\] is a fluorocarbonate mineral, dominated by the light rare earths; the pure end-member is about 75 wt% rare earth oxide by stoichiometry and commercial concentrates run lower. The {index}`Bayan Obo` deposit in China and the {index}`Mountain Pass` deposit in the United States are the world's largest bastnaesite resources [@castor2006rare].
+### Bastnäsite Processing
+Bastnäsite \[(Ce,La)(CO₃)F\] is a fluorocarbonate mineral, dominated by the light rare earths; the pure end-member is about 75 wt% rare earth oxide by stoichiometry and commercial concentrates run lower. The {index}`Bayan Obo` deposit in China and the {index}`Mountain Pass` deposit in the United States are the world's largest bastnäsite resources [@castor2006rare].
 
-Carbochlorination of bastnaesite requires special consideration of the fluorine content. Wang and co-workers developed the carbochlorination route that uses carbon as the reducing agent, chlorine as the chlorinating agent, and silicon tetrachloride (SiCl₄) as a defluorinating agent [@huang2002rare]. Fixing the fluorine as SiF₄ stops it leaving as rare earth fluoride and makes it recoverable as a by-product.
+Carbochlorination of bastnäsite requires special consideration of the fluorine content. Wang and co-workers developed the carbochlorination route that uses carbon as the reducing agent, chlorine as the chlorinating agent, and silicon tetrachloride (SiCl₄) as a defluorinating agent [@huang2002rare]. Fixing the fluorine as SiF₄ stops it leaving as rare earth fluoride and makes it recoverable as a by-product.
 
-Operating parameters for bastnaesite carbochlorination are given above under
+Operating parameters for bastnäsite carbochlorination are given above under
 Reaction Mechanisms and Kinetics; the chlorine feed is typically run at roughly
 twice the stoichiometric requirement to keep the bed in a chlorine-rich regime
 [@suli2017rare].
@@ -307,7 +307,7 @@ twice the stoichiometric requirement to keep the bed in a chlorine-rich regime
 ### Monazite Processing
 Monazite \[(Ce,La,Nd,Th)PO₄\] is a phosphate mineral containing 55-65% REO along with several per cent thorium [@kumari2015process]. The radioactive thorium content presents unique processing challenges that must be addressed regardless of extraction method.
 
-Carbochlorination of monazite offers advantages for thorium management. The phosphorus content can be converted to volatile POCl₃, which can be separately recovered. Thorium chloride (ThCl₄) boils at 921 °C, far below the rare earth chlorides, and in stepwise carbochlorination with chemical vapour transport thorium removal from a mixed bastnaesite-monazite concentrate was complete [@huang2002rare].
+Carbochlorination of monazite offers advantages for thorium management. The phosphorus content can be converted to volatile POCl₃, which can be separately recovered. Thorium chloride (ThCl₄) boils at 921 °C, far below the rare earth chlorides, and in stepwise carbochlorination with chemical vapour transport thorium removal from a mixed bastnäsite-monazite concentrate was complete [@huang2002rare].
 
 Conventional monazite processing goes by either sulfuric acid digestion or caustic decomposition; both are described, with their operating conditions, in [](#hydrometallurgical-leaching), which owns those numbers for this book.
 
@@ -562,7 +562,7 @@ extraction plant.
 Its proponents describe carbochlorination as a "clean metallurgical
 technology," on the grounds that it eliminates the acid and alkali wastewater
 streams, recycles chlorine within the system, and recovers by-products such as
-HF from bastnaesite and phosphorus values from monazite
+HF from bastnäsite and phosphorus values from monazite
 [@xue2026clean; @xue2025onestep]. The description is fair as far as the
 liquid effluent goes, and it should be read with the qualification made earlier
 in this chapter: a chlorinator has no aqueous effluent because it has no aqueous
@@ -600,7 +600,7 @@ environmental burden and demonstrated scale — is given once, for all of them, 
 ### Technology Readiness Level
 Readiness for rare earth carbochlorination differs sharply by region. In China
 the chlorination route is one of several established industrial options for
-bastnaesite, practised alongside oxidation roasting-acid leaching, sulfuric acid
+bastnäsite, practised alongside oxidation roasting-acid leaching, sulfuric acid
 bake-water leaching and caustic soda decomposition, and the Baotou facilities
 produce chlorides alongside oxides, carbonates and alloys
 [@csiro2024minerals]. Outside China it has not been commercially deployed, and
@@ -904,7 +904,7 @@ Carbochlorination converts rare earth oxides to anhydrous chlorides at 600-900 �
 and it does so for every element in the series. The thermodynamics are
 favourable across the lanthanides plus scandium and yttrium, laboratory and
 pilot work reports better than 93 % conversion on light rare earth oxides, and
-the route works on primary concentrates — bastnaesite, monazite, xenotime — as
+the route works on primary concentrates — bastnäsite, monazite, xenotime — as
 well as on magnet scrap and phosphor waste. The reaction is practised
 industrially in China and has been proven at enormous scale in the neighbouring
 titanium and zirconium industries, which is the strongest argument for its

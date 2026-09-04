@@ -285,10 +285,17 @@ ch. 9; (f) the four flow regimes, ch. 9; (g) precipitation pH and solubility
 curves across the series, ch. 10; (h) the LanM EF-hand coordination sphere,
 ch. 11; (i) one drawn flowsheet replacing ch. 5's three ASCII ones.
 
-- [ ] G29
+- [x] G29 — all nine drawn, proofed and wired in (commit 8af5dbf). Two defects
+  found while drawing: ch. 3's ASCII cascade had its flow arrows backwards, and
+  ch. 8 line 307 was pandoc-mangled. All ASCII flowsheets in chs. 3 and 5 are
+  gone. Scripts in `tools/figures/`, reports in `review/agent-reports/`.
 
 ## P30 — Sweep conversion damage, duplication, seams and cross-chapter numbers
-- Conversion: 41 pandoc `~sub~` markers; `~~` strikethrough at `08:263`; 543
+- Conversion: DONE for the two that actually mis-rendered — 39 pandoc `~sub~`
+  markers (mystmd does not implement the syntax, so they showed literally) and
+  the `~~` strikethrough in ch. 8, both fixed in 8af5dbf. The `\>` and `\[`
+  escapes were checked and left: they are valid CommonMark and render correctly.
+  Still open: 543
   Unicode sub/superscripts across 14 files; 56 indented code blocks standing in
   for equations; `####` under `##` in ch. 9; raw URLs as references in ch. 13.
 - Duplication: ch. 7's two conclusions (`978`, `1008`) and doubled kinetics
@@ -307,4 +314,49 @@ ch. 11; (i) one drawn flowsheet replacing ch. 5's three ASCII ones.
   nowhere, not two), and it misdated gupta2025accelerating as 2026. B is now a
   topic-by-topic further-reading list built from existing verified keys.
 
-- [ ] P30
+- [x] P30 — done across five parallel agents plus a central pass; build 8 is
+  clean (1192 citations / 0 unlabelled, 420 cross-references / 0 unresolved, 171
+  math nodes / 0 KaTeX errors, 9 figures labelled and enumerated).
+  - Conversion: all 113 indented equation blocks are gone — 27 in ch. 13, 49 in
+    chs. 3 and 5, 9 in chs. 2/4/10/15/17, the rest inside the chapters the other
+    agents rewrote. Two survive as ```text fences because they are pictures, not
+    equations. `#### under ##` in ch. 9 fixed; a book-wide scan now finds no
+    heading-level skip anywhere. Two `` ``` example `` blocks (a pandoc artifact
+    of org's `#+BEGIN_EXAMPLE`) relabelled `text`.
+  - Duplication: ch. 9's three overlapping passes over flow regimes merged into
+    one; ch. 14's doubled ML / Bayesian-optimization / closed-loop / analytical
+    sections restructured into a single pass; ch. 5's re-derivations of chs.
+    6/11/16/17 cut to cross-references (1660 → 1584 lines *while gaining* 80
+    lines of math markup); ch. 13's duplicated "Key Takeaway 4" removed. Ch. 7's
+    two conclusions turned out to have been fixed already.
+  - Seams: ch. 13's "This document presents", ch. 19's two "the source reviews",
+    ch. 9's "merges three source documents" and ch. 12's "the source review" all
+    now either name the document class and link to Appendix A or are gone. The
+    ch. 6, 7 and 5 seams were already repaired in earlier passes.
+  - Raw URLs as citations (ch. 13): all four resolved to real documents and
+    replaced by bib entries — and resolving them exposed two misattributions.
+    The "HDEHP/D2EHPA" enthalpy table was actually DMDBTDMA malonamide data from
+    `charbonnel2000thermodynamics`, and the TOPO table beside it cited the same
+    document, which contains nothing about TOPO at all; that table is deleted.
+  - Numbers: the Dy/La β = 279 double attribution resolved in favour of
+    `@fernandezmaza2024high` (`zhang2019mechanistic` is a *simulation* paper on
+    La/Eu with no Dy and no experiment); ch. 14's 63 % / 74 % contradiction
+    resolved by pulling the Augustine full text — they are two different
+    campaigns, one live and one retrospective-virtual, and the old phrasing had
+    also inverted the sense; the Gd group-boundary conflict resolved in ch. 4 and
+    the glossary; monazite ThO₂ normalised to 0.1-12 wt% in chs. 4 and 5.
+    Ch. 5's three ore-grade bands do *not* reconcile and the text now says so
+    rather than picking one. Bastnäsite spelling normalised — 69 replacements
+    across 9 files, source titles in the bibliography left as published.
+    `REECO3F` was already fixed upstream.
+  - Also caught centrally: the preface still claimed the book had no figures,
+    naming as gaps two of the nine we drew; the glossary's two links to
+    `#microfluidic-and-flow-separations` were dead (no such heading — I had
+    wrongly cleared them in an earlier pass); ch. 13's figure had lost its
+    in-text reference when its opening was rewritten.
+  - Bibliography: 554 entries, all 554 verified, 0 rejected. `verify_bib.py` was
+    itself wrong — it rejected three real books as "ISBN not found" when the
+    truth was that OpenLibrary is unreachable from here (`http=000` while
+    CrossRef answers 200). It now distinguishes *absent* from *unreachable*,
+    falls back to Google Books, and keeps-but-flags rather than rejecting.
+    Appendix A and the prologue updated to match.

@@ -509,7 +509,9 @@ Key parameters for solvent extraction process design ([@liu2022advancing], [MDPI
 ### Distribution Coefficient (D)
 **Definition:**
 
-    D = [REE]_organic / [REE]_aqueous
+$$
+D = \frac{[\mathrm{REE}]_\mathrm{org}}{[\mathrm{REE}]_\mathrm{aq}}
+$$
 
 **Influencing Factors:**
 
@@ -589,7 +591,9 @@ alongside the value.
 ### Separation Factor (β)
 **Definition:**
 
-    β_{REE1/REE2} = D_{REE1} / D_{REE2}
+$$
+\beta_\mathrm{REE1/REE2} = \frac{D_\mathrm{REE1}}{D_\mathrm{REE2}}
+$$
 
 **Multicomponent Systems:** Two approaches for calculating {index}`separation factors <separation factor>` in complex mixtures:
 
