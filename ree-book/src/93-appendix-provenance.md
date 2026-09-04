@@ -62,16 +62,17 @@ document changes will shift them.
 | 13. Thermodynamics of Extraction | `thermodynamic-cycle.md` 3–441 and 462–end + `broad-review.md` 2733–2897 (§16 Microcalorimetry) + `bastnäsite-framework.md` |
 | 14. High-Throughput and Computational Methods | `high-throughput.md` 13–256 + `broad-review.md` 2514–2714 (§14 Computational) |
 | 15. Process Modeling and Optimization | **No source document**; written from the primary literature for this edition. See the note below |
-| 16. Characterization Methods | `broad-review.md` 1791–2236 (§11) |
-| 17. Recycling and Urban Mining | `broad-review.md` 1110–1148 (§5) |
-| 18. Environment, Techno-Economics, and Life Cycle | `broad-review.md` 1150–1186 (§6), 2238–2367 (§12 TEA), 2369–2512 (§13 LCA) |
-| 19. The Industrial Landscape | `broad-review.md` 1188–1215 (§7) |
-| 20. Research Directions and Open Questions | `broad-review.md` 1233–1259 (§9), 2716–2732 (§15 Conclusions) + `high-throughput.md` 349–357 (critical gaps); synthesis newly written |
+| 16. Machine Learning in Rare Earth Separations | **No source document**; written from the primary literature for this edition. Two sections were moved here from Chapter 14 rather than rewritten — see the note below |
+| 17. Characterization Methods | `broad-review.md` 1791–2236 (§11) |
+| 18. Recycling and Urban Mining | `broad-review.md` 1110–1148 (§5) |
+| 19. Environment, Techno-Economics, and Life Cycle | `broad-review.md` 1150–1186 (§6), 2238–2367 (§12 TEA), 2369–2512 (§13 LCA) |
+| 20. The Industrial Landscape | `broad-review.md` 1188–1215 (§7) |
+| 21. Research Directions and Open Questions | `broad-review.md` 1233–1259 (§9), 2716–2732 (§15 Conclusions) + `high-throughput.md` 349–357 (critical gaps); synthesis newly written |
 
-### The one chapter with no source document
+### The two chapters with no source document
 
-Every other chapter here is a rewrite of material the group had already
-written. Chapter 15 is not. The sources touch process modeling twice — a
+Most chapters here are a rewrite of material the group had already
+written. Chapters 15 and 16 are not. The sources touch process modeling twice — a
 four-row table of software names in `high-throughput.md`, and a paragraph of
 geochemical speciation packages in the characterization section — and neither
 is an account of how a rare-earth flowsheet is modeled or optimized. The
@@ -87,6 +88,19 @@ that chapter attributes to a specific study — stage counts, recoveries,
 profitability signs — was read out of that study's own abstract during
 drafting; where only a title was available, the sentence was written to claim
 no more than a title can support.
+
+Chapter 16 was written the same way and with the same exposure. Two of its
+sections — the deep-learning distribution-ratio work and the learned binding
+energies — were moved out of Chapter 14, where they were originally assembled
+from `high-throughput.md`, and were not rewritten in the move; their labels
+travelled with them so that existing cross-references still resolve. Everything
+else in the chapter was written from CrossRef, OpenAlex and Semantic Scholar
+metadata and from publisher abstracts. Five of its sources had no abstract
+reachable through any of those routes and no open-access copy:
+@zhang2026predicting, @liu2026machine, @zhang2026design,
+@jorjani2008prediction and @gomezflores2022critical. Each is cited for no more
+than its title asserts, and the two that bear most directly on the chapter's
+subject are named in the text as papers this book takes no numbers from.
 
 ## Material deliberately dropped
 

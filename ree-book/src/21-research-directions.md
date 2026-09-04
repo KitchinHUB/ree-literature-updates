@@ -92,7 +92,7 @@ omitted from process proposals and from {index}`techno-economic <techno-economic
 inconsistent conditions, often without ionic strength, phase ratio, or
 equilibration time. This makes meta-analysis and machine learning across the
 published corpus far harder than it should be
-([](#machine-learning-for-distribution-coefficient-prediction)).
+([](#machine-learning-in-rare-earth-separations)).
 
 (gaps-in-automation-and-computation)=
 ## Gaps in Automation and Computation
@@ -103,7 +103,10 @@ The high-throughput and computational literature has its own specific gaps
 1. **Active learning for separations.** There is very little published work on
    closed-loop active learning applied specifically to solvent extraction
    optimization, despite the problem being an unusually good fit — expensive
-   experiments, a continuous design space, and a clear scalar objective.
+   experiments, a continuous design space, and a clear scalar objective. The
+   active-learning and agentic ligand-design workflows that do exist
+   ([](#designing-molecules-rather-than-ranking-them)) close their loop over
+   calculations rather than over experiments.
 2. **Real-time analytics.** Most automated platforms still depend on offline
    ICP-MS or ICP-OES. Online monitoring is the binding constraint on
    throughput, which is why the in-line colorimetric and spectroscopic
@@ -125,10 +128,13 @@ The high-throughput and computational literature has its own specific gaps
    errors are 25-100 kJ/mol. Selectivity between adjacent lanthanides lives at
    1-3 kJ/mol ([](#the-energy-scale-of-selectivity)), so every useful prediction
    is a difference in which 96-99 % of the error is assumed to cancel. No
-   published benchmark measures whether it does. A community test set of
-   *ordered series* — one extractant, the full La-to-Lu sequence, experimental
-   separation factors known — would test the assumption directly, and would be
-   more informative than any further reduction in absolute MAE.
+   community benchmark measures whether it does. The nearest thing to evidence
+   is @zahariev2024prediction, who report a relative log K error of 0.25 on a
+   six-ligand out-of-sample selectivity set against absolute errors of
+   0.63-0.76, on stability constants rather than separation factors. A test set
+   of *ordered series* — one extractant, the full La-to-Lu sequence,
+   experimental separation factors known — would test the assumption directly,
+   and would be more informative than any further reduction in absolute MAE.
 
 ## Priorities by Horizon
 

@@ -10,12 +10,26 @@ carries *in rare earth separation*, which is sometimes narrower than its
 general chemical-engineering meaning.
 
 :::{glossary}
+active learning
+: An experimental or computational campaign in which a model chooses what to
+  evaluate next — usually where it is most uncertain, or where the expected
+  improvement is largest — and is retrained on the result. It is the cheapest
+  way to spend a small budget of expensive measurements, and it is what
+  distinguishes a closed loop from a one-off screening exercise.
+
 activity coefficient
 : The correction factor relating a species' effective thermodynamic
   concentration to its analytical concentration. Rare earth extraction runs at
   ionic strengths where activity coefficients are far from unity, so
   equilibrium constants fitted to concentrations rather than activities are
   conditional on the medium they were measured in.
+
+applicability domain
+: The region of chemical or process space in which a fitted model's predictions
+  are supported by its training data. A prediction outside it is an
+  extrapolation regardless of how good the reported validation statistics are,
+  and for extraction models the domain is usually much narrower than the
+  ligand library being screened.
 
 aqueous biphasic system
 : A two-phase system formed from two water-soluble components — typically a
@@ -122,6 +136,13 @@ diglycolamide
 : A class of tridentate extractants (TODGA is the best known) built around a
   diglycolamide backbone with two amide arms and an ether oxygen. They give
   high loading of trivalent lanthanides and actinides from nitric acid.
+
+descriptor
+: A number computed from a molecular structure and used as a model input —
+  molecular weight, a partial charge, a connectivity index, a fingerprint bit.
+  The choice of descriptor set decides what the model can possibly learn:
+  a connectivity fingerprint, for instance, cannot represent stereochemistry,
+  which measurably shifts lanthanide selectivity.
 
 diluent
 : The bulk organic liquid — kerosene, Isopar, Escaid — in which the extractant
@@ -424,10 +445,23 @@ speciation
   of identical elemental assay can behave completely differently, and
   speciation is why.
 
+stability constant
+: The equilibrium constant for formation of a metal-ligand complex in a single
+  phase, conventionally reported as log K. It is not a distribution ratio — it
+  says nothing about phase transfer — but it is the property with by far the
+  largest compiled experimental record, which is why it is the usual training
+  target when extraction data runs out.
+
 stripping
 : Recovering the metal from the loaded organic into a fresh aqueous phase,
   regenerating the extractant for recycle. The reverse of extraction, driven
   by a change in acidity or by a competing complexant.
+
+surrogate model
+: A compact, fast model fitted to the input-output behaviour of an expensive
+  one, so that an optimizer or a screening campaign can be run over the
+  surrogate instead. Its hazard is the same as its purpose: it is valid only
+  where it was fitted, and an optimizer's job is to travel to the boundary.
 
 supported liquid membrane (SLM)
 : A porous support whose pores are filled with an organic extractant phase, so

@@ -366,6 +366,11 @@ and an optimizer's entire job is to travel to the edge of the feasible region.
 A surrogate-based optimum sitting outside the training envelope is not a design;
 it is an extrapolation.
 
+Surrogates are the point at which machine learning enters process design in
+earnest, and the wider case — learned flowsheet synthesis, learned scheduling,
+physics-informed models — is
+[](#machine-learning-in-rare-earth-separations).
+
 ### Superstructure Optimization of Recycling Routes
 
 The clearest example of optimization used as *design* rather than as tuning is

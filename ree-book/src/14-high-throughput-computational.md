@@ -22,11 +22,12 @@ platform disposes.
 This chapter follows that order. It starts with the automated platforms and the
 synthesis routes that keep them fed, then with the analytical measurement that
 sets the rate at which either can run; it then turns to the computational
-methods that propose candidates, to the data-driven models trained on
-experiment and on computation, and finally to what it would take to close the
-loop between them. The thermodynamic grounding for what these models predict is
-in [](#thermodynamics-of-extraction); the analytical methods themselves are in
-[](#characterization-methods).
+methods that propose candidates, and finally to what it would take to close the
+loop between them. The data-driven models trained on the experiments and
+calculations described here have a chapter of their own,
+[](#machine-learning-in-rare-earth-separations). The thermodynamic grounding for
+what these models predict is in [](#thermodynamics-of-extraction); the
+analytical methods themselves are in [](#characterization-methods).
 
 (automated-high-throughput-platforms-for-f-element-separations)=
 ## Automated High-Throughput Platforms for f-Element Separations
@@ -405,120 +406,16 @@ cascade design theory they implement, and the open-source equation-oriented
 frameworks — IDAES and PrOMMiS — where most current rare-earth process modeling
 work is being done.
 
-(machine-learning-for-distribution-coefficient-prediction)=
-## Machine Learning for Distribution Coefficient Prediction
+## Machine Learning: A Pointer
 
-### Deep Learning on Measured Distribution Ratios
-
-@liu2022advancing trained deep neural networks on measured distribution
-coefficients for lanthanide {index}`solvent extraction`, with the aim of
-screening candidate ligands before any of them are made.
-
-**Dataset.** 1,202 log D values collected from the literature, restricted to
-single neutral ligands as extractants and covering lanthanide extraction across
-a range of conditions.
-
-**Inputs.** Molecular physicochemical descriptors and atomic
-extended-connectivity fingerprints (ECFP — a hash of the atom environments out
-to a fixed bond radius, which encodes substructure presence rather than any
-physical property), together with process and solvent variables:
-
-| Category | Examples |
-| ---------- | ---------- |
-| Molecular descriptors | RDKit (208 descriptors) |
-| Fingerprints | ECFP (extended connectivity) |
-| Process conditions | Temperature, concentration |
-| Solvent properties | Dielectric constant, viscosity |
-| Total inputs | \~2291 per prediction |
-
-**Performance.** The best model reached **R² = 0.85** and **RMSE = 0.53** on the
-validation set. Four novel ligand structures were predicted, then synthesised
-and measured, and the measurements agreed with the predictions
-[@liu2022advancing]. That last step is what distinguishes this from a
-cross-validation exercise, and it is rarer in this literature than it should be.
-
-**Reading a predicted D.** D > 1 means more than half the lanthanide sits in the
-organic phase *at equal phase volumes*; at any other A/O ratio the fraction
-extracted moves even though D does not, which is the most common way the number
-is misread. Screening on predicted D therefore ranks ligands, and does not by
-itself tell you what a stage will do.
-
-### QSPR Models
-
-Quantitative structure-property relationships correlate molecular descriptors
-with extraction properties, and remain useful where the dataset is too small for
-a neural network.
-
-**Common descriptors:**
-
-| Category | Examples |
-| ---------- | ---------- |
-| Constitutional | MW, atom counts, bond counts |
-| Topological | Connectivity indices, shape |
-| Electronic | HOMO/LUMO, partial charges |
-| Geometric | Surface area, volume |
-| Lipophilicity | log P, polar surface area |
-
-**Model types:** multiple linear regression (MLR), partial least squares (PLS),
-random forests, support vector machines, and gradient boosting (XGBoost,
-LightGBM).
-
-**Validation:**
-
-| Method | Description |
-| -------- | ------------- |
-| Cross-validation | K-fold, leave-one-out |
-| External test set | Held-out experimental data |
-| Y-scrambling | Randomization check |
-| Applicability domain | Chemical space coverage |
-
-### Explainable Models
-
-Predictive accuracy alone does not tell a chemist which variable to change.
-@nguyen2025explainable trained an explainable system on 572 experimental
-datasets compiled from the literature to predict REE leaching efficiency from
-secondary resources and to attribute each prediction to the process variables
-driving it, reaching R² = 0.81 and identifying silica concentration as the
-dominant factor, ahead of light-versus-heavy REE classification, with pH,
-aluminium content and temperature contributing less.
-
-Two caveats. The work is on leaching from secondary resources, not on solvent
-extraction, so the specific ranking does not transfer. And an attribution is a
-statement about the model, not about the chemistry: it says which input the
-model is using, which is a hypothesis about mechanism rather than evidence for
-one. Read that way, interpretable models are a useful source of leads for
-next-generation extractant design.
-
-(learned-binding-energies-as-a-dft-surrogate)=
-## Learned Binding Energies as a DFT Surrogate
-
-Where the deep-learning models above are trained on measured distribution
-ratios, a second line of work learns the underlying binding energy directly and
-so generalises beyond the conditions in the training set. @gupta2025accelerating
-trained equivariant neural networks (Allegro) on 5,356 REE-ligand complexes,
-reaching a mean absolute error of 6.1 kcal/mol on binding energy predicted
-directly from structure. "Equivariant" here means the network's internal
-representation rotates with the molecule instead of being invariant to rotation,
-which is what lets it predict a directional, geometry-dependent quantity from
-coordinates. The point of that number is throughput: it bypasses the DFT
-calculation that would otherwise gate every candidate, which is what makes
-screening at the scale of a ligand library possible.
-
-The thermodynamic cycle in [](#thermodynamics-of-extraction) is where such a
-binding energy becomes a predicted extraction constant — and that chapter is
-also where the limits of the conversion are set out.
-
-It is worth putting that 6.1 kcal/mol next to the quantity it is meant to
-predict. An adjacent-pair separation factor of 1.5 corresponds to a free-energy
-difference of RT ln 1.5 ≈ 1.0 kJ/mol, or 0.24 kcal/mol; the Pr/Nd split is
-nearer 0.9 kJ/mol ([](#the-energy-scale-of-selectivity)). The model error is
-therefore about twenty-five times the signal, and screening only works because
-the error is largely *systematic across the series* — the same ligand, the same
-geometry, one substituted metal centre — and cancels in the difference. That
-cancellation is what a screening campaign is actually relying on, and it is
-testable: rank a series whose experimental order is known and check that the
-ranking survives, rather than reporting agreement on absolute binding energies.
-Nothing in a reported MAE tells you whether it does.
+The data-driven half of this subject — models trained on measured distribution
+ratios, on compiled stability constants, and on computed binding energies, and
+the generative and agentic workflows built on top of them — is
+[](#machine-learning-in-rare-earth-separations), the chapter after next. It is
+separated out because it now extends well past extractant screening into
+flowsheet synthesis and process control, and because its failure modes need
+more room than a section allows. The platform and the analytical throughput
+described above are what supply it with data.
 
 ## Closing the Loop
 
@@ -583,29 +480,11 @@ distribution ratios are published without the ionic strength, phase ratio or
 equilibration time needed to use them, so a compilation such as SAFE is
 assembled from records that are individually incomplete.
 
-### Emerging Directions
+### What the Record Actually Shows
 
-**Generative models for ligand design:** variational autoencoders, generative
-adversarial networks, and reinforcement learning for property optimization,
-proposing novel structures rather than ranking a fixed library.
-
-**Graph neural networks:** direct learning on molecular graphs, message passing
-for property prediction, transfer learning from large databases.
-
-**Multi-objective optimization:** Pareto optimization of selectivity against
-sustainability, and genetic algorithms for extractant design, where the target
-is a trade-off surface rather than a single best ligand.
-
-**High-throughput computing:** cloud-based DFT screening, workflow automation
-(FireWorks, AiiDA), and integration with materials databases (Materials Project,
-NOMAD).
-
-**Physics-informed and multi-scale models:** constraining a learned model with
-the thermodynamics it must obey, and carrying a molecular-scale prediction
-through to process scale.
-
-These are directions rather than results. The record in this chapter is that the
-demonstrated gains — 74% fewer experiments for one four-variable optimization,
-180 screening runs in 48 hours, R² = 0.85 on held-out distribution ratios — came
-from careful coupling of ordinary methods to automation, not from any single
-algorithmic advance.
+The demonstrated gains in this chapter — 74% fewer experiments for one
+four-variable optimization, 180 screening runs in 48 hours — came from careful
+coupling of ordinary methods to automation, not from any single algorithmic
+advance. That is the right expectation to carry into
+[](#machine-learning-in-rare-earth-separations), where the modelling side is
+treated on its own terms and its own limits.

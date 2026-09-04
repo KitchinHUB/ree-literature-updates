@@ -98,6 +98,38 @@ describes. @gupta2025accelerating is the surrogate-model paper whose 6.1
 kcal/mol error is weighed against the 1 kJ/mol selectivity signal in
 [](#the-energy-scale-of-selectivity) — read them together, in that order.
 
+## Machine learning
+
+There is no review of machine learning for rare earth separations, because there
+is not yet enough of it to review. The reading path is therefore assembled from
+three directions.
+
+For the method: @wigh2022review on how a molecule becomes a vector, which is
+where most of the assumptions are buried, and @muratov2020qsar on the validation
+discipline that fifty-five years of QSAR produced and that this field has not
+yet inherited. @wang2020machine is the practical protocol paper for a chemist
+running a first model.
+
+For the field itself: @liu2022advancing is the one to read first — it trains on
+measured distribution ratios and then synthesises and measures four of its own
+predictions, which almost nothing else here does. @zahariev2024prediction is the
+one to read second, because it reports the relative error on a selectivity task
+alongside the absolute error, and the gap between the two is the whole argument
+for whether any of this works ([](#machine-learning-in-rare-earth-separations)).
+@zhang2026augmenting is the most ambitious current workflow, and reading it
+carefully — noting where the human approval step sits and where the results stop
+being measured — is a useful calibration exercise.
+
+For the process side, which is further along: @dobbelaere2021machine on where
+machine learning helps a chemical engineer and where it does not, and
+@vogel2023learning and @stops2022flowsheet on flowsheet synthesis treated as a
+learning problem. Neither has been applied to a rare earth cascade.
+
+Against all of it: @thebelt2022maximizing on why chemical engineering data
+defeats classical machine learning, @estay2023challenges for the same argument
+from mineral processing, and @slack2020fooling for the demonstration that a
+post-hoc explanation and a model's actual behaviour are separable things.
+
 ## Characterization
 
 @balaram2019rare again, for the analytical sections; and @ali2023mineral for

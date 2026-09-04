@@ -380,5 +380,46 @@ The paper's real numbers now appear in
 and the 2:1 versus 3:1 stoichiometry discrepancy, the pH window, base-metal
 rejection, four pair separations with both purity *and* yield, the Powder River
 Basin result and the grouped heavy/light split) and in
-`src/17-recycling-urban-mining.md` (the 95:5 Nd:Dy magnet-scrap ratio needing two
+`src/18-recycling-urban-mining.md` (the 95:5 Nd:Dy magnet-scrap ratio needing two
 cycles; the fly ash leachate as an answer to the aluminium problem).
+
+### A duplicate key in `references.bib`
+
+Adding the machine-learning chapter's sources surfaced a defect that had been
+in the bibliography from before this audit began: `park2017recovery` appeared
+twice, at what were then lines 4043 and 7095. Both entries carried the same
+DOI (`10.1021/acs.est.7b02414`), the same authors, title, journal, volume,
+issue, pages and year. They differed only in their `keywords`, in their `url`
+(a PubMed link versus the publisher's), and in that the second carried an
+abstract and the first did not.
+
+Nothing rendered wrong, which is why it survived: BibTeX and MyST both take
+one of the two silently, and the two agree on everything that renders. It was
+caught only because the insertion script for the new entries asserts key
+uniqueness across the file and refused to write.
+
+The two were merged into a single entry at the first entry's alphabetical
+position, keeping the abstract, the publisher URL, and the union of the
+keywords. The file went from 563 to 562 entries before the 51 new
+machine-learning sources were inserted, and to 613 after.
+
+The general lesson is the one the assertion encodes: a duplicate key is
+invisible in the output and detectable only in the source, so the check has to
+run on the `.bib` file rather than on the built site.
+
+### The machine-learning chapter's unreachable sources
+
+Five sources cited in `src/16-machine-learning.md` have no abstract in
+CrossRef, OpenAlex or Semantic Scholar, and no open-access copy according to
+Unpaywall: `zhang2026predicting`, `liu2026machine`, `zhang2026design`,
+`jorjani2008prediction` and `gomezflores2022critical`. All five are behind
+publishers this project has not been able to reach (Elsevier, and one 2008
+journal that predates routine abstract deposition).
+
+Each is cited for no more than its title asserts. The two that bear directly on
+the chapter's subject — `zhang2026predicting` on organophosphorus extractant
+efficiency and `liu2026machine` on governing factors in rare-earth solvent
+extraction — are named in a short subsection that says plainly that the book
+takes no figures from them and that a reader who needs their numbers should go
+to the papers. That is the honest treatment for a paper whose existence is
+verified and whose content is not.
