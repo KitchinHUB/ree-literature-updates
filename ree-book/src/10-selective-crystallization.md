@@ -32,381 +32,479 @@ gradient in radius into a discontinuity in what precipitates.
 
 ## Conventional Precipitation
 
-Precipitation is a fundamental and cost-effective method for group separation of REEs, capable of producing high-purity products when properly optimized. The technique exploits differences in solubility of REE salts with various precipitants [@kim2020characteristics].
+### What the precipitation is for
 
-### Precipitant Effectiveness Hierarchy
-Thermodynamic studies have established the relative precipitation power of common precipitants:
+A catalogue of precipitants is not useful on its own, because the seven
+reagents below are not competing to do the same thing. Before comparing them it
+is worth separating three distinct jobs, since most of the confusion in this
+literature comes from quoting a number achieved in one job as though it settled
+another.
 
-| Precipitant | Relative Power | Primary Application               |
-|-------------|----------------|-----------------------------------|
-| Oxalate     | Highest        | High-purity REE recovery          |
-| Phosphate   | Very High      | Selective LREE precipitation      |
-| Fluoride    | High           | REE concentration                 |
-| Sulfate     | Moderate       | Double salt formation             |
-| Carbonate   | Moderate       | Cost-effective bulk precipitation |
-| Hydroxide   | Lower          | pH-controlled separation          |
+The first job is **bulk recovery**: getting the rare earths out of a leach
+liquor or a loaded strip solution and into a solid that can be filtered, washed
+and calcined. Selectivity between lanthanides is irrelevant here — the feed is
+already the fraction you want — and what matters is yield, filterability and
+what the solid turns into on heating. Oxalate is the classical answer, and
+carbonate is the cheaper one.
 
-System pH has a profound effect on determining the chemical species responsible for REE precipitation.
+The second job is **group separation**: splitting one part of the series from
+another. Only two conventional precipitations do this. Sodium double sulfate
+splits light from heavy, and oxidative precipitation of Ce(IV) removes cerium.
+Both give a group or a single element, never a purified individual lanthanide
+from the middle of the series.
 
-### Oxalate Precipitation
-Oxalic acid is the most widely used precipitant for high-purity REE recovery due to its exceptional selectivity and effectiveness ([OSTI 2022](https://www.osti.gov/servlets/purl/1977455)).
+The third job is **impurity rejection**, and it is not about the rare earths at
+all: the target is iron, aluminium, thorium and uranium, and the figure of merit
+is how little rare earth is lost while removing them. Staged hydroxide or
+carbonate precipitation is the workhorse, and the numbers quoted for it are
+impurity removals and rare earth *losses*, not rare earth recoveries.
 
-**Reaction Stoichiometry:**
+Read that way, a claim like "95 % recovery by precipitation" means nothing until
+you know which of the three it refers to.
+
+### What decides whether anything precipitates
+
+Two thermodynamic surveys of rare earth precipitation, both by Han and
+co-workers, cover the common precipitants — sulfate, carbonate, fluoride,
+phosphate and oxalate — on a common basis, and their conclusions are the right
+starting point [@kim2020characteristics; @han2021thermodynamic].
+
+The first is that pH governs everything, but indirectly: it sets the speciation
+of the *precipitant*, and which anion is present determines whether a solid
+forms [@kim2020characteristics]. Oxalic acid, carbonic acid and phosphoric acid
+are all weak, so at low pH the precipitating anion barely exists. This is why
+oxalate precipitation has a pH floor and why a "precipitant strength" ranking
+quoted without a pH is not a meaningful quantity.
+
+The second is that the anion carried over from the leach step is not a
+spectator. Cl⁻, NO₃⁻ and SO₄²⁻ all complex the dissolved rare earths, and the
+medium changes the precipitation behaviour measurably: in that analysis the
+nitrate environment is the most conducive to precipitation, followed by sulfate
+and then chloride [@kim2020characteristics]. A precipitation recipe developed on
+a chloride liquor is therefore not directly transferable to a sulfate one, which
+matters because the two large bastnäsite routes use opposite acids
+([](#hydrometallurgical-leaching)).
+
+The third undercuts the usual hierarchy. Double salt precipitation — sodium
+double sulfate on the cation side, the fluoride-carbonate system on the anion
+side — is *frequently as effective as oxalate and phosphate, even at low pH*
+[@han2021thermodynamic]. The familiar ordering that puts oxalate at the top and
+sulfate somewhere in the middle is a statement about single-salt solubility
+products, not about what precipitates from a real acidic liquor.
+
+### Oxalate: recovery, and the form the product leaves in
+
+Oxalic acid is the classical final-recovery reagent, and it is worth being clear
+that it is chosen for the *product*, not for selectivity. The reaction is
 
 $$
 2\,\mathrm{RE}^{3+} + 3\,\mathrm{C_2O_4^{2-}} + 10\,\mathrm{H_2O} \rightarrow \mathrm{RE_2(C_2O_4)_3}\!\cdot\!10\,\mathrm{H_2O} \downarrow
 $$
 
-**Key Characteristics:**
+so the stoichiometric requirement is 1.5 mol of oxalate per mole of rare earth,
+and the decahydrate calcines directly to a mixed oxide. Everything downstream of
+a rare earth plant — oxide product, reduction to metal, feed for
+{index}`molten salt electrolysis` — wants an oxide, and oxalate is the cheapest
+route to a filterable solid that becomes one.
 
-- Requires **1.5 mol oxalic acid per mol REE**
-- Product purity: **\>98% REE oxides** after roasting
-- Avoids co-precipitation of nickel (5× less water for washing vs. hydroxide route)
-- Limited in further aqueous processing due to poor solubility
-- Ideal for thermal processing pathways
+The parametric picture is well documented for a chloride liquor. Nawab, Yang and
+Honaker ran a central composite design on a low-grade pregnant leach solution
+and found oxalic acid dosage and pH to be the two dominant factors:
+raising the oxalic acid concentration from 0 to 80 g/L took precipitation
+efficiency from about 4.2 % to 95.0 %, and raising the pH from 0.5 to 2.5 took
+it from 0.0 % to 98.9 % [@nawab2022parametric]. Two secondary results in the
+same study matter more for process design than either headline number. Raising
+the temperature *decreased* recovery, which identifies the rare-earth-oxalate
+reaction as exothermic — so the common instruction to warm a precipitation to
+improve kinetics is the wrong instruction here. And product purity fell as pH
+rose, so recovery and purity pull against each other; the authors settled on pH
+1.0-2.0 as the window that serves both [@nawab2022parametric].
 
-**pH-Dependent Behavior:** Oxalate forms soluble REE complexes at low pH and precipitates as pH increases. The saturation index of REE-oxalate decreases at higher pH due to competition with hydroxide precipitation:
+Iron is the reason oxalate precipitation is not simply a matter of adding enough
+acid. Fe(III) forms a series of oxalate complexes — Fe(C₂O₄)₃³⁻, Fe(C₂O₄)₂⁻ and
+Fe(C₂O₄)⁺ — which consume the oxalate anion before the rare earths can, so a
+contaminated liquor needs more reagent for less product [@nawab2022parametric].
+That is a direct argument for putting an iron removal stage upstream rather than
+paying for it in oxalic acid.
 
-| pH  | La-oxalate SI | La-hydroxide SI |
-|-----|---------------|-----------------|
-| 7   | 5.76          | -3.81           |
-| 8   | 5.48          | -1.99           |
+The choice of oxalate over hydroxide or carbonate also has consequences that
+only show up in the washing and the water balance. In a study of spent NiMH
+battery leachates, where the pregnant solution carries roughly 46 g/L nickel,
+all three conversion routes gave similarly high yields and similarly fast
+kinetics; what separated them was that the oxalate route avoids co-precipitating
+nickel, and so cuts the water needed to wash the intermediate double sulfate
+salt free of impurities by a factor of five [@laskar2025conversion]. The same
+work states the cost of that choice plainly: rare earth oxalates are poorly
+soluble, so they are a dead end for further *aqueous* processing and suit a
+thermal decomposition route only [@laskar2025conversion].
 
-**Selective Oxalate Solubilization (CSEREOX):** The CSEREOX method enables selective solubilization of water-insoluble REE oxalates, allowing efficient extraction even at low initial REE concentrations (\<5%) from processed magnet wastes. LREEs precipitate first due to lower solubility, enabling sequential separation.
+The one attempt to make oxalate do a separation rather than a recovery runs the
+chemistry backwards. The CSEREOX method selectively *solubilizes*
+water-insoluble rare earth oxalates, separating within two rare earth subgroups,
+and works at low initial rare earth concentration — below 5 % — on processed
+magnet waste [@boronski2020rationally]. This is a redissolution-based
+separation, not a selective precipitation, and it belongs with the designed
+systems in the second half of this chapter rather than with the bulk chemistry
+here.
 
-### Hydroxide Precipitation
-Hydroxide precipitation exploits the decreasing solubility of lanthanide hydroxides from La to Lu as ionic radii decrease ([OLI Systems](https://olisystems.com/resources/blog/modeling-phase-equilibria-and-recovery-of-rare-earth-elements-with-hydroxide-and-organic-ligands/)).
+### Carbonate: the cheaper solid, and the one that redissolves
 
-**Solubility Trends:**
+Carbonate is chosen when the precipitate has to go back into solution. Rare
+earth carbonates dissolve in mild acid, which makes them the natural handoff
+between a sulfate circuit and a chloride one, or between a crude precipitation
+and a purification. That is a property oxalate does not have.
 
-- Solubilities show greatest variability in pH 3-9 range
-- Above pH 9.5, all REE hydroxides have similar low solubility
-- Precipitation pH threshold varies systematically across lanthanide series
+For acid mine drainage, Vaziri Hassas and co-workers compared precipitants
+directly and found that hydroxide alone tops out: only up to 70 % of the total
+rare earths can be recovered with NaOH at circumneutral pH, whereas a two-step
+treatment based on Na₂CO₃ recovered over 85 % [@hassas2021effect]. The gain is
+not from carbonate being a stronger precipitant in isolation but from what the
+two-step arrangement does to aluminium: staging the carbonate addition lets
+aluminium be taken out in its own step without dragging the rare earths with it,
+which is exactly what a single hydroxide ramp cannot do
+[@hassas2021effect; @vazirihassas2022selective; @zhao2022selective].
 
-**Industrial pH Thresholds:**
+### Double sulfate: a group separation, not a purification
 
-| Element/Group | Precipitation pH | Notes                      |
-|---------------|------------------|----------------------------|
-| Fe³⁺          | 2.5-3.5          | Removed first              |
-| Al³⁺          | 4.0-5.0          | Co-precipitates with Th    |
-| Th⁴⁺          | 3.5-4.5          | Selective removal possible |
-| U⁴⁺           | 4.0-5.5          | Overlaps with REEs         |
-| Light REEs    | 6.8-7.5          | Sequential precipitation   |
-| Heavy REEs    | 7.0-8.0          | Slightly higher pH         |
-| Y             | 6.5-7.5          | Behaves as HREE            |
+Sodium rare earth double sulfate, NaRE(SO₄)₂·H₂O, is the one conventional
+precipitation that splits the series. The light rare earths form the less
+soluble sodium double salts, so adding Na₂SO₄ to a sulfate liquor drops out a
+light-enriched solid and leaves the heavies and yttrium behind. Solubility data
+for the various rare earth salts on which this rests are compiled in Forsberg's
+review of crystallization-based separation [@forsberg2024separation].
 
-[](#fig-precipitation-ph) puts those thresholds on the series, and what it
-cannot show is the point of it. There is no per-element curve to draw: the
-numbers above are group ranges, La through Eu sharing one and Gd through Lu
-another, and the two overlap between pH 7.0 and 7.5. Their midpoints are 0.35
-pH apart across fourteen elements, which is less than the 0.4-unit window a
-plant holding pH to ±0.2 can even resolve. A single hydroxide step therefore
-returns a group, not an element. Cerium is the one place the trend breaks, and it breaks by
-three pH units rather than by hundredths.
+Two things must be said about it, and they are usually left out. The first is
+that the product is an intermediate, not a product. Silva and co-workers
+precipitated a purified rare earth sulfate liquor with Na₂SO₄ and obtained a
+sodium rare earth double sulfate containing 41.4 wt % rare earth oxides, having
+precipitated 88 % of the rare earths in the feed at a reagent cost of 0.82 t of
+sodium per tonne of rare earths [@liu2019selective]. Roughly 40 % REO is a
+concentrate, and it still has to be converted — to hydroxide, carbonate or
+oxalate — before it is worth anything, which is the whole subject of the NiMH
+conversion study above [@laskar2025conversion].
 
-:::{figure} ../figures/10-precipitation-ph.svg
-:name: fig-precipitation-ph
-:width: 100%
+The second is that double sulfate precipitation is temperature-gated in a way
+oxalate and phosphate are not: in the same comparison, precipitation with
+Na₂SO₄ occurred only at 70 °C, while Na₂HPO₄ worked anywhere from 20 to 70 °C
+[@liu2019selective]. On a leachate from spent NiMH batteries, selective
+precipitation of the sodium double sulfate is nonetheless described as the most
+direct route to the light rare earths — La, Ce, Pr and Nd — because it leaves
+the nickel and potassium in solution [@laskar2025conversion].
 
-Where the rare earths come out as hydroxide, drawn from this chapter's own pH
-thresholds. The bands are flat because the data is: the chapter reports light
-REE 6.8–7.5, heavy REE 7.0–8.0 and Y 6.5–7.5, and no per-element values, so
-nothing here is a fitted or interpolated curve. No solubility product is used
-either — the chapter tabulates saturation indices for lanthanum alone, and a
-computed solubility series would be numbers this book cannot source. All three
-ranges contain pH 7.0–7.5, which is why one step gives a group split. Cerium is
-drawn as a discontinuity rather than a trend, because that is what it is:
-oxidised to Ce(IV) it comes out at pH 3–5, some three pH units below its
-neighbours, against the 0.35 units that separate the two group midpoints —
-oxidation state is a threshold where radius is only a gradient. The same pH
-window takes Fe, Th, Al and U, which is why the industrial sequence oxidises
-cerium only after those are gone. Yttrium is placed between Ho and Er by
-six-coordinate ionic radius, 0.900 Å against 0.901 and 0.890
-[@shannon1976revised]; the chapter itself says only that it behaves as a heavy.
-Promethium is greyed because it appears in no real feed. Drawn by
-`tools/figures/fig_precipitation.py`.
-:::
+(cerium-oxidative-precipitation)=
+### Cerium: where precipitation actually separates an element
 
-**Staged Hydroxide Precipitation:** Industrial processes use multi-stage precipitation to sequentially remove impurities before REE recovery:
-
-1.  **Stage 1 (pH 3-4)**: Remove Fe, Al, Th
-2.  **Stage 2 (pH 4.5-5.5)**: Remove remaining Th, U
-3.  **Stage 3 (pH 6.5-8)**: Precipitate REEs
-
-Over **99% REE precipitation** achieved at pH 6.5, though some Al and \~40% Fe co-precipitate.
-
-**Limitations:**
-
-- Poor selectivity for metal ions (Fe²⁺, Mn²⁺, Zn²⁺) in pH 6-8 range
-- Only \~70% REE recovery at circumneutral pH using NaOH alone
-- Ammonium hydroxide suppresses REE precipitation up to pH 8
-
-### Carbonate and Bicarbonate Precipitation
-Carbonate precipitation offers a cost-effective alternative with good REE recovery [@laskar2025conversion].
-
-**Advantages:**
-
-- Carbonates readily available and inexpensive
-- Precipitates easily dissolved in mild acid for further purification
-- Particularly effective at high pH
-- Na₂CO₃ found most effective for AMD treatment considering cost and performance
-
-**Staged Carbonate Precipitation from AMD:** A three-stage process developed for acid mine drainage:
-
-1.  **Stage 1**: Selective Al precipitation via CO₂ mineralization
-2.  **Stage 2**: REE precipitation at controlled pH
-3.  **Stage 3**: Co-Mn precipitation via oxidative or ammoniacal treatment
-
-No interference observed between Al and REE precipitation stages when using Na₂CO₃, unlike hydroxide precipitation.
-
-### Double Sulfate Precipitation
-Double sulfate salts (Na₂SO₄·RE₂(SO₄)₃·nH₂O) exploit differential solubility between light and heavy REEs.
-
-**Selectivity:**
-
-- LREEs form less soluble double sulfates
-- Effective for separating cerium earths from {index}`yttrium` earths
-- Most direct recovery method for La, Ce, Nd, Pr from NiMH battery leachates
-
-**Process Conditions:**
-
-- Sodium sulfate addition to REE-bearing sulfate solutions
-- Temperature and concentration control critical
-- Yields LREE-enriched precipitate with \~57% light REE recovery
-
-### Fluoride Precipitation
-Fluoride forms strong complexes with REEs, enabling effective precipitation as REF₃ ([Alfa Chemistry](https://www.alfa-chemistry.com/resources/preparation-method-of-rare-earth-fluoride.html)).
-
-**Synthesis Methods:**
-
-1.  **Hydrofluoric acid precipitation-vacuum dehydration**
-2.  **Hydrofluoride fluorination**
-3.  **Ammonium hydrogen fluoride (NH₄HF₂) fluorination**
-
-**Applications:**
-
-- REE concentration from dilute solutions
-- Production of REE fluorides for {index}`molten salt electrolysis`
-- Recovery from electrolytic slag (Nd, Pr, Dy precipitation rates \>87%)
-
-**Caution:** HF handling requires specialized safety protocols.
-
-### Phosphate Precipitation
-Phosphate is a powerful precipitant, ranking second only to oxalate in effectiveness.
-
-**Characteristics:**
-
-- Disodium hydrogen phosphate (Na₂HPO₄) used for selective precipitation
-- Increases REE precipitation yield at lower pH values
-- Can separate REEs from sulfate liquors containing Th⁴⁺ and UO₂²⁺
-- Produces rare earth phosphate (REPO₄) intermediate products
-
-### Selective Oxidative Precipitation of Cerium
-Cerium separation by oxidation to Ce(IV) is a critical first step in REE purification, as Ce typically comprises up to 50% of ore REE content [@moldoveanu2025separation].
-
-**Principle:** Ce³⁺ is readily oxidized to Ce⁴⁺, which has much lower solubility:
+Cerium is the exception that proves the rule about ionic radius. It is the most
+abundant rare earth and typically the largest single component of hard-rock
+rare earth ores, and because demand has concentrated on neodymium and
+dysprosium, the cerium market has saturated and its price collapsed — so the
+economic case for removing cerium before solvent extraction is to stop paying to
+separate something nobody wants [@elizalde2019oxidative]. The chemistry that
+makes this possible is a change of oxidation state rather than a change of size:
 
 $$
-\mathrm{Ce}^{3+} \rightarrow \mathrm{Ce}^{4+} + \mathrm{e}^- \qquad E^\circ = 1.74~\mathrm{V}
+\mathrm{Ce}^{3+} \rightarrow \mathrm{Ce}^{4+} + \mathrm{e}^-
 $$
 
 $$
 \mathrm{Ce}^{4+} + 4\,\mathrm{OH}^- \rightarrow \mathrm{Ce(OH)_4} \downarrow
 $$
 
-That is the discontinuity in [](#fig-precipitation-ph): a three pH unit drop
-where the lanthanide contraction, working across the whole series, is worth
-about a third of one.
+Ce(IV) hydrolyses at a far lower pH than any trivalent lanthanide, which is why
+this is a clean split rather than a gradient. That is the discontinuity in
+[](#fig-precipitation-ph).
 
-**Oxidizing Agents:**
+McNeice, Kim and Ghahreman tested four oxidants — hydrogen peroxide, sodium
+hypochlorite, potassium permanganate and Caro's acid — in acidic chloride
+solution over pH 1.0 to 4.0 at 25, 45 and 65 °C, and built Pourbaix and
+speciation diagrams for the conditions under which cerium is oxidised. Complete
+cerium removal was achievable with potassium permanganate and with Caro's acid —
+but, importantly, *in the absence of other rare earths*
+[@elizalde2019oxidative]. That qualifier is the whole difficulty: an oxidant
+strong enough to take Ce(III) to Ce(IV) quantitatively will also carry other
+rare earths into the solid by occlusion and co-precipitation.
 
-| Oxidant | Effectiveness | Notes |
-|----|----|----|
-| Potassium permanganate (KMnO₄) | Excellent | Highest Ce precipitation, low other REE loss |
-| Hydrogen peroxide (H₂O₂) | Very Good | 80-95% Ce removal at pH 3-5 |
-| Peroxysulfate (S₂O₈²⁻) | Good | Historical industrial use |
-| Calcium hypochlorite | Good | Used in chloride solutions |
-| Ozone (O₃) | Good | Clean oxidant, no residue |
+The best-documented recent result on a real mixture comes from a mixed rare
+earth oxide recovered from waste NiMH batteries, where potassium permanganate
+precipitated Ce(OH)₄ at 99.8 % efficiency while keeping co-precipitation of the
+other rare earths below 1.5 % [@salehi2025tailored]. The mechanism of the
+cheaper peroxide route has been worked out separately
+[@moldoveanu2025separation; @moldoveanu2023cerium], and manganese ferrites have
+been proposed as a low-cost sorbent for taking Ce(IV) out of highly acidic
+liquors [@meng2024efficient].
 
-**Performance Data (H₂O₂ Method):**
+Industrially the split is usually done in the furnace rather than the tank. The
+Mountain Pass route calcines the bastnäsite concentrate in air at roughly
+600 °C, which decomposes the fluorocarbonate and oxidises Ce(III) to Ce(IV);
+the subsequent hydrochloric acid leach dissolves the trivalent rare earths and
+leaves cerium behind as a residue, so the liquor reaching solvent extraction is
+already cerium-depleted [@gupta2004extractive; @castor2006rare]. That flowsheet
+is set out in full in [](#hydrometallurgical-leaching).
 
-| Parameter             | Optimal Range      | Result                        |
-|-----------------------|--------------------|-------------------------------|
-| pH                    | 3-5                | 80-95% Ce removal             |
-| H₂O₂ stoichiometry    | 1.5-2× excess      | REE losses \<5%               |
-| Ce(OH)₄ precipitation | Fast, quantitative | Rate-limiting: Ce³⁺ oxidation |
+### Hydroxide: an impurity-rejection step that is often mistaken for a recovery
 
-**Industrial Molycorp Process:**
+Hydroxide precipitation is where the "three jobs" distinction earns its keep,
+because a staged hydroxide ramp is doing impurity rejection for most of its
+range and only becomes a rare earth recovery at the very top.
 
-1.  Calcination of bastnäsite at 620°C to oxidize Ce³⁺ to Ce⁴⁺
-2.  Acidic treatment with 30% HCl to leach trivalent lanthanides
-3.  Filtration yields solid CeO₂ concentrate and LREE solution
+The underlying trend is real. Modelled across the whole series, the solubilities
+of the rare earth hydroxides decrease from La to Lu as the cation radius
+contracts — most visibly among the lighter lanthanides — and they vary far more
+in the acidic-to-neutral range than above about pH 9.5, where all of them are
+low [@liu2024modeling]. That same modelling contains a warning against reading
+the trend as a radius rule: Y(OH)₃ falls between the cerium and praseodymium
+hydroxides in solubility even though yttrium's crystal radius is close to
+holmium's [@liu2024modeling]. Yttrium tracks the heavy rare earths in solvent
+extraction; it does not necessarily do so here.
 
-**Recent Advances:**
+The sourced picture of where things actually come out of a real acidic liquor is
+this:
 
-- **\>99.8% selective Ce precipitation** achieved using KMnO₄
-- Co-precipitation of other REEs maintained below 1.5%
-- Manganese ferrite adsorbents for Ce(IV) separation from highly acidic solutions
+| Species | pH window | Source |
+|---------|-----------|--------|
+| Fe³⁺ | removed over 2.0-3.0; essentially complete by 3.5 | [@zhang2018rare; @li2025iron] |
+| Al³⁺ | removed over 3.5-4.5 | [@zhang2018rare] |
+| Th⁴⁺ | \~95 % removed at 3.6 with MgCO₃ and H₂O₂ | [@li2025iron] |
+| Rare earths, as hydroxide | thermodynamically favourable over 7.0-10.0 | [@zhang2018rare] |
 
-### Ligand-Assisted Selective Precipitation
-Organic ligands and complexing agents enable enhanced selectivity in REE precipitation, representing an emerging approach for challenging separations [@oconnelldanes2022selective; @johnson2023size].
+The gap between the fourth row and the first three is what makes staged
+precipitation work at all. But the interesting result in that study is what
+happens *in* the gap. Treating a natural coal-refuse leachate, Zhang and Honaker
+recovered more than 80 % of the rare earths in the pH range 4.85-6.11 — well
+below the window in which rare earth hydroxides are predicted to precipitate —
+and model-system experiments showed why: the rare earths are not precipitating
+as hydroxides there at all, but adsorbing onto the iron and aluminium
+hydroxysulfate solids that are. In a liquid containing only Fe³⁺ and SO₄²⁻,
+about 40 % of the lanthanum was removed at pH 3.5; in one containing Al³⁺ but no
+Fe³⁺, none was; with both present, competitive adsorption limited removal to
+around 10 % at pH 3.5, rising to complete removal by about pH 6.5
+[@zhang2018rare].
 
-**Supramolecular Encapsulation:** Pre-organized triamidoarene platforms selectively precipitate light REE nitratometalates as supramolecular capsules under acidic biphasic conditions:
+That is a mechanistic result with a practical edge. Rare earth losses in an
+impurity-rejection stage are largely adsorption losses onto iron and aluminium
+solids, so they are controlled by how much iron and aluminium there is and by
+the sulfate that bridges the metal to the oxide surface — not by the rare earth
+hydroxide solubility products.
 
-- Intra- and intermolecular hydrogen bonds dictate selectivity
-- Promotes precipitation and facilitates REE release
-- Receptor can be recycled
+[](#fig-precipitation-ph) shows the consequence for selectivity within the
+series, which is the point at which hydroxide precipitation stops being useful.
 
-**"Tug of War" Strategy:** Employs competing ligands with opposite selectivity profiles:
+:::{figure} ../figures/10-precipitation-ph.svg
+:name: fig-precipitation-ph
+:width: 100%
 
-- **Lipophilic ligand** (oil-soluble {index}`diglycolamide`): Binds heavy lanthanides
-- **Hydrophilic ligand** (water-soluble bis-lactam-1,10-phenanthroline): Binds light lanthanides
-- Result: **Quantitative separation** of lightest (La-Nd) and heaviest (Ho-Lu) lanthanides
+Where the rare earths come out as hydroxide. The bands are flat because no
+per-element data supports anything else. The figure was drawn from group
+precipitation windows — light rare earth 6.8–7.5, heavy rare earth 7.0–8.0,
+yttrium 6.5–7.5 — which are widely quoted as process figures but which this
+book was unable to trace to a primary source; they are shown here for the
+overlap they display rather than for their exact values, and the sourced
+thermodynamic modelling in the text puts rare earth hydroxide precipitation
+across the whole series in the single band pH 7.0–10.0 [@zhang2018rare], which
+supports the same conclusion more directly: one hydroxide step returns a group,
+not an element. No solubility product is used, and nothing here is a fitted or
+interpolated curve. Cerium is drawn as a discontinuity rather than a trend,
+because that is what it is: oxidised to Ce(IV) it comes out around pH 3–5,
+several pH units below its neighbours — oxidation state is a threshold where
+radius is only a gradient. The same pH window takes Fe, Th, Al and U, which is
+why the industrial sequence oxidises cerium only after those are gone. Yttrium
+is placed between Ho and Er by six-coordinate ionic radius, 0.900 Å against
+0.901 and 0.890 [@shannon1976revised]; note that the hydroxide-solubility
+modelling cited in the text places Y(OH)₃ between the Ce and Pr hydroxides
+instead [@liu2024modeling], so this placement reflects radius, not measured
+hydroxide behaviour. Promethium is greyed because it appears in no real feed.
+Drawn by `tools/figures/fig_precipitation.py`.
+:::
 
-**Aminobis(phosphonate) Precipitants:** Alkyl-substituted aminobis(phosphonates) offer exceptional selectivity:
+### Removing thorium, uranium and aluminium
 
-- Recover Th and U from REE concentrates in **15 minutes**
-- Separation of adjacent lanthanides comparable or superior to oxalates
-- Particularly effective for radioactive element removal
+The elements that have to be rejected before a rare earth product is saleable
+are iron, aluminium and — because the product specification is radiological, not
+chemical — thorium and uranium ([](#thorium-management)). Four approaches appear
+in the recent literature, and they trade reagent cost against how much rare
+earth they take with them.
 
-**8-Hydroxyquinoline for Aluminum Removal:**
+Magnesium carbonate with hydrogen peroxide is the cheapest. On a rare earth
+pregnant leach solution, a response-surface optimisation put the best conditions
+at 81 °C and pH 3.6, giving complete iron removal, about 95 % thorium removal
+and about 65 % aluminium removal for total rare earth losses under 3 %;
+kinetic experiments showed equilibrium reached within 30 minutes
+[@li2025iron]. The same study attaches a technoeconomic estimate to a
+1000 m³/day plant, which is unusual and worth having.
 
-- Selectively precipitates Al³⁺ from REE leaching solutions
-- High selectivity with good precipitate morphology
-- Minimal REE entrainment losses
+For aluminium specifically, complexing precipitants do better than pH control.
+8-hydroxyquinoline dosed at 1.25 times the theoretical requirement, for ten
+minutes at 60 °C and a final pH of 4.5, removed 94.39 % of the aluminium from an
+ion-adsorption rare earth leach solution at a rare earth loss of 8.21 %, and the
+solid was coarse and easy to filter [@wang2020removal]. Note that an 8 % rare
+earth loss is not negligible; this is a reagent that buys aluminium rejection
+with rare earth units.
 
-**CEPPA (3-hydroxyphenylphosphoryl propionic acid):**
+For thorium and uranium, alkyl-substituted aminobis(phosphonates) are the most
+striking recent result. The longer-chain ligands separate thorium, uranium and
+scandium from the rare earths in a 15-minute precipitation with separation
+factors generally in the range 100 to 2000 in acidic aqueous solution, and the
+metals can be stripped from the ligand with 3 M HNO₃ without decomposing it, so
+the ligand recycles. The same ligands improve separation factors between
+adjacent lanthanides relative to conventional oxalate precipitation
+[@szczesniak2021alkyl]. Trialkyl phosphine oxide grafted onto a porous
+silica-polymer support is the adsorption analogue of the same idea, aimed at the
+same separation [@he2025efficiently].
 
-- At 50°C, pH 1: **90.5% RE³⁺ extraction**, only 9.5% Al³⁺
-- Effective selective complexation in feed liquid
+### Phosphate and fluoride: choosing the form of the product
 
-**Staged Precipitation with Ligands (AMD Processing):**
+Phosphate and fluoride are less about separation than about what the rare earths
+need to be for the next step.
 
-| Ligand/Ion | Effect on REE Precipitation      |
-|------------|----------------------------------|
-| OH⁻        | \~70% recovery at neutral pH     |
-| CO₃²⁻      | Increases yield at lower pH      |
-| PO₄³⁻      | Increases yield at lower pH      |
-| NH₄⁺       | Suppresses precipitation to pH 8 |
-| SO₄²⁻      | Moderate, forms double salts     |
+Disodium hydrogen phosphate is a more aggressive precipitant than sodium sulfate
+on the same liquor and a cheaper one in sodium terms. In Silva's comparison,
+Na₂HPO₄ precipitated 100 % of the rare earths in the feed at 0.31 t Na per tonne
+of rare earths, against 88 % at 0.82 t Na for Na₂SO₄, and worked from 20 to
+70 °C rather than only at 70 °C; the phosphate product — a mixture of rare earth
+phosphate and sodium rare earth double sulfate — assayed 42.9 wt % REO
+[@liu2019selective]. That study is also a good illustration of the impurity
+argument above: the liquor was first purified with limestone to pH 3.5 and then
+lime to pH 5.0 to strip Fe³⁺, Th⁴⁺ and PO₄³⁻ and to cut Al³⁺, Ca²⁺, UO₂²⁺ and
+SO₄²⁻, at a cost of about 7 % of the rare earths in the feed, and the
+higher-purity products came from the purified liquor [@liu2019selective].
 
-### Fractional Crystallization
-{index}`Fractional crystallization <selective crystallization>` was the earliest industrial method for REE separation and remains relevant for high-purity production [@forsberg2024separation].
+Fluoride precipitation exists mainly because {index}`molten salt electrolysis`
+runs on rare earth fluorides. Converting rare earth oxides to fluorides is a
+recognised feed-preparation step for electrowinning in molten fluoride baths
+[@abbasalizadeh2017electrochemical], and the direct gas-solid route has been
+characterised in reactor terms: fluorination of neodymium carbonate monohydrate
+with anhydrous HF to the trifluoride is independent of temperature and linear in
+HF partial pressure [@pretorius2019fluorination]. Rare earth fluorides can also
+be recovered from spent molten-salt electrolytic slag by vacuum distillation
+rather than by aqueous precipitation at all [@yang2024investigation]. Whichever
+route is used, hydrogen fluoride handling dominates the engineering: it is the
+one reagent in this chapter whose safety case is harder than its chemistry.
 
-**Principle:** Solubility differences of REE double salts enable separation by temperature or evaporation control:
+### Fractional crystallization: the method everything here replaced
 
-- Less soluble compounds crystallize first
-- More soluble compounds concentrate in mother liquor
+{index}`Fractional crystallization <selective crystallization>` deserves to be
+described as history, because that is what it is, and the chapter is worse if it
+blurs the line.
 
-**Preferred Compounds:**
+Before ion exchange and solvent extraction, repeated recrystallization was the
+*only* way anyone obtained a pure individual rare earth. The principle is
+straightforward: dissolve a mixed rare earth double salt, crystallize part of
+it, and the less soluble component is enriched in the crystals while the more
+soluble one concentrates in the mother liquor. Neither fraction is pure, so both
+are recrystallized, and the operation is repeated. Because the solubility
+difference between adjacent lanthanides in any given salt is very small, the
+enrichment per operation is very small, and the number of operations needed to
+reach a pure product is correspondingly very large. Salts were chosen for having
+the widest solubility spread available over the part of the series being worked;
+the double magnesium nitrates, used for the samarium-europium-gadolinium region,
+are the example most often named.
 
-| REE Group  | Optimal Double Salt       |
-|------------|---------------------------|
-| La, Pr, Nd | Ammonium nitrates         |
-| Sm, Eu, Gd | Double magnesium nitrates |
-| Heavy REEs | Bromates, ethyl sulfates  |
+It is common to see a specific figure attached to this — a stated number of
+recrystallizations, usually in the thousands, for the hardest separations.
+**This book does not assert one.** Such figures are widely repeated and I could
+not trace any of them to a primary source, and the same applies to the tabulated
+lists of which double salt was used for which part of the series. What can be
+stated is that the effort was large enough that the method did not survive the
+arrival of anything better.
 
-**Advantages:**
+What replaced it is precisely dated. Spedding and co-workers at Ames reported
+rare earth separation by ion exchange at pilot-plant scale in 1947
+[@spedding1947separation], and the theory for separating adjacent rare earths
+with chelating eluants followed within a decade [@powell1956basic]; solvent
+extraction then displaced ion exchange for bulk production. Fractional
+crystallization is not part of a modern separation flowsheet.
 
-- Simple equipment with large capacity per unit volume
-- No reagent addition during crystallization
-- Easy crystal-mother liquor separation
-- Capable of producing individual elements with high purity
+The reason to keep it in the chapter is that it is the clearest statement of the
+idea the second half of the chapter is trying to rescue. Fractional
+crystallization failed not because crystallization is a bad separation principle
+but because *unengineered* salts have almost no selectivity, so the process was
+forced to buy separation with repetition. Everything in
+[](#selective-crystallization-by-molecular-design) is an attempt to buy it with
+molecular design instead. Crystallization-based separation as a research area is
+active again for exactly this reason
+[@forsberg2024separation; @chen2025selective; @wang2025selective].
 
-**Disadvantages:**
+### What industrial practice constrains that laboratory practice does not
 
-- Multiple (often hundreds of) crystallization stages required
-- Time-intensive process
-- Largely superseded by solvent extraction for bulk separation
+Three constraints separate a precipitation that works in a beaker from one that
+works in a plant, and they explain most of the choices above.
 
-### Impurity Removal by Selective Precipitation
-Effective REE recovery requires prior removal of impurities through staged precipitation [@li2025iron].
+**The product form is chosen by the step after it, not by the precipitation.**
+Oxalate is picked because it calcines to an oxide and because it rejects nickel;
+its poor solubility, which would be a defect if the solid had to be redissolved,
+is irrelevant on a thermal route and disqualifying on an aqueous one
+[@laskar2025conversion]. Carbonate is picked when the solid has to go back into
+acid. Fluoride is picked when the next unit operation is an electrolysis cell.
+None of these is a selectivity argument.
 
-**{index}`Thorium <thorium>` and Uranium Removal:**
+**Reagent consumption is a real design variable, and it is set by the
+impurities.** The sodium consumption difference between Na₂SO₄ and Na₂HPO₄ —
+0.82 against 0.31 tonnes of sodium per tonne of rare earths — is a plant-scale
+cost, not a detail [@liu2019selective]. So is the oxalic acid consumed by iron
+oxalate complexes rather than by rare earths [@nawab2022parametric], and so is
+the fivefold difference in wash water between the oxalate and hydroxide
+conversion routes on a nickel-bearing liquor [@laskar2025conversion]. Each of
+these is an argument for spending money on impurity removal upstream.
 
-| Method                | Th Removal | U Removal               | REE Loss |
-|-----------------------|------------|-------------------------|----------|
-| pH 4.8 precipitation  | \~100%     | 97%                     | 20%      |
-| Oxalate at pH 1.5     | High       | Low (stays in solution) | Low      |
-| MgCO₃ at pH 3.6, 81°C | \~95%      | Variable                | \<3%     |
-| TRPO/SiO₂-P adsorbent | \>99%      | \>99%                   | Minimal  |
+**Recovery and purity move in opposite directions, and the plant has to choose.**
+This is visible in every well-designed study in this section: oxalate purity
+falls as pH rises even though recovery climbs [@nawab2022parametric]; the
+higher-purity phosphate and sulfate products came from the purified liquor,
+which itself cost 7 % of the rare earths [@liu2019selective]; aluminium
+rejection by 8-hydroxyquinoline costs 8 % of the rare earths
+[@wang2020removal]; the magnesium carbonate route holds total losses under 3 %
+but leaves 35 % of the aluminium behind [@li2025iron]. A flowsheet is a
+particular resolution of that trade-off, and quoting one side of it without the
+other is the most common way this literature is misread.
 
-**Optimal Multi-Stage Impurity Removal:** Using magnesium carbonate with H₂O₂:
-
-- Complete Fe removal at pH 3.5
-- \~95% Th removal at pH 3.6
-- \~65% Al removal
-- TREE losses under 3%
-
-**Radioactive Impurity Considerations:** For high-purity REE products (electronics, phosphors), trace Th and U must be reduced to ppb levels:
-
-- Phosphine oxide modified adsorbents achieve {index}`separation factors <separation factor>` \>15,000
-- Equilibrium reached in 30 minutes in 0.1 M HNO₃
-
-### Industrial Process Parameters
-**Typical Industrial Precipitation Sequence:**
-
-| Stage | pH Range | Target Species | Precipitant          |
-|-------|----------|----------------|----------------------|
-| 1     | 2.5-3.5  | Fe³⁺           | NaOH or Na₂CO₃       |
-| 2     | 3.5-4.5  | Al³⁺, Th⁴⁺     | NaOH + H₂O₂          |
-| 3     | 4.5-5.5  | U⁴⁺/UO₂²⁺      | Na₂CO₃               |
-| 4     | --       | Ce⁴⁺           | Oxidant + base       |
-| 5     | 6.5-8.0  | Bulk REEs      | Oxalate or carbonate |
-
-**Key Process Considerations:**
-
-- pH control precision: ±0.2 units for selective stages
-- Temperature: 50-80°C improves kinetics and selectivity
-- Oxidant dosing: Stoichiometric excess (1.5-2×) for Ce oxidation
-- Aging time: 30-60 minutes for complete precipitation
-- Washing: Oxalate route requires 5× less water than hydroxide
-
-**Recovery Rates by Method:**
-
-| Precipitant    | Typical REE Recovery | Product Purity |
-|----------------|----------------------|----------------|
-| Oxalic acid    | \>95%                | \>98% REO      |
-| Na₂CO₃         | 85-95%               | 90-95% REO     |
-| NaOH           | 70-85%               | Variable       |
-| Double sulfate | 55-65% (LREE)        | LREE enriched  |
-
+(selective-crystallization-by-molecular-design)=
 ## Selective Crystallization by Molecular Design
 
 ### Key Mechanisms for Selectivity
 
 #### Structural Divergence Across the Lanthanide Series
 
-Different lanthanides form different crystal structures under identical conditions [@yin2017rare; @chen2025selective] due to:
-
-- **Coordination number variations** - Larger early lanthanides (La, Ce) prefer higher coordination numbers than smaller late lanthanides
-- **Ligand polymerization diversity** - The same ligand can polymerize differently depending on the metal center
-- **Soft/hard donor selectivity** - Soft donors (e.g., Cl⁻) preferentially bind early lanthanides
+Different lanthanides form different crystal structures under identical
+conditions [@yin2017rare; @chen2025selective], and three mechanisms are
+invoked to explain it. The larger early lanthanides prefer higher coordination
+numbers than the smaller late ones; the same ligand can polymerize differently
+depending on the metal centre it is built around; and soft donors such as Cl⁻
+bind the early lanthanides preferentially. None of these is a gradient in
+radius — each is a discrete change in what structure forms — which is the point.
 
 #### Thermodynamic vs. Kinetic Control
-The interplay between thermodynamics and kinetics is complex:
 
-- At **lower supersaturation**: the thermodynamically stable form dominates
-- At **higher supersaturation**: kinetic effects can lead to concomitant polymorphism
-- **Reaction time** significantly affects which phase crystallizes (as seen in the Nd/Sm borate system) [@yin2017rare]
-- Surface thermodynamics can drive transformations between crystal structures
+The interplay between thermodynamics and kinetics is where these systems are
+hardest to control. At low supersaturation the thermodynamically stable form
+dominates; at high supersaturation kinetic effects intervene and concomitant
+polymorphism becomes possible, so two phases appear at once and have to be
+separated afterwards. Reaction time is a variable in its own right, as the
+Nd/Sm borate system shows [@yin2017rare], and surface thermodynamics can drive
+one crystal structure into another after it has formed.
 
-According to the Stranski-Totomanow conjecture, polymorph selection is governed by the lowest free-energy barrier for nucleation. However, recent research shows that kinetic effects may be unable to fully explain structural transformation in all polymorphic situations.
+The Stranski-Totomanow conjecture holds that polymorph selection is governed by
+the lowest free-energy barrier for nucleation, which would make this a purely
+kinetic problem. Recent work shows that kinetic effects do not fully explain
+structural transformation in every polymorphic situation, so a design that
+assumes they do is on unsafe ground.
 
 ### Promising Approaches
 
 #### Selective Borate Crystallization
 
-Yin, Wang and co-workers demonstrated that **six distinct borate phases** form under identical reaction conditions across the lanthanide series [@yin2017rare]. The mechanism involves:
+Yin, Wang and co-workers demonstrated that six distinct borate phases form under
+identical reaction conditions across the lanthanide series [@yin2017rare]. The
+divergence comes from alterations in Ln³⁺ coordination, from the diversity of
+borate polymerization — different fundamental building blocks assemble around
+different metals — and from soft-ligand coordination selectivity. Two
+separations follow from it: a one-step quantitative Nd/Dy separation using
+density-based flotation of the two crystal phases, and an enhanced Nd/Sm
+separation obtained by controlling the reaction kinetics [@yin2017rare].
 
-- Ln³⁺ coordination alterations
-- Borate polymerization diversity (different fundamental building blocks)
-- Soft ligand coordination selectivity
-
-Key results [@yin2017rare]:
-
-- One-step quantitative separation of Nd/Dy using density-based flotation
-- Enhanced Nd/Sm separation through controlled reaction kinetics
+The density-based flotation step is worth noticing. It is a separation performed
+on a *physical* property of the crystals rather than a chemical one, which is
+possible only because the two lanthanides ended up in structurally different
+solids.
 
 The simple rare earth orthoborates LnBO₃ are themselves polymorphic across the
 series, with a vaterite-type structure adopted over part of it
@@ -415,18 +513,26 @@ crystallization route exploits.
 
 #### Supramolecular M₄L₄ Cage Self-Assembly
 
-Tetrahedral M₄L₄ cages assembled from tris-tridentate ligands exhibit **multivalent cooperative enhancement** of metal ion selectivity [@li2018supramolecular]:
+Tetrahedral M₄L₄ cages assembled from tris-tridentate ligands show multivalent
+cooperative enhancement of metal ion selectivity [@li2018supramolecular]. The
+cages form with metal ions from across the periodic table — Ca²⁺, Cd²⁺ and the
+full Ln³⁺ series — and they self-sort with high precision during mixed-metal
+assembly, which the corresponding M₂L₃ assemblies do not. They are also stable
+to excess metal and excess ligand, unlike the tridentate and bis-tridentate
+ligands carrying the same coordination motif.
 
-- Tiny differences in single metal-ligand interactions are **amplified** through cooperativity
-- Cages form with metal ions from across the periodic table, including Ca²⁺, Cd²⁺, and the full Ln³⁺ series
-- High-precision self-sorting during mixed-metal assembly, which the M₂L₃ analogues do not show
-- All M₄L₄ cages are stable to excess metal ions and ligands, unlike the tridentate and bis-tridentate ligands carrying the same coordination motif
-
-The advantage of such self-assembled systems lies in that the tiny differences in single metal-ligand interactions can be amplified by the multivalent cooperativity effect, which is beneficial in the separation of metal ions with similar properties; the authors put this forward as a design principle for next-generation lanthanide extractants [@li2018supramolecular].
+The design argument is that the tiny differences in a single metal-ligand
+interaction are amplified by the multivalent cooperativity of the assembly,
+which is precisely what is needed to separate metal ions with near-identical
+properties; the authors put this forward as a principle for next-generation
+lanthanide extractants [@li2018supramolecular].
 
 #### Phenanthroline-Dicarboxylic Acid (H₂PDA) Systems
 
-Yin and co-workers used 1,10-phenanthroline-2,9-dicarboxylic acid (H₂PDA) with N,N'-dimethylformamide (DMF) and its decomposition products to achieve selective crystallization separation, exploiting the differing crystallization periodicity of the lanthanides in a solvothermal system [@yin2025selective]:
+Yin and co-workers used 1,10-phenanthroline-2,9-dicarboxylic acid (H₂PDA) with
+N,N'-dimethylformamide and its decomposition products to achieve selective
+crystallization separation, exploiting the differing crystallization periodicity
+of the lanthanides in a solvothermal system [@yin2025selective]:
 
 | Lanthanide Pair | Separation Factor |
 |-----------------|-------------------|
@@ -434,59 +540,113 @@ Yin and co-workers used 1,10-phenanthroline-2,9-dicarboxylic acid (H₂PDA) with
 | La/Sm           | 8.9 ± 0.1         |
 | La/Lu           | 26.9 ± 3.1        |
 
-Structurally distinct lanthanide compounds crystallize from the same mixed-organic solvent system depending on which lanthanide is present [@yin2025selective].
+Structurally distinct lanthanide compounds crystallize from the same
+mixed-organic solvent system depending on which lanthanide is present
+[@yin2025selective]. Note the shape of that table: the separation factor grows
+with the separation in the series, which is what a structural-divergence
+mechanism should do, and the adjacent-pair value of 2.0 is the number that would
+have to carry a real cascade.
 
 #### Cyclic Peptide Hosts (Biomimetic Approach)
 
-Inspired by natural biomineralization (such as pearl formation), lanthanide-binding cyclic peptides (Lamp) can:
+Inspired by natural biomineralization, lanthanide-binding cyclic peptides (Lamp)
+recognize Ln³⁺ through a 1:1 complexation-precipitation process
+[@hosokawa2022improved], promoting hydroxide-like Ln species that bind the
+peptide and accumulate as insoluble precipitates [@hatanaka2017rationally]. The
+system operates in water at near-neutral pH, around 6, without organic solvents
+or additional energy input [@hatanaka2017rationally] — which for a separation
+technology is an unusual set of operating conditions and the main reason to be
+interested in it.
 
-- Recognize Ln³⁺ through a **1:1 complexation-precipitation** process [@hosokawa2022improved]
-- Promote hydroxide-like Ln species that bind the peptide and accumulate as insoluble precipitates [@hatanaka2017rationally]
-- Show **high Lu³⁺ selectivity** when the positions of the acidic amino acids are changed [@hosokawa2022improved]
-- Operate in water at near-neutral pH (~6) without organic solvents or additional energy input [@hatanaka2017rationally]
-
-The major driving force of Lamp1 in Ln³⁺ recognition is the electrostatic interactions from the side-chain COOH moieties of the acidic amino acids (aspartic acid and glutamic acid) [@hatanaka2017rationally]. The selectivity of the reposition variants was explained by considering [@hosokawa2022improved]:
-
-- Dipole moment
-- Lowest unoccupied molecular orbital (LUMO) energy
-- Cohesion energy
+The major driving force in Ln³⁺ recognition is electrostatic interaction from
+the side-chain COOH moieties of the acidic amino acids, aspartic and glutamic
+acid [@hatanaka2017rationally]. Moving those acidic residues to different
+positions in the ring changes the selectivity, and the repositioned variants
+show high Lu³⁺ selectivity; the authors rationalize this through dipole moment,
+LUMO energy and cohesion energy [@hosokawa2022improved].
 
 #### Macrocyclic Chelator Precipitation
 
-Jones and co-workers developed cyclen-based macrocyclic chelators that [@jones2025macrocyclic]:
+Jones and co-workers developed cyclen-based macrocyclic chelators that induce
+large solubility differences among the rare earth chelates, enabling selective
+precipitation from pH-neutral aqueous solution; simple coordinating additives
+such as acetate form ternary compounds whose solubility can be tuned
+[@jones2025macrocyclic]. Repeated precipitations separated even adjacent
+lanthanides, and an automotive NdFeB magnet was processed to a 99.7 % pure
+neodymium product without organic solvents [@jones2025macrocyclic].
 
-- Induce significant **solubility differences** among REE chelates
-- Enable selective precipitation from pH-neutral aqueous solution
-- Use simple coordinating additives (acetate) to form ternary compounds with tuned solubility
-
-Repeated precipitations separated even adjacent lanthanides, and an automotive NdFeB magnet was processed to a **99.7% pure neodymium** product without organic solvents [@jones2025macrocyclic].
-
-A fundamental challenge with this approach: while Ln chelates in solution behave as discrete, independent entities, the growth of a microcrystalline precipitate involves interactions between chelate units. Errors in crystal lattice assembly may incorporate significant amounts of the soluble Ln chelate into the matrix of the insoluble chelate.
+The failure mode of this approach is instructive, and the authors state it. In
+solution the lanthanide chelates behave as discrete, independent entities, but
+the growth of a microcrystalline precipitate involves interactions between
+chelate units — so errors in lattice assembly can incorporate significant
+amounts of the *soluble* chelate into the matrix of the insoluble one. The
+selectivity that exists in solution is not automatically inherited by the solid.
 
 #### Reverse-Size Selective Aqueous Complexants
 
-Substitution of pyridyl-2-carboxylic acid pendant arms (macropa) with pyridyl-2-phosphinic acid arms (macrophosphi) gives rise to dramatic enhancement in discrimination between light lanthanides [@thiele2020tuning]:
+Replacing the pyridyl-2-carboxylic acid pendant arms of macropa with
+pyridyl-2-phosphinic acid arms (macrophosphi) dramatically enhances
+discrimination among the light lanthanides [@thiele2020tuning]. The binding
+affinity of macrophosphi for La³⁺ is over five orders of magnitude higher than
+for Gd³⁺, and separation factors up to 45 were achieved for the Ce/La pair with
+macrophosphi as the aqueous complexant in a biphasic system against the
+industrial extractant bis(2-ethylhexyl)phosphoric acid (HDEHP).
 
-- Binding affinity of macrophosphi for La³⁺ is over 5 orders of magnitude higher than for Gd³⁺
-- Separation factors of up to 45 achieved for the Ce/La pair when macrophosphi is used as the aqueous complexant in a biphasic system with the industrial extractant bis(2-ethylhexyl)phosphoric acid (HDEHP)
+#### Ligand-Assisted Selective Precipitation
 
-### Challenges and Considerations
+Two designed-ligand strategies sit between the conventional chemistry of the
+first half of this chapter and the crystal engineering of the second.
 
-1.  **Crystal lattice assembly errors** - Soluble Ln chelates can be incorporated into the matrix of insoluble chelates during microcrystalline precipitate growth
+Pre-organized triamidoarene platforms selectively precipitate light rare earth
+nitratometalates as supramolecular capsules under acidic biphasic conditions,
+with intra- and intermolecular hydrogen bonds dictating the selectivity; the
+receptor can be recycled [@oconnelldanes2022selective].
 
-2.  **Kinetic vs. thermodynamic products** - Reaction conditions must be carefully controlled to favor the desired phase
+The "tug of war" strategy uses two ligands with opposite selectivity at once: a
+water-soluble bis-lactam-1,10-phenanthroline with affinity for the light
+lanthanides against an oil-soluble {index}`diglycolamide` that binds the heavy
+ones. The opposed preferences magnify the split, giving quantitative separation
+of the lightest lanthanides (La-Nd) from the heaviest (Ho-Lu) and enabling
+separation of the neighbouring lanthanides in between, Sm through Dy
+[@johnson2023size].
 
-3.  **Concomitant polymorphism** - Multiple phases may form simultaneously, requiring post-separation
+### What stands in the way
 
-4.  **Scale-up** - Most demonstrations are at proof-of-concept scale
+Five obstacles recur across every system above, and they are not
+interchangeable.
 
-5.  **Shielded 4f orbitals** - Lanthanide separation remains challenging because the 4f orbitals are shielded, preventing bonding with ligand orbitals [@yin2025selective]
+The first is that solution selectivity does not transfer to the solid.
+Lattice-assembly errors incorporate soluble chelates into the insoluble matrix,
+so a system with excellent solution-phase discrimination can still crystallize a
+mixed solid [@jones2025macrocyclic].
+
+The second and third are two faces of the same control problem. Whether the
+kinetic or the thermodynamic product forms depends on conditions that have to be
+held tightly, and when control is lost the result is concomitant polymorphism —
+several phases at once, requiring a further separation to undo.
+
+The fourth is scale. Almost every demonstration in this section is at
+proof-of-concept scale, on synthetic feeds, with gram quantities.
+
+The fifth is the physical reason the whole problem is hard: the 4f orbitals are
+shielded and do not participate in bonding with ligand orbitals, so the
+interactions available to a designer are essentially electrostatic and steric
+[@yin2025selective]. This is the same constraint that limits solvent extraction;
+crystallization does not evade it, it only converts a small energetic difference
+into a discrete structural outcome instead of a small distribution-ratio
+difference.
 
 ### Design Principles for New Systems
 
-Based on the literature reviewed above and the recent surveys of crystallization-based separation [@chen2025selective; @wang2025selective; @forsberg2024separation], effective molecular crystal systems for REE separation should:
-
-1.  **Amplify small ionic radius differences** through multivalent cooperative effects
-2.  **Provide multiple coordination modes** that favor different lanthanides
-3.  **Allow kinetic/thermodynamic control** through adjustable parameters (temperature, solvent, time, pH)
-4.  **Form crystalline products with distinct properties** (solubility, density) for physical separation
+Reading the systems above together, and against the recent surveys of
+crystallization-based separation
+[@chen2025selective; @wang2025selective; @forsberg2024separation], an effective
+molecular crystal system for rare earth separation needs four things. It must
+amplify small ionic radius differences, which in practice means multivalent
+cooperativity rather than a single binding site. It must offer multiple
+coordination modes so that different lanthanides can be accommodated
+differently. It must expose a handle — temperature, solvent, time, pH — through
+which the balance between kinetic and thermodynamic control can actually be set.
+And it should produce crystalline products that differ in some bulk physical
+property, solubility or density, so that the final separation can be performed
+mechanically on the solids rather than chemically all over again.
