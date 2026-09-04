@@ -49,14 +49,15 @@ project:
       children:
         - file: src/13-extraction-thermodynamics.md
         - file: src/14-high-throughput-computational.md
-        - file: src/15-characterization.md
+        - file: src/15-process-modeling-optimization.md
+        - file: src/16-characterization.md
 
     - title: Part V — Context
       children:
-        - file: src/16-recycling-urban-mining.md
-        - file: src/17-environment-tea-lca.md
-        - file: src/18-industrial-landscape.md
-        - file: src/19-research-directions.md
+        - file: src/17-recycling-urban-mining.md
+        - file: src/18-environment-tea-lca.md
+        - file: src/19-industrial-landscape.md
+        - file: src/20-research-directions.md
 
     - title: Back Matter
       children:

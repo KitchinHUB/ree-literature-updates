@@ -112,7 +112,11 @@ The high-throughput and computational literature has its own specific gaps
    microfluidics.
 3. **Multi-objective optimization.** Selectivity, capacity, kinetics, solvent
    loss, and environmental burden trade against one another. Published
-   optimization almost always reports a single objective.
+   optimization almost always reports a single objective. The flowsheet
+   optimization work in [](#process-modeling-and-optimization) is the closest
+   the field comes, and it too optimizes a single scalar — net present value or
+   cost of recovery — which prices environmental burden only where a regulation
+   has already priced it.
 4. **Standardized data formats.** Beyond the SAFE database, the community has
    no shared schema for extraction data, which blocks transfer learning and
    makes cross-study comparison manual.
@@ -158,7 +162,8 @@ rather than as a schedule anyone has committed to.
 2. Primary extraction with substantially reduced environmental impact
 3. Diversified supply chains that reduce single-country concentration
 4. Process design driven by optimization and learned models rather than by
-   empirical stage-by-stage tuning
+   empirical stage-by-stage tuning ([](#process-modeling-and-optimization)),
+   validated against operating plants rather than bench-scale trains
 
 ## Where the Specific Opportunities Are
 

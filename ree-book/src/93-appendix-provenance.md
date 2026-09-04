@@ -61,11 +61,32 @@ document changes will shift them.
 | 12. Membranes, MOFs, and Emerging Approaches | `broad-review.md` 484–584, 753–929 (§3, less the microfluidics subsection) |
 | 13. Thermodynamics of Extraction | `thermodynamic-cycle.md` 3–441 and 462–end + `broad-review.md` 2733–2897 (§16 Microcalorimetry) + `bastnäsite-framework.md` |
 | 14. High-Throughput and Computational Methods | `high-throughput.md` 13–256 + `broad-review.md` 2514–2714 (§14 Computational) |
-| 15. Characterization Methods | `broad-review.md` 1791–2236 (§11) |
-| 16. Recycling and Urban Mining | `broad-review.md` 1110–1148 (§5) |
-| 17. Environment, Techno-Economics, and Life Cycle | `broad-review.md` 1150–1186 (§6), 2238–2367 (§12 TEA), 2369–2512 (§13 LCA) |
-| 18. The Industrial Landscape | `broad-review.md` 1188–1215 (§7) |
-| 19. Research Directions and Open Questions | `broad-review.md` 1233–1259 (§9), 2716–2732 (§15 Conclusions) + `high-throughput.md` 349–357 (critical gaps); synthesis newly written |
+| 15. Process Modeling and Optimization | **No source document**; written from the primary literature for this edition. See the note below |
+| 16. Characterization Methods | `broad-review.md` 1791–2236 (§11) |
+| 17. Recycling and Urban Mining | `broad-review.md` 1110–1148 (§5) |
+| 18. Environment, Techno-Economics, and Life Cycle | `broad-review.md` 1150–1186 (§6), 2238–2367 (§12 TEA), 2369–2512 (§13 LCA) |
+| 19. The Industrial Landscape | `broad-review.md` 1188–1215 (§7) |
+| 20. Research Directions and Open Questions | `broad-review.md` 1233–1259 (§9), 2716–2732 (§15 Conclusions) + `high-throughput.md` 349–357 (critical gaps); synthesis newly written |
+
+### The one chapter with no source document
+
+Every other chapter here is a rewrite of material the group had already
+written. Chapter 15 is not. The sources touch process modeling twice — a
+four-row table of software names in `high-throughput.md`, and a paragraph of
+geochemical speciation packages in the characterization section — and neither
+is an account of how a rare-earth flowsheet is modeled or optimized. The
+chapter was written from the published literature instead, and its citations
+were located and checked for this edition rather than inherited from a source
+document.
+
+That difference changes what an error in it would look like. Elsewhere in this
+book the likeliest error is something a source document asserted and the
+verification pass failed to catch. In Chapter 15 the likeliest error is a paper
+whose abstract supports less than the sentence citing it claims. Every number
+that chapter attributes to a specific study — stage counts, recoveries,
+profitability signs — was read out of that study's own abstract during
+drafting; where only a title was available, the sentence was written to claim
+no more than a title can support.
 
 ## Material deliberately dropped
 
@@ -75,7 +96,7 @@ document changes will shift them.
   high-throughput sources. What survived was rewritten into third person.
 - **Lab-planning sections.** `high-throughput.md` §6–7 planned specific
   equipment purchases and a collaboration; only the technical gap analysis
-  was kept, in Ch. 19.
+  was kept, in Ch. 20.
 - **Duplicated coverage.** `chemistry-fundamentals.md` §7 and
   `high-throughput.md` §1.1 and §3.1–3.2 both describe the same automated
   platform and machine-learning work. The fuller high-throughput treatment
@@ -96,7 +117,7 @@ document changes will shift them.
   numbered their own sections; MyST numbers chapters, and keeping both
   produced headings like "3.2.1" inside chapter 12.
 - Per-technology research opportunities stayed in their own chapters rather
-  than being collected into Ch. 19, which cross-references them instead.
+  than being collected into Ch. 20, which cross-references them instead.
   Judging an opportunity requires the surrounding technical context.
 - Flash Joule heating with chlorination is treated in full in Ch. 7, because
   the chemistry is chlorination. Ch. 12 keeps a pointer and the reported
@@ -125,7 +146,7 @@ the rest of the book: any claim resting solely on a rejected citation had to be
 removed or rewritten, not left standing without support.
 
 The bibliography has grown since, as chapters were repaired and the claims that
-survived acquired real sources. It now holds 554 entries, all 554 verified — 484
+survived acquired real sources. It now holds 577 entries, all 577 verified — 507
 by resolving the DOI and 67 by fetching a live URL. Three are books with an ISBN
 and no DOI or URL, and they are the honest exception: no ISBN registry could be
 reached from the machine that runs the check, so they are kept, listed by ISBN

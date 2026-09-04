@@ -480,6 +480,14 @@ LA-ICP-MS enables spatially resolved analysis of solid samples [@lin2024situ].
 **Spatial Resolution:** 10-100 μm spot sizes typical
 
 ## Process Modeling and Speciation Calculation
+
+"Process modeling" here means aqueous speciation — what species exist in a
+solution and which solids can precipitate from it. It is the input to a
+flowsheet model rather than the model itself;
+[](#process-modeling-and-optimization) treats the flowsheet scale, where these
+speciation calculations supply the equilibrium closure that stage-wise cascade
+balances need.
+
 ### Geochemical Modeling Software
 Software tools calculate REE speciation, saturation indices, and phase equilibria ([USGS PHREEQC](https://www.usgs.gov/software/phreeqc-version-3), [GWB](https://www.gwb.com/software_overview.php)).
 

@@ -51,7 +51,9 @@ them — grepping only for "error" hid a broken glossary for two phases.
 
 # Phase 3 — Restructure into chapters ✅
 
-All nineteen chapters, both appendices, and the preface are written. The build
+All twenty chapters, both appendices, and the preface are written.
+Ch. 15 (Process Modeling and Optimization) was added after this phase, written
+from the literature rather than from a source document. The build
 is clean: `npx mystmd build --html` produces 26 pages with zero unresolved
 cross-references and zero diagnostic markers other than the ten Phase 4
 citation warnings listed below.

@@ -42,11 +42,22 @@ CITED_BIB = SRC / "references-cited.bib"
 
 CITE_GROUP = re.compile(r"\[([^\]\[]*@[^\]\[]*)\]")
 KEY = re.compile(r"@([A-Za-z0-9_:.\-]+)")
+# A narrative citation -- `@smith2020thing showed` -- renders as a citation
+# just as `[@smith2020thing]` does, and the book uses both forms. Scanning
+# only the bracketed one silently dropped real works from this page.
+NARRATIVE = re.compile(r"(?<![\w/\-.])@([A-Za-z][A-Za-z0-9_:.\-]*)")
+CODE = re.compile(r"```.*?```|`[^`\n]*`", re.S)
 LABEL = re.compile(r"^\(([a-z0-9-]+)\)=\s*$", re.M)
 
 
-def cited_by() -> dict[str, list[tuple[str, str]]]:
-    """key -> [(chapter label, chapter title)], in reading order."""
+def cited_by(known: set[str] | None = None) -> dict[str, list[tuple[str, str]]]:
+    """key -> [(chapter label, chapter title)], in reading order.
+
+    `known` is the set of keys in `references.bib`. Bracketed citations are
+    taken as written, so a typo in one is still reported as a missing key.
+    A narrative citation is accepted only when it names a real entry: an
+    `@` in prose is not always a citation.
+    """
     out: dict[str, list[tuple[str, str]]] = {}
     for path in sorted(SRC.glob("*.md")):
         if path.name == OUT.name:
@@ -57,11 +68,22 @@ def cited_by() -> dict[str, list[tuple[str, str]]]:
         if not m or not t:
             continue
         where = (m.group(1), t.group(1))
-        for g in CITE_GROUP.finditer(text):
+
+        def record(key: str) -> None:
+            seen = out.setdefault(key, [])
+            if where not in seen:
+                seen.append(where)
+
+        body = CODE.sub(" ", text)
+        for g in CITE_GROUP.finditer(body):
             for key in KEY.findall(g.group(1)):
-                seen = out.setdefault(key, [])
-                if where not in seen:
-                    seen.append(where)
+                record(key)
+        # Narrative keys live outside the bracketed groups; blank those out
+        # first rather than counting the same citation twice.
+        for raw in NARRATIVE.findall(CITE_GROUP.sub(" ", body)):
+            key = raw.rstrip(".-:")
+            if known is None or key in known:
+                record(key)
     return out
 
 
@@ -185,7 +207,7 @@ def main() -> int:
     db = bibtexparser.loads(raw, parser=parser)
     entries = {e["ID"]: e for e in db.entries}
 
-    where = cited_by()
+    where = cited_by(set(entries))
     missing = sorted(k for k in where if k not in entries)
     if missing:
         print("cited but not in references.bib:", ", ".join(missing), file=sys.stderr)

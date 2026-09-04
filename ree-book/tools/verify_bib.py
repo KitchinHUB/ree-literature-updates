@@ -5,7 +5,12 @@ Three verification routes, in order of strength:
 1. DOI present -> resolve against the CrossRef works API. A resolving DOI is
    proof the paper exists, and the returned metadata is authoritative, so it
    also repairs the 29 placeholder `{{Journal}} Authors` fields and the 211
-   entries carrying no author at all.
+   entries carrying no author at all. A DOI CrossRef does not know is then
+   tried against DataCite: software and dataset records -- the DOE/OSTI ones
+   in particular -- are minted there, and a DOI that resolves in DataCite is
+   the same evidence as one that resolves in CrossRef. Only the registry
+   differs, and rejecting an entry for being in the wrong one would be a
+   verdict on the registry rather than on the source.
 2. No DOI but a URL -> check the URL responds. Web sources (standards pages,
    vendor documentation, software) are legitimate references that will never
    have a DOI; a live URL is the right evidence for them.
@@ -18,7 +23,9 @@ Three verification routes, in order of strength:
 A URL that answers with 401, 403, or 406 counts as alive. Britannica, the IEA,
 and the IAEA refuse scripted requests outright; the server answering about that
 exact URL is evidence the page exists, and treating a refusal as a dead link
-rejected five real sources.
+rejected five real sources. A URL that does not answer at all is a third case:
+it is kept and listed as unchecked, because a server that never replied has
+said nothing about whether the page is there.
 
 Entries failing all three are written to a separate file rather than deleted in
 place, so the removal is reviewable before it is applied.
@@ -69,8 +76,8 @@ def norm_doi(raw: str) -> str:
     return re.sub(r"^doi:\s*", "", d).strip().rstrip(".")
 
 
-def _get(url: str, timeout: int = 30):
-    req = urllib.request.Request(url, headers={"User-Agent": UA})
+def _get(url: str, timeout: int = 30, method: str = "GET"):
+    req = urllib.request.Request(url, headers={"User-Agent": UA}, method=method)
     for attempt in range(1, MAX_ATTEMPTS + 1):
         try:
             with urllib.request.urlopen(req, timeout=timeout) as r:
@@ -85,6 +92,35 @@ def _get(url: str, timeout: int = 30):
             return None, b""
         time.sleep(min(2 ** (attempt - 1), 30) + random.uniform(0, 0.4))
     return None, b""
+
+
+def title_candidates(msg: dict) -> list[str]:
+    """Both readings of a CrossRef title: with and without its subtitle.
+
+    CrossRef files a book's subtitle in a field of its own, and a bibliography
+    may reasonably record either the bare title or both parts joined. Matching
+    against one reading alone reported three entries as diverging when none of
+    them did, in both directions.
+    """
+    title = (msg.get("title") or [""])[0]
+    out = [title]
+    sub = msg.get("subtitle") or []
+    sub = sub[0] if sub else ""
+    if sub and norm_title(sub) not in norm_title(title):
+        out.append(f"{title}: {sub}")
+    return [t for t in out if t]
+
+
+def datacite_by_doi(doi: str) -> dict | None:
+    """Resolve a DOI that CrossRef does not know against DataCite."""
+    url = f"https://api.datacite.org/dois/{urllib.parse.quote(doi)}"
+    status, body = _get(url)
+    if status != 200 or not body:
+        return None
+    try:
+        return json.loads(body)["data"]["attributes"]
+    except (json.JSONDecodeError, KeyError):
+        return None
 
 
 def crossref_by_doi(doi: str) -> dict | None:
@@ -103,13 +139,27 @@ def crossref_by_doi(doi: str) -> dict | None:
 ACCESS_REFUSED = {401, 403, 406}
 
 
-def url_alive(url: str) -> bool:
+def url_alive(url: str) -> str:
+    """"alive", "dead", or "unreachable".
+
+    The third verdict matters. A server that answers 404 has told us the page
+    is gone; a server that never answers has told us nothing, and treating the
+    two the same rejected a live USGS yearbook chapter whose only fault was
+    that the agency rate-limits a long sequential run. This is the same rule
+    the ISBN route already follows.
+    """
     if not url.lower().startswith(("http://", "https://")):
-        return False
-    status, _ = _get(url, timeout=20)
+        return "dead"
+    # HEAD first: several of these URLs are multi-megabyte agency PDFs, and
+    # downloading one whole to prove it exists is its own way of timing out.
+    status, _ = _get(url, timeout=20, method="HEAD")
+    if status is None or status in (405, 501):
+        status, _ = _get(url, timeout=45)
     if status is None:
-        return False
-    return 200 <= status < 400 or status in ACCESS_REFUSED
+        return "unreachable"
+    if 200 <= status < 400 or status in ACCESS_REFUSED:
+        return "alive"
+    return "dead"
 
 
 def isbn_title(isbn: str) -> tuple[str, str | None]:
@@ -197,7 +247,27 @@ def main() -> int:
             msg = crossref_by_doi(doi)
             time.sleep(args.delay)
             if msg is None:
-                rejected.append((e, f"DOI {doi} does not resolve in CrossRef"))
+                dc = datacite_by_doi(doi)
+                time.sleep(args.delay)
+                if dc is None:
+                    rejected.append(
+                        (e, f"DOI {doi} resolves in neither CrossRef nor DataCite"))
+                    continue
+                # DataCite's schema is not CrossRef's, and its records here are
+                # software and datasets rather than articles, so no field is
+                # repaired from it. Existence is all this route claims.
+                titles = dc.get("titles") or [{}]
+                dc_title = (titles[0] or {}).get("title", "")
+                if dc_title:
+                    sim = difflib.SequenceMatcher(
+                        None, norm_title(e.get("title", "")), norm_title(dc_title)
+                    ).ratio()
+                    if sim < args.title_threshold:
+                        mismatched_titles.append((e["ID"], sim, e.get("title", "")[:60],
+                                                  dc_title[:60]))
+                e["_verified"] = "datacite-doi"
+                verified.append(e)
+                print(f"  [{i}/{total}] {e['ID']}: ok (datacite)")
                 continue
 
             # CrossRef metadata is authoritative; repair broken authorship.
@@ -216,11 +286,14 @@ def main() -> int:
                 if val and not (e.get(field) or "").strip():
                     e[field] = val
 
-            cr_title = (msg.get("title") or [""])[0]
-            if cr_title:
-                sim = difflib.SequenceMatcher(
-                    None, norm_title(e.get("title", "")), norm_title(cr_title)
-                ).ratio()
+            cands = title_candidates(msg)
+            if cands:
+                sim, cr_title = max(
+                    (difflib.SequenceMatcher(
+                        None, norm_title(e.get("title", "")), norm_title(c)
+                    ).ratio(), c)
+                    for c in cands
+                )
                 if sim < args.title_threshold:
                     mismatched_titles.append((e["ID"], sim, e.get("title", "")[:60],
                                               cr_title[:60]))
@@ -231,14 +304,19 @@ def main() -> int:
 
         url = (e.get("url") or "").strip().strip("{}")
         if url:
-            ok = url_alive(url)
+            verdict = url_alive(url)
             time.sleep(args.delay)
-            if ok:
+            if verdict == "alive":
                 e["_verified"] = "url-live"
                 verified.append(e)
                 print(f"  [{i}/{total}] {e['ID']}: ok (url)")
+            elif verdict == "unreachable":
+                e["_verified"] = "url-unreachable"
+                verified.append(e)
+                unreachable.append((e["ID"], url[:70], e.get("title", "")[:60]))
+                print(f"  [{i}/{total}] {e['ID']}: kept (URL did not answer)")
             else:
-                rejected.append((e, f"no DOI; URL does not respond: {url[:70]}"))
+                rejected.append((e, f"no DOI; URL is gone: {url[:70]}"))
             continue
 
         isbn = (e.get("isbn") or "").strip().strip("{}")
@@ -250,7 +328,7 @@ def main() -> int:
                 # a lookup service is not evidence about the book.
                 e["_verified"] = "isbn-unreachable"
                 verified.append(e)
-                unreachable.append((e["ID"], isbn, e.get("title", "")[:60]))
+                unreachable.append((e["ID"], f"ISBN {isbn}", e.get("title", "")[:60]))
                 print(f"  [{i}/{total}] {e['ID']}: kept (ISBN registry unreachable)")
                 continue
             if verdict == "found":
@@ -312,13 +390,15 @@ def main() -> int:
         # total and a reader will rightly distrust the rest of the report.
         f"- Verified: **{len(verified)}** "
         f"({sum(1 for e in verified if e.get('_verified') == 'crossref-doi')} "
-        f"by resolving DOI, "
+        f"by resolving a CrossRef DOI, "
+        f"{sum(1 for e in verified if e.get('_verified') == 'datacite-doi')} "
+        f"by resolving a DataCite DOI, "
         f"{sum(1 for e in verified if e.get('_verified') == 'url-live')} "
         f"by live URL, "
         f"{sum(1 for e in verified if e.get('_verified') == 'isbn')} "
         f"by ISBN, "
-        f"{sum(1 for e in verified if e.get('_verified') == 'isbn-unreachable')} "
-        "kept unchecked because no ISBN registry answered)",
+        f"{sum(1 for e in verified if e.get('_verified') in ('isbn-unreachable', 'url-unreachable'))} "
+        "kept unchecked because nothing answered)",
         f"- Rejected: **{len(rejected)}**",
         f"- Author fields repaired from CrossRef: **{len(repaired_authors)}**",
         f"- Titles diverging from CrossRef: **{len(mismatched_titles)}**",
@@ -332,12 +412,12 @@ def main() -> int:
         "",
         "## Kept, but not machine-checked",
         "",
-        "These entries carry an ISBN and no DOI or URL, and no ISBN registry",
-        "could be reached to look it up. That is silence, not a verdict: the",
-        "entries are kept and the ISBN is printed here so it can be checked by",
-        "hand.",
+        "Nothing answered about these — an ISBN registry that could not be",
+        "reached, or a URL whose server never replied. That is silence, not a",
+        "verdict: the entries are kept and the identifier is printed here so it",
+        "can be checked by hand.",
         "",
-        *(f"- `{i}` — ISBN {isbn} — {t}" for i, isbn, t in unreachable),
+        *(f"- `{i}` — {ident} — {t}" for i, ident, t in unreachable),
         "",
         "## Titles that disagree with CrossRef (check these by hand)",
         "",

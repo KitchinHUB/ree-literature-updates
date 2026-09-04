@@ -926,6 +926,14 @@ in series so that the raffinate of one becomes the feed of the next, is what
 turned a fifteen-component feed into a fan-out of individual oxides and made
 China the world's separator of rare earths [@yan2006rare].
 
+The closed-form design is where a cascade calculation starts, not where it ends.
+Relaxing the constant-extraction-ratio assumption, carrying the acid balance the
+saponification section below explains, and asking which arrangement of stages is
+*best* rather than which one works are all questions for a numerical model of the
+whole train. [](#process-modeling-and-optimization) takes them up, from Xu's
+theory through commercial flowsheet simulators to the equation-oriented
+frameworks that pose cascade design as an optimization problem.
+
 #### Saponification of the Extractant
 There is one industrial practice that follows directly from the reaction this
 chapter opened with, and that a laboratory description of solvent extraction
@@ -1036,6 +1044,13 @@ Where:
 - LANL Super Separator uses automated sampling and ICP-AES analysis
 - Closed-loop control with Bayesian optimization
 - Real-time adjustment of pH, flow rates based on analytical feedback
+
+These are the actuators. What tells them where to go is a model of the cascade,
+and on an industrial train the controlled variable — component content partway
+along the profile — is not something any of the instruments above measures
+directly. [](#process-modeling-and-optimization) covers the soft sensors and
+predictive controllers built for that problem, and the process models they run
+on.
 
 ## Industrial Example: Complete Process Flow
 ### Typical REE Separation Plant (Simplified)

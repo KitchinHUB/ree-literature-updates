@@ -391,19 +391,18 @@ argument above [@summers2024importance]:
 
 ### Process Simulation
 
-**Software platforms:**
+The computational methods above work at the scale of a molecule or a single
+contact. The other computational tradition in this field works at the scale of
+the plant: {index}`counter-current <countercurrent cascade>` cascade modeling
+[@turgeon2023simulation] built on stage-wise mass balances, equilibrium and
+kinetic closures, parameters estimated from laboratory data, and optimization of
+stage count and A/O ratio.
 
-| Software | Application |
-| ---------- | ------------- |
-| Aspen Plus | Flowsheet simulation |
-| MATLAB/Python | Custom extraction models |
-| gPROMS | Dynamic process modeling |
-| DWSIM | Open-source alternative |
-
-**Solvent extraction simulation.** {index}`Counter-current <countercurrent cascade>`
-cascade modeling [@turgeon2023simulation] rests on stage-wise mass balances,
-equilibrium and kinetic models, parameters estimated from laboratory data, and
-optimization of stage count and A/O ratio.
+That is a chapter of its own, and it is the next one.
+[](#process-modeling-and-optimization) covers the software platforms, the
+cascade design theory they implement, and the open-source equation-oriented
+frameworks — IDAES and PrOMMiS — where most current rare-earth process modeling
+work is being done.
 
 (machine-learning-for-distribution-coefficient-prediction)=
 ## Machine Learning for Distribution Coefficient Prediction

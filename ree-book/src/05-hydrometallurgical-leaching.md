@@ -1154,6 +1154,16 @@ and every leach residence time — the step is drawn without a number rather tha
 committed to one of the values.
 
 ## Process Optimization and Kinetics
+
+The optimization in this section is parameter-by-parameter: temperature, acid
+strength, particle size, each considered against the others held fixed. That is
+how leaching is optimized in practice and how the underlying literature reports
+it. Treating the leach as one block inside a flowsheet model, so that its
+operating point is chosen against the cost of everything downstream of it, is a
+different exercise; [](#process-modeling-and-optimization) describes it, and the
+surrogate-modeling work it discusses exists precisely because a detailed leach
+model is too expensive to embed in a flowsheet optimization directly.
+
 ### Key Operating Parameters
 #### Acid Leaching
 **Temperature effect**:
@@ -1467,6 +1477,10 @@ solvents as green solvent systems, and
 - In-line sensors for REE, pH, impurities
 - Closed-loop control
 - Consistent product quality
+
+Where closed-loop control of a rare-earth operation *has* been demonstrated is
+downstream, on the solvent-extraction cascade rather than on the leach; see
+[](#process-modeling-and-optimization).
 
 ### Urban Mining
 Magnet scrap, spent phosphors, catalysts, polishing powders and
