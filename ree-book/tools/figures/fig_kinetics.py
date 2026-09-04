@@ -6,9 +6,10 @@ than a table: the same first-order approach to equilibrium,
     E(t)/E_eq = 1 - exp(-k_L a * t),
 
 evaluated with the two volumetric mass transfer coefficients the chapter's
-Table 2 puts side by side. The microfluidic band is k_L a = 0.19-0.41 s^-1,
-measured for slug flow in 269-400 um rectangular glass channels by Dessimoz
-et al. (@dessimoz2008liquid); the conventional band is the 1e-3 to 1e-2 s^-1
+Table 2 puts side by side. The microfluidic band is k_L a = 0.2-0.5 s^-1,
+measured for both slug and parallel flow in 269-400 um rectangular glass
+channels by Dessimoz et al. (@dessimoz2008liquid), whose headline finding is
+that the two flow patterns give the same k_L a; the conventional band is the 1e-3 to 1e-2 s^-1
 order-of-magnitude figure the same table gives for a stirred contactor, which
 carries no stated agitation condition and is therefore drawn as a wide band and
 labelled as an order of magnitude, not a measurement.
@@ -16,7 +17,7 @@ labelled as an order of magnitude, not a measurement.
 Nothing in either band is data. The curves are the rate law; the *bands* are
 the reported spread in k_L a. What makes the figure worth drawing is that the
 two bands independently reproduce the two contact times the chapter quotes
-from elsewhere: 0.19-0.41 s^-1 reaches 95% of equilibrium in 7-16 s, which
+from elsewhere: 0.2-0.5 s^-1 reaches 95% of equilibrium in 6-15 s, which
 brackets the 3-60 s residence time of the flow-focusing droplet work
 (@fernandezmaza2024high) and the "10-15 s" and "equilibrium within 30 s"
 figures reported in the chapter; 1e-3 to 1e-2 s^-1 reaches 95% in 5-50 min,
@@ -48,7 +49,8 @@ import style
 style.use()
 
 # Chapter Table 2, both columns.
-KLA_MICRO = (0.19, 0.41)      # slug flow, 269-400 um channels, @dessimoz2008liquid
+KLA_MICRO = (0.2, 0.5)        # slug and parallel flow, 269-400 um channels,
+                              # @dessimoz2008liquid
 KLA_CONV = (1e-3, 1e-2)       # conventional contactor, order of magnitude only
 T_MICRO = (3.0, 60.0)         # residence time, @fernandezmaza2024high
 T_CONV = (600.0, 1500.0)      # 10-25 min mixer-settler
@@ -86,7 +88,8 @@ axa.text(np.sqrt(T_CONV[0] * T_CONV[1]), 0.035,
          "10–25 min\nmixer-settler", color=style.MUTED,
          fontsize=7.5, ha="center", va="bottom", linespacing=1.35)
 
-axa.text(0.023, 0.83, "microfluidic slug flow\n$k_L a$ = 0.19–0.41 s$^{-1}$",
+axa.text(0.023, 0.83, "microfluidic slug and\nparallel flow\n"
+         "$k_L a$ = 0.2–0.5 s$^{-1}$",
          color=style.GOOD, fontsize=8, ha="left", va="top", linespacing=1.4)
 axa.text(0.023, 0.46,
          "conventional contactor\n$k_L a$ = 10$^{-3}$–10$^{-2}$ s$^{-1}$\n"

@@ -231,3 +231,100 @@ paywalled consultancy note, and one whose URL was a bare domain with no
 document behind it. None of them was cited anywhere in the book, so none
 reached the site, but a bibliography that carries them invites the reader to
 wonder what else is in it.
+
+## Stage four: does the cited paper say it?
+
+The first three stages asked whether the citation is *real*. This one asks
+whether it is *right*: for every sentence in the book that rests on a citation,
+does the work cited actually contain the claim being made? A DOI that resolves
+to the correct paper with the correct authors is still a bad citation if the
+paper says something else.
+
+Every DOI-bearing citation instance in the book was read this way --- 883 at the
+start of the pass, across 388 distinct entries. The work was fanned out over
+thirteen parallel agents, one or two chapters each, and each returned a report
+naming the sentence, the key, the claim, and what the source says instead.
+**Those reports were treated as leads, not verdicts.** Every finding that would
+change the book was re-verified by hand against a primary source --- publisher
+abstract, accepted manuscript, repository copy, or full PDF where one could be
+reached --- before a word was changed. Several agent findings did not survive
+that check and were discarded.
+
+Fifty-seven claims did not survive it. They fall into four kinds.
+
+**The claim is not in the paper at all.** The largest group, and the least
+interesting individually: a number, a table, or a mechanism attributed to a
+paper that contains no such thing. The `obrien2024simplified` CAPEX table, the
+`larochelle2021fundamental` sensitivity rows, four of five
+`mugion2025systematic` reduction rows, the `touma2024intensification` Zn/Mn
+separation factors, `zhou2019controlled`'s "10--1000×" mass-transfer
+enhancement, `cui2016high`'s "SF > 50", `orefice2019selective`'s ionic
+hydrotropes, `uversky2015intrinsically`'s "30--40 % of the eukaryotic
+proteome". These were deleted, or replaced by what the paper does report.
+
+**The paper is about something else.** `murase1995recovery` is chemical vapour
+transport with AlCl₃, not a carbochlorination intermediate. `hua2014selective`
+is molten MgCl₂--KCl, not chlorination roasting plus water leaching.
+`ma2000lanthanide` is an EF-hand grafted for magnetic alignment in solution NMR,
+not EF-hand dimerization. `chen2025lanmodulin` is crude protein from a leachate,
+not rational design. `suli2017rare` --- the one case where the full PDF could be
+read rather than an abstract --- has no chlorination content whatever, and the
+stoichiometric chlorine feed cited to it was invented. In each case the entry
+was re-homed onto a claim it does support rather than dropped, since the paper
+is real and usually worth citing somewhere.
+
+**The paper says the opposite.** The most damaging kind, because the sentence
+reads as though it has support. `zhang2022driving` was cited for counterion
+release and argues against it. `dessimoz2008liquid` was cited for a mass-transfer
+coefficient specific to slug flow, and its headline finding is that slug and
+parallel flow give the *same* coefficient. `csiro2024minerals`, caught in stage
+three, said chlorination is at lab scale where the book had it established
+industrially. The halloysite and kaolinite roles in the ch06 clay passage were
+backwards in both directions.
+
+**A real number wearing the wrong unit.** Worth naming separately because no
+resolve-the-DOI check will ever catch it: the "49 % conversion" attributed to
+the MgO carbochlorination work is that paper's **49 kJ/mol activation energy**,
+migrated into a percentage. The number is real and the paper is right; only the
+quantity is wrong.
+
+One finding was neither --- it was a claim the book made that has since been
+**falsified by new work**. The book said no protein system had been shown to
+fractionate an adjacent heavy pair. Choi et al., *JACS* 148(34) 36817--36831
+(2026), report an average adjacent-element separation factor of 2.1 across
+Nd--Lu for Al-LanM and its variants, and on-column tandem dimers that nearly
+double SF(Nd/Dy) and separate Y, Dy, Gd, Sm and Nd to >95 % purities from an
+allanite-derived leachate. Both places the claim appeared were rewritten, and
+the paper added to the bibliography.
+
+### What could not be verified
+
+Ten claims rest on papers that no route available to this pass could reach ---
+Elsevier and Springer serve nothing to automated requests and are excluded from
+the Wayback Machine, and several institutional repositories 404 on their own
+handles. They are `heo2025extraction`, `gupta1984extractive`, `chen2025process`,
+`xue2025carbochlorination`, `marcus1991thermodynamics`, `amaral2010thorium`,
+`hung2020separation`, the Mountain Pass block in `kim2025rare`,
+`yang2022pilot`'s throughput and `chen2017fast`'s enrichment factor. None is
+asserted on faith: each is either softened to what its title and metadata
+guarantee, or the text says in so many words that the figure is not available.
+The two that most deserve a look by someone with a subscription are
+`amaral2010thorium` (the amine class, in a passage whose whole purpose is to
+police the misreporting of amine class) and the `kim2025rare` Mountain Pass
+figures, which the chapter now leans on as its internally consistent chain.
+
+### What this method cannot reach
+
+A claim-by-claim audit keyed on `[@citation]` walks straight past any sentence
+that carries no citation at all, and chapters 10 and 16 each contain specific
+numeric figures of exactly that kind. They are the obvious next thing to check,
+and they need a different query --- find the numbers, then find their sources ---
+rather than another pass over the bibliography.
+
+Separately, seven entry keys have a stem that does not match the first author in
+the registry: `spruijt2014polyelectrolyte` (Wang & Schlenoff), `kim2022facile`
+(Bediako), `depierro2008cloud` (Mustafina), `pal2019complete` (McCarty),
+`zhang2022driving` (Chen & Wang), `gao2023separation` (Zhang & Azimi) and
+`chen2025lanmodulin` (Chhantyal). The entries themselves are correct --- these
+are key-naming artefacts from an earlier draft, invisible in the rendered book
+--- but they mislead anyone reading the source, and renaming them is cheap.

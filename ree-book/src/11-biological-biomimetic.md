@@ -209,9 +209,18 @@ the R100K variant achieved baseline separation of Nd and Dy to \>98% purity and
 state the result: a modest separation factor plus a column, on a light/heavy
 pair.
 
-No protein system has yet been shown to fractionate an adjacent *heavy* pair —
-Dy/Ho, Ho/Er — which is where the separation problem is hardest and where the
-industrial cascades are longest.
+The adjacent *heavy* pairs — Dy/Ho, Ho/Er — are where the separation problem is
+hardest and where the industrial cascades are longest, and until recently no
+protein had been shown to touch them. The dimerizing lanmodulins Al-LanM and
+Xan-LanM now do: the average adjacent-element separation factor for Al-LanM and
+its structure-guided variants across the eleven elements Nd to Lu is 2.1, and
+tandem dimers immobilized so they self-dimerize on the column separate Y, Dy,
+Gd, Sm and Nd from one another to \>95% purities from an allanite-derived
+leachate with one pH step per element [@choi2026near]. An SF of 2.1 is inside
+the conventional 1.5-3.0 band rather than above it; what has changed is that a
+protein now reaches the heavy end at all, and that engineered dimerization is a
+handle on selectivity in its own right --- on-column dimerization nearly doubles
+SF(Nd/Dy) relative to the immobilized monomer.
 
 ### Protein Engineering and Variants
 Computational and experimental studies have revealed key engineering principles [@yao2025computationally]:

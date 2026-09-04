@@ -43,7 +43,13 @@ Coacervation is a liquid-liquid phase separation (LLPS) process in polyelectroly
 Driving forces for coacervation include:
 
 - Electrostatic attraction between oppositely charged polyelectrolytes
-- Entropy gain from counterion release [@zhang2022driving]
+- Entropy gain from counterion release
+- Entropy gain from solvent reorganization --- the temperature dependence of the
+  dielectric constant of water makes the electrostatic interaction itself
+  partly entropic, and in coarse-grained simulation of symmetric polyelectrolyte
+  mixtures at monovalent ionic strength and room temperature it is *this*
+  contribution, rather than counterion release, that dominates
+  [@zhang2022driving]
 - Hydrophobic interactions
 - Hydrogen bonding
 
@@ -129,13 +135,13 @@ For rare earth elements, the challenge is that all lanthanides exhibit similar c
 
 Separation factors (SF) quantify selectivity: $$SF = \frac{[M_1]_{coacervate}/[M_1]_{supernatant}}{[M_2]_{coacervate}/[M_2]_{supernatant}}$$
 
-For adjacent lanthanides, conventional solvent extraction achieves SF = 1.5-3.0. Protein-based systems are sometimes quoted at "SF \> 100", but that number is a misreading. The figure in circulation is the \>100-fold ratio of *dimerization affinities* between the La³⁺- and Dy³⁺-loaded forms of Hans-LanM [@mattocks2023enhanced] — neither a separation factor nor an adjacent pair, since La and Dy sit nine places apart on opposite sides of the light/heavy split. The separation factors the same work actually measured are Nd/Dy = 8.1 (wild type) and 12.7 (the R100K variant), and the best adjacent-pair figures from any protein system are Ce/La = 3.0, Pr/Ce = 1.7 and Nd/Pr = 1.4 [@larrinaga2024modulating]. That is the same band as conventional extractants, not a hundred times better. Against Ca²⁺ and the other non-rare-earth cations in a leachate the protein discrimination genuinely is enormous; against a neighbouring lanthanide it is not. The two selectivities must be kept apart, and only the second is what a fractionation cascade is built to supply.
+For adjacent lanthanides, conventional solvent extraction achieves SF = 1.5-3.0. Protein-based systems are sometimes quoted at "SF \> 100", but that number is a misreading. The figure in circulation is the \>100-fold ratio of *dimerization affinities* between the La³⁺- and Dy³⁺-loaded forms of Hans-LanM [@mattocks2023enhanced] — neither a separation factor nor an adjacent pair, since La and Dy sit nine places apart on opposite sides of the light/heavy split. The separation factors the same work actually measured are Nd/Dy = 8.1 (wild type) and 12.7 (the R100K variant), and the adjacent-pair figures from protein systems are of the same order as conventional extraction: Ce/La = 3.0, Pr/Ce = 1.7 and Nd/Pr = 1.4 for an engineered LanD chaperone [@larrinaga2024modulating], and an average adjacent-element separation factor of 2.1 across the eleven elements Nd to Lu for the dimerizing lanmodulin Al-LanM [@choi2026near] --- which is among the best reported for any ligand, protein or otherwise, and is still inside the conventional band. Against Ca²⁺ and the other non-rare-earth cations in a leachate the protein discrimination genuinely is enormous; against a neighbouring lanthanide it is not. The two selectivities must be kept apart, and only the second is what a fractionation cascade is built to supply.
 
 ## Biomimetic and Natural Coacervate Systems
 Nature provides inspiration for REE-selective materials through the discovery of lanthanide-dependent bacteria and their associated proteins. Biological phase separation in the form of membraneless organelles also offers insights into coacervate function and design.
 
 ### Intrinsically Disordered Proteins (IDPs)
-IDPs are proteins that lack a fixed three-dimensional structure but remain functional. An estimated 30-40% of residues in the eukaryotic proteome are located in disordered regions [@uversky2015intrinsically]. IDPs undergo liquid-liquid phase separation (LLPS) to form membrane-less organelles (MLOs) that play critical roles in cellular organization [@brangwynne2015polymer].
+IDPs are proteins that lack a fixed three-dimensional structure but remain functional, and they are abundant: a large fraction of eukaryotic proteins carry long disordered regions. IDPs undergo liquid-liquid phase separation (LLPS) to form membrane-less organelles (MLOs) that play critical roles in cellular organization [@brangwynne2015polymer], and their overwhelming abundance in those organelles is the observation that motivates treating them as the drivers of intracellular phase separation [@uversky2015intrinsically].
 
 Key features of IDP phase separation:
 
@@ -160,7 +166,7 @@ For REE applications, protein-based coacervates offer:
 - Biocompatibility and biodegradability
 
 ### Peptide-Based Coacervates
-Short peptides (10-30 amino acids) can form coacervates and offer advantages of defined sequence, scalable synthesis, and tunable properties [@li2019coassembly].
+Short peptides can form coacervates and offer advantages of defined sequence, scalable synthesis, and tunable properties. The sequences involved can be very short indeed: an adhesive coacervate has been built by self-assembled condensation of a *tripeptide* with polyoxometalates in aqueous solution, giving a shear-thinning fluid that gels on a change of pH or on adding metal ions [@li2019coassembly].
 
 #### Lanthanide Binding Tags (LBTs)
 
@@ -179,7 +185,7 @@ for full-length lanmodulin, a difference of roughly six orders of magnitude
 10⁸-fold Ca²⁺ discrimination quoted in the literature belong to the whole
 protein [@cotruvo2018lanmodulin], not to the excised loop.
 
-Isolated EF-hand loop peptides dimerize when saturated with lanthanide ions, reproducing the structure of native protein domains [@shaw1997isolated; @ma2000lanthanide]. This metal-induced self-assembly could be exploited for coacervate formation and REE separation.
+Isolated EF-hand loop peptides dimerize when saturated with lanthanide ions, reproducing the structure of native protein domains [@shaw1997isolated]. This metal-induced self-assembly could be exploited for coacervate formation and REE separation. The same motif has a quite separate use in structural biology: a twelve-residue EF-hand grafted onto the N-terminus of a folded protein binds a lanthanide specifically and weakly aligns the protein in the magnetic field, without perturbing its native structure, which yields residual dipolar couplings for solution NMR [@ma2000lanthanide].
 
 #### Lanmodulin (LanM)
 
@@ -194,7 +200,7 @@ Note carefully what that \>100-fold number is and is not. It is a ratio of dimer
 
 For an adjacent pair the honest numbers are smaller still. Applying the same dimerization strategy to *Methylorubrum extorquens* LanD — a related periplasmic lanthanide chaperone, not lanmodulin — an engineered variant enriches Pr³⁺ and Nd³⁺ relative to La³⁺ and Ce³⁺ in an all-aqueous ultrafiltration step, with SF Ce/La = 3.0 ± 0.4, Pr/Ce = 1.7 ± 0.2 and Nd/Pr = 1.4 ± 0.2 [@larrinaga2024modulating]. Those are the best protein-based adjacent-pair separation factors reported, they sit inside the conventional 1.5-3.0 band, and they were measured on micromolar solutions at bench scale.
 
-Recent computational studies provide structural insights into REE selectivity in lanmodulin variants [@yao2025computationally] enabling rational design of engineered proteins for specific separation challenges [@chen2025lanmodulin].
+Recent computational studies provide structural insights into REE selectivity in lanmodulin variants, which is the groundwork for rational design of engineered proteins aimed at specific separation challenges [@yao2025computationally]. Wild-type lanmodulin is meanwhile being tested as a sorbent in its own right: crude LanM from *Methylorubrum extorquens* takes up lanthanum from a synthetic acidic leachate at 70 mg La per gram of protein, with chemisorption kinetics and an optimum at pH 5 [@chen2025lanmodulin].
 
 ## Stimuli-Responsive Coacervates
 Stimuli-responsive coacervates undergo phase transitions in response to external triggers, enabling controlled capture and release of metal ions. This "smart" behavior is essential for practical separation processes requiring both extraction and stripping steps.
@@ -250,7 +256,7 @@ Redox-responsive coacervates respond to changes in oxidation state, either throu
 
 Recent work quantified redox thermodynamics shifts within coacervates using temperature-dependent electrochemistry, extracting reaction entropy, enthalpy, and Gibbs energy for redox processes in the condensed phase [@wang2025quantification].
 
-For {index}`cerium` separation specifically, the Ce3+/Ce4+ redox couple enables selective oxidation and {index}`precipitation`, which could be integrated with coacervate extraction for enhanced Ce selectivity [@pramanik2024emerging].
+For {index}`cerium` specifically, the Ce3+/Ce4+ redox couple enables selective oxidation and {index}`precipitation`, and integrating that step with coacervate extraction is an obvious thing to try; no such combination has been reported, and the suggestion is this book's rather than any cited source's.
 
 ## Coacervates for Rare Earth Element Separations
 The application of coacervate-based systems specifically to REE separations is an emerging field, with most work focusing on aqueous biphasic systems, cloud point extraction, and protein-based approaches rather than classical polyelectrolyte coacervates.
@@ -309,7 +315,7 @@ solution to separate on, which is what makes the oxidative route available.
 Ce⁴⁺ can be selectively precipitated as CeO₂, or extracted with a partition
 coefficient quite unlike Ce³⁺'s.
 
-The ionic radius differences (La³⁺ = 1.03 Å, Ce³⁺ = 1.01 Å, Pr³⁺ = 0.99 Å) are sufficient for protein-based separation but challenging for conventional extractants [@pramanik2024emerging].
+The ionic radius differences are small --- La³⁺ = 1.032 Å, Ce³⁺ = 1.01 Å, Pr³⁺ = 0.99 Å in six-coordination [@shannon1976revised] --- and both conventional extractants and proteins find them hard. The protein result that does fractionate this stretch of the series is the engineered LanD chaperone described above, at SF Ce/La = 3.0, Pr/Ce = 1.7 [@larrinaga2024modulating].
 
 #### Nd/Pr Separation
 The Nd/Pr separation ("didymium" problem) is critical for permanent magnet recycling. These elements have nearly identical ionic radii (Nd³⁺ = 0.98 Å, Pr³⁺ = 0.99 Å) and similar coordination chemistry, making separation extremely difficult [@zhang2024remarkably].
@@ -317,7 +323,7 @@ The Nd/Pr separation ("didymium" problem) is critical for permanent magnet recyc
 Recent advances:
 
 - Ionic liquid extraction with β-diketones achieves unprecedented separation factor \>500 [@zhang2024remarkably]
-- PC88A-impregnated surfaces achieve SF = 171 with 92% Pr+Nd purity [@gao2023separation]
+- PC88A-impregnated surfaces separate Pr+Nd *as a group* from the heavy rare earths --- not from each other --- at SF = 171, reaching 92% Pr+Nd purity at 96% yield from a 10 mg/L all-REE feed at pH 2.5 [@gao2023separation]
 - Kinetic separation strategies with specific ion effects achieve SF \> 8 [@sui2023kinetic]
 - Push-and-pull systems with \[A336\]\[NO3\]-DTPA enhance separation in column extractors [@wang2019enhanced]
 
@@ -334,15 +340,16 @@ Three-liquid-phase systems with Cyanex272/PEG/ammonium sulfate show promise for 
 
 Protein-based approaches:
 
-- Hans-LanM discriminates light from heavy REEs through metal-sensitive dimerization, and an interface mutant separates an Nd/Dy mixture to \>98% purity in a single-stage column [@mattocks2023enhanced]. Nd/Dy is a light/heavy split; no protein system has been shown to fractionate an adjacent heavy pair such as Dy/Ho.
+- Hans-LanM discriminates light from heavy REEs through metal-sensitive dimerization, and an interface mutant separates an Nd/Dy mixture to \>98% purity in a single-stage column [@mattocks2023enhanced]. Nd/Dy is a light/heavy split rather than an adjacent pair.
 - The related LanD chaperone, engineered at the same interface, fractionates *within* the light lanthanides, enriching Pr and Nd over La and Ce [@larrinaga2024modulating]
+- Dimerization can be engineered deliberately rather than merely exploited. Tandem dimers of the dimerizing lanmodulin Al-LanM, immobilized on a column so that they self-dimerize on it, nearly double SF(Nd/Dy) relative to the immobilized monomer, and separate Y, Dy, Gd, Sm and Nd from one another to \>95% purities from a mixed rare earth leachate derived from allanite ore, using one pH step per element [@choi2026near]. This is the closest any protein system has come to fractionating the heavy end, and it is where the reported adjacent-element average of 2.1 comes from.
 
 #### Sc Separation
 Scandium is geochemically associated with REEs but has distinct chemistry: smaller ionic radius (0.75 Å), lower coordination number preference, and unique complexation behavior. This enables high separation factors from lanthanides.
 
 Effective scandium separation methods:
 
-- Polymer-supported phosphonate extractants with SF \> 50 vs other REEs [@cui2016high]
+- Polymer-supported phosphonate extractants \[D201\]\[DEHP\] and \[D201\]\[C272\], which show unusual selectivity for scandium and little competition from the base metals of a nickel-laterite leach liquor; the paper reports no separation factor against the lanthanides [@cui2016high]
 - Amic acid extractants (D2EHAF) in {index}`polymer inclusion membranes` for complete Sc separation from transition metals [@kim2019separation]
 - Mesoporous silica with unmodified silanols for selective Sc extraction over Fe [@ramasamy2017selective]
 - TRPO-modified resins in sulfuric and hydrochloric acid media [@hou2024adsorption]
@@ -353,11 +360,11 @@ A critical review of Sc/Fe separation emphasizes the importance of functional li
 Computational methods provide fundamental understanding of coacervate thermodynamics, structure, and metal ion interactions, guiding the rational design of separation systems.
 
 ### Molecular Dynamics Simulations
-Molecular dynamics (MD) simulations capture atomistic details of coacervate structure and dynamics [@zhang2022driving]:
+Molecular dynamics simulations of coacervates are mostly coarse-grained rather than atomistic, and the level of description determines what can be asked of them. The coacervation study this chapter leans on uses a coarse-grained, implicit-solvent model with thermodynamic analysis of the potential of mean force along the coacervation pathway [@zhang2022driving]; solvent enters it only through the dielectric constant, so it speaks to polymer-ion interactions and free energies but not to solvation shells or water structure. An all-atom explicit-solvent treatment would be needed for those. What the two levels between them address:
 
-- Ion solvation and coordination environments
+- Ion solvation and coordination environments (all-atom only)
 - Polymer-polymer and polymer-ion interactions
-- Water structure in coacervate vs supernatant phases
+- Water structure in coacervate vs supernatant phases (all-atom only)
 - Free energy profiles for ion transfer between phases
 
 A key finding from MD simulations is that the thermodynamic driving force for coacervation is entropy-dominated under typical aqueous conditions. The temperature dependence of the dielectric constant of water contributes substantially to the entropic term in electrostatic interactions [@zhang2022driving].

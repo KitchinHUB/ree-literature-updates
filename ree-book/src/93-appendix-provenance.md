@@ -135,7 +135,7 @@ could not be trusted: an early pass found references whose DOIs resolved to
 unrelated papers, hand-typed entries with wrong volumes and page ranges, and at
 least one paper attributed to the wrong authors.
 
-Verification ran in three stages.
+Verification ran in four stages.
 
 **Stage 1 — does the reference exist?** Every entry was checked against
 CrossRef by DOI, or, for a DOI CrossRef does not know, against DataCite —
@@ -250,6 +250,59 @@ replaced by technical ones, and seventeen uncited vendor pages, blogs and
 encyclopaedia articles were removed from the bibliography as well: none of them
 reached the book, but a bibliography that carries them invites the reader to
 wonder what else is in it. The full account is in `review/CITATION-AUDIT.md`.
+
+**Stage 4 — does the cited paper actually say it?** Stage 3 read the
+forty-four entries that have no DOI, because those were the ones no automated
+check could reach. That left the larger and more comfortable assumption
+untested: that the 883 citation instances resting on a resolving DOI say what
+the sentences citing them say. They were read too, one claim at a time, across
+388 distinct entries. The reading was fanned out over thirteen parallel agents,
+one or two chapters each; every finding that would change the book was then
+re-verified by hand against a primary source before a word was changed, because
+an agent's report is a lead and not a verdict, and several of those leads did
+not survive the check.
+
+Fifty-seven claims did not survive it, in four kinds. Most often the claim is
+simply not in the paper — a table, a number, or a mechanism attributed to a
+work that contains no such thing. Sometimes the paper is about something else
+entirely: @murase1995recovery is chemical vapour transport with AlCl₃ rather
+than a carbochlorination intermediate, @hua2014selective is a molten
+MgCl₂–KCl study rather than chlorination roasting, and @suli2017rare — the one
+case where a full PDF could be read rather than an abstract — has no
+chlorination content whatever, though a stoichiometric chlorine feed had been
+cited to it. Twice the paper says the opposite of the sentence citing it:
+@zhang2022driving argues *against* counterion release as the driving force, and
+@dessimoz2008liquid's headline finding is that slug and parallel flow give the
+*same* mass-transfer coefficient, where the book had used it to distinguish
+them. And once a real number was wearing the wrong unit — the "49 % conversion"
+in the MgO carbochlorination passage is that paper's 49 kJ/mol activation
+energy, which is the kind of error no identifier check will ever find.
+
+Where the cited work was real and useful but attached to the wrong sentence, it
+was re-homed onto a claim it does support rather than dropped. Where nothing
+supported the claim, the claim went, or the text now says in plain words that
+the figure is not available and why. Ten claims rest on papers that no route
+available could reach — Elsevier and Springer serve nothing to automated
+requests and are excluded from the Internet Archive, and several institutional
+repositories return 404 on their own handles — and each of those is either
+softened to what its metadata guarantees or explicitly flagged in the text as
+unquoted.
+
+One finding was of a different kind. The book had said that no protein system
+had been shown to fractionate an adjacent *heavy* lanthanide pair. That was
+true when it was written and is no longer: @choi2026near report an average
+adjacent-element separation factor of 2.1 across Nd–Lu for dimerizing
+lanmodulins, and on-column tandem dimers that separate Y, Dy, Gd, Sm and Nd to
+above 95 % purity from an allanite-derived leachate. Both passages making the
+claim were rewritten. A synthesis has a shelf life, and this is what its
+expiry looks like.
+
+The method has a blind spot worth naming, since naming it is cheaper than
+pretending it does not exist: a claim-by-claim audit keyed on citations walks
+straight past any sentence that carries no citation at all. Chapters 10 and 16
+each contain specific numeric figures of exactly that kind. Finding their
+sources needs a different question — start from the numbers, not from the
+bibliography — and it has not been asked yet.
 
 Claims that survive as numbers in this book should therefore be traceable. That
 is a lower standard than *correct*, and it is the standard this book can
