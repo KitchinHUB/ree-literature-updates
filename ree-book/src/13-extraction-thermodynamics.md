@@ -228,7 +228,7 @@ $$
 
 **Computational method**:
 
-****Option 1: Implicit solvation****
+**Option 1: Implicit solvation**
 
 - SMD model with $\varepsilon_r$ ≈ 2 (kerosene dielectric constant)
 
@@ -238,13 +238,13 @@ $$
   \Delta G_3 = E(\mathrm{REEL}_3\ \text{with SMD}, \varepsilon_r = 2) - E(\mathrm{REEL}_3\ \text{in vacuum})
   $$
 
-****Option 2: COSMO-RS**** (more accurate)
+**Option 2: COSMO-RS** (more accurate)
 
 - Uses realistic molecular description of solvent
 - Accounts for surface interactions
 - Can handle mixed solvents (kerosene is C₉-C₁₆ alkane mixture)
 
-****Option 3: Empirical estimation****
+**Option 3: Empirical estimation**
 
 - For neutral complexes, solvation in non-polar solvents is modest
 - ΔG₃ ≈ -50 to -200 kJ/mol
@@ -271,18 +271,18 @@ $$
 
 **Computational method**:
 
-****Option 1: Implicit solvation (same as ΔG₃)****
+**Option 1: Implicit solvation (same as ΔG₃)**
 
 $$
 \Delta G_4 = 3 \left( E(\mathrm{HL}\ \text{in vacuum}) - E(\mathrm{HL}\ \text{with SMD}, \varepsilon_r = 2) \right)
 $$
 
-****Option 2: Experimental vaporization enthalpy****
+**Option 2: Experimental vaporization enthalpy**
 
 - For D2EHPA, TBP: $\Delta H_\mathrm{vap}$ data available from literature
 - Approximate ΔG₄ ≈ 3 × $\Delta H_\mathrm{vap}$ (neglecting entropy)
 
-****Option 3: Cancel with ΔG₃ in first approximation****
+**Option 3: Cancel with ΔG₃ in first approximation**
 
 - If same solvation model used for both
 - Partial cancellation of organic phase solvation effects
@@ -306,7 +306,7 @@ $$
 
 **Computational method**:
 
-****Standard state correction****: The free energy of H⁺(aq) depends on pH:
+**Standard state correction**: The free energy of H⁺(aq) depends on pH:
 
 $$
 \begin{aligned}

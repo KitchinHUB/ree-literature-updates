@@ -25,13 +25,25 @@ check the claims made in Part III.
 ## Environmental and Sustainability Considerations
 
 ### Environmental Impacts of Traditional Methods
-Traditional REE separation creates significant environmental challenges:
 
-- **Acidic/alkaline wastewater** from hydrometallurgical processes
-- **Radioactive waste** from {index}`thorium` and uranium associated with REE ores
-- **High energy consumption** in pyrometallurgical methods
-- **Organic solvent use** in {index}`liquid-liquid extraction <solvent extraction>`
-- **Habitat destruction** from mining operations
+The environmental burden of conventional rare earth production falls into five
+categories, and it is worth being clear that only two of them belong to the
+separation step. Mining destroys habitat and moves overburden. Cracking and
+leaching generate acidic or alkaline wastewater at a volume set by the reagent
+stoichiometry ([](#hydrometallurgical-leaching)). The thorium and uranium that
+accompany monazite and bastnasite become a radioactive residue that has to be
+managed rather than discharged ([](#thorium-management)). Pyrometallurgical
+routes carry the energy cost of holding a reactor at several hundred degrees
+([](#pyrometallurgical-and-halogenation-routes)). Only the last two —
+organophosphorus extractant and kerosene diluent inventories, and the acid
+consumed in stripping and pH adjustment — are attributable to solvent
+extraction itself.
+
+That accounting matters for the rest of this chapter, because it sets a ceiling
+on what any new separation chemistry can deliver. Life cycle studies of rare
+earth production repeatedly find the upstream stages dominant; a technology
+that halves the burden of the separation step alone moves a much smaller
+number than its proponents typically claim.
 
 Some of the highest pollution levels on Earth are associated with rare earth
 production in China, which mined **69%** of world output in 2025 and supplied
@@ -41,28 +53,43 @@ put near 90%, but no agency publishes it and this book could not trace the
 figure to a primary source; see [](#supply-chain-concerns).
 
 ### Green Chemistry Approaches
-#### Deep Eutectic Solvents (DESs)
-- Environmentally friendly alternatives to traditional solvents
-- Lower toxicity and cost
-- Favorable for hydrometallurgical recycling
 
-#### Ionic Liquids (ILs)
-- Negligible vapor pressure
-- Thermal stability
-- Good ionic conductivity
-- Non-flammable
+Three classes of alternative are usually offered as the environmental answer:
+deep eutectic solvents, ionic liquids, and bioleaching. All three are treated
+in detail elsewhere in this book, and the treatment there is deliberately less
+enthusiastic than the label "green" implies.
 
-#### Bioleaching
-- Uses microorganisms for REE extraction
-- Lower environmental footprint
-- Recovery efficiencies of **80-95%** for Y, Ce, Nd, and Th
+Deep eutectic solvents and ionic liquids are covered in
+[](#green-solvents-des-and-ils). Both are non-volatile and non-flammable, which
+genuinely removes the fire and vapour-emission hazards of a solvent extraction
+house, and DESs are cheap to make. But "green" is not a synonym for "benign":
+amino-acid-based DESs, chosen precisely because their components are natural
+and biodegradable, have been measured as up to 10⁵ times more toxic than
+conventional choline-chloride formulations [@li2022high]. No life cycle
+assessment consulted for this book compares a DES or IL flowsheet against a
+conventional one on a cradle-to-gate basis, so the environmental case for them
+rests on hazard properties rather than on a measured impact.
 
-### Molecular Recognition Technology (MRT)
-The SuperLig® MRT™ process ([IBC](https://ibcmrt.com/markets-and-applications/rare-earth-elements-ree/)):
+Bioleaching is covered in [](#siderophores-and-the-boundary-with-leaching) and
+[](#hydrometallurgical-leaching). The mechanisms, organisms and process
+parameters are reviewed comprehensively by @rasoulnia2020critical. Recovery
+efficiencies quoted for bioleaching span a wide range and depend on the
+organism, the substrate mineralogy, the pulp density and the residence time;
+no single figure characterises the method, and none is given here. What the
+literature does establish is that bioleaching is slow relative to acid
+leaching, which is the constraint that governs whether its lower reagent
+burden can ever be cashed in.
 
-- Separates all individual REEs at **\>99% recovery** and **\>99% purity**
-- Operates at ambient temperature and atmosphere
-- Considered a green chemistry solution
+### Molecular Recognition Technology
+
+Ligand-on-support column chemistry, marketed as SuperLig® Molecular
+Recognition Technology, is regularly cited as an ambient-temperature
+alternative to solvent extraction. The recovery and purity figures in
+circulation for it come from the vendor's own product literature. No
+peer-reviewed source consulted for this book reports them, and no entry for
+them appears in this bibliography, so they are not quoted here. The technology
+and the status of the claims made for it are discussed alongside the other
+commercial players in [](#industrial-status-and-key-players).
 
 ## Techno-Economic Analysis
 
@@ -90,7 +117,15 @@ larger effect on project economics than either capital or operating cost
 ### Solvent Extraction Economics
 Solvent extraction remains the dominant commercial technology, with well-established cost profiles.
 
-**Aclara Resources Separation Plant (2024):** Detailed AACE Class 5 estimate for a dedicated REE separation facility ([Aclara 2024](https://investingnews.com/aclara-announces-update-on-its-rare-earths-separation-project/)):
+**Aclara Resources separation plant (2024).** The figures below are a
+*company disclosure*, not an independent assessment, and they are reproduced
+here because published cost estimates for a dedicated rare earth separation
+plant are otherwise almost impossible to find. Two qualifications travel with
+them. First, an AACE Class 5 estimate is a screening-grade number prepared on
+minimal engineering definition; the class is conventionally understood to carry
+an accuracy range of roughly −50% to +100%, so US\$354 million should be read
+as an order of magnitude rather than a budget. Second, the recoveries are
+design targets for a plant that has not been built.
 
 | Parameter             | Value           |
 |-----------------------|-----------------|
@@ -127,15 +162,6 @@ basis must be stated before any two figures in this section are compared.
 | Key cost drivers | High-pressure equipment, CO₂       |
 | Break-even       | Competitive for niche applications |
 
-**Molecular Recognition Technology (MRT):** Claims significant cost advantages ([IBC-MRT](https://ibcmrt.com/markets-and-applications/rare-earth-elements-ree/)):
-
-| Advantage         | Impact                       |
-|-------------------|------------------------------|
-| Reduced chemicals | Lower OPEX                   |
-| Simpler equipment | Lower CAPEX                  |
-| Smaller footprint | Reduced facility cost        |
-| No mixer-settlers | Eliminates hundreds of units |
-
 **Coal Refuse REE Recovery (2025):** Chemical recycling with 90% reagent recovery [@nili2025reclaiming]:
 
 | Parameter        | Value           |
@@ -164,25 +190,28 @@ The same flowsheet is economic or not depending on which year you price it in,
 which is the honest answer to why announced projects so rarely reach
 production.
 
-**Blended Product Economics:** Integrated mining and refining analysis ([Thunder Said Energy](https://thundersaidenergy.com/downloads/rare-earth-mining-and-refining-the-economics/)):
-
-| Parameter        | Typical Value          |
-|------------------|------------------------|
-| Break-even price | \~\$70/kg blended REO  |
-| Required IRR     | 20%                    |
-| CAPEX intensity  | \$150,000/tpa capacity |
-| Energy intensity | \>100 MWh/ton          |
-| CO₂ intensity    | \>20 tons CO₂/ton REO  |
+**Blended product economics.** A mine sells a basket, not an element, so the
+economics turn on a blended price across the oxides the deposit actually
+contains — which is why two projects with identical flowsheets and identical
+recoveries can have opposite verdicts. Break-even prices, required rates of
+return and capital intensities for integrated mining-and-refining projects
+circulate widely in consultancy notes. They are not quoted here: the ones
+traced for this book sit behind paywalls, carry no published methodology, and
+could not be checked against a primary filing. @obrien2024simplified, discussed
+above, is the peer-reviewed treatment of the same question.
 
 ### Acid Mine Drainage REE Recovery
-Techno-economic assessment of REE recovery from AMD using network sourcing [@larochelle2021fundamental]:
-
-**Key Findings:**
-
-- Capital cost and HCl consumption are dominant factors
-- Extractants: {index}`D2EHPA`, {index}`EHEHPA`, CA-12, {index}`Cyanex 272`, Cyanex 572
-- Economics improve with REE concentration in feed
-- Co-product credits (Co, Mn) enhance viability
+Acid mine drainage is an unusual feed: the rare earths are already in solution,
+already at low pH, and the water has to be treated whether or not anything is
+recovered from it, so part of the cost is borne by an existing obligation.
+@larochelle2021fundamental assessed recovery from a network of AMD sources
+rather than a single site, using the conventional organophosphorus extractants
+— {index}`D2EHPA`, {index}`EHEHPA`, CA-12, {index}`Cyanex 272` and Cyanex 572.
+Two conclusions carry beyond that study. Capital cost and hydrochloric acid
+consumption dominate the economics, and credits for the cobalt and manganese
+co-recovered with the rare earths materially improve them. Feed concentration
+matters in the direction expected, which is why a network of sources beats a
+single dilute one.
 
 **Monte Carlo Sensitivity:** The tornado analysis is unusually clean, and
 worth quoting for what it rules out as much as for what it finds: "only two
@@ -227,13 +256,18 @@ availability of the reagents at once.
 {index}`Life cycle assessment <life cycle assessment>` provides a comprehensive framework for evaluating the environmental impacts of REE production, enabling comparison of technologies and identification of improvement opportunities.
 
 ### LCA Framework for REE Production
-**System Boundaries:** REE LCA studies typically employ cradle-to-gate boundaries [@navarro2014life]:
+
+Rare earth life cycle studies conventionally draw a cradle-to-gate boundary
+[@navarro2014life], running from mining through beneficiation, cracking and
+leaching, separation, precipitation and calcination to a rare earth oxide:
 
 Mining → Beneficiation → Cracking/Leaching → Separation → {index}`Precipitation <precipitation>` → Calcination → REO
 
-**Functional Unit:** Most studies use 1 kg of rare earth oxide (REO) as the functional unit, though some analyze individual elements.
-
-**Impact Categories:**
+Most take 1 kg of rare earth oxide as the functional unit, though some report
+per individual element — a distinction that matters more than it sounds,
+because the burden allocated to a kilogram of dysprosium and to a kilogram of
+undifferentiated mixed oxide differ by a large factor. The impact categories
+usually reported, and what drives each in a rare earth flowsheet, are these:
 
 | Category | Unit | Key Contributors |
 | ---------- | ------ | ------------------ |

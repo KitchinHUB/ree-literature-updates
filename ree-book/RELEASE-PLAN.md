@@ -252,8 +252,11 @@ as unverifiable.
 2. Read the rendered site in a browser, chapter by chapter. This is PLAN.md's
    own last outstanding item and it has never been done. Figures, tables, math,
    cross-reference targets, the bibliography page, the `.bib` download.
-3. Decide what to do with the 157 uncited entries — Phase B will consume some of
-   them. The rest either go into `94-appendix-further-reading.md` or come out.
+3. ~~Decide what to do with the 157 uncited entries.~~ **Resolved.** The
+   rendered bibliography lists only the 538 works actually cited, and
+   `src/92-references.md` offers both `references-cited.bib` (538 entries) and
+   the full `references.bib` (637) as downloads. Nothing is silently dropped
+   and nothing uncited is presented as though it supported the text.
 4. Refresh `PLAN.md`. Its "Open items" still claims "No figures exist in any
    source document," which stopped being true when the nine figures were added.
 5. Re-read `src/00-preface.md` against the finished book and confirm every claim
@@ -275,3 +278,73 @@ Phase B is the schedule driver. Nine chapters, one commit each, with ch03 and
 ch05 being much larger than the rest.
 
 Phase C needs Phase B finished.
+
+## Phase C findings — the correctness pass
+
+The correctness pass ran ten automated scans over `src/`. Three of them found a
+class of problem that every earlier pass had missed, and they are recorded here
+because the same blind spots will recur in any future draft.
+
+### The blockquote-scaffold blind spot
+
+Earlier passes searched for draft scaffolding as `**Bold label:**`. That pattern
+misses `> Label:` entirely. A scan for `^> [A-Z][^*]{2,60}:\s*` found 17 more,
+all concentrated in ch07, together with 10 chemical equations formatted as
+blockquotes rather than as the `$` display math the rest of the book uses.
+**Search for a construct, not for one spelling of it.**
+
+### Line wrapping as a proxy for "reviewed"
+
+Rewritten prose in this book is hard-wrapped at about 78 characters. Untouched
+first-draft prose is one long line per paragraph. Unwrapped lines *that also
+lack a citation* located the genuinely unreviewed regions — ch07's industrial
+precedents and most of ch19 — and separated them from chapters that were merely
+never re-wrapped. This is the cheapest reliable signal available.
+
+### Vendor marketing presented as fact
+
+The most reputationally dangerous class, and the one an unfriendly reader would
+find first. ch19 cited a vendor's own product page for ">99% recovery and >99%
+purity", an investor-promotion aggregator for a named public company's CAPEX and
+OPEX, and a paywalled consultancy with no published methodology for break-even
+economics. ch09 had already handled the *same company* correctly, with an
+explicit instruction to treat its figures as claims rather than measurements —
+so the book contradicted itself on the identical question. All three ch19
+sources are gone.
+
+### The book disagreeing with itself
+
+ch19 asserted that deep eutectic solvents offer "lower toxicity and cost" while
+ch11 states that amino-acid-based DESs are up to 10⁵ times *more* toxic than
+conventional choline-chloride ones — citing `li2022high`, which is in this
+book's own bibliography. A claim can be individually plausible, correctly
+formatted, and flatly refuted forty pages away. ch19 now defers to ch11.
+
+Four smaller internal contradictions were found and fixed the same way: an
+LnCl₃ boiling point given as 1,500 °C in prose against ≳1,550 °C in the
+chapter's own sourced table (twice); an acid-leaching temperature of 150-200 °C
+against ch05's sourced 200 °C-and-above; a magnesium carbochlorination window of
+500-675 °C against the chapter text's 425-600 °C; and a rare earth conversion
+quoted as ">93-97%" and "better than 93 %" where the cited sources give 91-93 %.
+ch18 summarized three cited phosphor dissolution figures (89.4, 93.1, 94.6 %) as
+"90-95 %"; corrected to 89-95 %. ch09 credited a threefold rate enhancement to
+the extractant Cyanex 572 when its own source attributes it to the microfluidic
+contactor.
+
+**The general lesson.** Every one of these was internal. None needed a library,
+a subscription, or a domain expert — only a check of the book against itself.
+Do that check before reaching for external verification, because it is both
+cheaper and higher-yield.
+
+### What remains open
+
+- `needs-journal-access.md` lists the ten claims that rest on abstracts rather
+  than on the passage containing the number, plus the one deliberate gap
+  (ch05 states no overall recovery figure, because no source consulted supports
+  one). That file is the standing to-do list; it is the only correctness
+  category this project could not close on its own.
+- A human still has to read the rendered site. No automated check substitutes
+  for it, and it is still the last outstanding item.
+- GitHub Pages is not enabled on the repository. Enabling it is a settings
+  change only the owner can authorize: Settings → Pages → Source "GitHub
+  Actions".

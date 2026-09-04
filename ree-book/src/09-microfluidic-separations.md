@@ -201,18 +201,22 @@ rate. Drawn by `tools/figures/fig_flow_regimes.py`.
 
 The dominant separation mechanism employs cation exchange extraction using organophosphorus extractants [@xie2014critical]. The fundamental reaction---RE³⁺(aq) + 3(HA)₂(org) → RE(A₂H)₃(org) + 3H⁺(aq)---involves each REE ion extracted in a complex with six extractant molecules arranged as dimers [@jensen2002comparison].
 
-**Table 1: Common Extractants for REE Separation**
-
-| **Extractant** | **Target REEs** | **Key Application** |
+| Extractant | Where it is used in microfluidic work | Note |
 |----|----|----|
-| D2EHPA | All lanthanides | Most versatile, established |
-| Cyanex 572 | Heavy REEs (Er, Tm, Yb, Lu) | 3× faster extraction for Lu, Yb |
-| HEHEHP/P507 | Light REEs (La, Ce, Pr, Nd) | Lower acid stripping requirement |
-| TODGA | f-element separations | Tridentate ligand, high Ln affinity |
+| D2EHPA | All lanthanides | The established acidic organophosphorus reference case ([](#solvent-extraction-fundamentals)) |
+| Cyanex 572 | Heavy rare earths | The extractant in the Kolar mixed-oxide-leachate chip work [@kolar2016microfluidic] |
+| HEHEHP/P507 | Light rare earths | Strips at lower acidity than D2EHPA |
+| TODGA | f-element separations | Tridentate diglycolamide, high lanthanide affinity [@ansari2011chemistry] |
+
+: Extractants appearing in the microfluidic literature covered by this chapter.
+The column headings matter: this is a list of what has been run on a chip, not
+a ranking of extractants, and the rate enhancements reported for these systems
+belong to the contactor rather than to the extractant — the same chemistry in a
+mixer-settler does not go faster.
 
 Synergistic extraction systems combining multiple extractants produce non-linear enhancement effects: {index}`TODGA` + {index}`TBP <TBP (tributyl phosphate)>` in the {index}`ionic liquid <ionic liquids>` \[C4mim\]\[Tf2N\] raises extraction and intra-lanthanide selectivity together [@turanov2020solvent]. Studies of DMDOHEMA + {index}`HDEHP` systems reveal that synergy effects are quadratic in mole fraction, attributed to in-plane mixing entropy at bent extractant film interfaces [@elmaangar2020microfluidic]. A related but distinct route makes the ionic liquid itself the extractant: trioctylmethylammonium dioctyl diglycolamate, \[A336\]\[DGA\], dissolved in the fluorine-free ionic liquid diluent \[A336\]\[NO₃\], extracts neodymium and the other lanthanides from nitric acid media more strongly than the molecular acid its anion was prepared from [@rout2014solvent].
 
-Beyond solvent extraction, electrophoretic methods, particularly capillary zone electrophoresis with HIBA buffers, achieve complete separation of **14 lanthanides in under 6 minutes**---though primarily at analytical scale [@yelkenci2017separation]. Electrodialysis with EDTA chelation exploits differential chelation between heavy REEs (preferentially forming chelates) and light REEs (remaining as free cations) to achieve a **Dy/Nd separation factor of 125** with 93% Dy purity [@ding2023separation].
+Beyond solvent extraction, electrophoretic methods, particularly capillary zone electrophoresis with HIBA buffers, achieve complete separation of **14 lanthanides — the series less promethium, which has no stable isotope — in under 6 minutes**---though primarily at analytical scale [@yelkenci2017separation]. Electrodialysis with EDTA chelation exploits differential chelation between heavy REEs (preferentially forming chelates) and light REEs (remaining as free cations) to achieve a **Dy/Nd separation factor of 125** with 93% Dy purity [@ding2023separation].
 
 ## The Adjacent Lanthanide Challenge
 
@@ -468,6 +472,7 @@ Microfluidic systems have been validated with diverse REE-containing feedstocks 
 ### Scandium Recovery from Red Mud
 A specific application demonstrating microfluidic strategy for rapid Sc extraction from {index}`red mud` (bauxite residue) shows the technology's applicability to industrial waste streams [@feng2025microfluidic].
 
+(industrial-status-and-key-players)=
 ## Industrial Status and Key Players
 
 **True commercial-scale microfluidic REE separation plants do not yet exist.** The technology remains at research-to-pilot stages. Several companies are commercialising *related* intensified separations, and the figures below come from company announcements rather than from the peer-reviewed literature; treat them as claims, not measurements.
@@ -479,7 +484,14 @@ A specific application demonstrating microfluidic strategy for rapid Sc extracti
 - **REEgen**, a Cornell spinout, uses {index}`bioleaching` with *Gluconobacter oxydans* — the organism behind the biolixiviant work in [](#biological-and-biomimetic-separations) — rather than microfluidic contactors as such.
 
 ### Leading Research Groups
-**Tsinghua University's State Key Laboratory of Chemical Engineering** leads global research, with Prof. Jianhong Xu's group pioneering hollow droplet extraction and Janus nanoparticle-stabilized systems [@chen2022efficient]. Prof. Yundong Wang's team focuses on continuous REE recovery from wastewater
+
+Much of the droplet-microfluidics work cited in this chapter comes out of the
+State Key Laboratory of Chemical Engineering at Tsinghua University, where
+Jianhong Xu's group developed the hollow-droplet and Janus
+nanoparticle-stabilised systems discussed above [@chen2022efficient], and
+Yundong Wang's group has worked on continuous rare earth recovery from
+wastewater. This is an observation about where the cited papers originate, not
+a ranking of laboratories.
 
 (the-mine-on-a-chip-vision)=
 ## The Mine-on-a-Chip Vision

@@ -266,7 +266,7 @@ the separation is selective enough against everything else that is in it.
 
 The recurring result across all of these streams is that the recovery
 chemistry works — 90 % by hydrogen decrepitation, 75 % by selective roasting,
-73 % by copper-salt leaching on shredded e-waste, 90-95 % from activated
+73 % by copper-salt leaching on shredded e-waste, 89-95 % from activated
 phosphors, over 99 % from NiMH leachate — while the end-of-life recycling rate
 stays under one percent. The gap is not in the beaker.
 

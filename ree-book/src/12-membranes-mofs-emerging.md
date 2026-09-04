@@ -574,7 +574,10 @@ At 4 mol/L H⁺ and about 5 mol % adduct in the CO₂, the roasted concentrate g
 72 % La, 96 % Ce, 88 % Pr and 90 % Nd after 120 minutes; the NaOH-digested
 concentrate gave 93 % La, 100 % Ce, 99 % Pr and 101 % Nd after only 90 minutes.
 Caustic digestion is the faster route, and the difference is largest for
-lanthanum.
+lanthanum. The figures above 100 % are the paper's own, and they are the honest
+signal in the set: a recovery cannot exceed unity, so 101 % is a statement that
+the head assay and the product assay agree to within a few percent and no
+better. Read every number in this list as carrying that same uncertainty.
 
 Now the two conclusions that a bullet list would have hidden. First, in the
 authors' own summary, those recoveries are *similar to conventional leaching with

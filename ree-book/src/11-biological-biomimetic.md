@@ -595,6 +595,7 @@ that soil washing with a biosurfactant is a remediation operation, not a
 production one: the target is lowering a soil concentration, the leachate is
 dilute, and the rare earths recovered are a by-product of the cleanup.
 
+(siderophores-and-the-boundary-with-leaching)=
 ## Siderophores and the Boundary with Leaching
 
 Bioleaching of primary rare-earth ores --- the mechanisms of acidolysis,
@@ -862,6 +863,7 @@ chapter tabulated single-element purities of 99.9 % for europium, 97.1 % for
 lanthanum and 92.7 % for dysprosium from a bioconjugated affinity column. No
 source for those figures could be identified and they have been removed.
 
+(green-solvents-des-and-ils)=
 ## Green Solvents: Deep Eutectic Solvents and Ionic Liquids
 
 {index}`Deep eutectic solvents <deep eutectic solvent>` (DESs) and

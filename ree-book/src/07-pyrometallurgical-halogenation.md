@@ -77,7 +77,9 @@ lessons.
 ### Fundamental Thermodynamics of Halogenation
 Halogenation of metal oxides to form metal halides is governed by fundamental thermodynamic principles. The general reaction for direct halogenation is:
 
-> $\mathrm{M}_x\mathrm{O}_y + y\,\mathrm{X}_2 \rightarrow x\,\mathrm{MX}_{2y/x} + \tfrac{y}{2}\,\mathrm{O}_2$
+$$
+\mathrm{M}_x\mathrm{O}_y + y\,\mathrm{X}_2 \rightarrow x\,\mathrm{MX}_{2y/x} + \tfrac{y}{2}\,\mathrm{O}_2
+$$
 
 Whether that reaction needs help depends on the oxide. For the sesquioxides it is
 already downhill: from the standard free energies of formation of La₂O₃ and
@@ -90,7 +92,9 @@ product-side penalty, and for the rare earths it also drives the reaction past
 the oxychloride intermediate that otherwise stalls conversion
 [@pomiro2021panoramic]:
 
-> $\mathrm{M}_x\mathrm{O}_y + y\,\mathrm{C} + y\,\mathrm{X}_2 \rightarrow x\,\mathrm{MX}_{2y/x} + y\,\mathrm{CO}$ (carbohalogenation)
+$$
+\mathrm{M}_x\mathrm{O}_y + y\,\mathrm{C} + y\,\mathrm{X}_2 \rightarrow x\,\mathrm{MX}_{2y/x} + y\,\mathrm{CO}
+$$
 
 The thermodynamic favorability of carbohalogenation varies with the halogen used. The bond energies and electronegativity of the halogens influence reaction thermodynamics:
 
@@ -102,19 +106,24 @@ The thermodynamic favorability of carbohalogenation varies with the halogen used
 | Iodine (I) | 2.66 | 151 | Weak | 250-500 | Laboratory scale |
 
 ### Comparison of Halogens (F, Cl, Br, I)
-Each halogen offers distinct advantages and limitations for rare earth processing:
+Each halogen offers distinct advantages and limitations for rare earth
+processing, and the four divide cleanly into two that matter and two that do
+not.
 
-> Fluorine/HF:
+**Fluorine and HF** produce the rare earth fluorides that
+{index}`molten salt electrolysis` requires, and the strong RE-F bond makes them
+thermodynamically stable. The cost is handling: fluorine and HF are corrosive
+and acutely toxic, and anhydrous HF in particular demands purpose-built
+facilities and safety protocols. Fluorination is treated in its own section
+below.
 
-Fluorination produces rare earth fluorides essential for {index}`molten salt electrolysis`. The strong RE-F bond provides high thermodynamic stability. However, fluorine and HF are highly corrosive and toxic, requiring specialized equipment and safety protocols. Anhydrous HF (AHF) is particularly hazardous, necessitating custom AHF-safe laboratories.
+**Chlorine** is the industrially mature choice, and the one this chapter is
+mostly about. It is less reactive than fluorine and correspondingly easier to
+contain; the rare earth chlorides it makes are highly water-soluble, so
+downstream processing is a wash rather than a dissolution problem; and the
+reaction runs in the 600-900 °C window at pilot and commercial scale in China.
 
-> Chlorine:
-
-Carbochlorination is the most industrially mature halogenation process for REEs. Chlorine is less reactive than fluorine, allowing easier handling, and rare earth chlorides are highly water-soluble, enabling simple downstream processing. The process operates at moderate temperatures (600-900°C) and has been demonstrated at pilot and commercial scale in China.
-
-> Bromine and iodine:
-
-Neither halogen has a separations role. Lanthanide bromides and iodides are made
+**Bromine and iodine.** Neither halogen has a separations role. Lanthanide bromides and iodides are made
 by direct combination of the metal with the halogen, or from ammonium halides,
 and are used as precursors in organometallic and molten-salt chemistry rather
 than as a route out of an ore. They are also strongly hygroscopic and hydrolyse
@@ -356,7 +365,9 @@ be read as a proposal. A cascade condensation train downstream of the reactor so
 ### Direct Fluorination with HF
 The conversion of rare earth oxides to fluorides is essential for molten salt electrolysis metal production. Direct fluorination with anhydrous hydrogen fluoride (AHF) is the industrial standard:
 
-> RE₂O₃ + 6HF → 2REF₃ + 3H₂O
+$$
+\mathrm{RE_2O_3} + 6\,\mathrm{HF} \rightarrow 2\,\mathrm{REF_3} + 3\,\mathrm{H_2O}
+$$
 
 The reaction is run dry, on the oxide or on a carbonate precursor, at a few
 hundred degrees; conversion is essentially quantitative because the RE-F bond is
@@ -459,11 +470,13 @@ in China, and the great majority of that capacity is the oxide-fluoride cell
 {index}`fluoride` electrolyte — an REF₃-LiF melt — and reduced on the cathode
 while a consumable carbon anode burns:
 
-> Cathode:  RE³⁺ + 3 e⁻ → RE(metal)
->
-> Anode:    2 O²⁻ + C → CO₂ + 4 e⁻
->
-> Overall:  2 REO₁.₅ + 3 C → 2 RE + 3 CO₂
+$$
+\begin{aligned}
+\text{Cathode:}\quad & \mathrm{RE^{3+}} + 3\,e^- \rightarrow \mathrm{RE\,(metal)} \\
+\text{Anode:}\quad & 2\,\mathrm{O^{2-}} + \mathrm{C} \rightarrow \mathrm{CO_2} + 4\,e^- \\
+\text{Overall:}\quad & 2\,\mathrm{REO_{1.5}} + 3\,\mathrm{C} \rightarrow 2\,\mathrm{RE} + 3\,\mathrm{CO_2}
+\end{aligned}
+$$
 
 The fluorides are the solvent, not the reagent: the reducible species is the
 dissolved oxide, and the carbon anode burns to CO/CO₂ exactly as in aluminium
@@ -475,11 +488,13 @@ than a laboratory curiosity.
 
 The chloride cell is the alternative, and it is a genuinely different machine:
 
-> Cathode:  RE³⁺ + 3 e⁻ → RE(metal)
->
-> Anode:    2 Cl⁻ → Cl₂(g) + 2 e⁻
->
-> Overall:  2 RECl₃ (in LiCl-KCl eutectic) → 2 RE(metal) + 3 Cl₂(g)
+$$
+\begin{aligned}
+\text{Cathode:}\quad & \mathrm{RE^{3+}} + 3\,e^- \rightarrow \mathrm{RE\,(metal)} \\
+\text{Anode:}\quad & 2\,\mathrm{Cl^-} \rightarrow \mathrm{Cl_2(g)} + 2\,e^- \\
+\text{Overall:}\quad & 2\,\mathrm{RECl_3}\ (\text{in LiCl-KCl eutectic}) \rightarrow 2\,\mathrm{RE\,(metal)} + 3\,\mathrm{Cl_2(g)}
+\end{aligned}
+$$
 
 Here the rare earth chloride is the reagent, the anode is inert rather than
 consumable, and the anode product is chlorine, which goes back to the
@@ -534,15 +549,24 @@ potentials so negative that most solvents decompose first.
 ## Comparison with Conventional Methods
 
 ### Technical Performance
-| **Parameter** | **Carbochlorination** | **Conventional Hydrometallurgy** |
+
+| Parameter | Carbochlorination | Conventional hydrometallurgy |
 |----|----|----|
-| Operating Temperature | 600-900°C | 150-200°C (acid); 140-150°C (alkali) |
-| REE Recovery Rate | \>93-97% | 90-98% |
-| Product Form | Anhydrous RECl₃ (water soluble) | REE sulfates/hydroxides |
-| Process Steps | Single step + water wash | Multiple steps (roasting, leaching, precipitation) |
-| Reagent Consumption | Cl₂ + C only | H₂SO₄, NaOH, HCl, organics |
-| Process Time | 60 minutes (chlorination) | Several hours to days |
-| Selectivity | Moderate (based on volatility) | High (via solvent extraction) |
+| Operating temperature | 600-900 °C [@xue2025onestep; @xue2026clean] | 200 °C and above for concentrated H₂SO₄; 140-160 °C for 60-70 wt% NaOH [@iaea2011radiation] |
+| Rare earth conversion | 91-93 % chlorination of the rare earths at laboratory scale [@xue2025onestep; @xue2026clean] | Not stated as a single figure; see [](#hydrometallurgical-leaching) |
+| Product form | Anhydrous RECl₃, water soluble | Rare earth sulfates or hydroxides |
+| Process steps | Chlorination plus a water wash | Roast, leach, precipitate |
+| Reagent consumption | Cl₂ and C | H₂SO₄ or NaOH, then HCl and organics downstream |
+| Residence time | 60 min at laboratory scale [@xue2025onestep; @xue2026clean] | Hours, per stage |
+| Intra-series selectivity | None | None in the leach; achieved downstream by solvent extraction |
+
+: Carbochlorination against the conventional hydrometallurgical route. The
+conversion row is deliberately not a like-for-like recovery comparison: the
+carbochlorination figures are chlorination rates measured on a concentrate at
+laboratory scale, while no single overall recovery figure for the conventional
+route was traceable to a primary source for this book. Two numbers of different
+kinds should not be set against each other, and no overall winner is declared
+on this row.
 
 The advantages that follow from the chemistry of the preceding sections are
 these: the product is an anhydrous chloride, which is what a molten salt cell
@@ -674,15 +698,15 @@ expansion of chloride capacity in China [@usgs2020titanium]. The route and its
 place in titanium metallurgy are reviewed by Zhang and co-workers
 [@zhang2011literature].
 
-> The Chloride Process for TiO₂/Ti Metal:
-
 In the chloride process, natural rutile, synthetic rutile, chloride-grade
 ilmenite or titanium slag is converted to TiCl₄ by chlorination in the presence
 of petroleum coke; the TiCl₄ is then oxidized with air or oxygen at about
 1000 °C and the resulting TiO₂ is calcined to strip residual chlorine
 [@usgs2020titanium]:
 
-> TiO₂ + 2C + 2Cl₂ → TiCl₄ + 2CO
+$$
+\mathrm{TiO_2} + 2\,\mathrm{C} + 2\,\mathrm{Cl_2} \rightarrow \mathrm{TiCl_4} + 2\,\mathrm{CO}
+$$
 
 The chlorinator is a fluidized bed. Morris and Jensen measured chlorination
 rates of Australian rutile in a fluidized bed with CO and with coke as the
@@ -697,9 +721,7 @@ Feedstock grades run from rutile (\>95 % TiO₂) through synthetic rutile and
 upgraded ilmenite slag; the reductant is petroleum coke; and the product is
 liquid TiCl₄, boiling at 136 °C.
 
-> Purification and Metal Production:
-
-The crude TiCl₄ contains impurities including FeCl₃, AlCl₃, VOCl₃, SnCl₄, and SiCl₄. These are removed through a combination of [@habashi1997handbook]:
+The crude TiCl₄ leaving the chlorinator carries FeCl₃, AlCl₃, VOCl₃, SnCl₄ and SiCl₄, and the purification train that removes them is instructive because it is exactly the kind of train a rare earth chlorinator would need [@habashi1997handbook]:
 
 - Selective condensation, exploiting the boiling-point spread among FeCl₃, AlCl₃ and TiCl₄
 
@@ -708,8 +730,6 @@ The crude TiCl₄ contains impurities including FeCl₃, AlCl₃, VOCl₃, SnCl�
 - Multi-stage fractional distillation to achieve \>99.9% purity
 
 - The purified TiCl₄ is reduced to titanium metal via the Kroll process (Mg reduction) or Hunter process (Na reduction)
-
-> Major Global Producers:
 
 The chloride process is run by a small number of large firms. The USGS lists
 the U.S. chloride-process pigment producers as Chemours, INEOS Pigments,
@@ -737,7 +757,9 @@ This separation challenge parallels the difficulties in separating individual ra
 ### Industrial Zr Carbochlorination Process
 The production of nuclear-grade zirconium begins with carbochlorination of zircon sand. The process is conducted in fluidized bed reactors at temperatures of 1000-1200°C [@xu2015production; @yin2024preparation]:
 
-> ZrSiO₄ + 4C + 4Cl₂ → ZrCl₄ + SiCl₄ + 4CO
+$$
+\mathrm{ZrSiO_4} + 4\,\mathrm{C} + 4\,\mathrm{Cl_2} \rightarrow \mathrm{ZrCl_4} + \mathrm{SiCl_4} + 4\,\mathrm{CO}
+$$
 
 Key process characteristics include:
 
@@ -767,52 +789,52 @@ The process uses a distillation column with multiple plates, each containing a l
 - The purified ZrCl₄ is then reduced to zirconium metal via the Kroll process (magnesiothermic reduction)
 
 ### Lessons and Synergies for REE Processing
-The established Ti and Zr/Hf carbochlorination industries offer several important lessons and potential synergies for rare earth element processing:
 
-> Technology Transfer Opportunities:
+The titanium and zirconium industries establish three things that carry over to
+a rare earth chlorinator, and one that does not.
 
-- Fluidized bed reactor design and operation at 1000°C+ with chlorine atmospheres
+What carries over is engineering. Fluidized beds are operated continuously
+above 1000 °C in a chlorine atmosphere; the materials of construction that
+survive that duty are known; chloride vapours that sublime rather than
+condense to a liquid are handled routinely; chlorine is recycled through
+off-gas treatment at commercial scale; and there is a workforce trained in
+large-scale chlorometallurgy. None of this has to be invented for the rare
+earths. A plant already running a titanium or zirconium chlorinator has the
+chlorine supply, the scrubbing, the reactor expertise and the product handling
+in place, which is a real argument for siting a rare earth chlorinator
+alongside one. We are not aware of anyone having done it.
 
-- Materials of construction resistant to high-temperature chlorine corrosion
+What does not carry over is the separation. The Zr/Hf case is the one most
+often invoked as the analogy, and it is worth being precise about why it
+flatters. Zirconium and hafnium are separated industrially by molten salt
+extractive distillation because ZrCl₄ and HfCl₄ are both volatile — they
+sublime near 331 °C — and differ slightly in vapour pressure, so a column with
+a dozen or so plates can do the job [@chen2025process]. The rare earth
+trichlorides are not volatile in that sense: by the table at the head of this
+chapter they melt between about 580 °C (TbCl₃) and 930 °C (LuCl₃) and do not
+reach a boiling point below roughly 1,550 °C
+[@seifert2005melting; @brunetti2000vaporization]. A vapour-pressure separation among
+them is therefore not the same operation carried out on different feed; it is a
+different operation, and no one has demonstrated it. The problem is also larger
+by an order of magnitude in the number of components — two elements against
+seventeen, and seventeen that must be separated from each other, not merely
+purified of one contaminant.
 
-- Chloride condensation and handling systems for subliming metal chlorides
+So the honest statement of the precedent is this. The industrial history of
+carbochlorination shows that the *chlorination* half of a rare earth flowsheet
+is a solved engineering problem awaiting an application. It shows nothing about
+the *separation* half, which is the half this book is about, and it should not
+be cited as though it did. The claim that these precedents "de-risk" rare earth
+carbochlorination is true only of the reactor, and it is precisely the step that
+was never the risk.
 
-- Chlorine recycling and off-gas treatment systems
-
-- Safety protocols for large-scale chlorine operations
-
-> Potential for Integrated Operations:
-
-Facilities already operating carbochlorination for titanium (TiCl₄ production) or zirconium could potentially integrate rare earth chloride production with relatively modest additional investment. Shared infrastructure would include:
-
-- Chlorine supply and distribution systems
-
-- High-temperature reactor expertise and maintenance capabilities
-
-- Chloride product handling and packaging
-
-- Environmental control and chlorine scrubbing systems
-
-- Trained workforce familiar with chlorometallurgical operations
-
-> Adaptation of Separation Technologies:
-
-The molten salt extractive distillation technology used for Zr/Hf separation could potentially be adapted for REE chloride separation, exploiting differences in vapor pressure and molten salt solubility among the various REE chlorides. While REE separation is more complex (17 elements vs. 2), the fundamental principles are analogous.
-
-| **Parameter** | **Zr/Hf Processing** | **REE Processing (Potential)** |
-|----|----|----|
-| Carbochlorination Temp. | 1000-1200°C | 600-900°C (lower) |
-| Number of Elements | 2 (Zr, Hf) | 17 (lanthanides + Sc, Y) |
-| Separation Method | Molten salt distillation | Distillation, selective condensation |
-| Industrial Status | Commercial (decades) | Pilot/demo scale |
-| Primary Driver | Nuclear industry | Clean energy, electronics |
-
-The successful industrial implementation of carbochlorination for titanium pigment production and nuclear-grade zirconium demonstrates that the fundamental process challenges---high-temperature chlorine handling, chloride separation, and product purification---can be solved at commercial scale. This precedent significantly de-risks the development of carbochlorination for rare earth elements.
 
 ### Aluminum Chloride Production from Alumina
 Anhydrous aluminum chloride (AlCl₃) production via carbochlorination represents another important industrial precedent. First demonstrated by Hans Christian Oersted in 1825, it is today a routine industrial operation for making the anhydrous chloride as a chemical commodity — though not, as discussed below, as a route to aluminium metal. The carbochlorination of alumina follows the reaction:
 
-> Al₂O₃ + 3C + 3Cl₂ → 2AlCl₃ + 3CO
+$$
+\mathrm{Al_2O_3} + 3\,\mathrm{C} + 3\,\mathrm{Cl_2} \rightarrow 2\,\mathrm{AlCl_3} + 3\,\mathrm{CO}
+$$
 
 Key process characteristics include:
 
@@ -826,8 +848,6 @@ Key process characteristics include:
 
 - Product: AlCl₃ vapor condensed as solid (sublimation point \~180°C)
 
-> Industrial Applications:
-
 The aluminum chloride process has garnered renewed interest as a potential alternative to the Hall-Héroult process for primary aluminum production. Work on the bauxite chloride route has shown [@namboothiri2017bauxite]:
 
 - Bauxite can be carbochlorinated directly, producing mixed chlorides (AlCl₃, FeCl₃, SiCl₄, TiCl₄)
@@ -840,8 +860,6 @@ The aluminum chloride process has garnered renewed interest as a potential alter
 
 - AlCl₃ is subsequently electrolyzed to produce aluminum metal
 
-> Relevance to REE Recycling:
-
 Øye's account of the chloride route is concerned with aluminium alone and says
 nothing about rare earths [@oye2019chloride]. The extension is ours, and it is
 a conjecture rather than a result: end-of-life materials that carry both
@@ -851,12 +869,15 @@ atmosphere, so a single carbochlorination step would in principle chloridize
 both. Whether the resulting AlCl₃/REECl₃ mixture is easier or harder to work up
 than the separate streams is unstudied, and the volatility gap between AlCl₃,
 which sublimes at 180 °C, and the rare earth chlorides, which do not boil below
-about 1500 °C, is the obvious place to start.
+about 1,550 °C [@seifert2005melting; @brunetti2000vaporization], is the obvious
+place to start.
 
 ### Magnesium Production via Chlorination
 Magnesium production via the chloride route has a long industrial history, with carbochlorination serving as an important alternative to the seawater route for producing anhydrous MgCl₂ feedstock for electrolysis [@gaballah1999chlorination]. The carbochlorination reaction is:
 
-> MgO + C + Cl₂ → MgCl₂ + CO
+$$
+\mathrm{MgO} + \mathrm{C} + \mathrm{Cl_2} \rightarrow \mathrm{MgCl_2} + \mathrm{CO}
+$$
 
 Thermogravimetric studies have characterized the carbochlorination of MgO [@gaballah1999chlorination]:
 
@@ -872,8 +893,6 @@ Note that the reductant in this study is carbon *monoxide*, not solid carbon:
 these are Cl₂ + CO gas mixtures, and the numbers should not be read as
 solid-carbon reduction results. No conversion percentages are reported.
 
-> Historical Industrial Implementation:
-
 Carbochlorination of magnesium oxide from magnesite, silicates, or hydroxides was practiced industrially at several facilities [@gupta2003chemical]:
 
 - IG Farben process (Germany, pre-WWII)
@@ -884,18 +903,18 @@ Carbochlorination of magnesium oxide from magnesite, silicates, or hydroxides wa
 
 - The Dow seawater process at Freeport, Texas, which took a different route through Mg(OH)₂ and closed in 1998
 
-> Integration with Titanium/Zirconium Production:
-
 Magnesium and chlorine are intimately linked with titanium and zirconium production through the Kroll process, which uses magnesium to reduce TiCl₄ and ZrCl₄ to metals, producing MgCl₂ as a byproduct [@usgs2020titanium]. That MgCl₂ is electrolyzed to regenerate magnesium and chlorine, closing the loop [@habashi1997handbook]. A rare earth chlorinator sited next to such a plant would have a chlorine supply and a magnesium supply already in place; we know of no attempt to do it.
 
 ### Niobium and Tantalum Separation via Chlorination
 The separation of niobium and tantalum by chlorination and distillation represents one of the most successful applications of chloride-based separation for chemically similar elements---directly analogous to the REE separation challenge [@habashi1997handbook]. The carbochlorination reactions are:
 
-> Nb₂O₅ + 5C + 5Cl₂ → 2NbCl₅ + 5CO
->
-> Ta₂O₅ + 5C + 5Cl₂ → 2TaCl₅ + 5CO
->
-> Process Characteristics:
+$$
+\mathrm{Nb_2O_5} + 5\,\mathrm{C} + 5\,\mathrm{Cl_2} \rightarrow 2\,\mathrm{NbCl_5} + 5\,\mathrm{CO}
+$$
+
+$$
+\mathrm{Ta_2O_5} + 5\,\mathrm{C} + 5\,\mathrm{Cl_2} \rightarrow 2\,\mathrm{TaCl_5} + 5\,\mathrm{CO}
+$$
 
 Research on tin slag processing has demonstrated the effectiveness of carbochlorination for Nb/Ta recovery [@gupta1984extractive]:
 
@@ -909,8 +928,6 @@ Research on tin slag processing has demonstrated the effectiveness of carbochlor
 
 - Carbochlorination significantly more effective than direct chlorination
 
-> Separation by Distillation:
-
 The chlorination step itself has been characterized kinetically in a fixed bed between 800 and 1000 °C, where the products are gaseous and thermodynamics gives the pentachlorides; solid carbon is markedly more reactive than CO as the reductant [@yang1999carbochlorination]. The key advantage of the chloride route for Nb/Ta is what comes after: these very similar elements can be separated by fractional distillation of the pentachlorides [@gupta1984extractive; @habashi1997handbook]:
 
 - NbCl₅ boiling point: 248°C
@@ -921,27 +938,34 @@ The chlorination step itself has been characterized kinetically in a fixed bed b
 
 - Chlorides can be hydrolyzed to hydroxides and calcined to high-purity oxides
 
-> Lessons for REE Processing:
-
 The Nb/Ta separation precedent is particularly instructive for REE processing because it demonstrates successful industrial separation of chemically similar elements via chloride distillation. While REE separation is more complex (17 elements vs. 2), the fundamental principle of exploiting vapor pressure differences among chlorides is directly applicable. Whether a cascade of distillation stages could be made to do the same for the rare earth chlorides is an open question and not one the Nb/Ta precedent settles. The analogy should not be pressed too far, though: most Nb/Ta separation practised today is not chloride distillation but MIBK solvent extraction from HF media, and the reason is the same one that keeps the rare earths in solvent extraction — a liquid-liquid contactor buys many more theoretical stages per unit of capital than a high-temperature column does.
 
-> Summary of Industrial Carbochlorination Precedents:
+The five precedents are collected below. Only the temperature and the status
+columns are given, because those are the two the sources cited in this section
+actually establish; production tonnages and market drivers vary by year and
+source and are not reproduced here.
 
-| **Parameter** | **Titanium** | **Zirconium** | **Aluminum** | **Magnesium** | **Nb/Ta** | **REE (Potential)** |
-|----|----|----|----|----|----|----|
-| Global Scale | Millions t/yr TiCl₄ | Thousands t/yr | Large scale | Historical | Specialty | To be developed |
-| Temperature | 900-1050°C | 1000-1200°C | 500-700°C | 500-675°C | 500-1000°C | 600-900°C |
-| Status | Commercial | Commercial | Commercial (chemical AlCl₃); abandoned for metal | Historical | Commercial, specialty | Pilot and laboratory |
-| Key Driver | Pigments, aerospace | Nuclear | Alt. Al route | Metal production | Electronics | Clean energy |
-| Separation | Distillation | Molten salt | Condensation | Electrolysis | Distillation | Multiple |
+| System | Chlorination temperature | How the chlorides are separated | Status |
+|----|----|----|----|
+| Titanium | 870-1040 °C, fluidized bed [@morris1976fluidized] | Selective condensation and fractional distillation of TiCl₄ [@habashi1997handbook] | Commercial since 1948 [@usgs2020titanium] |
+| Zirconium/hafnium | 1000-1200 °C, fluidized bed [@xu2015production; @yin2024preparation] | Molten salt extractive distillation, KAlCl₄ [@chen2025process] | Commercial [@chen2025process] |
+| Aluminium | 500-700 °C, fluidized bed [@namboothiri2017bauxite] | Condensation; AlCl₃ sublimes at 181 °C | Commercial for chemical AlCl₃; abandoned for metal (Alcoa, 1976-1985) [@oye2019chloride] |
+| Magnesium | 425-600 °C for the kinetics; below 1000 °C overall [@gaballah1999chlorination] | Electrolysis of MgCl₂ [@gupta2003chemical] | Historical; last chlorination plant closed 2002 [@gupta2003chemical] |
+| Niobium/tantalum | 500-1000 °C [@gupta1984extractive; @yang1999carbochlorination] | Fractional distillation of the pentachlorides, b.p. 248 and 236 °C [@gupta1984extractive] | Commercial but specialty; most Nb/Ta separation today is solvent extraction [@habashi1997handbook] |
+| **Rare earths** | 600-900 °C | **No demonstrated route** — LnCl₃ do not boil below ≈1,550 °C [@seifert2005melting; @brunetti2000vaporization] | Pilot and laboratory |
+
+: Industrial carbochlorination precedents. The pattern the last row makes plain
+is that every commercial precedent pairs chlorination with a *volatility-based*
+separation of the resulting chlorides, and that is the step the rare earths do
+not offer.
 
 (outlook)=
 ## Outlook
 
 Carbochlorination converts rare earth oxides to anhydrous chlorides at 600-900 °C,
 and it does so for every element in the series. The thermodynamics are
-favourable across the lanthanides plus scandium and yttrium, laboratory and
-pilot work reports better than 93 % conversion on light rare earth oxides, and
+favourable across the lanthanides plus scandium and yttrium, laboratory work
+reports chlorination rates of 91-93 % on light rare earth concentrate, and
 the route works on primary concentrates — bastnäsite, monazite, xenotime — as
 well as on magnet scrap and phosphor waste. The reaction is practised
 industrially in China and has been proven at enormous scale in the neighbouring
