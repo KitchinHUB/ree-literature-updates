@@ -1,0 +1,48 @@
+/* Draft watermark.
+ *
+ * This book is under review and has not been read end to end in rendered
+ * form. The watermark says so on every page. To remove it when the draft
+ * ends, delete the `style:` line from myst.yml -- this file can stay.
+ *
+ * Deliberately faint: it has to be legible as a status marker without
+ * competing with the text underneath it. pointer-events and user-select are
+ * off so it never intercepts a click or lands in a copied selection.
+ */
+
+body::after {
+  content: "DRAFT";
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-30deg);
+  font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
+  font-size: min(20vw, 16rem);
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  white-space: nowrap;
+  color: rgb(15 23 42 / 0.055);
+  z-index: 9999;
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* The book theme toggles dark mode with a `dark` class on <html>. */
+html.dark body::after {
+  color: rgb(226 232 240 / 0.075);
+}
+
+/* Print needs more contrast than a screen: a photocopied page that has lost
+ * the watermark is exactly the artifact this is meant to prevent. */
+@media print {
+  body::after {
+    position: fixed;
+    color: rgb(15 23 42 / 0.11);
+  }
+}
+
+/* Respect a reader who has asked for less visual noise, and skip the
+ * watermark on very small screens where it spans the whole column. */
+@media (max-width: 480px) {
+  body::after { font-size: 28vw; }
+}

@@ -73,3 +73,5 @@ site:
   template: book-theme
   options:
     folders: true
+    # Draft watermark on every page. Delete this line to remove it.
+    style: ./static/draft.css
