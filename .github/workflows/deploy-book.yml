@@ -1,0 +1,59 @@
+# Build the MyST book in ree-book/ and publish it to GitHub Pages.
+#
+# The site is served from a repository subpath
+# (https://kitchinhub.github.io/ree-literature-updates/), so BASE_URL must be
+# set at build time or every CSS, JS, and internal link in the output resolves
+# against the domain root and 404s. See
+# https://mystmd.org/guide/deployment-github-pages
+name: Deploy book
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'ree-book/**'
+      - '.github/workflows/deploy-book.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# One deployment at a time; do not cancel a run that is already publishing.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    env:
+      BASE_URL: /${{ github.event.repository.name }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Build the book
+        working-directory: ree-book
+        run: npx -y mystmd build --html
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ree-book/_build/html
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

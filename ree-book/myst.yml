@@ -18,6 +18,7 @@ project:
       affiliations:
         - Carnegie Mellon University
   github: https://github.com/KitchinHUB/ree-literature-updates
+  license: CC-BY-4.0
   bibliography:
     - references.bib
   toc:
