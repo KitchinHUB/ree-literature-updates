@@ -272,11 +272,15 @@ def main() -> int:
         "# Citation verification report",
         "",
         f"- Entries checked: **{total}**",
+        # Count every route, or the three numbers will not add up to the
+        # total and a reader will rightly distrust the rest of the report.
         f"- Verified: **{len(verified)}** "
         f"({sum(1 for e in verified if e.get('_verified') == 'crossref-doi')} "
         f"by resolving DOI, "
         f"{sum(1 for e in verified if e.get('_verified') == 'url-live')} "
-        "by live URL)",
+        f"by live URL, "
+        f"{sum(1 for e in verified if e.get('_verified') == 'isbn')} "
+        "by ISBN)",
         f"- Rejected: **{len(rejected)}**",
         f"- Author fields repaired from CrossRef: **{len(repaired_authors)}**",
         f"- Titles diverging from CrossRef: **{len(mismatched_titles)}**",

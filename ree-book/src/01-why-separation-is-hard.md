@@ -53,11 +53,36 @@ The 17 rare earth elements (15 lanthanides plus {index}`scandium` and {index}`yt
 
 (supply-chain-concerns)=
 ## Supply Chain Concerns
-China dominates the global REE supply chain:
+China dominates the global rare earth supply chain, and it is worth being
+precise about which part of it, because the concentration is not the same at
+every step and the numbers in general circulation are not all traceable.
 
-- **\~70%** of global rare earth mining
-- **\~90%** of separation and processing
-- **\~93%** of magnet manufacturing
-- **\~92%** of {index}`neodymium`-iron-boron ({index}`NdFeB`) magnet production
+**Mining.** In 2025 China produced 270,000 t of a world total of 390,000 t of
+rare-earth oxide equivalent — **69%** [@usgs2026mineral]. Burma added 22,000 t,
+the United States 51,000 t, Australia 29,000 t.
 
-In April 2025, China imposed new export controls on seven rare earth elements and permanent magnets, requiring foreign firms to obtain Chinese government approval for exports containing even trace amounts (≥0.1%) of Chinese-origin heavy rare earth materials ([CSIS](https://www.csis.org/analysis/consequences-chinas-new-rare-earths-export-restrictions)).
+**Separated product.** No agency publishes separation capacity by country, so
+the sharpest available measure is where separated material actually comes from.
+Over 2021–24 the United States imported **71%** of its rare-earth compounds and
+metals from China, 13% from Malaysia, 5% from Japan, with Estonia next
+[@usgs2026mineral] — and the Malaysian and Estonian plants run on concentrates
+produced elsewhere, so those shares understate how much of the chain runs
+through Chinese-separated feed. For the heavy elements the concentration is
+sharper still: US net import reliance for heavy rare-earth compounds and metals
+is **100%**, and of those imports terbium, holmium and lutetium are **100%**
+from China, ytterbium 86% [@usgs2026mineral].
+
+The figures usually quoted for the middle of the chain — around 90% of
+separation capacity, and a similar share of magnet manufacturing — are probably
+close to right, but this book could not trace either to a primary source during
+its verification pass, so neither is asserted here. What can be verified is
+above, and [](#the-industrial-landscape) sets out who actually operates separation
+plants and at what published capacity.
+
+**Export controls.** In April 2025 China tightened export controls on rare
+earths, adding specific controls on alloys, compounds, metals and oxides of
+samarium, gadolinium, terbium, dysprosium, lutetium, {index}`scandium` and
+{index}`yttrium`. In October it expanded the controls to europium, holmium,
+erbium, thulium and ytterbium; in November it suspended the October expansion
+for one year, while the April controls remained in effect and general export
+licences began to be issued to selected exporters [@usgs2026mineral].

@@ -33,7 +33,12 @@ Traditional REE separation creates significant environmental challenges:
 - **Organic solvent use** in {index}`liquid-liquid extraction <solvent extraction>`
 - **Habitat destruction** from mining operations
 
-Some of the highest pollution levels on Earth are associated with REE production in China, where \>70% is mined and \>95% is refined.
+Some of the highest pollution levels on Earth are associated with rare earth
+production in China, which mined **69%** of world output in 2025 and supplied
+**71%** of United States imports of rare-earth compounds and metals over
+2021–24 [@usgs2026mineral]. The share of world *separation* capacity is commonly
+put near 90%, but no agency publishes it and this book could not trace the
+figure to a primary source; see [](#supply-chain-concerns).
 
 ### Green Chemistry Approaches
 #### Deep Eutectic Solvents (DESs)

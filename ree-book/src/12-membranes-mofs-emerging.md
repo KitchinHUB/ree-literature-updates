@@ -503,15 +503,25 @@ The NaOH digestion route achieves near-complete extraction in shorter times due 
 - Semi-continuous with CO₂ recirculation
 - {index}`Counter-current <countercurrent cascade>` multi-stage extraction
 
-**Industrial-Scale Design (2025 TEA Study):** Technoeconomic analysis of a 4000 L reactor facility in Ontario, Canada [@azimi2025technoeconomic]:
+**A design study, not a plant.** The largest number attached to this route is a
+technoeconomic analysis of a hypothetical 4,000 L reactor facility in Ontario
+[@azimi2025technoeconomic]. Nothing in the table below was measured: the reactor
+volume is a design choice, the costs are modelled from it, and the recovery and
+purity are the targets the model assumes in order to price the product. They are
+useful as a statement of what the route would have to achieve to be worth
+building, and they are not evidence that it does.
 
-| Parameter      | Value               |
-|----------------|---------------------|
-| Reactor volume | 4000 L              |
-| CAPEX          | \$13.7-14.6 million |
-| Year 1 OPEX    | \~\$3 million       |
-| REE recovery   | \>95%               |
-| Purity         | Battery-grade       |
+| Parameter      | Value               | What it is          |
+|----------------|---------------------|---------------------|
+| Reactor volume | 4000 L              | design basis        |
+| CAPEX          | \$13.7-14.6 million | modelled            |
+| Year 1 OPEX    | \~\$3 million       | modelled            |
+| REE recovery   | \>95%               | assumed target      |
+| Purity         | Battery-grade       | assumed target      |
+
+Every supercritical-CO₂ result cited in this chapter is bench-scale, and none of
+the sources reports the vessel size it was obtained in. The gap between that and
+a 4,000 L reactor is the whole of the scale-up problem, and it is unmeasured.
 
 **Scale-Up Considerations:**
 
