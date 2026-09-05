@@ -21,6 +21,12 @@ project:
   license: CC-BY-4.0
   bibliography:
     - references.bib
+  exports:
+    # LaTeX only. The PDF is produced by tools/build_pdf.py, which patches
+    # the generated TeX before running LuaLaTeX -- see that file for why.
+    - format: tex
+      template: plain_latex_book
+      output: _build/tex/rare-earth-separations.tex
   toc:
     - file: src/00-prologue.md
     - file: src/00-preface.md

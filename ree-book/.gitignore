@@ -1,3 +1,6 @@
 # MyST build outputs
 _build
 tools/__pycache__/
+
+# Locally built PDF; CI rebuilds it on every push
+exports/

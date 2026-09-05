@@ -45,9 +45,29 @@ jobs:
         with:
           node-version: '20'
 
+      # LuaLaTeX, not pdflatex: the book needs fontspec for the box-drawing
+      # glyphs in its verbatim blocks. fonts-dejavu-core supplies the mono
+      # face; texlive-latex-extra supplies draftwatermark and imakeidx.
+      - name: Install LaTeX
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            texlive-luatex texlive-latex-recommended texlive-latex-extra \
+            texlive-fonts-recommended latexmk fonts-dejavu-core
+
+      - name: Build the PDF
+        working-directory: ree-book
+        run: python3 tools/build_pdf.py
+
       - name: Build the book
         working-directory: ree-book
         run: npx -y mystmd build --html
+
+      # Served at <site>/rare-earth-separations.pdf, which is the URL the
+      # preface links to.
+      - name: Add the PDF to the site
+        working-directory: ree-book
+        run: cp exports/rare-earth-separations.pdf _build/html/
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
