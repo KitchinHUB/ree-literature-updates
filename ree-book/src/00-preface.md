@@ -98,10 +98,12 @@ The whole book is also available as a single PDF:
 [rare-earth-separations.pdf](https://kitchinhub.github.io/ree-literature-updates/rare-earth-separations.pdf).
 It is rebuilt from the same source on every push, so it carries the same DRAFT
 mark and the same numbers as the website. Two things differ in print. The
-bibliography is typeset by LaTeX rather than by the site's renderer, so each
-entry lists the pages it is cited on instead of linking forward. And the parts
-are printed with their names rather than numbers, so a part in the PDF reads
-the same as the part in the sidebar here.
+bibliography is typeset by LaTeX rather than by the site's renderer, so
+citations are numbered rather than author-year, the entries are ordered by
+first citation, each one lists the pages it is cited on instead of linking
+forward, and each DOI is a link. And the parts are printed with their names
+rather than numbers, so a part in the PDF reads the same as the part in the
+sidebar here.
 
 ## What this book is not
 

@@ -55,7 +55,8 @@ What MyST gets wrong, and what is done about it:
    as `\\chapter*` with their own table-of-contents entries.
 
 Also applied here rather than by MyST: the DRAFT watermark, to match the
-website, and `backref` so each bibliography entry says where it was cited.
+website; a numbered bibliography in citation order, with the DOIs hyperlinked;
+and `backref` so each bibliography entry says where it was cited.
 
 The book's own rendered bibliography page (src/92-references.md) is left out of
 the PDF. It exists to give the website a citable, linkable index of the 554
@@ -153,6 +154,11 @@ PREAMBLE = r"""
 % (url itself is already loaded by MyST's own import block.)
 \setlength{\emergencystretch}{3em}
 \sloppy
+
+% unsrtnat writes \doi{...} for every entry that has one. Left to its own
+% fallback that prints as dead text; doi.sty makes it a link, and handles the
+% underscores that appear in Springer chapter DOIs.
+\usepackage{doi}
 
 % Match the website: the book is a draft and every page should say so.
 \usepackage{draftwatermark}
@@ -409,6 +415,47 @@ def vectorize_figures(text, converted):
     return INCLUDEGRAPHICS.sub(fix, text)
 
 
+DOI_FIELD = re.compile(r"(doi\s*=\s*\{)([^}]*)(\})", re.I)
+URL_FIELD = re.compile(r"[ \t]*url\s*=\s*\{([^}]*)\},?\n", re.I)
+
+
+def tidy_bib(bib):
+    r"""Prepare the bibliography database for print.
+
+    Two changes, both to the copy under _build, not to references.bib.
+
+    Escape the specials in DOI fields. Seven of the book's DOIs are Springer
+    chapter DOIs ending in _<n>. A raw underscore reaches \doi as a subscript
+    token and the run dies with "Missing $ inserted" -- but only when hyperref
+    is loaded with backref, which is how this book loads it. doi.sty accepts
+    \_ and \#, so escaping them costs nothing: the printed DOI and the link it
+    points at both come out right.
+
+    Then drop url fields that only restate the entry's own DOI. Just over half
+    of them do, and unsrtnat prints both, so each of those entries carried the
+    same string twice on consecutive lines. Publisher URLs that go somewhere
+    else -- a Nature page, a PDF on an agency site -- are kept.
+    """
+    def escape(m):
+        doi = m.group(2).replace(r"\_", "_").replace(r"\#", "#")
+        return m.group(1) + doi.replace("_", r"\_").replace("#", r"\#") + m.group(3)
+
+    out, dropped = [], 0
+    for entry in re.split(r"\n(?=@)", bib):
+        doi = DOI_FIELD.search(entry)
+        if doi:
+            bare = doi.group(2).replace(r"\_", "_").rstrip("/").lower()
+            url = URL_FIELD.search(entry)
+            if (url and "doi.org" in url.group(1)
+                    and url.group(1).rstrip("/").lower().endswith(bare)):
+                entry = entry[:url.start()] + entry[url.end():]
+                dropped += 1
+        out.append(DOI_FIELD.sub(escape, entry))
+
+    print(f"bibliography: dropped {dropped} url fields that restated the DOI")
+    return "\n".join(out)
+
+
 def report_log(log):
     """Say what the final LaTeX pass was unhappy about, if anything."""
     text = log.read_text(errors="replace")
@@ -442,6 +489,9 @@ def main():
 
     (TEXDIR / f"{STEM}-src.prologue.tex").write_text(recover_prologue(ROOT))
 
+    bib = TEXDIR / "main.bib"
+    bib.write_text(tidy_bib(bib.read_text()))
+
     chapter_files = sorted(TEXDIR.glob(f"{STEM}-src.*.tex"))
     slugs = {slug_of(p) for p in chapter_files}
     runons = set()
@@ -457,6 +507,12 @@ def main():
         text = split_runon_commands(text, runons)
         text = restore_verbatim(text)
         text = protect_bracket_after_newline(text)
+        # MyST writes a narrative citation -- "@binnemans2013recycling is the
+        # paper that defined the field", rendered on the site as "Binnemans et
+        # al. (2013)" -- as a bare \cite, which a numbered style sets as "[524]
+        # is the paper that defined the field". \citet keeps the author names
+        # in the sentence where the sentence was built around them.
+        text = text.replace(r"\cite{", r"\citet{")
         text = vectorize_figures(text, figures)
         text = promote_headings(text)
         if slug in UNNUMBERED:
@@ -496,6 +552,16 @@ def main():
     # Bibliography backreferences, so each entry says where it was cited.
     text = text.replace(r"\usepackage{hyperref}",
                         "\\usepackage[backref=page]{hyperref}")
+
+    # A numbered bibliography, ordered by first citation. sort&compress turns
+    # the long runs of citations this book carries into [4-9] rather than
+    # nine separate numbers.
+    for old_pkg, new_pkg in [
+            (r"\usepackage{natbib}",
+             r"\usepackage[numbers,sort&compress]{natbib}"),
+            (r"\bibliographystyle{abbrvnat}", r"\bibliographystyle{unsrtnat}")]:
+        assert text.count(old_pkg) == 1, f"missing {old_pkg}"
+        text = text.replace(old_pkg, new_pkg)
 
     prologue_include = f"\\include{{{STEM}-src.prologue}}\n"
     preface_include = f"\\include{{{STEM}-src.preface}}\n"
