@@ -225,6 +225,33 @@ def render_glossary(entries):
             "\n\\end{description}\n")
 
 
+SUPERSCRIPT_DOT = re.compile(r"\\textsuperscript\{\.\}")
+
+
+def fix_superscript_plus(text, report):
+    r"""Put back the plus sign MyST turns into a period.
+
+    MyST's own unicode-to-LaTeX table maps U+207A SUPERSCRIPT PLUS SIGN to
+    `\textsuperscript{.}`, so every ion in the book prints as `La3.` instead
+    of `La3+`. It is a straight typo in the table -- the *subscript* plus
+    U+208A maps correctly, and the superscript *minus* does too -- but it
+    fires 409 times here, on nearly every charged species the book names.
+
+    The substitution happens inside MyST, upstream of the newunicodechar
+    fallbacks in the preamble, so those never see the character and cannot
+    fix it. It has to be repaired in the emitted TeX.
+
+    Rewriting every `\textsuperscript{.}` is safe because nothing else
+    produces one: a superscript period is not a thing this book writes, and
+    the source contains no raised-dot character that could become one. The
+    count is asserted against the source so that a future MyST release which
+    fixes the typo makes this function report zero rather than silently
+    corrupting something else.
+    """
+    text, n = SUPERSCRIPT_DOT.subn(r"\\textsuperscript{+}", text)
+    report[0] += n
+    return text
+
 VERBATIM = re.compile(r"\\begin\{verbatim\}.*?\\end\{verbatim\}", re.DOTALL)
 
 
@@ -495,6 +522,7 @@ def main():
     chapter_files = sorted(TEXDIR.glob(f"{STEM}-src.*.tex"))
     slugs = {slug_of(p) for p in chapter_files}
     runons = set()
+    plusfix = [0]
     figures = set()
     if not shutil.which("rsvg-convert"):
         print("warning: rsvg-convert not found; figures may not typeset "
@@ -505,6 +533,7 @@ def main():
         slug = slug_of(path)
         text = path.read_text()
         text = split_runon_commands(text, runons)
+        text = fix_superscript_plus(text, plusfix)
         text = restore_verbatim(text)
         text = protect_bracket_after_newline(text)
         # MyST writes a narrative citation -- "@binnemans2013recycling is the
@@ -530,6 +559,8 @@ def main():
 
     # --- main file -----------------------------------------------------
     text = main_tex.read_text()
+    # Before the glossary is lifted out: 8 of the charges live in entries.
+    text = fix_superscript_plus(text, plusfix)
     text, glossary_entries = extract_glossary(text)
     text = split_runon_commands(text, runons)
     # In the main file the only headings are the book's part titles.
@@ -594,6 +625,20 @@ def main():
         gloss.write_text(gloss.read_text().rstrip("\n") + "\n"
                          + render_glossary(glossary_entries))
     print(f"glossary: {len(glossary_entries)} entries")
+
+    # A charge reaches the PDF by one of two routes: MyST mangles it to
+    # \textsuperscript{.} and the repair above catches it, or MyST passes the
+    # character through untouched and the preamble's newunicodechar sets it.
+    # Both are correct; what would be silent breakage is a third outcome, so
+    # the two are counted and reconciled against the source.
+    expected = sum(p.read_text(encoding="utf-8").count("\u207a")
+                   for p in sorted((ROOT / "src").glob("*.md")))
+    survived = sum(p.read_text(encoding="utf-8").count("\u207a")
+                   for p in sorted(TEXDIR.glob("*.tex")))
+    print(f"superscript plus: {plusfix[0]} repaired + {survived} passed through "
+          f"= {plusfix[0] + survived} (source has {expected})")
+    if plusfix[0] + survived < expected:
+        print("   WARNING: charges went missing between source and TeX")
 
     if runons:
         print("split run-on commands: " + ", ".join(sorted(runons)))
