@@ -42,6 +42,24 @@ the paper says what this book says it says. No automated check can. Before you
 cite anything from here in your own work, read the primary source.
 `src/00-prologue.md` sets out the full pipeline and its limits.
 
+## Asking the book questions
+
+Every page carries an **Ask this book** panel in the bottom-right corner. It
+searches the book's own text and answers with passages and links to the section
+they came from. It runs entirely in your browser: the search index is built when
+the site is deployed, and no question you type leaves your machine. Nothing
+loads until you open the panel.
+
+Results are ranked passages, not prose. If you have a GPU-capable browser there
+is also a button that will synthesize a short answer from the retrieved
+passages using a small language model downloaded to your machine — it is
+constrained to those passages and shows them alongside whatever it writes, but
+it is a small model and the passages are the authority, not its summary.
+
+If you want to put the same thing on your own site, `static/chat/README.md` is a
+standalone guide to how it works and what to change. Only one of the six files
+knows anything about MyST.
+
 ## Reporting an error
 
 Open a GitHub issue using the **Book content** template
