@@ -461,13 +461,38 @@ numbers from their abstracts only and are now listed in `needs-journal-access.md
 under the flagged-claims table. Eleven more are cited for existence only, with no
 value taken, and the prose says so at each point.
 
-**One pre-existing number this pass could not save.** The ch04 comparison table
-has carried β = 125 for Dy/Nd by electrodialysis with EDTA since the first
-draft. Writing the electrochemical chapter meant trying to read that paper, and
-no interface reachable from this project — OpenAlex, CrossRef, Semantic Scholar,
-Europe PMC, PubMed, the publisher's own page — returned its abstract or its
-text. The number is therefore unverified against its own source. It is now the
-first row of the flagged-claims table in `needs-journal-access.md`, ch12 says
-plainly that the selectivity in that cell belongs to the chelator rather than to
-the electrode, and the number should be confirmed from the paper or withdrawn
-before publication.
+**One pre-existing number, chased down and found to be wrong.** The ch04
+comparison table had carried β = 125 for **Dy/Nd** by electrodialysis with EDTA
+since the first draft. Writing the electrochemical chapter meant trying to read
+that paper, and no interface reachable from this project — OpenAlex, CrossRef,
+Semantic Scholar, Europe PMC, PubMed, the publisher's own page — returned its
+abstract or its text, so it went into `needs-journal-access.md` as the most
+consequential flagged claim and was the Tier 1 item of issue #1. The PDF was
+then retrieved manually, and reading it showed the book had the number attached
+to the wrong pair:
+
+- The paper's own defining equation makes the separation factor **Dy over Pr and
+  Nd combined**, not Dy over Nd. The book said Dy/Nd in four places.
+- It is a **ratio of fractional transfers** after a 180-minute batch, not an
+  equilibrium β: 62 at 10 V, 125 at 12 V, 88 at 14 V. Putting it in a β column
+  without saying so invited a comparison the measurement does not support.
+- The value 125 itself is right, at 12 V, pH 4, a 0.05 mol/L rinse and an
+  EDTA/Dy ratio of 1.0, giving 93 % Dy purity at 77 % Dy yield — on a
+  **synthetic** 0.001 mol/L Pr/Nd/Dy sulfate feed, not a real leachate.
+
+Three of the paper's other results were worth more to ch12 than the separation
+factor was, and are now in it: praseodymium and neodymium could not be separated
+even by cascading, because their EDTA stability constants (16.40 and 16.61) are
+too close; electrodialysis without chelation assistance cannot separate rare
+earths at all, which is the chapter's governing claim in the authors' own words;
+and the cell runs at about 45 GJ per tonne of rare earths separated against
+15.60-22.7 GJ/t quoted for solvent extraction, at a space-time yield of 0.002 kg
+L⁻¹ h⁻¹. The authors conclude that a standalone electrodialysis process may
+offer no major benefit over solvent extraction at industrial scale.
+
+All four call sites — ch04's microfluidics row (where an electrodialysis result
+no longer belonged once ch12 existed), ch04's electrochemical row, ch09 and ch12
+— were corrected, and the row was removed from `needs-journal-access.md`. This
+is the pattern the rest of that file is waiting for: one PDF retrieved by hand
+settled a number that no automated interface could reach, and it settled it by
+correction rather than confirmation.

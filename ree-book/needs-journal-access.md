@@ -22,14 +22,13 @@ report a similar number.
 
 **Where the PDFs go:** `fulltexts/`, which is gitignored — publisher PDFs are
 not redistributable and must never be committed. Name each file by its citation
-key, e.g. `ding2023separation.pdf`. Issue #1 lists every entry in this file with
+key, e.g. `huang2002rare.pdf`. Issue #1 lists every entry in this file with
 its DOI and what specifically to look for, in a suggested retrieval order.
 
 ## Flagged claims
 
 | Chapter | Citation key | What rests on it |
 |----|----|----|
-| 04 Technology landscape, 09 Microfluidic separations, 12 Electrochemical separations | `ding2023separation` | **The most consequential entry in this file.** β = 125 for Dy/Nd by electrodialysis with EDTA — quoted in the chapter 04 comparison table and referred to by two chapters. Unlike everything else here, this claim does not even rest on an abstract: no interface reachable from this project returned the abstract or the text. Confirm it or withdraw it before publication. |
 | 07 Pyrometallurgical and halogenation routes (also cited in 04) | `huang2002rare` | The selective chlorination / vacuum-thermal purity, yield and thorium-partitioning figures. The abstract does not carry them. |
 | 08 Coacervates and aqueous two-phase systems | `favrerguillon2004cloud` | Cloud-point extraction performance figures. |
 | 08 Coacervates and aqueous two-phase systems (also 14) | `sui2023kinetic` | The kinetically enhanced Pr/Nd separation factor. Chapter 08 already declines to quote it. |

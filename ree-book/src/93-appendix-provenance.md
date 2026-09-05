@@ -123,11 +123,19 @@ document. Its electrodialysis section was moved out of Chapter 13 and re-voiced
 rather than rewritten from scratch; Chapter 13 keeps a pointer in its place. The
 chapter's exposure is the same as Chapter 15's and is handled the same way:
 where no abstract was reachable, no number was taken, and the four sources in
-that position are named in the text and listed in `needs-journal-access.md`. One
-of them matters more than the others. The separation factor of 125 for Dy/Nd
-that the chapter 04 comparison table has carried since the first draft comes
-from a paper whose text no interface reachable from this project would return,
-and chapter 12 says so rather than repeating the number as established.
+that position are named in the text and listed in `needs-journal-access.md`.
+
+One number in this chapter has a longer history than the chapter does. The
+comparison table in Chapter 04 had carried a separation factor of 125 for Dy/Nd
+by electrodialysis since the first draft, taken from a paper whose text no
+interface reachable from this project would return. The PDF was retrieved by
+hand after the chapter was drafted, and it showed the pair was wrong: the
+paper's separation factor is dysprosium over praseodymium **and** neodymium
+together, and it is a batch transfer ratio rather than an equilibrium β. The
+value 125 is correct at the stated operating point. Chapter 12 now sets out the
+whole result, including the paper's own finding that praseodymium and neodymium
+cannot be separated by this method even by cascading, and the four places that
+said Dy/Nd were corrected.
 
 ## Material deliberately dropped
 

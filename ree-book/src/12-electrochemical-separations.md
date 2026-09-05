@@ -121,16 +121,82 @@ recommend alternating cation and anion exchange membranes instead. That is
 modelling work on a laboratory cell, not a demonstrated separation, and no
 throughput or product purity is reported.
 
-The companion experimental study by the same group [@ding2023separation] is the
-source of the Dy/Nd separation factor carried in
-[](#technology-comparison). That number could not be checked against the
-paper's own text, which was not obtainable, and it is listed in
-`needs-journal-access.md` as resting on unverified content. A chelation-assisted
-electrodialysis study exists as well [@mosadeghsedghi2023chelation] and is cited
-here for existence only, on the same grounds. A 2024 review places
-electrodialysis for critical minerals in a wider setting, covering selective
-electrodialysis and liquid-membrane electrodialysis for unconventional sources
-[@sim2024electrodialysis].
+The companion experimental study by the same group is the best-documented
+electrodialysis separation of rare earths in this literature, and it is worth
+setting out in full because the book's comparison table has carried a number
+from it since the first draft — and the number was carried with the wrong
+element pair.
+
+@ding2023separation separate dysprosium from a praseodymium-neodymium mixture in
+a four-compartment cell. The working part is a PC-400D anion-exchange membrane
+chosen because it passes large organic anions; an AMX anion-exchange and a CMX
+cation-exchange membrane close the feed and rinse compartments. The chemistry is
+entirely in the EDTA stability constants: p*K*~ABS~ is 16.40 for Pr(III), 16.61
+for Nd(III) and 18.30 for Dy(III), so at an EDTA-to-Dy molar ratio near unity
+the dysprosium takes almost all of the available ligand and travels to the
+concentrate compartment as \[Dy-EDTA]⁻, while the praseodymium and neodymium
+stay behind as free cations that the anion-exchange membrane will not pass.
+
+Their best result is a separation factor of 125, at 12 V, pH 4, a 0.05 mol/L
+sodium sulfate rinse, an EDTA/Dy molar ratio of 1.0 and 180 minutes, giving 93 %
+Dy purity in the concentrate at 77 % Dy yield. Three things about that number
+need saying, and the first two correct this book.
+
+**It is Dy over Pr *and* Nd together, not Dy over Nd.** The paper's own defining
+equation takes the fraction of dysprosium transferred to the concentrate over
+the *combined* fraction of neodymium and praseodymium transferred. Quoting it as
+a Dy/Nd figure — as [](#technology-comparison) did until this paper was read —
+overstates what was measured, because the denominator is a two-element group.
+
+**It is not a separation factor in the sense the rest of this book uses.**
+Everywhere else, β is a ratio of equilibrium distribution ratios. This is a ratio
+of recovery fractions after a 180-minute batch in a particular cell, and it moves
+with voltage, pH and time: 62 at 10 V, 125 at 12 V, 88 at 14 V; 101 at pH 3
+against 88 at pH 4 in a shorter run. A quantity that halves when the voltage
+changes by 2 V is a process operating point, not a property of a chemistry, and
+it cannot be compared with an extraction β without saying so.
+
+**The feed is synthetic.** Pr, Nd and Dy sulfates in deionized water at 0.001
+mol/L each — 140.9, 144.2 and 162.5 mg/L — chosen to resemble a South American
+ion-adsorption clay leachate. No real leachate was run.
+
+Set against that, the paper does something few in this chapter do: it says what
+the method cannot do, and it measures it. The authors cascade the process to
+attack the light pair directly. A stage-2 feed of 47 % Pr and 44 % Nd comes out
+after 150 minutes at 55 % Pr and 43 % Nd, and a third stage reaches 61 % Pr and
+38 % Nd. Their conclusion is that separating dysprosium from a Pr-Nd mixture is
+feasible, and that **separating praseodymium from neodymium is not feasible even
+with cascading**, because the two stability constants — 16.40 and 16.61 — are
+too close. That is the thesis of this whole book restated in an electrochemical
+cell: the handle is the ligand's discrimination, and for an adjacent light pair
+the ligand has almost none.
+
+The comparison with solvent extraction in the same paper is the most useful
+thing in it. Against literature data for the same Nd/Dy separation, D2EHPA
+reaches a separation factor of 247 in two stages and PC88A reaches 125 in three;
+the electrodialysis cell reaches 125 in one, with higher dysprosium purity in the
+product (93 % against 76.7 % for PC88A). The authors qualify their own
+comparison — the solvent-extraction results did not use EDTA, and theirs
+requires it — and then give two numbers that matter more than the separation
+factor. Energy: the electrodialysis experiment works out at about 45 GJ per
+tonne of rare earths separated, against a literature figure of 15.60-22.7 GJ per
+tonne for solvent extraction, so on this evidence the cell costs roughly twice
+the energy. Space-time yield: 0.002 kg L⁻¹ h⁻¹, which the authors place at the
+bottom of the industrial range, alongside biocatalytic processes rather than
+chemical ones. Both figures come from a bench cell with a 100 cm² membrane and
+500 mL per compartment and would improve with scale and a more concentrated
+feed, and the authors say so. They also conclude, in their own words, that a
+standalone electrodialysis process may offer no major technical or economic
+benefit over solvent extraction at industrial scale, and that its prospect is as
+a stage-reducing addition to one.
+
+The sentence to carry out of the paper is the authors' own: electrodialysis
+without chelation assistance is not capable of separating rare earths. A
+chelation-assisted electrodialysis study exists as well
+[@mosadeghsedghi2023chelation] and is cited here for existence only, its text
+not having been obtainable. A 2024 review places electrodialysis for critical
+minerals in a wider setting, covering selective electrodialysis and
+liquid-membrane electrodialysis for unconventional sources [@sim2024electrodialysis].
 
 What is worth noticing is where the selectivity lives. Strip the EDTA out of
 these cells and nothing separates: the membranes discriminate between anions and
