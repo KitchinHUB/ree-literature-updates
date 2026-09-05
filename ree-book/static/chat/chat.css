@@ -1,0 +1,73 @@
+/* Ask-the-book panel. Deliberately plain: this sits on a technical book and
+   should read as part of it, not as a product bolted onto it. */
+
+#bookchat-open {
+  position: fixed; right: 1.25rem; bottom: 1.25rem; z-index: 900;
+  font: 600 0.85rem/1 system-ui, -apple-system, sans-serif;
+  padding: 0.7rem 1rem; border: 1px solid #2b3a55; border-radius: 999px;
+  background: #24344d; color: #fff; cursor: pointer;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.22);
+}
+#bookchat-open:hover { background: #2f4363; }
+
+#bookchat { position: fixed; right: 1.25rem; bottom: 1.25rem; z-index: 901;
+  width: min(30rem, calc(100vw - 2rem)); max-height: min(40rem, calc(100vh - 3rem));
+  display: none; flex-direction: column;
+  background: #fff; color: #16202e; border: 1px solid #c8d0dc; border-radius: 10px;
+  box-shadow: 0 8px 34px rgba(0,0,0,0.24);
+  font: 0.88rem/1.55 system-ui, -apple-system, sans-serif; }
+#bookchat.open { display: flex; }
+
+#bookchat header { display: flex; align-items: baseline; gap: 0.5rem;
+  padding: 0.7rem 0.85rem; border-bottom: 1px solid #e2e7ee; }
+#bookchat header b { font-size: 0.9rem; }
+#bookchat header span { font-size: 0.72rem; color: #667; }
+#bookchat header button { margin-left: auto; background: none; border: none;
+  font-size: 1.2rem; line-height: 1; color: #667; cursor: pointer; padding: 0 0.2rem; }
+
+#bookchat-log { overflow-y: auto; padding: 0.85rem; flex: 1 1 auto; }
+#bookchat-log > * + * { margin-top: 0.9rem; }
+
+.bc-q { font-weight: 600; }
+.bc-note { color: #5a6472; font-size: 0.8rem; }
+.bc-warn { color: #8a4b12; background: #fdf5ea; border: 1px solid #f0dcc2;
+  padding: 0.5rem 0.6rem; border-radius: 6px; font-size: 0.8rem; }
+
+.bc-hit { border-left: 3px solid #c8d0dc; padding-left: 0.6rem; }
+.bc-hit a { font-weight: 600; color: #1b4b8f; text-decoration: none; }
+.bc-hit a:hover { text-decoration: underline; }
+.bc-hit .bc-where { font-size: 0.74rem; color: #6b7482; }
+.bc-hit p { margin: 0.25rem 0 0; }
+
+/* Generated prose is visually separated from quoted text on purpose. */
+.bc-answer { background: #f4f7fb; border: 1px solid #d6e0ee; border-radius: 6px;
+  padding: 0.6rem 0.7rem; }
+.bc-answer .bc-tag { display: block; font-size: 0.68rem; letter-spacing: 0.04em;
+  text-transform: uppercase; color: #5a6472; margin-bottom: 0.35rem; }
+.bc-answer .bc-body { white-space: pre-wrap; }
+
+#bookchat form { display: flex; gap: 0.4rem; padding: 0.65rem;
+  border-top: 1px solid #e2e7ee; }
+#bookchat input { flex: 1; padding: 0.5rem 0.6rem; border: 1px solid #c8d0dc;
+  border-radius: 6px; font: inherit; }
+#bookchat button.bc-go { padding: 0.5rem 0.8rem; border: none; border-radius: 6px;
+  background: #24344d; color: #fff; font: inherit; font-weight: 600; cursor: pointer; }
+#bookchat button.bc-go:disabled { background: #9aa5b4; cursor: default; }
+
+button.bc-syn { margin-top: 0.5rem; font: inherit; font-size: 0.78rem;
+  padding: 0.35rem 0.6rem; border: 1px solid #c8d0dc; border-radius: 6px;
+  background: #fff; cursor: pointer; }
+button.bc-syn:hover { background: #f2f5f9; }
+button.bc-syn:disabled { color: #99a; cursor: default; }
+
+@media (prefers-color-scheme: dark) {
+  #bookchat { background: #16202e; color: #e8edf4; border-color: #33445e; }
+  #bookchat header { border-bottom-color: #2a3a52; }
+  #bookchat input { background: #101822; color: #e8edf4; border-color: #33445e; }
+  .bc-hit { border-left-color: #33445e; }
+  .bc-hit a { color: #8bb6f0; }
+  .bc-answer { background: #1b2736; border-color: #33445e; }
+  .bc-note, .bc-hit .bc-where, .bc-answer .bc-tag { color: #97a3b4; }
+  .bc-warn { color: #f0c48a; background: #2c2416; border-color: #4a3a1e; }
+  button.bc-syn { background: #1b2736; color: #e8edf4; border-color: #33445e; }
+}

@@ -1,0 +1,9 @@
+{
+  "name": "ree-book-chat",
+  "private": true,
+  "description": "Build-time tooling for the book's retrieval index. Not published.",
+  "type": "module",
+  "devDependencies": {
+    "@huggingface/transformers": "3.8.1"
+  }
+}

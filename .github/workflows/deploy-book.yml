@@ -64,6 +64,17 @@ jobs:
         working-directory: ree-book
         run: npx -y mystmd build --html
 
+      # The ask-the-book widget: chunk the built AST, embed the passages into a
+      # static index, and inject the widget into every page. Everything runs at
+      # build time; the site stays a static site and calls no API at runtime.
+      - name: Install index-builder dependencies
+        working-directory: ree-book
+        run: npm ci
+
+      - name: Build the retrieval index and inject the widget
+        working-directory: ree-book
+        run: bash tools/build_chat.sh
+
       # Served at <site>/rare-earth-separations.pdf, which is the URL the
       # preface links to.
       - name: Add the PDF to the site

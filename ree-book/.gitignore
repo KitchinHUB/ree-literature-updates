@@ -8,3 +8,6 @@ exports/
 # Manually retrieved PDFs for source verification (needs-journal-access.md).
 # Publisher PDFs are not redistributable; never commit these.
 fulltexts/
+
+# Build-time deps for the retrieval index (tools/embed_chunks.mjs)
+node_modules/
