@@ -47,13 +47,14 @@ jobs:
 
       # LuaLaTeX, not pdflatex: the book needs fontspec for the box-drawing
       # glyphs in its verbatim blocks. fonts-dejavu-core supplies the mono
-      # face; texlive-latex-extra supplies draftwatermark and imakeidx.
+      # face, texlive-latex-extra supplies draftwatermark and imakeidx, and
+      # librsvg2-bin renders the SVG figures to PDF.
       - name: Install LaTeX
         run: |
           sudo apt-get update
           sudo apt-get install -y --no-install-recommends \
             texlive-luatex texlive-latex-recommended texlive-latex-extra \
-            texlive-fonts-recommended latexmk fonts-dejavu-core
+            texlive-fonts-recommended latexmk fonts-dejavu-core librsvg2-bin
 
       - name: Build the PDF
         working-directory: ree-book

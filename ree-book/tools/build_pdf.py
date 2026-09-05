@@ -14,10 +14,11 @@ What MyST gets wrong, and what is done about it:
    in a definition are text-mode math errors for the same reason. Fixed by
    escaping the specials inside each entry.
 
-2. Every heading is two levels too deep. Parts come out as `\\section`, chapters
-   as `\\subsection`, and the book class's `\\part` and `\\chapter` go unused --
-   so the book has no chapter breaks, no chapter numbers, and a flat table of
-   contents. Fixed by promoting every heading two levels.
+2. Every heading is too deep. Parts come out as `\\section`, chapters as
+   `\\subsection`, and the book class's `\\part` and `\\chapter` go unused -- so
+   the book has no chapter breaks, no chapter numbers, and a flat table of
+   contents. Fixed by promoting the headings in each file by the amount that
+   puts that file's own title on `\\chapter`.
 
 3. Cross-references between chapters become `\\href{/src/<slug>}`, a
    site-relative URL that means nothing in a PDF. Fixed by labelling each
@@ -29,13 +30,29 @@ What MyST gets wrong, and what is done about it:
 
 5. Glossary entries are defined but never `\\gls`-referenced, and the glossaries
    package prints only referenced entries -- so the Glossary chapter comes out
-   empty. Fixed with `\\glsaddall`, and the list is moved under the Glossary
-   chapter rather than trailing the appendices.
+   empty. Worse, a term containing a subscript digit breaks `\\csname` outright.
+   Fixed by dropping the glossaries package: the entries are lifted out of the
+   preamble and set as a plain description list under the Glossary chapter.
 
 6. pdfLaTeX cannot set the book's characters. It uses 68 distinct non-ASCII
    characters, including box-drawing for the ASCII-art diagrams and subscript
    digits in formulae. LuaLaTeX with fontspec sets them, with newunicodechar
    fallbacks for the ones Latin Modern lacks.
+
+7. Figures are rasterized, or not resolved at all. Every figure in the book is
+   an SVG; MyST converts it with whatever converter is on the machine, and on a
+   machine with none it writes the .svg path into `\\includegraphics`, which
+   LaTeX cannot read. Fixed by rendering each SVG to PDF with rsvg-convert.
+
+8. The first page of the book is dropped. MyST's project-wide TeX export omits
+   the first table-of-contents entry, which here is the prologue disclosing how
+   the book was written -- the one page that must not go missing. Fixed by
+   exporting it on its own and splicing it back in.
+
+9. Chapters that should not be numbered are. The prologue, preface, glossary,
+   index and appendices all take chapter numbers, which pushes every real
+   chapter two ahead of the source file it came from. Fixed by setting those
+   as `\\chapter*` with their own table-of-contents entries.
 
 Also applied here rather than by MyST: the DRAFT watermark, to match the
 website, and `backref` so each bibliography entry says where it was cited.
@@ -52,6 +69,7 @@ import re
 import shutil
 import subprocess
 import sys
+import tempfile
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -361,6 +379,36 @@ def slug_of(path):
     return path.name[len(STEM) + len("-src."):-len(".tex")]
 
 
+INCLUDEGRAPHICS = re.compile(r"(\\includegraphics(?:\[[^\]]*\])?)\{files/([^}]+)\}")
+
+
+def vectorize_figures(text, converted):
+    r"""Point \includegraphics at a PDF rendered from the figure's SVG source.
+
+    Every figure in this book is an SVG. MyST rasterizes those with whatever
+    converter happens to be installed, and when it finds none it writes the
+    .svg path straight into \includegraphics, which LaTeX cannot read at all
+    -- that is what breaks the build on a bare CI runner. Rendering the SVG
+    to PDF with rsvg-convert instead depends on one small package, gives the
+    same result on every machine, and puts a vector figure in a vector
+    document rather than a screen-resolution raster of one.
+    """
+    def fix(m):
+        svg = (TEXDIR / "files" / m.group(2)).with_suffix(".svg")
+        if not svg.exists():
+            return m.group(0)
+        pdf = svg.with_suffix(".pdf")
+        if not pdf.exists():
+            r = subprocess.run(["rsvg-convert", "-f", "pdf",
+                                "-o", str(pdf), str(svg)])
+            if r.returncode != 0 or not pdf.exists():
+                return m.group(0)
+        converted.add(svg.name)
+        return f"{m.group(1)}{{files/{pdf.name}}}"
+
+    return INCLUDEGRAPHICS.sub(fix, text)
+
+
 def report_log(log):
     """Say what the final LaTeX pass was unhappy about, if anything."""
     text = log.read_text(errors="replace")
@@ -397,6 +445,10 @@ def main():
     chapter_files = sorted(TEXDIR.glob(f"{STEM}-src.*.tex"))
     slugs = {slug_of(p) for p in chapter_files}
     runons = set()
+    figures = set()
+    if not shutil.which("rsvg-convert"):
+        print("warning: rsvg-convert not found; figures may not typeset "
+              "(install librsvg)")
 
     # --- chapter files -------------------------------------------------
     for path in chapter_files:
@@ -405,6 +457,7 @@ def main():
         text = split_runon_commands(text, runons)
         text = restore_verbatim(text)
         text = protect_bracket_after_newline(text)
+        text = vectorize_figures(text, figures)
         text = promote_headings(text)
         if slug in UNNUMBERED:
             text = unnumber_chapter(text)
@@ -468,6 +521,8 @@ def main():
 
     main_tex.write_text(text)
 
+    print(f"figures: {len(figures)} rendered from SVG")
+
     gloss = TEXDIR / f"{STEM}-src.glossary.tex"
     if gloss.exists() and glossary_entries:
         gloss.write_text(gloss.read_text().rstrip("\n") + "\n"
@@ -478,20 +533,30 @@ def main():
         print("split run-on commands: " + ", ".join(sorted(runons)))
 
     # --- compile -------------------------------------------------------
+    # Compile outside the source tree. This one lives in a Dropbox folder,
+    # and a file-sync daemon rewriting .aux files under latexmk makes the
+    # build fail at random -- once with a conflicted copy of the .aux left
+    # in the directory. A scratch directory is not synced by anything.
+    work = Path(tempfile.mkdtemp(prefix="ree-pdf-"))
+    shutil.copytree(TEXDIR, work, dirs_exist_ok=True)
+
     # No -halt-on-error: a book needs several passes, and the first one is
     # expected to be full of unresolved references. Errors are read back out
     # of the log afterwards instead.
     r = run(["latexmk", "-lualatex", "-interaction=nonstopmode",
-             f"{STEM}.tex"], cwd=TEXDIR)
-    built = TEXDIR / f"{STEM}.pdf"
-    log = TEXDIR / f"{STEM}.log"
+             f"{STEM}.tex"], cwd=work)
+    built = work / f"{STEM}.pdf"
+    log = work / f"{STEM}.log"
+    if log.exists():
+        shutil.copy(log, TEXDIR / f"{STEM}.log")
     if r.returncode != 0 or not built.exists():
-        sys.exit(f"LaTeX failed; see {log}")
+        sys.exit(f"LaTeX failed; see {TEXDIR / (STEM + '.log')}")
 
     report_log(log)
 
     OUTDIR.mkdir(exist_ok=True)
     shutil.copy(built, OUTDIR / f"{STEM}.pdf")
+    shutil.rmtree(work, ignore_errors=True)
     print(f"\nwrote {OUTDIR / (STEM + '.pdf')}")
 
 
