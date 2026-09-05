@@ -27,6 +27,19 @@ project:
     - format: tex
       template: plain_latex_book
       output: _build/tex/rare-earth-separations.tex
+  # Puts a download link in the toolbar of every page. The file is built by
+  # tools/build_pdf.py, which the deploy workflow runs BEFORE the HTML build --
+  # that order matters, because MyST warns and drops the link if the file is
+  # missing at build time (it does not fail the build, so the loss is silent).
+  #
+  # This leaves two copies of the PDF in the site, and that is deliberate. MyST
+  # serves this one from a content-hashed path, which is what makes it resolve
+  # correctly under BASE_URL. The workflow separately copies the same file to
+  # /rare-earth-separations.pdf, which is the stable citable URL src/00-preface.md
+  # links to and which must not move. 3.4 MB of a 60 MB site buys both.
+  downloads:
+    - file: exports/rare-earth-separations.pdf
+      title: Download the book (PDF)
   toc:
     - file: src/00-prologue.md
     - file: src/00-preface.md
