@@ -496,3 +496,78 @@ no longer belonged once ch12 existed), ch04's electrochemical row, ch09 and ch12
 is the pattern the rest of that file is waiting for: one PDF retrieved by hand
 settled a number that no automated interface could reach, and it settled it by
 correction rather than confirmation.
+
+## After the first draft — Chapter 21, Critical Minerals from Pennsylvania Produced Water
+
+Added 2026-09-05, immediately after the pass above and from a direct request
+rather than from a survey. The book's only treatment of oilfield and geothermal
+water was a section of ch20 — half a page, added in the 2026 gap pass — and it
+was about rare earths alone. The question asked was what critical minerals
+Pennsylvania frack produced water would actually yield, which is a broader
+question than the section answers and a narrower geography.
+
+**The new chapter.** *21. Critical Minerals from Pennsylvania Produced Water.*
+It sits in Part V between recycling and the TEA chapter, and its spine is a
+number that cuts against the book's own subject. On the national accounting in
+@smith2024critical, the rare earths in all US oil and gas produced water come to
+about **1 t/yr against 9,300 t of consumption — 0.01 %** — and the Marcellus
+figure behind that rests on **two samples** with a relative standard deviation
+near one, in a matrix (high barium) that interferes with the ICP-MS analysis.
+Lithium on the same accounting is **300 %**, and @mackey2024estimates put
+Pennsylvania alone at **1,160 mt/yr, 38-40 % of US consumption**, assuming
+complete recovery.
+
+So the chapter is mostly about lithium, and it earns its place in a rare earth
+book on the separation problem rather than the feedstock: Li⁺/Mg²⁺ is the same
+*kind* of problem as Nd/Pr with one difficulty removed, the Mg/Li ratio varies
+threefold between two corners of one state (5.39 northeast, 17.8 southwest), and
+the best membrane answer to it — @peng2024extreme's selectivity of 828, against
+"usually less than 20" for conventional nanofiltration — was measured at
+2,000 ppm total salt and had already fallen to 185 by 5,000 ppm, against a
+Marcellus feed above 100,000 mg/L. That is the book's recurring finding arriving
+from a new direction, and the chapter says so.
+
+Three things it refuses to do. It states no cost for lithium from Marcellus
+brine, because none is published; @wenzlick2020techno costs Texas and Louisiana
+water for salt and fresh water, not Pennsylvania water for critical minerals,
+and the chapter says which is which. It proposes no rare earth recovery scheme
+for this water, and argues the research question there is analytical before it is
+preparative. And it does not soft-pedal radium: @blondes2020utica measured
+activities **580× the EPA MCL** in Appalachian brines, and @warner2013impacts
+found ²²⁶Ra in stream sediments at a discharge point **200× background** despite
+>90 % removal in the treatment plant. Any extraction plant on this water is also
+a radium concentration plant, and nobody has published what its residues would
+contain. The chapter names that as the most consequential of its three gaps.
+
+**Numbering.** Inserting at 21 shifted the old ch21-23 up by one, to 22-24.
+Every prose reference to a chapter by number in the book points at a chapter
+numbered 18 or lower, below the insertion point, so none broke; this was checked
+rather than assumed. Published URLs did not move, for the same reason as before.
+`src/93-appendix-provenance.md` carries the current numbering.
+
+**What it is held to.** Twelve new bibliography entries. Nine of the twelve were
+read in **full text**, not abstract — @mackey2024estimates, @smith2024critical,
+@phan2018role, @chapman2012geochemical, @noack2015rare, @donmoyer2023effect,
+@peng2024extreme, @wenzlick2020techno and @knierim2024evaluation, retrieved
+through OSTI and Europe PMC. @warner2013impacts and @blondes2020utica are cited
+only for figures that appear verbatim in their abstracts.
+@duchanois2023prospects is cited for existence alone and is listed in
+`needs-journal-access.md` accordingly. Nothing in this chapter rests on a title.
+
+**Two provenance notes.** A guessed OSTI `servlets/purl` identifier for
+@blondes2020utica returned a completely different paper — a hep-th preprint on
+QCD3 — and was caught only because the first lines of the extracted text were
+read before anything was taken from it. Guessing a repository ID from a DOI is
+not retrieval, and the practice is retired. Separately,
+@mackey2024estimates is internally inconsistent: its abstract and Table 1 give
+the northeast per-well ten-year lithium yield as 1.96 mt, its Results text
+prints 1.86, apparently by duplicating the confidence-interval lower bound. The
+chapter uses 1.96 and the appendix records why.
+
+**One tooling finding.** `tools/add_refs.py` rewrites the *entire*
+`references.bib`, not just the entries it adds: it alphabetizes fields within
+every existing entry — which is the house style, so that part is harmless — and
+hoists bare `%` comment blocks to the top of the file wrapped as `@comment{...}`,
+orphaning them from the entries they annotate. Three such blocks were displaced
+and restored by hand. Back up `references.bib` before running it and audit the
+diff with a key-set comparison.

@@ -65,9 +65,10 @@ project:
     - title: Part V — Context
       children:
         - file: src/20-recycling-urban-mining.md
-        - file: src/21-environment-tea-lca.md
-        - file: src/22-industrial-landscape.md
-        - file: src/23-research-directions.md
+        - file: src/21-produced-water-critical-minerals.md
+        - file: src/22-environment-tea-lca.md
+        - file: src/23-industrial-landscape.md
+        - file: src/24-research-directions.md
 
     - title: Back Matter
       children:

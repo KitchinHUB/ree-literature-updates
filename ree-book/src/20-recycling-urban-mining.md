@@ -416,6 +416,12 @@ anything a solvent extraction cascade would look at. What makes them worth a
 paragraph is that the fluid is already being pumped and already being handled
 for disposal, so the only marginal cost is the recovery step itself.
 
+This section treats the rare earths in those waters as one more unconventional
+feedstock alongside coal ash and phosphogypsum. The broader question of what
+*else* is dissolved in them — and why the answer for Pennsylvania is lithium
+rather than lanthanides — has its own chapter,
+[](#produced-water-critical-minerals).
+
 The concentrations are genuinely small. @tian2020rare measured Sichuan Basin
 shale gas flowback and produced water and found total rare earths from 4.5 to
 118.3 µg/L, with europium present in every sample at 0.92 to 79.62 µg/L. Their
@@ -442,6 +448,14 @@ sorbent tolerates it. Nobody has published a costed recovery of rare earths from
 a geothermal or oilfield stream at any scale, and the arithmetic in
 [](#environment-techno-economics-and-life-cycle) is the place to see why a
 microgram-per-litre feed is a hard case even when the pumping is free.
+
+The national accounting is worse than that arithmetic suggests, and
+[](#produced-water-critical-minerals) sets it out: on the best available
+figures the rare earths in all US oil and gas produced water amount to about a
+tonne a year against a national consumption of 9,300 t, and the Marcellus
+number behind that estimate rests on two samples. The same water is a lithium
+resource of national scale. If a rare earth recovery process is ever built on
+produced water, it will be built as an attachment to something else.
 
 ## What Actually Limits It
 

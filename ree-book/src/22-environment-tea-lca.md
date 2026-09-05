@@ -240,6 +240,16 @@ co-recovered with the rare earths materially improve them. Feed concentration
 matters in the direction expected, which is why a network of sources beats a
 single dilute one.
 
+The same "the water is being handled anyway" argument is made for oilfield
+produced water, and [](#produced-water-critical-minerals) is where it is
+tested. The result there is a warning about how far the argument carries: the
+one published techno-economic analysis of centralised produced water treatment
+finds the evaporator dominating every case at more than twice the levelized
+cost of the membranes, and the divalent-removal step that AMD gets cheaply by
+precipitation is cost-prohibitive at Appalachian hardness
+[@wenzlick2020techno]. An existing disposal obligation lowers the cost of
+getting the water; it does not lower the cost of the separation.
+
 **Monte Carlo Sensitivity:** The tornado analysis is unusually clean, and
 worth quoting for what it rules out as much as for what it finds: "only two
 project parameters have a significant impact on the profitability of the

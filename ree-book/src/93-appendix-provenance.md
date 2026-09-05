@@ -67,14 +67,15 @@ document changes will shift them.
 | 18. Machine Learning in Rare Earth Separations | **No source document**; written from the primary literature for this edition. Two sections were moved here from Chapter 16 rather than rewritten — see the note below |
 | 19. Characterization Methods | `broad-review.md` 1791–2236 (§11) |
 | 20. Recycling and Urban Mining | `broad-review.md` 1110–1148 (§5) |
-| 21. Environment, Techno-Economics, and Life Cycle | `broad-review.md` 1150–1186 (§6), 2238–2367 (§12 TEA), 2369–2512 (§13 LCA) |
-| 22. The Industrial Landscape | `broad-review.md` 1188–1215 (§7) |
-| 23. Research Directions and Open Questions | `broad-review.md` 1233–1259 (§9), 2716–2732 (§15 Conclusions) + `high-throughput.md` 349–357 (critical gaps); synthesis newly written |
+| 21. Critical Minerals from Pennsylvania Produced Water | **No source document**; written from the primary literature for this edition. See the note below |
+| 22. Environment, Techno-Economics, and Life Cycle | `broad-review.md` 1150–1186 (§6), 2238–2367 (§12 TEA), 2369–2512 (§13 LCA) |
+| 23. The Industrial Landscape | `broad-review.md` 1188–1215 (§7) |
+| 24. Research Directions and Open Questions | `broad-review.md` 1233–1259 (§9), 2716–2732 (§15 Conclusions) + `high-throughput.md` 349–357 (critical gaps); synthesis newly written |
 
-### The four chapters with no source document
+### The five chapters with no source document
 
 Most chapters here are a rewrite of material the group had already
-written. Chapters 12, 15, 17 and 18 are not. The sources touch process modeling twice — a
+written. Chapters 12, 15, 17, 18 and 21 are not. The sources touch process modeling twice — a
 four-row table of software names in `high-throughput.md`, and a paragraph of
 geochemical speciation packages in the characterization section — and neither
 is an account of how a rare-earth flowsheet is modeled or optimized. The
@@ -136,6 +137,30 @@ value 125 is correct at the stated operating point. Chapter 12 now sets out the
 whole result, including the paper's own finding that praseodymium and neodymium
 cannot be separated by this method even by cascading, and the four places that
 said Dy/Nd were corrected.
+
+Chapter 21 is the fifth and the newest, added because the book's only treatment
+of oilfield and geothermal water was a single section of Chapter 20 that
+considered rare earths alone. It has no source document, and its exposure is
+lower than the other four rather than comparable, because every number in it was
+read out of a full text or a retrieved abstract during drafting rather than
+inferred from a title. Full texts were obtained for @mackey2024estimates,
+@smith2024critical, @phan2018role, @chapman2012geochemical, @noack2015rare,
+@donmoyer2023effect, @peng2024extreme, @wenzlick2020techno and
+@knierim2024evaluation; @warner2013impacts and @blondes2020utica are cited only
+for figures that appear verbatim in their abstracts. One source,
+@duchanois2023prospects, is cited for existence alone and no number is taken
+from it.
+
+Two things in that chapter are worth flagging as provenance rather than as
+content. @mackey2024estimates is internally inconsistent about one figure: its
+abstract and Table 1 give the northeastern per-well ten-year lithium yield as
+1.96 mt while the Results text prints 1.86, evidently by duplicating the
+confidence-interval lower bound. The chapter uses 1.96, which is the value two
+of the three appearances agree on. And the rare earth row in the chapter's
+national inventory rests, at the Marcellus, on **two samples** — a fact the
+chapter states in the text rather than in a footnote, because the conclusion
+drawn from it is a negative one and a reader is entitled to know how thin the
+evidence for it is.
 
 ## Material deliberately dropped
 

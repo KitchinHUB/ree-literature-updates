@@ -154,3 +154,4 @@ do.
 | `gabelman1999hollow` | Mass-transfer correlations for hollow-fibre contactors; currently cited only as the standard review. **PDF retrieved, not yet read.** |
 | `tian2010kinetics` | Rate law and activation energy for ammonium sulfate leaching of weathered-crust ore. **PDF retrieved, not yet read.** |
 | `he2016kinetics` | The same for column leaching, including the aluminium co-extraction behaviour. **PDF retrieved, not yet read.** |
+| `duchanois2023prospects` | Which metals are worth recovering from wastewater and brine, and the techno-economic criteria that decide it. Cited in ch21 for existence only; @smith2024critical relies on it for that guidance and this book takes no number from it. |

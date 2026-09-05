@@ -66,7 +66,9 @@ earths as a passenger — coal ash, {index}`phosphogypsum`, scrap magnets and
 phosphors, oilfield and geothermal waters. None of it needs a mill, some of it
 needs no crack at all, and all of it arrives with a different impurity problem
 from the one described here. It is collected in
-[](#recycling-and-urban-mining).
+[](#recycling-and-urban-mining), and the oilfield waters — where the critical
+mineral that matters turns out not to be a rare earth at all — get a chapter of
+their own in [](#produced-water-critical-minerals).
 
 For the three hard-rock minerals, the first plant is a mill, not a reactor.
 Crushing and grinding liberate the rare-earth mineral from its host rock; then
