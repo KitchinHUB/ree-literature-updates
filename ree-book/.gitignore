@@ -4,3 +4,7 @@ tools/__pycache__/
 
 # Locally built PDF; CI rebuilds it on every push
 exports/
+
+# Manually retrieved PDFs for source verification (needs-journal-access.md).
+# Publisher PDFs are not redistributable; never commit these.
+fulltexts/

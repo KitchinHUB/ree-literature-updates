@@ -20,6 +20,11 @@ it, correct it, or delete the sentence and say plainly that the figure is not
 established. Do not resolve one by finding a different paper that happens to
 report a similar number.
 
+**Where the PDFs go:** `fulltexts/`, which is gitignored — publisher PDFs are
+not redistributable and must never be committed. Name each file by its citation
+key, e.g. `ding2023separation.pdf`. Issue #1 lists every entry in this file with
+its DOI and what specifically to look for, in a suggested retrieval order.
+
 ## Flagged claims
 
 | Chapter | Citation key | What rests on it |
