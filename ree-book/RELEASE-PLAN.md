@@ -338,13 +338,59 @@ cheaper and higher-yield.
 
 ### What remains open
 
-- `needs-journal-access.md` lists the ten claims that rest on abstracts rather
-  than on the passage containing the number, plus the one deliberate gap
+- `needs-journal-access.md` lists the thirteen claims that rest on abstracts
+  rather than on the passage containing the number, plus the one deliberate gap
   (ch05 states no overall recovery figure, because no source consulted supports
-  one). That file is the standing to-do list; it is the only correctness
-  category this project could not close on its own.
+  one), plus five sources cited only for what their titles establish. That file
+  is the standing to-do list; it is the only correctness category this project
+  could not close on its own.
 - A human still has to read the rendered site. No automated check substitutes
   for it, and it is still the last outstanding item.
 - GitHub Pages is not enabled on the repository. Enabling it is a settings
   change only the owner can authorize: Settings → Pages → Source "GitHub
   Actions".
+
+## After the first draft — Chapter 14, Kinetics and Mass Transfer
+
+Added 2026-09-03, after everything above was finished. It is the first chapter
+written for this edition rather than converted from a source document, and it
+closes a gap the correctness pass did not look for: the book treated separation
+as an equilibrium problem throughout, and had no treatment of mass transfer
+anywhere. Four chapters already carried a piece of the rate argument — the
+shrinking-core models in ch05, the kinetic Pr/Nd results in ch08, the
+interfacial rate constants in ch09, and the polymorph-control section in ch10 —
+and none of them referenced any of the others. The new chapter gives them a
+common footing and points at each rather than restating it; those four now point
+back.
+
+**Numbering.** Inserting it after ch13 shifted the old ch14 through ch21 up by
+one, to 15 through 22. Every chapter number *above 13* in the sections above
+this one is in the pre-insertion numbering: "ch14" in Phase B and Phase B-bis
+means what is now ch15, High-throughput and computational screening, and so on
+through "ch21" meaning what is now ch22. Chapters 1 through 13 are unchanged.
+URLs did not move — MyST derives the slug from the filename minus its numeric
+prefix — so nothing published under the old numbering broke.
+
+**What it is held to.** The same standard as everything else, and it was the
+harder half of the work. Sixteen new sources, each checked against its retrieved
+abstract rather than against the fact that its DOI resolves. Four OpenAlex
+publication years were wrong and were corrected against CrossRef. No number is
+quoted from a source whose abstract could not be retrieved: the chapter's
+comparison table says "Not quoted here — not verified against the source" in
+four cells rather than filling them, three such sources are added to
+`needs-journal-access.md`, and five more are listed there under a new heading
+for sources cited only for what their titles establish, with no value taken from
+any of them.
+
+**Three things the chapter says plainly rather than papering over.** The best
+rate data across the lanthanide series was measured by the MRI contrast-agent
+community for relaxivity, not for separation, and the chapter states that
+provenance where it uses the data. Kinetic sieving in MOFs and zeolites is a
+gas-phase result with essentially nothing on aqueous lanthanides; that is
+written as a research gap, not as a capability. And the chapter's own thesis —
+that a rate ordering can differ from an equilibrium ordering — is supported to
+exactly the strength the sources carry: a necessary condition demonstrated
+(complex formation unexpectedly fastest at Gd, peaked mid-series), and separation
+factors of 261 and 26 demonstrated on Y/Lu and La/Y mixtures that are nothing
+like the adjacent pairs the book cares about. The chapter closes on why the idea
+keeps not scaling, not on the two large numbers.

@@ -73,7 +73,10 @@ extraction before equilibrium is a contact time at which two lanthanides that
 share an equilibrium can still be told apart, and [](#fig-09-kinetics) draws
 exactly that: two approaches to the same endpoint, distinguishable only while
 they are still on the way. Kinetic selectivity is available to a chip and not to
-a mixer-settler, and it is the more interesting of the two claims.
+a mixer-settler, and it is the more interesting of the two claims. It is also
+not confined to microfluidics: [](#kinetics-and-mass-transfer) collects what has
+actually been demonstrated on rate differences between rare earths, and is
+candid about how little of it is on the pairs that matter.
 
 (extraction-architectures)=
 ## Extraction Architectures

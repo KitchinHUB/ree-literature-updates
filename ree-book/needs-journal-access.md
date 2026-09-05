@@ -26,14 +26,17 @@ report a similar number.
 |----|----|----|
 | 07 Pyrometallurgical and halogenation routes (also cited in 04) | `huang2002rare` | The selective chlorination / vacuum-thermal purity, yield and thorium-partitioning figures. The abstract does not carry them. |
 | 08 Coacervates and aqueous two-phase systems | `favrerguillon2004cloud` | Cloud-point extraction performance figures. |
-| 08 Coacervates and aqueous two-phase systems | `sui2023kinetic` | Crystallization kinetic parameters. |
+| 08 Coacervates and aqueous two-phase systems (also 14) | `sui2023kinetic` | The kinetically enhanced Pr/Nd separation factor. Chapter 08 already declines to quote it. |
 | 11 Biological and biomimetic separations | `zhou2018leaching` | Bioleaching recovery figures. |
 | 11 Biological and biomimetic separations | `zhang2018bioleaching` | Bioleaching recovery figures. |
 | 11 Biological and biomimetic separations | `deng2025application` | Application-scale claims. |
 | 11 Biological and biomimetic separations | `kore2024application` | Application-scale claims. |
-| 14 High-throughput and computational screening | `an2024agile` | Synthesis details of the automated platform. |
-| 16 Machine learning in rare earth separations | `zhang2026predicting` | Reported model performance. |
-| 16 Machine learning in rare earth separations | `liu2026machine` | Reported model performance. |
+| 14 Kinetics and mass transfer | `cao2021extraction` | The extraction rate constants and kinetic separation factors for La/Gd/Ho/Lu with HEHEHP. |
+| 14 Kinetics and mass transfer (also 08) | `wang2019enhanced` | The Pr/Nd separation factor from the push-and-pull column. |
+| 14 Kinetics and mass transfer | `sui2024nonequilibrium` | The Tm/Y/Er separation performance on rising oil droplets. |
+| 15 High-throughput and computational screening | `an2024agile` | Synthesis details of the automated platform. |
+| 17 Machine learning in rare earth separations | `zhang2026predicting` | Reported model performance. |
+| 17 Machine learning in rare earth separations | `liu2026machine` | Reported model performance. |
 
 ## A gap, not a flag
 
@@ -44,3 +47,23 @@ plausible range would be exactly the failure mode the whole project is built to
 avoid. Restoring a number here needs journal access to the primary
 process-metallurgy literature. Until then the absence is the honest answer, and
 the chapter says so rather than leaving a reader to assume an omission.
+
+## Cited for existence, with no number taken
+
+A second and milder category, introduced with chapter 14, Kinetics and
+Mass Transfer. These are sources whose abstracts are not
+exposed by any interface reachable from here — several are pre-2000 Elsevier and
+ACS papers that predate structured abstracts in the aggregators. The book cites
+them for what their titles establish (that a measurement was made, of what, by
+what method) and quotes no value from any of them. Nothing in the text depends
+on their contents, so none of these is a correctness risk in the way the table
+above is. They are listed because reading them would let the chapter say more
+than it currently does.
+
+| Citation key | What the chapter would gain |
+|----|----|
+| `geist1999kinetics` | Measured rate constants for rare earth extraction into D2EHPA, and which step controls. |
+| `cossy1988oxygen` | Water-exchange rate constants across the Ln(III) aqua ions, and how much of the series ¹⁷O NMR could actually reach. |
+| `gabelman1999hollow` | Mass-transfer correlations for hollow-fibre contactors; currently cited only as the standard review. |
+| `tian2010kinetics` | Rate law and activation energy for ammonium sulfate leaching of weathered-crust ore. |
+| `he2016kinetics` | The same for column leaching, including the aluminium co-extraction behaviour. |

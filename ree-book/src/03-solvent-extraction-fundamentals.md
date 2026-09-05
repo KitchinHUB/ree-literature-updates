@@ -175,7 +175,9 @@ selects it:
   gravity-based contactor in this chapter.
 - **It must separate quickly.** Settling velocity falls as viscosity rises, and
   settler volume — the single largest contributor to solvent inventory in a
-  mixer-settler train — is set by how long the dispersion takes to break.
+  mixer-settler train — is set by how long the dispersion takes to break. That
+  is the disengagement half of a trade whose other half is contacting time;
+  [](#kinetics-and-mass-transfer) works the trade through.
 - **It must not dissolve in water.** Anything that dissolves leaves in the
   raffinate, as both a reagent loss and a discharge.
 - **It must be chemically inert** to strong acid and strong base at temperature,

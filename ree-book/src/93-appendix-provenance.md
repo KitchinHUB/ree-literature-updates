@@ -60,19 +60,20 @@ document changes will shift them.
 | 11. Biological and Biomimetic Separations | `broad-review.md` 1261–1789 (§10) |
 | 12. Membranes, MOFs, and Emerging Approaches | `broad-review.md` 484–584, 753–929 (§3, less the microfluidics subsection) |
 | 13. Thermodynamics of Extraction | `thermodynamic-cycle.md` 3–441 and 462–end + `broad-review.md` 2733–2897 (§16 Microcalorimetry) + `bastnäsite-framework.md` |
-| 14. High-Throughput and Computational Methods | `high-throughput.md` 13–256 + `broad-review.md` 2514–2714 (§14 Computational) |
-| 15. Process Modeling and Optimization | **No source document**; written from the primary literature for this edition. See the note below |
-| 16. Machine Learning in Rare Earth Separations | **No source document**; written from the primary literature for this edition. Two sections were moved here from Chapter 14 rather than rewritten — see the note below |
-| 17. Characterization Methods | `broad-review.md` 1791–2236 (§11) |
-| 18. Recycling and Urban Mining | `broad-review.md` 1110–1148 (§5) |
-| 19. Environment, Techno-Economics, and Life Cycle | `broad-review.md` 1150–1186 (§6), 2238–2367 (§12 TEA), 2369–2512 (§13 LCA) |
-| 20. The Industrial Landscape | `broad-review.md` 1188–1215 (§7) |
-| 21. Research Directions and Open Questions | `broad-review.md` 1233–1259 (§9), 2716–2732 (§15 Conclusions) + `high-throughput.md` 349–357 (critical gaps); synthesis newly written |
+| 14. Kinetics and Mass Transfer | **No source document**; written from the primary literature for this edition. See the note below |
+| 15. High-Throughput and Computational Methods | `high-throughput.md` 13–256 + `broad-review.md` 2514–2714 (§14 Computational) |
+| 16. Process Modeling and Optimization | **No source document**; written from the primary literature for this edition. See the note below |
+| 17. Machine Learning in Rare Earth Separations | **No source document**; written from the primary literature for this edition. Two sections were moved here from Chapter 15 rather than rewritten — see the note below |
+| 18. Characterization Methods | `broad-review.md` 1791–2236 (§11) |
+| 19. Recycling and Urban Mining | `broad-review.md` 1110–1148 (§5) |
+| 20. Environment, Techno-Economics, and Life Cycle | `broad-review.md` 1150–1186 (§6), 2238–2367 (§12 TEA), 2369–2512 (§13 LCA) |
+| 21. The Industrial Landscape | `broad-review.md` 1188–1215 (§7) |
+| 22. Research Directions and Open Questions | `broad-review.md` 1233–1259 (§9), 2716–2732 (§15 Conclusions) + `high-throughput.md` 349–357 (critical gaps); synthesis newly written |
 
-### The two chapters with no source document
+### The three chapters with no source document
 
 Most chapters here are a rewrite of material the group had already
-written. Chapters 15 and 16 are not. The sources touch process modeling twice — a
+written. Chapters 14, 16 and 17 are not. The sources touch process modeling twice — a
 four-row table of software names in `high-throughput.md`, and a paragraph of
 geochemical speciation packages in the characterization section — and neither
 is an account of how a rare-earth flowsheet is modeled or optimized. The
@@ -82,16 +83,16 @@ document.
 
 That difference changes what an error in it would look like. Elsewhere in this
 book the likeliest error is something a source document asserted and the
-verification pass failed to catch. In Chapter 15 the likeliest error is a paper
+verification pass failed to catch. In Chapter 16 the likeliest error is a paper
 whose abstract supports less than the sentence citing it claims. Every number
 that chapter attributes to a specific study — stage counts, recoveries,
 profitability signs — was read out of that study's own abstract during
 drafting; where only a title was available, the sentence was written to claim
 no more than a title can support.
 
-Chapter 16 was written the same way and with the same exposure. Two of its
+Chapter 17 was written the same way and with the same exposure. Two of its
 sections — the deep-learning distribution-ratio work and the learned binding
-energies — were moved out of Chapter 14, where they were originally assembled
+energies — were moved out of Chapter 15, where they were originally assembled
 from `high-throughput.md`, and were not rewritten in the move; their labels
 travelled with them so that existing cross-references still resolve. Everything
 else in the chapter was written from CrossRef, OpenAlex and Semantic Scholar
@@ -102,6 +103,18 @@ reachable through any of those routes and no open-access copy:
 than its title asserts, and the two that bear most directly on the chapter's
 subject are named in the text as papers this book takes no numbers from.
 
+Chapter 14 was added last, has no source document either, and its exposure is
+different again and smaller. It exists because the sources — and, until it was
+written, this book — treated separation almost entirely as an equilibrium
+problem, so there was nothing to rewrite. Every claim in it was checked against
+a CrossRef or OpenAlex record while it was being drafted, and the rule it works
+to was made explicit rather than assumed: where no abstract was reachable, no
+number was taken. Five sources fall in that category and are listed by name in
+`needs-journal-access.md` alongside what reading them would add. Four more — the
+aqueous kinetic-separation work of the Huang group — report separation factors
+that could not be verified, and the chapter's own comparison table carries "not
+quoted here" in those cells rather than a number.
+
 ## Material deliberately dropped
 
 - **Project-internal content.** Statement-of-work sections, staffing and
@@ -110,7 +123,7 @@ subject are named in the text as papers this book takes no numbers from.
   high-throughput sources. What survived was rewritten into third person.
 - **Lab-planning sections.** `high-throughput.md` §6–7 planned specific
   equipment purchases and a collaboration; only the technical gap analysis
-  was kept, in Ch. 20.
+  was kept, in Ch. 22.
 - **Duplicated coverage.** `chemistry-fundamentals.md` §7 and
   `high-throughput.md` §1.1 and §3.1–3.2 both describe the same automated
   platform and machine-learning work. The fuller high-throughput treatment
@@ -131,7 +144,7 @@ subject are named in the text as papers this book takes no numbers from.
   numbered their own sections; MyST numbers chapters, and keeping both
   produced headings like "3.2.1" inside chapter 12.
 - Per-technology research opportunities stayed in their own chapters rather
-  than being collected into Ch. 20, which cross-references them instead.
+  than being collected into Ch. 22, which cross-references them instead.
   Judging an opportunity requires the surrounding technical context.
 - Flash Joule heating with chlorination is treated in full in Ch. 7, because
   the chemistry is chlorination. Ch. 12 keeps a pointer and the reported
@@ -325,7 +338,7 @@ expiry looks like.
 
 The method has a blind spot worth naming, since naming it is cheaper than
 pretending it does not exist: a claim-by-claim audit keyed on citations walks
-straight past any sentence that carries no citation at all. Chapters 10 and 16
+straight past any sentence that carries no citation at all. Chapters 10 and 17
 each contain specific numeric figures of exactly that kind. Finding their
 sources needs a different question — start from the numbers, not from the
 bibliography — and it has not been asked yet.

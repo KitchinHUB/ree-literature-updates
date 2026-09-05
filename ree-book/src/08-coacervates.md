@@ -398,7 +398,9 @@ the separation factor reported in that work could not be verified from any
 source available here and is therefore not quoted. Fourth, a push-and-pull
 column using [A336][NO3] with DTPA as the aqueous complexant enhances Pr/Nd
 separation by combining extraction kinetics in one direction with complexation
-in the other [@wang2019enhanced].
+in the other [@wang2019enhanced]. Both of the kinetic results are part of a
+wider programme on rate-based rather than equilibrium-based separation, which
+[](#kinetics-and-mass-transfer) sets out.
 
 No coacervate has been applied to this pair. The routes that would be worth
 trying are the ones the four results above suggest: exploiting kinetic rather

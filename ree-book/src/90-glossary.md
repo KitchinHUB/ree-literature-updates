@@ -195,6 +195,13 @@ extraction factor (E)
   extracts a fraction E/(1+E), and E is the parameter the Kremser equation is
   written in.
 
+film diffusion
+: Transport of a solute across the thin, quiescent layer of fluid that clings to
+  a phase boundary, where convection has died out and only molecular diffusion
+  remains. When it is the slowest step in a series, the extraction responds to
+  agitation and to interfacial area and to little else
+  ([](#kinetics-and-mass-transfer)).
+
 flash Joule heating
 : Resistive heating of a conductive feedstock by a capacitor discharge,
   reaching thousands of kelvin in under a second. Applied to REE recovery it
@@ -253,6 +260,12 @@ isotachophoresis
   stay sharp instead of diffusing, so resolution does not decay along the
   channel. What has actually been separated this way, and at what scale, is in
   [](#microfluidic-separations).
+
+kinetic selectivity
+: Discrimination between two species by the ratio of their *rates* rather than
+  by the ratio of their equilibrium constants. It requires the contact to be
+  stopped before equilibrium, and it is useful only where the rate ordering
+  differs from the equilibrium ordering ([](#kinetics-and-mass-transfer)).
 
 lanmodulin
 : A bacterial protein whose EF-hand sites bind trivalent lanthanides with
@@ -313,6 +326,13 @@ loading
   approaches its viscosity and {term}`third phase` limits. A separation factor
   quoted without a loading was measured near infinite dilution and will not be
   reproduced in a plant.
+
+mass transfer coefficient
+: The proportionality constant between a transfer rate per unit interfacial area
+  and the concentration driving force. An *overall* coefficient lumps every
+  resistance in series — two films, a chemical reaction, sometimes a membrane —
+  which is why a measured value is a property of the apparatus unless the
+  interfacial area is separately known ([](#kinetics-and-mass-transfer)).
 
 McCabe-Thiele diagram
 : A graphical stage construction: the equilibrium curve, organic against
@@ -421,6 +441,12 @@ rare earth elements (REE)
   *rare earth metals* is the IUPAC-approved collective name for exactly these
   seventeen [@connelly2005nomenclature]. See {term}`lanthanoid`.
 
+residence time distribution
+: The spread of times that different fluid elements spend in a contactor, as
+  distinct from the mean. It is irrelevant to an equilibrium stage and decisive
+  for a kinetic one, where performance has an optimum in time and both sides of
+  it are worse ([](#kinetics-and-mass-transfer)).
+
 roasting
 : Heating an ore or concentrate in a controlled atmosphere to convert minerals
   to a more tractable form — oxidizing carbonate to oxide, converting cerium
@@ -443,6 +469,12 @@ separation factor
 : The ratio of the distribution ratios of two elements, quantifying how well a
   system discriminates between them. For adjacent lanthanides it is typically
   small, which is why REE separation needs many stages.
+
+shrinking core model
+: The standard kinetic description of a dissolving mineral particle, in which an
+  unreacted core retreats inside a growing product layer and the rate is set by
+  whichever of film diffusion, surface reaction or product-layer diffusion is
+  slowest ([](#leaching-kinetics-models)).
 
 solvent extraction
 : Transfer of a metal between an aqueous phase and an immiscible organic phase
@@ -486,6 +518,14 @@ synergistic extraction
   the other displaces its remaining water. Synergism can also shift
   selectivity, not just capacity.
 
+TALSPEAK
+: Trivalent Actinide Lanthanide Separation with Phosphorus-Reagent Extraction
+  from Aqueous Komplexes: an acidic organophosphorus extractant paired with an
+  aminopolycarboxylate holdback reagent in a concentrated lactate buffer. Its
+  thermodynamics are excellent and its slow phase-transfer kinetics are the
+  reason it has not been adopted at process scale
+  ([](#kinetics-and-mass-transfer)).
+
 techno-economic analysis (TEA)
 : A costed process model — capital, operating, and revenue — used to compare
   flowsheets on economics rather than on recovery. Paired in this book with
@@ -504,6 +544,13 @@ third phase
   is an operational failure, not a curiosity — it holds up metal and destroys
   interface control — and it is fought with a {term}`modifier`, a more aromatic
   {term}`diluent`, higher temperature, or lower {term}`loading`.
+
+water exchange
+: The rate at which a water molecule coordinated to an aqueous Ln³⁺ ion is
+  replaced by one from the bulk. It is the elementary step any inner-sphere
+  complexation must pass through, and the best data on it across the lanthanide
+  series was measured by the MRI contrast-agent community rather than for
+  separations ([](#kinetics-and-mass-transfer)).
 
 xenotime
 : A rare-earth phosphate, YPO₄, chemically similar to monazite but strongly

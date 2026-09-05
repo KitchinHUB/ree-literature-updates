@@ -483,7 +483,10 @@ The Stranski-Totomanow conjecture holds that polymorph selection is governed by
 the lowest free-energy barrier for nucleation, which would make this a purely
 kinetic problem. Recent work shows that kinetic effects do not fully explain
 structural transformation in every polymorphic situation, so a design that
-assumes they do is on unsafe ground.
+assumes they do is on unsafe ground. Crystallization is nonetheless the one
+family in this book where operating deliberately away from equilibrium is
+routine practice, which is why [](#kinetics-and-mass-transfer) treats it as the
+worked precedent for the rest.
 
 ### Promising Approaches
 
