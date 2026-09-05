@@ -129,6 +129,29 @@ oxides for optical and electronic use, and, historically, the Manhattan-era and
 early Ames Laboratory separations that first produced weighable quantities of the
 individual lanthanides in pure form [@spedding1947separation].
 
+**Extraction chromatography** is a related but distinct arrangement, and it makes
+the throughput point unusually concrete. Instead of an ion-exchange resin and a
+chelating eluent, a reverse-phase column is functionalized by physically adsorbing
+a solvent-extraction reagent onto its C18 chains, so that the separation chemistry
+is the extractant's and the staging is the column's. @sanku2021extraction
+impregnated a 150 mm × 4.6 mm Kromasil C18 column with HDEHP to a ligand density
+of 0.64 mmol/g, and eluted a six-element mixture — La, Ce, Pr, Nd, Y, Dy from
+synthetic apatite leach solutions — with a combined isocratic and gradient nitric
+acid programme at 40 °C. It resolved all six into individual fractions in a single
+pass, including, in their description, an almost perfect separation of Nd from Pr,
+the pair that costs a solvent extraction plant tens of stages.
+
+The load was **50 µL of a 1,000 mg/L solution: 50 micrograms of total rare
+earth**. The authors are explicit that this is "just exceeding the analytical
+range" and that limited productivity is the method's main drawback. That
+juxtaposition — a separation a cascade would need forty-five stages to achieve,
+performed in one pass on fifty micrograms — is the cleanest statement in this
+chapter of why resolution and throughput are separate axes, and why a technology
+can be excellent on one and disqualified on the other. Scaling it is not a matter
+of running the column longer; it requires operating in the overloaded regime,
+where resolution degrades, and the paper names that as the necessary next
+experiment rather than claiming it.
+
 ### The Resins Themselves
 
 The chemistry underneath is the same acid-base and coordination chemistry that

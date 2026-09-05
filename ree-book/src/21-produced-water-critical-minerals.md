@@ -164,6 +164,55 @@ multivalent ions that could impact overall performance indicators." The book's
 recurring finding about rare earth separations — that headline selectivities are
 measured on the easy pairs and in the easy media — has an exact analogue here.
 
+### The adsorbent route, and the gap between theory and capacity
+
+Membranes are one of two candidate mechanisms; the other is a selective solid.
+The leading material is layered H₂TiO₃, the protonated form of Li₂TiO₃, which
+takes up lithium by Li⁺--H⁺ exchange and rejects magnesium on size. Its appeal
+over the λ-MnO₂ ion sieve is a stable titanium framework and a higher theoretical
+capacity, **about 128 mg Li per gram** [@marthi2021lithium]. What is actually
+achieved is a good deal less: the literature maximum under optimal conditions is
+**below 50 mg/g**, and @marthi2021lithium measure **about 40 mg/g** on their own
+material. A factor of three between the theoretical and the delivered capacity is
+the kind of gap that decides whether a process is economic, and it had not been
+explained.
+
+Their explanation is mechanistic and it revises the accepted picture. Lithium
+uptake had been understood as a straight ion exchange involving no bond breaking.
+FTIR and Raman spectra instead show that Li⁺--H⁺ exchange **does** break surface
+O--H bonds in the HTi₂ layers and form O--Li bonds, and that the hydroxyls which
+participate are the isolated surface ones rather than the hydrogen-bonded
+hydroxyls in the interlayer spacings. If only a subset of the available hydroxyl
+sites is chemically accessible, the theoretical capacity was never the right
+target, and the shortfall is structural rather than a matter of optimisation.
+
+The practical reading for Pennsylvania is that adsorbent capacity is a second
+constraint stacked on top of the selectivity constraint discussed above, and this
+result narrows rather than widens the design space. It also, usefully, points at
+what to change: the accessible capacity is set by the surface hydroxyl
+population, which is a synthesis variable.
+
+### What a concentrated lithium stream looks like
+
+It is worth setting the produced water numbers against a lithium stream that is
+*not* dilute, because the contrast is the whole argument. @kumari2021recovery
+treat the effluent left after cobalt, copper, nickel and graphite have been
+recovered from spent lithium-ion battery black mass: about **8 m³ of effluent per
+tonne** of black cathode material, carrying **5--10 g/L manganese and 1--3 g/L
+lithium**. At those concentrations the recovery step is precipitation with
+saturated alkali — 30 minutes settling at about pH 12 gives roughly **90 %** of
+the lithium as a salt — and no selective membrane or ion sieve is needed at all.
+
+Marcellus produced water carries lithium at a median in the tens of milligrams
+per litre ([](#what-pennsylvania-produces)). The battery-recycling effluent is
+one to three grams per litre: **one to two orders of magnitude more
+concentrated**, in a smaller volume, already inside a plant, and with a single
+major competing cation rather than a brine full of them. Nothing about the
+chemistry of lithium recovery is hard in that setting. What makes Pennsylvania
+produced water hard is not the element and not the separation principle; it is
+the concentration and the matrix, which is the same conclusion this chapter
+reaches from every other direction.
+
 (where-the-rare-earths-are-not)=
 ## Where the Rare Earths Are Not
 

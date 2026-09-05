@@ -106,6 +106,147 @@ the two purity specifications. [](#countercurrent-cascade-design) sets out what
 that buys: a plant can be designed on paper and started at its design point
 rather than converged on over months of operation.
 
+### What "Optimum" Means in a Cascade
+
+The word optimum carries a specific and non-obvious meaning in this literature,
+and getting it wrong makes the results look inconsistent. It does not mean the
+fewest stages, and it does not mean the least reagent. In @zhang2016cascade's
+statement of the theory it means **the maximum daily production for a given total
+mixer volume** — a capital-productivity objective, not a stage-count one.
+
+The objective function follows from that. For a mixer-settler train with fixed
+mixing and settling residence times, the capital tied up is set by the organic
+and rare-earth inventory held in the cells, which scales as the solvent flow per
+unit feed, `S_o`, times the number of cells. So the design indicator is the
+product
+
+$$
+\Phi = S_o \,(n + m)
+$$
+
+and it has a minimum, because `S_o` and `n + m` move against each other: more
+solvent per unit feed means a larger extraction factor and fewer stages to reach
+the same purity. Plotting `Φ` against `S_o` gives a U, and the design is chosen
+near its bottom.
+
+**The U is very shallow, and that matters.** @zhang2016cascade tabulate the curve
+for a three-component design case — separating Gd/Eu/Sm on an acidic extractant
+with `β`(Gd/Eu) = 1.40 and `β`(Eu/Sm) = 2.00, from a feed of 0.39/0.10/0.51,
+specified at 99.9% Gd₂O₃, 99.99% Sm₂O₃ at 99.9% recovery, and a europium
+concentrate above 40%:
+
+| `S_o` | Stages `I` | `n` | `m` | Total `n + m` | `Φ = S_o(n+m)` |
+|---|---|---|---|---|---|
+| 1.40 | 39 | 22 | 63 | 85 | 119 |
+| 1.50 | 36 | 21 | 55 | 76 | **114** |
+| 1.75 | 32 | 19 | 47 | 66 | 115 |
+| 2.00 | 30 | 18 | 42 | 60 | 120 |
+| 2.25 | 29 | 18 | 39 | 57 | 128 |
+| 2.50 | 28 | 17 | 38 | 55 | 138 |
+
+Read the two columns that matter against each other. Going from `S_o` = 1.40 to
+2.50 cuts the train from 85 stages to 55 — a 35% reduction in installed cells,
+which is the kind of change that reorganises a plant. Over that same range the
+objective `Φ` moves from 119 down to 114 and back up to 138: the minimum is
+**4% below** the value at the left-hand end. For any choice between about 1.5 and
+2.0 the objective is flat to within 5%, which is well inside the uncertainty of
+the stage-efficiency assumption underneath it. **The objective identifies a
+region, not a point**, and the design decision inside that region is made on
+grounds the objective does not represent.
+
+The source's own behaviour bears this out: having tabulated the curve, it builds
+its detailed process table at `S_o` = 2.00, where `Φ` = 120 — *worse* than the
+114 at `S_o` = 1.50. The stated rule is to sit "slightly right side of the curve
+bottom", and the justification given is asymmetry of risk rather than the value
+of `Φ`: below the minimum solvent flow the stage count rises without bound, so
+the left side of the U is a cliff and the right side is a ramp. That is a sound
+argument, and it is worth naming as the thing it is — a robustness margin against
+a hard constraint, not an optimum. It is the same instinct that puts a
+distillation column at 1.2 to 1.5 times minimum reflux.
+
+**A practitioners' rule with no data behind it.** The same source offers a
+parameter `k` for backing a design off the thermodynamic extremum, defined
+through the scrub flow as `W_a = 1/(β^k − 1)` with `0 < k < 1`; `k` = 1 recovers
+the minimum-flow, infinite-stage limit, and lowering it trades reagent for
+stages. The recommendation is that "normally the optimum k value is 0.70 based on
+the process design of hundreds of systems", with 0.5 to 0.9 used in practice and
+the final choice made on a full economic assessment. Two things should be said
+about this. It is a useful number, and it comes from an authoritative source
+close to the industrial practice. It is also presented with no dataset, no error
+estimate and no external citation — the supporting evidence is the authors'
+accumulated design experience, asserted rather than shown. The same is true of the
+claim that the mixed-solute stage equations "have been approved correct in over
+ten years of rare earth production and in hundreds of simulating experiments."
+This book uses the rules and reports the basis they rest on, which is expert
+practice rather than published validation.
+
+### Three Outlets, and What the Middle Cut Is Worth
+
+A two-outlet cascade yields one pure product and one mixture. The **three-outlet
+process**, developed by Chunhua Yan and coworkers at Peking University, draws a
+third stream from an intermediate stage so that a single cascade produces two
+pure products *and* a concentrated middle fraction [@zhang2016cascade]. For a
+feed whose valuable component sits in the middle of the series — europium or
+terbium in a light/heavy split — this is worth a great deal, because the
+alternative is to pass that component through two separate cascades.
+
+What the middle outlet actually delivers is the part worth stating plainly. In
+the Gd/Eu/Sm case above, the converged design meets its end specifications
+handsomely: 99.99% Sm₂O₃ in the aqueous outlet and 99.91% Gd₂O₃ in the organic
+outlet. The europium stream drawn from stage 30 comes out at **40.0%** Eu₂O₃,
+against 10% in the feed — a fourfold concentration, and exactly the specification
+that was asked for, but not a product. It is a feed for a further separation.
+Gadolinium recovery in that design is **61.8%**, with the balance reporting to the
+europium concentrate. The three-outlet process buys concentration of the middle
+component at the cost of recovery of the component adjacent to it, and the
+published case makes the size of that trade visible.
+
+The complication that follows is a modelling one, and it is why this belongs in
+this chapter rather than in [](#solvent-extraction-fundamentals): opening the
+third outlet changes the concentration profile of *every* component, so the
+two-outlet design equations no longer apply section by section without
+re-deriving the concentrating factors around the draw stage. The source's own
+verdict is that reaching the optimum "by only experience" is difficult — which is
+a statement that the closed-form theory has been pushed to where it stops being
+sufficient and a numerical model has to take over.
+
+A later variant, **fuzzy linkage extraction**, attributed to Jiankang Hu and
+coworkers, restructures the flowsheet instead: a coarse A/C split that does not
+control where the middle component B reports, feeding two second-layer cascades
+that finish B/C and A/B, with the strip liquor of the first layer serving
+directly as the scrub of the second. The claimed advantage is that scrub and
+strip solutions become the same stream, so reagent consumption falls. The
+magnitude given — a reduction "to 30%" relative to conventional processes,
+attributed to production practice — is both ambiguously worded in the source and
+unsupported by data reachable from here, resting on a Chinese-language secondary
+reference. The structural argument for the saving is clear; the number is not
+one this book will repeat.
+
+### Starting a Cascade That Takes Months to Converge
+
+There is a dynamic problem hiding behind all of the steady-state design above,
+and it is the most practical reason a plant needs a model rather than a design
+calculation. A cascade with a low separation factor and a high purity target
+takes a long time to reach steady state, because the approach to the design
+profile is itself governed by the same near-unity stage ratio that makes the
+separation hard. During that transient the plant is producing off-specification
+material at full rate.
+
+The industrial answer is **circulating solvent extraction**, and the standard
+startup sequence is full circulation → partial circulation → normal fractional
+operation [@zhang2016cascade]. Full circulation runs the train with no feed and
+no discharge: `S_o` = `W_a`, both extraction factors equal 1, and both reflux
+ratios are infinite. The cascade is, in effect, run at total reflux to build the
+composition profile before any product is drawn — the direct analogue of bringing
+a distillation column up on total reflux. Partial circulation then admits feed
+with discharge from one end only, and normal operation follows.
+
+This is worth noticing for what it says about the modelling problem. The design
+theory answers a steady-state question, but the quantity that decides whether a
+separation plant is economic over its first quarter of operation is a transient
+one, and no closed-form result addresses it. That is the gap the dynamic models
+below are written to fill.
+
 The theory has a second life that is less often described in English-language
 reviews, and it is the one relevant to this chapter. Closed-form design was the
 starting point, not the end: the same framework was carried into simulation and

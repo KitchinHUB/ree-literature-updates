@@ -241,6 +241,27 @@ leaves cerium behind as a residue, so the liquor reaching solvent extraction is
 already cerium-depleted [@gupta2004extractive; @castor2006rare]. That flowsheet
 is set out in full in [](#hydrometallurgical-leaching).
 
+**A recent flowsheet puts numbers on the whole Ce(IV) sequence.**
+@ilyas2021solvo take cerium out of a sulfate leach liquor by solvating extraction
+with Cyanex 923 in kerosene, reporting quantitative recovery of Ce(IV) in three
+counter-current stages at an organic-to-aqueous ratio of 2:3 with 0.15 mol/L
+extractant, and spectroscopic evidence for the solvated species
+Ce(SO₄)₂·2Cyanex923·[HSO₄⁻]. Stripping is where the redox handle is used a second
+time: H₂SO₄ with H₂O₂ reduces Ce(IV) back to Ce(III) and returns it to the
+aqueous phase at 1.3 g/L, from which oxalic acid precipitates it.
+
+The part worth carrying forward is the precipitation kinetics, because this
+chapter otherwise treats precipitation as an equilibrium operation. The oxalate
+precipitation fits the Avrami equation and gives an activation energy of
+**8.6 kJ/mol**, which the authors read as a diffusion-controlled mechanism. An
+activation energy that low is characteristic of transport control rather than
+chemical control, and it says that the rate at which cerium oxalate appears is
+set by how fast reagent and metal reach each other rather than by the
+precipitation reaction itself — which in turn is why the product's character
+changes with temperature, and why mixing is a design variable in a precipitator
+and not merely a housekeeping detail ([](#kinetics-and-mass-transfer)).
+
+
 (photochemical-reduction-of-europium)=
 ### Europium: the other redox handle, and the light that supplies it
 
@@ -566,6 +587,41 @@ rejection by 8-hydroxyquinoline costs 8 % of the rare earths
 but leaves 35 % of the aluminium behind [@li2025iron]. A flowsheet is a
 particular resolution of that trade-off, and quoting one side of it without the
 other is the most common way this literature is misread.
+
+### Antisolvent crystallization, and the reactor problem behind it
+
+One route in this family changes the solvent rather than the chemistry. Adding a
+water-miscible alcohol to a rare earth sulfate solution drops the dielectric
+constant, collapses the salt's solubility, and precipitates it without adding any
+reagent that has to be recovered. @lewis2021innovative report yields from
+yttrium sulfate octahydrate at 21.96 g/L (6.4 g/L Y³⁺) at a 1:1 organic-to-aqueous
+volume ratio: **96 % with ethanol, 93 % with methanol, 93 % with 2-propanol and
+86 % with t-butanol**. Thermodynamic modelling of Nd₂(SO₄)₃ and Dy₂(SO₄)₃ under
+the same conditions found the rare earth sulfate to be the only solid product
+formed, with solubilities across the range of O/A ratios of the same order as
+salts already recovered industrially in fluidised-bed reactors.
+
+The interesting part is why the authors are building reactors rather than
+reporting yields. Antisolvent addition creates supersaturation faster than it can
+be relieved, so nucleation is uncontrolled and primary, and the product is a
+mass of very small crystals — high yield, unusable solid. Their proposal is to
+run the crystallization in a fluidised bed, where the solute deposits onto
+circulating seed particles instead of nucleating in the bulk, and their evidence
+for feasibility is the crystal habit: the yttrium sulfate crystals are
+well faceted and isotropic, which is what coats a seed uniformly, as nickel
+carbonate does and copper sulfide does not.
+
+State clearly what this is and is not. Every experiment here is on a
+**single-element solution** — yttrium alone, or modelled neodymium or dysprosium
+alone. No separation factor is reported and none could be, because nothing was
+separated from anything. It is a recovery and product-form result, and it belongs
+in this chapter for the same reason the oxalate and carbonate sections do: the
+question of what solid the rare earths leave in, and whether it filters, is a
+real process question independent of the separation. Whether an alcohol
+antisolvent discriminates between adjacent lanthanides at all is not addressed,
+and on the evidence of the modelled solubilities — same order of magnitude for
+neodymium and dysprosium at every ratio tested — there is no reason from this
+work to expect that it does.
 
 (selective-crystallization-by-molecular-design)=
 ## Selective Crystallization by Molecular Design

@@ -908,6 +908,79 @@ in series so that the raffinate of one becomes the feed of the next, is what
 turned a fifteen-component feed into a fan-out of individual oxides and made
 China the world's separator of rare earths [@yan2006rare].
 
+#### The Closed-Form Design Equations
+
+It is worth seeing what "in closed form" actually amounts to, because the
+equations are short and they connect directly to the Fenske bound derived above.
+The account here follows @zhang2016cascade, which sets out Xu's apparatus in
+English at book length.
+
+Label the more-extractable element `A` and the less-extractable one `B`, so
+`β = D_A/D_B > 1`. The central variable is the **extraction factor** `E`, defined
+for each solute as the mass flow of that solute in the organic phase divided by
+its mass flow in the aqueous phase at a stage; by construction
+`E_A/E_B = β`. The specification enters through two **concentrating factors**,
+`a` and `b`, each the ratio of wanted to unwanted at an outlet divided by the same
+ratio in the feed — so `b = [P_B/(1−P_B)] / (f_B/f_A)` for the aqueous outlet, and
+`a` likewise for the organic outlet. Then the two stage counts are
+
+$$
+n = \frac{\log b}{\log (\beta E_B)}
+\qquad\qquad
+m = \frac{\log a}{\log (\beta' / E'_A)}
+$$
+
+with `n` the extraction stages, `m` the scrub stages, and the primes marking
+quantities evaluated in the scrub section, where the separation factor `β'` need
+not equal `β`.
+
+These are Fenske with the reflux put back. Send the reflux to infinity and
+`E_B → 1`, the denominator becomes `log β`, and the expressions collapse to the
+minimum-stage relation of the previous section. At finite reflux `E_B < 1`, the
+denominator shrinks, and the stage count grows. The gap between `N_min` and a
+real design, asserted above, is now a quantity you can compute.
+
+**The optimum is at the geometric mean.** The result that makes the theory a
+design method rather than a rearrangement is what happens when you ask for the
+*best* extraction factor rather than a feasible one. Maximising daily production
+at a fixed total mixer volume and a fixed separation target gives, for a cascade
+whose stage count is dominated by the extraction section,
+
+$$
+E_B = \frac{1}{\sqrt{\beta}}
+\qquad\qquad
+J_S = \frac{1}{\sqrt{\beta} - 1}
+$$
+
+where `J_S` is the extraction reflux ratio. Since `E_A = β E_B`, the companion
+result is `E_A = √β`, and therefore `E_A E_B = 1`: the optimum places the two
+solutes' extraction factors symmetrically about unity, so that the
+more-extractable element climbs toward the organic outlet exactly as fast as the
+less-extractable one falls toward the aqueous outlet. A cascade controlled by its
+scrub section instead has the mirror result, `E'_A = √β'` and
+`J_W = 1/(√β' − 1)`. Which of the two governs is settled by the feed
+composition: for aqueous feeding the process is extraction-controlled when the
+organic-outlet fraction `f'_B` exceeds `√β/(√β + 1)` and scrub-controlled below
+it.
+
+The reflux ratio is the expensive part, and `1/(√β − 1)` is unforgiving for
+close-lying pairs. At β = 2.0 it is 2.4; at the β ≈ 1.5 of an adjacent
+lanthanide pair it is 4.5; at β = 1.2 it is 10.5. Reflux here is real solvent and
+real scrub liquor circulating through every stage, so the same small β that
+forces the stage count up also forces the flow through each of those stages up.
+The two costs compound rather than trade off.
+
+**Worked example, from the source.** @zhang2016cascade design a cascade for
+`β = β' = 2.00` and an equimolar feed, specifying 99.9% purity for `A` in the
+organic outlet and 99.99% for `B` in the aqueous outlet. Here
+`f'_B = 0.5 < √2/(√2+1) = 0.586`, so the process is scrub-controlled;
+`E'_M = √2 = 1.414`, `E_M = 0.773`, and the resulting design needs **24
+extraction stages and 21 scrub stages, 45 in all**. The Fenske bound for the same
+specification and the same β is `ln(999 × 9999)/ln 2 = 23.3`, so **24 stages** —
+close to half. That factor is the price of finite reflux, a real feed and a real
+flowsheet, and it is the concrete version of the warning attached to `N_min`
+above.
+
 The closed-form design is where a cascade calculation starts, not where it ends.
 Relaxing the constant-extraction-ratio assumption, carrying the acid balance the
 saponification section below explains, and asking which arrangement of stages is

@@ -168,6 +168,41 @@ The attraction is not the recovery, which is comparable to the roast-leach
 route, but the reagent inventory: no volatile mineral acid, no external heat,
 and the copper leaves as a saleable oxide rather than as a waste stream.
 
+### Leaching the magnet out of the steel
+
+Every route above assumes the magnet has been separated from everything it was
+attached to. Shredded hard disk drives do not arrive that way: the magnet
+fragments come bound to steel, and the table at the head of this chapter records
+the consequence. @lister2021recovery take the opposite approach and use the rate
+difference instead of fighting it.
+
+In 1 M HCl the Nd--Fe--B magnet alloy dissolves at **0.170 mm/h**, and mild steel
+coupons in the same solution corrode at a rate **three orders of magnitude
+lower** — a thousandfold rate ratio between the phase you want gone and the phase
+you want left behind. The magnet leaching rate is linear in HCl concentration,
+so the ratio is a design variable rather than a fixed property. The dissolved
+rare earths are then precipitated with solid Na₂SO₄ as the sodium double salt
+NaRE(SO₄)₂·xH₂O and converted to the hydroxides in 2 M NaOH at 70 °C, with the
+whole leach run under automated pH control below zero by metered addition of 5 M
+acid.
+
+Recoveries of rare earth hydroxide **exceeded 80 %** for everything except
+lanthanum, which recovered poorly; an independent estimate from acid consumption
+put the unrecovered fraction at about 17 %, which agrees. A second digestion in
+10 M NaOH raised the hydroxide content of the product by 12 % and cut iron and
+zinc by 50 % and 65 % respectively, giving an intermediate at **99.1 % purity on
+a metal basis**. Reusing the hydrochloric acid rather than taking it fresh cost
+about 10 % of the recovery.
+
+This deserves emphasis for a reason that has nothing to do with recycling. The
+book's recurring finding is that large kinetic selectivities are available
+everywhere *except* between neighbouring lanthanides
+([](#kinetics-and-mass-transfer)). A thousandfold rate ratio between magnet alloy
+and steel is exactly that pattern: it is a real, exploited, process-scale kinetic
+separation, and the two things it separates are as chemically unlike each other
+as two metals in a shredder can be. Nothing in it transfers to the Nd/Pr problem
+waiting downstream.
+
 ### Pyrometallurgical and electrochemical routes
 
 The high-temperature routes skip the aqueous stage. Their appeal is that they
@@ -261,6 +296,124 @@ does not reject, because they arrive as colloids that lodge in the bed and
 redissolve in the acid strip. The demonstration does not improve coal ash's
 grade. What it shows is that a low grade need not disqualify a feed, provided
 the separation is selective enough against everything else that is in it.
+
+Coal *waste* — the refuse rock rejected at the preparation plant, as distinct
+from the ash left after burning — is the same argument at larger tonnage and
+lower grade. @sarswat2021rare put United States generation at 544 Mt/year at an
+average rare earth content of about 200 ppm, and target feedstocks above 300 ppm
+for a proposed process that biooxidizes the pyrite in the refuse to generate
+ferric iron and acid in place, leaching the rare earths with a lixiviant the
+waste makes for itself and removing the sulfide that would otherwise become acid
+rock drainage. The circularity is genuinely attractive: the same step that
+cleans the coal, generates the leachant and defuses a long-term environmental
+liability.
+
+The concentrations tell the rest of the story. Ferric sulfate leach solutions in
+that work carried total rare earths in the 5--50 ppm range, and the reported
+bioleach liquor came in at **about 4 ppm total rare earth**, from which
+praseodymium was recovered preferentially by D2EHPA. Four milligrams per litre is
+a solution from which recovery is possible and from which economics is a separate
+question entirely — the same gap between demonstrated chemistry and demonstrated
+process that runs through every unconventional feed in this chapter.
+
+(bauxite-residue)=
+## Bauxite Residue: Where the Scandium Is
+
+Alumina refining by the Bayer process leaves 0.9 to 1.5 tonnes of insoluble
+residue for every tonne of alumina produced, depending on ore grade and
+extraction efficiency [@balomenos2021scandium]. That residue — bauxite residue,
+red mud — carries rare earths at a worldwide typical concentration of 800 to
+2,500 mg/kg, which is well above coal ash and comparable to phosphogypsum. It is
+in the same category as those two: a stockpiled industrial waste whose grade is
+respectable and whose problem is everything else in it.
+
+**Scandium is the reason this feed gets attention, and the reason it behaves
+unlike the others.** Sc³⁺ is much smaller than any lanthanide ion — closer in
+size to Al³⁺, Fe³⁺, V³⁺ and Zr⁴⁺ than to Lu³⁺ — so it does not travel with the
+rest of the series through geochemistry and does not concentrate in the minerals
+that host them [@eriksen2021scandium]. Scandium is found instead in
+titanium-, aluminium-, zirconium- and iron-bearing minerals, which is why looking
+for it in xenotime and monazite is the wrong search. In bauxite residue
+specifically it associates with goethite rather than with the
+alumina-bearing phases that dissolve in the Bayer liquor, so it survives into the
+residue while much of the rest of the rare earth content is redistributed into
+desilication products. An estimated 70 % of world scandium resources may sit in
+bauxite and bauxite residue [@balomenos2021scandium].
+
+There is one more consequence of that ionic-size argument worth naming, because
+it is the mirror image of this book's central difficulty. Scandium is hard to
+separate from aluminium and iron and easy to separate from the lanthanides —
+precisely because it is *not* chemically similar to them. The lanthanide problem
+and the scandium problem are different problems, and a process built for one is
+not a process for the other.
+
+### What the numbers look like at one refinery
+
+@balomenos2021scandium give a fully instrumented account for Greek bauxite
+residue at the Mytilineos alumina refinery, and it is worth following because the
+arithmetic is unusually complete. The residue analyses at 39.16 wt% Fe₂O₃,
+16.53 % Al₂O₃, 9.90 % SiO₂, 8.40 % CaO, 4.67 % TiO₂ and 3.46 % Na₂O, with
+Ce at 657 mg/kg, Y at 132, La at 110 and **Sc at 71 mg/kg**. At the refinery's
+production rate that amounts to more than 100 tonnes of scandium discarded each
+year in one waste stream.
+
+Set the two ends of that composition against each other. Iron, at 39.16 % Fe₂O₃,
+is 27.4 wt% of the residue as the element; scandium is 0.0071 wt%. **Iron
+outnumbers scandium by roughly 3,900 to 1 by mass in the feed**, and every step
+that follows is an argument with that ratio.
+
+The leaching results show what the argument costs:
+
+| Leach condition | Sc recovery | What comes with it |
+|---|---|---|
+| 3 M H₂SO₄, 85 °C | 70--95 % | Fe 49.7 g/L, Al 9.7 g/L in the liquor |
+| 1 M H₂SO₄, 95 °C | 48--55 % (Sc \~8 mg/L) | Fe and Ti recovery <5 %, but Si >4 g/L |
+| 45 g/L H₂SO₄ with filtrate recycle | --- | Sc 8.8, Fe 98, Ti 5.9, Si 213 mg/L |
+
+The first row is the one to sit with. Dissolving nearly all of the scandium also
+dissolves about fifty grams per litre of iron, and no amount of downstream
+cleverness recovers from a feed like that. The second row buys a five-hundredfold
+reduction in iron by giving up half the scandium — and then hits a different
+wall, because silica dissolves instead and gels in the column.
+
+### The result that is worth the whole paper
+
+The consequences for the recovery step are stark, and they were measured rather
+than assumed. Loading of scandium onto the composite extractant-enhanced
+ion-exchange resin from the high-acid liquor was about **60 mg Sc per litre of
+resin** — negligible. Removing the silicon and titanium (a 16-hour leach
+retention time brought Si below 800 mg/L and Ti to 43 mg/L) produced **no
+significant improvement**. Spiking the same solution with scandium to 60 mg/L
+raised loading to **2,640 mg/L**. And the optimised low-acid liquor with filtrate
+recycle — 8.8 mg/L Sc against 98 mg/L Fe — reached **5,000 mg/L resin**, with the
+resin eluted, regenerated and giving equivalent results on a second cycle.
+
+An eighty-fold range in loading capacity, on the same resin, from the same
+residue, decided entirely by what else was in the solution. This is the argument
+of [](#from-ore-to-feed-solution) arriving from the waste-valorisation direction:
+the separation step is not where an unconventional feed is won or lost. It is
+won or lost in the leach, and the design variable is not how much of the target
+you dissolve but what ratio you dissolve it at.
+
+Two things this case does not establish should be said. The 5,000 mg/L figure is
+a column loading capacity, not a process recovery, and no overall scandium
+recovery for the integrated flowsheet is given. And the residue contains 657
+mg/kg of cerium — nine times as much cerium as scandium — for which this process
+takes no credit at all. Whether a scandium circuit on bauxite residue would pay
+for itself is a question the paper does not answer; pilot plants for both the
+leach and the ion-exchange step were built and operated at the refinery, with the
+leach unit processing up to 1,000 kg of pulp containing 300 kg of residue per
+shift, so the question is at least being asked at the right scale.
+
+The market context is the last piece, and @eriksen2021scandium puts it bluntly:
+the scandium market does not function, in the sense that very little material is
+offered at a very high price, which prevents the applications — scandia-stabilised
+zirconia for solid oxide fuel cells, Sc--Al--Mg alloys for welded transport
+structures — from developing the volume that would justify producing more. That
+is a coordination failure rather than a separations problem, and it is the same
+shape as the one [](#the-industrial-landscape) describes for the heavy rare
+earths.
+
 
 (phosphogypsum)=
 ## Phosphogypsum: The Largest Pile

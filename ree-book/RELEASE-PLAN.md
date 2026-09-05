@@ -346,9 +346,9 @@ cheaper and higher-yield.
   could not close on its own.
 - A human still has to read the rendered site. No automated check substitutes
   for it, and it is still the last outstanding item.
-- GitHub Pages is not enabled on the repository. Enabling it is a settings
-  change only the owner can authorize: Settings → Pages → Source "GitHub
-  Actions".
+- ~~GitHub Pages is not enabled on the repository.~~ **Resolved.** Pages is
+  enabled with Source "GitHub Actions", and the `Deploy book` workflow now
+  completes successfully; the site publishes on push to `main`.
 
 ## After the first draft — Chapter 14, Kinetics and Mass Transfer
 
@@ -571,3 +571,53 @@ hoists bare `%` comment blocks to the top of the file wrapped as `@comment{...}`
 orphaning them from the entries they annotate. Three such blocks were displaced
 and restored by hand. Back up `references.bib` before running it and audit the
 diff with a key-set comparison.
+
+## After the first draft — two books read by chapter
+
+Added 2026-09-05. Two monographs had been sitting in `fulltexts/pdfs/` too large
+to read whole. Both were split by chapter with `pdfseparate`/`pypdf` and read as
+extracted text. Neither is committed and neither can be: both are publisher PDFs
+carrying a personal watermark, and `fulltexts/` is gitignored for exactly this
+reason. `src/93-appendix-provenance.md` records what was read and at what depth.
+
+**Zhang, Zhao and Schreiner, *Separation Hydrometallurgy of Rare Earth
+Elements* (Springer, 2016), chapter 5.** Read in full. This is the first source
+in the book that gives the *closed-form* cascade design equations rather than
+describing them, and it fills a hole chapter 03 had been carrying since the
+first draft: the chapter could state the Fenske minimum-stage bound but had
+nothing to say about what the real stage count is once reflux is finite. Chapter
+03 now carries the stage-count relations, the optimum $E_B = 1/\sqrt{\beta}$ and
+its consequence $E_A E_B = 1$, and the worked 45-stage example against a
+24-stage bound. Chapter 17 gained three sections: the capital objective
+$\Phi = S_o(n+m)$, the three-outlet process, and circulating start-up.
+
+The interesting finding is in the objective function. Reproducing the source's
+own Table 5.20 and checking every row's arithmetic shows the minimum of $\Phi$
+is only 4 % below the left endpoint of the tabulated range — the U is shallow,
+and the source itself then builds its process table at a saponification ratio
+whose $\Phi$ is *worse* than the tabulated optimum. That is a robustness margin
+against a hard constraint, not an optimum, and chapter 17 says so. Two further
+claims in that chapter were declined outright: the $k = 0.70$ rule of thumb and
+the "approved correct in over ten years of rare earth production" assertion are
+expert practice with no dataset behind them, and the fuzzy-linkage "30 % less
+reagent" figure is ambiguously worded and rests on an unreachable
+Chinese-language secondary source.
+
+**Azimi et al., eds., *Rare Metal Technology 2021*.** 36 papers; 13 selected as
+rare-earth-, scandium- or lithium-relevant and read; 9 carried a number the book
+did not already have and are now cited across chapters 04, 10, 20 and 21. The
+remaining 23 — lithium-ion battery recycling, platinum-group metals, tungsten,
+indium, chromium, vanadium — are off-topic and were not read. Four of the
+thirteen were read and **not** used, and the appendix says which and why: a
+citation this book cannot check is one it does not make.
+
+**Bibliography.** Ten entries added (1 Zhang, 9 RMT), all `@incollection`, every
+one verified against CrossRef for title, page range and author list before
+insertion. `tools/add_refs.py` was deliberately *not* used, for the reason
+recorded above; entries were inserted by a short script and audited with a
+key-set diff and an alphabetical-order check. One CrossRef record returned a
+Greek capital alpha inside a Latin author name and was normalized.
+
+**Verification after the pass:** 31 files, 2109 cite / 502 crossReference / 122
+math / 56 table, **0 unresolved or errored references**; 608 cited bibliography
+entries against 99 uncited, with all ten new keys cited and none orphaned.

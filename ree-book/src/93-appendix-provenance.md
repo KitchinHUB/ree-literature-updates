@@ -416,6 +416,67 @@ reach, so it is cited for no more than its title asserts, as the recent review
 of solvent extraction from acidic media.
 
 (sources-not-synthesized)=
+## Two books, read by chapter
+
+Late in the project two full monographs entered the source pile as PDFs large
+enough that they had to be split by chapter before they could be read at all.
+Neither can be committed: both are publisher PDFs carrying a personal watermark,
+and `fulltexts/` is gitignored for that reason. What follows records what was
+read, at what depth, and what came of it, so that a later reader can tell the
+difference between a book that was consulted and a book that was merely owned.
+
+**Zhang, Zhao and Schreiner, *Separation Hydrometallurgy of Rare Earth
+Elements* (Springer, 2016).** Split into eight units. **Chapter 5, "Cascade
+Solvent Extracting Principles and Process Design" (book pp. 171--241), was read
+in full**, including §§5.2--5.13, all three worked examples, Table 5.20 and
+Table 5.22. It is the source for the closed-form design equations in
+[](#solvent-extraction-fundamentals) — the stage-count relations, the optimum
+extraction factor $E_B = 1/\sqrt{\beta}$ and its consequence $E_A E_B = 1$, the
+reflux-ratio values, and the 45-stage worked example against a 24-stage Fenske
+bound — and for three new sections in
+[](#process-modeling-and-optimization): the capital objective
+$\Phi = S_o(n+m)$ and its shallow minimum, the three-outlet process, and
+circulating start-up. Chapters 1, 2 and 3 were not read; nothing in the book
+depends on them.
+
+Two claims from that chapter were **deliberately not carried into the book**.
+The rule of thumb $W_a = 1/(\beta^k - 1)$ with $k = 0.70$, and the assertion
+that the design method was "approved correct in over ten years of rare earth
+production," are asserted expert practice with no dataset, no error estimate and
+no external citation; the chapters say so where they use the first and decline
+the second. The fuzzy-linkage claim that reagent consumption falls by 30 % is
+refused outright: it is ambiguously worded in the source and rests on a
+Chinese-language secondary reference not reachable from here.
+
+**Azimi, Forsberg, Ouchi et al., eds., *Rare Metal Technology 2021* (TMS/
+Springer, 2021).** Split into 36 units. Thirteen were selected as
+rare-earth-, scandium- or lithium-relevant and read; the remainder — on
+lithium-ion battery recycling, platinum-group metals, tungsten, indium,
+chromium and vanadium — are off-topic for this book and were not read beyond
+their titles. Nine of the thirteen carried a number the book did not already
+have and are now cited:
+
+| Paper | Where it landed |
+|---|---|
+| @sanku2021extraction | Extraction chromatography in [](#the-landscape-of-separation-technologies) |
+| @lewis2021innovative | Antisolvent crystallization in [](#precipitation-and-selective-crystallization) |
+| @ilyas2021solvo | Ce(IV)/Cyanex 923 and oxalate kinetics, same chapter |
+| @balomenos2021scandium | Bauxite residue in [](#recycling-and-urban-mining) |
+| @eriksen2021scandium | Why scandium is in bauxite at all, same chapter |
+| @lister2021recovery | Selective magnet leaching from steel, same chapter |
+| @sarswat2021rare | Coal refuse biooxidation, same chapter |
+| @marthi2021lithium | H₂TiO₃ adsorbent capacity in [](#produced-water-critical-minerals) |
+| @kumari2021recovery | Battery-effluent lithium concentrations, same chapter |
+
+The other four of the thirteen were read at abstract level and **deliberately
+not used**: papers on option trees for reactive extraction, on rethinking
+mineral processing, on thermodynamic calculations for Nd/Dy/Pr recovery from
+NdFeB, and on total WEEE recycling. Each is a position or modelling paper whose
+quantitative content either duplicates material the book already has from a
+better-documented source or could not be checked without the full text. None is
+in the bibliography, because a citation this book cannot verify is one it does
+not make.
+
 ## Sources collected but not synthesized
 
 Six papers were collected during the literature review as full PDFs but never
