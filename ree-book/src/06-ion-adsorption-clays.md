@@ -349,6 +349,76 @@ hydrometallurgy can incur, and it is the most concrete argument available for th
 magnesium-sulfate and ammonium-free direction [@xiao2015leaching; @pan2024insights;
 @luo2022development].
 
+(electrokinetic-mining)=
+## Electrokinetic Mining
+
+The most substantial attempt to answer the ammonium problem does not change the
+reagent. It changes what moves the ions.
+
+Conventional in-situ leaching floods the hillside with lixiviant and relies on
+gravity and permeability to carry the solution through the regolith and out at
+the toe of the slope. That is why the section above spends so long on
+permeability: hydraulic flow is the only transport mechanism available, it
+follows the path of least resistance rather than the path through the ore, and
+the reagent that does not find a rare earth ion stays in the ground.
+**Electrokinetic mining** (EKM) emplaces electrodes in the regolith and drives a
+direct-current field between them, so that the liberated REE³⁺ move by
+electromigration and the pore water by electroosmosis. Transport is then
+controlled by the field rather than by the local permeability, and the ions are
+pulled towards a collection electrode instead of being flushed towards whatever
+drainage the hillside happens to have.
+
+@wang2022electrokinetic introduced the technique and demonstrated it at bench
+scale, at scaled-up scale, and in on-site field experiments. Against
+conventional practice they report roughly 2.6 times higher recovery efficiency,
+an approximately 80 % decrease in leaching agent usage, and an approximately
+70 % reduction in metallic impurities in the recovered rare earths. That last
+figure is the interesting one for this book, because it is a separation claim:
+the authors describe an autonomous purification mechanism in which the
+enrichment arises from differences in mobility and reactivity between the rare
+earths and the metallic impurities. An electric field sorts ions by mobility,
+and aluminium, iron and calcium do not have the mobility of a trivalent
+lanthanide.
+
+The follow-up paper takes the technique to industrial scale
+[@wang2025industrial]. The engineering problems it reports solving are electrode
+reliability and flow leakage, and the new element is a voltage-gradient barrier
+strategy based on electroosmosis — in effect using the field itself to contain
+the leach rather than relying on the geology to do it. On a 5,000-tonne body of
+rare earth ore they report 95 % REE recovery, and an environmental risk
+assessment finding a **95 % reduction in ammonia emissions**. A comparative
+technoeconomic analysis against the conventional technique is presented in
+support of economic viability. A separate study compares leaching agents for EKM
+[@xu2024comparative]; it is cited here for existence only, as its text was not
+available for verification.
+
+Three cautions belong with those numbers.
+
+**The evidence is from one group.** Both papers come from the same laboratory
+and appeared in the same journal. Nothing in the literature surveyed for this
+chapter independently reproduces the field results, and a 95 % recovery on a
+5,000-tonne ore body is the kind of claim that ought to be confirmed by someone
+who did not develop the technique.
+
+**The selectivity is not within the series.** The 70 % impurity reduction is
+rare earths against aluminium, iron and calcium. It is a purification of the
+pregnant liquor, not a fractionation of the lanthanides, and it does not touch
+the argument of [](#clay-ion-exchange-as-a-separation-technology).
+
+**A 95 % reduction in emissions is not a decontaminated aquifer.** The ammonium
+already exchanged onto the clay in a conventional operation is the residue this
+chapter is concerned with, and a technique that uses 80 % less reagent leaves
+proportionately less of it — which is a large improvement and not the same as
+none. Whether the field can also be used to recover ammonium already in the
+ground is a question the surveyed literature does not answer.
+
+With those qualifications, EKM is the most significant development in
+ion-adsorption clay mining since the shift from heap to in-situ leaching, and
+the only one that attacks the reagent inventory at its source rather than
+treating its consequences. The electrochemistry of the technique, and its place
+among the other electrically driven processes in this book, are discussed in
+[](#electrochemical-separations).
+
 ## Recovering the Rare Earths from a Very Dilute Liquor
 
 The pregnant leach solution from an ion-adsorption operation is roughly two orders
@@ -379,6 +449,7 @@ loss. In an in-situ operation, where the leached solid is the hillside, it is
 neither: the entrained liquor stays in the ground, and it is both the metal that
 was not recovered and the ammonium that will later appear in a stream.
 
+(clay-ion-exchange-as-a-separation-technology)=
 ## Clay Ion Exchange as a Separation Technology
 
 The forward-looking question about these deposits is whether the clay itself,
@@ -478,6 +549,18 @@ design tool [@mohamadsobri2025enhancing]. The aluminium behaviour is the specifi
 gap: it is the impurity that governs the downstream purification burden, and the
 current screening does not include it.
 
+**Whether the field can fractionate.** The electrokinetic work above reports
+enrichment of rare earths over metallic impurities on the grounds that the two
+groups differ in mobility and reactivity [@wang2022electrokinetic]. Electrophoretic
+mobility in a porous medium depends on hydrated radius, and the hydrated radii of
+the lanthanides do differ across the series — that being the same contraction the
+whole book is about. Nobody has reported measuring whether a field applied to a
+regolith produces any lanthanide fractionation at all. It would be a cheap
+measurement on an existing apparatus, and either answer is worth having: a
+measurable intra-series mobility difference would be a new separation handle, and
+a null result would settle whether the "selective" in electrokinetic mining refers
+to anything beyond impurity rejection.
+
 **Measured selectivity data.** Adjacent-pair separation factors on smectite and
 vermiculite against kaolinite, as a function of edge-site density, pH and ionic
 strength, would establish how far the fractionating mechanism can be pushed
@@ -568,3 +651,11 @@ closed reagent loops, preconcentration ahead of solvent extraction, and residue
 stabilisation. What makes that frontier tractable is that none of the difficulties
 are chemical. They are containment, transport and land-use problems attached to a
 chemistry that already works.
+
+Electrokinetic mining is the clearest illustration of that. It leaves the
+exchange chemistry untouched and replaces the transport mechanism, and on its
+developers' own figures that alone cuts reagent use by about 80 % and ammonia
+emissions by about 95 % [@wang2022electrokinetic; @wang2025industrial]. If those
+results hold up under independent replication, the ammonium problem that
+dominates this chapter becomes an engineering choice rather than a property of
+the deposit.

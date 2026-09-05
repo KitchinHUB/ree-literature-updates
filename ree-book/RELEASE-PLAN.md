@@ -369,7 +369,10 @@ this one is in the pre-insertion numbering: "ch14" in Phase B and Phase B-bis
 means what is now ch15, High-throughput and computational screening, and so on
 through "ch21" meaning what is now ch22. Chapters 1 through 13 are unchanged.
 URLs did not move — MyST derives the slug from the filename minus its numeric
-prefix — so nothing published under the old numbering broke.
+prefix — so nothing published under the old numbering broke. **A second
+insertion has since shifted these numbers again**; the section below gives the
+current mapping, and this paragraph is left as written so the record of what
+happened when stays readable.
 
 **What it is held to.** The same standard as everything else, and it was the
 harder half of the work. Sixteen new sources, each checked against its retrieved
@@ -394,3 +397,77 @@ exactly the strength the sources carry: a necessary condition demonstrated
 factors of 261 and 26 demonstrated on Y/Lu and La/Y mixtures that are nothing
 like the adjacent pairs the book cares about. The chapter closes on why the idea
 keeps not scaling, not on the two large numbers.
+
+## After the first draft — the 2026 literature-gap pass and Chapter 12
+
+Added 2026-09-05. This pass did not start from a source document or from a
+correctness problem. It started from a question — whether the book was missing
+any modern effort in rare earth separation — answered by a literature survey run
+against OpenAlex and compared section by section against what the book already
+had. Eight gaps came out of it, and all eight are now closed.
+
+**The new chapter.** *12. Electrochemical Separations.* Electrically driven
+separations were previously one paragraph on electrodialysis inside the
+membranes chapter, and molten salt electrolysis was in the pyrometallurgy
+chapter, and nothing connected them. The chapter is organised around a four-way
+taxonomy — electrowinning, electrodialysis, electrosorption, redox separation —
+and around the observation that in three of those four families the electrode is
+a pump and something else is the filter. Its conclusion is negative and is
+stated as such: no electrochemical process in the reviewed literature has
+separated one lanthanide from its neighbour on a real feed at any scale, and the
+chemistry says why, because an electrode acts on oxidation state and the
+lanthanides do not differ in oxidation state. The electrodialysis section moved
+here out of ch13, which keeps a pointer.
+
+**Numbering.** Inserting the new chapter after ch11 shifted the old ch12 through
+ch22 up by one, to 13 through 23. Combined with the ch14 insertion recorded
+above, the mapping from the original first-draft numbering to the current one
+is: chapters 1-11 unchanged; old 12 and 13 become 13 and 14; old 14 through 21
+become 16 through 23. Chapter numbers written in the sections above this one are
+in the numbering current when those sections were written, and are not
+retrofitted. Published URLs did not move, for the same reason as before.
+`src/93-appendix-provenance.md` carries the current numbering throughout and is
+the file to trust.
+
+**The seven other gaps, and where they went.**
+
+- *Electrokinetic mining* into ch06, with the ammonia and technoeconomic
+  consequences into ch21 and a revised readiness assessment in the ch04 table.
+  This is the largest-scale result in the whole pass — 95 % recovery on a
+  5,000-tonne ore body — and also the one most in need of independent
+  replication, since both papers come from one laboratory.
+- *Photochemical Eu(III) reduction* into ch10, which also repaired the glossary
+  entry for `lanthanide contraction`: it had claimed the cerium and europium
+  redox separations are the sharpest in industrial use, and the europium one is
+  not industrial at all.
+- *Artificial ion channels, covalent organic frameworks and MXenes* into ch13.
+  The channel work carries the largest membrane selectivities in the book and
+  the heaviest qualifications.
+- *Nanopore single-ion discrimination* into ch19.
+- *Mechanochemistry* into ch05, as an activation and leaching step rather than a
+  separation, which is what the sources support.
+- *Phosphogypsum* and *brines, geothermal fluids and produced water* into ch20,
+  with a pointer from ch02's feedstock taxonomy.
+
+**What it is held to.** The same standard, and the same refusal to fill a cell.
+Thirty-two new bibliography entries, each checked against retrieved content
+rather than against the fact that a DOI resolves; one OpenAlex publication year
+was wrong and was corrected against CrossRef before the entry was written. One
+source was read in full text — the 2015 *Green Chemistry* europium photoreduction
+paper, from the authors' institutional repository — and every number quoted from
+it was read in place, including two different 96 % purity figures that belong to
+two different experiments and were nearly conflated. Sixteen sources supplied
+numbers from their abstracts only and are now listed in `needs-journal-access.md`
+under the flagged-claims table. Eleven more are cited for existence only, with no
+value taken, and the prose says so at each point.
+
+**One pre-existing number this pass could not save.** The ch04 comparison table
+has carried β = 125 for Dy/Nd by electrodialysis with EDTA since the first
+draft. Writing the electrochemical chapter meant trying to read that paper, and
+no interface reachable from this project — OpenAlex, CrossRef, Semantic Scholar,
+Europe PMC, PubMed, the publisher's own page — returned its abstract or its
+text. The number is therefore unverified against its own source. It is now the
+first row of the flagged-claims table in `needs-journal-access.md`, ch12 says
+plainly that the selectivity in that cell belongs to the chelator rather than to
+the electrode, and the number should be confirmed from the paper or withdrawn
+before publication.

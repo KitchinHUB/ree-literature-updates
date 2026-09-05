@@ -60,6 +60,14 @@ its leach solutions carry thorium and uranium that have to be extracted out
 **{index}`Ion-adsorption clays <ion-adsorption clay>`** are the odd one out and
 are treated separately below.
 
+Those four are the ore. A fifth category is not an ore at all: material that has
+already been mined, burned or processed for something else and carries rare
+earths as a passenger — coal ash, {index}`phosphogypsum`, scrap magnets and
+phosphors, oilfield and geothermal waters. None of it needs a mill, some of it
+needs no crack at all, and all of it arrives with a different impurity problem
+from the one described here. It is collected in
+[](#recycling-and-urban-mining).
+
 For the three hard-rock minerals, the first plant is a mill, not a reactor.
 Crushing and grinding liberate the rare-earth mineral from its host rock; then
 gravity, magnetic and flotation stages exploit density, magnetic susceptibility

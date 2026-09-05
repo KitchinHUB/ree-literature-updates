@@ -172,6 +172,15 @@ basis must be stated before any two figures in this section are compared.
 | Product          | RE-hydroxide    |
 | Reagent recovery | 90%             |
 
+**Electrokinetic mining (2025):** @wang2025industrial state that a comparative
+technoeconomic analysis of electrokinetic against conventional in-situ leaching
+of ion-adsorption clay supports the economic viability of the electrokinetic
+route at 5,000-tonne scale. No capital or operating figure is quoted here
+because none was obtainable: the study's abstract reports the conclusion without
+the values, and the full text could not be retrieved — see
+`needs-journal-access.md`. The technique is described in
+[](#electrokinetic-mining).
+
 ### Mining Project Cost Estimation
 **Simplified Cost Framework:** Screening a greenfield project before a
 feasibility study exists is the problem @obrien2024simplified set out to solve.
@@ -365,6 +374,22 @@ that impact category has a different dominant contributor for this route than
 for any other. [](#ion-adsorption-clays) treats the chemistry and the remediation
 problem.
 
+The one reported intervention that acts on that category directly is
+{index}`electrokinetic mining`, which replaces hydraulic flow through the
+regolith with an applied electric field and so needs far less lixiviant to
+contact the same ore. @wang2022electrokinetic report roughly 80 % less leaching
+agent than conventional in-situ practice, and @wang2025industrial report a 95 %
+reduction in ammonia emissions in an environmental risk assessment of a
+5,000-tonne ore body, alongside a comparative technoeconomic analysis against
+the conventional route. Two qualifications belong with those figures and are
+made in full in [](#electrokinetic-mining): both papers come from one
+laboratory and neither result has been independently reproduced, and an
+emissions reduction is not a remediation — the ammonium already exchanged onto
+the clay at existing sites is unaffected by a technique that puts less in at new
+ones. No published life cycle assessment of the electrokinetic route was found
+for this chapter, so the comparison above is between a reported emission
+reduction and a category total, not between two LCAs.
+
 Eudialyte has neither monazite's radioactivity nor bastnäsite's grade. Its
 difficulty is that the rare earths are a small fraction of a complex silicate,
 so the gangue-to-product ratio is high and the chemical consumption per kilogram
@@ -462,7 +487,8 @@ what makes them the most reliable of the three.
 The second is substituting a technology for one of the unit operations, which is
 what most of this book is about. Supercritical CO₂ in place of an organic
 diluent, a biological or biomimetic system in place of a cascade, a membrane for
-a bulk split, an electrochemical route to the metal. The chapters on each treat
+a bulk split, an electrochemical route to the metal
+([](#electrochemical-separations)). The chapters on each treat
 what has actually been demonstrated, and the summary that applies here is that
 none has yet been shown at a scale where a life cycle assessment of it would
 mean much. The environmental case for them is a projection.

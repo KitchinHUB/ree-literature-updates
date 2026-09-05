@@ -241,6 +241,92 @@ leaves cerium behind as a residue, so the liquor reaching solvent extraction is
 already cerium-depleted [@gupta2004extractive; @castor2006rare]. That flowsheet
 is set out in full in [](#hydrometallurgical-leaching).
 
+(photochemical-reduction-of-europium)=
+### Europium: the other redox handle, and the light that supplies it
+
+Cerium is not quite the only element with a second oxidation state that
+precipitation can use. {index}`Europium <europium>` reduces to Eu(II), and the divalent
+sulfate is dramatically less soluble than the trivalent sulfates around it:
+0.001 g per 100 g of water for EuSO₄, against 2.10 for Eu₂(SO₄)₃ and 7.47 for
+Y₂(SO₄)₃ [@vandenbogaert2015photochemical]. In a sulfate medium, reducing
+europium and only europium drops it out of solution as a solid while everything
+else stays dissolved. Like the cerium case, the split is a discontinuity rather
+than a gradient, and it owes nothing to ionic radius.
+
+The difficulty is the reduction itself. It is done chemically with zinc powder
+or zinc amalgam, electrochemically on graphite or titanium electrodes, or
+photochemically, and each route has a characteristic cost. Zinc contaminates the
+liquor with Zn(II). The amalgam risks mercury pollution. And the current
+efficiency of electrochemical Eu(III) reduction in aqueous solution is low,
+because hydrogen is evolved instead of europium being reduced
+[@vandenbogaert2015photochemical] — which is why an entire literature exists on
+doing it with photons instead. The wider electrochemical context is
+[](#electrochemical-separations).
+
+**The photochemistry.** Eu(III) has a charge-transfer band from coordinated
+water at 188 nm, and low-pressure mercury lamps put their main spectral output
+at 185 and 254 nm, so an ordinary germicidal lamp is a usable light source.
+Sulfate — which has to be present anyway for the precipitation — adds a second
+reducing charge-transfer band at 240 nm. Working against both is a back
+reaction: Eu(II) is photo-oxidised to Eu(III) at 366 nm through a 4f–5d
+transition, which is one of the reasons the process is slow
+[@vandenbogaert2015photochemical]. A radical scavenger is needed to consume the
+hydroxyl radicals produced alongside the reduced europium.
+
+@vandenbogaert2015photochemical replaced the customary formic acid scavenger
+with isopropanol, and the reason is a good illustration of how a
+process-chemistry choice propagates. Formic acid is hazardous, is consumed in
+quantity, and is acidic enough to force operation at pH 0–1 — which is exactly
+where Eu(II) is least stable. Isopropanol permits pH 4, and europium removal is
+faster at the higher pH. For a Eu/Y molar ratio of 1/15, 88 % removal took 19
+hours with isopropanol against 35 hours with formic acid; for 1/20, 88 % removal
+was reached about 20 % faster. Isopropanol also did it at a lower
+scavenger-to-europium molar ratio, 260:1 against 530:1. On synthetic Eu/Y
+mixtures at ratios up to 1/20, roughly 90 % of the europium was removed with
+less than 5 % of the yttrium, giving a EuSO₄ precipitate of 98.5 % purity.
+
+The real-feed experiment is the one to hold onto. Industrial YOX red lamp
+phosphor powder — the yttrium oxide host with a europium activator that
+[](#recycling-and-urban-mining) treats as a feedstock — was dissolved to a Eu/Y
+ratio of 1/30, at 6 g/L in 250 mL at pH 3.9 with 50 mM (NH₄)₂SO₄ and 20 vol %
+isopropanol, and illuminated. **After 50 hours, 50 % of the europium had been
+recovered as EuSO₄ at 96 % purity** [@vandenbogaert2015photochemical]. Half the
+europium, at high purity, in two days of continuous illumination of a quarter of
+a litre.
+
+The authors state the consequence themselves, and it is the honest verdict on
+the method: long illumination times are not desirable for commercial recycling,
+because the residence times are long and continuous systems are therefore not
+feasible. Their proposed remedy is higher irradiance and monochromatic light —
+the latter specifically to suppress the 366 nm back reaction
+[@vandenbogaert2015photochemical]. That is a photoreactor engineering problem
+rather than a chemistry problem, and it has been examined as such
+[@leblebici2017efficiency]; that study is cited here for existence only, since
+its text could not be obtained for verification.
+
+Two variations are worth recording. Moving out of water removes the competing
+water chemistry: @vandenbogaert2016photochemical reduce Eu(III) in alcohols and
+precipitate it as insoluble EuCl₂, using charge-transfer bands at about 230 nm
+from the alcohol and 271 nm from chloride under a medium-pressure mercury lamp.
+Removal rate follows methanol < ethanol < isopropanol < a 50/50
+ethanol/isopropanol mixture, and added LiCl both intensifies the
+chloride-to-europium band and lowers the solubility of EuCl₂ — but the benefit
+disappears above 1.5 wt % water. On Eu/Y binaries they report up to 94.7 %
+efficiency at 96.7–99.8 % purity depending on the ratio, and, counter-intuitively,
+faster europium removal at higher yttrium excess, because the yttrium coordinates
+water and lowers the free water concentration.
+
+The second variation couples the reduction to a column instead of to a
+precipitation. @li2018photochemical reduce Eu(III) with a 193 nm ArF excimer
+laser, with isopropanol again as the hydroxyl-radical scavenger, while the feed
+is loaded onto a column packed with HEH[EHP] extraction-chromatography resin.
+The divalent europium is not retained and washes through with deionized water;
+Sm³⁺ and Gd³⁺ are then eluted with HCl. On a commercial solution they report
+yields of 82.5 % for Sm₂O₃, 93.7 % for Eu₂O₃ and 78.1 % for Gd₂O₃, all at
+99.99 % purity. That is a three-element separation of the hardest neighbourhood
+in the light lanthanides, and it works because the middle element of the three
+has been temporarily removed from the trivalent series altogether.
+
 ### Hydroxide: an impurity-rejection step that is often mistaken for a recovery
 
 Hydroxide precipitation is where the "three jobs" distinction earns its keep,

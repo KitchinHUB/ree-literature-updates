@@ -132,6 +132,7 @@ earth minerals away from the gangue, so that the acid or the caustic is spent on
 a tonne of concentrate rather than a hundred tonnes of rock
 [@jordens2013beneficiation; @chelgani2015rare].
 
+(crushing-and-grinding)=
 ### Crushing and Grinding
 
 Comminution has exactly one purpose: to break the rock until each rare earth
@@ -1547,6 +1548,29 @@ recovered about 80 % of the rare earths, and they note explicitly that it is
 honest characterisation of most intensification work in this area, and it is not
 the same as the "faster and better" claim these techniques usually attract.
 
+**Mechanochemistry.** Grinding is treated in this chapter as a size-reduction
+step ([](#crushing-and-grinding)), but mechanical energy can also drive a
+chemical conversion that would otherwise need heat or a stronger reagent, and
+the mechanism is usually the destruction of a passivating product layer rather
+than any bulk activation. @liu2023mechanochemical give a clean example. Yttrium
+fluoride does not convert to the hydroxide under alkaline conditions because a
+Y(OH)₃ layer forms on the particle and stops the reaction; applying mechanical
+force destroys that coating as it forms, and the conversion runs to 98.2 % at
+room temperature. Applied to the YF₃-bearing slag from calciothermic reduction
+smelting, the yttrium leaching rate reached 96.2 %. A separate study reports
+mechanochemical activation for selective recovery from rare earth waste
+[@zhang2023mechanochemical]; it is cited for existence only, its text not having
+been obtainable.
+
+Two things follow. The first is that this is leaching and activation, not
+separation — nothing in the mechanochemical rare earth literature reports a
+separation factor between lanthanides, and it should not be read as an
+alternative to a cascade. The second is the usual intensification trade in a new
+form: a mill that runs at room temperature has replaced a furnace, and the
+energy has gone into the mill. Whether that is a net saving is a question for
+[](#energy-and-carbon-where-the-burden-sits), and neither of these papers
+answers it.
+
 **High-pressure leaching.** An autoclave lifts the temperature ceiling above the
 atmospheric boiling point of the liquor and the rate follows. The cost is the
 vessel, and it is not incremental: a pressure vessel with the corrosion
@@ -1692,6 +1716,7 @@ Process water recycling, heat integration and the wider circular-economy
 arguments are not specific to leaching and are treated in
 [](#environment-techno-economics-and-life-cycle).
 
+(energy-and-carbon-where-the-burden-sits)=
 ### Energy and Carbon: Where the Burden Sits
 
 Leaching itself is not the energy-intensive step. Qualitatively, and this much

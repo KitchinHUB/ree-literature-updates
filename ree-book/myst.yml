@@ -50,23 +50,24 @@ project:
         - file: src/09-microfluidic-separations.md
         - file: src/10-selective-crystallization.md
         - file: src/11-biological-biomimetic.md
-        - file: src/12-membranes-mofs-emerging.md
+        - file: src/12-electrochemical-separations.md
+        - file: src/13-membranes-mofs-emerging.md
 
     - title: Part IV — Methods
       children:
-        - file: src/13-extraction-thermodynamics.md
-        - file: src/14-kinetics-and-mass-transfer.md
-        - file: src/15-high-throughput-computational.md
-        - file: src/16-process-modeling-optimization.md
-        - file: src/17-machine-learning.md
-        - file: src/18-characterization.md
+        - file: src/14-extraction-thermodynamics.md
+        - file: src/15-kinetics-and-mass-transfer.md
+        - file: src/16-high-throughput-computational.md
+        - file: src/17-process-modeling-optimization.md
+        - file: src/18-machine-learning.md
+        - file: src/19-characterization.md
 
     - title: Part V — Context
       children:
-        - file: src/19-recycling-urban-mining.md
-        - file: src/20-environment-tea-lca.md
-        - file: src/21-industrial-landscape.md
-        - file: src/22-research-directions.md
+        - file: src/20-recycling-urban-mining.md
+        - file: src/21-environment-tea-lca.md
+        - file: src/22-industrial-landscape.md
+        - file: src/23-research-directions.md
 
     - title: Back Matter
       children:

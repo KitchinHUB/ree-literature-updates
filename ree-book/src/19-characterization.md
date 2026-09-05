@@ -322,6 +322,38 @@ titanite [@lin2024situ]. The trade is calibration: without a matrix-matched
 solid standard, laser ablation quantification carries systematic errors that
 solution nebulization does not.
 
+(nanopore-identification)=
+### Nanopore Sensing: Identifying Rare Earths One Ion at a Time
+
+Everything above measures a population. A nanopore measures events. A single
+protein pore in a lipid membrane carries an ionic current under an applied
+voltage, and a species that enters the pore blocks some of that current for as
+long as it stays; the depth, duration and structure of the blockage are a
+signature of what went in. The technique is best known for DNA sequencing, and
+it has recently been turned on the lanthanides.
+
+@sun2025nanopore engineer a *Mycobacterium smegmatis* porin A nanopore with a
+nitrilotriacetic acid ligand at the pore constriction and a second ligand,
+Nα,Nα-bis(carboxymethyl)-L-lysine, in a dual-ligand arrangement. Trivalent rare
+earth ions produce characteristic blockage features with three-level
+transitions, and — the observation that makes this more than an assay — those
+features vary periodically across the series in a way the authors describe as
+seeing the {term}`lanthanide contraction` at the single-molecule level. With
+machine-learning classification they report identifying all sixteen naturally
+occurring rare earth ions with high accuracy, and apply the method to
+{index}`bastnäsite` samples for geological exploration.
+
+Two things are worth separating here. As a *characterization* method this is a
+single-ion-resolution identification of elements that ICP-MS already quantifies
+well, so its near-term value is where ICP-MS is inconvenient: small sample
+volumes, field deployment, and speciation-sensitive measurements that a plasma
+destroys by definition. As a *separation* result it is not one — nothing is
+collected, and a pore that reports which ion passed is not a pore that stops the
+others. But it is direct evidence that a single engineered pore can distinguish
+adjacent lanthanides, which is the physical claim underlying the artificial
+channel work in [](#artificial-channels), and the two literatures are worth
+reading together.
+
 ## What Is Bound to What? Speciation and Structure
 
 ### UV-Visible Absorption Spectroscopy

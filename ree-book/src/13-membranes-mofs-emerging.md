@@ -6,8 +6,9 @@ title: Membranes, MOFs, and Emerging Approaches
 # Membranes, MOFs, and Emerging Approaches
 
 This chapter is a survey of the approaches that do not yet have chapters of
-their own: membranes, {index}`metal-organic frameworks <metal-organic framework (MOF)>`, supramolecular hosts, flash
-Joule heating, {index}`diglycolamide` ligands, and supercritical CO₂. They have little in
+their own: membranes, {index}`metal-organic frameworks <metal-organic framework (MOF)>`, covalent organic frameworks,
+{index}`MXenes <MXene>`, supramolecular hosts, flash Joule heating,
+{index}`diglycolamide` ligands, and supercritical CO₂. They have little in
 common as chemistry. What they share is a position on the development curve —
 most sit between TRL 3 and TRL 7, with laboratory results that are genuinely
 striking and scale-up records that are thin or absent.
@@ -34,7 +35,9 @@ chapters that follow on process economics
 
 {index}`Microfluidic <microfluidics>` separation belongs to the same family of
 emerging approaches, but it has grown enough to warrant its own chapter and is
-treated there rather than here — [](#microfluidic-separations).
+treated there rather than here — [](#microfluidic-separations). The same is true
+of the electrically driven separations, which are collected in
+[](#electrochemical-separations).
 
 (membrane-separation-technologies)=
 ## Membrane Separation Technologies
@@ -182,24 +185,55 @@ impurity-rejection step ahead of a separation, not as the separation.
 
 ### Electrodialysis
 
-A third geometry drives the ions with a field instead of a pressure or a
-concentration difference. In the configuration studied for rare earths, the feed
-is complexed with EDTA and passed between two adjacent anion-exchange membranes,
-so that the anionic Ln-EDTA complexes migrate and the uncomplexed cations do
-not; the selectivity is the selectivity of the EDTA complexation, and the
-membranes only sort by charge. @ding2024mathematical built and validated an
-extended Nernst-Planck model of this cell for the separation of Dy from Pr and
-Nd, and the useful part of the result is the shape of the trade-off rather than
-a separation number. Raising the applied voltage above 8 V speeds the separation
-and costs disproportionately more energy; dropping the rinse-solution
-concentration below 0.05 mol/L improves energy efficiency but depletes the rinse
-before the separation finishes; and the required rinse concentration scales
-linearly with feed concentration, so a more concentrated feed is cheaper per
-kilogram separated. The authors also identify the flaw in their own cell:
-independent migration of sulphate carries current without carrying rare earths,
-which caps the current efficiency, and they recommend alternating cation and
-anion exchange membranes instead. That is modelling work on a laboratory cell,
-not a demonstrated separation, and no throughput or product purity is reported.
+A third geometry drives the ions with an electric field instead of a pressure or
+a concentration difference. Electrodialysis is a membrane process, but its
+selectivity comes from the field and from the complexation chemistry in the
+feed, not from the membrane's own discrimination between lanthanides, and it is
+treated with the other electrically driven separations in
+[](#electrochemical-separations).
+
+(artificial-channels)=
+### Artificial Channels: Putting the Selectivity Inside the Pore
+
+Every membrane above sorts ions by charge, by size, or by the properties of a
+complex formed before the ion arrives. A fourth possibility is to build the
+discrimination into the pore itself, the way a biological ion channel does, and
+this is the one place in the membrane literature where a lanthanide has been
+told apart from its neighbours.
+
+@behera2025supramolecular assemble synthetic membrane channels on a
+{index}`pillar[5]arene` scaffold carrying appended diphenylphosphine oxide
+ligands — the same donor chemistry that makes phosphine oxides useful
+extractants, positioned around a nanopore instead of dissolved in a diluent.
+The channels transport middle lanthanides in preference to potassium by more
+than 18:1, and exclude Na⁺, Ca²⁺, Mg²⁺ and protons. What matters for this book
+is that they also discriminate *within* the series: the reported transport
+selectivities are about 140 for Tb/La, 72 for Tb/Yb, 58 for Tb/Nd, greater than
+40 for Eu/La, about 30 for Eu/Yb and about 17 for Eu/Nd. The authors note that
+these exceed the selectivities reported for traditional solvent extraction, and
+molecular dynamics attributes the effect to water-mediated interactions rather
+than to a simple size fit.
+
+Those are the largest membrane selectivities in this book by a wide margin, and
+the qualifications are correspondingly heavy. It is one paper from one group. A
+transport selectivity measured across a channel-bearing bilayer is not a
+rejection measured on a process membrane: no flux at practical driving force, no
+real feed, no module, and no channel lifetime are reported. Tb/Nd at 58 is the
+pair a magnet recycler would want and it is a middle-versus-light comparison,
+not an adjacent pair. The result belongs in the book because it establishes that
+the pore is a place where intra-series selectivity can live — which forty years
+of NF, UF and supported liquid membrane work had not established — and not
+because anything is close to being built.
+
+A different shape-based mechanism is worth recording alongside it.
+@wang2023graphene tune the interlayer spacing of a graphene oxide membrane to a
+value between the hydrated size of the linear actinyl ions and that of the
+spherical lanthanides, so that the lanthanides pass and the actinyls do not,
+reporting actinide/lanthanide separation factors up to about 400 under strongly
+acidic conditions. That is an actinide-lanthanide split rather than an
+intra-series one, and its relevance here is the principle: a membrane can
+discriminate on the *shape* of the hydrated species when it cannot discriminate
+on its size.
 
 ### Why Membranes Have Not Displaced the Cascade
 
@@ -351,6 +385,68 @@ vial. Treat it as the best current
 evidence that a designed pore can out-select a designed ligand, and not yet as a
 measured property of a material anyone can buy.
 
+(cofs-and-mxenes)=
+## Covalent Organic Frameworks and MXenes
+
+The MOF result invites the obvious question of whether the other families of
+designed porous solids do the same thing, and two of them have been tried on
+rare earths. Neither has produced a number like NCU-1's, and each fails in an
+instructive way. A review covering the reticular materials as a class exists
+[@liu2025advances]; it is cited for existence only, as its text was not
+available for verification.
+
+**Covalent organic frameworks.** COFs are built from covalent rather than
+coordinative bonds, which in principle makes them more robust than a MOF in the
+acidic liquors this book is concerned with. In practice the reported obstacle is
+the opposite: @chatterjee2024efficient state that COFs are underused for rare
+earth capture precisely because of their limited lifecycle in aqueous acidic
+environments, and because installing a ligand suited to rare earths is
+synthetically awkward. Their answer is a post-synthetic Ugi multicomponent
+reaction that grafts a diglycolic acid group onto an imine COF — the same
+{index}`diglycolamide`-family donor set discussed in
+[](#dga-ligands-and-the-value-of-a-larger-separation-factor). The functionalised
+COF takes up more than forty times as much neodymium as the pristine imine
+precursor and more than four times as much as the next-best reported
+DGA-functionalised solid support, with fast capture and release and reliable
+recycling. That is a capacity result and a stability result. No separation
+factor for any lanthanide pair is reported.
+
+The one COF study that does report separation factors is @xiao2022highly, who
+synthesised TpPa COFs in a {index}`deep eutectic solvent` at room temperature
+instead of in a toxic organic solvent and measured adsorption across nine rare
+earths. They report β = 15.34 for Eu/Yb, 14.70 for Eu/Tm and 10.78 for Eu/La,
+attributing the selectivity to coordination of the rare earth by framework
+oxygen. Read those pairs carefully before comparing them with anything: Eu/Yb
+and Eu/Tm span most of the second half of the series and Eu/La most of the
+first, so these are middle-versus-end numbers of the kind
+[](#technology-comparison) warns about, not adjacent-pair numbers. A separation
+factor of 15 across seven elements is a real result and is not the same claim as
+a separation factor of 15 across one. A further COF study on La(III) uptake by
+nitrogen-rich frameworks [@zhang2022construction] is cited for existence only,
+its text having been unobtainable.
+
+**MXenes.** MXenes are two-dimensional transition-metal carbides with a
+terminated surface that behaves as a hard Lewis base — well matched, in
+principle, to a hard trivalent lanthanide. @bao2025mxene report layered Ti₃C₂Tₓ
+taking up 892.8 mg/g of Eu(III) and 649.2 mg/g of Ho(III), and the striking part
+of that is not the capacity but the condition: **at pH 2.0**, where most
+chelating sorbents in this book have lost their binding altogether. They also do
+the thing most adsorbent papers do not, and take the material to two real feeds
+— a rare earth processing wastewater and an actual magnet-manufacturing sludge —
+and then build the MXene into a layer-stacked membrane on a polyethersulfone
+support that removes 99.1 % of the Eu(III) from a continuous stream at pH 5.0,
+regenerating with a simple acid wash. DFT is offered in support of the
+Lewis acid-base mechanism. A second study on lithium-intercalated Ti₃C₂Tₓ for
+neodymium adsorption [@cai2024lithium] is cited for existence only.
+
+Again, no lanthanide pair. The MXene result is a strong uptake-and-recovery
+result at a pH where uptake is hard, demonstrated on real material, which is
+more than most of this chapter can say — and it is a concentration step, not a
+separation step. The pattern across both families is the same one that runs
+through the whole chapter: designed materials are now very good at pulling rare
+earths out of a dilute, dirty stream, and no better than a phosphoric acid at
+telling one of them from the next.
+
 ## Supramolecular Encapsulation and Precipitation
 
 A second line of work amplifies the small size differences across the series by
@@ -423,6 +519,7 @@ holmium being used as a supplement to or replacement for terbium and dysprosium
 — an element that recycling flowsheets designed around Nd, Pr, Dy and Tb are not
 looking for, and will therefore lose ([](#recycling-and-urban-mining)).
 
+(dga-ligands-and-the-value-of-a-larger-separation-factor)=
 ## DGA Ligands and the Value of a Larger Separation Factor
 
 The diglycolamide work out of Oak Ridge and Idaho National Laboratories is the

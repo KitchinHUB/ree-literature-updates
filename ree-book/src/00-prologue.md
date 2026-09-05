@@ -196,7 +196,7 @@ for a whole new section. "Add a subsection on membrane fouling in REE
 nanofiltration" is workable. "The membrane chapter needs work" is not.
 
 **Where it goes.** Name the chapter, and the section within it if you can — for
-example, *Chapter 12, Membranes, MOFs and Emerging Approaches, after the
+example, *Chapter 13, Membranes, MOFs and Emerging Approaches, after the
 nanofiltration subsection*. If you genuinely do not know where it belongs, say
 so and propose a home; deciding placement is part of the work, but a starting
 guess saves a round trip. If you are asking for a new chapter, say where it sits

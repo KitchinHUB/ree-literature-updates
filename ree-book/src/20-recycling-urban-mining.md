@@ -262,6 +262,94 @@ redissolve in the acid strip. The demonstration does not improve coal ash's
 grade. What it shows is that a low grade need not disqualify a feed, provided
 the separation is selective enough against everything else that is in it.
 
+(phosphogypsum)=
+## Phosphogypsum: The Largest Pile
+
+Phosphoric acid manufacture dissolves phosphate rock in sulfuric acid and throws
+away the calcium as gypsum. The rare earths that were in the phosphate rock
+follow the calcium into that gypsum, which is produced in very large quantity
+and stacked. It is the same argument as coal ash — tonnage, prior mining, and an
+existing disposal liability — with the same grade problem and one additional
+complication. The tonnage of phosphogypsum stacked worldwide is quoted widely
+and inconsistently, and no figure is given here because none could be traced to
+a primary source while this section was written.
+
+The grade is low and awkward. A review of the recovery literature puts total
+rare earths in phosphogypsum at over 2,000 mg/kg depending on the source
+phosphate rock, that is, normally below 0.1 wt %, and identifies the real
+difficulty as the mineralogical one: the rare earths are present in trace
+concentration and in complex, finely divided phases, which makes recovery hard
+both technically and economically [@mukaba2021rare]. The same review surveys the
+pre-treatments used to upgrade the material before extraction — carbonation,
+roasting, microwave heating, grinding, recrystallization — and concludes that
+recrystallization looks the most promising, because it both recovers rare earths
+and leaves a clean gypsum phase behind, which matters when the residue is
+itself a saleable product.
+
+The most instructive process study runs the leach and the sorbent together.
+@virolainen2019recovering compared four lixiviants — H₂SO₄, HCl, H₃PO₄ and NaCl
+— in a resin-in-leach configuration, where the ion-exchange resin sits in the
+leach slurry and takes the rare earths as they dissolve. A chelating resin let
+them work at 1 g/L H₂SO₄, a very low acid concentration, and in a four-stage
+cross-current arrangement reached a loading of 19.2 g of rare earths per
+kilogram of resin at up to 20 % purity, against 3 % for a strong-acid resin. Two
+of their conclusions are worth carrying forward: neither breaking up the gypsum
+structure nor adsorbing the calcium turns out to be necessary to get good
+recovery, and calcium and the rare earths can be separated during elution of the
+chelating resin. Eluting a strong cation exchanger takes saturated NaCl;
+eluting the chelating resin takes EDTA or concentrated HCl.
+
+Two further leaching studies are widely cited in this literature
+[@rychkov2018recovery; @canovas2019leaching] and are listed here for existence
+only, their texts not having been obtainable for verification.
+
+The additional complication is radioactivity, and it is the same complication
+monazite has. Phosphate rock carries uranium and thorium and their decay
+products, which is why the monazite route in
+[](#hydrometallurgical-leaching) is a radioactive-materials flowsheet, and the
+same nuclides partition into the byproducts of phosphate processing. That makes
+the disposition of phosphogypsum a regulated question in several jurisdictions
+rather than purely a chemical one. The process literature reviewed here does not
+treat it, and a reader assessing a phosphogypsum recovery proposal should
+establish the radiological status of the specific stack before anything else.
+
+(brines-and-produced-water)=
+## Brines, Geothermal Fluids and Produced Water
+
+The last non-ore feedstock is water. Geothermal brines, oilfield produced water
+and shale gas flowback all carry rare earths at microgram-per-litre levels,
+which is three to four orders of magnitude below a leach liquor and far below
+anything a solvent extraction cascade would look at. What makes them worth a
+paragraph is that the fluid is already being pumped and already being handled
+for disposal, so the only marginal cost is the recovery step itself.
+
+The concentrations are genuinely small. @tian2020rare measured Sichuan Basin
+shale gas flowback and produced water and found total rare earths from 4.5 to
+118.3 µg/L, with europium present in every sample at 0.92 to 79.62 µg/L. Their
+estimate is that the world's produced water contained on the order of 4.2 tonnes
+of Eu₂O₃ in 2016, rising to somewhere between 16.8 and 111.7 tonnes by 2030.
+That is a real quantity of a genuinely scarce element in a stream nobody
+currently mines, and it is also, as a global annual figure, small.
+
+At those concentrations the recovery step has to be a sorbent, and the binding
+has to survive the water chemistry. @brewer2019recovery is the useful study
+because it maps exactly that. Using *E. coli* engineered to display lanthanide
+binding tags on its surface ([](#biological-and-biomimetic-separations)), they
+find that biosorption is robust to total dissolved solids up to 165,000 ppm —
+which is the property that matters most in a brine — with an optimum between
+pH 5 and 6, a roughly 65 % loss of capacity at pH 2, and increasing recovery and
+selectivity with temperature up to about 70 °C, which suits a geothermal fluid.
+Uranium, aluminium and lead are the competitive ions, reducing biosorption by
+more than 25 % when present at three to eleven times the rare earth
+concentration.
+
+Read that as a boundary-condition study rather than a process. It says what a
+sorbent has to tolerate to work on a brine, and it says that at least one
+sorbent tolerates it. Nobody has published a costed recovery of rare earths from
+a geothermal or oilfield stream at any scale, and the arithmetic in
+[](#environment-techno-economics-and-life-cycle) is the place to see why a
+microgram-per-litre feed is a hard case even when the pumping is free.
+
 ## What Actually Limits It
 
 The recurring result across all of these streams is that the recovery

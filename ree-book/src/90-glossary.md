@@ -291,8 +291,12 @@ lanthanide contraction
   nuclear charge by 4f electrons. It is the property most separations exploit,
   and its smallness is why they are hard. It is not the only handle: cerium and
   europium have accessible Ce(IV) and Eu(II) states, and the redox separations
-  built on them ([](#precipitation-and-selective-crystallization)) are the
-  sharpest in industrial use precisely because they do not depend on radius.
+  built on them are sharper than anything radius affords, precisely because they
+  do not depend on radius. The cerium split is industrial
+  ([](#cerium-oxidative-precipitation)); the europium one is not, and the reason
+  is that reducing Eu(III) in water is difficult rather than that the
+  precipitation is poor ([](#photochemical-reduction-of-europium)). Two elements
+  out of seventeen have this handle; the other fifteen separations are radius.
 
 lanthanoid
 : IUPAC's preferred collective name for the fifteen elements lanthanum through
