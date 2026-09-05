@@ -172,14 +172,32 @@ basis must be stated before any two figures in this section are compared.
 | Product          | RE-hydroxide    |
 | Reagent recovery | 90%             |
 
-**Electrokinetic mining (2025):** @wang2025industrial state that a comparative
-technoeconomic analysis of electrokinetic against conventional in-situ leaching
-of ion-adsorption clay supports the economic viability of the electrokinetic
-route at 5,000-tonne scale. No capital or operating figure is quoted here
-because none was obtainable: the study's abstract reports the conclusion without
-the values, and the full text could not be retrieved — see
-`needs-journal-access.md`. The technique is described in
-[](#electrokinetic-mining).
+**Electrokinetic mining (2025):** @wang2025industrial cost their 5,000-tonne
+industrial-scale trial against conventional in-situ leaching, and the result is
+more interesting than "economically viable" suggests. On direct production cost
+the electrokinetic route is **more expensive**: US$7,078 per tonne of REO
+against US$6,214 for conventional leaching, about 14 % higher. The gap is
+electricity and electrode. Producing a tonne of REO consumes roughly 4,286 kWh,
+costing US$420, and the conductive polymer electrode adds US$812 per tonne; the
+authors name both as the items that must come down before the technique is
+practical. For the trial itself, equipment was US$43,527 and materials
+US$16,641.
+
+What reverses the comparison is the cost the conventional route does not carry
+on its own books. Vegetation restoration, soil remediation and water treatment
+run to **US$16,477 per tonne of REO** for conventional in-situ leaching — more
+than twice the entire direct production cost — and the authors' figure is that
+including them makes conventional mining three times more expensive than the
+electrokinetic route.
+
+That is a textbook externality argument, and it should be read as one. The
+comparison holds only where remediation is actually paid for. Where it is not —
+which describes most of the historical record of this ore type
+([](#ion-adsorption-clays)) — an operator comparing the two techniques sees a
+14 % cost increase and no offsetting saving. The case for electrokinetic mining
+is a regulatory case before it is an economic one. All of these figures come
+from a single group's single trial, and none has been reproduced. The technique
+is described in [](#electrokinetic-mining).
 
 ### Mining Project Cost Estimation
 **Simplified Cost Framework:** Screening a greenfield project before a
@@ -380,8 +398,10 @@ regolith with an applied electric field and so needs far less lixiviant to
 contact the same ore. @wang2022electrokinetic report roughly 80 % less leaching
 agent than conventional in-situ practice, and @wang2025industrial report a 95 %
 reduction in ammonia emissions in an environmental risk assessment of a
-5,000-tonne ore body, alongside a comparative technoeconomic analysis against
-the conventional route. Two qualifications belong with those figures and are
+5,000-tonne ore body — ammonium in groundwater down 94.89 % and in surface water
+down 98.08 % against the conventional comparison — alongside a comparative
+technoeconomic analysis, whose figures are set out under
+**Electrokinetic mining (2025)** earlier in this chapter. Two qualifications belong with those figures and are
 made in full in [](#electrokinetic-mining): both papers come from one
 laboratory and neither result has been independently reproduced, and an
 emissions reduction is not a remediation — the ammonium already exchanged onto

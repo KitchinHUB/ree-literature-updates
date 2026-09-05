@@ -292,8 +292,15 @@ The most instructive process study runs the leach and the sorbent together.
 leach slurry and takes the rare earths as they dissolve. A chelating resin let
 them work at 1 g/L H₂SO₄, a very low acid concentration, and in a four-stage
 cross-current arrangement reached a loading of 19.2 g of rare earths per
-kilogram of resin at up to 20 % purity, against 3 % for a strong-acid resin. Two
-of their conclusions are worth carrying forward: neither breaking up the gypsum
+kilogram of resin at up to 20 % purity, against 3 % for a strong-acid resin.
+
+The calcium loading is what makes the comparison decisive, and it is the number
+to remember from this study. The chelating resin took up 19.2 g of rare earths
+and 14.7 g of calcium per kilogram; the strong cation exchanger took up 5.6 g of
+rare earths and **67.0** g of calcium. Phosphogypsum is calcium sulfate, so a
+sorbent that cannot reject calcium is a sorbent that spends its capacity on the
+matrix — a third as much rare earth for four and a half times the calcium. Two
+further conclusions are worth carrying forward: neither breaking up the gypsum
 structure nor adsorbing the calcium turns out to be necessary to get good
 recovery, and calcium and the rare earths can be separated during elution of the
 chelating resin. Eluting a strong cation exchanger takes saturated NaCl;

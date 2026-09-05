@@ -21,9 +21,53 @@ established. Do not resolve one by finding a different paper that happens to
 report a similar number.
 
 **Where the PDFs go:** `fulltexts/`, which is gitignored — publisher PDFs are
-not redistributable and must never be committed. Name each file by its citation
-key, e.g. `huang2002rare.pdf`. Issue #1 lists every entry in this file with
-its DOI and what specifically to look for, in a suggested retrieval order.
+not redistributable and must never be committed. Files are named by citation key
+(`huang2002rare.pdf`) inside `tier-2/`, `tier-3/` and `tier-4/` subdirectories
+matching the tiers of issue #1. Every file's title was checked against the
+bibliography entry before it was read, so a PDF named for a key is that key's
+paper. Issue #1 lists every entry in this file with its DOI and what
+specifically to look for, in a suggested retrieval order.
+
+## Resolved
+
+**Tier 1 (1 source).** `ding2023separation` — retrieved and read. The claim was
+**wrong**: the paper's separation factor of 125 is dysprosium over praseodymium
+*and* neodymium combined, not Dy/Nd, and it is a batch transfer ratio rather
+than an equilibrium β. Corrected in ch04, ch09, ch12 and the provenance
+appendix; see `RELEASE-PLAN.md`.
+
+**Tier 2 (15 sources).** All retrieved and read. **Every flagged number was
+confirmed exactly as the book states it** — 9.55 at.% N and 128.98 F/g and
+23.66 mg/g La; β = 15.34 / 14.70 / 10.78 for Eu/Yb, Eu/Tm, Eu/La; 19.2 g/kg
+resin loading at 20 % purity against 3 %; 8.4 mg Th/g carbon; 165,000 ppm TDS
+and the pH 5-6 optimum and 65 % loss at pH 2 and the ~70 °C improvement; >40×
+and >4× for the DGA COF; >2000 mg/kg REE in phosphogypsum; ~100 % recovery on
+O-doped MoS₂; ~140 / 72 / 58 for Tb/La, Tb/Yb, Tb/Nd; ~400 An/Ln on the graphene
+oxide membrane; the three-level transitions and periodicity and all sixteen
+elements; 2.6× recovery and ~80 % less leaching agent and ~70 % fewer impurities;
+95 % recovery on 5,000 t and 95 % ammonia reduction; 98.2 % and 96.2 % for the
+mechanochemical yttrium route.
+
+Reading them nonetheless changed the book in four places, because the full texts
+carry things no abstract did:
+
+- **`behera2025supramolecular`** reports a near-pair the abstract omits.
+  **Tb/Eu is ~3**, against ~140 for Tb/La. The book had said no near-neighbour
+  figure was given; it now gives this one, which reshapes the claim.
+- **`wang2025industrial`** contains the technoeconomic numbers ch21 said were
+  unobtainable, and they cut against the abstract's framing: US$7,078 per tonne
+  REO for electrokinetic mining against US$6,214 conventional — 14 % *more*
+  expensive — reversed only by US$16,477/t of remediation cost the conventional
+  route does not internalise.
+- **`zhao2022selectively`** gives the size of a selectivity the book had only
+  named: 19.66 mg/g La against 12.25 Fe in the quaternary batch, and 450 s
+  against 90 s to breakthrough in flow.
+- **`virolainen2019recovering`** gives the calcium loadings that explain the
+  resin comparison: 14.7 g Ca/kg on the chelating resin against 67.0 on the
+  strong cation exchanger.
+
+Tier 3 and Tier 4 PDFs have been retrieved and are in `fulltexts/`; they have
+not yet been read against their claims.
 
 ## Flagged claims
 
@@ -42,22 +86,7 @@ its DOI and what specifically to look for, in a suggested retrieval order.
 | 15 High-throughput and computational screening | `an2024agile` | Synthesis details of the automated platform. |
 | 17 Machine learning in rare earth separations | `zhang2026predicting` | Reported model performance. |
 | 17 Machine learning in rare earth separations | `liu2026machine` | Reported model performance. |
-| 04 Technology landscape, 06 Ion-adsorption clays, 21 Environment/TEA/LCA | `wang2022electrokinetic` | The electrokinetic mining performance figures: ~2.6× recovery efficiency, ~80 % less leaching agent, ~70 % fewer metallic impurities, and the "autonomous purification" mechanism. |
-| 04, 06, 21 | `wang2025industrial` | 95 % REE recovery on a 5,000 t ore body, the 95 % ammonia-emission reduction, and the comparative technoeconomic analysis, whose values the abstract does not give at all. |
-| 10 Precipitation and selective crystallization | `li2018photochemical` | Cited alongside the Van den Bogaert work; no value is taken from it, but its scope is known only from the abstract. |
-| 12 Electrochemical separations | `zhao2022selectively` | 9.55 at.% pyrrolic-N doping, 128.98 F/g capacitance, 23.66 mg/g La in 25 min, and the La/Fe/Ca/Na selectivity. |
-| 12 Electrochemical separations | `zhan2024regulating` | The "essentially complete" recovery from low-concentration feed, and the chemisorption-electrosorption coupling mechanism on O-doped MoS₂. |
-| 12 Electrochemical separations | `aziman2021rapid` | 8.4 mg Th per g of carbon, and the isotherm and kinetic model fits. |
-| 13 Membranes, MOFs and emerging | `behera2025supramolecular` | The transport selectivities — ~140 Tb/La, 72 Tb/Yb, 58 Tb/Nd, \>40 Eu/La, ~30 Eu/Yb, ~17 Eu/Nd — and the \>18:1 Ln/K⁺ figure. These are the largest membrane numbers in the book and rest entirely on the abstract. |
-| 13 Membranes, MOFs and emerging | `wang2023graphene` | The actinide/lanthanide separation factor of up to ~400 and the interlayer-spacing mechanism. |
 | 13 Membranes, MOFs and emerging | `bao2025mxene` | 892.8 mg/g Eu(III) and 649.2 mg/g Ho(III) at pH 2.0, and 99.1 % Eu removal by the PES-supported membrane at pH 5.0. |
-| 13 Membranes, MOFs and emerging (also 04) | `xiao2022highly` | β = 15.34 Eu/Yb, 14.70 Eu/Tm, 10.78 Eu/La for the deep-eutectic-solvent TpPa COFs. |
-| 13 Membranes, MOFs and emerging | `chatterjee2024efficient` | The \>40× uptake over the pristine imine COF and \>4× over the next-best DGA support. |
-| 19 Characterization | `sun2025nanopore` | The three-level current transitions, the claim that the periodicity tracks the lanthanide contraction, and the identification of all sixteen natural rare earths. |
-| 05 Hydrometallurgical leaching | `liu2023mechanochemical` | 98.2 % YF₃-to-Y(OH)₃ conversion at room temperature and 96.2 % yttrium leaching from calciothermic slag. |
-| 20 Recycling and urban mining | `mukaba2021rare` | The \>2000 mg/kg total REE in phosphogypsum against a normal \<0.1 wt %, and the assessment that recrystallization is the most promising route. |
-| 20 Recycling and urban mining | `virolainen2019recovering` | The resin-in-leach loading of 19.2 g/kg at up to 20 % purity over four cross-current stages, against 3 % for the strong-acid resin. |
-| 20 Recycling and urban mining | `brewer2019recovery` | Biosorption tolerance to 165,000 ppm TDS, the pH 5-6 optimum and ~65 % capacity loss at pH 2, and the improvement to ~70 °C. |
 | 20 Recycling and urban mining | `tian2020rare` | The 4.5-118.3 µg/L total REE and 0.92-79.62 µg/L Eu in Sichuan flowback water, and the 4.2 t → 16.8-111.7 t Eu₂O₃ projection. |
 
 ## A gap, not a flag

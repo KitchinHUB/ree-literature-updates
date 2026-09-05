@@ -225,6 +225,19 @@ La(III) selectively from a quaternary La/Fe/Ca/Na solution. That last clause is
 the one to read carefully: **the demonstrated selectivity is rare-earth over
 base-metal, not lanthanide over lanthanide.**
 
+It is worth having the size of that selectivity rather than the word. In the
+quaternary batch the capacities were 19.66 mg/g for La(III) against 12.25 for
+Fe(III), 9.43 for Ca(II) and 8.42 for Na(I) — a factor of 1.6 over iron, which
+is a preference rather than a separation. The flow experiment is the more
+convincing of the two: passing a model effluent of 4 mg/L La³⁺ against 310 mg/L
+Fe³⁺, 200 mg/L Ca²⁺ and 60 mg/L Na⁺ at pH 3.5, the module broke through at 20 s
+for sodium, 40 s for calcium and 90 s for iron, but not until 450 s for
+lanthanum. A fivefold difference in breakthrough time against an iron
+concentration nearly eighty times the lanthanum concentration is a genuinely
+useful result — for pulling a trace rare earth out of a base-metal liquor, which
+is the job [](#hydrometallurgical-leaching) describes, and not for the job this
+chapter is about.
+
 @zhan2024regulating push the same idea onto a different material, using
 oxygen-doped MoS₂ electrodes in which chemisorption and electrosorption are
 deliberately coupled, and report essentially complete recovery of rare earths
@@ -237,8 +250,11 @@ The most convincing electrosorption result in this literature is not a
 separation of rare earths from each other at all but the removal of an impurity
 from them. @aziman2021rapid electrosorb thorium from a sulfate medium onto
 thermally cross-linked activated-carbon electrodes, reaching a maximum capacity
-of 8.4 mg of thorium per gram of carbon, with Langmuir and Freundlich isotherms
-both fitting and pseudo-first- and second-order kinetics describing the uptake.
+of 8.4 mg of thorium per gram of carbon at an equilibrium time of 180 minutes,
+with Langmuir and Freundlich isotherms both fitting and pseudo-first- and
+second-order kinetics describing the uptake. The electrode also removed thorium
+from a real leached radioactive-waste solution, which makes it one of the few
+results in this chapter that has met a feed it did not synthesise.
 Thorium management is a real and expensive problem in monazite processing —
 [](#thorium-management) — and an electrode that removes it selectively is doing
 useful work even though it separates nothing within the series.

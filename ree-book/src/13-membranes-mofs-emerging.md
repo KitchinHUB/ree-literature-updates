@@ -208,22 +208,45 @@ extractants, positioned around a nanopore instead of dissolved in a diluent.
 The channels transport middle lanthanides in preference to potassium by more
 than 18:1, and exclude Na⁺, Ca²⁺, Mg²⁺ and protons. What matters for this book
 is that they also discriminate *within* the series: the reported transport
-selectivities are about 140 for Tb/La, 72 for Tb/Yb, 58 for Tb/Nd, greater than
-40 for Eu/La, about 30 for Eu/Yb and about 17 for Eu/Nd. The authors note that
-these exceed the selectivities reported for traditional solvent extraction, and
-molecular dynamics attributes the effect to water-mediated interactions rather
-than to a simple size fit.
+selectivities are about 140 for Tb/La, 72 for Tb/Yb, 58 for Tb/Nd, 41.4 for
+Eu/La, 21.4 for Eu/Yb and about 17 for Eu/Nd. The authors compare these directly
+with solvent extraction on the same pairs — about 31 for Tb/La, 0.2 for Tb/Yb
+and 4 for Tb/Nd — so the channel is not marginally better than a cascade stage
+on these comparisons, it is one to two orders of magnitude better.
+
+The mechanism the authors propose is the one this book takes up in
+[](#kinetics-and-mass-transfer), and it is worth naming precisely. Molecular
+dynamics attributes the selectivity to water-mediated interactions rather than
+to a size fit, and the discussion sharpens that to the **rate at which water
+molecules in the first hydration shell exchange with the bulk**: a fast-exchanging
+ion swaps its water for the oxygens lining the pore and swaps back on the way
+out, while a slow-exchanging one is held up at the entrance. That is a kinetic
+selectivity in a membrane, and it is the clearest experimental case in this book
+of the water-exchange gradient across the series being used rather than merely
+measured.
 
 Those are the largest membrane selectivities in this book by a wide margin, and
 the qualifications are correspondingly heavy. It is one paper from one group. A
 transport selectivity measured across a channel-bearing bilayer is not a
 rejection measured on a process membrane: no flux at practical driving force, no
-real feed, no module, and no channel lifetime are reported. Tb/Nd at 58 is the
-pair a magnet recycler would want and it is a middle-versus-light comparison,
-not an adjacent pair. The result belongs in the book because it establishes that
-the pore is a place where intra-series selectivity can live — which forty years
-of NF, UF and supported liquid membrane work had not established — and not
-because anything is close to being built.
+real feed, no module, and no channel lifetime are reported.
+
+And the paper contains its own reality check, which the abstract does not carry
+and which no reader should miss. **The nearest pair the authors measured,
+Tb/Eu, gave a selectivity of about 3.** Terbium and europium are not literally
+adjacent — gadolinium sits between them — so the true adjacent-pair figure is
+not reported at all, and 3 is an upper bound on what to expect from it. Set that
+against 140 for Tb/La and the shape of the result becomes clear: the channel is
+excellent at telling a middle lanthanide from an end one and close to useless at
+telling a middle lanthanide from its neighbour. It is the same shape as every
+other selectivity in this book, at a larger absolute scale. Tb/Nd at 58 is the
+pair a magnet recycler would want, and it too is a middle-versus-light
+comparison rather than a near-neighbour one.
+
+The result belongs in the book because it establishes that the pore is a place
+where intra-series selectivity can live — which forty years of NF, UF and
+supported liquid membrane work had not established — and not because anything is
+close to being built.
 
 A different shape-based mechanism is worth recording alongside it.
 @wang2023graphene tune the interlayer spacing of a graphene oxide membrane to a
