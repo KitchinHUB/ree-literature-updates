@@ -271,16 +271,35 @@ follow the calcium into that gypsum, which is produced in very large quantity
 and stacked. It is the same argument as coal ash — tonnage, prior mining, and an
 existing disposal liability — with the same grade problem and one additional
 complication. The tonnage of phosphogypsum stacked worldwide is quoted widely
-and inconsistently, and no figure is given here because none could be traced to
-a primary source while this section was written.
+and inconsistently, and no global figure is given here because none could be
+traced to a primary source. Nor could a gypsum-per-tonne-of-acid ratio, which is
+the number that would let one be estimated. What can be sourced is site-specific
+and gives the order of magnitude: about 100 million tonnes stacked over roughly
+1,200 hectares of marshland at Huelva in Spain, less than 300 m from the city
+[@canovas2019leaching], and about 11 million tonnes at the Sredneuralsky tailings
+dump in Russia, holding an estimated 50,000 tonnes of contained rare earths
+[@rychkov2018recovery]. Both are the authors' own statements about the stacks
+they sampled.
 
-The grade is low and awkward. A review of the recovery literature puts total
-rare earths in phosphogypsum at over 2,000 mg/kg depending on the source
-phosphate rock, that is, normally below 0.1 wt %, and identifies the real
-difficulty as the mineralogical one: the rare earths are present in trace
-concentration and in complex, finely divided phases, which makes recovery hard
-both technically and economically [@mukaba2021rare]. The same review surveys the
-pre-treatments used to upgrade the material before extraction — carbonation,
+The grade is low, awkward, and above all variable with the source rock — and the
+variation is more than an order of magnitude, so any single figure is a figure
+about one stack. A review of the recovery literature puts total rare earths in
+phosphogypsum at over 2,000 mg/kg depending on the source phosphate rock, that
+is, normally below 0.1 wt % [@mukaba2021rare]. The two process studies below
+bracket that from both sides. Phosphogypsum from the Huelva stack in southwest
+Spain, made from sedimentary carbonate-fluorapatite, assays 345 mg/kg total rare
+earths plus yttrium — **0.035 wt %** — of which yttrium alone is 129 mg/kg, with
+uranium at 45 mg/kg and thorium at 1.6 mg/kg [@canovas2019leaching].
+Phosphogypsum from the Sredneuralsky tailings dump in Russia, made from Kola
+Peninsula apatite-nepheline ore, assays **0.43-0.52 wt % REE₂O₃**, more than four
+kilograms per tonne, which its authors note is far above phosphogypsum from other
+sources [@rychkov2018recovery]. A twelve- to fifteen-fold difference in grade between
+two stacks is the first thing to establish about any third one.
+
+@mukaba2021rare identifies the real difficulty as the mineralogical one: the
+rare earths are present in trace concentration and in complex, finely divided
+phases, which makes recovery hard both technically and economically. The review
+also surveys the pre-treatments used to upgrade the material before extraction — carbonation,
 roasting, microwave heating, grinding, recrystallization — and concludes that
 recrystallization looks the most promising, because it both recovers rare earths
 and leaves a clean gypsum phase behind, which matters when the residue is
@@ -306,9 +325,60 @@ recovery, and calcium and the rare earths can be separated during elution of the
 chelating resin. Eluting a strong cation exchanger takes saturated NaCl;
 eluting the chelating resin takes EDTA or concentrated HCl.
 
-Two further leaching studies are widely cited in this literature
-[@rychkov2018recovery; @canovas2019leaching] and are listed here for existence
-only, their texts not having been obtainable for verification.
+Two further leaching studies are widely cited in this literature, and they
+disagree with each other in a way that is more useful than either alone.
+
+@canovas2019leaching leached real Huelva phosphogypsum at room temperature, a
+liquid-to-solid ratio of 1:20, for two to eight hours. **The choice of acid is a
+choice about what else comes with the rare earths.** Three molar nitric acid took
+out 82 % of the light and 86 % of the heavy rare earths in eight hours — but it
+dissolved 63 % of the gypsum with them, and with it 84 % of the phosphorus, 76 %
+of the strontium, 79 % of the cadmium and 60 % of the lead. Half-molar sulfuric
+acid took only 46 % and 58 % of the rare earths, but dissolved under 6 % of the
+gypsum, 5.6 % of the calcium, 0.79 % of the barium, 11 % of the lead. Common-ion
+suppression of gypsum solubility is doing the work, and it buys a far cleaner
+liquor for about two-thirds of the recovery. Cerium is the outlier in both, at
+67 % and 38 %, which the authors attribute to oxidation to Ce(IV) and
+reprecipitation as CeO₂. Scandium leaches at about 99 % either way; uranium
+barely leaches at all, 21 % and 10 %. Two further results are directly useful: a
+plain water wash removes about 80 % of the magnesium, manganese and arsenic and
+30 % of the cadmium while leaving the rare earths entirely behind, so it is free
+pre-purification; and a DTPA-chelated leach at pH 3 recovers far less of
+everything, 22 % and 18 %.
+
+@rychkov2018recovery worked on real aged phosphogypsum from Sredneuralsky and
+found the opposite of an easy leach. Direct sulfuric acid leaching recovered only
+13.8 to 18.1 % of the rare earths, and did not exceed 30 % even at high acid
+concentration, because in that material the rare earths are co-crystallised into
+the gypsum lattice itself. Getting them out took mechanical destruction of that
+lattice: two hours of bead milling at 3000 rpm, which takes the particle size
+from 500-600 µm down to 0.1-5 µm, plus ultrasound to stop the fines
+re-aggregating, plus a strong-acid resin sitting in the pulp. The three together
+raised recovery **from 15-18 % to over 70 %**, at a sulfuric acid concentration
+of only 10-20 g/L. Of the three, the resin-in-pulp is the single largest lever
+and the ultrasound on its own is worth almost nothing. The eluate carried 1455
+mg/L of rare earths and **8770 mg/L of calcium** — six times as much calcium as
+product — which is why the elution used ammonium nitrate rather than a sulfate,
+and why the rare earths then had to be precipitated as carbonates to leave the
+calcium behind in solution. That is the resin-selectivity problem above showing
+up again, one unit operation downstream.
+
+Cánovas points at the disagreement explicitly: 46-58 % from a straight sulfuric
+leach at Huelva against roughly 10-18 % at Sredneuralsky under comparable
+conditions. Both groups are right about their own material, and the reconciliation
+is mineralogical. At Huelva the rare earths sit in unreacted phosphate and
+fluoride phases *outside* the gypsum, which is why they come out while the gypsum
+stays; at Sredneuralsky, made by the dihydrate route, they are inside the
+crystal. @virolainen2019recovering's finding above, that breaking up the gypsum
+structure is unnecessary, should therefore be read as a statement about a
+feedstock rather than about phosphogypsum in general: for Rychkov's material,
+breaking up the structure *is* the process.
+
+Both studies are bench scale, and both say so. Cánovas: the results "only address
+bench scale leaching tests." Rychkov's largest experiment is 40 g of
+phosphogypsum in 300 mL, and the only kilogram-scale item in that paper is 17 kg
+of a granulated cement additive made from the leach residue, not of rare earth
+concentrate.
 
 The additional complication is radioactivity, and it is the same complication
 monazite has. Phosphate rock carries uranium and thorium and their decay
@@ -316,9 +386,25 @@ products, which is why the monazite route in
 [](#hydrometallurgical-leaching) is a radioactive-materials flowsheet, and the
 same nuclides partition into the byproducts of phosphate processing. That makes
 the disposition of phosphogypsum a regulated question in several jurisdictions
-rather than purely a chemical one. The process literature reviewed here does not
-treat it, and a reader assessing a phosphogypsum recovery proposal should
-establish the radiological status of the specific stack before anything else.
+rather than purely a chemical one.
+
+The process literature reviewed here still does not treat it quantitatively.
+Neither leaching study reports an activity in becquerels, a radium figure, or a
+gross-activity measurement; the only hard numbers are Cánovas's chemical assays of
+45 mg/kg uranium and 1.6 mg/kg thorium at Huelva, and the observation that
+uranium is one of the elements that stays put — 21 % leached by nitric acid,
+10 % by sulfuric — so that an acid leach for rare earths does not, at least at
+Huelva, drag the uranium out with them. Rychkov goes further and asserts the
+opposite case — that his material has no natural radionuclides, so that
+deactivation and radioactive-waste disposal are unnecessary — but reports no
+measurement of any kind in support, and lists neither uranium nor thorium in his
+composition table. The assertion is at least plausible for an igneous
+apatite-derived material, since sedimentary phosphorites are the uranium-rich
+ones, and it is a reminder that the radiological question is a question about
+the source rock rather than about phosphogypsum as a class. It is also
+unsupported. A reader assessing a phosphogypsum recovery proposal should
+establish the radiological status of the specific stack before anything else, and
+should not accept either a blanket warning or a blanket exemption.
 
 (brines-and-produced-water)=
 ## Brines, Geothermal Fluids and Produced Water

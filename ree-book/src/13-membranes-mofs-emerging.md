@@ -414,9 +414,29 @@ measured property of a material anyone can buy.
 The MOF result invites the obvious question of whether the other families of
 designed porous solids do the same thing, and two of them have been tried on
 rare earths. Neither has produced a number like NCU-1's, and each fails in an
-instructive way. A review covering the reticular materials as a class exists
-[@liu2025advances]; it is cited for existence only, as its text was not
-available for verification.
+instructive way. A 2025 review covering the reticular materials as a class puts the whole family
+in perspective, and its most useful content is negative [@liu2025advances]. Its
+summary table of roughly fifty adsorbents — some thirty-seven MOFs and thirteen
+COFs, with no work at all on hydrogen-bonded frameworks — has columns for pore
+size, surface area, capacity, equilibrium time, mechanism, pH and reusability,
+and **no column for separation factor**. Across 231 references the phrase
+"separation factor" occurs once, for a Zn-BDC MOF/graphene-oxide composite
+reporting Sc/Tm ≈ 529.5, Sc/Er ≈ 461.9, Sc/Y ≈ 445.7 and **Tm/Eu ≈ 4.5**. Three
+of those four are scandium, which is the easy case; **the only
+lanthanide-over-lanthanide number in the review is 4.5, and it is for a distant
+pair.** The review's own perspectives section lists materials that "effectively
+separate individual REEs" as future work, and names the obstacles: MOFs lack the
+chemical stability to be tested in real wastewater at all, the materials are
+powders that are hard to recover from solution, and the field is "primarily in
+the laboratory research stage."
+
+Two details of how the review handles the papers below are worth recording,
+because they bear on how this book uses reviews. NCU-1 appears in it as a single
+undiscussed table row; its 796 and 273 are not reported, and a comprehensive
+review published the year after does not engage with the field's most spectacular
+separation factor. And the capacities it quotes for @zhang2022construction, 167.5
+and 91.9 mg/g, match neither of that paper's own figures. Numbers are traced here
+to the papers that measured them, never to the review that repeats them.
 
 **Covalent organic frameworks.** COFs are built from covalent rather than
 coordinative bonds, which in principle makes them more robust than a MOF in the
@@ -444,9 +464,26 @@ and Eu/Tm span most of the second half of the series and Eu/La most of the
 first, so these are middle-versus-end numbers of the kind
 [](#technology-comparison) warns about, not adjacent-pair numbers. A separation
 factor of 15 across seven elements is a real result and is not the same claim as
-a separation factor of 15 across one. A further COF study on La(III) uptake by
-nitrogen-rich frameworks [@zhang2022construction] is cited for existence only,
-its text having been unobtainable.
+a separation factor of 15 across one. A second COF study, on La(III) uptake by nitrogen-rich frameworks, is worth
+setting beside it precisely because it is stronger on capacity and empty on
+selectivity [@zhang2022construction]. COF-TZ-TP takes up 165.6 mg/g of lanthanum
+in three hours, against 89.8 mg/g for its pyrimidine analogue, with Langmuir
+maxima of 250.0 and 114.9 mg/g; uptake is strongly pH-dependent, 93.7 mg/g at
+pH 3.0 rising to 171.6 mg/g at pH 6.0; and it survives five adsorption-desorption
+cycles at 93.7 % of initial capacity, which is better cycling than most of this
+chapter. The binding is La-N, confirmed by XPS.
+
+**It reports no separation factor.** Its methods section announces that
+"adsorption capacity, distribution coefficient and separation factors were
+obtained using the following equations" and then gives equations for the first
+two only; no β appears anywhere. Its eight-element experiment is eight separate
+single-salt solutions run one at a time, never a mixture, and the authors say
+plainly what that does and does not establish: on the strength of the difference
+in capacity, separation "is theoretically feasible." A capacity difference
+measured in separate vials is not a separation factor and does not predict one,
+because the experiment that would settle it — competitive uptake from a mixture —
+is the one not done. The feed throughout is 900 mg/L lanthanum nitrate in
+deionized water, 5 mg of solid in 10 mL.
 
 **MXenes.** MXenes are two-dimensional transition-metal carbides with a
 terminated surface that behaves as a hard Lewis base — well matched, in
@@ -459,10 +496,23 @@ the thing most adsorbent papers do not, and take the material to two real feeds
 and then build the MXene into a layer-stacked membrane on a polyethersulfone
 support that removes 99.1 % of the Eu(III) from a continuous stream at pH 5.0,
 regenerating with a simple acid wash. DFT is offered in support of the
-Lewis acid-base mechanism. A second study on lithium-intercalated Ti₃C₂Tₓ for
-neodymium adsorption [@cai2024lithium] is cited for existence only.
+Lewis acid-base mechanism. A second study, on lithium-intercalated Ti₃C₂Tₓ for neodymium, answers the
+question the first one leaves open — selective against *what* [@cai2024lithium].
+Etching with LiF/HCl rather than HF intercalates 4.44 wt % lithium and opens the
+interlayer spacing to 11.76 Å, and the Langmuir capacity for Nd³⁺ goes from
+72.25 mg/g to **517.79 mg/g** at pH 5, with equilibrium in two hours over a
+working range of pH 2-7. The separation factors are large: 221 for Nd/Fe in
+sulfate, 247-858 for Nd/Ca, 464-3545 for Nd/Mg. **Every one of them is a rare
+earth against a base metal, and no second lanthanide appears anywhere in the
+paper.** The Nd/Fe number is the mechanistically interesting one, because Fe³⁺
+has the higher ionic potential, so the discrimination cannot be electrostatic;
+the authors attribute it to hydration enthalpy and coordination geometry, with
+EXAFS giving Nd a coordination number of 8.9 at 2.51 Å. Two cautions: the paper's
+framing promises selectivity over Fe³⁺ **and Al³⁺**, and aluminium is never
+tested; and after three cycles removal has fallen to 73.2 % as the MXene oxidises
+to TiO₂.
 
-Again, no lanthanide pair. The MXene result is a strong uptake-and-recovery
+Again, no lanthanide pair — now from two MXene papers rather than one. The MXene result is a strong uptake-and-recovery
 result at a pH where uptake is hard, demonstrated on real material, which is
 more than most of this chapter can say — and it is a concentration step, not a
 separation step. The pattern across both families is the same one that runs

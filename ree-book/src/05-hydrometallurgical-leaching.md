@@ -1557,15 +1557,29 @@ fluoride does not convert to the hydroxide under alkaline conditions because a
 Y(OH)₃ layer forms on the particle and stops the reaction; applying mechanical
 force destroys that coating as it forms, and the conversion runs to 98.2 % at
 room temperature. Applied to the YF₃-bearing slag from calciothermic reduction
-smelting, the yttrium leaching rate reached 96.2 %. A separate study reports
-mechanochemical activation for selective recovery from rare earth waste
-[@zhang2023mechanochemical]; it is cited for existence only, its text not having
-been obtainable.
+smelting, the yttrium leaching rate reached 96.2 %. A second study shows the principle generalising to a different obstacle
+[@zhang2023mechanochemical]. Oxidative roasting of NdFeB wire-cutting swarf is
+necessary to convert the iron to Fe₂O₃ so that dilute acid attacks the rare earth
+oxides preferentially — it drops iron leaching from 53.4 % to under 10 % — but
+above 700 °C the roast forms NdFeO₃, a perovskite that 0.2 mol/L HCl cannot
+dissolve, and rare earth recovery falls to about 40 %. Four hours of dry planetary
+milling at 800 rpm, with no reagent added, takes the NdFeO₃ content from 21.0 wt %
+to 3.50 wt %, and the leaching efficiencies rise to 96.1 % Nd, 89.7 % Pr, 93.2 %
+Gd and 97.6 % Dy — roughly double, and in half an hour of leaching rather than
+three. Here the milling drives no reaction of its own; it destroys a lattice that
+resists acid, where in the yttrium case it destroyed a product layer that formed
+during one. The feed is a real commercial waste, over half of it cutting-coolant
+sludge as received, at 3 g per mill charge.
 
 Two things follow. The first is that this is leaching and activation, not
 separation — nothing in the mechanochemical rare earth literature reports a
 separation factor between lanthanides, and it should not be read as an
-alternative to a cascade. The second is the usual intensification trade in a new
+alternative to a cascade. The second paper makes the point about as plainly as it
+can be made: its four lanthanides leach at 89.7 to 97.6 %, which is a quantitative
+co-dissolution and the exact opposite of a fractionation. What mechanochemistry
+buys is acid consumption and leach time, and what neither paper reports is the
+energy cost of four hours of milling, so the "green" claim rests on reagent
+savings alone. The second is the usual intensification trade in a new
 form: a mill that runs at room temperature has replaced a furnace, and the
 energy has gone into the mill. Whether that is a net saving is a question for
 [](#energy-and-carbon-where-the-burden-sits), and neither of these papers

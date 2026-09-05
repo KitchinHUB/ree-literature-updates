@@ -66,26 +66,60 @@ carry things no abstract did:
   resin comparison: 14.7 g Ca/kg on the chelating resin against 67.0 on the
   strong cation exchanger.
 
-Tier 3 and Tier 4 PDFs have been retrieved and are in `fulltexts/`; they have
-not yet been read against their claims.
+**Tiers 3 and 4 (19 sources).** All retrieved and read. Unlike Tier 2, reading
+these *changed* the book in several places, because three of the flagged claims
+were wrong and two more had been deleted when they should not have been.
+
+- **`huang2002rare` was misread twice over.** Chapter 04 attributed
+  `xue2025onestep`'s carbochlorination conditions to it, and both chapters had
+  the rationale for the SiCl₄ additive backwards. The paper does report
+  adjacent-pair separation factors, which the book had said it did not: the best
+  is about **2.3** (Ce/La) and several pairs come out **below 1**. Yields, the
+  three-stage sequence, activation energies and the thorium condensation
+  mechanism are now in chapter 07.
+- **Chapter 11 had deleted two sets of figures that are in fact in their
+  papers.** `zhou2018leaching`'s 26-35 % saponin leaching recoveries and
+  `zhang2018bioleaching`'s 200 µmol/L siderophore titre are both restored, each
+  with the qualification that makes it honest — the soil is *spiked*, not
+  contaminated; the titre is from rock-free growth medium and was not detected
+  at all in the presence of rock.
+- **`leblebici2017efficiency` undercuts a remedy chapter 10 reports.** The same
+  group's photonic efficiency is flat at 0.66 ± 0.04 from 5 to 30 mm with no
+  366 nm absorbance observed, so the back reaction the monochromatic-light
+  remedy is meant to suppress does not appear to operate.
+- **The kinetics numbers chapter 15 declined to quote all exist**, and are
+  better arguments than the chapter's headline: β(Pr/Nd) = 21.7 against 1.6-1.8
+  for the extractant alone [@wang2019enhanced], 8.3 against 1.53 conventional
+  [@sui2023kinetic], 2.89 Tm/Er against ~1.5 [@sui2024nonequilibrium].
+  `cao2021extraction` is the counterexample and is now presented as one: it
+  reports no separation factor at all, and its rate spread across the whole
+  series is 6.3, *smaller* than the equilibrium spread.
+- **`canovas2019leaching` and `rychkov2018recovery` disagree with each other**,
+  46-58 % against 14-18 % recovery from the same acid, and the disagreement is
+  the useful part — it is a host-phase difference, and it scopes
+  `virolainen2019recovering`'s conclusion that breaking up the gypsum structure
+  is unnecessary to one feedstock rather than to phosphogypsum in general.
+
+The recurring pattern across all nineteen is the book's own thesis arriving from
+a new direction. The 2025 reticular-materials review has no separation-factor
+column and exactly one lanthanide-over-lanthanide number in 231 references
+(4.5); the 2025 electrochemistry review reports none at all across ~30 tabulated
+studies; two MXene papers report no lanthanide pair between them; a COF paper
+promises a separation factor in its methods and never delivers one;
+mechanochemical leaching co-dissolves four lanthanides at 89.7-97.6 %. Large
+selectivities are for distant pairs or for rare-earth-over-base-metal, and they
+collapse or vanish for adjacent lanthanides.
+
+`deng2025application` could not be obtained and remains flagged below.
 
 ## Flagged claims
 
 | Chapter | Citation key | What rests on it |
 |----|----|----|
-| 07 Pyrometallurgical and halogenation routes (also cited in 04) | `huang2002rare` | The selective chlorination / vacuum-thermal purity, yield and thorium-partitioning figures. The abstract does not carry them. |
-| 08 Coacervates and aqueous two-phase systems | `favrerguillon2004cloud` | Cloud-point extraction performance figures. |
-| 08 Coacervates and aqueous two-phase systems (also 14) | `sui2023kinetic` | The kinetically enhanced Pr/Nd separation factor. Chapter 08 already declines to quote it. |
-| 11 Biological and biomimetic separations | `zhou2018leaching` | Bioleaching recovery figures. |
-| 11 Biological and biomimetic separations | `zhang2018bioleaching` | Bioleaching recovery figures. |
-| 11 Biological and biomimetic separations | `deng2025application` | Application-scale claims. |
-| 11 Biological and biomimetic separations | `kore2024application` | Application-scale claims. |
-| 14 Kinetics and mass transfer | `cao2021extraction` | The extraction rate constants and kinetic separation factors for La/Gd/Ho/Lu with HEHEHP. |
-| 14 Kinetics and mass transfer (also 08) | `wang2019enhanced` | The Pr/Nd separation factor from the push-and-pull column. |
-| 14 Kinetics and mass transfer | `sui2024nonequilibrium` | The Tm/Y/Er separation performance on rising oil droplets. |
-| 15 High-throughput and computational screening | `an2024agile` | Synthesis details of the automated platform. |
-| 17 Machine learning in rare earth separations | `zhang2026predicting` | Reported model performance. |
-| 17 Machine learning in rare earth separations | `liu2026machine` | Reported model performance. |
+| 11 Biological and biomimetic separations | `deng2025application` | Application-scale claims. The one source from issue #1 that could not be obtained. |
+| 16 High-throughput and computational screening | `an2024agile` | Synthesis details of the automated platform. |
+| 18 Machine learning in rare earth separations | `zhang2026predicting` | Reported model performance. **PDF retrieved, not yet read.** |
+| 18 Machine learning in rare earth separations | `liu2026machine` | Reported model performance. **PDF retrieved, not yet read.** |
 | 13 Membranes, MOFs and emerging | `bao2025mxene` | 892.8 mg/g Eu(III) and 649.2 mg/g Ho(III) at pH 2.0, and 99.1 % Eu removal by the PES-supported membrane at pH 5.0. |
 | 20 Recycling and urban mining | `tian2020rare` | The 4.5-118.3 µg/L total REE and 0.92-79.62 µg/L Eu in Sichuan flowback water, and the 4.2 t → 16.8-111.7 t Eu₂O₃ projection. |
 
@@ -115,18 +149,8 @@ do.
 
 | Citation key | What the chapter would gain |
 |----|----|
-| `geist1999kinetics` | Measured rate constants for rare earth extraction into D2EHPA, and which step controls. |
-| `cossy1988oxygen` | Water-exchange rate constants across the Ln(III) aqua ions, and how much of the series ¹⁷O NMR could actually reach. |
-| `gabelman1999hollow` | Mass-transfer correlations for hollow-fibre contactors; currently cited only as the standard review. |
-| `tian2010kinetics` | Rate law and activation energy for ammonium sulfate leaching of weathered-crust ore. |
-| `he2016kinetics` | The same for column leaching, including the aluminium co-extraction behaviour. |
-| `xu2024comparative` | A comparison of leaching agents for electrokinetic mining; would let chapter 06 say which reagent the field method actually favours. |
-| `mosadeghsedghi2023chelation` | Chelation-assisted electrodialysis; would let chapter 12 say what selectivity the chelator supplies. |
-| `akcaguler2025comprehensive` | A comprehensive treatment of electrochemical rare earth recovery; would let chapter 12 check its own taxonomy against a review. |
-| `leblebici2017efficiency` | Photochemical reactor efficiency; would let chapter 10 say whether the Eu photoreduction's illumination times can be engineered away. |
-| `zhang2022construction` | Nitrogen-rich COFs for La(III) uptake; would add a second COF data point to chapter 13. |
-| `cai2024lithium` | Lithium-intercalated Ti₃C₂Tₓ for Nd adsorption; would add a second MXene data point to chapter 13. |
-| `liu2025advances` | A review of reticular materials for rare earth capture; would let chapter 13 place its two examples in a field. |
-| `zhang2023mechanochemical` | A second mechanochemical study; would let chapter 05 say whether the approach generalises beyond fluoride conversion. |
-| `rychkov2018recovery` | Recovery of rare earths from a secondary source; cited in chapter 20 for existence only. |
-| `canovas2019leaching` | Leaching of phosphogypsum; would let chapter 20 state what fraction of the contained rare earths is actually accessible and under what conditions. |
+| `geist1999kinetics` | Measured rate constants for rare earth extraction into D2EHPA, and which step controls. **PDF retrieved, not yet read.** |
+| `cossy1988oxygen` | Water-exchange rate constants across the Ln(III) aqua ions, and how much of the series ¹⁷O NMR could actually reach. **PDF retrieved, not yet read.** |
+| `gabelman1999hollow` | Mass-transfer correlations for hollow-fibre contactors; currently cited only as the standard review. **PDF retrieved, not yet read.** |
+| `tian2010kinetics` | Rate law and activation energy for ammonium sulfate leaching of weathered-crust ore. **PDF retrieved, not yet read.** |
+| `he2016kinetics` | The same for column leaching, including the aluminium co-extraction behaviour. **PDF retrieved, not yet read.** |

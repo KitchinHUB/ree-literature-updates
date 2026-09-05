@@ -296,12 +296,24 @@ The LCST is not a fixed property but a formulation variable. Copolymerizing with
 
 #### Thermoseparating Coacervates
 
-Cloud point extraction (CPE) uses temperature-induced phase separation of non-ionic surfactants for metal preconcentration. Above the cloud point a micellar solution splits into surfactant-rich and surfactant-dilute phases, and a metal complexed by a hydrophobic ligand partitions into the surfactant-rich one. This is the closest thing to a coacervate-like process with a real lanthanide track record. Favre-Réguillon and co-workers separated La(III) from Gd(III) by forming their 8-hydroxyquinoline complexes in the micellar phase of a non-ionic surfactant, and proposed CPE explicitly as an alternative to organic-solvent extraction for lanthanides [@favrerguillon2004cloud]. Water-soluble calixarenes — p-sulfonato thiacalixarene, calix[4]resorcinarene phosphonic acid — used as chelators with Triton X-100 extend the approach to La(III), Gd(III) and Yb(III) with selectivity that depends on the chelator chosen [@mustafina2006cloud]. Later work has optimized the surfactant side: CPE of La(III) with the non-ionic surfactant C13E10 has been through a formal Taguchi design of experiments, which is a level of process characterization the rest of this chapter cannot match [@ghidini2019cloud].
+Cloud point extraction (CPE) uses temperature-induced phase separation of non-ionic surfactants for metal preconcentration. Above the cloud point a micellar solution splits into surfactant-rich and surfactant-dilute phases, and a metal complexed by a hydrophobic ligand partitions into the surfactant-rich one. This is the closest thing to a coacervate-like process with a real lanthanide track record. Favre-Réguillon and co-workers separated La(III) from Gd(III) by forming their 8-hydroxyquinoline complexes in the micellar phase of Triton X-114, and proposed CPE explicitly as an alternative to organic-solvent extraction for lanthanides [@favrerguillon2004cloud]. The surfactant is not incidental: the three aliphatic non-ionic surfactants they also tried all failed, because 8-hydroxyquinoline is sparingly soluble in them and its lanthanide complexes precipitate. Only the aromatic lipophile of Triton X-114 dissolves the aromatic chelate. Water-soluble calixarenes — p-sulfonato thiacalixarene, calix[4]resorcinarene phosphonic acid — used as chelators with Triton X-100 extend the approach to La(III), Gd(III) and Yb(III) with selectivity that depends on the chelator chosen [@mustafina2006cloud]. Later work has optimized the surfactant side: CPE of La(III) with the non-ionic surfactant C13E10 has been through a formal Taguchi design of experiments, which is a level of process characterization the rest of this chapter cannot match [@ghidini2019cloud].
 
-No representative separation factor can be given for lanthanide CPE. The
-figures in circulation for the La/Gd system could not be traced to a source
-that states them, and are not repeated here; the qualitative claim — that CPE
-separates La from Gd via 8-HQ complexes in a micellar phase — is what the
+A representative separation factor can now be given for lanthanide CPE, and it
+is the strongest lanthanide-over-lanthanide result in this chapter's family. At
+an 8-HQ-to-lanthanide molar ratio of 14, with 0.36 mM each of La(III) and
+Gd(III), 1 wt % Triton X-114, pH 5.5 and one hour at 60 °C, the distribution
+ratios were 63.8 for lanthanum and 2067 for gadolinium, a **selectivity of
+32.4 ± 0.6** at a gadolinium concentration factor of 57, with 96 % of the
+gadolinium extracted [@favrerguillon2004cloud]. The selectivity is bought with
+the chelator: at an 8-HQ ratio of zero it is 5.4, at 6 it is 6.1, at 10 it is
+20.8. Two caveats. La/Gd is not an adjacent pair — four f electrons separate
+them — and the whole result is a single equilibrium contact on a synthetic
+nitrate solution requiring a fourteen-fold molar excess of ligand. The paper's
+abstract additionally quotes a "decontamination factor of 50" where its results
+section gives a concentration factor of 57; only the latter is defined anywhere
+in the paper, and it is the one used here.
+
+The remaining qualitative claim — that CPE
 primary source supports.
 
 ### pH-Responsive Coacervates
@@ -393,12 +405,16 @@ from the heavy rare earths — not from each other — at SF = 171, reaching 92%
 Pr+Nd purity at 96% yield from a 10 mg/L all-REE feed at pH 2.5, a figure the
 authors themselves describe as comparable with solvent extraction
 [@zhang2023separation]. Third, kinetic rather than equilibrium separation of
-Pr from Nd has been demonstrated using specific ion effects [@sui2023kinetic];
-the separation factor reported in that work could not be verified from any
-source available here and is therefore not quoted. Fourth, a push-and-pull
+Pr from Nd has been demonstrated using specific ion effects, at a separation
+factor of 8.3 on a synthetic feed at the NdFeB Pr:Nd ratio against 1.53 for
+conventional stirred extraction with the same extractant, and 5.8 on a magnet
+raffinate reconstructed from published leach compositions [@sui2023kinetic]. The
+8.3 is a transient: ten minutes later it is 6.91. Fourth, a push-and-pull
 column using [A336][NO3] with DTPA as the aqueous complexant enhances Pr/Nd
 separation by combining extraction kinetics in one direction with complexation
-in the other [@wang2019enhanced]. Both of the kinetic results are part of a
+in the other, reaching a maximum separation factor of 21.7 at a 1:4 Pr:Nd feed
+ratio — falling to 6.2 at equimolar feed — against 1.6-1.8 for the extractant
+alone [@wang2019enhanced]. Both of the kinetic results are part of a
 wider programme on rate-based rather than equilibrium-based separation, which
 [](#kinetics-and-mass-transfer) sets out.
 
@@ -565,7 +581,7 @@ problems.
 
 1.  **Biomimetic approaches show the highest *group* selectivity**: lanmodulin discriminates rare earths from calcium and the common leachate cations by roughly eight orders of magnitude, and does so at pH 2.5 in real coal and e-waste liquors [@cotruvo2018lanmodulin; @deblonde2020selective]. Its intra-series discrimination is far weaker. Engineered dimer-interface variants have delivered a light/heavy split (Nd/Dy, \>98% purity, single-stage column) [@mattocks2023enhanced], a light-lanthanide enrichment (Pr,Nd over La,Ce) [@larrinaga2024modulating], and near-adjacent heavy separations from an ore-derived leachate [@choi2026near], but no adjacent-pair separation factor comparable to a solvent-extraction cascade has been reported. The right place for these ligands in a flowsheet is upstream concentration and group separation, not adjacent-pair fractionation. All of this work comes from one research group and has not been independently replicated.
 
-2.  **Aqueous biphasic systems are the most developed, on the wrong problem**: IL-based ABS and polymer-salt systems have demonstrated practical separations of rare earths from *transition metals* — Sm/Co, Nd/Fe, Eu/Zn, La/Ni [@kumar2022separation], and Fe rejection from NdFeB magnet leachate [@liu2022one] — and cloud point extraction has a lanthanide track record going back two decades [@neves2022liquid; @favrerguillon2004cloud]. The separation of one rare earth from another by an ABS remains undemonstrated.
+2.  **Aqueous biphasic systems are the most developed, on the wrong problem**: IL-based ABS and polymer-salt systems have demonstrated practical separations of rare earths from *transition metals* — Sm/Co, Nd/Fe, Eu/Zn, La/Ni [@kumar2022separation], and Fe rejection from NdFeB magnet leachate [@liu2022one] — and cloud point extraction has a lanthanide track record going back two decades [@neves2022liquid; @favrerguillon2004cloud]. Cloud point extraction is the exception within the family: it separates one rare earth from another, at a Gd/La selectivity of 32 in a single stage [@favrerguillon2004cloud], though on a pair four f electrons apart. The separation of one rare earth from another by an *aqueous biphasic system* remains undemonstrated.
 
 3.  **Stimuli-responsive coacervates are demonstrated as switches, not as separations**: pH-triggered assembly and disassembly is fully reversible in a model system [@love2020reversible], the coacervate interior demonstrably shifts redox thermodynamics [@wang2025quantification], and thermoresponsive polymers cycle metal uptake and release for divalent transition metals [@kumar2023comprehensive; @zhong2021thermoresponsive]. No published work closes the loop on a rare earth in a coacervate.
 

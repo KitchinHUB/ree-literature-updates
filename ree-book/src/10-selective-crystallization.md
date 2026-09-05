@@ -300,9 +300,36 @@ because the residence times are long and continuous systems are therefore not
 feasible. Their proposed remedy is higher irradiance and monochromatic light —
 the latter specifically to suppress the 366 nm back reaction
 [@vandenbogaert2015photochemical]. That is a photoreactor engineering problem
-rather than a chemistry problem, and it has been examined as such
-[@leblebici2017efficiency]; that study is cited here for existence only, since
-its text could not be obtained for verification.
+rather than a chemistry problem, and the same group examined it as one, on the
+same europium chemistry, as an explicit case study in reactor design
+[@leblebici2017efficiency]. Two of its findings bear directly on the paragraph
+above.
+
+The first is that going smaller is the wrong instinct. Thinning the light path
+maximises the space-time yield, and a millichannel reactor built for this
+chemistry would indeed be more productive per unit volume below 10 mm of depth —
+but it wastes most of the lamp. Going from the thinnest path to one five times
+thicker costs 40 % of the space-time yield and returns **three times the
+throughput and three times the space-time yield per unit of lamp power**, with an
+experimental optimum at about 25 mm of light path and a radiation-field model
+predicting 20 mm. Beyond 25-30 mm the local volumetric rate of energy absorption
+is negligible and extra depth only dilutes. Geometry also matters more than
+brightness: from the deep-batch data, a fourfold change in the irradiance arriving
+at the reactor wall changed the reaction rate only twofold. If these cells are
+ever numbered up, the throughput maximum and the lamp-efficiency maximum coincide,
+which is the practical design criterion the paper offers.
+
+The second finding contradicts one of the two remedies proposed above. Photonic
+efficiency was flat at 0.66 ± 0.04 across light paths from 5 to 30 mm, and no
+absorbance appeared at the 366 nm emission band during the runs — which it would
+have if the photochemical back reaction were operating. The authors conclude the
+reverse reaction is kinetically too slow to have an observable effect. Under
+these conditions, then, monochromatic light to suppress the 366 nm channel solves
+a problem that is not occurring; higher irradiance and better geometry are the
+live remedies. The caveat is that this study measures europium reduction and
+reactor efficiency only. Its medium is europium chloride with ammonium sulfate
+and isopropanol at pH 3.9 — no yttrium, no separation, no purity — so it tells
+you how to size the vessel, not how long a separation would take.
 
 Two variations are worth recording. Moving out of water removes the competing
 water chemistry: @vandenbogaert2016photochemical reduce Eu(III) in alcohols and

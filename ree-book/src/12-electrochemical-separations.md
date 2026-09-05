@@ -43,8 +43,20 @@ sources including coal mining byproducts; @su2020electrochemical gives a shorter
 and more general account of electrochemical metal recycling that is useful
 mainly for the Faradaic/non-Faradaic distinction used below. A further review of
 electrochemical methods for rare earths appeared in 2025
-[@akcaguler2025comprehensive]; it is cited here for existence only, because its
-text was not available for verification.
+[@akcaguler2025comprehensive], and it is worth reporting for what it does not
+contain. It organises the field into electrochemical leaching, electrodialysis,
+electrosorption and electrodeposition — four families that map onto three of the
+four used here, with anodic dissolution of magnets as a fifth that is upstream of
+separation. **Redox separation is absent from it entirely**: cerium(IV) and
+europium(II) appear nowhere in its mechanisms, and the phrase "oxidation state"
+occurs once, in the introduction, to say that all rare earths are trivalent.
+Across roughly thirty tabulated studies the review reports **not one
+intra-lanthanide separation factor** — only recoveries and capacities — and it
+offers no technology-readiness assessment, no pilot data and no techno-economics.
+Its abstract promises a life-cycle comparison against traditional methods; the
+section it points to compares two pretreatments of the same
+fluorescent-powder recycling route, and performs no comparison with conventional
+separation at all.
 
 (why-an-electrode-is-a-weak-handle)=
 ## Why an Electrode Is a Weak Handle on the Series
@@ -191,10 +203,36 @@ benefit over solvent extraction at industrial scale, and that its prospect is as
 a stage-reducing addition to one.
 
 The sentence to carry out of the paper is the authors' own: electrodialysis
-without chelation assistance is not capable of separating rare earths. A
-chelation-assisted electrodialysis study exists as well
-[@mosadeghsedghi2023chelation] and is cited here for existence only, its text
-not having been obtainable. A 2024 review places electrodialysis for critical
+without chelation assistance is not capable of separating rare earths. An independent
+chelation-assisted electrodialysis study reaches the same conclusion on a
+different cell, different membranes and different pairs, and supplies the control
+experiment the argument needs [@mosadeghsedghi2023chelation]. With no chelating
+agent, an equimolar La-Eu feed gave 93 % removal for **both** elements, for a
+separation factor of exactly 1; La-Nd likewise; and in a ternary
+La-Pr-Nd feed "the three REE were equally removed throughout the operation." The
+authors' explanation is the one this chapter has been making: ions of the same
+charge and nearly the same size have nearly the same diffusion potential through
+a cation-exchange membrane.
+
+Adding a chelator changes everything, and the ranking is the ranking of the
+stability constants. At one mole of chelator per mole of the heaviest rare earth
+and 12 V, the La/Eu separation factor was 3.3 with DTPA, 8.4 with EDTA, 21.0 with
+DCTA and **41.9 with HEDTA**; more chelator than that is worse, because the
+excess begins complexing the lanthanum too. Voltage is a throughput knob rather
+than a selectivity one — HEDTA gives 21 at 8 V, 33 at 10 V and 42 at 12 V — and
+the mechanism the authors give is exactly the pump-and-filter picture: the field
+accelerates free La³⁺ while europium, bound as the HEDTA complex, is held back by
+its size.
+
+Two things in that paper should not be carried forward. Its separation factor is
+a ratio of removal coefficients in a batch cell, not a distribution ratio, so it
+is not comparable with the solvent-extraction β values quoted above. And its
+claim to separation factors "up to 20 times greater than those reported for the
+conventional SX process" is unusable: the paper's own conclusion says 20 % rather
+than 20-fold, the comparison pits a La/Eu result against Nd/Dy sources, and its
+only energy figure, 0.49-0.6 kWh/m³, is transplanted from a desalination text
+rather than measured. The feed was synthetic throughout — rare earth chlorides in
+deionized water at Search Minerals concentrations, with no impurity matrix. A 2024 review places electrodialysis for critical
 minerals in a wider setting, covering selective electrodialysis and
 liquid-membrane electrodialysis for unconventional sources [@sim2024electrodialysis].
 

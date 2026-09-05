@@ -188,7 +188,7 @@ with the same chlorine flow, 12 % reductant and 150 μm feed, they were 91 %,
 Mechanistically the reaction runs through the gas phase. Direct contact between oxide and carbon particles is not required [@gavira2010carbochlorination]; the carbon generates reactive chlorine species — chlorine radicals liberated by the Cl₂-carbon interaction [@pomiro2014study] — which then attack the oxide.
 
 ### Industrial Applications
-Carbochlorination has been demonstrated for multiple feedstocks. Bastnäsite \[(Ce,La)(CO₃)F\] requires special consideration of its fluorine content, and silicon tetrachloride (SiCl₄) is used as a defluorinating agent to prevent the loss of fluorine as volatile rare earth fluorides [@huang2002rare]. End-of-life {index}`NdFeB` magnets are handled by selective chlorination: immersed in a molten MgCl₂-KCl bath at 600-1200 °C under dry argon, the rare earths in the scrap convert to RECl₃ and dissolve in the melt while the iron does not, giving better than 90 % overall rare earth extraction under optimized conditions [@hua2014selective]. Both are treated in detail below.
+Carbochlorination has been demonstrated for multiple feedstocks. Bastnäsite \[(Ce,La)(CO₃)F\] requires special consideration of its fluorine content, and silicon tetrachloride (SiCl₄) is used as a defluorinating agent [@huang2002rare]. The problem it solves is contamination, not loss: without SiCl₄ the fluorine stays behind as solid, non-volatile LnF₃ and reports to the rare earth chloride product. Wang and co-workers give that, together with thorium, as the reason the older Goldschmidt carbochlorination "has not been applied industrially for the mixed bastnaesite-monazite concentrate" [@huang2002rare]. End-of-life {index}`NdFeB` magnets are handled by selective chlorination: immersed in a molten MgCl₂-KCl bath at 600-1200 °C under dry argon, the rare earths in the scrap convert to RECl₃ and dissolve in the melt while the iron does not, giving better than 90 % overall rare earth extraction under optimized conditions [@hua2014selective]. Both are treated in detail below.
 
 ### Stepwise Carbochlorination-Chemical Vapor Transport (SC-CVT)
 
@@ -207,21 +207,43 @@ condenses where its own vapour pressure runs out, so a gradient becomes a
 separation the way a column of resin does — and the impurity chlorides that
 matter most here, AlCl₃ and FeCl₃, are far more volatile than the rare earth
 complexes and stay in the vapour when those have already condensed
-[@huang2002rare; @murase1995recovery]. The reported implementation is two
-stages: chlorination near 800 °C for half an hour under Cl₂ with SiCl₄ and
-AlCl₃, then transport near 1000 °C for six hours under Cl₂ and AlCl₃ with the
-gradient imposed. Chlorination itself runs from about 500 °C, against the
-1000-1200 °C of the older Goldschmidt route to anhydrous RECl₃ [@huang2002rare].
+[@huang2002rare; @murase1995recovery]. The reported implementation is three
+stages, and each does one job: 500 °C for two hours under Cl₂ with SiCl₄, which
+converts the rare earths and releases the volatile by-products; 800 °C for half
+an hour under Cl₂ with SiCl₄ and AlCl₃, which removes the thorium as the vapour
+complex ThCl₄·AlCl₃; and 1000 °C for six hours under Cl₂ and AlCl₃ with the
+gradient imposed, which is where the rare earths are separated. Chlorination
+itself runs from about 500 °C, against the 1000-1200 °C of the older Goldschmidt
+route to anhydrous RECl₃ [@huang2002rare].
 
-What SC-CVT achieves quantitatively is not stated here. The separation and
-recovery figures in circulation for this process — a purity for the condensed
-light rare earth chlorides, and a yield with and without SiCl₄ — all trace to
-that single 2002 paper, which is closed access and could not be read for this
-book. Its title and its registry metadata confirm the process and the
-feedstock; they do not confirm any number, so no number is quoted. Someone with
-access to *Metallurgical and Materials Transactions B* can close this gap in an
-afternoon, and the same paper is the only source given for the thorium
-behaviour, which for a {index}`monazite` feed is the claim most worth checking.
+What SC-CVT achieves quantitatively is worth stating carefully, because the
+extraction numbers are excellent and the separation numbers are not.
+
+Extraction is where SiCl₄ earns its place. Over two hours the rare earth
+chloride yield rose between 500 and 800 °C to 56-88 mol % without SiCl₄ and to
+92-99 mol % with it, and the activation energy for the shrinking-sphere fit fell
+from 22-16 kJ/mol to 15-2.1 kJ/mol under 2 kPa of SiCl₄ [@huang2002rare]. After
+the full three-stage sequence about 99 at. % of the rare earths and 90 at. % of
+the fluorine, phosphorus and iron were extracted, with no thorium contamination
+of the product. There is an upper bound on the window as well: above 1000 °C the
+carbochlorination left a large acid-insoluble residue and the yield fell.
+
+Separation is the disappointment. The condensation gradient does fractionate the
+lanthanides, but barely. On a reduced gradient the separation factors were 0.89
+to 1.16 for La:Ce, 1.01 to 1.59 for Pr:Ce and 1.23 to 1.32 for Pr:Nd; on a wavy
+gradient they rose to 2.01-2.28 for Ce:La, 1.30-1.33 for Ce:Pr and 0.96-1.08 for
+Nd:Pr [@huang2002rare]. **The best adjacent-pair separation factor this process
+has demonstrated is about 2.3, and several of the pairs come out below 1.** That
+is the same order as one stage of solvent extraction, obtained at 1000 °C in a
+chlorine atmosphere. Whatever the case for SC-CVT, it is not that the vapour
+gradient separates lanthanides better than a mixer-settler does.
+
+The feed was a mixed bastnäsite-monazite concentrate assaying 17.07 % La₂O₃,
+31.83 % CeO₂, 2.29 % Pr₆O₁₁ and 9.75 % Nd₂O₃ — 60.9 wt % REO — with 0.18 wt %
+ThO₂, 6.96 % F, 8.22 % P₂O₅ and 4.82 % Fe₂O₃, at a mean particle radius of
+19.1 µm and a carbon addition of Ln:C = 1:3 by atom ratio. The work is bench
+scale: boats in a 25 mm × 1500 mm alumina tube. It is the only source in this
+book for SC-CVT, and every number above rests on it.
 
 ### One-Step Carbochlorination-Washing
 The most recent line of work collapses chlorination and product recovery into a
@@ -295,7 +317,7 @@ Scandium has not been studied for carbochlorination in comparable detail. Its ch
 ### Bastnäsite Processing
 Bastnäsite \[(Ce,La)(CO₃)F\] is a fluorocarbonate mineral, dominated by the light rare earths; the pure end-member is about 75 wt% rare earth oxide by stoichiometry and commercial concentrates run lower. The {index}`Bayan Obo` deposit in China and the {index}`Mountain Pass` deposit in the United States are the world's largest bastnäsite resources [@castor2006rare].
 
-Carbochlorination of bastnäsite requires special consideration of the fluorine content. Wang and co-workers developed the carbochlorination route that uses carbon as the reducing agent, chlorine as the chlorinating agent, and silicon tetrachloride (SiCl₄) as a defluorinating agent [@huang2002rare]. Fixing the fluorine as SiF₄ stops it leaving as rare earth fluoride and makes it recoverable as a by-product.
+Carbochlorination of bastnäsite requires special consideration of the fluorine content. Wang and co-workers developed the carbochlorination route that uses carbon as the reducing agent, chlorine as the chlorinating agent, and silicon tetrachloride (SiCl₄) as a defluorinating agent [@huang2002rare]. Fixing the fluorine as volatile SiF₄ stops it staying behind as solid rare earth fluoride in the chloride product, and makes it recoverable as a by-product.
 
 Operating parameters for bastnäsite carbochlorination are given above under
 Reaction Mechanisms and Kinetics. The chlorine feed is run in excess to hold the
@@ -308,7 +330,7 @@ given in the literature reviewed here.
 ### Monazite Processing
 Monazite \[(Ce,La,Nd,Th)PO₄\] is a phosphate mineral containing 55-65% REO along with several per cent thorium [@kumari2015process]. The radioactive thorium content presents unique processing challenges that must be addressed regardless of extraction method.
 
-Carbochlorination of monazite offers advantages for thorium management. The phosphorus content can be converted to volatile POCl₃, which can be separately recovered. Thorium chloride (ThCl₄) boils at 921 °C, far below the rare earth chlorides, and in stepwise carbochlorination with chemical vapour transport thorium removal from a mixed bastnäsite-monazite concentrate was complete [@huang2002rare].
+Carbochlorination of monazite offers advantages for thorium management. The phosphorus content can be converted to volatile POCl₃, which can be separately recovered. Thorium chloride (ThCl₄) boils at 921 °C, far below the rare earth chlorides, and in stepwise carbochlorination with chemical vapour transport thorium removal from a mixed bastnäsite-monazite concentrate was complete at 800-900 °C for half an hour, as the vapour complex ThCl₄·AlCl₃ [@huang2002rare]. The separation is one of condensation temperature: ThCl₄ deposits around 600 °C, LaCl₃ at 950-1000 °C, FeCl₃ at 200-350 °C and AlCl₃ below 200 °C, so the thorium lands in a receptor of its own between the rare earths and the impurities. It is not quite complete at the extraction stage — about 1 mol % of the total thorium was transported with the rare earths and deposited around 450 °C — which is why the thorium receptor, rather than the product, is the stream to assay.
 
 Conventional monazite processing goes by either sulfuric acid digestion or caustic decomposition; both are described, with their operating conditions, in [](#hydrometallurgical-leaching), which owns those numbers for this book.
 

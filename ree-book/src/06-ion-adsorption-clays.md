@@ -388,9 +388,39 @@ the leach rather than relying on the geology to do it. On a 5,000-tonne body of
 rare earth ore they report 95 % REE recovery, and an environmental risk
 assessment finding a **95 % reduction in ammonia emissions**. A comparative
 technoeconomic analysis against the conventional technique is presented in
-support of economic viability. A separate study compares leaching agents for EKM
-[@xu2024comparative]; it is cited here for existence only, as its text was not
-available for verification.
+support of economic viability. A separate group at the Guangzhou Institute of Geochemistry compared leaching
+agents for electrokinetic mining in bench columns on real ion-adsorption ore from
+Maofeng Mountain, and the result is a useful one for a technique whose whole
+regulatory case rests on getting away from ammonium [@xu2024comparative]. At
+0.10 mol/L and 0.60 V/cm, magnesium sulfate recovered **90.0 %** of the rare
+earths, ammonium sulfate 75.0 % and sodium sulfate 24.5 %; at 0.05 mol/L the
+figures were 50.6 %, 58.9 % and 9.1 %. **The ammonium-free lixiviant is the
+better one at working strength.**
+
+The ranking is not explained by the mobility of the rare earths, and this
+complicates the usual account of what the field is doing. Adsorption onto the
+clay follows Mg²⁺ > NH₄⁺ > Na⁺ while the electrokinetic molar flux runs the other
+way — 1191 for Na⁺, 219 for NH₄⁺, 38.6 mol m⁻¹ s⁻¹ for Mg²⁺ — so sodium is swept
+past the clay too fast to exchange for anything. High mobility of the injected
+cation is a liability rather than an asset; what matters is that the lixiviant
+stays long enough to trade places with a rare earth. The rare earths themselves
+do move faster than the leaching cations in the first thirty hours, which the
+authors attribute to their higher charge.
+
+Two further results are worth carrying. The optimum field strength is 0.60 V/cm,
+and raising it to 0.80 V/cm *reduced* recovery by 4.5, 10.2 and 19.5 percentage
+points for the three agents — the extra energy goes into moving spectator cations
+and into cathodic electrolysis that raises the pH. That last effect has a visible
+signature: after electrokinetic mining the soil surface carries spherical
+aggregates of La, Nd and Y, hydroxides precipitated by cathodic OH⁻, which block
+pores. And recovery *increased* at higher soil density, the opposite of
+conventional leaching, because electromigration and electroosmosis penetrate
+compacted ground that gravity flow cannot.
+
+The study measures no selectivity of any kind — all its efficiencies are total
+rare earth recovery, and it reports no impurity data at all — so it says nothing
+about the impurity-reduction claim above. And it is a 6 cm column holding 400 g
+of soil, not a field trial.
 
 Three cautions belong with those numbers.
 

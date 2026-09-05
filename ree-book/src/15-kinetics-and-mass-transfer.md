@@ -309,12 +309,71 @@ thulium, yttrium and erbium on the surfaces of freely rising oil droplets
 
 This is the closest thing in the literature to a sustained programme on kinetic
 rare earth separation in aqueous systems, and it is working on the pairs that
-matter — Pr/Nd is the adjacent pair a magnet recycler faces. No separation
-factor from this group is quoted here. The values could not be verified against
-the passages that contain them from the sources available, which is the same
-position [](#coacervates-and-aqueous-biphasic-systems) already takes on
-@sui2023kinetic, and the entries are recorded in `needs-journal-access.md`. The
-programme's existence and its targets are reportable; its numbers are not, yet.
+matter — Pr/Nd is the adjacent pair a magnet recycler faces.
+
+The push-and-pull column reaches a **maximum separation factor of 21.7 for
+Pr/Nd**, against 1.6-1.8 with the extractant alone and 3.3 with the DTPA
+pre-complexed in the same apparatus, which is the comparison that isolates the
+kinetic contribution [@wang2019enhanced]. Three qualifications travel with it.
+It is a maximum over time, not a steady value — the paper's own table is headed
+"maximum separation factor," and the ratio climbs past 10 at 250 minutes before
+falling back. It is computed on each organic fraction collected against the
+residual aqueous column, so it is an instantaneous, per-fraction ratio and not an
+equilibrium β. And it holds only at a Pr:Nd feed ratio of 1:4; at 1:3 it is 18.1,
+at 1:2 it is 10.0, and at equimolar feed it is 6.2. The abstract's contrast with
+"5 or even less" is a literature figure, not this paper's own control.
+
+Specific ion effects give **β = 8.3 for Pr/Nd** on a synthetic feed at the NdFeB
+Pr:Nd ratio, against 1.53 for conventional stirred extraction with the same
+extractant [@sui2023kinetic]. On a magnet raffinate reconstructed from published
+leach compositions — no magnet is leached in that paper — it is 5.8. The process
+depends on 2.0 mol/L LiNO₃ as a salting-out agent, recovered by evaporating the
+raffinate, which is a thermal duty on the entire aqueous stream and the sort of
+cost a kinetic flowsheet has to carry.
+
+The rising-droplet work gives **a separation coefficient of 2.89 for Tm/Er**
+against about 1.5 for conventional extraction, once P507 exceeds 0.05 mol/L
+[@sui2024nonequilibrium]. The modest number is not the interesting result. What
+the competition between DTPA in the aqueous phase and P507 at the droplet
+interface does is change the *order*: yttrium moves from last to middle, so the
+sequence goes from Tm > Er > Y to Tm > Y > Er. The dissociation rate of the
+RE-DTPA complex runs Y < Tm < Er while the extraction ability of P507 runs
+Y < Er < Tm, and the opposing orders relocate yttrium. That is the same class of
+result as @smith2019selective below — the contacting regime changes what you
+separate, not merely how much.
+
+The HEHEHP study is the exception, and it deserves its own treatment because it
+runs against this chapter's thesis rather than for it.
+
+### A Counterexample: When the Rate Ratio Is Smaller
+
+The forward extraction of La(III), Gd(III), Ho(III) and Lu(III) into HEHEHP was
+measured as flux equations at 293.15 K, and no separation factor appears anywhere
+in the paper [@cao2021extraction]. The rate constants alone are the result, and
+the ratios they imply are the point: Gd/La is 3.2, Ho/Gd is 1.4, Lu/Ho is 1.4,
+and **the whole spread from lanthanum to lutetium is 6.3**. All four activation
+energies fall below 20 kJ/mol — 14.32, 7.99, 7.42 and 6.89 kJ/mol respectively —
+which places the system in diffusion control.
+
+Two things follow, and both are unwelcome for the idea this chapter is exploring.
+The rate ordering runs in the *same direction* as the equilibrium ordering, since
+the extraction equilibrium constant of HEHEHP also increases from La to Lu, so
+the kinetics add nothing the thermodynamics did not already offer. And a total
+rate spread of 6.3 across fourteen elements is far below the equilibrium β
+obtainable with the same reagent across the same range. **For this system the
+kinetic separation is strictly worse than the equilibrium one.**
+
+The paper's other finding is a warning about staging. Its non-competitive model,
+built from the single-ion rate constants, fails to reproduce a four-element
+elution: lanthanum, gadolinium and holmium are all inhibited while lutetium is
+extracted, and the authors call the non-competitive assumption unreasonable. The
+mechanism they offer is that HEHEHP monomer at the interface is a limited
+resource, preferentially occupied by the fastest ion, with direct interfacial
+exchange on top of it. Their own summary is the sentence to carry: the
+competition is obvious even though the mass transfer flux of lutetium is only
+1.41 times that of holmium. Single-ion rates do not predict multi-ion kinetic
+separation, which is a harder obstacle to a kinetic cascade than any of the ones
+in [](#the-catch).
 
 ### Transport Control Changes What You Separate
 
@@ -349,16 +408,28 @@ from [](#membranes-mofs-and-emerging-approaches).
 |----|----|----|----|----|----|
 | RE complexes of a redox-active tripodal nitroxide [@fang2017electrokinetic] | Difference in oxidation rate | Y/Lu, 50:50 | β up to 261, single step | Non-aqueous, organometallic | Bench proof of concept |
 | RE cyclopentadienides + triradical proligand [@cole2020redox] | Difference in chelation rate | La/Y, equimolar | β = 26 | Non-aqueous, organometallic | Bench proof of concept |
-| HEHEHP from chloride medium [@cao2021extraction] | Extraction-rate difference | La, Gd, Ho, Lu | Not quoted here — not verified against the source | Aqueous/organic | Laboratory |
-| [A336][NO₃]-DTPA push-pull column [@wang2019enhanced] | Extraction kinetics against aqueous complexation | Pr/Nd | Not quoted here — not verified against the source | Aqueous/organic, column | Laboratory |
-| Specific ion effects [@sui2023kinetic] | Kinetic enhancement | Pr/Nd | Not quoted here — not verified against the source | Aqueous/organic | Laboratory |
-| Rising oil droplets [@sui2024nonequilibrium] | Non-equilibrium contacting | Tm, Y, Er | Not quoted here — not verified against the source | Aqueous/organic | Laboratory |
+| HEHEHP from chloride medium [@cao2021extraction] | Extraction-rate difference | La, Gd, Ho, Lu | **No β is reported.** Rate constants only; the La→Lu spread is 6.3, and the ordering matches the equilibrium ordering | Synthetic chloride/organic | Laboratory |
+| [A336][NO₃]-DTPA push-pull column [@wang2019enhanced] | Extraction kinetics against aqueous complexation | Pr/Nd | β = 21.7 *maximum*, instantaneous and per-fraction, at a 1:4 Pr:Nd feed; 6.2 at equimolar. Controls in the same rig: 1.6-1.8 extractant alone, 3.3 pre-complexed | Synthetic nitrate/organic, column | Laboratory |
+| Specific ion effects [@sui2023kinetic] | Kinetic enhancement | Pr/Nd | β = 8.3 at 60 min, falling to 6.91 at 70 min; 5.8 on a reconstructed magnet raffinate. Conventional stirred control: 1.53 | Synthetic; needs 2.0 M LiNO₃ | Laboratory |
+| Rising oil droplets [@sui2024nonequilibrium] | Non-equilibrium contacting | Tm/Er | 2.89, against ~1.5 conventional. Extraction *order* inverts: Tm > Er > Y becomes Tm > Y > Er | Synthetic, 1 mmol/L each | Laboratory |
 | SLM vs. LEM vs. SX, same D2EHPA chemistry [@smith2019selective] | Which step is rate-limiting | Heavy vs. light REE as groups | No β reported; selectivity *direction* reverses between configurations | Real coal fly ash leachate | Laboratory, real feed |
 
-Two things are visible in that table and neither is comfortable. The large
-separation factors are on non-aqueous bench chemistry and on pairs that are not
-adjacent. The aqueous work on the pairs that matter is real but its numbers
-could not be verified here. Nothing in the table is above laboratory scale.
+Three things are visible in that table and none is comfortable. The large
+separation factors — 261 and 26 — are on non-aqueous bench chemistry and on pairs
+that are not adjacent. The aqueous work on the pairs that matter is real, and its
+best adjacent-pair number, 21.7 for Pr/Nd, is an order of magnitude below them
+and is a maximum over time at one particular feed ratio rather than a steady
+separation factor. And every feed in the table is synthetic; the only real feed
+is @smith2019selective's, which reports no β at all. Nothing in the table is
+above laboratory scale.
+
+The honest arithmetic is nonetheless favourable where it has been done. A Pr/Nd
+separation factor of 8.3 against a same-apparatus control of 1.53, or 21.7
+against 1.6, is a five- to thirteen-fold gain on the one pair that most needs it.
+That is worth far more than the 261 on Y/Lu, which is a pair a mixer-settler
+handles comfortably. The unresolved question is not whether kinetic enhancement
+is real for Pr/Nd — three independent measurements now say it is — but whether a
+transient maximum at one feed ratio survives being made into a cascade.
 
 ## The Kinetic Data the Series Already Has
 
@@ -455,18 +526,36 @@ is where the industry already thinks in rates as a matter of routine, because
 nothing else is available: a heap leach has no equilibrium stage count to hide
 behind, and its performance is a rate integrated over residence time.
 
+(the-catch)=
 ## The Catch
 
 Kinetic separation has been an obvious idea for a long time and it has not
 scaled. The reasons are structural rather than accidental, and a chapter that
 ended on the separation factors above would be misleading.
 
-**Stopping short of equilibrium costs yield.** The contact time that maximises
-the ratio of extracted amounts is not the contact time that maximises how much
-you extract. An equilibrium stage takes what the chemistry allows; a kinetic
-stage deliberately takes less. Every kinetic separation therefore trades
-recovery against purity at the level of the individual stage, and the trade is
-sharper than the equivalent trade in an equilibrium cascade.
+**Stopping short of equilibrium costs yield — but not always.** The contact time
+that maximises the ratio of extracted amounts is not, in general, the contact
+time that maximises how much you extract. An equilibrium stage takes what the
+chemistry allows; a kinetic stage deliberately takes less.
+
+Two of the papers above deny that this trade is universal. @sui2024nonequilibrium
+states outright that on rising oil droplets the separation coefficients increase
+"and the extraction percentages do not decrease obviously." @sui2023kinetic
+reports 97.2 % praseodymium extracted in kinetic mode against 57.3 % in the
+conventional control, with the higher separation factor as well — better on both
+axes at once. The caveat is that the two contactors are not comparable: the
+kinetic device renews the interface continuously across a 0.5 mm oil film at
+6 mL/min, while the control is 0.5 mL of oil stirred against 30 mL of aqueous, so
+the phase ratios differ by orders of magnitude. What those results show is that
+the trade-off is a property of a particular contactor and not a law. Where the
+contactor supplies enough interfacial area, the kinetically favoured element can
+be taken to near-completion before the disfavoured one has begun.
+
+@wang2019enhanced is the counterweight and probably the more representative case:
+even at β = 21.7 the neodymium co-extraction reaches 51.4 %, which caps product
+purity, and the pre-complexed thermodynamic control in the same apparatus lost
+recovery badly — 57.6 % Pr and 23.3 % Nd. The trade is real often enough to plan
+for and not often enough to assume.
 
 **Staging is harder.** The countercurrent cascade in
 [](#countercurrent-cascade-design) works because each stage is a repeatable
@@ -476,11 +565,17 @@ in the same way: the feed to stage *n*+1 depends on the residence time in stage
 *n*, so residence-time distribution, not just stage count, becomes a design
 variable. The Huang group's column extractor [@wang2019enhanced] and the rising
 droplet work [@sui2024nonequilibrium] are, read this way, attempts to build a
-contactor in which residence time is uniform enough to stage.
+contactor in which residence time is uniform enough to stage. The deeper problem
+is the one @cao2021extraction ran into: even with uniform residence time, the
+single-ion rate constants do not compose, because the extractant at the interface
+is a contested resource and the fastest ion takes it.
 
 **The operating window is narrower.** An equilibrium separation is robust to
 timing by construction — hold the phases together longer and nothing gets worse.
-A kinetic separation has an optimum in time, and both sides of it are worse. In
+A kinetic separation has an optimum in time, and both sides of it are worse. This
+is not a conjecture: @sui2023kinetic's Pr/Nd separation factor is 8.3 at 60
+minutes and 6.91 at 70, and @wang2019enhanced's climbs past 10 at 250 minutes and
+then declines. Ten minutes of drift costs seventeen per cent of the separation. In
 a plant, residence time is not a number but a distribution, and a distribution
 that straddles an optimum performs worse than its mean would suggest. This is
 the same class of problem that makes the residence-time control in

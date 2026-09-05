@@ -586,14 +586,25 @@ quoted. The reader should treat sophorolipid flotation of rare-earth minerals as
 a proposal rather than a result.
 
 Saponin, a non-ionic plant biosurfactant, has been tested against rhamnolipid
-for leaching rare earths out of contaminated soils [@zhou2018leaching]. An
-earlier version of this chapter tabulated element-by-element removal
-efficiencies from that work in the 26-35 % range. Those figures could not be
-confirmed against the paper, which is not open access and carries no retrievable
-abstract, and they have been removed rather than repeated. What can be said is
-that soil washing with a biosurfactant is a remediation operation, not a
-production one: the target is lowering a soil concentration, the leachate is
-dilute, and the rare earths recovered are a by-product of the cleanup.
+for leaching rare earths out of soil [@zhou2018leaching]. Flushing a 15 cm bed
+of soil with 400 mL of 25 g/L saponin at pH 5.5 gave cumulative removals of
+35.3 % La, 26.1 % Ce, 31.5 % Y and 30.8 % Eu; rhamnolipid at 10 g/L and pH 7
+managed 7.3 %, 6.1 %, 7.5 % and 7.7 %, and deionized water removed a negligible
+amount. Saponin is thus four to five times the better agent, and the mechanism
+offered is 1:1 complexation of the trivalent ion by the saponin, drawing rare
+earths out of the acid-soluble *and* reducible fractions where rhamnolipid
+reaches the acid-soluble and residual ones.
+
+Two qualifications matter more than the numbers. The soil is **spiked, not
+contaminated**: unpolluted agricultural soil from Ganzhou was dosed with
+lanthanide nitrates and air-dried to 166 mg/kg La, 196 Ce, 78 Y and 112 Eu, and
+the paper's own table calls it simulated. And the work is a 5 cm column holding
+80 g of soil. That does not weaken the conclusion, it sharpens it: soil washing
+with a biosurfactant is a remediation operation, not a production one. The
+target is lowering a soil concentration, the leachate is dilute, and the rare
+earths recovered are a by-product of the cleanup. The paper also quotes maximum
+removals of 58.05 % La and 57.78 % Ce; those are prior studies it cites, not its
+own result, and should not be attributed to it.
 
 (siderophores-and-the-boundary-with-leaching)=
 ## Siderophores and the Boundary with Leaching
@@ -640,8 +651,25 @@ one.
 Actinobacteria have also been screened on bastnäsite-bearing rock, with
 *Streptomyces* strains identified as siderophore producers and with secreted
 organic acids and complexing ligands assigned as the dominant extraction agents
-[@zhang2018bioleaching]. Specific siderophore titres previously quoted here
-could not be verified against that paper and have been removed.
+[@zhang2018bioleaching]. The best producer, *Streptomyces* sp. FXJ1.172, made
+200 µmol/L of a desferrioxamine-family hydroxamate — **in growth medium, with no
+rock present.** In the presence of the bastnäsite-bearing rock siderophores were
+not readily detected at all, even after a twenty-fold concentration of the
+supernatant. The titre and its disappearance have to be quoted together; the
+first number alone would misrepresent the paper.
+
+The recovery figures are the most deflationary in this chapter. Over twenty days
+the bioleached liquors reached 56 to 342 µg/L total REE in a nutrient-rich
+medium and 548 µg/L for the one strain that grew in an oligotrophic one, for a
+leaching efficiency of **0.008 to 0.08 %** — and the authors note that even that
+is an underestimate, because rare earths are lost to cell-surface sorption and
+to re-precipitation as secondary minerals along the way. Those liquors are
+sub-milligram-per-litre, an order of magnitude below the milligram-per-litre
+leach liquors [](#hydrometallurgical-leaching) treats as dilute. The one
+encouraging result is that the leaching is not merely acid attack — the
+bioleached concentrations exceeded abiotic controls at the same pH, "suggesting
+that pH was not the only factor" — and that it fractionates, preferentially
+mobilising the heavy rare earths.
 
 The methylotrophs are the interesting outlier, because they are the organisms
 that gave us lanmodulin in the first place. *Methylobacterium extorquens* AM1
