@@ -252,6 +252,7 @@ stable emulsions. The modifier is a cost and a complication — one more compone
 to analyse, degrade and lose — so it is added when third-phase formation or slow
 disengagement demands it, not by default.
 
+(ph-swing-mechanism-for-phase-transfer)=
 ## pH Swing Mechanism for Phase Transfer
 
 ### Extraction Step: Aqueous → Organic
@@ -296,6 +297,19 @@ $$
 \qquad
 \left( \text{equivalently,} \ \frac{\partial (\log D)}{\partial \log [\mathrm{H^+}]} \approx -3 \right)
 $$
+
+That exponent is the {index}`slope-3 dependence` this book refers to at several
+later points, so it is worth naming here. Plot log D against pH for an acidic
+organophosphorus extractant and the result is a straight line of slope +3; the 3
+is not fitted, it is the stoichiometric coefficient, one for each proton the
+tris-complex releases. The relation runs in both directions. Used forward it is
+the design lever below. Used backwards it is a diagnostic: the measured slope of
+a log D-pH plot counts the protons exchanged, so a slope near 3 is evidence that
+the extracted species really is REE(HL₂)₃, and a slope that comes out near 2, or
+that drifts with loading, says that some other species — a partly protonated
+complex, an adduct with the diluent, a second extractant in the mixture — is
+carrying part of the metal [@xie2014critical]. Every use of "slope-3" later in
+this book means this line and this stoichiometry.
 
 A single pH unit therefore moves the distribution ratio by a factor of a
 thousand, in either direction. That is an unusually steep lever for a chemical
@@ -720,6 +734,36 @@ Graphical method for determining stage requirements:
 - Slope of operating line = A/O
 - Number of graphical steps = number of theoretical stages
 
+[](#fig-mccabe-thiele) is that construction, drawn on this chapter's own
+numbers.
+
+:::{figure} ../figures/03-mccabe-thiele.svg
+:name: fig-mccabe-thiele
+:width: 100%
+
+The McCabe-Thiele construction for the worked example below: `D` = 10 at
+`O/A` = 1/3, an 0.05 M rare earth feed, 99.9% recovery. The staircase is
+stepped between the operating line and the equilibrium curve, and each tread is
+one theoretical stage. Nothing here is measured. The equilibrium curve is a
+saturating form given this chapter's initial slope (`D` = 10 as the loading goes
+to zero) and this chapter's capacity (0.30 M, from three extractant monomers per
+REE³⁺ in an 0.9 M monomer solution); it stands for the *shape* a loaded
+extractant follows, not for any isotherm anyone measured. Two things follow from
+that shape that the algebra of the next section cannot say. **First, curvature
+costs stages**: the straight line the Kremser equation assumes gives six, the
+curve gives seven, and the gap widens the harder the organic is loaded.
+**Second, there is a phase ratio past which no number of stages is enough.**
+Raise `A/O` to 3.75 and the operating line touches the equilibrium curve at the
+feed end; the driving force there goes to zero and the staircase can no longer
+be closed. That is the {index}`pinch <pinch point>`, and it is the graphical
+statement of the point made above — the ceiling on the phase ratio is set by how
+much metal the extractant can hold, not by the pumps. The inset is the third
+thing worth seeing: the stages are not evenly spaced. Two contacts move most of
+the metal and the remaining four are spent on the last two percent, which is the
+shape of every recovery duty and the reason recovery targets are expensive at
+the margin. Drawn from `tools/figures/fig_mccabe_thiele.py`.
+:::
+
 This construction answers a *recovery* question — how many stages to strip one
 solute out of one aqueous stream — and nothing else. It is drawn for a single
 transferring species; it says nothing about which of two lanthanides ends up
@@ -783,7 +827,17 @@ N &= \frac{\ln[1000 \times (1 - 0.30) + 0.30]}{\ln 3.33} \\
 \end{aligned}
 $$
 
-Six stages, and at 100% stage efficiency. That is the kind of duty a short
+Six stages, and at 100% stage efficiency — and six is the number the staircase
+in [](#fig-mccabe-thiele) also reaches when it is stepped off against the
+straight line, which is the check that the two methods are the same calculation.
+Stepped against a curve that saturates, the same duty takes seven. The extra
+stage is the price of the one assumption the closed form makes, and it grows
+with loading: `m = D` is a constant only while the extractant is far from full,
+and the Kremser count is therefore a floor rather than an estimate. Design
+practice is to take the algebra for the scoping number and the diagram for the
+number you build to.
+
+That is the kind of duty a short
 extraction train is sized for: one solute, a large `D`, a target expressed as
 percent recovered. It is not a separation duty, and none of it carries over to
 the problem of splitting two neighbouring lanthanides.

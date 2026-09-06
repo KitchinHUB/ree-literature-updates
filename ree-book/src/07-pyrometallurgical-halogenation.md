@@ -26,6 +26,9 @@ solid chloride cake that dissolves in plain water. That asymmetry — the
 impurities leave, the rare earths stay — is what makes chloride volatility a
 separation at all.
 
+:::{table} Melting and boiling (b) or sublimation (s) points of the chlorides that matter in a rare earth chlorinator
+:name: tbl-chloride-volatility
+
 | Chloride | Melting point (°C) | Boiling or sublimation point (°C) | Fate at 600–900 °C |
 |----|----|----|----|
 | SiCl₄ | −69 | 58 (b) | vapour |
@@ -38,8 +41,9 @@ separation at all.
 | CaCl₂ | 775 | 1,935 (b) | stays in the cake |
 | LnCl₃ (La–Lu, Y) | ≈580 (Tb) to 930 (Lu) | ≳1,550 (b, est.) | stays in the cake |
 
-: Melting and boiling (b) or sublimation (s) points of the chlorides that matter
-in a rare earth chlorinator. Impurity- and alkaline-earth-chloride values are
+:::
+
+Impurity- and alkaline-earth-chloride values are
 from the CRC Handbook [@haynes2016crc]. The LnCl₃ melting range is from Seifert's
 critical review, which also documents the minimum near Tb [@seifert2005melting];
 the boiling estimate is extrapolated from the liquid-LaCl₃ vapour-pressure
@@ -572,6 +576,9 @@ potentials so negative that most solvents decompose first.
 
 ### Technical Performance
 
+:::{table} Carbochlorination against the conventional hydrometallurgical route
+:name: tbl-carbochlorination-vs-hydromet
+
 | Parameter | Carbochlorination | Conventional hydrometallurgy |
 |----|----|----|
 | Operating temperature | 600-900 °C [@xue2025onestep; @xue2026clean] | 200 °C and above for concentrated H₂SO₄; 140-160 °C for 60-70 wt% NaOH [@iaea2011radiation] |
@@ -582,8 +589,9 @@ potentials so negative that most solvents decompose first.
 | Residence time | 60 min at laboratory scale [@xue2025onestep; @xue2026clean] | Hours, per stage |
 | Intra-series selectivity | None | None in the leach; achieved downstream by solvent extraction |
 
-: Carbochlorination against the conventional hydrometallurgical route. The
-conversion row is deliberately not a like-for-like recovery comparison: the
+:::
+
+The conversion row is deliberately not a like-for-like recovery comparison: the
 carbochlorination figures are chlorination rates measured on a concentrate at
 laboratory scale, while no single overall recovery figure for the conventional
 route was traceable to a primary source for this book. Two numbers of different
@@ -967,6 +975,9 @@ columns are given, because those are the two the sources cited in this section
 actually establish; production tonnages and market drivers vary by year and
 source and are not reproduced here.
 
+:::{table} Industrial carbochlorination precedents
+:name: tbl-chlorination-precedents
+
 | System | Chlorination temperature | How the chlorides are separated | Status |
 |----|----|----|----|
 | Titanium | 870-1040 °C, fluidized bed [@morris1976fluidized] | Selective condensation and fractional distillation of TiCl₄ [@habashi1997handbook] | Commercial since 1948 [@usgs2020titanium] |
@@ -976,7 +987,9 @@ source and are not reproduced here.
 | Niobium/tantalum | 500-1000 °C [@gupta1984extractive; @yang1999carbochlorination] | Fractional distillation of the pentachlorides, b.p. 248 and 236 °C [@gupta1984extractive] | Commercial but specialty; most Nb/Ta separation today is solvent extraction [@habashi1997handbook] |
 | **Rare earths** | 600-900 °C | **No demonstrated route** — LnCl₃ do not boil below ≈1,550 °C [@seifert2005melting; @brunetti2000vaporization] | Pilot and laboratory |
 
-: Industrial carbochlorination precedents. The pattern the last row makes plain
+:::
+
+The pattern the last row makes plain
 is that every commercial precedent pairs chlorination with a *volatility-based*
 separation of the resulting chlorides, and that is the step the rare earths do
 not offer.

@@ -204,6 +204,9 @@ rate. Drawn by `tools/figures/fig_flow_regimes.py`.
 
 The dominant separation mechanism employs cation exchange extraction using organophosphorus extractants [@xie2014critical]. The fundamental reaction---RE³⁺(aq) + 3(HA)₂(org) → RE(A₂H)₃(org) + 3H⁺(aq)---involves each REE ion extracted in a complex with six extractant molecules arranged as dimers [@jensen2002comparison].
 
+:::{table} Extractants appearing in the microfluidic literature covered by this chapter
+:name: tbl-microfluidic-extractants
+
 | Extractant | Where it is used in microfluidic work | Note |
 |----|----|----|
 | D2EHPA | All lanthanides | The established acidic organophosphorus reference case ([](#solvent-extraction-fundamentals)) |
@@ -211,7 +214,8 @@ The dominant separation mechanism employs cation exchange extraction using organ
 | HEHEHP/P507 | Light rare earths | Strips at lower acidity than D2EHPA |
 | TODGA | f-element separations | Tridentate diglycolamide, high lanthanide affinity [@ansari2011chemistry] |
 
-: Extractants appearing in the microfluidic literature covered by this chapter.
+:::
+
 The column headings matter: this is a list of what has been run on a chip, not
 a ranking of extractants, and the rate enhancements reported for these systems
 belong to the contactor rather than to the extractant — the same chemistry in a

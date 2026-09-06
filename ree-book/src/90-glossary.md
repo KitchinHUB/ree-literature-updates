@@ -267,6 +267,15 @@ kinetic selectivity
   stopped before equilibrium, and it is useful only where the rate ordering
   differs from the equilibrium ordering ([](#kinetics-and-mass-transfer)).
 
+Kremser equation
+: The closed-form stage count for a countercurrent cascade, obtained by
+  assuming the equilibrium line is straight so that the staircase of a
+  {term}`McCabe-Thiele diagram` becomes a geometric series in the
+  {term}`extraction factor (E)`. It is the algebraic version of the graphical
+  construction and inherits that one assumption: where the extractant
+  approaches saturation the real curve bends away from the line and the true
+  stage count is higher ([](#fig-mccabe-thiele)).
+
 lanmodulin
 : A bacterial protein whose EF-hand sites bind trivalent lanthanides with
   picomolar affinity, roughly 10⁸-fold more tightly than calcium. That
@@ -342,7 +351,8 @@ McCabe-Thiele diagram
 : A graphical stage construction: the equilibrium curve, organic against
   aqueous concentration, with an operating line whose slope is the phase ratio,
   stepped off to count stages. It is the standard way to size a rare earth
-  extraction section and to see at once whether a pinch exists.
+  extraction section and to see at once whether a
+  {term}`pinch point` exists ([](#fig-mccabe-thiele)).
 
 metal-organic framework (MOF)
 : A crystalline solid built from metal nodes bridged by organic linkers, with
@@ -414,6 +424,16 @@ phase ratio (O/A)
   the chemistry, and it is the first thing to check when a reported recovery
   cannot be reproduced.
 
+pinch point
+: The condition in which the operating line of a cascade touches the
+  equilibrium curve. The concentration driving force there is zero, so no
+  further transfer occurs however many stages are added, and the stage count
+  computed from the {term}`Kremser equation` diverges. On a
+  {term}`McCabe-Thiele diagram` it is visible at a glance
+  ([](#fig-mccabe-thiele)); it is what sets the practical ceiling on the
+  {term}`phase ratio (O/A)`, since loading the organic harder to save solvent
+  eventually drives the operating line into the curve.
+
 precipitation
 : Recovery of a metal as an insoluble solid — oxalate, carbonate, hydroxide,
   double sulfate — by adding a reagent or shifting pH. It is the standard
@@ -473,6 +493,15 @@ separation factor
 : The ratio of the distribution ratios of two elements, quantifying how well a
   system discriminates between them. For adjacent lanthanides it is typically
   small, which is why REE separation needs many stages.
+
+slope-3 dependence
+: The shorthand this book uses for the pH dependence of extraction by an acidic
+  organophosphorus extractant: because the tris-complex REE(HL₂)₃ releases three
+  protons per metal ion, log D rises with slope +3 against pH, so one pH unit
+  moves D by a factor of a thousand ([](#ph-swing-mechanism-for-phase-transfer)).
+  The 3 is a stoichiometric coefficient, not a fitted parameter, which is why
+  measuring the slope is also the standard way to establish what species is
+  being extracted.
 
 shrinking core model
 : The standard kinetic description of a dissolving mineral particle, in which an

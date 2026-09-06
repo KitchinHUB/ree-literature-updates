@@ -140,6 +140,8 @@ PREAMBLE = r"""
 %%%%%%%%%%%%%%%%%%%%  patched by tools/build_pdf.py  %%%%%%%%%%%%%%%%%%%%
 \usepackage{fontspec}
 \usepackage{newunicodechar}
+% Tables taller than a page; see paginate_tables().
+\usepackage{longtable}
 % DejaVu Sans Mono carries the box-drawing characters the ASCII-art process
 % diagrams are made of; Latin Modern Mono does not.
 \setmonofont{DejaVu Sans Mono}[Scale=MatchLowercase]
@@ -299,6 +301,146 @@ def split_runon_commands(text, report):
         return "\\" + m.group(1) + "{}"
 
     return pattern.sub(fix, text)
+
+
+# A `tabular` cannot break across a page. MyST emits every table as one, so a
+# table taller than the text block runs off the bottom of the page and the rest
+# of it is simply not printed -- silently, with no LaTeX error. The book has one
+# table where that happens badly (the technology comparison in ch. 4, which is
+# 23,000 characters of prose in six columns) and three more close enough to the
+# limit to be at risk on a reflow. Those are converted to `longtable`, which
+# paginates and repeats the header row on each page.
+#
+# The thresholds are deliberately loose. Short tables are left as they are,
+# because a `longtable` is never allowed to float and a small table set inline
+# leaves worse page breaks than one LaTeX is free to move.
+LONGTABLE_MIN_CHARS = 2500
+LONGTABLE_MIN_ROWS = 20
+
+
+def _balanced(text, start):
+    """Index just past the `}` matching the `{` at `start`."""
+    depth = 0
+    i = start
+    while i < len(text):
+        c = text[i]
+        if c == "\\":
+            i += 2
+            continue
+        if c == "{":
+            depth += 1
+        elif c == "}":
+            depth -= 1
+            if depth == 0:
+                return i + 1
+        i += 1
+    raise ValueError("unbalanced brace")
+
+
+def _longtable(cols, body, caption, label, ncols):
+    r"""Rebuild one tabular body as a longtable.
+
+    The header is whatever sits between `\toprule` and the first `\hline`,
+    which is how MyST always writes it; it is repeated on every page after the
+    first, under a "continued" line so a reader who turns the page knows what
+    they are looking at. The caption goes inside the environment because
+    `longtable` is not a float and has nowhere else to put one.
+    """
+    head, sep, rest = body.partition("\\hline\n")
+    if not sep:                       # no header row: nothing to repeat
+        head, rest = "", body
+    head = head.replace("\\toprule\n", "")
+    rest = rest.replace("\\bottomrule\n", "")
+
+    cap = ""
+    if caption:
+        cap = f"\\caption{{{caption}}}"
+        if label:
+            cap += f"\\label{{{label}}}"
+        cap += "\\\\\n"
+
+    repeat = (f"\\multicolumn{{{ncols}}}{{@{{}}l}}"
+              f"{{\\footnotesize\\itshape continued from the previous page}}\\\\\n")
+
+    out = [f"\\begin{{longtable}}{{{cols}}}"]
+    if cap:
+        out.append(cap.rstrip("\n"))
+    out.append("\\toprule")
+    if head:
+        out.append(head.rstrip("\n"))
+        out.append("\\hline")
+    out.append("\\endfirsthead")
+    out.append(repeat.rstrip("\n"))
+    out.append("\\toprule")
+    if head:
+        out.append(head.rstrip("\n"))
+        out.append("\\hline")
+    out.append("\\endhead")
+    out.append("\\bottomrule")
+    out.append("\\endfoot")
+    out.append(rest.rstrip("\n"))
+    out.append("\\end{longtable}")
+    return "\n".join(out) + "\n"
+
+
+def paginate_tables(text, report):
+    r"""Turn the tables that are too tall to fit a page into longtables.
+
+    Two shapes have to be recognised, because MyST writes a captioned table and
+    an uncaptioned one differently: a captioned one is wrapped in a `table`
+    float carrying `\caption` and `\label`, an uncaptioned one is a bare
+    `tabular` between a `\bigskip\noindent` and a `\bigskip`. Both become a
+    `longtable`; in the captioned case the caption and label move inside it,
+    since a longtable is not a float.
+    """
+    out = []
+    pos = 0
+    while True:
+        i = text.find("\\begin{tabular}{", pos)
+        if i < 0:
+            break
+        j = text.find("\\end{tabular}", i)
+        if j < 0:
+            break
+        j += len("\\end{tabular}")
+        chunk = text[i:j]
+        rows = chunk.count("\\\\")
+        if len(chunk) < LONGTABLE_MIN_CHARS and rows < LONGTABLE_MIN_ROWS:
+            out.append(text[pos:j])
+            pos = j
+            continue
+
+        colstart = i + len("\\begin{tabular}")
+        colend = _balanced(text, colstart)
+        cols = text[colstart + 1:colend - 1]
+        ncols = cols.count("p{") or cols.count("l") or 1
+        body = text[colend:j - len("\\end{tabular}")].lstrip("\n")
+
+        # Absorb the float wrapper, if there is one, and take its caption.
+        start, end = i, j
+        caption = label = None
+        pre = text.rfind("\\begin{table}", pos, i)
+        if pre >= 0 and "\\end{table}" not in text[pre:i]:
+            start = pre
+            header = text[pre:i]
+            m = re.search(r"\\caption(?:\[[^\]]*\])?\{", header)
+            if m:
+                k = m.end() - 1
+                caption = header[k + 1:_balanced(header, k) - 1]
+            m = re.search(r"\\label\{", header)
+            if m:
+                k = m.end() - 1
+                label = header[k + 1:_balanced(header, k) - 1]
+            close = text.find("\\end{table}", j)
+            if close >= 0:
+                end = close + len("\\end{table}")
+
+        out.append(text[pos:start])
+        out.append(_longtable(cols, body, caption, label, ncols))
+        report[0] += 1
+        pos = end
+    out.append(text[pos:])
+    return "".join(out)
 
 
 LENGTH = re.compile(r"^-?[0-9.]+\s*(pt|ex|em|cm|mm|in|bp|sp|baselineskip)\b")
@@ -523,6 +665,7 @@ def main():
     slugs = {slug_of(p) for p in chapter_files}
     runons = set()
     plusfix = [0]
+    longtables = [0]
     figures = set()
     if not shutil.which("rsvg-convert"):
         print("warning: rsvg-convert not found; figures may not typeset "
@@ -534,6 +677,7 @@ def main():
         text = path.read_text()
         text = split_runon_commands(text, runons)
         text = fix_superscript_plus(text, plusfix)
+        text = paginate_tables(text, longtables)
         text = restore_verbatim(text)
         text = protect_bracket_after_newline(text)
         # MyST writes a narrative citation -- "@binnemans2013recycling is the
@@ -625,6 +769,7 @@ def main():
         gloss.write_text(gloss.read_text().rstrip("\n") + "\n"
                          + render_glossary(glossary_entries))
     print(f"glossary: {len(glossary_entries)} entries")
+    print(f"long tables: {longtables[0]} paginated")
 
     # A charge reaches the PDF by one of two routes: MyST mangles it to
     # \textsuperscript{.} and the repair above catches it, or MyST passes the
