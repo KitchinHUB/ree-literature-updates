@@ -45,9 +45,12 @@ What MyST gets wrong, and what is done about it:
    LaTeX cannot read. Fixed by rendering each SVG to PDF with rsvg-convert.
 
 8. The first page of the book is dropped. MyST's project-wide TeX export omits
-   the first table-of-contents entry, which here is the prologue disclosing how
-   the book was written -- the one page that must not go missing. Fixed by
-   exporting it on its own and splicing it back in.
+   the first table-of-contents entry, treating it as the document rather than
+   as a chapter of it. That page is the website's title page, whose whole job
+   -- title, one-paragraph summary, table of contents -- the book class already
+   does with \\maketitle and \\tableofcontents, so in print it is dropped on
+   purpose and nothing is spliced back. If the toc order ever changes, check
+   this: the page that lands first is the page that silently disappears.
 
 9. Chapters that should not be numbered are. The prologue, preface, glossary,
    index and appendices all take chapter numbers, which pushes every real
@@ -497,35 +500,6 @@ def promote_headings(text, shift=None):
     return HEADING_RE.sub(fix, text)
 
 
-PROLOGUE_SRC = "src/00-prologue.md"
-PROLOGUE_TEX = Path("_build") / "exports" / "index_tex" / "index.tex"
-
-
-def recover_prologue(root):
-    r"""Export the one page the project-wide TeX export silently drops.
-
-    MyST leaves the first entry in the table of contents out of a
-    project-wide TeX export -- it is the site's root page, and the exporter
-    treats it as the document rather than as a chapter of it. Here that page
-    is the prologue, which is the AI-assistance disclosure and the account of
-    the fabricated citations that were found and removed. It is the last page
-    that may go missing from a distributable copy of this book.
-
-    Exporting it on its own gives a standalone document; its body is lifted
-    out and returned as a chapter.
-    """
-    r = run(["npx", "-y", "mystmd", "build", PROLOGUE_SRC, "--tex"], cwd=root)
-    tex = root / PROLOGUE_TEX
-    if r.returncode != 0 or not tex.exists():
-        sys.exit(f"could not export {PROLOGUE_SRC}")
-    body = tex.read_text()
-    body = body[body.index("\\begin{document}") + len("\\begin{document}"):]
-    body = body[:body.index("\\end{document}")]
-    for junk in ["\\maketitle", "\\begin{center}\\logo\\end{center}"]:
-        body = body.replace(junk, "")
-    return body.strip() + "\n"
-
-
 # The book numbers its own chapters, and its numbering starts at "Why Rare
 # Earths Are Hard to Separate". Everything outside that run is unnumbered, so
 # the PDF's chapter numbers agree with the numbers the book uses everywhere
@@ -656,8 +630,6 @@ def main():
     if not main_tex.exists():
         sys.exit(f"expected {main_tex}")
 
-    (TEXDIR / f"{STEM}-src.prologue.tex").write_text(recover_prologue(ROOT))
-
     bib = TEXDIR / "main.bib"
     bib.write_text(tidy_bib(bib.read_text()))
 
@@ -738,10 +710,11 @@ def main():
         assert text.count(old_pkg) == 1, f"missing {old_pkg}"
         text = text.replace(old_pkg, new_pkg)
 
+    # MyST drops the first toc entry (see item 8): that is the title page, and
+    # the prologue immediately after it must survive.
     prologue_include = f"\\include{{{STEM}-src.prologue}}\n"
-    preface_include = f"\\include{{{STEM}-src.preface}}\n"
-    assert text.count(preface_include) == 1, "preface include moved"
-    text = text.replace(preface_include, prologue_include + "\n" + preface_include)
+    assert text.count(prologue_include) == 1, (
+        "the prologue is not in the TeX export -- has the toc order changed?")
 
     anchor = "\\makeindex\n"
     assert text.count(anchor) == 1, "preamble anchor moved"

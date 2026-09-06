@@ -37,10 +37,10 @@ import sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 SRC = ROOT / "src"
-# The preface and prologue are about how the book was made, not about the
-# chemistry. A reader looking up "microfluidics" wants chapter 9, not the
-# preface's roadmap sentence.
-SKIP_FILES = {"00-preface.md", "00-prologue.md",
+# The title page, preface and prologue are about how the book was made, not
+# about the chemistry. A reader looking up "microfluidics" wants chapter 9,
+# not the preface's roadmap sentence.
+SKIP_FILES = {"00-title.md", "00-preface.md", "00-prologue.md",
               "90-glossary.md", "91-index.md", "92-references.md",
               "93-appendix-provenance.md", "94-appendix-further-reading.md"}
 

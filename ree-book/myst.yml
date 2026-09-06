@@ -41,6 +41,7 @@ project:
     - file: exports/rare-earth-separations.pdf
       title: Download the book (PDF)
   toc:
+    - file: src/00-title.md
     - file: src/00-prologue.md
     - file: src/00-preface.md
 
