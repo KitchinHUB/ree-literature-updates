@@ -237,7 +237,7 @@ Short peptides can form coacervates and offer advantages of defined sequence, sc
 
 #### Lanthanide Binding Tags (LBTs)
 
-{index}`Lanthanide binding tags <lanthanide binding tags>` are amphiphilic peptide sequences based on the EF-hand metal binding loops of calcium-binding proteins [@li2024lanthanide; @schmitz2022lanmodulin]. The EF-hand motif consists of two alpha helices linked by a 12-residue loop that coordinates metal ions through carboxylate-rich sidechains, with the metal held in a pentagonal bipyramidal geometry by residues at loop positions 1, 3, 5, 7, 9 and 12 (conventionally labelled X, Y, Z, -Y, -X, -Z), and the loop itself undergoing a disorder-to-order transition when the lanthanide binds. That the motif binds lanthanides at all is a consequence of their being good Ca²⁺ mimics: the trivalent charge on a similar radius makes an EF-hand site thermodynamically better suited to Ln³⁺ than to the ion it evolved for [@nikolova2023lanthanides].
+{index}`Lanthanide binding tags <lanthanide binding tags>` are amphiphilic peptide sequences based on the EF-hand metal binding loops of calcium-binding proteins [@ortunomacias2024lanthanide; @schmitz2022lanmodulin]. The EF-hand motif consists of two alpha helices linked by a 12-residue loop that coordinates metal ions through carboxylate-rich sidechains, with the metal held in a pentagonal bipyramidal geometry by residues at loop positions 1, 3, 5, 7, 9 and 12 (conventionally labelled X, Y, Z, -Y, -X, -Z), and the loop itself undergoing a disorder-to-order transition when the lanthanide binds. That the motif binds lanthanides at all is a consequence of their being good Ca²⁺ mimics: the trivalent charge on a similar radius makes an EF-hand site thermodynamically better suited to Ln³⁺ than to the ion it evolved for [@nikolova2023lanthanides].
 
 Isolated tags bind far more weakly than the protein they derive from:
 micromolar dissociation constants for immobilized LBTs against picomolar ones
@@ -253,12 +253,19 @@ that matters for process design is not a separation factor but a warning: the
 selectivity *reverses* with loading. From an equimolar Tb³⁺/La³⁺ solution the
 adsorbed layer is enriched in Tb³⁺ when the bulk peptide is saturated, and
 selective for La³⁺ when it is undersaturated, because the La³⁺ complex is the
-more surface-active of the two [@li2024lanthanide]. A separation whose sign
+more surface-active of the two [@ortunomacias2024lanthanide]. A separation whose sign
 depends on the loading state is not a separation a cascade can be built from
 until that dependence is designed out. The same paper establishes a second
 design rule: the peptide's net charge must be −3, so that the metal-peptide
 complex is neutral, or excess cations are recruited to the interface by
-non-selective Coulombic attraction and the selectivity is destroyed.
+non-selective Coulombic attraction and the selectivity is destroyed. With that
+charge satisfied the surface reaches a cation-to-peptide ratio of 0.96 ± 0.09,
+which is the 1:1 stoichiometry the design is aiming at. The selectivity itself
+is weak: the surface Tb³⁺:La³⁺ ratio runs from about 0.25 at 50 µM total Ln³⁺ to
+about 2.0 at 1,000 µM, against the 24.8 the measured bulk dissociation constants
+predict for that layer --- an order of magnitude of discrimination lost on
+adsorption, for a pair nine places apart in the series
+([](#biological-and-biomimetic-separations)).
 
 In the second, LBT-lanthanide complexes are cross-linked with glutaraldehyde to
 stabilize the interfacial film for foam-based recovery; the cross-linked layers

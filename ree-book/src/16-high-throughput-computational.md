@@ -116,7 +116,9 @@ was a person reviewing the cycle [@augustine2024advancing].
 ### Data Management and Reproducibility
 
 The LANL group deposited both datasets in the **Separation Archive for
-f-elements (SAFE)** at <https://safe.lanl.gov>. The literature compilation
+f-elements (SAFE)** at <https://safe.lanl.gov>, since announced formally in the
+literature as the Separation Archive for Elements [@leite2025creation]. The
+literature compilation
 assembled for the study comprises 2,132 distribution ratios drawn from published
 experiments, covering 35 unique monoamide extractants and 11 different actinides
 [@augustine2024advancing]. Those 2,132 values are unique reported conditions and
@@ -434,9 +436,39 @@ single published study has yet run from end to end for REE separations:
    - Efficient exploration of a multidimensional parameter space
    - Adaptive experimental design
 
-Steps 1-2 and 3-4 have each been demonstrated as a pair. What has not been
-demonstrated is data from step 3 flowing back into the model of step 1 and
-changing what step 2 makes next.
+Steps 1-2 and 3-4 have each been demonstrated as a pair, and one campaign has
+now joined 1, 3 and 4. What has not been demonstrated is data from step 3
+flowing back into the model of step 1 and changing what step 2 *makes* next.
+
+(the-campaign-that-joins-screening-to-measurement)=
+### The Campaign That Joins Screening to Measurement
+
+@augustine2026coupling is the closest thing in the literature to the workflow
+above, and it is worth being exact about which links it makes. The target is a
+pH-controlled extraction in which selectivity is tuned not by changing the
+extractant but by adding an aqueous-phase *holdback agent* that competes for the
+metal. Database screening, density functional theory and a first round of
+experiment picked oxaloacetic acid out of the candidates; automated
+high-throughput experiments then mapped the response over four variables at once
+— pH, extractant concentration, holdback concentration and salt concentration —
+under multi-objective Bayesian optimization. Against HDEHP alone the optimizer
+reported a fourfold increase in separation factors, without the exhaustive grid
+that mapping four variables would otherwise demand.
+
+The chemistry it reports is a pH switch. At pH ≈ 2.0 Eu, Dy and Ho extract
+selectively over Nd; dropping to pH ≈ 0.5 changes which pair splits, and Eu
+separates from Dy and Ho. Those are four real lanthanides and the numbers are
+measured, not predicted, which is what distinguishes this campaign from the
+generative workflows in [](#machine-learning-in-rare-earth-separations).
+
+What it does not do is close the molecular loop. The molecule was chosen once,
+computationally, at the start; the learning that follows searches *conditions*
+for a fixed pair of reagents. Nothing measured on the platform goes back into a
+model that then proposes a different molecule to synthesize. That link is still
+the missing one. Nor are the splits adjacent-pair splits: the reported
+separations are {Eu, Dy, Ho} from Nd, and Eu from {Dy, Ho}. Dy and Ho are the
+one adjacent pair in the set, and they stay together. This work is read here
+from its abstract; the full text was not available.
 
 ### Active Learning and the Gap It Leaves
 

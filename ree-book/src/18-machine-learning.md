@@ -309,6 +309,28 @@ one — is decisive for whether a calculated lanthanide selectivity is
 predictive at all. A surrogate trained on single-conformer energies inherits
 that error and cannot detect it.
 
+### Learning the Mechanism Instead of the Number
+
+A different use of the same data is to learn what is *happening* rather than
+what the answer is. @lee2025data build kinetic reaction networks for the
+liquid-liquid extraction of uranium by DEHiBA, and set two ways of fitting them
+against each other: a purely data-driven model regularized by chemistry-agnostic
+L1 regression, and a chemistry-informed model regularized by relative reaction
+energies from quantum-mechanical calculation. The comparison is the result. The
+data-driven models are unbiased, simple and accurate given enough data, and hard
+to constrain or interpret; the chemistry-informed ones reach comparable accuracy
+by ensemble averaging while remaining interpretable, and they recover
+UO₂(NO₃)₂(DEHiBA)₂ as the dominant extracted species, which is what slope
+analysis, thermodynamic modelling, EXAFS and crystal structures already say.
+
+Two things make this relevant here even though the metal is an actinide. It is
+the clearest demonstration in this literature that physics used as a
+*regularizer* buys interpretability at no cost in accuracy — the standing answer
+to the complaint in [](#explanations-are-statements-about-models) that feature
+attributions are not mechanism. And it targets the quantity this chapter
+otherwise has almost nothing to say about: rates and speciation along the way,
+rather than the equilibrium number at the end.
+
 (designing-molecules-rather-than-ranking-them)=
 ## Designing Molecules Rather Than Ranking Them
 
@@ -324,7 +346,11 @@ combining electronic-structure calculation with molecular topology in an active
 learning workflow for the in silico design of organic ligands for ²²⁷Ac capture
 in solution. The target is actinium rather than a lanthanide, but the structure
 of the problem — a large ligand space, an expensive evaluation, a selectivity
-objective — is identical.
+objective — is identical. @augustine2026coupling runs the strategy on
+lanthanides and on a real platform, using multi-objective Bayesian optimization
+over four process variables to reach a fourfold gain in separation factor;
+[](#the-campaign-that-joins-screening-to-measurement) treats it, because what it
+optimizes is conditions rather than molecules.
 
 ### Language Models and Agents
 
@@ -580,8 +606,15 @@ here is what is absent from the record:
   within its own experimental uncertainty across an unseen ligand family.
 - No generative workflow has produced a lanthanide/lanthanide extractant that
   was then synthesised and measured to outperform the incumbent for that pair.
-  @zhang2026augmenting comes closest and stops at computational prediction, for
-  an actinide/lanthanide pair.
+  @zhang2026augmenting comes closest on the generative side and stops at
+  computational prediction, for an actinide/lanthanide pair.
+- One campaign does run computational selection through to measurement on
+  lanthanides: @augustine2026coupling screened, calculated and then measured a
+  holdback agent, and optimized four process variables around it. The molecule
+  was selected once at the start and never revised, the reagent chosen is an
+  aqueous additive rather than an extractant, and the splits reported are
+  {Eu, Dy, Ho} from Nd and Eu from {Dy, Ho} — the one adjacent pair in the set,
+  Dy and Ho, is not separated.
 - No published campaign closes the loop from automated measurement back into a
   molecular design model. The pieces exist separately
   ([](#high-throughput-and-computational-methods)); the connection does not.
@@ -614,8 +647,12 @@ an unusually hard instance of the problem and an unusually early one.
    [@simonnet2021study] both shift selectivity measurably, and both are invisible
    to a connectivity fingerprint.
 5. **Generative design has reached quasi-autonomous computational screening, not
-   validated discovery.** The strongest result [@zhang2026augmenting] is
-   predicted selectivity for Am/Eu, human-approved mid-workflow, and unmeasured.
+   validated discovery.** The strongest generative result [@zhang2026augmenting]
+   is predicted selectivity for Am/Eu, human-approved mid-workflow, and
+   unmeasured. The strongest *measured* result from a computationally guided
+   campaign [@augustine2026coupling] is a fourfold gain in separation factor on
+   four lanthanides — but from optimizing conditions around a molecule chosen
+   once at the outset, and not on an adjacent pair.
 6. **The process-design literature is further along than the extractant
    literature.** Flowsheet autocompletion and reinforcement-learning process
    synthesis both work on chemical processes generally; neither has been applied

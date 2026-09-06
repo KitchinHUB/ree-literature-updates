@@ -189,3 +189,18 @@ an accurate statement of what is known about the record.
 - `anon2025systematic` → `mugion2025systematic`
 - `anon2025tailored` → `salehi2025tailored`
 - `anon2025technoeconomic` → `azimi2025technoeconomic`
+
+## A later single rename (2026-09-06)
+
+One further key was wrong for a different reason. `li2024lanthanide` came out of
+the merge of `coacervate.bib` (`bibliography-audit.md:20` records it), and no
+author of the paper is named Li: it is Ortuno Macias et al., *Lanthanide binding
+peptide surfactants at air-aqueous interfaces*, PNAS 121(52) e2411763121. The
+key was renamed to match the real first author, and the entry moved into
+alphabetical order beside the group's 2025 foam-separation paper.
+
+- `li2024lanthanide` → `ortunomacias2024lanthanide`
+
+Four citation sites in `src/08-coacervates.md` and `src/11-biological-biomimetic.md`
+were updated with it. `citation-key-map.json` and `citation-key-map.md` carry the
+mapping so the converted org sources still resolve.

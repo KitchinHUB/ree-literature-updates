@@ -470,6 +470,44 @@ of tightening prose:
 
 The warning block is gone from the chapter, which is what the work was for.
 
+**A peptide paper read in full, and a key that named the wrong author.**
+@ortunomacias2024lanthanide --- lanthanide-binding peptide surfactants at the
+air-aqueous interface, PNAS 121(52) e2411763121 --- was already in the
+bibliography, but under the key `li2024lanthanide`, which came out of the
+`coacervate.bib` merge (`bibliography-audit.md:20`) and names no author of the
+paper. It was renamed to `ortunomacias2024lanthanide` and moved beside the same
+group's 2025 foam-separation paper; `bib-rekey.md` records the change. Reading
+the full text replaced a qualitative statement in two chapters --- that the
+interfacial selectivity reverses with loading --- with the numbers behind it.
+The surface Tb³⁺:La³⁺ ratio runs from about 0.25 at 50 µM total Ln³⁺ to about
+2.0 at 1,000 µM; the measured bulk dissociation constants predict 24.8 for that
+layer. The interfacial step therefore gives away an order of magnitude of the
+discrimination the bulk chemistry already has, and what survives is a factor of
+about two on a pair nine places apart in the series. Both
+[](#coacervates-and-aqueous-biphasic-systems) and
+[](#biological-and-biomimetic-separations) now say so, and the second says
+plainly that this is a demonstration rather than a separation. The net-charge
+design rule (−3, giving a neutral complex and a surface cation-to-peptide ratio
+of 0.96 ± 0.09) also comes from that reading.
+
+**Four 2025-26 machine-learning and process papers, added at the level the
+sources allow.** A literature check against the current search results for
+automated and learned f-element separations added @lee2025data,
+@augustine2026coupling, @leite2025creation and @yu2026progress. Only the first
+two have released abstracts, and neither has an obtainable full text; the other
+two are cited for existence. @augustine2026coupling matters most, because it
+forced two of the book's own standing claims to be corrected rather than merely
+extended: the "what has not been demonstrated" list in
+[](#machine-learning-in-rare-earth-separations) had said that no
+computationally-guided campaign had been carried through to measured lanthanide
+separations, and it now has been --- a fourfold gain in separation factor over
+HDEHP alone, from an aqueous holdback agent found by screening and confirmed by
+experiment. The limits are recorded with it: what was optimized is process
+conditions rather than molecules, the splits are {Eu, Dy, Ho} from Nd and Eu
+from {Dy, Ho}, and Dy/Ho --- the one adjacent pair in the set --- stays
+together. All of that is read from the abstract, which the text states.
+`needs-journal-access.md` lists all four.
+
 (sources-not-synthesized)=
 ## Two books, read by chapter
 

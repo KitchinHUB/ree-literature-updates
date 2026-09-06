@@ -200,9 +200,14 @@ Its polarity is right. An alkane mixture has a dielectric constant near 2, which
 is low enough that the diluent does not coordinate the metal or hydrogen-bond to
 the extractant's phosphoryl oxygen, and yet the extractants themselves — large
 branched alkyl esters — are entirely soluble in it. That the surrounding medium
-is not neutral is not a hypothetical concern: @dewulf2022effect found extraction
-by a solvating extractant to depend strongly on the polarity, donor strength and
-hydrogen-bonding capability of the organic medium around it. Kerosene's
+is not neutral is not a hypothetical concern: @dewulf2022effect removed the
+aqueous phase altogether and extracted La, Nd, Eu, Dy and Yb with the solvating
+extractant Cyanex 923 out of ethylene glycol, its two propanediol isomers,
+triethylene glycol, DMSO, methanol, dimethylformamide and dimethylacetamide in
+turn. Which solvent the metal sits in changes the extraction, and the changes
+track the solvent's dielectric constant, its Gutmann donor number and its
+hydrogen-bonding capability --- by enough that the authors propose choosing the
+solvent as a way of tuning the separation. Kerosene's
 contribution is to be as close to nothing as a liquid can be.
 
 Its density and viscosity are right, which is the same statement as saying the
@@ -378,7 +383,11 @@ magnitude, and the slope-3 dependence collapses D by three orders of magnitude
 per pH unit. That is why stripping is fast, why it is done with acid rather than
 by any change of extractant, and why it regenerates the extractant in its acidic
 form ready to recycle. For PC88A loaded with lanthanum, @agarwal2020comparative
-found 1 mol/L acid adequate for effective stripping; the pilot-scale D2EHPA
+found 1 mol/L acid adequate for effective stripping: about 90 % of the
+lanthanum returned to the aqueous phase in a single contact with 1 mol/L HCl,
+and six times the acid did not improve on it --- 6 mol/L gave 86 %, slightly
+worse. One contact and a modest acid strength do most of the work, which is what
+*adequate* means here. The pilot-scale D2EHPA
 system of @alemrajabi2022separation used 3 M HCl. Complete stripping is
 nonetheless staged, because a single contact leaves the organic in equilibrium
 with the strip liquor it has just loaded — the same arithmetic as for extraction,
@@ -521,9 +530,10 @@ competing solvation equilibrium is working to erase.
 **The sign of the temperature effect is system-specific and should not be
 assumed.** For lanthanum with PC88A in kerosene over 25-55 °C,
 @agarwal2020comparative found extraction *increased* slightly with temperature
--- weakly endothermic, not exothermic. Enthalpies for acidic organophosphorus
-extraction of the lanthanides are generally small, so temperature is a weak
-lever on the equilibrium compared with pH, and a circuit that runs warm usually
+-- weakly endothermic, not exothermic. The measured enthalpies are small:
+11.9 kJ/mol from nitrate, 13.2 from chloride and 14.2 from sulfate, over
+298-328 K. A rise of 30 °C moves such an equilibrium by a factor of well under
+two, so temperature is a weak lever on the equilibrium compared with pH, and a circuit that runs warm usually
 does so for viscosity and phase-disengagement reasons rather than
 thermodynamic ones.
 
@@ -575,8 +585,16 @@ find the stage that is misbehaving is worth more than compactness. That is why
 mixer-settlers are the industry standard despite being worst on almost every
 other axis, and the capability is real rather than notional: @dewulf2022separation
 took a heavy rare earth hydroxide concentrate from mining waste and, in sixteen
-stages of laboratory mixer-settlers, raised a thulium group from 34% to 99.8%
-purity and a dysprosium group from 54% to 98.7% in the same operation.
+stages of laboratory mixer-settlers, split it into a thulium group (Tm, Yb, Lu)
+and a dysprosium group (Dy, Ho, Er, Y) at 99.8 % and 98.7 % purity, from
+starting purities of roughly a third and a half. Which group started at 34 % and
+which at the higher figure is left unstated here because the paper's abstract,
+its flowsheet section and its conclusions disagree with each other on that
+point. The chemistry is not conventional --- the feed is dissolved in ethylene
+glycol rather than water, and the authors' claim for the system is that an
+aqueous circuit would need more than three times as many stages for the same
+split --- but the contactor is an ordinary mixer-settler cascade, and it is the
+cascade that is the point here.
 
 The cost of the settler volume is paid twice. Once as capital and inventory —
 the organic held up in a hundred settlers is extractant that has been bought and
@@ -605,6 +623,9 @@ monotonically, and the height of a mass transfer unit came out near two metres.
 A stage height that responds non-monotonically to the main control handle is an
 uncomfortable thing to put many of in series, and it is a large part of why
 columns are common in nuclear reprocessing and rare in rare earth separation.
+The operating experience is accordingly on the nuclear side, where
+@yu2026progress review the development of pulsed extraction columns for spent
+fuel reprocessing.
 
 **Centrifugal extractors** replace gravity with a few hundred times gravity.
 Mixing and separation happen in the same spinning rotor, so the settler
@@ -880,7 +901,9 @@ reaching it, which is why cascade models carry an empirical stage efficiency
 that is fitted rather than predicted ([](#process-modeling-and-optimization)).
 Installed stage counts are accordingly larger than `N_min`, and the published
 model-based designs bear that out: @dewulf2022separation needed sixteen
-mixer-settler stages for a *group* split of heavy rare earths, and the
+mixer-settler stages for a *group* split of heavy rare earths, in a non-aqueous
+system its authors argue is worth more than three conventional stages apiece,
+and the
 optimization study of @srivastava2023design settled on loading-scrubbing-stripping
 combinations totalling around twenty-three stages for one clean cut
 ([](#process-modeling-and-optimization)). That is the derivation behind the "hundreds of stages" of

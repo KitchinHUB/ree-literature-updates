@@ -85,7 +85,7 @@ name the paper's actual first author -- `spruijt2014polyelectrolyte` ->
 | `li2020abs` | `kee2020development` | title 1.00 |
 | `li2020hydration` | `li2020hydration` | already current |
 | `li2024arxiv` | `li2024thermodynamic` | title 1.00 |
-| `li2024lanthanide` | `li2024lanthanide` | already current |
+| `li2024lanthanide` | `ortunomacias2024lanthanide` | re-keyed to the real first author |
 | `li2025sc` | `gangadari2025critical` | title 1.00 |
 | `lin2020idp` | `lin2019intrinsically` | DOI |
 | `liu2021enrichment` | `liu2017enrichment` | DOI |

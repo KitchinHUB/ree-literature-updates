@@ -405,7 +405,7 @@ there is an obvious question: does the rest of the protein have to be there?
 in its cheapest form --- short peptides lifted from the calcium-binding EF-hand
 loops of calmodulin, troponin and parvalbumin, of which a troponin-derived
 sequence optimized for Tb³⁺, YIDTNNDGWYEGDELLA, is the canonical example
-[@li2024lanthanide]. They are far easier to make than a protein, they can be
+[@ortunomacias2024lanthanide]. They are far easier to make than a protein, they can be
 synthesized rather than expressed, they can be evolved in a directed-evolution
 loop without worrying about folding, and they can be grafted onto a surface. The
 price is affinity, and the size of that price is the useful number.
@@ -443,7 +443,7 @@ layer at an air-aqueous interface, and the composition of that layer need not
 match the bulk. Ortuno Macias and co-workers studied this on a *flat* interface
 --- surface tensiometry, X-ray reflectivity, X-ray fluorescence near total
 reflection, and molecular dynamics --- rather than in a foam
-[@li2024lanthanide]. The peptide complexes the trivalent cation in the bulk and
+[@ortunomacias2024lanthanide]. The peptide complexes the trivalent cation in the bulk and
 the complex then adsorbs, with the binding pocket intact on adsorption. What
 decides whether the layer is selective is the net charge the complex carries. A
 negatively charged complex pulls excess cations to the interface by
@@ -457,6 +457,22 @@ peptide is saturated, and inverts to La³⁺ when it is undersaturated, because 
 La³⁺ complex is the more surface-active of the two. That is an interesting
 handle and an awkward one: the direction of separation depends on a bulk
 concentration ratio that a real feed would not hold constant.
+
+The size of the effect is the part worth quoting, and it is small. Holding the
+peptide at 100 µM in 100 mM NaCl and 50 mM MES at pH 6 and raising the total
+lanthanide concentration, the surface Tb³⁺:La³⁺ ratio moves from about 0.25 at
+50 µM total Ln³⁺ to about 2.0 at 1,000 µM --- so the interface is genuinely
+selective for La³⁺ at the low end and for Tb³⁺ at the high end, and the crossing
+point is somewhere in between. The authors compute what the measured bulk
+dissociation constants would predict for that layer at 1,000 µM and get 24.8;
+the interface delivers about 2, an order of magnitude less, which they attribute
+to the adsorbed binding loop changing conformation against the air phase. Two
+things follow. The interfacial step gives away most of the discrimination the
+bulk chemistry already has, and what is left, a factor of about two, is between
+Tb and La --- nine places apart in the series, and a pair that any acidic
+organophosphorus extractant separates by orders of magnitude in a beaker. The
+result is a real demonstration that a peptide can carry a specific lanthanide to
+an interface and be read there; it is not yet a separation.
 
 A foam column is the obvious vehicle and it does not yet exist. The nearest
 thing is a follow-up from the same group showing that glutaraldehyde
