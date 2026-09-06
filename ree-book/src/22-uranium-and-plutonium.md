@@ -13,11 +13,13 @@ actinides.
 The first is that the separations are already entangled. Every monazite and
 xenotime flowsheet in [](#from-ore-to-feed-solution) and
 [](#hydrometallurgical-leaching) is also a uranium and thorium flowsheet,
-whether or not it is described that way. Monazite carries percent-level thorium
-and hundreds to thousands of ppm uranium; the caustic crack that liberates the
-rare earths liberates them too, and everything downstream of it has to decide
-where they go [@garcia2020separation; @amaral2010thorium]. A rare earth plant
-that ignores its actinides is not a plant, it is a licensing problem.
+whether or not it is described that way. Monazite carries thorium and uranium in
+the same phosphate lattice as the rare earths — tabulated at 0–20 wt % ThO₂ and
+0–16 wt % UO₂ depending on the deposit — and the caustic crack that liberates
+the rare earths liberates them too, sending all three into one hydroxide cake,
+so everything downstream of it has to decide where they go
+[@garcia2020separation; @amaral2010thorium]. A rare earth plant that ignores its
+actinides is not a plant, it is a licensing problem.
 
 The second is that the hardest separation in the nuclear fuel cycle is the same
 separation this book opens with. Trivalent americium and curium sit among the
@@ -74,8 +76,8 @@ actually struggles with, have no such handle. They are trivalent and they stay
 trivalent, and their radii place them squarely inside the lanthanide series.
 What distinguishes them is that the 5f orbitals are more radially extended than
 4f, so a soft nitrogen or sulfur donor can form a bond with more covalent
-character to An(III) than to Ln(III). The magnitude of that difference has been
-measured directly. Actinide M₄,₅ high-resolution XANES and 3d4f RIXS show that
+character to An(III) than to Ln(III). The underlying orbital picture has been
+probed directly. Actinide M₄,₅ high-resolution XANES and 3d4f RIXS show that
 the 5f orbitals are chemically active in bonding for uranium and neptunium, but
 are already localized and largely insensitive to the ligand environment by
 plutonium [@vitova2017role]. The covalency the separations community relies on
@@ -96,16 +98,19 @@ easily broken by acidification. The alkaline leach is one of the rare cases in
 this book where a single complexation equilibrium does the separation for you.
 
 {index}`In-situ leaching` (ISL, also called in-situ recovery) takes this further
-by not mining the ore at all. A lixiviant — oxygenated or peroxide-bearing
-carbonate solution, or dilute acid — is injected into a permeable sandstone-
-hosted deposit through wells, flows through the ore, and is pumped back up
-through recovery wells. It now accounts for a substantial and growing share of
-world uranium production, and its economics differ fundamentally from
-conventional mining because the capital is in wellfields rather than in pits and
-mills [@li2024review; @seredkin2016situ]. There is no rare earth analogue in
-commercial operation, but the ion-adsorption clay in-situ leaching of
-[](#ion-adsorption-clays) is the same idea applied to a different host, with the
-same virtues and the same groundwater liabilities.
+by not mining the ore at all. A lixiviant — a carbonate or bicarbonate solution
+carrying oxygen as the oxidant, or sulfuric acid with oxygen or hydrogen
+peroxide — is injected into a permeable sandstone-hosted deposit through wells,
+flows through the ore, and is pumped back up through recovery wells. Its share
+of world uranium production rose from 51 % in 2014 to about 63 % in 2021, and
+its economics differ fundamentally from conventional mining: capital costs run
+up to several times below those of an open pit or an underground mine, and no
+tailings or waste rock are generated [@li2024review; @seredkin2016situ]. There
+is no rare earth analogue at this depth or scale — scandium, yttrium and the
+rare earths have come out of uranium in-situ liquors only in pilot tests — but
+the ion-adsorption clay in-situ leaching of [](#ion-adsorption-clays) is the
+same idea applied to a shallower host, with the same virtues and the same
+groundwater liabilities.
 
 Recovery from the pregnant leach solution is ion exchange or amine solvent
 extraction. The amine route — the AMEX process — works because the anionic
@@ -130,19 +135,23 @@ rare earth stream is the selectivity that makes it good at recovering uranium
 from ore.
 
 The second connection is phosphate. Wet-process phosphoric acid made from
-sedimentary phosphate rock carries uranium at tens to low hundreds of ppm, and
-recovering it has been attempted repeatedly: roughly seventeen distinct
-processes were developed between 1951 and 1991, mostly synergistic
-organophosphorus solvent extraction systems, and several ran at commercial scale
-before uranium prices made them uneconomic [@beltrami2014recovery]. The
-same phosphoric acid stream is the one that produces the phosphogypsum discussed
-in [](#recycling-and-urban-mining) as a rare earth resource, and the same
-uranium follows the same acid. Analyses of the potential US supply from this
-route compare solvent extraction against ion exchange and reach no unambiguous
-winner [@kim2016potential]. It is a byproduct recovery problem of exactly the
-kind that recurs throughout this book: the metal is already in solution, already
-paid for by another product, and the only question is whether the incremental
-separation cost clears the price.
+sedimentary phosphate rock carries uranium at 60 to 170 mg per litre, and
+recovering it has been done repeatedly at industrial scale: sixteen plants ran
+between 1952 and 1999, ten of them on the synergistic D2EHPA/TOPO extractant
+pair and the rest on precipitation, DPPA, OPPA or OPAP, and the last closed as
+uranium demand and price fell away after Three Mile Island and Chernobyl
+[@beltrami2014recovery]. The same phosphoric acid stream is the one that
+produces the phosphogypsum discussed in [](#recycling-and-urban-mining) as a
+rare earth resource, and the same uranium follows the same acid. An analysis of
+the potential US supply puts 5.5 million pounds of U₃O₈ a year within reach of
+existing US phosphoric acid production — more than the country mined in 2014 —
+and puts ion exchange ahead of solvent extraction on total cost, US\$33–54
+against US\$44–61 per pound U₃O₈ depending on discount rate and plant life,
+except that ion exchange has never run at commercial scale and both figures sit
+above the uranium price of the years around the study [@kim2016potential]. It is
+a byproduct recovery problem of exactly the kind that recurs throughout this
+book: the metal is already in solution, already paid for by another product, and
+the only question is whether the incremental separation cost clears the price.
 
 (uranium-from-seawater)=
 ## Uranium from Seawater
@@ -150,41 +159,55 @@ separation cost clears the price.
 ### The Resource and the Arithmetic
 
 The oceans contain on the order of 4.5 billion tonnes of dissolved uranium
-against something like 17 million tonnes in identified terrestrial resources —
-more than a thousandfold more uranium in the sea than on land
-[@abney2017materials; @guidez2016extraction]. That is the entire case for
-extracting it, and it is a genuinely good case as far as it goes.
+against something like 17 million tonnes in conventional terrestrial resources
+— some 260 times more uranium in the sea than on land [@abney2017materials;
+@guidez2016extraction]. The ratio usually quoted is a thousandfold, and both of
+those sources quote it, but neither reconciles it with the
+seventeen-million-tonne denominator printed beside it; the larger ratio is taken
+against a narrower reserve base than the conventional-resource figure used here.
+Two hundred and sixty is what the two quantities above actually imply, and it is
+ample for the argument. That is the entire case for extracting it, and it is a
+genuinely good case as far as it goes.
 
 The concentration is about 3.3 parts per billion, roughly 3 µg/L
 [@ladshaw2016experiments; @guidez2016extraction]. Everything difficult follows
 from that number, and the difficulty is best appreciated by doing the
 arithmetic rather than by describing it. World uranium consumption is around
-65,000 tonnes a year. At 3 µg/L, supplying that from seawater means processing
-about 2 × 10¹³ tonnes of seawater annually, and with a sorbent that picks up
-roughly 2 g of uranium per kilogram per month of immersion and survives about
-six deployment cycles, a plant producing 1,200 tonnes of uranium a year — under
-two percent of world demand — needs its sorbent spread across more than a
-thousand square kilometres of ocean [@guidez2016extraction].
+65,000 tonnes a year. At 3 µg/L, supplying that from seawater means stripping
+every gram of uranium out of about 2 × 10¹³ tonnes of seawater annually — the
+volume of the North Sea — and that figure is a floor, because it assumes
+complete recovery. The cost models built on that arithmetic take a sorbent that
+picks up roughly 2 g of uranium per kilogram over a sixty-day deployment and
+survives about six such deployments; on those numbers a plant producing 1,200
+tonnes of uranium a year — under two percent of world demand — needs its sorbent
+spread across more than a thousand square kilometres of ocean
+[@guidez2016extraction].
 
 There is a counter-argument, and it is worth stating fairly because it is the
 strongest form of the optimistic case. The uranium is not stationary. The Kuro
 Shio current carries something like 5.2 million tonnes of uranium past Japan
-each year, against a Japanese consumption of around 8,000 tonnes
-[@guidez2016extraction]. You do not have to process the ocean; you have to
-stand in a river of it and let it come to you. Whether that is an answer or a
-restatement of the problem depends entirely on how much sorbent it takes to
-intercept a useful fraction, which is exactly the question the deployment
-literature below is trying to answer.
+each year, against a Japanese consumption of around 8,000 tonnes before
+Fukushima [@guidez2016extraction]. You do not have to process the ocean; you
+have to stand in a river of it and let it come to you. Whether that is an
+answer or a restatement of the problem depends entirely on how much sorbent
+it takes to intercept a useful fraction, which is exactly the question the
+deployment literature below is trying to answer.
 
 ### The Speciation Problem
 
-Uranium in seawater is not free uranyl. At pH 8.1 and 2.3 mM total carbonate it
-is almost entirely the calcium uranyl tricarbonate complex Ca₂UO₂(CO₃)₃, a
-neutral species; molecular dynamics of the solvation shell shows that one sodium
-ion associates closely enough with the anionic form to leave an effective charge
-near +1 [@wu2016solvation]. Alkaline-earth triscarbonatoactinyl(VI) complexes
-of this kind are the predominant form of U(VI) in essentially all natural
-carbonate-bearing waters [@reiller2024predominance].
+Uranium in seawater is not free uranyl. At pH 8.1 and about 2 mM total
+carbonate it is predominantly the neutral calcium uranyl tricarbonate complex
+Ca₂UO₂(CO₃)₃ — roughly 58 % of the dissolved uranium, with CaUO₂(CO₃)₃²⁻ and
+MgUO₂(CO₃)₃²⁻ near 18 % each and the free UO₂(CO₃)₃⁴⁻ anion at only about 6 %.
+Molecular dynamics of the solvation shell shows that one sodium ion sits close
+enough to that neutral complex — 5.25 Å from the uranium, bridged by a water
+molecule — that the whole assembly behaves as a Na[Ca₂UO₂(CO₃)₃]⁺ cation of
+effective charge +1 [@wu2016solvation]. Alkaline-earth triscarbonatoactinyl(VI)
+complexes of this kind are the predominant form of U(VI) in natural
+carbonate-bearing waters, though how the total divides between the neutral
+Ca₂UO₂(CO₃)₃ and the singly complexed AeUO₂(CO₃)₃²⁻ anions in seawater turns
+out to depend sensitively on which ion-interaction coefficients the calculation
+uses, and is not settled [@reiller2024predominance].
 
 This is the central difficulty, and it is not a mass-transfer difficulty. A
 sorbent that binds uranium from seawater has to strip uranyl out of a very
@@ -192,9 +215,11 @@ stable, essentially neutral, sterically crowded tricarbonate complex — competi
 not against water but against three carbonates and two calciums. It has to do
 this while surrounded by sodium at 0.5 M, magnesium at 53 mM, and calcium at 10
 mM, which is to say by competitors present at seven to eight orders of magnitude
-higher concentration than the target. Bicarbonate itself competes for sorbent
-sites, and the alkaline-earth binding kinetics are slow enough to matter over
-the timescales of a real deployment [@ladshaw2016experiments].
+higher concentration than the target. Bicarbonate makes it worse by competing
+with the amidoxime ligand for the uranium itself, and calcium and magnesium
+occupy so many of the sites that the time for uranium uptake to reach
+equilibrium in a simulated-seawater batch roughly doubles, from about five days
+to about ten [@ladshaw2016experiments].
 
 ### Amidoximes, and the Correction
 
@@ -227,30 +252,35 @@ shows.
 The dominant competitor for amidoxime sorbents in real seawater is not calcium
 or magnesium. It is {index}`vanadium`, present at around 2 µg/L — comparable to
 uranium — and bound so tightly that it is difficult to elute and difficult to
-displace. Extended X-ray absorption fine structure on loaded sorbents settled
-the mechanism: open-chain amidoxime does not bind vanadium appreciably at all.
-Vanadium is bound solely by the cyclic imide-dioxime groups, which form a
-non-oxido V⁵⁺ complex with the highest V⁵⁺ stability constant ever reported
-[@ivanov2017origin]. The very cyclization that makes the sorbent good at
-uranium is what makes it worse at rejecting vanadium.
+displace. Potentiometric and calorimetric titrations, ab initio simulations and
+X-ray absorption fine structure on sorbents recovered from seawater together
+settled the mechanism: the open-chain amidoxime group does not bind vanadium at
+all under these conditions. Vanadium is bound solely by the cyclic
+imide-dioxime groups, which form a rare non-oxido V⁵⁺ complex, [V(IDO)₂]⁻,
+whose log β of 53.5 is the highest stability constant reported for any V(V)
+species [@ivanov2017origin]. The very cyclization that makes the sorbent good
+at uranium is what makes it worse at rejecting vanadium.
 
 That result reframed the design problem, and two lines of response followed.
-One is to abandon the amidoxime family for a preorganized ligand whose cavity
-suits uranyl's equatorial plane and not vanadium's coordination preference:
-2,6-pyridinedicarboxamidoxime-type architectures give log K₁ = 16.5 for UO₂²⁺
-against 7.4 for V(IV) and 7.3 for V(V), a selectivity gap of nine orders of
-magnitude in stability constant [@lashley2016highly]. The other is to build
-selectivity into a scaffold rather than a single ligand: a bio-inspired
-2-aminobenzamidoxime nano-trap reaches 530 mg/g at high concentration and
-4.36 mg/g in real seawater, roughly triple the then-current benchmark
-[@sun2018bio], and a DNA-based uranyl extraction host achieves 6.06 mg/g with a
-measured 18.95-fold selectivity for uranium over vanadium [@yuan2020dna]. A
-third line borrows from biology's own solution to binding a metal at vanishing
-concentration: siderophore-inspired chelators such as H₂BHT are designed around
-the hydroxamate and catecholate motifs that microorganisms use to scavenge iron
+One is to abandon the amidoxime family for a preorganized ligand whose donor
+set is arranged to complement uranyl's equatorial plane and not vanadium's
+coordination preference: the rigid tetradentate ligand
+1,10-phenanthroline-2,9-dicarboxylic acid gives log K₁ = 16.5 for UO₂²⁺ against
+7.4 for V(IV) as VO²⁺ and 7.3 for V(V) as VO₂⁺, both at 25 °C and zero ionic
+strength — a selectivity gap of nine orders of magnitude in stability constant
+[@lashley2016highly]. The other is to build selectivity into a scaffold rather
+than a single ligand: a bio-inspired 2-aminobenzamidoxime nano-trap reaches 530
+mg/g at high concentration and 4.36 mg/g in real seawater, roughly triple the
+then-current benchmark [@sun2018bio], and a DNA-based uranyl-binding hydrogel
+achieves 6.06 mg/g in natural seawater with a measured selectivity for uranium
+over vanadium of roughly nineteenfold — the paper's abstract and figure say
+18.95 and its own text says 17.95 [@yuan2020dna]. A third line borrows from
+biology's own solution to binding a metal at vanishing concentration:
+siderophore-inspired chelators such as H₂BHT are designed around the
+hydroxamate and catecholate motifs that microorganisms use to scavenge iron
 from seawater [@ivanov2019siderophore]. Reviews of the broader nanomaterial and
-functional-material effort survey several hundred such systems
-[@wu2023functional; @zhang2023uranium].
+functional-material effort tabulate well over a hundred such systems between
+them [@wu2023functional; @zhang2023uranium].
 
 Morphology is the other lever, and it is easy to undervalue. The binding site
 does no good if seawater cannot reach it, so a large fraction of the improvement
@@ -289,76 +319,119 @@ Three further deployment findings deserve to be recorded because they are the
 kind of thing that never appears in a synthesis paper:
 
 - **Biofouling costs up to 30 % of capacity at 42 days** when the sorbent is
-  exposed to light, and the recommended mitigation is to deploy below the photic
-  zone rather than to add a biocide [@park2016effect; @gill2016uranium]. No
-  toxicity to marine organisms was observed from the sorbent itself.
+  exposed to light, and the recommended mitigation is to deploy below the
+  photic zone — at the cost of deeper operations in colder water, where the
+  adsorption itself is slower [@park2016effect; @gill2016uranium]. No
+  toxicity was seen in Microtox assays of column effluent from any adsorbent
+  tested, and toxicity could be induced with some non-amidoxime materials only
+  at adsorbent-to-seawater ratios far above anything a deployment would
+  produce.
 - **Flow matters, but only in the right geometry.** Current velocity has
-  essentially no effect on uptake in packed columns and a near-linear effect in
-  flume experiments, because the braided sorbent flutters in a current and the
-  fluttering is what renews the boundary layer [@ladshaw2017influence]. This is
-  a mass-transfer result of exactly the kind [](#kinetics-and-mass-transfer)
+  essentially no effect on uptake in packed columns over 0.29–10.2 cm/s and a
+  near-linear effect in flume experiments, which the authors attribute both to
+  the flow resistance of the braid and to the braid fluttering more vigorously
+  as the current rises [@ladshaw2017influence]. A column run at 10.2 cm/s gives
+  the same mass-transfer coefficient as a flume current of only 2.61 cm/s. This
+  is a mass-transfer result of exactly the kind [](#kinetics-and-mass-transfer)
   describes, and it means column data systematically mispredict field
   performance.
-- **Farm density has a threshold.** Below about 1,800 braids per square
-  kilometre, a sorbent farm does not measurably deplete or divert the current it
-  sits in [@gill2016uranium]. Above it, the farm competes with itself.
+- **A farm perturbs the ocean, but less than a kelp forest does.**
+  Hydrodynamic modelling of a 670-square-kilometre farm at 1,780 moorings per
+  square kilometre gives a 4–10 % reduction in ambient currents, against up to
+  50 % through a natural kelp forest, and a much smaller simulated farm drew
+  the local uranium concentration down by at most 0.3 % [@gill2016uranium].
+  Neither simulation has been run at the density or the area a production farm
+  would need, so self-competition remains an open question rather than a
+  bounded one.
 
 Different laboratories measuring the same material do not agree closely: WHOI
 column and flume measurements ran 15 % and 55 % higher, respectively, than the
-PNNL values [@gill2016uranium]. Any capacity figure in this literature should be
-read with that spread in mind. Integrated first-principles models that couple
-speciation, site competition and transport now exist and reproduce the field
-data reasonably well [@ladshaw2018first], which is the right way to compare
-materials measured in different rigs.
+PNNL column values [@gill2016uranium]. Any capacity figure in this literature
+should be read with that spread in mind. Integrated first-principles models
+that couple aqueous speciation to site competition now exist: DFT-derived
+binding constants for uranium and vanadium, fed into an equilibrium adsorption
+model, reproduce batch uptake in simulated seawater over the pH range 7.5–9,
+which brackets the pH of the ocean [@ladshaw2018first]. They have not yet been
+tested against field data, which is what comparing materials measured in
+different rigs would require.
 
 ### Elution and Reuse
 
 Recovering the uranium from the loaded sorbent is a separation problem in its
 own right, and it constrains material design more than it is usually credited
 with. Alkali conditioning before deployment is necessary — infrared
-spectroscopy shows it converts the grafted groups to the binding form — and
-either sodium carbonate with hydrogen peroxide or dilute hydrochloric acid
-removes about 95 % of the loaded uranium. The carbonate–peroxide route is more
-selective; the acid route strips more of everything. Iron and vanadium are the
-species that accumulate and poison the sorbent across cycles, and Tiron (1 M, at
-around pH 7) is effective at removing the iron [@pan2016elution]. Poly(imide
-dioxime) nanofibre has been eluted at 98.5 % efficiency over more than eight
-cycles [@wang2018significantly].
+spectroscopy shows it strips the proton from the grafted carboxylic acid, though
+it also converts some of the amidoxime to carboxylate — and either sodium
+carbonate with hydrogen peroxide (1 M each) or 0.5 M hydrochloric acid removes
+about 95 % of the uranium loaded over a 42-day seawater exposure. The
+carbonate–peroxide route is the more selective, taking only about a quarter of
+the iron and a third of the vanadium with the uranium and leaving nickel,
+copper, manganese and cobalt behind entirely; the acid route strips the other
+transition metals too. Tiron at around pH 7 then removes 94 % of the iron
+without altering the sorbent's infrared spectrum, but nothing tested removed
+the vanadium, which comes off only in acid above 3 M at 60 °C, and that
+treatment destroys the sorbent [@pan2016elution]. Poly(imide dioxime) nanofibre
+has been eluted at 98.5 % efficiency by carbonate–peroxide on the first cycle,
+but over eight adsorption–desorption cycles in seawater spiked to 8 ppm uranium
+that efficiency falls to 83.5 % and the capacity declines about 5 % per cycle
+[@wang2018significantly].
 
 ### The Honest Capacity Trajectory
 
 It is worth setting the numbers out in order, because the trend is real and the
 extrapolation is not:
 
-| Milestone | Capacity in natural seawater | Source |
-|---|---|---|
-| State of the art, 2013 | 3.2 g U/kg | @kim2013recovery |
-| AF1, 56-day marine testing, 2016 | 3.9 ± 0.2 g U/kg | @gill2016uranium |
-| Bio-inspired nano-trap, 2018 | 4.36 g U/kg | @sun2018bio |
-| Blow-spun PIDO nanofibre, 56 d flow-through, 2018 | 8.7 g U/kg | @wang2018significantly |
+| Milestone | Capacity in natural seawater | Basis | Source |
+|---|---|---|---|
+| State of the art, 2013 | 3.2 g U/kg | 180-day exposure | @kim2013recovery |
+| AF1, 2016 | 3.9 ± 0.2 g U/kg | 56 d, flow-through column | @gill2016uranium |
+| AF8 poly(imide dioxime), 2016 | 4.48 g U/kg | 56 d, flow-through column | @das2016novel |
+| Bio-inspired POP nano-trap, 2018 | 4.36 g U/kg | 56 d, shaken tank | @sun2018bio |
+| Blow-spun PIDO nanofibre, 2018 | 8.7 g U/kg | 56 d, flow-through | @wang2018significantly |
 
-Roughly a factor of 2.7 in a decade, with the best value coming from a material
-whose capacity in 8 ppm spiked solution is 951 g/kg — a hundredfold higher than
-what it achieves in the sea [@wang2018significantly]. That ratio is the honest
-summary of the field: the chemistry is not the limitation, the feed is. Every
-material in the table is better than its predecessor and none of them changes
-the arithmetic in the resource section by an order of magnitude.
+The basis column is there because without it the rows are not comparable and the
+trend is easy to overstate. The 2013 figure is an equilibrium loading reached
+over 180 days, not 56; the nano-trap was five milligrams of sorbent shaken in a
+tank of seawater rather than a column with the ocean running through it. On the
+three rows that were measured the same way — 56-day flow-through in natural
+seawater — capacity went from 3.9 to 8.7 g U/kg between 2016 and 2018, a factor
+of 2.2 in two years. The best of them is a material whose capacity in natural
+seawater spiked to 8 ppm is 951 g/kg, a hundredfold higher than what it achieves
+in the sea [@wang2018significantly]. That ratio is the honest summary of the
+field: the chemistry is not the limitation, the feed is. Every material in the
+table is better than its predecessor and none of them changes the arithmetic in
+the resource section by an order of magnitude.
 
-Cost estimates exist and vary widely enough that reviewing them is its own
-exercise [@lindner2015review]. This book will not quote a dollar figure for
-seawater uranium, because the published estimates rest on assumptions about
-sorbent lifetime, deployment cost and reuse count that the deployment data
-above do not yet constrain. What can be said with confidence is the physical
-arithmetic: about 2 g of uranium per kilogram of sorbent per month, around six
-reuses, and over a thousand square kilometres of sea for under two percent of
-world demand [@guidez2016extraction]. A reader who wants a cost can multiply
-those by their own assumptions and will learn more from doing so than from
-quoting someone else's.
+Cost estimates exist, and reviewing them is its own exercise
+[@lindner2015review]. That review's headline is that the most recent estimates
+it covers put uranium from seawater at \$400–\$1,000/kg U against a 2014 spot
+price at or below \$100/kg, and its closing verdict is that none of the reviewed
+systems is economically competitive with terrestrial mining. Across the full
+five decades it tabulates, normalized to 2010 dollars, the estimates run from
+\$210/kg U to \$3,400/kg U. That factor of sixteen is the number worth
+remembering, and it is not measurement scatter: it is the propagated effect of
+assumptions about capacity, sorbent lifetime and reuse count, which is why the
+durability paragraph above matters more to a cost than any chemistry in this
+chapter does. This book quotes the range and endorses no point inside it.
+
+The physical arithmetic underneath is firmer, but read it in the right
+direction. The cost models are built on a sorbent capacity of 2 g of uranium
+per kilogram over sixty days of immersion, six reuses with a 5 % efficiency
+loss per chemical rinse, and, on those inputs, over a thousand square
+kilometres of sea for a plant making 1,200 tonnes a year — under two percent of
+world demand [@guidez2016extraction]. The 2 g/kg is a laboratory point value.
+The same paper reports that JAEA's actual marine campaigns averaged **less than
+1 g of uranium per kilogram per month**, and says so in as many words: the field
+performance is "much lower" than the ideal laboratory figures. A reader who
+wants a cost can multiply these by their own assumptions, and will learn more
+from doing so — particularly from halving the capacity — than from quoting
+someone else's answer.
 
 Electrochemical approaches — driving uranium uptake with an applied potential
-rather than relying on passive equilibrium — are the most active recent
-alternative to passive sorbents, and they change the kinetics rather than the
-concentration [@raj2024electrochemical]. They belong to the same family as the
+rather than relying on passive equilibrium — are a rapidly expanding recent
+alternative to passive sorbents, and what they are claimed to buy is speed and
+efficiency of uptake, not any change in the concentration of the feed
+[@raj2024electrochemical]. They belong to the same family as the
 methods in [](#electrochemical-separations).
 
 ## Reprocessing: Uranium and Plutonium from Spent Fuel
@@ -396,24 +469,26 @@ The modern answer is salt-free complexant-reductants, and the chemistry is
 directly relevant to the rest of this chapter. Simple hydroxamic acids —
 formohydroxamic acid (FHA) and acetohydroxamic acid (AHA) — complex Pu(IV)
 strongly and hold it in the aqueous phase, separating uranium from both
-neptunium and plutonium, and their degradation products are gases and organics
-rather than metal salts [@birkett2005recent]. The mechanism is not a simple
-complexation: the Pu(IV)–hydroxamate complex undergoes slow reduction to
-Pu(III), and careful work establishes that the reductant is the hydroxamic acid
-itself rather than any added hydroxylamine, with acid hydrolysis of the
-hydroxamate competing on a similar timescale [@carrott2008oxidation]. The
+neptunium and plutonium without the salt loading that sulfate or ferrous
+sulfamate stripping imposes on the waste [@birkett2005recent]. The mechanism is
+not a simple complexation: the Pu(IV)–hydroxamate complex undergoes slow
+reduction to Pu(III), and careful work establishes that the reductant is the
+hydroxamic acid itself rather than any added hydroxylamine, with acid hydrolysis
+of the hydroxamate competing on a similar timescale [@carrott2008oxidation]. The
 design of an AHA-based flowsheet is therefore a kinetics problem, which is
 [](#kinetics-and-mass-transfer)'s subject.
 
-The connection worth noticing is that glutarimidedioxime — the cyclic
-imide-dioxime that does the binding in seawater sorbents — also works as a
-salt-free complexant-reductant for plutonium. It strips plutonium from 30 %
-TBP/kerosene into 1 M nitric acid at organic-to-aqueous ratios up to 10:1, fast
-enough for centrifugal contactors [@xian2016glutarimidedioxime]. The same ligand
-family that pulls uranium out of the ocean at three parts per billion pulls
-plutonium out of a reprocessing solvent at grams per litre. Ligand design
-transfers across concentration regimes far more readily than process design
-does, and this is a clean example.
+There is a connection here that looks appealing, and this book will not make it.
+Glutarimidedioxime — the cyclic imide-dioxime that does the binding in seawater
+sorbents — was reported in 2016 to work also as a salt-free
+complexant-reductant for plutonium, stripping it from TBP/kerosene into nitric
+acid fast enough for centrifugal contactors. That paper was retracted by the
+journal in 2021 [@xian2016glutarimidedioxime; @xian2021retraction], and no
+replacement result has appeared. The underlying idea — that ligand design
+transfers across concentration regimes more readily than process design does —
+may well be right, and the amidoxime chemistry of [](#uranium-from-seawater) is
+suggestive. It is not established by this example, and the book carries no
+number from it.
 
 ### The Awkward Fission Products
 
@@ -450,11 +525,12 @@ is not.
 The problem: after PUREX has taken out the uranium and plutonium, the raffinate
 contains americium and curium — which dominate the long-term heat load and
 radiotoxicity of the waste and are therefore the elements you most want to
-transmute — mixed with fission-product lanthanides at ten to twenty times their
-concentration [@zsabka2023beyond]. The lanthanides have large neutron capture
-cross-sections and would poison any transmutation target. So Am and Cm must be
-separated from Nd, Sm, Eu and the rest, at trivalent charge, at nearly identical
-ionic radius.
+transmute — mixed with fission-product lanthanides in large and unfavourable
+mass excess [@zsabka2023beyond]. The lanthanides have large neutron capture
+cross-sections that would hinder transmutation of the minor actinides, and it
+is that mass ratio together with the chemical similarity that makes the
+separation demanding [@modolo2012review]. So Am and Cm must be separated from
+Nd, Sm, Eu and the rest, at trivalent charge, at nearly identical ionic radius.
 
 That is the [](#why-rare-earths-are-hard-to-separate) problem exactly. The
 difference is 5f covalency: soft nitrogen and sulfur donors bind An(III)
@@ -491,21 +567,24 @@ in *n*-dodecane, with CDTA masking, a citrate-buffered acetohydroxamic acid
 scrub for molybdenum, citrate-buffered DTPA for the An/Ln split, and a TEDGA
 strip for the lanthanides — run in 32 stages of 1 cm annular centrifugal
 contactors on a simulated PUREX raffinate. It recovered 95 % of the americium
-and curium, and lost 5 % of the actinides to carryover, which the authors
-attribute to having too few strip stages [@wilden2020countercurrent]. In the
-lanthanide product, lanthanum and cerium reported to the raffinate while Pr
-through Gd plus yttrium reported to the lanthanide stream.
+and curium into a clean actinide product, losing the remaining 5 % to the
+lanthanide stream, which the authors attribute to having too few actinide
+stripping stages [@wilden2020countercurrent]. Among the lanthanides themselves,
+lanthanum and cerium reported to the raffinate while Pr through Gd plus yttrium
+reported to the lanthanide product.
 
 **The transferable number is this.** With a genuine chemical difference to
 exploit — 5f covalency, worth orders of magnitude in a soft-donor stability
 constant — a 32-stage countercurrent bank achieves a 95 % split. In the
 lanthanide series, where the only difference is about one percent in ionic
 radius and separation factors sit near 1.5, [](#why-rare-earths-are-hard-to-separate)
-shows you need on the order of a hundred stages for comparable purity. Covalency
-buys roughly a threefold reduction in stage count for the same job, and it is
-the single largest chemical advantage anyone in f-element separations has. That
-is both encouraging and sobering: encouraging because it shows what a real
-electronic-structure difference is worth, sobering because even with it the
+shows you need on the order of a hundred stages for 99.99 % purity. The two
+numbers are not a like-for-like comparison — recovering 95 % of a minor
+component is a different duty from taking a major one to four nines — so the
+ratio between them is not a stage-count law. What it does show is that covalency
+is the single largest chemical advantage anyone in f-element separations has,
+and that is both encouraging and sobering: encouraging because it shows what a
+real electronic-structure difference is worth, sobering because even with it the
 process is a 32-stage bank of centrifugal contactors, not a clever one-pot
 trick.
 
@@ -515,23 +594,29 @@ Separation chemistry does not end at the plant boundary, and the environmental
 behaviour of these elements is a separations problem run in reverse: the
 question is not how to concentrate them but why they will not stay put.
 
-At nuclear legacy sites, the mobility of uranium and plutonium is controlled by
-speciation and by colloids rather than by bulk solubility
-[@romanchuk2020speciation]. Plutonium in particular travels attached to
-intrinsic or pseudo-colloids far beyond where its solubility would predict,
-which is the same phenomenon that makes third-phase formation and crud a
-nuisance in solvent extraction — a nominally dissolved species that is actually
-a suspended one.
+At nuclear legacy sites, the mobility of uranium and plutonium is set by
+speciation rather than by bulk solubility: for uranium by redox state and by
+kinetically limited surface complexation, for plutonium by colloids
+[@romanchuk2020speciation]. Over 95 % of the plutonium found in groundwater in
+two aquifers 1.3 km from an underground test at the Nevada site was carried on
+clay and zeolite colloids rather than dissolved, travelling far beyond where its
+solubility would predict, which is the same phenomenon that makes third-phase
+formation and crud a nuisance in solvent extraction — a nominally dissolved
+species that is actually a suspended one.
 
 The microbial route is more directly a separations technology. Dissimilatory
 metal-reducing bacteria reduce soluble U(VI) to sparingly soluble U(IV),
-immobilizing it, and phosphatase-active organisms precipitate uranyl phosphate
-biominerals; both have been demonstrated in DOE field trials, and the same
-biogeochemistry governs technetium, neptunium, plutonium, americium, iodine,
-strontium and caesium [@newsome2014biogeochemistry; @campbell2015biogeochemical].
-That is a redox-driven precipitation separation carried out by an organism, and
-it belongs in the same conversation as
-[](#biological-and-biomimetic-separations) and
+immobilizing it, and phosphatase-active organisms liberate inorganic phosphate
+that precipitates U(VI) as uranyl phosphate biominerals. Only the first has
+reached the field, in biostimulation trials at the US Department of Energy sites
+at Old Rifle, Oak Ridge and Shiprock; uranium phosphate biomineralisation is
+still column and microcosm work, and both reviews are careful to say that the
+long-term stability of the bioreduced U(IV) is not yet established. The same
+microbial redox chemistry is reviewed for technetium, neptunium, plutonium,
+americium, iodine, strontium and caesium
+[@newsome2014biogeochemistry; @campbell2015biogeochemical]. That is a
+redox-driven precipitation separation carried out by an organism, and it belongs
+in the same conversation as [](#biological-and-biomimetic-separations) and
 [](#precipitation-and-selective-crystallization). The rare earth version — using
 biology to reduce or precipitate selectively — is far less developed, and the
 actinide field is a useful source of both methods and cautionary results.
@@ -551,21 +636,27 @@ chemistry of civil reprocessing and of environmental remediation, drawn from the
 open peer-reviewed literature, and it is presented at the level of ligand design
 and flowsheet structure that the published literature treats.
 
-**There is no cost comparison between seawater and terrestrial uranium.** As
-noted above, the published estimates span a range wide enough that reviewing
-them is a paper in itself [@lindner2015review], and the deployment parameters
-they depend on — sorbent lifetime, number of reuses, marine operations cost —
-are precisely the parameters the field measurements have not pinned down. The
-physical arithmetic of @guidez2016extraction is quoted instead because it can be
-checked.
+**There is no single cost figure for seawater uranium.** The published range is
+quoted above, because it is a real published range and a reader is entitled to
+it, but no point inside it is endorsed here. The deployment parameters those
+estimates depend on — sorbent lifetime, number of reuses, marine operations
+cost — are precisely the parameters the field measurements have not pinned
+down, and a spread of sixteen between the extremes of the reviewed estimates is
+a statement about the assumptions rather than about the ocean
+[@lindner2015review]. The physical arithmetic of @guidez2016extraction is
+quoted alongside it because it can be checked.
 
 **Sorbent regeneration and multi-cycle durability is the least settled number in
-the seawater literature.** Elution efficiencies of 95–98.5 % are reported over
-up to eight cycles [@pan2016elution; @wang2018significantly], while the
-economic arithmetic assumes about six reuses [@guidez2016extraction], and iron
-and vanadium accumulation is known to degrade performance across cycles without
-a published number for how many cycles a real marine deployment survives. Every
-cost estimate in the field is more sensitive to this parameter than to sorbent
+the seawater literature.** About 95 % of the uranium is eluted after a single
+42-day seawater exposure [@pan2016elution], and the one material taken through
+eight adsorption–desorption cycles — in seawater spiked to 8 ppm uranium, not in
+the sea as it is — started at 98.5 %, ended at 83.5 %, and lost roughly 5 % of its capacity per
+cycle [@wang2018significantly]. Against that, the economic arithmetic assumes
+about six reuses [@guidez2016extraction], and other published cost models have
+assumed eighteen, twenty or twenty-five [@lindner2015review]. Iron and vanadium
+accumulation is known to degrade performance across cycles without a published
+number for how many cycles a real marine deployment survives. Every cost
+estimate in the field is more sensitive to this parameter than to sorbent
 capacity, and it is the one nobody has measured under deployment conditions.
 
 ## What Carries Back to Rare Earths
@@ -575,9 +666,10 @@ Four things in this chapter are worth taking back to a rare earth problem.
 *Shape can substitute for size.* The uranyl equatorial plane gives a selectivity
 handle that has no lanthanide equivalent, and the preorganized ligands built for
 it [@lashley2016highly] achieve stability-constant gaps of nine orders of
-magnitude against a competitor of similar charge and abundance. The lanthanides
-offer no such geometric target, which is a real and often unstated reason why
-rare earth ligand design has been less rewarding than uranyl ligand design.
+magnitude against vanadium, a competitor of comparable seawater abundance. The
+lanthanides offer no such geometric target, which is a real and often unstated
+reason why rare earth ligand design has been less rewarding than uranyl ligand
+design.
 
 *Redox is worth more than any ligand when it is available.* Plutonium is
 separated from uranium industrially by changing an oxidation state, not by
@@ -594,7 +686,7 @@ dilute-feed opportunity — produced water, mine drainage — it is always for t
 same reason: someone else is already paying to pump the fluid.
 
 *Measure in the real matrix.* A hundredfold gap between capacity in spiked
-solution and capacity in the sea [@wang2018significantly], a 15–55 % spread
+seawater and capacity in the sea as it is [@wang2018significantly], a 15–55 % spread
 between two laboratories on the same material [@gill2016uranium], and a mass
 balance in which the target metal is seventh by mole [@gill2016uranium] are
 findings that only a field program produces. The rare earth literature has far

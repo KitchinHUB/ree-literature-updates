@@ -170,19 +170,28 @@ found by OpenAlex search and every one was verified against its CrossRef record
 for title, authors, journal and year before it was cited; none duplicated an
 entry already in the bibliography. The chapter's exposure is the same as
 Chapters 12 and 15's and is handled the same way — where no abstract was
-reachable, no number was taken. Five sources fall in that category:
-@lindner2015review, @das2016novel, @seredkin2016situ, @kim2016potential and
-@campbell2015biogeochemical are cited for what their titles and metadata assert
-and for nothing numerical.
+reachable, no number was taken. Five sources fell in that category at first
+drafting — @lindner2015review, @das2016novel, @seredkin2016situ,
+@kim2016potential and @campbell2015biogeochemical — and were cited for what
+their titles and metadata assert and for nothing numerical. That constraint has
+since been lifted for all five; the paragraph below on the full-text pass
+records what happened when they were read.
 
-One of those absences shapes a section. @lindner2015review is a review of cost
-estimates for uranium from seawater, and its abstract is elided by every
-interface reachable from this project; the accepted manuscript returns HTTP 403.
-Rather than quote a dollar figure from a secondary description of it, the
-chapter quotes only the physical arithmetic of @guidez2016extraction — grams of
-uranium per kilogram of sorbent per month, reuse count, area of sea — and says
-in "What This Chapter Does Not Contain" that it declines to give a cost. That is
-a deliberate hole and the chapter names it as one.
+One deliberate omission shapes a section, and it changed shape when the source
+was finally read. @lindner2015review is a review of cost estimates for uranium
+from seawater, and while it was unreachable the chapter declined to quote any
+dollar figure at all — a refusal resting on our own lack of access rather than
+on anything about the literature. With the paper in hand that refusal was no
+longer honest, so the chapter now quotes the review's own range (\$400–\$1,000/kg
+U for the most recent estimates it covers, \$210 to \$3,400 across the full fifty
+years in 2010 dollars) together with its verdict that none of the reviewed
+systems is economically competitive with terrestrial mining. What the chapter
+still declines to do is endorse a point inside that range, and the reason is now
+a stated property of the sources: the spread is the propagated effect of
+capacity and reuse assumptions that no field measurement constrains. The
+physical arithmetic of @guidez2016extraction is quoted beside it, with the
+distinction the paper itself draws between the 2 g/kg laboratory input to those
+cost models and the under-1 g/kg/month its marine campaigns actually averaged.
 
 ## Material deliberately dropped
 
@@ -534,6 +543,61 @@ conditions rather than molecules, the splits are {Eu, Dy, Ho} from Nd and Eu
 from {Dy, Ho}, and Dy/Ho --- the one adjacent pair in the set --- stays
 together. All of that is read from the abstract, which the text states.
 `needs-journal-access.md` lists all four.
+
+**Chapter 22, read against thirty-seven full texts — and a retracted paper the
+whole pipeline had missed.** The chapter was written from abstracts and
+metadata. Full texts were afterwards obtained for thirty-seven of its
+sources — every one for which a copy could be had — renamed by citation key,
+and read against the sentences citing them. Six parallel readers each took a
+group of keys and reported byte-exact proposed corrections rather than editing
+the chapter, so that every change could be adjudicated in one place; the
+overlapping proposals were merged by hand, and where two readers disagreed the
+primary source settled it.
+
+The errors it found fall into four kinds, and naming them is more useful than
+counting them. **A number attached to the wrong paper inside a
+multi-source bracket:** "elution efficiencies of 95–98.5 % over up to eight
+cycles" was cited to @pan2016elution and @wang2018significantly jointly, but
+@pan2016elution runs no cycling experiment at all, and the eight-cycle series
+belongs entirely to the other paper — which ends that run at 83.5 %, not 98.5 %.
+**Measurement conditions dropped, so that non-comparable figures sat in one
+column:** the capacity-trajectory table put a 180-day equilibrium loading, a
+shaken-tank batch and two flow-through column tests side by side and drew a
+trend line through them. It now carries a basis column, an additional row from
+@das2016novel that the abstract-level pass had missed, and a paragraph saying
+which three rows are actually comparable. **Arithmetic contradicting itself
+across one sentence:** the chapter printed 4.5 billion tonnes of uranium in the
+sea against 17 million tonnes on land and called the ratio "more than a
+thousandfold." It is 260. The thousandfold figure is real and both cited
+sources use it, against a narrower reserve base than the one printed beside it;
+the chapter now says so. **And one ligand misnamed outright:** three stability
+constants cited to "2,6-pyridinedicarboxamidoxime-type architectures" are in
+fact those of 1,10-phenanthroline-2,9-dicarboxylic acid, which is in
+@lashley2016highly's title. No such amidoxime appears anywhere in that paper.
+The invented name reads as 2,6-pyridinedicarboxylic acid with an amidoxime
+suffix grafted on, and that acid is in the paper — as the less preorganized
+foil the phenanthroline is meant to beat — so the sentence pointed at the losing
+ligand while quoting the winner's numbers. Two mechanisms had likewise been swapped: in
+@ladshaw2016experiments, bicarbonate competes with the sorbent for uranium in
+solution while calcium and magnesium occupy the binding sites, and the chapter
+had said the reverse.
+
+The same pass exposed a gap in every stage described above. A reader pointed
+out that @xian2016glutarimidedioxime — cited for a glutarimidedioxime
+complexant-reductant recovering plutonium from reprocessing raffinate — had
+been **retracted by *Angewandte Chemie* in 2021**. Every check in stages 1
+through 4 had passed it: the DOI resolves, the metadata matches, the paper says
+what the chapter said it said. None of them asks whether the paper still
+stands. All 706 DOI-bearing entries were therefore queried against CrossRef's
+`updated-by` relation, which is where retractions, withdrawals, removals and
+expressions of concern are filed. That one entry is the only retraction in the
+bibliography. Three entries carry a `correction` relation — @yin2024preparation,
+@muratov2020qsar and @taylor2023architector — and each was checked by hand; none
+of the three carries a number the book depends on. The chapter's paragraph on
+that plutonium result now records the retraction instead of the result, the
+entry carries a `note` saying it is cited only to record its own retraction, and
+the retraction notice is itself a bibliography entry. Retraction status is now
+part of what gets checked when `references.bib` changes.
 
 (sources-not-synthesized)=
 ## Two books, read by chapter
