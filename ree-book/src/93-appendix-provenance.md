@@ -415,6 +415,61 @@ out of section IR-3.5 of the book itself. The DOE final report was supplied as
 reach, so it is cited for no more than its title asserts, as the recent review
 of solvent extraction from acidic media.
 
+**Chapter 9, read against the papers themselves.** The microfluidics chapter was
+the one place in the book that still carried an explicit warning to the reader:
+one of its three source documents came with its author's caution that references
+without a URL might be fabricated. That warning has been discharged rather than
+left standing. Thirty full texts --- every reference in the chapter for which a
+copy could be obtained --- were retrieved, renamed by citation key, and read, and
+the chapter was rewritten against them. Seventeen of its keys have no obtainable
+copy and are now either hedged in the text or carry no number at all.
+
+What the reading changed is worth recording, because most of it was not a matter
+of tightening prose:
+
+* The separation factor attributed to @fernandezmaza2024high was **279 in four
+  places. The paper reports 175.9**, for Dy/La at 20 s and pH 1. Corrected
+  everywhere.
+* The chapter asserted that no microfluidic study cited in it reported a
+  separation factor for an adjacent lanthanide pair. That was **false**:
+  @zhang2022solvent reports β for Ce/Pr, and the result is the most interesting
+  in the chapter --- the chip *matched* the shaken-equilibrium value at low
+  throughput (2.27 against 2.28) and *lost* selectivity as throughput rose, to
+  1.79. It refutes the naive form of the kinetic-selectivity argument the
+  chapter had been making, and the argument was rewritten around it.
+* The regime-comparison figure and its caption claimed an ordering of extraction
+  efficiency by interfacial area. @feng2025microfluidic's nine measurements, all
+  from one apparatus on one metal with one extractant, do not order that way ---
+  the bands overlap and co-laminar flow sits between slug and droplet. Enrichment
+  factor *does* order, in the opposite direction (0.99, 0.59, 0.142). The figure
+  script and caption now say so.
+* Two citations pointed at @dessimoz2010quantitative, which is a **gas--liquid**
+  study of CO₂ and water and cannot support a liquid--liquid regime boundary.
+  Both were moved to @dessimoz2008liquid, which measured the relevant systems and
+  found slug and parallel flow gave the *same* kLa. Nothing in the book now rests
+  on the 2010 paper; it survives in the bibliography only because this paragraph
+  names it.
+* "Eight lanthanides concentrated within about six minutes" was attributed to
+  @pesavento2021versatile. It is that paper's description of someone else's work.
+  Replaced with its own numbers.
+* @idros2018triple was cited for detecting six metals. Its own table shows its
+  mercury and lead detection limits sit **above** the corresponding safe limits.
+  The chapter now says which four elements the device can call and which two it
+  cannot.
+* The "20-500×" intensification headline is now bounded by the only two studies
+  that ran both sides of the comparison themselves: @kolar2016microfluidic
+  measured about 2× in the chip's favour, and @nelson2018micro measured a stirred
+  Lewis cell about 4× *faster* than the chip.
+* A design claim resting on @he2024intensifying --- that beyond about 250 mm of
+  channel a mini-channel extractor delivers more than one theoretical stage ---
+  was **deleted**. No copy of that paper could be obtained through any route, and
+  the chapter now states plainly that the number is not one it can source.
+* @yang2022pilot is likewise unobtainable. Its hundredfold numbering-up result is
+  retained only as its own authors describe it in their later open-access review,
+  @yang2024industry, and the text says so.
+
+The warning block is gone from the chapter, which is what the work was for.
+
 (sources-not-synthesized)=
 ## Two books, read by chapter
 

@@ -2,25 +2,32 @@
 
 A schematic, not data. The four panels are the four regimes of the chapter's
 "Flow Regimes and Configurations" section, in the order it lists them:
-co-laminar, slug, micro-droplet, pore-throat. The numbers beside each panel are
-that section's own: phase ratios 5:1 to 1:5 for co-laminar, mass transfer
-efficiencies of 86.9-94.8% for slug and 92.9-97.4% for micro-droplet, and
-50-250:1 phase ratios with 77% extraction at 500:1 and equilibrium within 30 s
-for pore-throat. Nothing is drawn to scale; the channel is the same width in
-every panel precisely so that the only thing changing down the figure is what
-the two phases do inside it.
+co-laminar, slug, micro-droplet, pore-throat. Nothing is drawn to scale; the
+channel is the same width in every panel precisely so that the only thing
+changing down the figure is what the two phases do inside it.
 
-The figure has one job beyond naming the regimes, which is to make the
-interfacial-area argument visible. The interface is drawn in a single colour in
-all four panels, so the reader can see it go from one flat line (co-laminar,
-where mass transfer is diffusion across a single plane) to the caps of a slug
-train, to the perimeter of every drop in a dispersion. That ordering is why the
-chapter's efficiency numbers rise down the list: same two phases, same channel,
-more interface.
+The numbers on the first three panels are all from one paper, and that is the
+point of putting them there. @feng2025microfluidic ran all three regimes in a
+single apparatus on a single chemistry -- scandium from a red mud acid leachate
+into 1 vol% P204 -- which is the only way to compare them without changing the
+extractant underneath. Extraction efficiency did not order itself by interfacial
+area: co-laminar flow (94.1-96.4%) sits between slug (86.9-94.8%) and droplet
+(92.9-97.4%), and the three bands overlap. What did order itself, monotonically
+and steeply, is the enrichment factor -- 0.99, 0.59, 0.142 -- because dispersing
+one phase more finely dilutes whatever it collects. The figure therefore carries
+both numbers per panel, and the reader can watch the second collapse as the
+interface in the drawing multiplies.
+
+The interface itself is drawn in a single colour in all four panels, so it can be
+followed from one flat line (co-laminar, where transfer is diffusion across a
+single plane) to the caps of a slug train, to the perimeter of every drop in a
+dispersion. That much is geometry and is not in dispute. What the ordering does
+*not* do is predict performance: @dessimoz2008liquid measured the same volumetric
+mass transfer coefficient, 0.2-0.5 s-1, for slug and parallel flow alike.
 
 What sets the transitions is where the chapter is thinner than the drawing
 would like. It states only the envelope -- all of this is laminar, Re < 2300 --
-and cites the flow-regime maps of @dessimoz2010quantitative and
+and cites the liquid-liquid flow-pattern maps of @dessimoz2008liquid and
 @kashid2007hydrodynamics for the definitions, without quoting a capillary
 number or a transition velocity. So the first three panels are labelled with
 the direction of the transition (increasing flow rate and shear, which is what
@@ -95,9 +102,9 @@ ax.text(X0 + 0.16, y - 0.22, "aqueous", fontsize=7, color=style.AQUEOUS,
 channel_walls(y)
 flow_arrow(y)
 label(y, "Co-laminar (parallel) flow",
-      "phase ratio 5:1 to 1:5\n"
-      "one flat interface; transfer is\n"
-      "diffusion across a single plane")
+      "94.1–96.4% efficiency, enrichment 0.99\n"
+      "phase ratio 5:1 to 1:5; one flat interface,\n"
+      "transfer is diffusion across a single plane")
 
 # ------------------------------------------------------------- 2. slug flow
 y = ROWS[1]
@@ -139,7 +146,7 @@ for s in (-1, 1):
 channel_walls(y)
 flow_arrow(y)
 label(y, "Slug (segmented) flow",
-      "86.9–94.8% mass transfer efficiency\n"
+      "86.9–94.8% efficiency, enrichment 0.59\n"
       "interface is the slug caps; internal\n"
       "circulation renews it from inside")
 
@@ -156,9 +163,9 @@ for i, xd in enumerate(xs):
 channel_walls(y)
 flow_arrow(y)
 label(y, "Micro-droplet flow",
-      "92.9–97.4% mass transfer efficiency\n"
-      "large specific surface area; used\n"
-      "for trace, high-selectivity REE")
+      "92.9–97.4% efficiency, enrichment 0.142\n"
+      "most interface of the three, and the\n"
+      "most dilute product for the same reason")
 
 # ------------------------------------------------------------ 4. pore-throat
 y = ROWS[3]
@@ -200,9 +207,12 @@ ax.text(0.30, 9.62,
         "but quotes no transition threshold.",
         fontsize=8, color=style.MUTED, ha="left", va="center")
 ax.text(0.30, 0.52,
-        "The coloured line is the liquid–liquid interface. Same two phases, "
-        "same channel:\nthe regime decides how much interface there is, and "
-        "that is what mass transfer must cross.",
-        fontsize=8, color=style.INK, ha="left", va="center", linespacing=1.5)
+        "The coloured line is the liquid–liquid interface: same two phases, same "
+        "channel, and the regime decides how much of it there is.\nThe efficiency "
+        "and enrichment figures are one study's, on one metal and one extractant "
+        "(Sc from red mud into P204). Efficiency does not\norder itself by "
+        "interfacial area — the three bands overlap — but enrichment falls "
+        "sevenfold across them, and monotonically.",
+        fontsize=7.6, color=style.INK, ha="left", va="center", linespacing=1.5)
 
 style.save(fig, "09-flow-regimes")

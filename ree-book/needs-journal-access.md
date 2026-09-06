@@ -122,6 +122,10 @@ collapse or vanish for adjacent lanthanides.
 | 18 Machine learning in rare earth separations | `liu2026machine` | Reported model performance. **PDF retrieved, not yet read.** |
 | 13 Membranes, MOFs and emerging | `bao2025mxene` | 892.8 mg/g Eu(III) and 649.2 mg/g Ho(III) at pH 2.0, and 99.1 % Eu removal by the PES-supported membrane at pH 5.0. |
 | 20 Recycling and urban mining | `tian2020rare` | The 4.5-118.3 µg/L total REE and 0.92-79.62 µg/L Eu in Sichuan flowback water, and the 4.2 t → 16.8-111.7 t Eu₂O₃ projection. |
+| 09 Microfluidic separations | `yang2022pilot` | The three-stage counter-current microSX numbered up 100-fold without loss of efficiency. No open copy, no released abstract. The chapter now carries the claim only as the authors summarize it in their own later open-access review, `yang2024industry`, and says so. Reading the paper would supply the throughput it actually reached, which the chapter currently cannot state. |
+| 09 Microfluidic separations | `he2024intensifying` | Design results for mini-channel (4-6 mm) counter-current extractors. CrossRef, OpenAlex and Semantic Scholar return no abstract and Semantic Scholar reports the open-access PDF closed. The claim that beyond ~250 mm of channel the extractor exceeds one theoretical stage **has been deleted** rather than left standing; the chapter states that the number is not one it can source. |
+| 09 Microfluidic separations | `elmaangar2020microfluidic` | Gibbs free energies of transfer for five REEs by synergic extraction, measured with online XRF. No copy obtainable. The chapter describes the study from its abstract and quotes no quantity from it. |
+| 09 Microfluidic separations | `nichols2011mechanistic` | Absolute interfacial mass transfer rate constants for the whole lanthanide series under TALSPEAK conditions. No copy obtainable. The chapter names the measurement but tabulates only the P507 constants from `zhang2019enabling`. |
 
 ## A gap, not a flag
 
