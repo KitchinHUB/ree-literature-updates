@@ -79,9 +79,10 @@ project:
       children:
         - file: src/20-recycling-urban-mining.md
         - file: src/21-produced-water-critical-minerals.md
-        - file: src/22-environment-tea-lca.md
-        - file: src/23-industrial-landscape.md
-        - file: src/24-research-directions.md
+        - file: src/22-uranium-and-plutonium.md
+        - file: src/23-environment-tea-lca.md
+        - file: src/24-industrial-landscape.md
+        - file: src/25-research-directions.md
 
     - title: Back Matter
       children:

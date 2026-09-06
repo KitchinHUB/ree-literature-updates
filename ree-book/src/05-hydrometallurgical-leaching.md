@@ -47,13 +47,17 @@ before or during the leach rather than after.
 
 **Monazite**, (Ce,La,Nd,Th)PO₄, is a phosphate carrying both light and middle
 rare earths, and it occurs as a heavy mineral in beach placers in India, Brazil
-and Australia. Pure CePO₄ is 69.8 % REO by stoichiometry; natural material is
-lower, and Steenkampskraal in South Africa, one of the few deposits for which a
-full analysis is published, assays 57 % REO [@iaea2011radiation]. Monazite's
+and Australia. Pure CePO₄ is 69.8 % REO by stoichiometry, and natural material
+scatters around that: @iaea2011radiation gives 40-70 % as typical and tabulates
+values by country from 35 % for Vietnamese material to 74 % for Brazilian, with
+most producing countries clustered near 60 %. Steenkampskraal in South Africa,
+one of the few deposits for which a full analysis is published, assays 57 % REO
+[@iaea2011radiation]. Monazite's
 problem is thorium, which substitutes for the rare earths in the same lattice
 site and therefore follows them through every physical separation. It is
-typically 5-6 wt% ThO₂, rising to 8-10 % at Manavalakurichi in India and at
-Steenkampskraal; across rare earth concentrates generally the thorium content
+typically 5-6 wt% ThO₂, rising to 9-10 % in the monazite of the Manavalakurichi
+deposit in Tamil Nadu and 8 % at Steenkampskraal; across rare earth concentrates
+generally the thorium content
 spans from under 0.1 % to about 10 %, with uranium up to about 1 %
 [@iaea2011radiation]. That makes a monazite plant a radiological facility, and
 the licensing consequences run through the whole flowsheet.
@@ -355,19 +359,40 @@ by fixing the fluorine somewhere else before the acid ever arrives
 ### Thermal Decomposition (Roasting)
 #### Simple Calcination
 The simplest route is to heat bastnäsite in air and let the mineral take itself
-apart in two steps [@kim2025rare]. Decarbonation to the oxyfluoride comes first,
-between 300 and 500 °C:
+apart. Decarbonation is the first thing to happen, and it is the step the
+thermal analysis pins down: TGA-DSC puts the decomposition of bastnäsite under
+an oxidising atmosphere between 300 and 500 °C, with a mass loss of 10-18 %,
+and the activation energy is high --- 100 kJ/mol in one study and 144 kJ/mol in
+another [@kim2025rare]. The nominal reaction is loss of CO~2~ to the
+oxyfluoride:
 
 $$
 \mathrm{REE}\cdot\mathrm{FCO_3} \rightarrow \mathrm{REEOF} + \mathrm{CO_2}\uparrow
 $$
 
-Between 500 and 700 °C the oxyfluoride is hydrolysed to the oxide, which evolves
-HF only if water vapour is present:
+It is worth resisting the tidiness of that equation. What the roast actually
+produces is a mixture, not a single phase: @kim2025rare writes the oxidative
+roast as a disproportionation delivering oxyfluoride, sesquioxide and
+trifluoride together,
 
 $$
-2\,\mathrm{REEOF} + \mathrm{H_2O} \rightarrow \mathrm{REE_2O_3} + 2\,\mathrm{HF}\uparrow
+4\,\mathrm{REE}\cdot\mathrm{FCO_3} \rightarrow \mathrm{REEOF} +
+  \mathrm{REE_2O_3} + \mathrm{REEF_3} + 4\,\mathrm{CO_2}\uparrow
 $$
+
+with cerium oxidising to CeO~2~ alongside it. Industrial practice roasts over a
+window of 400-800 °C, and the reported onset temperatures across a dozen
+studies scatter from about 300 to 550 °C depending on concentrate,
+atmosphere and heating rate [@kim2025rare]. There is no single number here, and
+a source that gives one is reporting its own ore rather than the mineral.
+
+Where the fluorine goes depends on the furnace atmosphere as much as on the
+temperature. Dry oxidative roasting retains a good deal of it in the solid as
+oxyfluoride and trifluoride; humidity drives it out as HF, and more of it the
+wetter the atmosphere gets [@xu2012decomposition]. That is a useful lever in
+both directions --- it is the reason a calcine can be run to leave fluorine
+behind in the solid, and the reason the caustic routes below, which introduce
+water, need a fluorine sink of their own.
 
 Calcination is the cheapest option available, because it adds no reagent at all:
 heat, air, and a scrubber. Two operating points are on record. Mountain Pass
@@ -375,98 +400,149 @@ calcines its acid-washed concentrate at 600-800 °C, which decomposes any
 remaining carbonate and converts about half of the Ce(III) present to Ce(IV),
 producing an oxide mixture assaying 85-90 % REO [@iaea2011radiation]. In the
 laboratory, @sinclair2017rare dry-roast bastnäsite concentrate at 730 °C for
-three hours as a pretreatment. No general window is given: the roast is set on the
-particular concentrate, and those two operating points are what the sources
-actually report.
+three hours as a pretreatment. Both sit inside the 400-800 °C band the review
+gives, at the hot end of it, and both are set on the particular concentrate
+rather than read off a general rule.
 
 What the calcine costs is set by where the fluorine goes and by what the product
-is. The fluorine leaves as HF, so the scrubbing obligation is not discharged, it
-is merely moved from the leach to the furnace — which is at least an easier
-place to put it, because the off-gas is dry, hot and of known composition rather
-than mixed with acid mist. The larger price is the product. A calcined
+is. Whatever fluorine does leave leaves as HF, so the scrubbing obligation is
+not discharged, it is merely moved from the leach to the furnace — which is at
+least an easier place to put it, because the off-gas is dry, hot and of known
+composition rather than mixed with acid mist. The rest stays in the calcine as
+oxyfluoride and trifluoride, where it becomes the leach's problem instead: those
+are the phases the acid has to attack, and the sulfuric route below regenerates
+the HF at that point rather than avoiding it. The larger price is the product. A calcined
 sesquioxide is refractory: having driven off the carbonate that made the mineral
 vulnerable, the roast leaves a lattice that dilute acid does not attack quickly,
 and dissolution then wants concentrated acid at temperature. The two routes that
 follow both exist to avoid that outcome, by roasting the mineral into something
 soluble rather than into an oxide.
 
-#### Alkaline Roasting (Sodium Carbonate Process)
-The alkaline route mixes the concentrate with sodium carbonate before roasting,
-which gives the fluorine somewhere to go that is not the off-gas [@kim2025rare].
-
-Step 1, defluorination at 400-500 °C:
-
-$$
-2\,\mathrm{REE}\cdot\mathrm{FCO_3} + \mathrm{Na_2CO_3} \rightarrow
-  \mathrm{REE_2O_2CO_3} + 2\,\mathrm{NaF} + 2\,\mathrm{CO_2}\uparrow
-$$
-
-Step 2, complete decomposition at 700-900 °C:
+#### Caustic Digestion (Alkaline Cracking)
+The alkaline route mixes the concentrate with a strong base before or during
+roasting, which gives the fluorine somewhere to go that is not the off-gas. It
+is the dominant route outside China: Mountain Pass switched to it in 2012,
+replacing the older oxidative roast followed by acid leach, and about 10 % of
+the Bayan Obo concentrate is treated this way [@kim2025rare]. The reaction with
+sodium hydroxide is direct, and it produces a hydroxide rather than an oxide:
 
 $$
-\mathrm{REE_2O_2CO_3} + \mathrm{Na_2CO_3} \rightarrow 2\,\mathrm{NaREEO_2} + 2\,\mathrm{CO_2}\uparrow
+\mathrm{REE}\cdot\mathrm{FCO_3} + 3\,\mathrm{NaOH} \rightarrow
+  \mathrm{REE(OH)_3} + \mathrm{NaF} + \mathrm{Na_2CO_3}
 $$
 
-The soda-ash charge and the residence time are process variables set on the
-particular concentrate, and no representative values are asserted. What the
-stoichiometry does fix is the minimum: one mole of Na₂CO₃ per two moles of mineral for the defluorination
-step, and a second mole per two moles for the conversion to sodium rare earth
-oxide, so a soda-ash charge below about 0.5 mol per mole of REE cannot complete
-the reaction whatever the temperature.
+Sodium carbonate and other alkali liquids are used in the same role. Across the
+studies @kim2025rare tabulates, the operating envelope is wide: 150-750 °C for
+half an hour to three hours in air, with an alkali-to-concentrate mass ratio
+between 0.2 and 1.2 set by the rare earth content of the feed. Decomposition of
+the rare earth minerals is close to complete throughout that envelope; what the
+temperature, the alkali ratio and the residence time change is how much of the
+rare earth is actually recovered downstream.
 
-The product, NaREEO₂, is the reason for the route: unlike a calcined
-sesquioxide it is attacked by water and by dilute acid.
+The best-documented operating point is @xu2012decomposition's continuous
+calcination of a Baotou bastnäsite-monazite concentrate with alkali liquid at a
+1:1 alkali-to-ore ratio in a rotary tube furnace. Above 300 °C they reach a
+95.8 % rare earth decomposition ratio and 93.7 % cerium oxidation; at 200 °C the
+cerium oxidation is only 41.9 %, so the cerium conversion, not the
+decomposition, is what sets the floor on temperature. Their XRD of the washed
+cake shows rare earth hydroxide plus cerium oxides --- Ce~7~O~12~ and a
+cerium-neodymium mixed oxide --- and, notably, none of the NaREO~2~ or
+Na~2~CeO~3~ that the older literature reports for alkali decomposition. The
+mechanism is evidently not the same one in a continuous slurry-fed furnace as in
+a static melt, which is a reminder that a reaction scheme written for one
+contacting arrangement should not be assumed for another.
 
-**Water leaching of roasted product**:
+The product is the reason for the route: a rare earth hydroxide dissolves in
+dilute acid under conditions a calcined sesquioxide would not yield to.
+
+**Acid dissolution of the hydroxide**:
 
 $$
-\mathrm{NaREEO_2} + \mathrm{H_2O} \rightarrow \mathrm{NaOH} + \mathrm{REEO(OH)}
-$$
-
-$$
-\mathrm{REEO(OH)} + 3\,\mathrm{HCl} \rightarrow \mathrm{REECl_3} + 2\,\mathrm{H_2O}
-$$
-
-Or, by direct acid dissolution of the roasted product:
-
-$$
-2\,\mathrm{NaREEO_2} + 4\,\mathrm{H_2SO_4} \rightarrow
-  \mathrm{REE_2(SO_4)_3} + \mathrm{Na_2SO_4} + 4\,\mathrm{H_2O}
+\mathrm{REE(OH)_3} + 3\,\mathrm{HCl} \rightarrow \mathrm{REECl_3} + 3\,\mathrm{H_2O}
 $$
 
 Two things are bought here and both are real. The fluorine is captured as solid
-sodium fluoride in the calcine rather than evolved as HF, which converts a
-gas-handling problem into a solids-handling one; and the roasted product
-dissolves under conditions a calcined oxide would not yield to, which cuts the
-acid consumption and the corrosion duty of the leach that follows. The price is
-paid three times over: soda ash is a bulk reagent bought by the tonne, the
-furnace still has to reach the higher of the two reaction temperatures, and the
-sodium that captured the fluorine leaves in the effluent as sodium fluoride and,
-once sulfuric acid is used downstream, as sodium sulfate. Neither salt has much
+sodium fluoride, which the water wash carries off in solution rather than the
+stack carrying it off as HF --- @xu2012decomposition account for essentially all
+of the fluorine between wash liquor and alkali cake, with none of it lost as
+exhaust gas --- and the digested product dissolves under conditions a calcined
+oxide would not yield to, which cuts the acid consumption and the corrosion duty
+of the leach that follows. The route also immobilises thorium in a form that
+simplifies its separation, which matters for monazite-bearing concentrates
+[@kim2025rare].
+
+The price is paid three times over: caustic soda is a bulk reagent bought by the
+tonne, and @kim2025rare notes that its consumption and cost are what make the
+route unsuitable for low-grade feedstocks --- it is a high-grade-concentrate
+process; the furnace still has to reach temperature; and the sodium that
+captured the fluorine leaves in the effluent as sodium fluoride and, once
+sulfuric acid is used downstream, as sodium sulfate. Neither salt has much
 value, and the fluoride is the one that constrains discharge. In effect the
 route trades an air-emission problem for a solid- and liquid-waste problem, and
 whether that is an improvement depends entirely on the local regulatory regime
 and on whether there is a fluoride offtake nearby.
 
 #### Ammonium Chloride Roasting (Fluorine Deactivation)
-The third roasting route, developed by Chinese researchers, uses ammonium
-chloride and converts the mineral straight to a soluble chloride
-[@chi2004recovery]:
+The third roasting route, developed by Chinese researchers, reaches a soluble
+chloride without ever using a liquid acid [@chi2004recovery]. It is worth
+setting out carefully, because it is a two-stage roast and the interesting
+chemistry is in the first stage rather than the second.
+
+Ammonium chloride is not really the chlorinating agent. Above 325 °C it simply
+falls apart,
 
 $$
-\mathrm{REE}\cdot\mathrm{FCO_3} + 3\,\mathrm{NH_4Cl} \rightarrow
-  \mathrm{REECl_3} + \mathrm{NH_4F} + 2\,\mathrm{NH_3}\uparrow + \mathrm{CO_2}\uparrow + \mathrm{H_2O}
+\mathrm{NH_4Cl} \rightarrow \mathrm{NH_3}\uparrow + \mathrm{HCl(g)}
 $$
 
-The stoichiometry fixes the reagent demand at three moles of NH₄Cl per mole of
-mineral and nothing else about the operating point. What can be said without a
-number is why the route is attractive. It converts the mineral directly to REECl₃, which water alone will
-dissolve — no acid leach at all, and no medium conversion before a chloride-based
-extraction circuit. And the fluorine is *deactivated* rather than volatilised: it
-leaves in the solid as ammonium fluoride instead of leaving up the stack as HF.
-Whether that fluoride is sold, converted, or disposed of is a question the source
-does not settle, and it matters, because ammonium fluoride is soluble and will
-follow the water leach unless it is deliberately removed.
+and it is the gaseous HCl that does the work, on an *oxide*:
+
+$$
+\mathrm{REE_2O_3} + 6\,\mathrm{HCl(g)} \rightarrow 2\,\mathrm{REECl_3} + 3\,\mathrm{H_2O}
+$$
+
+That is why the route cannot be applied to bastnäsite directly. A plain
+decomposition roast at about 500 °C gives a mixture of rare earth oxide, rare
+earth *fluoride* and CO₂ --- and the fluorides do not react with HCl and are not
+water-soluble, so they walk out with the tailings. @chi2004recovery put the
+theoretical loss at up to one-third of the rare earth inventory, and measure 64 %
+recovery when the concentrate is roasted with ammonium chloride and nothing else.
+
+The fix is to give the fluorine somewhere better to go *before* the chloride
+roast, by adding magnesium oxide to the decomposition step:
+
+$$
+2\,\mathrm{CeFCO_3} + \mathrm{MgO} \rightarrow \mathrm{Ce_2O_3} + \mathrm{MgF_2}
+  + 2\,\mathrm{CO_2}\uparrow
+$$
+
+Magnesium fluoride is nearly insoluble --- 76 ppm at 18 °C --- so the fluorine
+leaves neither as HF up the stack nor as a soluble salt in the leach liquor, but
+as an inert solid in the residue. That is what "fluorine deactivation" means
+here, and it is a genuinely different answer from the caustic route's soluble
+NaF. With MgO at a 0.15:1 mass ratio to concentrate, recovery rises from 64 % to
+about 90 % and the product assays better than 94 % REO.
+
+The operating point @chi2004recovery report is: decomposition roast with MgO at
+500 °C for 1 h; chloride roast with NH₄Cl at 325 °C for 1 h; hot-water leach at
+75 °C, liquid-to-solid 8:1, for 2 h; oxalic acid precipitation; calcination at
+900 °C to the oxide. Calcium oxide was tried in the same role and is worse on
+both counts --- 85 % recovery and 86 % purity against MgO's 89 % and 95 % --- and
+it also needs more mass. Both take 0.5 mol of oxide per mole of bastnäsite, but
+on a 60 % REO concentrate that works out to 105.7 g of CaO per kilogram against
+75.9 g of MgO, which loads the downstream washing and filtration with more
+solids for no gain. Overshooting the MgO does not
+help either: the excess reacts with ammonium chloride to make magnesium chloride,
+which follows the rare earths into the leachate and dilutes the product. In
+Table 3 of that work, going from the stoichiometric 1.5 g to 2.0 g leaves
+recovery unchanged at about 89 % while purity falls from 94.7 % to 89.9 %.
+
+The route's attractions are real. It converts the mineral to REECl₃, which water
+alone will dissolve --- no acid leach at all, and no medium conversion before a
+chloride-based extraction circuit --- and it is selective: @chi2004recovery note
+on thermodynamic grounds that Al₂O₃, Fe₂O₃ and SiO₂ are not chlorinated under
+these conditions and pass through essentially unchanged, so the roast does some
+of the impurity rejection that would otherwise fall to the purification circuit.
 
 The cost side has two entries. Ammonium chloride is the more expensive reagent
 per tonne of the three roasting routes here, and the reaction liberates ammonia,
@@ -474,11 +550,13 @@ which has to be scrubbed and is worth recycling as NH₄Cl if the plant is large
 enough to justify the loop. The route is Chinese in origin and is not, so far as
 the sources here establish, operated at Western plants [@chi2004recovery].
 
+
 ### Acid Leaching of Roasted Bastnäsite
 #### Sulfuric Acid Leaching
-**After alkaline roasting** [@kim2025rare]:
+**After an oxidative roast** [@kim2025rare]:
 
-The roasted material is REE₂O₃ or NaREEO₂, and it dissolves as the sulfate:
+The roasted material is a mixture of oxide and oxyfluoride, and the oxide
+fraction dissolves as the sulfate:
 
 $$
 \mathrm{REE_2O_3} + 3\,\mathrm{H_2SO_4} \rightarrow \mathrm{REE_2(SO_4)_3} + 3\,\mathrm{H_2O}
@@ -613,6 +691,14 @@ The Molycorp route is a *chloride* route throughout
     tailings [@iaea2011radiation]. The iron-free mixed REE chloride solution
     goes to the solvent extraction cascade — no medium conversion is required,
     because the circuit never left chloride.
+
+That is the historical Molycorp flowsheet, and it is worth knowing that it is
+historical. @kim2025rare records that the Mountain Pass facility moved to caustic
+digestion in 2012, replacing the oxidative-roast-then-acid-leach sequence
+described above. The route below is still the clearest illustration of why an
+operation picks one acid and stays in it, and the chloride circuit downstream did
+not change, but a reader who wants the plant as it runs today should take the
+decomposition step from the caustic section above rather than from step 3 here.
 
 Note what this flowsheet does *not* contain: there is no sulfuric acid bake and
 no sulfate-to-chloride conversion. Descriptions that leach Mountain Pass with
@@ -890,15 +976,22 @@ process Egyptian monazite concentrate through alkali solution and remove the
 phosphate first — an early washing step takes out 92.8 % of the P₂O₅, which is
 what makes the rest of the separation tractable, and recovers it as a product
 rather than a waste. Thorium is then taken out by solvent extraction with a
-**secondary amine**, which removes Th and Fe at 100 % and 98 % efficiency
-respectively while leaving uranium and the rare earths behind; the rare earths
-are precipitated quantitatively as the oxalate and separated from the uranium.
-Note that the thorium here leaves by extraction, not by hydroxide
-precipitation.
+**secondary amine** --- 0.2 M N-methylaniline at pH 2.5 --- which removes Th and
+Fe at 100 % and 98 % efficiency respectively while leaving uranium and the rare
+earths behind; the rare earths are then precipitated quantitatively as the
+oxalate and separated from the uranium. That last split is not a peculiarity of
+this flowsheet. Rare earth oxalates are extremely insoluble --- @shahreldin2018selective
+quote solubility products around 10⁻³¹ for the cerium, neodymium and ytterbium
+oxalates --- while uranium(VI) stays in solution as a soluble uranyl-oxalate
+complex, so oxalate precipitation is the general tool for partitioning rare
+earths from uranyl species [@pak2020progress]. Note also that the thorium here
+leaves by extraction, not by hydroxide precipitation.
 
 (thorium-management)=
 ### Thorium Management
-After leaching, thorium must be separated [@amaral2010thorium]:
+After leaching, thorium must be separated [@amaral2010thorium]. Uranium travels
+with it and is handled by the same unit operations; see
+[](#uranium-and-plutonium) for the actinide chemistry behind them.
 
 #### Solvent Extraction Methods
 
@@ -910,9 +1003,6 @@ Th(SO₄)₄⁴⁻, UO₂(SO₄)₂²⁻ — in the sulfuric liquor that comes o
 digestion, while REE(III) does not to any comparable degree. That difference,
 not a size effect, is what makes the separation work.
 
-- @amaral2010thorium apply amine solvent extraction directly to monazite
-  sulfuric acid liquor and report thorium and uranium extracted with the rare
-  earths left in the raffinate.
 - Amine class matters and is often misreported, so it is worth naming the
   classes rather than the trade names alone. Primary (Primene JM-T), secondary
   (Amberlite LA-2) and tertiary (Alamine 336, a tri-C₈/C₁₀-alkylamine, and
@@ -920,8 +1010,34 @@ not a size effect, is what makes the separation work.
   basicity and in their affinity for the sulfato complexes. Any account of a
   Th/U circuit that does not say which class was used has not said enough to
   be reproduced.
-- Strip with a salt or acid solution that breaks the anionic complex
-  (Na₂CO₃ or dilute acid, depending on the amine).
+- The class difference is not a nuance, it is the whole design. In
+  @amaral2010thorium's screening, the primary amine Primene JM-T extracts
+  thorium and essentially not uranium, while the tertiary amine Alamine 336
+  extracts uranium and essentially not thorium — the thorium extraction
+  coefficient from sulfate can reach 1000 for a 0.1 mol/L primary amine and is
+  practically nil for a tertiary one. So the solvent is a *mixture*: 0.15 mol/L
+  Primene JM-T with 0.05 mol/L Alamine 336, each concentration set by the metal
+  it is there for.
+- Strip with a salt or acid solution that breaks the anionic complex. The
+  stripping is not selective between Th and U — @amaral2010thorium find HCl,
+  NaCl, Na₂CO₃ and NH₄F all take both — so the choice is made on other grounds,
+  and they use HCl above 1.5 mol/L, at which thorium stripping reaches 98 % and
+  uranium sits at 98 % throughout.
+
+The continuous circuit is the useful part, because it says what the chemistry is
+worth at plant conditions rather than in a separating funnel. @amaral2010thorium
+ran a mixer-settler circuit of four extraction stages, five stripping stages and
+one solvent-regeneration stage for 30 hours on about twenty litres of liquor.
+Thorium extraction exceeded 99.9 % and uranium 99.4 %, both metals falling below
+0.001 g/L in the raffinate, while 38 g/L of RE₂O₃ passed through to that
+raffinate essentially untouched. The loaded strip solution assayed 29.3 g/L ThO₂
+and 1.27 g/L U₃O₈. Two things are worth noticing. Nine stages of contacting buy
+a separation this clean, which is a small number against the hundreds the rare
+earths themselves demand — the Th/U-versus-RE split is easy precisely because it
+is a difference in complexation chemistry rather than in ionic radius. And the
+aqueous-to-organic ratio is a hard constraint, not a knob: raising it from 1 to 4
+drops thorium extraction from 99.4 % to 48 % and uranium from 93.5 % to 74.1 %,
+so there is no free lunch in loading the solvent harder to save on inventory.
 
 **TBP extraction** (from nitrate medium). {index}`TBP` is a neutral solvating
 extractant, so it works on the neutral nitrate complex rather than on an anion.
@@ -1063,8 +1179,23 @@ leach liquor, it has to be concentrated before anything downstream can use it
 - **Solvent extraction applied directly to the PLS.** This concentrates the
   liquor and produces a purified feed for the separation circuit — the same
   unit operation that will later do the separating. @han2024efficient do this
-  on the sulfate leachate of an ion-adsorption ore with HPOAc, chosen over the
-  conventional acidic organophosphorus reagents for this duty.
+  on the sulfate leachate of an ion-adsorption ore with HPOAc
+  --- 2-(bis((2-ethylhexyl)oxy)phosphoryl)-2-hydroxyacetic acid --- chosen over
+  the conventional acidic organophosphorus reagents for this duty. Their case
+  for it is specific: HPOAc extracts *all* the rare earths more strongly than
+  P204 or P507, which avoids both of those reagents' characteristic
+  failures at the ends of the series --- weak extraction of the lights, and
+  heavies that need punishing acidity to strip --- and it rejects aluminium,
+  the impurity that matters most in a clay leachate, better than either. It
+  also gives cleaner phase disengagement.
+  The numbers from their simulated circuit are what make the case: two stages of
+  counter-current extraction and a single stripping stage, with *unsaponified*
+  extractant, recover 98.7 % of the rare earths and take the liquor from
+  0.44 g/L to 130.35 g/L --- close to a 300-fold concentration --- while raising
+  rare earth purity from 77.8 wt % to 97.6 wt %. Running unsaponified is the
+  part to notice. Saponification is where the ammonia and the salt load enter a
+  conventional circuit, so an extractant that does not need it removes the
+  wastewater problem at the same time as the dilution problem.
 
 ## Xenotime Processing
 Xenotime is YPO₄, the heavy-rare-earth counterpart of monazite, and it is the
@@ -1866,7 +1997,7 @@ everything on land, water and remediation. Techno-economics is treated in
 ### Key Findings
 **The mineral dictates the route, and it does so through one bond.** Bastnäsite
 is a fluorocarbonate, so the fluorine has to be dealt with before any acid
-arrives — volatilised as HF and scrubbed, fixed as NaF by a soda-ash roast, or
+arrives — volatilised as HF and scrubbed, fixed as NaF by a caustic digestion, or
 deactivated as NH₄F by an ammonium chloride roast. Monazite and xenotime are
 phosphates, so the RE–PO₄ bond has to be broken by concentrated sulfuric acid at
 200 °C and above or by concentrated caustic, and the thorium that rides in the

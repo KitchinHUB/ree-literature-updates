@@ -163,6 +163,22 @@ seventy-eight studies gathered under PRISMA, covering primary and secondary
 production together -- and the fastest way to see the shape of the field and
 where its attention has gone.
 
+## Actinides
+
+@abney2017materials is the review to start with for uranium from seawater — it
+is the Chemical Reviews anchor for the whole materials effort — and
+@guidez2016extraction is the necessary counterweight, an arithmetic assessment
+of what the numbers actually permit. @gill2016uranium is the single most
+informative paper in the field because it reports what happened in the sea
+rather than in a flask, and @ivanov2017origin is the result that explained why
+the vanadium problem exists at all. For reprocessing, @moyer2011overview frames
+the extraction chemistry and @leoncini2017ligands catalogues the ligand classes;
+@modolo2012review is the history of the actinide–lanthanide split and
+@wilden2020countercurrent its most complete demonstration. @nash2015chemistry on
+TALSPEAK is the closest thing the field has to a case study of a separation
+whose kinetics defeated it. All of these are read for
+[](#uranium-and-plutonium).
+
 ## Reference works
 
 @connelly2005nomenclature — the IUPAC "Red Book" — is the authority on what the

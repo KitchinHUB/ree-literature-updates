@@ -220,9 +220,18 @@ Split-anion extraction runs a chloride aqueous phase against an organic phase
 that is itself a nitrate or thiocyanate ionic liquid, so the complexing anion
 comes from the organic side. The feed is chloride, the wastewater is chloride,
 stripping is done with water, and separation factors between the ends of the
-series (La–Lu) exceed 2 × 10⁵ [@larsson2015separation]. That the idea exists at
-all is the clearest evidence that the anion choice is felt as a constraint
-rather than a detail.
+series (La–Lu) exceed 2 × 10⁵ [@larsson2015separation]. The reason it works is
+the Hofmeister series: the anions' preference for the organic phase runs
+SO₄²⁻ < Cl⁻ < Br⁻ < NO₃⁻ < I⁻ < ClO₄⁻ < SCN⁻, tracking how strongly each is
+hydrated, so a thiocyanate or nitrate ionic liquid keeps its own anion and does
+not exchange it away to a chloride aqueous phase. The mechanism is therefore
+*not* anion exchange, even though the extractant is a quaternary ammonium salt:
+the rare earth crosses together with enough chloride to balance the charge.
+Thiocyanate systems outperform nitrate ones, and yttrium comes out behaving like
+terbium — another instance of the point made in
+[](#solvent-extraction-fundamentals) that yttrium's position is set by the
+ligand and not by the ion. That the idea exists at all is the clearest evidence
+that the anion choice is felt as a constraint rather than a detail.
 
 ### Sulfate
 
@@ -230,7 +239,9 @@ Sulfate liquors arrive by two quite different roads. The first is sulfuric acid
 baking of a hard-rock concentrate, which is cheap and effective and which is why
 monazite sulfuric-acid liquors are a standard object of study — and why
 separating thorium and uranium out of them by solvent extraction is a standard
-problem [@amaral2010thorium; @li2025iron].
+problem [@amaral2010thorium; @li2025iron]. That problem has a literature of
+its own on the nuclear side of the divide, treated in
+[](#uranium-and-plutonium).
 
 The second is the {index}`ion-adsorption clay <ion-adsorption clay>` deposits,
 where there is no cracking step at all. The rare earths are not in a lattice;
@@ -308,7 +319,9 @@ solvent extraction from monazite sulfuric liquors [@amaral2010thorium], amine
 extraction from xenotime leach solutions [@hung2020separation], or selective
 separation during alkaline monazite processing [@shahreldin2018selective] — and
 the residues they generate are managed as naturally occurring radioactive
-material [@iaea2011radiation].
+material [@iaea2011radiation]. [](#uranium-and-plutonium) covers where those
+actinides go once they leave a rare earth circuit, and why the extractants used
+to remove them here are the same ones used to recover uranium from ore.
 
 ## What This Fixes for the Rest of the Book
 

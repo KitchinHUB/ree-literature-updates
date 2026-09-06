@@ -68,14 +68,15 @@ document changes will shift them.
 | 19. Characterization Methods | `broad-review.md` 1791–2236 (§11) |
 | 20. Recycling and Urban Mining | `broad-review.md` 1110–1148 (§5) |
 | 21. Critical Minerals from Pennsylvania Produced Water | **No source document**; written from the primary literature for this edition. See the note below |
-| 22. Environment, Techno-Economics, and Life Cycle | `broad-review.md` 1150–1186 (§6), 2238–2367 (§12 TEA), 2369–2512 (§13 LCA) |
-| 23. The Industrial Landscape | `broad-review.md` 1188–1215 (§7) |
-| 24. Research Directions and Open Questions | `broad-review.md` 1233–1259 (§9), 2716–2732 (§15 Conclusions) + `high-throughput.md` 349–357 (critical gaps); synthesis newly written |
+| 22. Uranium and Plutonium Separations | **No source document**; written from the primary literature for this edition. See the note below |
+| 23. Environment, Techno-Economics, and Life Cycle | `broad-review.md` 1150–1186 (§6), 2238–2367 (§12 TEA), 2369–2512 (§13 LCA) |
+| 24. The Industrial Landscape | `broad-review.md` 1188–1215 (§7) |
+| 25. Research Directions and Open Questions | `broad-review.md` 1233–1259 (§9), 2716–2732 (§15 Conclusions) + `high-throughput.md` 349–357 (critical gaps); synthesis newly written |
 
-### The five chapters with no source document
+### The six chapters with no source document
 
 Most chapters here are a rewrite of material the group had already
-written. Chapters 12, 15, 17, 18 and 21 are not. The sources touch process modeling twice — a
+written. Chapters 12, 15, 17, 18, 21 and 22 are not. The sources touch process modeling twice — a
 four-row table of software names in `high-throughput.md`, and a paragraph of
 geochemical speciation packages in the characterization section — and neither
 is an account of how a rare-earth flowsheet is modeled or optimized. The
@@ -161,6 +162,27 @@ national inventory rests, at the Marcellus, on **two samples** — a fact the
 chapter states in the text rather than in a footnote, because the conclusion
 drawn from it is a negative one and a reader is entitled to know how thin the
 evidence for it is.
+
+Chapter 22 is the sixth and was added at a reader's request for a treatment of
+uranium separation, including from seawater, with plutonium included where the
+literature supported it. It has no source document. Its 43 new sources were
+found by OpenAlex search and every one was verified against its CrossRef record
+for title, authors, journal and year before it was cited; none duplicated an
+entry already in the bibliography. The chapter's exposure is the same as
+Chapters 12 and 15's and is handled the same way — where no abstract was
+reachable, no number was taken. Five sources fall in that category:
+@lindner2015review, @das2016novel, @seredkin2016situ, @kim2016potential and
+@campbell2015biogeochemical are cited for what their titles and metadata assert
+and for nothing numerical.
+
+One of those absences shapes a section. @lindner2015review is a review of cost
+estimates for uranium from seawater, and its abstract is elided by every
+interface reachable from this project; the accepted manuscript returns HTTP 403.
+Rather than quote a dollar figure from a secondary description of it, the
+chapter quotes only the physical arithmetic of @guidez2016extraction — grams of
+uranium per kilogram of sorbent per month, reuse count, area of sea — and says
+in "What This Chapter Does Not Contain" that it declines to give a cost. That is
+a deliberate hole and the chapter names it as one.
 
 ## Material deliberately dropped
 
@@ -411,9 +433,14 @@ and the definition quoted in [](#why-rare-earths-are-hard-to-separate) was read
 out of section IR-3.5 of the book itself. The DOE final report was supplied as
 "Keim, S.; Hans, N."; the second author's name is Hans Naumann.
 
-@guo2026acidic is the one source in that batch whose abstract no route could
-reach, so it is cited for no more than its title asserts, as the recent review
-of solvent extraction from acidic media.
+@guo2026acidic was the one source in that batch whose abstract no route could
+reach, and it was cited for no more than its title asserted. The full text has
+since been obtained and read, and the two places that cite it in
+[](#solvent-extraction-fundamentals) now carry specific claims from it: the
+pK~a~ series for D2EHPA, PC88A and Cyanex 272, the stripping-versus-extraction
+trade-off that ordering implies, the existence of Cyanex 572 as a blend sold to
+sit between the two ends, and yttrium's movement from light to heavy behaviour
+between naphthenic acid and Versatic 10.
 
 **Chapter 9, read against the papers themselves.** The microfluidics chapter was
 the one place in the book that still carried an explicit warning to the reader:
