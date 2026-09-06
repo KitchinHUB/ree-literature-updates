@@ -75,6 +75,13 @@ jobs:
         working-directory: ree-book
         run: bash tools/build_chat.sh
 
+      # A "Google Scholar" link on every citation tooltip and bibliography
+      # entry. Post-build for the same reason the chat widget is: MyST offers
+      # no hook, and the reference HTML is generated inside the theme payload.
+      - name: Add the Google Scholar links
+        working-directory: ree-book
+        run: python3 tools/inject_scholar.py
+
       # Served at <site>/rare-earth-separations.pdf, which is the URL the
       # preface links to.
       - name: Add the PDF to the site
