@@ -93,6 +93,32 @@ That single observation — that the acid balance is not optional — is what
 separates a working cascade model from a textbook one, and it is the explicit
 subject of the dynamic model discussed below.
 
+There is a second way to close a stage, and it deserves mention because it makes
+a different bargain. Instead of writing $D_j$ as a fitted correlation, one can
+write down every species in both phases and let the equilibrium fall out of
+minimising the total Gibbs energy subject to mass and charge balances.
+@iloeje2019gibbs did this for Nd, Pr, Ce and La in HCl against PC88A in dodecane
+— the mixture a NiMH battery recycling stream presents — using a Pitzer model
+for the electrolyte phase and treating the organic phase as an ideal mixture.
+The price is that the standard molar properties of the organo-metal complexes
+are not in any table, so they have to be regressed from extraction isotherms.
+The interesting result is what the regression found: the standard enthalpy of
+each complex varies linearly with that of the extractant, and the slope of that
+line came out at 2.998 to 2.999 for all four metals. That is the
+extractant-to-metal stoichiometry, recovered as a fitted slope rather than
+imposed. It is the same 3 that sits in the mass-action expression in
+[](#solvent-extraction-fundamentals), and it collapses four unknowns into one
+plus a set of intercepts, which is what made the parameter estimation tractable.
+The predictions were then checked against single-component, three-component and
+bench-scale continuous data from three separate groups. The advantage over a
+fitted $D_j$ is that the model extrapolates to compositions and pH values it was
+not fitted at, because the competition between metals for extractant and the
+acid balance are consequences of the formulation rather than terms added to it.
+The disadvantage is that it is a much larger numerical problem, and that the
+fitted enthalpies are apparent values conditioned on the ideal-mixture
+assumption --- they are not transferable to a different diluent or a different
+organic-phase model.
+
 ## Cascade Theory: Design in Closed Form
 
 The first apparatus for designing a rare-earth cascade rather than tuning one

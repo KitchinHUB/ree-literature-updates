@@ -63,8 +63,20 @@ bonds gives first the phosphonic acid monoester PC88A (also sold as P507 and
 described in the literature as EHEHPA), and then the phosphinic acid
 {index}`Cyanex 272`; acidity falls along that sequence, and the pH at which each
 reagent will load and unload a rare earth climbs correspondingly
-[@li2019development; @zhang2016rare]. That ordering is more useful in practice
-than any table of windows, because it tells you what to reach for. A feed too
+[@li2019development; @zhang2016rare]. Two recent reviews put pK~a~ numbers on
+the sequence, and they agree on the ordering while disagreeing on the values:
+@li2019development gives 2.79 for D2EHPA, 3.24 for PC88A and 6.37 for Cyanex
+272, and @guo2026acidic gives approximately 3.2, 4.5 and 6.0 for the same three.
+Take the ordering as the durable part and any single number as indicative. What
+the ordering costs is stated plainly by @guo2026acidic: the stronger acidity of
+D2EHPA lets it load at low pH but produces complexes that need more than 4 M
+acid to strip, while the weaker acidity of PC88A and Cyanex 272 makes stripping
+easy at the price of extraction strength. Extraction strength runs
+D2EHPA > PC88A > Cyanex 272 and stripping performance runs the other way, which
+is why the commercial blend Cyanex 572 exists at all --- it is a non-synergistic
+mixture of a phosphonic and a phosphinic acid, sold to sit between the two ends.
+That ordering is more useful in practice than any table of
+windows, because it tells you what to reach for. A feed too
 acidic to extract from with a given reagent is not usually fixed by raising the
 pH — neutralising a
 strong acid liquor costs base and risks hydrolysing the metal — but by moving to
@@ -98,7 +110,18 @@ TBP takes up a rare earth as a neutral nitrate adduct, so a nitrate salt supplie
 the ligands that build the extractable complex as well as suppressing hydration.
 @matveev2018solvent studied precisely this system, extracting rare earths with
 tri-n-butyl phosphate and tri-iso-amyl phosphate from nitrate media in the
-presence of Ca(NO₃)₂. At equal molarity a divalent or trivalent cation salts out
+presence of Ca(NO₃)₂, and their numbers are a good measure of what a salting-out
+agent is worth. At 300 g/L Ca(NO₃)₂ the separation factor for Pr/Ce rises from
+1.57 ± 0.02 to 1.70 ± 0.02 and for Sm/Nd from 2.01 ± 0.02 to 2.30 ± 0.02: the
+salt buys perhaps 10-15 % on β, on top of the much larger effect it has on D
+itself. They also ran counter-current cascades of ten stages in separating
+funnels, and those results say what such a system can and cannot do. The
+group splits are easy --- a La + Ce raffinate at 99 % purity, a Ce + Pr + Nd
+raffinate at 98 % --- while the didymium cascade, which asks for Pr and Nd
+against Ce inside the light group, reached 71 % and the authors call it not
+enough. Their choice of tri-iso-amyl phosphate over TBP is likewise an
+engineering one and not a chemical one: the distribution coefficients are
+almost identical, but the phase boundary is clear in 3 minutes rather than 6. At equal molarity a divalent or trivalent cation salts out
 more strongly than a monovalent one, because it immobilises more water per mole
 and contributes more to ionic strength; that is why calcium and aluminium
 nitrates appear where sodium chloride would not be enough. The counter-argument
@@ -455,14 +478,33 @@ D = 1 while the aqueous phase is still more acidic.
 
 **The order across the series.** For acidic organophosphorus extractants —
 D2EHPA, PC88A, Cyanex 272, the workhorses of the industry — the distribution
-ratio rises monotonically from La to Lu, and pH₁/₂ falls correspondingly
-[@nash1993basic]. The smaller, more charge-dense heavy ion binds the phosphoryl
-oxygens more tightly.
-So in any cascade built on these reagents the heavies load into the organic
-phase and the lights report to the raffinate. Yttrium is the exception that
-matters industrially: it has no 4f electrons and sits by size near Ho, but its
-extraction behaviour varies with the extractant and it can fall anywhere from
-Dy to Er in the sequence, which is what makes Y/Ho separations awkward.
+ratio rises with atomic number from La to Lu, and pH₁/₂ falls correspondingly.
+The smaller, more charge-dense heavy ion binds the phosphoryl oxygens more
+tightly. It is worth being careful about the word *monotonically*.
+@nash1993basic, surveying the methods available for intragroup separation, puts
+it as trends that are "more-or-less systematically correlated" with the decrease
+in cation radius, and notes that the most consistent of them belong to two
+systems: solvent extraction with D2EHPA, and cation exchange with
+α-hydroxyisobutyrate as eluant. No single extractant matches either of those
+across the whole series. The gaps are also not large where it counts:
+@nash1993basic gives an average adjacent-pair separation factor of about 2.5 for
+D2EHPA, and reports that PC88A runs slightly *lower* than D2EHPA rather than
+higher. But the direction holds, so in any cascade built on these reagents the
+heavies load into the organic phase and the lights report to the raffinate. Yttrium is the exception that
+matters industrially, and it is the clearest demonstration in the whole subject
+that where an element sits in an extraction order is a property of the system
+rather than of the element. Y³⁺ has no 4f electrons at all, but its ionic radius
+falls among the heavy lanthanides, so with the acidic organophosphorus reagents
+it tracks them --- @li2019development tabulates Er/Y at 1.4-1.6, which is to say
+the two are barely distinguishable, and this is what makes Y/Ho and Y/Er
+separations awkward. With carboxylic acids the position moves, and it moves a
+long way. @guo2026acidic reports that with the less sterically hindered
+naphthenic acid, yttrium behaves like a *light* rare earth, sitting between Ce
+and Pr, while with the bulkier Versatic 10 it behaves like a heavy one, near Ho.
+Nothing about the ion changed; the ligand's steric demand did. Hold onto this
+when reading any claim that a reagent is selective for a particular element: the
+ordering is a joint property of ion and ligand, and a separation designed around
+one extractant does not transfer unmodified to another.
 
 **What the gap is worth.** Because log D moves with slope +3 for both members of
 a pair, the separation factor follows directly from the gap between their
@@ -504,26 +546,65 @@ had more room to work -- across a gap of several atomic numbers rather than
 between neighbours -- and the largest factors quoted in the literature are for
 such pairs, not for the adjacent ones that actually set the size of a plant.
 
+The spread across the series is wider than a single number suggests, and it is
+worth seeing it laid out. @li2019development tabulates adjacent-pair separation
+factors for PC88A in chloride across the whole series, and they range over most
+of an order of magnitude: Ce/La 8--10, Sm/Nd 6--8 and Tb/Gd 5--6 at the top;
+Er/Ho 2.0--3.0, Tm/Er and Yb/Tm both 3.0--4.0 in the heavies; and at the bottom
+Pr/Ce 1.8--2.2, Nd/Pr 1.8--2.0, Gd/Eu 1.4--1.6, Lu/Yb 1.6--1.8 and Er/Y
+1.4--1.6. Two things follow. The pairs that are easy are easy for reasons that
+have little to do with the smooth contraction --- La sits at the end of the
+series with no 4f electrons, Gd and Lu at the half-filled and filled shells ---
+and the pairs that are hard are hard everywhere, in every medium and with every
+reagent. A plant is sized by its worst pair, not its average one, so the
+β ≈ 1.5 the rest of this book reasons from is the right number to design
+against even though the table contains larger ones.
+
 A caution about quoted values themselves. @tanaka2021revaluating recalculated
 the extraction equilibria of La, Ce, Pr, Nd, Sm, Eu, Tb, Dy and Y with EHEHPA
 (PC-88A), correcting for the nonideality of the organic phase, and then
 compared the separation factors that fall out of those constants against the
 values already in the literature. The two disagreed, and the disagreement grew
-with the difference in atomic number between the pair: a published separation
-factor carries its measurement conditions with it, and pairs quoted from
-different studies are frequently not comparable. Treat any single tabulated β
-as conditional on the medium, the extractant concentration, the loading and the
-temperature it was measured at.
+with the difference in atomic number between the pair. Their tables are worth
+looking at directly. Ten published values for Nd/Pr span 1.17 to 1.73, measured
+in nitrate and chloride at ionic strengths from 0.1 to 1 mol/L, in toluene,
+heptane, kerosene and three different Shellsol cuts, at 293 to 303 K; four for
+Dy/Tb span 1.62 to 2.84. Worse, the *method* biases the answer systematically:
+a separation factor obtained by extracting each metal from its own single-metal
+solution is always lower than one obtained from equilibrium constants or from a
+mixed feed, because the two experiments do not end at the same free-extractant
+and hydrogen-ion concentrations, and the gap widens with the atomic-number
+difference --- 0.87 of their value for Nd/Pr, but 0.045 of it for Dy/Nd, which
+is 21.8 against 263. A published separation factor carries its measurement
+conditions with it, and pairs quoted from different studies are frequently not
+comparable. Treat any single tabulated β as conditional on the medium, the
+extractant concentration, the loading, the temperature, and the experiment that
+produced it.
 
 There is also a physical reason not to expect the gaps to be large. The ion that
 has to be extracted is not a bare cation but a hydrated one, and the same
 contraction in ionic radius that strengthens binding to the extractant also
-strengthens binding to water. @li2020hydration make this quantitative: hydration
-counteracts the separation of the lanthanides, so a large part of the
-selectivity built into a ligand is paid back to the aqueous phase before it can
-be collected. Designing an extractant is therefore not a matter of maximising
-affinity but of maximising the *difference* between two affinities that a
-competing solvation equilibrium is working to erase.
+strengthens binding to water. @li2020hydration demonstrated this directly, and
+the experiment is worth describing because it isolates the effect. Extracting
+lanthanide nitrates with the quaternary ammonium salt Aliquat 336 nitrate in
+toluene, they observed the usual *negative* sequence from an aqueous nitrate
+feed --- the light lanthanides extracted better than the heavy ones, which is
+backwards relative to the contraction. They then replaced the water entirely
+with ethylammonium nitrate, a room-temperature molten salt, and the sequence
+inverted: extraction now rose from Ce to Er, as the contraction says it should.
+Adding water back reversed it again, and it took only 5 vol% to collapse the
+extraction of Er, Tm, Yb and Lu. The heavies are the sensitive ones because
+absolute hydration energy rises with atomic number, so water penalises exactly
+the elements the contraction favours, and the two effects nearly cancel. The
+lesson the authors draw is not about the extractant but about the other phase:
+the polar phase is a design variable, and a solvent that solvates
+lanthanides weakly should let more of a ligand's built-in selectivity survive
+to be collected. This was a quaternary ammonium system rather than one of the
+acidic organophosphorus reagents this chapter is otherwise about, so the
+specific numbers do not carry over --- but the competing-solvation argument
+does, and it explains why maximising affinity is the wrong target. What matters
+is the *difference* between two affinities, against a solvation equilibrium
+working to erase it.
 
 ### Temperature Effects
 
@@ -553,9 +634,15 @@ for ligand design.
 temperature; stripping is often run warmer, which speeds phase disengagement and
 reduces organic viscosity whatever it does to the equilibrium. Extractant classes
 other than the acidic organophosphorus reagents behave differently:
-@khoshoei2025crown reviews the thermodynamics of crown ether extractants, where
-the enthalpic and entropic contributions to selectivity are both larger and
-better characterised.
+@khoshoei2025crown reviews the thermodynamics of crown ether extractants, and
+what it tabulates is a different regime altogether. For 18-crown-6 with the
+light lanthanides the extraction enthalpy is about +11 to +20 kJ/mol in
+methanol and about −13 to −44 kJ/mol in acetonitrile: endothermic in one
+solvent and exothermic in the other, with the entropy term reversing sign to
+match, and at several times the magnitude of the organophosphorus values above.
+Those are non-aqueous systems, which is part of why the numbers are that size,
+and enthalpy-entropy compensation is well documented across the crown ether
+literature. Temperature is a real lever there in a way it is not here.
 
 ## Liquid-Liquid Contactor Design
 

@@ -262,6 +262,21 @@ decontaminate.
 
 ### Choosing the salt on thermodynamic grounds
 
+Before the thermodynamics, the measurements. @moldoveanu2016overview report an
+exchange-power ordering for the monovalent cations that is the same in sulfate
+and in chloride media --- Cs⁺ > NH₄⁺ > K⁺ > Na⁺ > Li⁺ --- and it follows the
+hydration energy of the exchanging ion, the less strongly hydrated cation
+competing better for the clay site. Caesium is the best leaching agent and is
+obviously not going to be used, which leaves ammonium at the top of the
+practical list and explains why the industry landed where it did. Two other
+numbers from the same work bound the operating window. The exchange reaches
+equilibrium in about five minutes regardless of conditions, which is why contact
+time is not a design variable in this process and why heap and in-situ leaching
+are limited by percolation rather than by chemistry. And the optimum is ambient
+temperature at a moderately acidic pH of 5 to 5.5: above pH 6.8-7 the
+lanthanides hydrolyse en masse, and raising the temperature lowers that
+hydrolysis threshold rather than helping.
+
 There is a second, less obvious cost to ammonium, and it shows up in a purely
 thermodynamic screening study. @mohamadsobri2025enhancing computed Eh-pH
 (Pourbaix) stability fields for La, Nd and Y in three sulfate lixiviants using HSC
@@ -298,6 +313,27 @@ treats one element and one solvent at a time, with no impurities and no kinetics
 It cannot tell you what aluminium does, and aluminium is the impurity that
 actually decides the downstream burden. It is a tool for narrowing a reagent list
 before an experiment, not a substitute for one.
+
+For aluminium the experiment exists, and it points the same way. @xiao2015recovery
+column-leached weathered-crust ore with magnesium sulfate and found the optimum
+at 298 K, 0.20 mol/L MgSO₄ and a flow rate of 0.60 mL/min, giving 93 % total
+rare earth leaching with about 50 % aluminium leaching. Their conclusion is that
+MgSO₄ matches ammonium sulfate on rare earth recovery while lowering the
+aluminium that comes with it. (@moldoveanu2016overview, summarising the same
+work, describes the trade as a 5-7 % loss in rare earth extraction against a
+10-15 % reduction in aluminium desorption; the primary paper claims parity on
+recovery, so take the recovery penalty as somewhere between nil and small and
+the aluminium benefit as the robust part.) Their argument for the switch was
+that magnesium, unlike ammonium, is a soil nutrient that the region was short of.
+
+That argument has a sting in its tail, and @xiao2015recovery report it against
+themselves: the washed tailings retain 560 mg of ion-exchangeable magnesium per
+kilogram of soil, enough to unbalance the exchangeable calcium-to-magnesium
+ratio and harm plant growth in its own right. Their proposed fix is a combined
+magnesium-calcium lixiviant. The general lesson is worth more than the
+particular one --- an ion-exchange leach cannot leave the ground as it found it,
+because the process *is* the substitution of one cation for another, and
+choosing a benign cation moves the problem rather than deleting it.
 
 ### Nitrogen in the watershed
 

@@ -759,7 +759,19 @@ discrimination among the light lanthanides [@thiele2020tuning]. The binding
 affinity of macrophosphi for La³⁺ is over five orders of magnitude higher than
 for Gd³⁺, and separation factors up to 45 were achieved for the Ce/La pair with
 macrophosphi as the aqueous complexant in a biphasic system against the
-industrial extractant bis(2-ethylhexyl)phosphoric acid (HDEHP).
+industrial extractant bis(2-ethylhexyl)phosphoric acid (HDEHP). Ce/La is an
+adjacent pair, and the authors claim 45 as the highest separation factor
+reported for an adjacent lanthanide pair in any separation scheme --- which
+makes the conditions attached to it worth stating. The number is a ratio of
+conditional extraction constants, measured on 0.01 mM of each of La through Eu
+in 0.05 M sodium lactate and 1 M NaNO₃ against HDEHP in o-xylene, equilibrated
+for 24 h, and normalised across samples because the HDEHP concentration had to
+be varied to keep every lanthanide's distribution measurable. It is also
+strongly pH-dependent: the same system gives 7.4 at pH 3.0, approaches 30 at pH
+4.0 and reaches 45 only at pH 4.6. At pH 3.0 the parent macropa gives 15.8 in
+the *opposite* direction, holding La in the aqueous phase. The chemistry is
+real and the direction of the size selectivity is the interesting part; the
+demonstration is a tracer-level equilibrium measurement rather than a process.
 
 #### Ligand-Assisted Selective Precipitation
 
