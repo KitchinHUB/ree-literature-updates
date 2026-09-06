@@ -140,11 +140,13 @@ fewest stages, and it does not mean the least reagent. In @zhang2016cascade's
 statement of the theory it means **the maximum daily production for a given total
 mixer volume** — a capital-productivity objective, not a stage-count one.
 
-The objective function follows from that. For a mixer-settler train with fixed
-mixing and settling residence times, the capital tied up is set by the organic
-and rare-earth inventory held in the cells, which scales as the solvent flow per
-unit feed, `S_o`, times the number of cells. So the design indicator is the
-product
+The design indicator that goes with it is a separate piece of the theory, and
+the source introduces it later, inside a worked three-outlet design rather than
+as a consequence of the daily-production optimum. For a mixer-settler train with
+fixed mixing and settling residence times, the capital tied up is set by the
+organic and rare-earth inventory held in the cells, which scales as the solvent
+flow per unit feed, `S_o`, times the number of cells. The practical indicator
+offered there is the product
 
 $$
 \Phi = S_o \,(n + m)

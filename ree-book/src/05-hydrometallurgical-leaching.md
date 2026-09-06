@@ -196,10 +196,13 @@ No general recovery or enrichment factor is quoted here. Bands of that kind are
 widely repeated for rare earth gravity separation but could not be traced to a
 study that measures them, and they would be meaningless in any case without the
 feed grade and the deposit they came from. @zhou2024gravity shows the
-alternative: on the Balzhe niobium-zirconium-rare earth ore they compare a
-dense-medium cyclone, a shaking table and a Knelson centrifuge across three size
-fractions and report the grade each achieves, reaching total rare earth oxide
-grades of 0.41-0.44 % on a feed of a few tenths of a percent. Those are small
+alternative: on the Balzhe niobium-zirconium-rare earth ore they run a
+dense-medium cyclone, a shaking table, a spiral and a Knelson centrifuge across
+three size fractions and report the grade each achieves. The dense-medium
+cyclone reaches 0.41 % total rare earth oxide from a 0.33 % feed on the coarsest
+fraction, the shaking table 0.44 % from a 0.34 % feed on the middle fraction,
+and the Knelson centrifuge 0.82 % from a 0.44 % feed on the finest — each at
+about 90 % recovery of the rare earths into the concentrate. Those are small
 numbers because the ore is poor, which is exactly the point: an enrichment ratio
 is a statement about an ore, not about a machine.
 
@@ -1199,7 +1202,7 @@ leach liquor, it has to be concentrated before anything downstream can use it
 
 ## Xenotime Processing
 Xenotime is YPO₄, the heavy-rare-earth counterpart of monazite, and it is the
-most refractory of the four minerals in this chapter [@hung2020separation]. The
+most refractory of the four minerals in this chapter [@iaea2011radiation]. The
 reason is the same phosphate lattice, made tighter: yttrium and the heavy rare
 earths are the smallest of the trivalent ions, so the charge density at the
 cation site is highest and the RE–O–P framework is correspondingly harder to

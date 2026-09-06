@@ -167,7 +167,9 @@ control and for pre-neutralising (saponifying) the extractant — and the neutra
 salt from those acid–base reactions ends up as a large volume of high-salinity
 wastewater [@larsson2015separation]. Practical chloride-medium circuits are
 built on exactly these extractants and their mixtures [@afonin2024extraction;
-@liu2014solvent; @banda2015separation].
+@liu2014solvent; @banda2015separation]; the 1:1 P507/Cyanex 272 blend that
+@afonin2024extraction study is extraction-equivalent to Cyanex 572, a commercial
+mixed extractant developed for rare earth separation.
 
 There is also a ceiling on feed strength. Acidic-extractant circuits generally
 run at 30–50 g/L total rare-earth oxide, because high loading of the organic

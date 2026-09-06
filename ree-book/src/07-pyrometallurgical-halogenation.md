@@ -332,7 +332,7 @@ given in the literature reviewed here.
 
 
 ### Monazite Processing
-Monazite \[(Ce,La,Nd,Th)PO₄\] is a phosphate mineral containing 55-65% REO along with several per cent thorium [@kumari2015process]. The radioactive thorium content presents unique processing challenges that must be addressed regardless of extraction method.
+Monazite \[(Ce,La,Nd,Th)PO₄\] is a phosphate mineral; the pure end-member is about 65% REO by stoichiometry, and beach-sand monazite typically carries 4-12% ThO₂ along with the rare earths [@kumari2015process]. The radioactive thorium content presents unique processing challenges that must be addressed regardless of extraction method.
 
 Carbochlorination of monazite offers advantages for thorium management. The phosphorus content can be converted to volatile POCl₃, which can be separately recovered. Thorium chloride (ThCl₄) boils at 921 °C, far below the rare earth chlorides, and in stepwise carbochlorination with chemical vapour transport thorium removal from a mixed bastnäsite-monazite concentrate was complete at 800-900 °C for half an hour, as the vapour complex ThCl₄·AlCl₃ [@huang2002rare]. The separation is one of condensation temperature: ThCl₄ deposits around 600 °C, LaCl₃ at 950-1000 °C, FeCl₃ at 200-350 °C and AlCl₃ below 200 °C, so the thorium lands in a receptor of its own between the rare earths and the impurities. It is not quite complete at the extraction stage — about 1 mol % of the total thorium was transported with the rare earths and deposited around 450 °C — which is why the thorium receptor, rather than the product, is the stream to assay.
 
@@ -341,7 +341,7 @@ Conventional monazite processing goes by either sulfuric acid digestion or caust
 Carbochlorination may provide a cleaner alternative by avoiding the generation of large volumes of acidic or alkaline waste streams while concentrating thorium into a small volatile stream rather than dispersing it. The thorium still has to be managed; see [](#thorium-management).
 
 ### Xenotime Processing
-{index}`Xenotime <xenotime>` \[YPO₄\] is the primary mineral source for heavy rare earths and yttrium. The mineral contains roughly 55-65 % REO with a composition heavily weighted toward HREEs and Y [@castor2006rare].
+{index}`Xenotime <xenotime>` \[YPO₄\] is the primary mineral source for heavy rare earths and yttrium. The mineral is tabulated at 52-67 wt % REO, with a composition heavily weighted toward HREEs and Y, and carries up to about 5 % UO₂ where monazite carries the thorium [@jha2016hydrometallurgical].
 
 The carbochlorination of xenotime follows similar principles to monazite, with the phosphate matrix being converted to volatile chloride products while the REE chlorides are retained. Given the higher value of HREEs, carbochlorination might offer economic advantages through reduced reagent costs and simplified product recovery, but no study in the open literature has costed it for xenotime.
 

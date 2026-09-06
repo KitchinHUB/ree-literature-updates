@@ -172,7 +172,7 @@ is not enough to choose isotopes. Because the monoxide MO⁺ appears 16 mass uni
 above its parent, and because the REEs span a contiguous block of masses, a light
 REE almost always has a monoxide sitting on a heavy REE. The table below lists
 the principal MO⁺ overlaps a separations laboratory will meet, with the
-mitigation that actually works for each [@dulski1994interferences; @balaram2019rare].
+mitigation that actually works for each [@dulski1994interferences].
 
 | Analyte | Oxide interferent | Mitigation |
 |---------|-------------------|------------|
