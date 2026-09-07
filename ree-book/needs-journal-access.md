@@ -138,6 +138,22 @@ avoid. Restoring a number here needs journal access to the primary
 process-metallurgy literature. Until then the absence is the honest answer, and
 the chapter says so rather than leaving a reader to assume an omission.
 
+Chapter 23, Environment, techno-economics and life cycle, has a second gap of the
+same kind, added in the 2026 pass. The chapter states that producing rare earth
+oxide outside China may or may not be an environmental improvement and that no
+assessment read for this book settles it, because none compares a Chinese and a
+non-Chinese route on a common system boundary and a common functional unit.
+`zaimes2015environmental` is Bayan Obo alone; `wan2022lca` is Chinese ionic clay
+alone; `zapp2022environmental` is a review and is the most likely of the three
+to contain a multi-route table that would close the question, and it has not
+been read in full. What would actually close it is a cradle-to-gate comparison
+covering at least a Chinese light rare earth route and a non-Chinese one, with
+the tailings and radionuclide handling inside the boundary rather than cut off
+at the mine gate. Until such a study is found, the chapter states the two things
+that can be said — that the ammonia burden is flowsheet-specific rather than
+intrinsic, and that the relevant comparison is marginal rather than average —
+and names the missing study as missing.
+
 ## Cited for existence, with no number taken
 
 A second and milder category, introduced with chapter 14, Kinetics and Mass

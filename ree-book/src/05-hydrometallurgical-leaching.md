@@ -1082,6 +1082,90 @@ buried in earthen trenches with soil cover and periodic groundwater monitoring
 what "thorium management" means in practice: not a unit operation, but a
 permanent storage obligation and a monitoring programme.
 
+(radium-and-the-bastnasite-case)=
+### Radium, and Why Bastnäsite Is a Different Problem
+
+Everything above is monazite, and it is easy to read the bastnäsite case as a
+smaller version of the same thing. It is not. It is a different problem, and
+the difference is which decay chain it belongs to.
+
+Bastnäsite is a fluorocarbonate, so there is no phosphate site for thorium to
+substitute into and the thorium loading falls by more than an order of
+magnitude. Mountain Pass ore is tabulated at 0.8-4 Bq/g ²³²Th and 0.25 Bq/g
+²³⁸U, against monazite's ~200 and ~20; the mineral concentrate runs 3.1-4.6
+Bq/g ²³²Th and the beneficiation tailings 0.5 [@iaea2011radiation]. Bayan Obo
+and Sichuan bastnäsite concentrates sit in the same band, at 5.3-7.8 and
+3.9 Bq/g. @kim2025rare gives bastnäsite concentrate generally as 0.1-0.3 wt %
+thorium and counts the low radioactive content among the reasons the mineral is
+attractive to process — while noting in the same review that the thorium is
+still enough to require care in designing the circuit, so that the volume of
+radioactive residue is kept small. On the thorium axis, then, the comparison
+with monazite is not close, but neither is it zero.
+
+What is left is radium, and radium does not follow the thorium. In the
+hydrochloric acid treatment of bastnäsite concentrate at Mountain Pass the
+activity leaves the circuit in a lead-iron residue: 1.2 Bq/g ²³²Th-series and
+42.6 Bq/g ²³⁸U-series for the stabilised filter cake, 1.6 and 57.0 for the pond
+residue, described as predominantly ²³⁸U-series at about 50 Bq/g
+[@iaea2011radiation]. The concentrate feeding it was around 4 Bq/g and
+predominantly ²³²Th-series. So the flowsheet does something worth naming: it
+moves the activity into a small side stream about ten times more active than
+the feed, and the chain that dominates there is not the chain that dominated
+the ore. The same report puts the expected annual worker dose at roughly
+0.6 mSv whether the exposure comes from the feedstock or from the hottest
+residue on site. The radiological question at a bastnäsite plant is where that
+residue goes, not what the ore assays.
+
+#### Deactivation: Radium as a Solid Solution in Barite
+
+The unit operation that does this has a name, *deactivation*, and it is the
+industry's answer to the general question of how a rare earth circuit sheds
+radium in a form that stays shed. In the Indian plants it runs in two steps
+[@iaea2011radiation]. Barium chloride with either sodium sulfate or sulfuric
+acid is added to the rare earth chloride liquor, precipitating barium sulfate
+and carrying the radium down with it; excess sodium sulfide follows, dropping
+lead as the sulfide along with residual thorium, uranium and iron. The combined
+solids filter off as a *mixed cake* — in older usage a *mesothorium cake*,
+mesothorium being the disused name for ²²⁸Ra. One reported cake assayed 1.07 %
+thorium, 0.076 % uranium, 27 % barium sulfate and 21 % rare earth phosphate.
+In the caustic flowsheet the radium is split across two residues, and the
+split is documented: the hydroxide residue left by the hydrochloric acid leach
+takes >99 % of the thorium, >95 % of the uranium and 30-40 % of the radium,
+and the Ba(Ra)SO₄ step takes the 50-55 % of the feedstock radium that the leach
+dissolved. That last figure is a plant-to-plant average of a wide range, 40 to
+90 %, and it is set by the leach rather than by the precipitation: nitric acid
+leaching dissolves more than 95 % of the radium, which loads the deactivation
+step correspondingly harder.
+
+Why barium and not something with a higher affinity is the part worth
+understanding, because it sets what "irreversible" can mean here. Ra²⁺ and
+Ba²⁺ are both divalent and close in size, and RaSO₄ and BaSO₄ are isostructural,
+so the radium enters the barite lattice as a solid solution rather than sitting
+on a surface. That distinction decides whether a material is a recovery
+technology or a disposal one. An adsorbent is governed by a binding constant
+and gives its metal back when the solution changes — a pH excursion, a
+competing cation, a rise in ionic strength — which is exactly the property
+that makes the functionalised sorbents of
+[](#membranes-mofs-and-emerging-approaches) useful for taking a metal *out* of
+a stream. A co-precipitate is governed by a solubility product and by the
+stability of the host phase, and barite is among the least soluble common
+sulfates and a stable mineral in its own right. An operation that wants radium
+to stay where it was put buys barium chloride rather than a better sorbent.
+
+The method's cost is that it is dilutive, and the plants use that deliberately:
+repeating the deactivation with further barium chloride and sodium sulfate
+lowers the radionuclide concentration in the product *and* in the residue, at
+the price of more residue [@iaea2011radiation]. Nothing is destroyed. The
+activity is fixed in a mineral that will hold it and then spread thin enough to
+be disposed of, and how thin is a regulatory decision rather than a chemical
+one. The report tabulates both ends of that choice for the same material: a
+dry monazite barium sulfate residue at ~10,000 Bq/g, and the residue from a
+plant that had moved to repeated deactivation at 2,000-5,000 Bq/g, explicitly
+lower than the original 10,000 because more residue was generated. For
+comparison, the loparite plants' Th-BaSO₄ residue is reported at 89 Bq/g and
+the lime effluent cake described above at 25-100. Which of those a plant
+produces is a decision about volume, not about chemistry.
+
 (ion-adsorption-clay-leaching-the-gentle-approach)=
 ## Ion-Adsorption Clay Leaching: The Gentle Approach
 

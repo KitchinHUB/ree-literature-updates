@@ -52,6 +52,26 @@ production in China, which mined **69%** of world output in 2025 and supplied
 put near 90%, but no agency publishes it and this book could not trace the
 figure to a primary source; see [](#supply-chain-concerns).
 
+It is tempting to run that sentence backwards and conclude that making the same
+oxide somewhere else is therefore an environmental improvement, and the
+argument is plausible. It is not established here. The life cycle assessment
+this chapter leans on, @zaimes2015environmental, is a study of Bayan Obo alone;
+no assessment read for this book compares a Chinese and a non-Chinese route on
+a common system boundary and a common functional unit, and until one does the
+claim has exactly the status of the 90 % figure above — widely repeated, not
+traced. Two things can be said in the meantime. The first is mechanistic rather
+than aggregate: the nitrogen burden is a property of ammonia-saponified
+circuits and of ammonium sulfate clay leaching rather than of rare earth
+production as such ([](#how-the-united-states-lost-it)), so a plant designed now
+can decline it at the flowsheet stage instead of treating it at the outfall,
+and the same is true of unlined impoundments. The second is that the comparison
+which matters is marginal rather than average: demand is set by the magnet
+market, so new capacity displaces existing capacity, and the question is how
+the displaced tonne was made, not how the average tonne was. Neither
+observation substitutes for the study. Naming the missing comparison is the
+honest position, and it is the one open item this chapter would most like
+closed.
+
 ### Green Chemistry Approaches
 
 Three classes of alternative are usually offered as the environmental answer:

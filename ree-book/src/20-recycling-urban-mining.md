@@ -51,7 +51,10 @@ optimized for mass recovery and a process optimized for value recovery are not
 the same process. Second, every stream except magnet swarf arrives mixed with
 something that must be removed before any lanthanide-lanthanide separation
 begins — iron, nickel, glass, vanadium — which is the same problem that
-dominates primary hydrometallurgy ([](#hydrometallurgical-leaching)).
+dominates primary hydrometallurgy ([](#hydrometallurgical-leaching)). Swarf is
+the exception because it never left the building that made it, which is an
+argument about where a plant is sited rather than about recycling chemistry;
+[](#the-colocation-argument) takes it up.
 
 ## How Little Is Actually Recycled
 

@@ -139,6 +139,7 @@ produced at scale until 2025.
 | Saskatchewan Research Council | Saskatchewan, Canada | Monazite from Brazil; bastnäsite from a Canadian source | Magnet-grade NdPr metal; Dy and Tb oxides | No tonnage published by SRC | Under construction; pilot and commercial-scale metal production achieved 2024; substantial completion September 2026, commissioning December 2026, operational within 2027 | [SRC](https://www.src.sk.ca/campaigns/rare-earth-processing-facility) |
 | Rare Element Resources | Upton, Wyoming, USA | Bear Lodge material | Separated Nd/Pr oxide | Demonstration scale only: up to 10 t of Nd/Pr oxide over the campaign | Initial operations commenced 24 March 2026; the demonstration is expected to run for up to 12 months | [Release, 24 Mar 2026](https://www.rareelementresources.com/rare-element-resources-provides-rare-earth-project-update/); [@rer2026technology] |
 
+(how-to-read-that-table)=
 ## How to Read That Table
 
 **Nameplate is not output.** MP Materials states an anticipated separated-REO
@@ -285,3 +286,64 @@ non-Chinese operators able to make a separated heavy rare earth oxide went from
 zero to more than one, which is the step that matters for the argument made
 throughout this book: the chemistry was never the constraint
 ([](#research-directions-and-open-questions)).
+
+(the-colocation-argument)=
+## The Colocation Argument
+
+Four things in this chapter have been set down as separate facts, and they are
+the same move.
+
+The 2011 Mountain Pass rebuild sends its reverse osmosis reject to an onsite
+chlor-alkali plant that makes the caustic and the hydrochloric acid the
+separation circuit consumes [@weber2012rare]. Energy Fuels can take monazite
+because White Mesa already held the licence, not because it found better
+chemistry. MP Materials, Neo and Solvay each put magnet or magnet-grade
+production next to separation rather than selling oxide into a market. And
+[](#recycling-and-urban-mining) names manufacturing swarf — 25.5 wt % rare
+earth with the balance iron [@prodius2019sustainable] — as the one secondary
+feed that arrives single-composition and already collected, which it does
+because it never leaves the magnet plant that made it.
+
+Each is normally explained on its own terms: a water-balance optimisation, a
+regulatory accident, a vertical-integration strategy, a recycling curiosity.
+Read together they say something narrower and more useful. What is scarce in
+this industry is not a separation technology. It is a site that already has the
+adjacent capability, and *colocation* is the general name for buying it. The
+argument has a chemical form as well as a commercial one, and the chemical form
+runs in both directions.
+
+**Upstream, colocation is what makes a reagent loop closable.**
+[](#solvent-extraction-fundamentals) fixes the reagent bill at three
+equivalents of base per mole of rare earth moved, and
+[](#what-a-restart-has-to-solve) shows that the plant's largest reagent
+purchase and its largest effluent constituent are the same two ions. A circuit
+cannot regenerate its own acid and base by chemistry alone; it needs a
+chlor-alkali cell, which needs a brine feed and a power contract and a chlorine
+customer. Sited alone, that is a second plant to finance. Sited next to the
+separation train, the brine is already there and the products are already
+consumed. The same logic explains the licence: a thorium residue is not a
+chemical problem, it is a tailings cell and a monitoring programme
+([](#radium-and-the-bastnasite-case)), and both are cheaper to inherit than to
+obtain.
+
+**Downstream, colocation is what makes the product specification legible.**
+This one is an argument from process structure rather than a sourced finding,
+and it should be read as such. A separation plant does not sell into an oxide
+market so much as into a metal plant that feeds an alloy plant that feeds a
+magnet plant, and the impurity tolerances that decide whether a lot is
+saleable are set two or three steps downstream of the mixer-settlers. An
+operator with the magnet line in view knows what its cascade has to achieve; an
+operator without one is separating to a specification it has to guess at, and
+the ramp described in [](#how-to-read-that-table) is expensive enough without
+that added uncertainty.
+
+Two limits on the argument. The first is that no source verified for this
+chapter establishes that the Chinese downstream position was built as
+deliberate colocation policy rather than arrived at as an outcome; what the
+record supports is the outcome — a country that started with the ore and the
+separation capacity now also holds the metal, the alloy and the magnet — and
+not the intent behind it. The second is that colocation is not by itself an
+environmental argument. Putting the leach, the separation, the metal plant and
+the tailings cell on one site concentrates the burden geographically as much as
+it shortens the supply chain, and whether that is an improvement is the open
+question [](#environment-techno-economics-and-life-cycle) declines to close.
