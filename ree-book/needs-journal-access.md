@@ -138,21 +138,31 @@ avoid. Restoring a number here needs journal access to the primary
 process-metallurgy literature. Until then the absence is the honest answer, and
 the chapter says so rather than leaving a reader to assume an omission.
 
-Chapter 23, Environment, techno-economics and life cycle, has a second gap of the
-same kind, added in the 2026 pass. The chapter states that producing rare earth
-oxide outside China may or may not be an environmental improvement and that no
-assessment read for this book settles it, because none compares a Chinese and a
-non-Chinese route on a common system boundary and a common functional unit.
-`zaimes2015environmental` is Bayan Obo alone; `wan2022lca` is Chinese ionic clay
-alone; `zapp2022environmental` is a review and is the most likely of the three
-to contain a multi-route table that would close the question, and it has not
-been read in full. What would actually close it is a cradle-to-gate comparison
-covering at least a Chinese light rare earth route and a non-Chinese one, with
-the tailings and radionuclide handling inside the boundary rather than cut off
-at the mine gate. Until such a study is found, the chapter states the two things
-that can be said — that the ammonia burden is flowsheet-specific rather than
-intrinsic, and that the relevant comparison is marginal rather than average —
-and names the missing study as missing.
+Chapter 23, Environment, techno-economics and life cycle, had a second gap of the
+same kind, opened and then mostly closed in the 2026 pass. The question was
+whether producing rare earth oxide outside China is an environmental
+improvement, which the chapter had been careful not to assert:
+`zaimes2015environmental` is Bayan Obo alone and `wan2022lca` is Chinese ionic
+clay alone. `zapp2022environmental` was flagged as the likeliest source to
+close it, then **retrieved and read**, and it does: the review models four
+pathways — Bayan Obo/Baotou, Mountain Pass, Mt Weld/Kuantan and Norra Kärr — on
+one boundary from mine to metal refining, and reports both normalized totals and
+absolute per-kilogram figures. Chapter 23 now carries that table and the ranking.
+Reading it also **corrected two things the chapter had said on its authority**:
+that the review reports no absolute figures (it does, per kg of neodymium rather
+than per kg of REO), and a hotspot table that attributed human toxicity to
+radionuclides and listed a water hotspot, neither of which the review supports.
+
+What the study does *not* close is the part that matters most to the American
+case, and the chapter now says so in those terms. The authors state that ²³²Th
+emissions are not considered in most of the underlying studies, so radionuclide
+management sits outside the boundary rather than inside it; no emissions in any
+underlying study are measured at a plant, with regulatory discharge limits
+standing in; and the modelling assumes exhaust gas scrubbing at every Western
+plant but only at modern large Chinese ones, which is an assumed difference in
+environmental standard rather than a chemical one. The study that would close
+the remainder is the same four chains with radionuclide handling inside the
+boundary and measured effluent data in place of permit limits.
 
 ## Cited for existence, with no number taken
 

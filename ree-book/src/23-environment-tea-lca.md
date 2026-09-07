@@ -52,25 +52,82 @@ production in China, which mined **69%** of world output in 2025 and supplied
 put near 90%, but no agency publishes it and this book could not trace the
 figure to a primary source; see [](#supply-chain-concerns).
 
-It is tempting to run that sentence backwards and conclude that making the same
-oxide somewhere else is therefore an environmental improvement, and the
-argument is plausible. It is not established here. The life cycle assessment
-this chapter leans on, @zaimes2015environmental, is a study of Bayan Obo alone;
-no assessment read for this book compares a Chinese and a non-Chinese route on
-a common system boundary and a common functional unit, and until one does the
-claim has exactly the status of the 90 % figure above — widely repeated, not
-traced. Two things can be said in the meantime. The first is mechanistic rather
-than aggregate: the nitrogen burden is a property of ammonia-saponified
-circuits and of ammonium sulfate clay leaching rather than of rare earth
-production as such ([](#how-the-united-states-lost-it)), so a plant designed now
-can decline it at the flowsheet stage instead of treating it at the outfall,
-and the same is true of unlined impoundments. The second is that the comparison
-which matters is marginal rather than average: demand is set by the magnet
-market, so new capacity displaces existing capacity, and the question is how
-the displaced tonne was made, not how the average tonne was. Neither
-observation substitutes for the study. Naming the missing comparison is the
-honest position, and it is the one open item this chapter would most like
-closed.
+(is-producing-it-elsewhere-better)=
+### Is Producing It Somewhere Else Better?
+
+Running that sentence backwards — the same oxide made outside China is
+therefore an environmental improvement — is the argument reshoring is usually
+sold on, and it is the kind of claim this chapter is obliged to check rather
+than assume. One study does run the comparison. @zapp2022environmental model
+four generic production pathways on a common boundary, mine through metal
+refining, and report them per kilogram of the metal produced. The four are the
+mixed bastnäsite-monazite ore at Bayan Obo processed at Baotou, bastnäsite at
+Mountain Pass, monazite from Mt Weld processed at Kuantan, and eudialyte at
+Norra Kärr.
+
+| Impact, per kg Nd | Bayan Obo | Mountain Pass | Mt Weld | Norra Kärr |
+|----|----|----|----|----|
+| Global warming (kg CO₂-eq) | 98 | **61** | 72 | 115 |
+| Acidification (kg SO₂-eq) | 0.7 | **0.2** | 0.5 | 0.3 |
+| Marine eutrophication (kg N-eq) | 0.28 | **0.02** | 0.04 | 0.02 |
+| Freshwater eutrophication (kg P-eq) | 0.04 | 0.02 | 0.03 | **0.01** |
+| Particulate matter (kg PM₁₀-eq) | **0.4** | 0.5 | 0.3 | 0.6 |
+
+: Absolute impacts of the four modelled neodymium pathways, read from Fig. 3 of
+@zapp2022environmental. Bold marks the lowest value in each row; Mountain Pass
+is not lowest on particulate matter, and Norra Kärr is worst on global warming
+while being best on the normalized total.
+
+Summed over seven normalized impact categories, the authors rank neodymium from
+Norra Kärr lowest, then Mountain Pass, then Mt Weld/Kuantan, then Bayan
+Obo/Baotou. So the answer to the question is a qualified yes, and the
+qualifications are the interesting part.
+
+The first is that the advantage is not uniform. Mountain Pass is the best of
+the four on global warming and acidification and ties for best on marine
+eutrophication, but it is worse than Bayan Obo on particulate matter, which is
+set by blasting and crushing and therefore by the hardness and stripping ratio
+of the deposit rather than by the operator's choices. An LCA that reported only
+a carbon footprint would have missed that.
+
+The second is where the largest gap comes from. Bayan Obo's marine
+eutrophication is fourteen times Mountain Pass's, and the authors attribute over
+98 % of it to the production of the ammonium bicarbonate used to precipitate the
+rare earth carbonates — not to saponification and not to clay leaching. That
+sharpens the point made in [](#how-the-united-states-lost-it): the nitrogen
+burden really is flowsheet-specific rather than intrinsic to rare earth
+production, but the specific step carrying it at Baotou is a precipitation
+reagent, and a plant designed now declines it by choosing a different one.
+The ammonium sulfate of ion-adsorption clay leaching is a separate and larger
+problem; in the same study the clay-derived dysprosium chain has the highest
+impacts of any pathway assessed, driven by ammonium emissions from in situ
+leaching.
+
+The third is what the boundary leaves out, and it is the item that matters most
+to the American case. The authors state that radioactive emissions, particularly
+from ²³²Th, are not considered in most of the underlying studies. The thorium
+and radium handling of [](#radium-and-the-bastnasite-case) — the residues, the
+tailings cell, the monitoring obligation — is therefore outside these numbers
+rather than favourable within them, and the same is true of the tailings-pond
+liner difference the authors describe qualitatively.
+
+Three further cautions belong with the table. These are generic pathways rather
+than any company's real supply chain. No emissions in the underlying studies are
+based on measured plant data; regulatory discharge limits stand in for
+measurements. The Norra Kärr chain rests on laboratory data alone, which is why
+its favourable normalized rank should be read as a projection. And the modelling
+assumes exhaust gas scrubbing at every Western plant but only at modern
+large-scale Chinese ones — a difference in assumed environmental standard, not
+in chemistry, that partly produces the result it is used to demonstrate.
+
+What survives all of that is narrower than the reshoring argument but not
+nothing: on the categories these models cover, the non-Chinese bastnäsite route
+is genuinely lower-burden than the Chinese mixed-ore route, mostly because of
+reagent choices and scrubbing rather than because of geology, and the one
+category where geology dominates is the one where it does not win. The
+comparison that would settle the rest — the same four chains with radionuclide
+management inside the boundary and measured effluent data instead of permit
+limits — has not been published.
 
 ### Green Chemistry Approaches
 
@@ -343,10 +400,11 @@ ore type and process. @zapp2022environmental put the reason plainly -- impacts
 are "mainly related to the geology of a deposit, mineral type and composition,
 the methods of extraction, local supply of energy and auxiliary materials, and
 regulatory conditions", so they "vary considerably" and no single figure
-represents the industry. That review compares process chains in normalized
-person-equivalents rather than tabulating absolute cradle-to-gate GWP across
-studies, so the spread has to be read from the individual studies. Two values
-with a clear published basis anchor it:
+represents the industry. That review does give absolute figures, but for
+elemental neodymium rather than for mixed oxide — they are in
+[](#is-producing-it-elsewhere-better) — so a per-kg-REO spread still has to be
+read from the individual studies. Two values with a clear published basis
+anchor it:
 
 | Source/Process                          | GWP (kg CO₂-eq/kg REO) | Source                   |
 |-----------------------------------------|------------------------|--------------------------|
@@ -473,16 +531,25 @@ category-by-category table of reductions -- acidification, water, toxicity,
 land use -- is not available from that review, and is not given here.
 
 ### Process Hotspot Analysis
-**Dominant Impact Contributors:** [@zapp2022environmental]
+**Dominant Impact Contributors:** the following are as
+@zapp2022environmental assign them, and the assignment is worth reading
+alongside the numbers in [](#is-producing-it-elsewhere-better).
 
-| Impact Category    | Primary Contributor                |
-|--------------------|------------------------------------|
-| GWP                | Chemical production (acids, NaOH)  |
-| Acidification      | Energy generation, acid use        |
-| Eutrophication     | Ammonium emissions (IAC leaching)  |
-| Particulate matter | Mining dust (bastnäsite, monazite) |
-| Human toxicity     | Heavy metals, radionuclides        |
-| Water              | Process water, washing             |
+| Impact Category | Primary Contributor |
+|----|----|
+| Global warming | Supply of process chemicals, and the electricity that makes them; roasting, solvent extraction, oxalate precipitation and calcination are the steps that call for them |
+| Acidification | The same chemical and energy supply, plus direct HF and SO₂ emissions from acid roasting |
+| Marine eutrophication | Ammonium: from in-situ leaching in the clay chains, and from ammonium bicarbonate manufacture in the Baotou chain, where it is over 98 % of the total |
+| Particulate matter | Mining and crushing dust, 50-90 % of the total, for bastnäsite, monazite and eudialyte alike |
+| Human toxicity | Chemical supply, and HF released during RE fluoride production for molten salt electrolysis |
+
+Two absences in that table are themselves findings. **Radioactivity is not in
+it**, because the review states that ²³²Th emissions are not considered in most
+of the underlying studies — so the burden that dominates the permitting
+argument is missing from the impact accounting, not small within it. And
+**water is not in it**: water depletion is not among the seven categories the
+review normalizes, so no water hotspot can be attributed here, whatever the
+table in a secondary source may say.
 
 **Energy Intensity:** Two anchors are available, and neither is a breakdown.
 @browning2017life put the gross energy requirement for rare earths from monazite

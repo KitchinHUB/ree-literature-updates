@@ -345,5 +345,8 @@ separation capacity now also holds the metal, the alloy and the magnet — and
 not the intent behind it. The second is that colocation is not by itself an
 environmental argument. Putting the leach, the separation, the metal plant and
 the tailings cell on one site concentrates the burden geographically as much as
-it shortens the supply chain, and whether that is an improvement is the open
-question [](#environment-techno-economics-and-life-cycle) declines to close.
+it shortens the supply chain. The one published comparison of whole pathways
+does put the Mountain Pass bastnäsite route below the Bayan Obo route on most
+impact categories ([](#is-producing-it-elsewhere-better)), but it leaves the
+radionuclide handling outside its boundary, which is precisely the burden a
+colocated site concentrates.
