@@ -195,7 +195,9 @@ comparison holds only where remediation is actually paid for. Where it is not â€
 which describes most of the historical record of this ore type
 ([](#ion-adsorption-clays)) â€” an operator comparing the two techniques sees a
 14 % cost increase and no offsetting saving. The case for electrokinetic mining
-is a regulatory case before it is an economic one. All of these figures come
+is a regulatory case before it is an economic one.
+[](#how-the-united-states-lost-it) is the same argument run in the other
+direction, on a jurisdiction where the remediation eventually was paid for. All of these figures come
 from a single group's single trial, and none has been reproduced. The technique
 is described in [](#electrokinetic-mining).
 

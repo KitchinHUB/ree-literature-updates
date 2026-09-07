@@ -7,11 +7,13 @@ title: The Industrial Landscape
 
 **Data as of 3 September 2026.** Every figure in this chapter comes from a
 company filing, an operator's own published statement, or the U.S. Geological
-Survey, and each row of the table below names its source. This chapter is the
-shortest in the book and by a wide margin the most perishable: several of the
-plants listed are in construction or commissioning, and any reader more than a
-year past that date should treat the table as a starting list of operators
-rather than as current numbers.
+Survey, and each row of the table below names its source. The table and the
+section that follows it are by a wide margin the most perishable pages in this
+book: several of the plants listed are in construction or commissioning, and any
+reader more than a year past that date should treat the table as a starting list
+of operators rather than as current numbers. The two sections on how the United
+States left this industry and what a restart has to solve are the durable part,
+and they are the reason the perishable part is worth keeping current.
 
 Who actually separates rare earths, where, and at what scale. The structural
 fact behind all of it is concentration. The USGS puts 2025 world mine
@@ -20,6 +22,83 @@ production at 390,000 t of rare earth oxide, of which China accounts for
 concentrated still than mining ([](#supply-chain-concerns)), and it is the
 separation step, not the mining step, that every project below is a response
 to.
+
+(how-the-united-states-lost-it)=
+## How the United States Lost It
+
+The United States led this industry and then did not, and the reason is usually
+given in one of two ways: environmental regulation drove it out, or China
+undercut it on price. Both are partial, and the documentary record supports a
+narrower and more specific version of each.
+
+The scale of what was lost is not in dispute. From the 1960s until the 1980s the
+United States was the world's leading producer of rare earth oxide, and in 1984
+the Mountain Pass mine alone supplied 100 % of U.S. demand and 33 % of world
+demand. China began increasing production in the late 1970s and became the
+dominant producer within a decade. Mining at Mountain Pass was suspended in
+2002, and separation from stockpiled ore continued from 2007
+[@weber2012rare].
+
+**What the environmental record actually says.** EPA's review of the site
+identifies the primary source of contamination as process wastewaters and
+tailings impoundments rather than as a discharge event. Before 1980 the facility
+disposed of wastewater in unlined percolation-type surface impoundments, and the
+largest measured consequence is an increase in total dissolved solids in
+groundwater — around 10,000 mg/L beneath the impoundments against a documented
+background of 360 to 800 mg/L — arising primarily from neutralising the
+hydrochloric acid in the wastewater with sodium hydroxide. Metals, nutrients and
+radiological constituents were present as well. Two wastewater spills are
+documented, both from failures of the pipeline running to the offsite
+evaporation ponds: 3,375 gallons of tailings and process wastewater in 1989, and
+45,000 gallons of process wastewater in 1990. Both were contained onsite and
+were assessed at the time as posing low risk. Under its former owner the site
+was investigated as a damage case for releases of radionuclides
+[@weber2012rare].
+
+That is a smaller acute record than the popular account and a larger chronic
+one, and the distinction is the whole point for anyone designing a new plant.
+The persistent problem was not a spill. It was that the plant's own acid-base
+stoichiometry made salt faster than the site could dispose of it, and that the
+cheapest available disposal route was percolation to ground until that route was
+no longer permitted. The reagent pair that dominates the groundwater signature,
+NaOH neutralising HCl, is the same one whose consumption
+[](#solvent-extraction-fundamentals) shows to be fixed by the extraction
+chemistry itself: three equivalents of base per mole of rare earth moved. The
+effluent was not an accident of operation. It was the process, written out.
+
+**Ammonia belongs to the Chinese half of this story, not the American one.** The
+nitrogen problem is real and large, and the same EPA review documents it: in
+2005 saponification in China was estimated to generate 20,000 to 25,000 t of
+wastewater at total ammonia nitrogen concentrations of 300 to 5,000 mg/L
+[@weber2012rare]. But it is a property of ammonia-saponified P507 circuits and
+of ammonium sulfate clay leaching ([](#ion-adsorption-clays)), which is to say
+of Chinese practice. Mountain Pass ran a chloride circuit neutralised with
+caustic, and its signature was dissolved salt and radionuclides. An account that
+transplants the ammonia story onto the American closure has the chemistry of the
+wrong country.
+
+**The regulatory pressure that is well documented concerns thorium, and it
+predates 2002 by two decades.** The USGS states it plainly: because the cost of
+handling and disposing of radioactive material is a serious impediment to
+extracting the more radioactive rare earth minerals, tighter regulation of
+radioactive minerals drove many sources of monazite out of the rare earth market
+during the 1980s [@long2010principal]. That is not a claim about one mine
+closing. It is a claim about a feedstock leaving the Western industry, and it is
+the economic form of the licensing obligation described in
+[](#thorium-management).
+
+**No source verified for this chapter assigns a cause to the 2002 suspension.**
+EPA records the date and not the reason, and this book will not supply one. The
+two candidate explanations are in any case not independent. Environmental
+compliance sets a bill; the price at which a competitor will sell the same oxide
+determines whether that bill can be paid. A plant that must line its
+impoundments, treat its raffinate and dispose of a thorium residue can carry
+those costs at one oxide price and cannot at another. Attributing the closure to
+regulation alone requires believing the plant would have been profitable without
+Chinese competition; attributing it to price alone requires believing the
+environmental liability was free. The defensible statement is that the two acted
+on the same balance sheet, which is why the next section treats effluent as a
+design problem rather than a compliance one.
 
 ## Two Companies, One Country
 
@@ -101,6 +180,84 @@ slate must sell the light end at commodity prices to recover the cost of the
 separation it performed on the whole of it, which is a large part of why the
 economics of a new entrant are so much worse than the flowsheet suggests
 ([](#environment-techno-economics-and-life-cycle)).
+
+(what-a-restart-has-to-solve)=
+## What a Restart Has to Solve
+
+A new American separation plant inherits the stoichiometry that produced the old
+one's effluent, and nothing about the chemistry has become gentler since 1984.
+What has changed is that the water and the residue can now be treated as design
+variables rather than as disposal problems, and there is a documented design
+that does so.
+
+**Close the water loop and sell the reject.** The rebuild proposed for Mountain
+Pass around 2011 is the most completely described attempt at this in the public
+record. Tailings are dewatered to a paste and layered into a stable onsite
+containment mound, which eliminates 120 acres of evaporation ponds. Reverse
+osmosis treats and returns about 90 % of the wastewater to the process. The RO
+reject, instead of being evaporated, feeds an onsite chlor-alkali facility that
+makes NaOH, HCl and sodium hypochlorite for reuse or sale, and heavy metals
+concentrated in the reject are precipitated and removed by nanofiltration
+[@weber2012rare]. What makes that loop worth studying is that it attacks the
+problem where the previous section located it: the plant's largest reagent
+purchases and its largest effluent constituent are the same two ions, so a
+circuit that regenerates acid and base from its own brine is turning a waste
+stream back into the feedstock it was made from.
+
+EPA states the limit of the idea in the same passage, and it is worth stating
+here rather than glossing over: as with any reuse technology, what comes out is
+usually a concentrated wastewater stream that still has to be disposed of
+[@weber2012rare]. A closed loop concentrates; it does not annihilate. Ninety
+percent recovery leaves ten percent, and the ten percent is where everything the
+other ninety was carrying now lives. That residue is the number to ask any
+prospective operator for, and it is the number least often published.
+
+**Take the nitrogen out at the source.** Where a circuit is saponified with
+ammonia, no downstream treatment is as cheap as not making the ammonium in the
+first place. Magnesium and calcium saponification, and non-saponification
+flowsheets that recycle the acid instead, are the established alternatives, and
+[](#solvent-extraction-fundamentals) sets out what each of them trades away
+[@liao2013clean]. A plant being designed now has the advantage of never having
+built the ammonia circuit, which is a far cheaper position than any retrofit.
+The advantage should not be overstated: magnesium saponification moves the
+problem from a eutrophying effluent to a saline one, which is easier to permit
+and no easier to evaporate.
+
+**Process the thorium where the licence already is.** The regulatory cost that
+drove monazite out of the market in the 1980s did not go away, but the industry
+found a way around it, and the table above records the result: monazite appears
+in the feed column of five of the ten operators listed, four of them outside
+China. Monazite carries uranium and thorium, and processing it requires a
+licence that few facilities outside China hold.
+Energy Fuels' route to that licence was not to obtain one but to already have
+one: White Mesa was an operating uranium mill, its NRC source material licence
+became Utah Radioactive Materials License UT1900479 when Utah became an
+Agreement State for uranium mill regulation, and the company's own filing gives
+that pre-existing licensed capability, rather than any separation chemistry, as
+the reason the mill could take monazite at all
+([10-K for 2025](https://www.sec.gov/Archives/edgar/data/1385849/000138584926000009/efr-20251231.htm)).
+The general lesson is not about one company. The binding constraint on a
+monazite flowsheet is a licence and a tailings cell, both of which take longer
+to obtain than a solvent extraction train takes to build, so the sites that can
+move fastest are the ones that already hold them.
+
+**Or avoid making the effluent.** Two routes treated elsewhere in this book get
+around the aqueous problem rather than cleaning up after it. The
+non-aqueous halide routes ([](#pyrometallurgical-and-halogenation-routes))
+produce no raffinate to neutralise, at the cost of a chlorine handling problem
+and an energy bill. Recycling ([](#recycling-and-urban-mining)) starts from a
+feed whose thorium was removed by somebody else, which is the largest
+permitting advantage available to a new entrant — and exactly one operator in
+the table lists recycled material among its feeds, which says more about the
+availability of end-of-life magnets than about the merits of the route.
+
+None of this is speculative chemistry. Every element of it is either operating
+somewhere or was engineered in detail for a permit application. What has not
+been demonstrated in the United States is the whole set running together on one
+site through a full production year. Until it has, the honest position is the
+one [](#environment-techno-economics-and-life-cycle) takes toward every other
+number in this area, and the one this chapter takes toward capacity: the
+flowsheet is a design, and the effluent is a measurement.
 
 ## What Changed Recently
 

@@ -1189,7 +1189,12 @@ raffinate; magnesium and calcium saponification, and non-saponification
 flowsheets that recycle the acid instead, are the directions the Chinese industry
 has been pushed toward on exactly these grounds [@liao2013clean]. Whichever is
 chosen, the reagent bill and the effluent are set by the same stoichiometry:
-three equivalents of base per mole of rare earth moved.
+three equivalents of base per mole of rare earth moved. That stoichiometry is
+also what closed the American industry's books:
+[](#how-the-united-states-lost-it) traces the groundwater contamination at
+Mountain Pass to the sodium hydroxide side of it, and
+[](#what-a-restart-has-to-solve) sets out what a plant built now can do about
+both halves.
 
 ### Operational Considerations
 
