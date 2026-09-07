@@ -47,8 +47,8 @@ jobs:
 
       # LuaLaTeX, not pdflatex: the book needs fontspec for the box-drawing
       # glyphs in its verbatim blocks. fonts-dejavu-core supplies the mono
-      # face, texlive-latex-extra supplies draftwatermark and imakeidx, and
-      # librsvg2-bin renders the SVG figures to PDF.
+      # face, texlive-latex-extra supplies draftwatermark, imakeidx and
+      # noindentafter, and librsvg2-bin renders the SVG figures to PDF.
       - name: Install LaTeX
         run: |
           sudo apt-get update

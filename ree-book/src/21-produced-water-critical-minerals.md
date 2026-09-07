@@ -402,8 +402,8 @@ engineer has demonstrated the selectivity at 2,000 ppm and watched it fall by a
 factor of 4.5 by 5,000 ppm; a process engineer has costed a plant whose
 economics turn on that membrane working at 100,000 ppm and above. As a
 calibration point, @wenzlick2020techno report a total levelized cost of
-**$0.94 per m³ of distillate** for a comparison desalination case, which
-normalises to about $1.0 per kWh of the minimum theoretical separation work —
+**\$0.94 per m³ of distillate** for a comparison desalination case, which
+normalises to about \$1.0 per kWh of the minimum theoretical separation work —
 roughly an eightfold thermodynamic penalty. Treating this water is not cheap
 even when nothing is being recovered from it.
 

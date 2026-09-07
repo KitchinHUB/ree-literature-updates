@@ -175,17 +175,17 @@ basis must be stated before any two figures in this section are compared.
 **Electrokinetic mining (2025):** @wang2025industrial cost their 5,000-tonne
 industrial-scale trial against conventional in-situ leaching, and the result is
 more interesting than "economically viable" suggests. On direct production cost
-the electrokinetic route is **more expensive**: US$7,078 per tonne of REO
-against US$6,214 for conventional leaching, about 14 % higher. The gap is
+the electrokinetic route is **more expensive**: US\$7,078 per tonne of REO
+against US\$6,214 for conventional leaching, about 14 % higher. The gap is
 electricity and electrode. Producing a tonne of REO consumes roughly 4,286 kWh,
-costing US$420, and the conductive polymer electrode adds US$812 per tonne; the
+costing US\$420, and the conductive polymer electrode adds US\$812 per tonne; the
 authors name both as the items that must come down before the technique is
-practical. For the trial itself, equipment was US$43,527 and materials
-US$16,641.
+practical. For the trial itself, equipment was US\$43,527 and materials
+US\$16,641.
 
 What reverses the comparison is the cost the conventional route does not carry
 on its own books. Vegetation restoration, soil remediation and water treatment
-run to **US$16,477 per tonne of REO** for conventional in-situ leaching — more
+run to **US\$16,477 per tonne of REO** for conventional in-situ leaching — more
 than twice the entire direct production cost — and the authors' figure is that
 including them makes conventional mining three times more expensive than the
 electrokinetic route.

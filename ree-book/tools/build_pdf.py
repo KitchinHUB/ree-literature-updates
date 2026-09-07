@@ -59,7 +59,10 @@ What MyST gets wrong, and what is done about it:
 
 Also applied here rather than by MyST: the DRAFT watermark, to match the
 website; a numbered bibliography in citation order, with the DOIs hyperlinked;
-and `backref` so each bibliography entry says where it was cited.
+`backref` so each bibliography entry says where it was cited; and suppression
+of the paragraph indent after a display equation or a table, which LaTeX would
+otherwise apply to text that is continuing the interrupted paragraph rather
+than starting a new one.
 
 The book's own rendered bibliography page (src/92-references.md) is left out of
 the PDF. It exists to give the website a citable, linkable index of the 554
@@ -164,6 +167,20 @@ PREAMBLE = r"""
 % fallback that prints as dead text; doi.sty makes it a link, and handles the
 % underscores that appear in Springer chapter DOIs.
 \usepackage{doi}
+
+% A paragraph that resumes after a displayed equation or a table is a
+% continuation of the paragraph the display interrupted, not a new one, so it
+% must not be indented. LaTeX indents it anyway because MyST leaves a blank
+% line on both sides of every display. noindentafter suppresses it at the
+% environment level, which is safer than inserting \noindent into the body:
+% the body is regenerated on every build. figure is deliberately absent --
+% floats move, so the paragraph that follows one in the source is not the
+% paragraph that follows it on the page.
+\usepackage{noindentafter}
+\NoIndentAfterEnv{equation}
+\NoIndentAfterEnv{table}
+\NoIndentAfterEnv{longtable}
+\NoIndentAfterEnv{tabular}
 
 % Match the website: the book is a draft and every page should say so.
 \usepackage{draftwatermark}
