@@ -926,4 +926,7 @@ def main():
 
 
 if __name__ == "__main__":
-    sys.exit(main() or 0)
+    # main() returns 1 on an aborted run and the list of works on a good one;
+    # only an int is an exit status.
+    result = main()
+    sys.exit(result if isinstance(result, int) else 0)
