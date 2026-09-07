@@ -1931,12 +1931,16 @@ been pursued.
 ### Selective Leaching
 
 If the leach itself could reject the impurities, the purification section above
-would largely disappear. @he2025stepwise pursue this by staging the leach, so
-that impurities and rare earths come off in different fractions — the
-pH-controlled selective dissolution of the caustic monazite cake, generalised.
-The difficulty is that leaching selectivity is blunt compared with extraction
-selectivity, and a partial separation that still needs a purification circuit has
-bought little. **Electrochemically assisted leaching** applies a potential during
+would largely disappear. @he2025stepwise pursue this on ion-adsorption ore,
+and not by fractionating the leach but by disarming the impurity before the
+leach begins: an injection of 0.8 wt % hexamethylenetetramine at natural pH
+converts the exchangeable aluminium on the clay into adsorbed hydroxyl
+aluminium, which the 2 wt % ammonium sulfate that follows cannot strip.
+Aluminium leaching falls to 6.0 % while rare earth leaching holds at 93 %,
+slightly above ammonium sulfate alone, and the liquor is precipitated without an
+impurity-removal step. The difficulty is that this is one impurity on one ore
+type: leaching selectivity is blunt compared with extraction selectivity, and a
+partial separation that still needs a purification circuit has bought little. **Electrochemically assisted leaching** applies a potential during
 the leach to drive a redox change at the mineral surface — the lever the Mountain
 Pass oxidative roast uses on cerium, applied *in situ*. It is at research stage,
 and no performance data are quoted.
@@ -2044,7 +2048,9 @@ demonstrated at scale.
 along with iron, aluminium, calcium, thorium and phosphate, and then spends a
 purification circuit undoing that. A leach that discriminated at the dissolution
 step would remove the purification section, cut the acid, and shrink the waste
-together. Staged leaching is the current best attempt [@he2025stepwise].
+together. Staged leaching is the current best attempt, though it has so far
+been demonstrated only against aluminium on ion-adsorption ore
+[@he2025stepwise].
 
 **Refractory decomposition.** Xenotime needs a caustic fusion at 400 °C or a
 roast-plus-digestion, and monazite needs concentrated acid at 200 °C or

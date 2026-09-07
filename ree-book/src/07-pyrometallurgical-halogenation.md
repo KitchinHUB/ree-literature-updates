@@ -15,7 +15,7 @@ different set of strengths and a different set of problems.
 
 It is worth being precise about which way the separation runs, because the
 obvious guess is wrong. The rare earth trichlorides are not the volatile
-products. They melt between roughly 580 and 930 °C and do not reach one
+products. They melt between roughly 580 and 900 °C and do not reach one
 atmosphere of vapour pressure until well above 1,500 °C [@seifert2005melting;
 @brunetti2000vaporization]. What leaves the reactor is everything else: the
 silicon, phosphorus, iron, aluminium, titanium, zirconium and thorium in the
@@ -39,7 +39,7 @@ separation at all.
 | ZrCl₄ | 437 (under pressure) | 331 (s) | vapour |
 | ThCl₄ | 770 | 921 (b) | volatile only at the top of the window |
 | CaCl₂ | 775 | 1,935 (b) | stays in the cake |
-| LnCl₃ (La–Lu, Y) | ≈580 (Tb) to 930 (Lu) | ≳1,550 (b, est.) | stays in the cake |
+| LnCl₃ (La–Lu, Y) | ≈580 (Tb) to 900 (Lu) | ≳1,550 (b, est.) | stays in the cake |
 
 :::
 
@@ -292,9 +292,14 @@ reducing as well as chlorinating in the way cerium and praseodymium do. The
 heavies otherwise follow the same carbochlorination chemistry as the lights,
 with thermodynamic calculations indicating spontaneous reaction over the
 500-1000 °C window [@xue2025carbochlorination]. Europium and ytterbium are the
-special cases in the other direction: both can be *over*-reduced to the divalent
-chlorides EuCl₂ and YbCl₂ under strongly reducing conditions, and the europium
-reaction has been resolved stage by stage [@pomiro2014study]. What the
+special cases in the other direction, since both have an accessible divalent
+state and both form stable dichlorides. Whether a carbochlorination bed ever
+reaches one is a separate question, and the answer in the only study to address
+it is no: working on Eu₂O₃, Pomiro and co-workers discounted Eu²⁺ compounds
+outright because the chlorine atmosphere is oxidising, and the three stages they
+resolved run entirely through trivalent europium — Eu₂O₃ to EuOCl, EuOCl to
+liquid EuCl₃, then evaporation of the EuCl₃ [@pomiro2014study]. We have found no
+report of EuCl₂ or YbCl₂ as a carbochlorination product. What the
 literature does not offer is element-by-element data. The systematic
 carbochlorination studies are on a handful of oxides — Ce, Nd, Y, Eu — and the
 rest of the series is covered by thermodynamic calculation and by the
@@ -835,14 +840,23 @@ in place, which is a real argument for siting a rare earth chlorinator
 alongside one. We are not aware of anyone having done it.
 
 What does not carry over is the separation. The Zr/Hf case is the one most
-often invoked as the analogy, and it is worth being precise about why it
-flatters. Zirconium and hafnium are separated industrially by molten salt
-extractive distillation because ZrCl₄ and HfCl₄ are both volatile — they
-sublime near 331 °C — and differ slightly in vapour pressure, so a column with
-a dozen or so plates can do the job [@chen2025process]. The rare earth
-trichlorides are not volatile in that sense: by the table at the head of this
-chapter they melt between about 580 °C (TbCl₃) and 930 °C (LuCl₃) and do not
-reach a boiling point below roughly 1,550 °C
+often invoked as the analogy, and it is worth being precise about what it does
+and does not establish. Zirconium and hafnium are separated industrially by
+molten salt extractive distillation, and the separation factor there is no
+better than a lanthanide one: α = 1.18 for ZrCl₄/HfCl₄ in a KAlCl₄ melt over
+623–773 K, which a recent design study turns into 93–142 theoretical plates to
+bring ZrCl₄ below 100 ppm Hf and, at an O'Connell overall tray efficiency of
+0.422, 234–291 actual plates [@chen2025process]. The precedent is therefore not
+that volatility makes a near-degenerate pair easy. It is that a large enough
+column makes it possible.
+
+What zirconium and hafnium have that the lanthanides do not is the volatility
+itself. Both tetrachlorides sublime — ZrCl₄ near 331 °C [@haynes2016crc] — and
+neither exists as a liquid at atmospheric pressure at all [@chen2025process], so
+there is a vapour phase to build a column in. The rare earth trichlorides are
+not volatile in that sense: by the table at the head of this chapter they melt
+between about 580 °C (TbCl₃) and 900 °C (LuCl₃) and do not reach a boiling
+point below roughly 1,550 °C
 [@seifert2005melting; @brunetti2000vaporization]. A vapour-pressure separation among
 them is therefore not the same operation carried out on different feed; it is a
 different operation, and no one has demonstrated it. The problem is also larger

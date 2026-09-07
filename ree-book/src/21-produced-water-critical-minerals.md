@@ -401,11 +401,15 @@ approached from two directions, and neither paper closes it. A membrane
 engineer has demonstrated the selectivity at 2,000 ppm and watched it fall by a
 factor of 4.5 by 5,000 ppm; a process engineer has costed a plant whose
 economics turn on that membrane working at 100,000 ppm and above. As a
-calibration point, @wenzlick2020techno report a total levelized cost of
-**\$0.94 per m³ of distillate** for a comparison desalination case, which
-normalises to about \$1.0 per kWh of the minimum theoretical separation work —
-roughly an eightfold thermodynamic penalty. Treating this water is not cheap
-even when nothing is being recovered from it.
+calibration point, @wenzlick2020techno cost their equipment against the
+thermodynamic floor rather than against a competitor, and mechanical vapour
+recompression comes in at **\$2.2 ± 0.3 per kWh of the theoretical minimum
+separation work** — against \$0.9 ± 0.3 for reverse osmosis and \$1.4 ± 0.5
+for nanofiltration, in 2017 dollars. The energy penalty behind that number is
+larger still: a commercial-scale MVR unit on 50 g/L produced water draws about
+40 kWh per m³ of distillate where the theoretical minimum for that salinity and
+recovery is 2 kWh/m³, a second-law efficiency of 5 %. Treating this water is
+not cheap even when nothing is being recovered from it.
 
 (the-comparison-case)=
 ## The Comparison Case: Smackover
