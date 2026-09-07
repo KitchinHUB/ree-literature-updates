@@ -40,9 +40,13 @@ log "Starting weekly literature update (last $DAYS days)"
 
 cd "$PROJECT_DIR"
 
-# Run the literature monitor
+# Run the literature monitor. The works it finds are saved so the Slack step
+# below can reuse them: a second search returns a different set of papers, so
+# the notification would not match the report that was just committed.
+RUN_DATA="$PROJECT_DIR/.cache/last_run.json"
+
 log "Running literature monitor..."
-$PYTHON scripts/literature_monitor.py --days "$DAYS"
+$PYTHON scripts/literature_monitor.py --days "$DAYS" --data-out "$RUN_DATA"
 
 # Get today's report filename
 REPORT_DATE=$(date '+%Y-%m-%d')
@@ -86,7 +90,7 @@ fi
 # Send Slack notification
 if [ -n "$SLACK_WEBHOOK_URL" ]; then
     log "Sending Slack notification..."
-    $PYTHON scripts/literature_monitor.py --days "$DAYS" --slack
+    $PYTHON scripts/literature_monitor.py --slack-from "$RUN_DATA"
     log "Slack notification sent"
 else
     log "Warning: SLACK_WEBHOOK_URL not set, skipping Slack notification"

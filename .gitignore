@@ -3,3 +3,6 @@
 
 # macOS
 .DS_Store
+
+# Cached run data for the Slack step
+.cache/

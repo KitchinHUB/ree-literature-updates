@@ -10,6 +10,8 @@ Usage:
     python literature_monitor.py --days 30          # Last 30 days
     python literature_monitor.py --output report.md # Custom output file
     python literature_monitor.py --slack            # Send notification to Slack
+    python literature_monitor.py --data-out run.json    # Save works for later
+    python literature_monitor.py --slack-from run.json  # Notify from saved works
 
 Environment Variables:
     SLACK_WEBHOOK_URL  - Incoming webhook URL for simple notifications
@@ -831,8 +833,33 @@ def main():
         "--slack-upload", action="store_true",
         help="Upload full report to Slack (requires SLACK_BOT_TOKEN and SLACK_CHANNEL)"
     )
+    parser.add_argument(
+        "--data-out", type=str, default=None,
+        help="Also write the run's works as JSON, for a later --slack-from"
+    )
+    parser.add_argument(
+        "--slack-from", type=str, default=None,
+        help="Notify Slack from a saved --data-out file instead of searching again"
+    )
 
     args = parser.parse_args()
+
+    # Replaying a saved run: the search already happened, so reuse its results
+    # rather than querying OpenAlex a second time. A second search returns a
+    # different set of works, so the Slack summary would not match the report
+    # that was committed.
+    if args.slack_from:
+        data = json.loads(Path(args.slack_from).read_text())
+        works = data["works"]
+        ok = notify_slack(
+            works,
+            categorize_works(works),
+            data["from_date"],
+            data["to_date"],
+            Path(data["report_path"]),
+            upload_file=args.slack_upload,
+        )
+        return 0 if ok else 1
 
     # Calculate date range
     if args.to_date:
@@ -911,16 +938,30 @@ def main():
     print(f"\nReport saved to: {output_path}")
     print(f"Total publications: {len(processed_works)}")
 
+    # Save the run so a later step can notify Slack from these exact works
+    if args.data_out:
+        data_path = Path(args.data_out)
+        data_path.parent.mkdir(parents=True, exist_ok=True)
+        data_path.write_text(json.dumps({
+            "from_date": from_date_str,
+            "to_date": to_date_str,
+            "report_path": str(output_path),
+            "works": processed_works,
+        }, indent=2))
+        print(f"Run data saved to: {data_path}")
+
     # Send Slack notification if requested
     if args.slack or args.slack_upload:
-        notify_slack(
+        if not notify_slack(
             processed_works,
             categorized,
             from_date_str,
             to_date_str,
             output_path,
             upload_file=args.slack_upload
-        )
+        ):
+            print("Error: Slack notification failed", file=sys.stderr)
+            return 1
 
     return processed_works
 
