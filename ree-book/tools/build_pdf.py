@@ -713,9 +713,45 @@ def main():
                  r"\usepackage[utf8]{inputenc}"]:
         text = text.replace(line + "\n", "")
 
-    # Bibliography backreferences, so each entry says where it was cited.
+    # Bibliography backreferences, so each entry says where it was cited, and
+    # coloured rather than boxed links. colorlinks is the option that matters:
+    # hyperref's default draws a rectangle around every link, which prints as a
+    # black box and makes a page carrying many citations unreadable. The colours
+    # are held to a single blue for anything that leaves the page (URLs, DOIs)
+    # and a darker one for internal jumps, so a reader can tell a cross-reference
+    # from an external link before clicking it.
+    # xcolor is loaded by MyST's own template two lines above hyperref, so the
+    # colours can be defined here without loading it again (a second load with
+    # different options is an error).
+    assert text.count(r"\usepackage{hyperref}") == 1, "hyperref load not found"
     text = text.replace(r"\usepackage{hyperref}",
-                        "\\usepackage[backref=page]{hyperref}")
+                        "\\definecolor{RefBlue}{HTML}{1A4C8B}\n"
+                        "\\definecolor{LinkBlue}{HTML}{1565C0}\n"
+                        "\\usepackage[backref=page,\n"
+                        "            colorlinks=true,\n"
+                        "            linkcolor=RefBlue,\n"
+                        "            citecolor=RefBlue,\n"
+                        "            urlcolor=LinkBlue,\n"
+                        "            filecolor=LinkBlue]{hyperref}")
+
+    # The MyST book template issues its own \hypersetup further down the
+    # preamble, forcing every link back to black. It is the last setting to run,
+    # so it wins over the package options above; rewrite it to the same colours
+    # rather than deleting it, so the intent survives a template update.
+    black_links = ("\\hypersetup{\n"
+                   "  colorlinks,\n"
+                   "  linkcolor={black},\n"
+                   "  citecolor={black},\n"
+                   "  urlcolor={black}\n"
+                   "}")
+    assert text.count(black_links) == 1, "template hypersetup block not found"
+    text = text.replace(black_links,
+                        "\\hypersetup{\n"
+                        "  colorlinks,\n"
+                        "  linkcolor={RefBlue},\n"
+                        "  citecolor={RefBlue},\n"
+                        "  urlcolor={LinkBlue}\n"
+                        "}")
 
     # A numbered bibliography, ordered by first citation. sort&compress turns
     # the long runs of citations this book carries into [4-9] rather than

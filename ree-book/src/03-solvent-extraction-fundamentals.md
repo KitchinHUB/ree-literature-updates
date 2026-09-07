@@ -63,7 +63,7 @@ bonds gives first the phosphonic acid monoester PC88A (also sold as P507 and
 described in the literature as EHEHPA), and then the phosphinic acid
 {index}`Cyanex 272`; acidity falls along that sequence, and the pH at which each
 reagent will load and unload a rare earth climbs correspondingly
-[@li2019development; @zhang2016rare]. Two recent reviews put pK~a~ numbers on
+[@li2019development; @zhang2016rare]. Two recent reviews put pKa numbers on
 the sequence, and they agree on the ordering while disagreeing on the values:
 @li2019development gives 2.79 for D2EHPA, 3.24 for PC88A and 6.37 for Cyanex
 272, and @guo2026acidic gives approximately 3.2, 4.5 and 6.0 for the same three.
@@ -1185,10 +1185,15 @@ nitrogen burden, from a different unit operation, that
 [](#ion-adsorption-clays) describes for ammonium sulfate clay leaching and that
 [](#environment-techno-economics-and-life-cycle) counts in the eutrophication
 column of the life-cycle inventory. Sodium saponification trades it for a saline
-raffinate; magnesium and calcium saponification, and non-saponification
-flowsheets that recycle the acid instead, are the directions the Chinese industry
-has been pushed toward on exactly these grounds [@liao2013clean]. Whichever is
-chosen, the reagent bill and the effluent are set by the same stoichiometry:
+raffinate. The direction @liao2013clean argue for, under the emission standards
+China imposed on the industry, is to stop consuming base at all: they cost the
+conventional route at about 11 t of hydrochloric acid and 2.4 t of sodium
+hydroxide per tonne of rare earth oxide, discharging some 120 t of wastewater
+carrying 6.8 t of salts, and propose a flowsheet that recycles the intermediate
+acid so that nothing but oxalic acid is consumed. Magnesium and calcium
+saponification are the other alternatives usually named, but no source verified
+for this book establishes how widely either is practised. Whichever is chosen,
+the reagent bill and the effluent are set by the same stoichiometry:
 three equivalents of base per mole of rare earth moved. That stoichiometry is
 also what closed the American industry's books:
 [](#how-the-united-states-lost-it) traces the groundwater contamination at

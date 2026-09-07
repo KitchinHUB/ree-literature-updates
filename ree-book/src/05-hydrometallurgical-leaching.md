@@ -80,7 +80,7 @@ heavy elements and in yttrium, europium and terbium. The price of that easy
 chemistry is grade: a few tenths of a percent REO and never above 1 %
 [@iaea2011radiation], two to three orders of magnitude below a bastnäsite ore, so
 the tonnage of rock and of lixiviant per tonne of product is enormous. The
-arithmetic later in this chapter uses 0.05-0.3 % REO, which sits inside that
+arithmetic later in this chapter uses 0.05-0.2 % REO, which sits inside that
 bound. Thorium and uranium are both around 0.005 % [@iaea2011radiation], low
 enough that the radiological burden that dominates monazite processing does not
 arise here.
@@ -1096,7 +1096,7 @@ $$
   \mathrm{Clay}\text{-}\mathrm{(NH_4)_3} + \mathrm{REE^{3+}(aq)}
 $$
 
-and that single fact is why deposits grading 0.05-0.3 % REO — two to three
+and that single fact is why deposits grading 0.05-0.2 % REO — two to three
 orders of magnitude below a bastnäsite ore — are economic at all, and why they
 supply over 90 % of the world's heavy rare earths [@zhou2020genesis].
 
@@ -1126,9 +1126,9 @@ an impermeable pad. Heap geometry, irrigation rate and residence time are
 site-specific and no representative values are asserted.
 
 What can be stated is the consequence of the grade, because it follows from
-arithmetic rather than from practice. At an ore grade of 0.05-0.3 % REO and the
+arithmetic rather than from practice. At an ore grade of 0.05-0.2 % REO and the
 4:1 liquid-to-solid ratio of @shi2022column, complete extraction would give a
-pregnant leach solution of only **125-750 mg/L REE**, and real recoveries put it
+pregnant leach solution of only **125-500 mg/L REE**, and real recoveries put it
 below that. Aluminium, iron and calcium are the impurities that matter at those
 concentrations, because they are not two orders of magnitude dilute. That
 dilution, not the chemistry, is the engineering problem this route creates, and
@@ -1762,16 +1762,19 @@ explicit rather than filled with an invented efficiency.
 |----------------|-----------------|--------------|---------------------|----------------|
 | Bastnäsite     | **concentrate** | 60-65 %      | Mountain Pass       | ≥1.5-1.7 t     |
 | Monazite       | **concentrate** | 44-60 %      | Steenkampskraal, placer | ≥1.7-2.3 t |
-| Ion-adsorption | **ore**         | 0.05-0.3 %   | grade range         | ≥330-2,000 t   |
+| Ion-adsorption | **ore**         | 0.05-0.2 %   | grade range         | ≥500-2,000 t   |
 
 Grades from @iaea2011radiation except the ion-adsorption range, which is the
-deposit grade used throughout this chapter [@zhou2020genesis]. Worked, so the
-reader can check it: a Mountain Pass bastnäsite concentrate at 60 % REO needs
-1/0.60 = 1.67 t per tonne of REO and at 65 % needs 1.54 t. An ion-adsorption ore
-at 0.3 % REO needs 1/0.003 = 333 t; at 0.05 % it needs 2,000 t. Three orders of
-magnitude separate the two feeds, which is the single most important fact about
-ion-adsorption mining and the reason its environmental footprint is a
-land-and-groundwater problem rather than a reagent problem.
+range @zhou2020genesis give for weathering-crust deposits as a class and the one
+used throughout this chapter. Individual deposits in that paper's own table run
+from 0.01 to 0.38 % REO, so treat 0.05-0.2 % as representative rather than
+bounding. Worked, so the reader can check it: a Mountain Pass bastnäsite
+concentrate at 60 % REO needs 1/0.60 = 1.67 t per tonne of REO and at 65 % needs
+1.54 t. An ion-adsorption ore at 0.2 % REO needs 1/0.002 = 500 t; at 0.05 % it
+needs 2,000 t. Three orders of magnitude separate the two feeds, which is the
+single most important fact about ion-adsorption mining and the reason its
+environmental footprint is a land-and-groundwater problem rather than a reagent
+problem.
 
 **Ore behind the concentrate.** Mountain Pass blended its crushed stockpiles to a
 uniform flotation feed of 7-9 % REO [@iaea2011radiation], so at perfect recovery
@@ -1815,8 +1818,8 @@ tonne of REO, not thousands of them.
 For ion-adsorption ore the volume is set by the pregnant leach solution
 concentration instead, and that follows from the grade. At the 4:1
 liquid-to-solid ratio of @shi2022column and complete extraction, an ore of
-0.05-0.3 % REO gives a PLS of 125-750 mg/L, so a tonne of REO arrives dissolved
-in **1,300-8,000 m³** — three to four orders of magnitude more solution than an
+0.05-0.2 % REO gives a PLS of 125-500 mg/L, so a tonne of REO arrives dissolved
+in **2,000-8,000 m³** — three to four orders of magnitude more solution than an
 acid leach for the same metal. Most of that volume is recirculated rather than
 discharged, but it is all in contact with the ore body and all of it is a
 containment problem.
@@ -1832,7 +1835,7 @@ the Indian effluent treatment cake — about 10 % of the monazite mass, roughly
 250 t/a — is what that obligation looks like in practice [@iaea2011radiation].
 The ion-adsorption case has no leach residue in the usual sense and is often
 tabulated as "minimal", which is misleading: the solid left behind is the entire
-330-2,000 t of ore, either in place after in-situ leaching or as a spent heap,
+500-2,000 t of ore, either in place after in-situ leaching or as a spent heap,
 loaded with residual ammonium and structurally weakened by the leach.
 ### Major Environmental Concerns
 The burdens follow the route, and each one has already been named where it

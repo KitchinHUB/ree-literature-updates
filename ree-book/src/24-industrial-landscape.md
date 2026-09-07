@@ -214,10 +214,13 @@ prospective operator for, and it is the number least often published.
 
 **Take the nitrogen out at the source.** Where a circuit is saponified with
 ammonia, no downstream treatment is as cheap as not making the ammonium in the
-first place. Magnesium and calcium saponification, and non-saponification
-flowsheets that recycle the acid instead, are the established alternatives, and
-[](#solvent-extraction-fundamentals) sets out what each of them trades away
-[@liao2013clean]. A plant being designed now has the advantage of never having
+first place. The alternative with a costed flowsheet behind it is to consume no
+base at all: @liao2013clean recycle the intermediate acid so the circuit needs
+nothing but oxalic acid, against a conventional route they cost at 11 t of
+hydrochloric acid and 2.4 t of caustic per tonne of oxide. Magnesium and calcium
+saponification are the other alternatives usually named, and
+[](#solvent-extraction-fundamentals) sets out what each of them trades away.
+A plant being designed now has the advantage of never having
 built the ammonia circuit, which is a far cheaper position than any retrofit.
 The advantage should not be overstated: magnesium saponification moves the
 problem from a eutrophying effluent to a saline one, which is easier to permit

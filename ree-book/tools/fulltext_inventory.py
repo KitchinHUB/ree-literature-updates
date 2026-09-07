@@ -60,13 +60,6 @@ BATCH = 50
 # front matter. Each was identified by reading its title page against the
 # bibliography entry. Add to this only after doing the same.
 OVERRIDE = {
-    "51-100/1-s2.0-S0009250999001190-main.pdf": "wichterlova1999dynamic",
-    "51-100/1-s2.0-S0021967301824043-main.pdf": "james1968displacement",
-    "51-100/1-s2.0-S1002072112602816-main.pdf": "liao2013clean",
-    "51-100/Lyon_idaho_0089N_10815.pdf": "lyon2016separation",
-    "51-100/Rare_earth_separation_in_China.pdf": "yan2006rare",
-    "51-100/ja01203a063.pdf": "spedding1947separation",
-    "51-100/s11663-002-0018-1.pdf": "huang2002rare",
     "tier-4/1-s2.0-S0009250999000147-main.pdf": "geist1999kinetics",
     "tier-4/1-s2.0-S037673889900040X-main.pdf": "gabelman1999hollow",
     "tier-4/ic00284a028.pdf": "cossy1988oxygen",

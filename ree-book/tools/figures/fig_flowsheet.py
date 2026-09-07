@@ -214,7 +214,7 @@ ol, orr, _, _ = node(X4, CL, "P507 extraction",
 
 head(1.65, CL, nl, CL, SOLID)
 xa = (1.65 + nl) / 2
-for dy, t in ((0.62, "0.05-0.3 % REO ore — no beneficiation,"),
+for dy, t in ((0.62, "0.05-0.2 % REO ore — no beneficiation,"),
               (0.36, "no roast, no digestion"),
               (-0.34, "leached in place through wells,"),
               (-0.60, "or heaped on a pad, for 20-100 days")):

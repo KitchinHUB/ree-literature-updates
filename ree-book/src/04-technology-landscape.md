@@ -72,7 +72,11 @@ correct than the other; see the [](#glossary) entry for *heavy rare earth
 elements (HREE)*.
 
 ## Ion Exchange
-Ion exchange was the predominant method before the 1960s and remains important for ultra-high purity applications [@elouardi2023progress].
+Ion exchange was the method that first delivered the individual rare earths in
+quantity and purity — Spedding and co-workers ran it at pilot-plant scale at
+Ames in 1947 [@spedding1947separation] — before solvent extraction displaced it
+for bulk production. It remains the route taken where purity is worth more than
+tonnage, and the two subsections below treat the two forms it takes.
 
 (displacement-chromatography)=
 ### Displacement Chromatography
@@ -81,12 +85,14 @@ extraction, and since it has no chapter of its own, it is worth setting out here
 
 The bed is a strong-acid cation resin, loaded to capacity with the mixed rare
 earths as a single narrow band. A chelating eluent — {index}`EDTA`, or HEDTA or
-DTPA where a weaker or a stronger complex is wanted — is then pumped through
-[@james1968displacement]. It does not *elute* the band in the chromatographic
-sense of carrying solutes at different velocities through excess resin; it
-*displaces* it, pushing a saturated band down a bed that is otherwise full. Ahead
-of the rare earths sits a band of a **retaining ion**, usually Cu²⁺ or Zn²⁺, whose
-EDTA complex is less stable than any lanthanide's [@powell1956basic]. Eluent that
+DTPA where a weaker or a stronger complex is wanted, the DTPA complexes being
+three to four orders of magnitude the more stable — is then pumped through
+[@james1968displacement; @elouardi2023progress]. It does not *elute* the band in
+the chromatographic sense of carrying solutes at different velocities through
+excess resin; it *displaces* it, pushing a saturated band down a bed that is
+otherwise full. Ahead of the rare earths sits a band of a **retaining ion**,
+usually Cu²⁺ or Zn²⁺, whose EDTA complex is less stable than any lanthanide's
+[@powell1956basic]. Eluent that
 runs ahead of the front is intercepted by the retaining ion and handed back, so
 the front cannot smear: it stays a step.
 
@@ -96,13 +102,17 @@ spends more of its time in solution as the complex, travels faster, and
 accumulates at the front; the lighter one is left behind. Because the band is
 saturated, an element that diffuses forward into its neighbour's zone meets resin
 already fully loaded with a heavier element that outcompetes it and pushes it
-back. The zones therefore **self-sharpen** into adjacent bands of nearly pure
-single elements, each one abutting the next with a boundary a few centimetres
-wide, and each can be cut out of the effluent as it emerges
-[@spedding1947separation; @belova2024chromatographic]. This is why the method
-reaches purities a cascade struggles with: the separation is not the ratio of two
-distribution coefficients repeated across dozens of stages, it is a
-thermodynamically self-correcting front.
+back. The zones therefore **self-sharpen**: regions of a single pure component
+grow at the front and at the rear at the expense of the mixed region between
+them, and the separation is finished when the mixed region has been consumed
+[@james1968displacement]. Each zone is then cut out of the effluent as it
+emerges. No source verified for this chapter gives a boundary width, and none is
+asserted. This is why the method reaches purities a cascade struggles with: the
+separation is not the ratio of two distribution coefficients repeated across
+dozens of stages, it is a thermodynamically self-correcting front. Chromatography
+is far inferior to extraction on throughput, and it is nonetheless the route to
+individual rare earths of exceptionally high purity, the heavy ones especially
+[@belova2024chromatographic].
 
 ```text
 EDTA eluent in                              direction of travel  →

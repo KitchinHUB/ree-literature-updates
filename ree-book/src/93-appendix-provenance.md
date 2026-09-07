@@ -446,7 +446,7 @@ out of section IR-3.5 of the book itself. The DOE final report was supplied as
 reach, and it was cited for no more than its title asserted. The full text has
 since been obtained and read, and the two places that cite it in
 [](#solvent-extraction-fundamentals) now carry specific claims from it: the
-pK~a~ series for D2EHPA, PC88A and Cyanex 272, the stripping-versus-extraction
+pKa series for D2EHPA, PC88A and Cyanex 272, the stripping-versus-extraction
 trade-off that ordering implies, the existence of Cyanex 572 as a blend sold to
 sit between the two ends, and yttrium's movement from light to heavy behaviour
 between naphthenic acid and Versatic 10.
