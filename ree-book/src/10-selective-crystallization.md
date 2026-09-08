@@ -140,9 +140,15 @@ thermal decomposition route only [@laskar2025conversion].
 
 The one attempt to make oxalate do a separation rather than a recovery runs the
 chemistry backwards. The CSEREOX method selectively *solubilizes*
-water-insoluble rare earth oxalates, separating within two rare earth subgroups,
-and works at low initial rare earth concentration — below 5 % — on processed
-magnet waste [@boronski2020rationally]. This is a redissolution-based
+water-insoluble rare earth oxalates, splitting the series into a light subgroup
+(La–Sm), whose oxalates stay solid, and a heavy one (Gd–Lu), which an organic
+base carries into solution [@boronski2020rationally]. The proof of concept is
+dysprosium out of didymium oxalate from a recycled Nd–Fe–B motor magnet: Dy
+falls from 4.68 wt % to 1.49 wt % in a single 15-minute cycle at 68 % extraction
+efficiency, with a comparative extraction factor for Nd against Dy of 38 using
+1-methylimidazole as the base. That factor is a ratio of oxalate solubilities
+rather than an equilibrium separation factor, and it is a light-over-heavy
+number, not an adjacent-pair one. This is a redissolution-based
 separation, not a selective precipitation, and it belongs with the designed
 systems in the second half of this chapter rather than with the bulk chemistry
 here.
@@ -227,7 +233,17 @@ rare earths into the solid by occlusion and co-precipitation.
 The best-documented recent result on a real mixture comes from a mixed rare
 earth oxide recovered from waste NiMH batteries, where potassium permanganate
 precipitated Ce(OH)₄ at 99.8 % efficiency while keeping co-precipitation of the
-other rare earths below 1.5 % [@salehi2025tailored]. The mechanism of the
+other rare earths below 1.5 % [@salehi2025tailored]. Earlier permanganate work
+had reached pH 3 to 3.5 with 10-30 % of the other rare earths coming down with
+the cerium, so the improvement is real; the cost of it is manganese added to the
+liquor, which the authors name as the drawback of the reagent. What happens to
+the rest of that flowsheet is the more instructive part, and it is treated in
+[](#technology-comparison): after the cerium is out, solvent extraction with
+Cyanex 572 splits samarium and then didymium from lanthanum, reaching 99 %
+lanthanum purity in the raffinate — and **didymium stays didymium**. The paper
+describes itself as separating adjacent light rare earths, and the one genuinely
+adjacent pair in the feed, praseodymium and neodymium, is carried through as a
+single product rather than split. The mechanism of the
 cheaper peroxide route has been worked out separately
 [@moldoveanu2025separation; @moldoveanu2023cerium], and manganese ferrites have
 been proposed as a low-cost sorbent for taking Ce(IV) out of highly acidic
@@ -477,8 +493,17 @@ scandium from the rare earths in a 15-minute precipitation with separation
 factors generally in the range 100 to 2000 in acidic aqueous solution, and the
 metals can be stripped from the ligand with 3 M HNO₃ without decomposing it, so
 the ligand recycles. The same ligands improve separation factors between
-adjacent lanthanides relative to conventional oxalate precipitation
-[@szczesniak2021alkyl]. Trialkyl phosphine oxide grafted onto a porous
+adjacent lanthanides relative to conventional oxalate precipitation, and the
+detail of that improvement is the interesting part [@szczesniak2021alkyl]. It is
+concentrated at the heavy end: the best adjacent-pair values are **4.33 ± 0.04
+for Tm/Yb and 2.32 ± 0.02 for Yb/Lu**, against 1.12-2.12 and 1.03-1.44 for
+DEHPA and EHEHPA in conventional liquid-liquid extraction. Ce/La reaches
+3.81 ± 0.86, comparable with solvent extraction and better than borate or
+oxalate crystallization. But across the whole middle of the series, Nd through
+Er, the factors run **1 to 1.7** — the authors' own word is "rather low" — with
+Nd/Sm at 2.0 against 1.6 for oxalates. So the gain over oxalate is real and it
+is small everywhere except among the heaviest four, which is the same shape the
+rest of this book keeps finding. Trialkyl phosphine oxide grafted onto a porous
 silica-polymer support is the adsorption analogue of the same idea, aimed at the
 same separation [@he2025efficiently].
 
@@ -507,7 +532,12 @@ characterised in reactor terms: fluorination of neodymium carbonate monohydrate
 with anhydrous HF to the trifluoride is independent of temperature and linear in
 HF partial pressure [@pretorius2019fluorination]. Rare earth fluorides can also
 be recovered from spent molten-salt electrolytic slag by vacuum distillation
-rather than by aqueous precipitation at all [@yang2024investigation]. Whichever
+rather than by aqueous precipitation at all — but not straightforwardly.
+Oxygen impurities in the slag convert REF₃ to the oxyfluoride REOF, which does
+not distil, and direct vacuum distillation therefore recovers only **42.04 %**
+of the rare earths; adding a fluorination step first, to put the oxides and
+oxyfluorides back to fluorides, raises recovery to **86.23 %**
+[@yang2024investigation]. Whichever
 route is used, hydrogen fluoride handling dominates the engineering: it is the
 one reagent in this chapter whose safety case is harder than its chemistry.
 
@@ -781,7 +811,10 @@ first half of this chapter and the crystal engineering of the second.
 Pre-organized triamidoarene platforms selectively precipitate light rare earth
 nitratometalates as supramolecular capsules under acidic biphasic conditions,
 with intra- and intermolecular hydrogen bonds dictating the selectivity; the
-receptor can be recycled [@oconnelldanes2022selective].
+receptor can be recycled [@oconnelldanes2022selective]. The pseudo separation
+factors follow the pattern this book keeps finding: 63 for La/Sm and 248 for
+La/Eu, but La/Ce, La/Pr and La/Nd no better than the phosphorus acids already
+in use. Treated at length in [](#membranes-mofs-and-emerging-approaches).
 
 The "tug of war" strategy uses two ligands with opposite selectivity at once: a
 water-soluble bis-lactam-1,10-phenanthroline with affinity for the light
@@ -789,7 +822,14 @@ lanthanides against an oil-soluble {index}`diglycolamide` that binds the heavy
 ones. The opposed preferences magnify the split, giving quantitative separation
 of the lightest lanthanides (La-Nd) from the heaviest (Ho-Lu) and enabling
 separation of the neighbouring lanthanides in between, Sm through Dy
-[@johnson2023size].
+[@johnson2023size]. The numbers deserve to be stated, because on an adjacent
+pair they are the largest in this book: **SF(Tb/Gd) = 5.8** in a single
+extraction stage, and 15.6 for Sm over Nd. Both come from pairing the two
+ligands; neither ligand alone approaches them. Two cautions travel with the
+figures — the aqueous ligand is used at millimolar concentrations that a plant
+would have to pay for and recover, and above about 13 mM the system stops
+improving, which the authors read as its limit rather than as a knob to keep
+turning.
 
 ### What stands in the way
 

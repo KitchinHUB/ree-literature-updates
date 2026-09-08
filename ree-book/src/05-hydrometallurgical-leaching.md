@@ -210,12 +210,24 @@ is a statement about an ore, not about a machine.
 
 Monazite and xenotime are paramagnetic [@anthony2001handbook], bastnäsite only
 weakly so, and the silicate and carbonate gangue is effectively non-magnetic.
-That is enough of a difference to sort them, and because magnetic separation is
-a dry operation it is normally placed after a wet gravity circuit has already
-discarded most of the mass [@chen2023various]. Published susceptibility values
-for these minerals vary with iron substitution and with how the measurement was
-made, and none is quoted here; what the flowsheet actually relies on is the
-ordering — ferromagnetic, paramagnetic, non-magnetic — not the magnitudes.
+That is enough of a difference to sort them, and dry magnetic separation is
+normally placed after a wet gravity circuit has already discarded most of the
+mass. Published susceptibility values for these minerals vary with iron
+substitution and with how the measurement was made, and none is quoted here;
+what the flowsheet actually relies on is the ordering — ferromagnetic,
+paramagnetic, non-magnetic — not the magnitudes.
+
+A wet variant is worth flagging here even though it belongs to separation rather
+than to beneficiation. @chen2023various suspend rare earth particles in a
+water-based ferrofluid or a paramagnetic liquid whose magnetization exceeds the
+particles' own, which inverts the usual capture logic: in conventional magnetic
+separation every paramagnetic particle reports to the magnetics, whereas in a
+more strongly magnetized liquid the particles sort by *how* paramagnetic they
+are. The authors report separating rare earths of adjacent atomic number this
+way in a high-gradient separator, and compare the efficiency against solvent
+extraction. The qualification is the feed: two kinds of *artificial* rare earth
+particles, metals and oxides, at a degree of liberation a real ore would not
+supply.
 
 Three classes of machine work that ordering at three field strengths. A
 low-intensity separator takes out ferromagnetic material: magnetite, and the
@@ -730,6 +742,25 @@ bastnäsite-monazite concentrates [@kim2025rare]:
     precipitating the sodium double sulfate, now preferentially by solvent
     extraction — and strip with HCl if a chloride feed is wanted for the
     separation circuit [@iaea2011radiation].
+
+Qi's account of Chinese industrial practice puts recoveries on each of those
+stages, which is what this chapter has otherwise been unable to source
+[@qi2018extraction]. Water leaching of the calcine recovers 96-98 % of the rare
+earths, at a liquor of 45-50 g/L REO from a 50-60 % concentrate. Double-sulfate
+precipitation recovers 98 %, though roughly a tenth of the middle and heavy rare
+earths stay in the leachate because their double salts are the more soluble.
+Caustic conversion of that double salt to the hydroxide returns 95-96 %, the
+losses being mechanical — repeated washing and siphoning rather than chemistry.
+Preferential dissolution of the hydroxide in hydrochloric acid recovers about
+95 %. Compounded, those four stages give roughly **86 %** from calcine to
+chloride liquor, before whatever the roast itself loses.
+
+Two things about that arithmetic are worth stating. It is a stage-wise product,
+not a measured plant figure, so it is a reasonable estimate rather than a
+reported recovery. And the ~10 % of middle and heavy rare earths lost at the
+double-sulfate step is a *composition* loss as much as a mass loss: it falls
+hardest on the elements the flowsheet is least able to spare, which is one reason
+the modern practice Qi describes replaces that step with solvent extraction.
 
 The sulfuric route tolerates a lower-grade, more variable concentrate and does
 not require the cerium oxidation step; it pays for that with fluorine and
@@ -1251,6 +1282,23 @@ such as citric, which combine complexation with exchange at higher reagent cost
 [@wang2017effects].
 Suppressing aluminium co-dissolution — with hexamethylenetetramine, or by
 staging the leach — is the other active line [@pan2024insights; @he2025stepwise].
+
+The staged version is also the one place in this chapter where a leaching
+recovery can be quoted with a source behind it. @pan2024insights column-leached
+weathered-crust elution-deposited ore with magnesium sulfate and varied the
+concentration and initial pH between injection stages rather than holding them
+constant. Above pH 3, Mg²⁺ does the exchanging; below it, H⁺ starts to take over
+and aluminium comes with it, so a high-concentration high-pH injection stage is
+followed by a low-concentration stage at pH 2. Against a constant-concentration
+control (2.0 wt % MgSO₄, initial pH 5.0), the multi-stage schedule reached
+**about the same rare earth leaching efficiency, ~94.6 %**, while cutting the
+aluminium leached by 16.9 % and the magnesium sulfate consumed by 67.1 %. Read
+the number for what it is: a leaching-stage efficiency on a column, for the one
+ore type where the rare earths are exchangeable rather than locked in a mineral
+lattice, and not an overall plant recovery. It is nonetheless a real figure with
+a real basis, which is more than this chapter can offer for any acid leach of a
+mineral concentrate.
+
 [](#ion-adsorption-clays) weighs these reagents against one another and against
 their environmental arithmetic.
 
@@ -1336,9 +1384,10 @@ Two organism classes recur in the ore literature. The phosphate-solubilising
 fungi, chiefly *Aspergillus niger*, secrete a mixture of organic acids — acetic,
 citric, gluconic, itaconic, oxalic and succinic were identified in the monazite
 work — and use the mineral as a phosphate source, which is why they are the ones
-that work on monazite [@brisson2015bioleaching; @wang2025rare]. The acidophilic
+that work on monazite [@brisson2015bioleaching]. The acidophilic
 chemolithotrophs, chiefly *Acidithiobacillus ferrooxidans*, oxidise Fe²⁺ and S²⁻
-and can drive the pH to 1-2, which suits sulfide-bearing ores [@wang2025rare].
+and operate in the pH 1-2 range, which suits sulfide-bearing ores; the ionic-ore
+work below runs them at pH 2.0 [@wang2025rare].
 *Gluconobacter oxydans*, a gluconic-acid producer, is the organism of choice for
 secondary feedstocks — coal ash, e-waste — rather than for ores
 [@jindra2018developing]. In every case the leach runs for weeks at ambient
@@ -1377,15 +1426,25 @@ a 65-92 % monazite extraction.
 and *Acidithiobacillus ferrooxidans* on ionic rare earth ore and characterised
 the *mechanisms*: *A. niger* releases rare earths by secreting organic acids
 that complex REE³⁺ (and it adsorbs Yb strongly onto the mycelium, a loss
-mechanism), while *A. ferrooxidans* works through iron-sulfur oxidation. This is
-a mechanistic study, not a recovery benchmark, and no extraction percentage
-should be quoted from it.
+mechanism), while *A. ferrooxidans* works through iron-sulfur oxidation. They do
+report leaching rates, and they are high: a maximum of **94.03 % for
+*A. ferrooxidans* and 83.48 % for *A. niger***, in shake flasks at pH 2.0 ± 0.2
+over 8 to 16 days. Two qualifications belong with those figures. The ore is an
+ion-adsorption clay, where the rare earths sit on exchange sites rather than
+inside a phosphate lattice, so the number is not comparable with a monazite
+recovery and should not be read as one. And the gap between the two organisms is
+not only a dissolution gap: *A. niger*'s figure is pulled down by heavy rare
+earths, ytterbium above all, adsorbing onto the mycelium after they have been
+released.
 
 The honest summary is that bioleaching of primary rare earth minerals has been
 demonstrated to work in the sense that it dissolves measurably more rare earth
 than an abiotic control at the same pH, on a timescale of weeks rather than
 hours, and that quantitative recoveries competitive with acid leaching have not
-been shown for monazite.
+been shown for monazite. Where a competitive number does exist, on
+ion-adsorption ore, the feedstock is the one that ion exchange already leaches
+easily with a salt solution — which is a comment on the ore rather than on the
+organism.
 
 The balance, then, is this. Bioleaching needs no harsh chemicals and no heat,
 it shows a genuine preference for the rare earths over thorium in monazite

@@ -162,7 +162,7 @@ Key thermodynamic findings include:
 
 - Phase stability diagrams (RE-O-Cl systems) reveal element-specific reaction pathways that influence process design [@xue2025carbochlorination; @pomiro2021panoramic].
 
-- Pelletizing the concentrate with the reductant before chlorination improves gas-solid contact and prevents the fine feed from being entrained out of the bed [@xia2024experimental].
+- Pelletizing the concentrate with the reductant and a binder before chlorination is standard practice, and the reason given is more mundane than a mass-transfer one: in a **packed** bed it stops the fine feed spattering. Nine binders were screened for pellet strength on a Sichuan bastnäsite, with the bonding mechanism analysed and three carried forward to carbochlorination trials using AlCl₃ as the chlorinating agent, the aluminium leaving as AlF₃ and taking the fluorine with it [@xia2024experimental]. Note the reactor: this is not the fluidized bed of the titanium and zirconium analogues above, so entrainment is not the problem being solved.
 
 ### Reaction Mechanisms and Kinetics
 The carbochlorination reaction proceeds through distinct mechanisms depending on the specific rare earth element. For cerium oxide (CeO₂), phase stability diagrams show a direct boundary between the CeO₂ and CeCl₃ phases, indicating that the oxide can convert directly to the chloride without intermediate phases; {index}`neodymium` oxide (Nd₂O₃) must instead pass through an intermediate oxychloride (NdOCl) before complete conversion to NdCl₃ [@anderson2015investigation]. The difference matters for process design, because the oxychloride is the slow step and it is more important in neodymium processing than in cerium processing. {index}`Europium <europium>` is a third case again: its carbochlorination resolves into three thermogravimetric stages, forming the oxychloride EuOCl first, carbochlorinating that to liquid EuCl₃ in the second stage, and evaporating the EuCl₃ in the third [@pomiro2014study].
@@ -211,7 +211,21 @@ condenses where its own vapour pressure runs out, so a gradient becomes a
 separation the way a column of resin does — and the impurity chlorides that
 matter most here, AlCl₃ and FeCl₃, are far more volatile than the rare earth
 complexes and stay in the vapour when those have already condensed
-[@huang2002rare; @murase1995recovery]. The reported implementation is three
+[@huang2002rare; @murase1995recovery]. @murase1995recovery is where the
+mechanism was demonstrated on real material — grinding sludge from Sm₂Co₁₇,
+Nd₂Fe₁₄B and LaNi₅ — and it is worth reading for both halves of its result. The
+gradient does sort cleanly: rare earth chlorides deposit at 800-900 °C, cobalt
+and nickel at 500-700 °C, and the iron, copper, zirconium and aluminium
+chlorides pass all the way to the reactor outlet below 350 °C, giving each
+recovered chloride a purity above 99 %. What it does *not* deliver is recovery.
+After six hours, nickel and cobalt yields exceed 99 % while the rare earths lag
+badly and lag unequally — **La 27 %, Sm 39 %, Nd 59 %, Dy 68 %** — which the
+authors attribute to the slow formation of the RAl*n*Cl₃₊₃*n* complexes. That
+spread is a fractionation in its own right, and a kinetic one: a factor of 2.5
+across the series from a single fixed-duration run, of the kind
+[](#kinetics-and-mass-transfer) treats. It is also why the purity figure should
+not be read as a process result — it is the purity of what was collected, not of
+what was fed. The reported implementation of the bastnäsite route is three
 stages, and each does one job: 500 °C for two hours under Cl₂ with SiCl₄, which
 converts the rare earths and releases the volatile by-products; 800 °C for half
 an hour under Cl₂ with SiCl₄ and AlCl₃, which removes the thorium as the vapour
@@ -419,14 +433,28 @@ is used when residual oxygen must be driven out. It has been applied to both
 Nd₂O₃ and Y₂O₃.
 
 Zinc fluoride is the more interesting reagent for recycling, because its
-thermodynamics are favourable against the oxides present in oxidised NdFeB
-swarf. Roasting the waste with a stoichiometric excess of ZnF₂ at 850 °C for
-90 minutes fluorinates about 96 % of the rare earth content, and the volatile
-zinc species leave the residue; AlF₃ and FeF₃ behave similarly
-[@liu2024mechanism]. Sodium tetrafluoroborate, NaBF₄, has been studied by the
-same group as a higher fluorine-density alternative on the same feed
-[@liu2025mechanism]. The reported fluorination and purity figures for the NaBF₄
-route could not be traced beyond the abstract and are omitted here.
+thermodynamics are favourable against the rare earth oxides present in oxidised
+NdFeB swarf and *unfavourable* against the iron oxide alongside them. That
+second half is the whole point: the computed ΔG for 3ZnF₂ + Fe₂O₃ → 2FeF₃ + 3ZnO
+is positive at every temperature, so iron cannot be fluorinated, and the
+selectivity is made in the roast rather than downstream. Roasting the waste at
+850 °C for 90 minutes with ZnF₂ added at 100 % of the feed mass fluorinates
+95.7 % of the rare earth content; a response-surface optimum of 97.3 % sits at
+828 °C, 91 minutes and 119 % ZnF₂, and leaching that clinker in 9 M HCl at 80 °C
+gives mixed rare earth fluorides of 98.9 % purity [@liu2024mechanism]. The zinc
+does not volatilise away — it reports to the residue as ZnO, and unreacted ZnF₂
+is filtered off before leaching.
+
+Sodium tetrafluoroborate, NaBF₄, has been studied by the same group as a higher
+fluorine-density alternative on the same feed, and it is the better reagent of
+the two on operating envelope [@liu2025mechanism]. It reaches **95.8 %
+fluorination at 600 °C in 30 minutes** with 65 % NaBF₄ — some 250 °C cooler and
+three times faster than the zinc fluoride route — with a modelled optimum of
+98.6 % at 573 °C and 25 minutes, and 99.4 % purity after the same hydrochloric
+leach. Both papers find the same counterintuitive limit: pushing the roast
+hotter *reduces* recovery, because oxygen heteroatoms enter the rare earth
+fluoride lattice at high temperature and are stripped out again during acid
+leaching.
 
 The general point is that all three reagents convert the rare earth fraction
 without touching the {index}`iron` — iron fluoride is not the stable product at
@@ -437,11 +465,22 @@ compound conversion.
 A related route replaces the fluorinating solid with a molten halide bath. An
 exchange reaction between a magnesium halide melt and NdFeB scrap converts the
 neodymium to NdF₃ or NdCl₃ while the iron stays metallic. Run in a LiF-NaF-MgF₂
-melt at 1,073 K, the reaction extracted 98.6 % of the neodymium; the
-corresponding LiCl-NaCl-MgCl₂ melt at 873 K reached 84.6 % [@heo2025extraction].
-The fluoride system wins because MgF₂ is the weaker fluoride donor of the two
-relative to NdF₃ — the same free-energy ordering that makes fluorination
-selective in the solid-state routes above.
+melt (50:40:10 by mole) at 1,073 K, the reaction extracted 98.6 % of the
+neodymium; the corresponding LiCl-NaCl-MgCl₂ melt (10:50:40) at 873 K reached
+84.6 % [@heo2025extraction].
+
+The reason the fluoride system wins is not the one a free-energy argument would
+suggest, and the paper is worth reading on the point. On standard free energies
+the *chloride* exchange is the more favourable of the two: MgCl₂ and NdCl₃ differ
+by about 11 kJ/mol across most of the range, whereas MgF₂ and NdF₃ are
+indistinguishable below 573 K and differ by only 0.16 to 2.8 kJ/mol above it, so
+the fluoride exchange is barely downhill at all. What caps the chloride system is
+that above 473 K the calculated ratio of Nd metal to NdCl₃ rises — some of the
+neodymium stays metallic instead of converting — and that is the authors' own
+explanation for the fourteen-point gap. Each route then carries its own
+downstream penalty: NdCl₃ is hygroscopic, which is awkward for everything that
+follows, while the fluoride route needs a ternary salt in which the MgF₂ actually
+participating is a small fraction of a large melt volume.
 
 ### Fluoride Molten Salt Systems
 Fluoride molten salts serve two purposes at once: they are the medium in which
@@ -495,9 +534,14 @@ stack.
 
 ### The Two Cell Chemistries
 
-Molten salt electrolysis is the dominant route to rare earth metals and alloys
-in China, and the great majority of that capacity is the oxide-fluoride cell
-[@yang2021recovery]. Rare earth oxide is dissolved in a molten
+Molten salt electrolysis is the dominant route to rare earth metals and alloys,
+and the cell that does it is the oxide-fluoride one. The reason fluoride rather
+than chloride is the working medium is technical rather than historical: chloride
+melts give low current efficiencies, evolve chlorine at the anode, and produce
+rare earth metals at melting points low enough to be awkward, so the fluoride
+system is preferred for metal production [@yang2021recovery]. No source verified
+for this chapter gives the split of installed capacity between the two, and none
+is asserted. Rare earth oxide is dissolved in a molten
 {index}`fluoride` electrolyte — an REF₃-LiF melt — and reduced on the cathode
 while a consumable carbon anode burns:
 
@@ -531,11 +575,13 @@ Here the rare earth chloride is the reagent, the anode is inert rather than
 consumable, and the anode product is chlorine, which goes back to the
 chlorinator at the front of this chapter. Electrolysis of NdCl₃ at 1.65 M in a
 45:55 wt % LiCl-KCl eutectic against an RuO₂-coated dimensionally stable anode
-has been demonstrated at better than 80 % coulombic efficiency and 2.3 kWh per
-kilogram of neodymium, giving metal of better than 97 wt % purity; a life-cycle
-assessment of that cell puts its global warming potential at 5 kg CO₂-eq per
-kilogram against 9-16 for the conventional oxide-fluoride route, a 44-69 %
-reduction [@holcombe2024sustainable]. The eutectic melts below 400 °C, so the
+has been demonstrated at 500 °C at better than 80 % coulombic efficiency and
+2.3 kWh per kilogram of neodymium, giving metal of better than 97 wt % purity —
+against 60 % and 3.34 kWh/kg for the conventional molten-salt route the authors
+benchmark against. A life-cycle assessment of that cell, excluding the shared
+Nd₂O₃ feedstock, puts its global warming potential at 5 kg CO₂-eq per kilogram
+against 9-16 for the conventional oxide-fluoride route, a 44-69 % reduction
+[@holcombe2024sustainable]. The eutectic melts below 400 °C, so the
 cell runs several hundred degrees cooler than the fluoride pot and can be built
 from cheaper materials.
 
@@ -790,7 +836,7 @@ Zirconium is an ideal material for nuclear reactor fuel cladding due to its exce
 This separation challenge parallels the difficulties in separating individual rare earth elements, which also exhibit very similar chemical properties across the lanthanide series. The industrial solutions developed for Zr/Hf separation therefore offer instructive lessons for REE processing [@xu2015production].
 
 ### Industrial Zr Carbochlorination Process
-The production of nuclear-grade zirconium begins with carbochlorination of zircon sand. The process is conducted in fluidized bed reactors at temperatures of 1000-1200°C [@xu2015production; @yin2024preparation]:
+The production of nuclear-grade zirconium begins with carbochlorination of zircon sand. The process is conducted in fluidized bed reactors at temperatures of 1000-1200°C [@xu2015production]:
 
 $$
 \mathrm{ZrSiO_4} + 4\,\mathrm{C} + 4\,\mathrm{Cl_2} \rightarrow \mathrm{ZrCl_4} + \mathrm{SiCl_4} + 4\,\mathrm{CO}
@@ -809,6 +855,19 @@ Key process characteristics include:
 - The ZrCl₄/HfCl₄ mixture is condensed as a solid powder for subsequent separation
 
 This carbochlorination step has been optimized over decades of industrial operation, with well-established practices for reactor design, chlorine distribution, heat management, and product recovery [@yang2016separation].
+
+The variant worth noting here takes the silica out first. @yin2024preparation
+carbochlorinate *desiliconized zirconia* rather than zircon sand, on a 3 t/day
+industrial fluidized bed, and the
+operating parameters they report are the kind this chapter almost never gets for
+a rare earth chlorination: ZrO₂:C of 100:18-19 wt %, a feed rate of 70 kg/h, a
+material layer height of 1 m and a chlorine flow of 75 kg/h. Their thermodynamic
+analysis puts CO, not CO₂, as the dominant carbon product at the operating
+temperature, with the rate governed by the surface reaction. The point of
+interest is that removing the silica ahead of chlorination removes the SiCl₄
+by-product from the reactor rather than from the condenser train — the mirror
+image of the bastnäsite argument above, where SiCl₄ is deliberately *added* to
+carry fluorine out as SiF₄ [@huang2002rare].
 
 ### Molten Salt Extractive Distillation for Zr/Hf
 Following carbochlorination, the separation of ZrCl₄ from HfCl₄ is accomplished through molten salt extractive distillation---the only pyrometallurgical Zr/Hf separation method operating at industrial scale [@chen2025process]. This technology, developed by Cezus (now Framatome) in France during the 1980s, exploits the slight difference in vapor pressure between ZrCl₄ and HfCl₄.
@@ -894,15 +953,15 @@ Key process characteristics include:
 
 The aluminum chloride process has garnered renewed interest as a potential alternative to the Hall-Héroult process for primary aluminum production. Work on the bauxite chloride route has shown [@namboothiri2017bauxite]:
 
-- Bauxite can be carbochlorinated directly, producing mixed chlorides (AlCl₃, FeCl₃, SiCl₄, TiCl₄)
+- Bauxite calcined at 750 °C can be carbochlorinated directly with petroleum coke in a bubbling fluidized bed at 650 °C, producing mixed chlorides (AlCl₃, FeCl₃, SiCl₄, TiCl₄); staging the chlorination is what separates them, with iron oxide most selectively chlorinated in the first stage
 
-- A claimed energy saving relative to Hall-Héroult electrolysis; note that Alcoa operated a chloride smelter on this principle from 1976 and closed it in 1985, so the route is a demonstrated failure at commercial scale, not merely an undeveloped one
+- AlCl₃ purified by reductive distillation is then electrolyzed to aluminium metal, demonstrated in a 50 L cell at 960 °C
 
-- Easier CO₂ capture and sequestration potential
+- A measured energy saving: 9-10 kWh per kg of aluminium tapped, against 13-14 kWh/kg for Hall-Héroult and a theoretical minimum of 6.34. Note that Alcoa operated a chloride smelter on this principle from 1976 and closed it in 1985, so the route is a demonstrated failure at commercial scale, not merely an undeveloped one
 
-- Biocarbon can replace petroleum coke (no mechanical strength requirements)
+- Scale-up in progress at the time of writing: 5 kg batch reactors, then refractory-lined fluidized beds at 10 kg/h and 200 kg/h, with a demonstration plant operating
 
-- AlCl₃ is subsequently electrolyzed to produce aluminum metal
+Two claims that earlier drafts attributed to this source — easier CO₂ capture, and biocarbon substituting for petroleum coke — are not in it, and have been removed rather than re-attributed.
 
 Øye's account of the chloride route is concerned with aluminium alone and says
 nothing about rare earths [@oye2019chloride]. The extension is ours, and it is
@@ -995,8 +1054,8 @@ source and are not reproduced here.
 | System | Chlorination temperature | How the chlorides are separated | Status |
 |----|----|----|----|
 | Titanium | 870-1040 °C, fluidized bed [@morris1976fluidized] | Selective condensation and fractional distillation of TiCl₄ [@habashi1997handbook] | Commercial since 1948 [@usgs2020titanium] |
-| Zirconium/hafnium | 1000-1200 °C, fluidized bed [@xu2015production; @yin2024preparation] | Molten salt extractive distillation, KAlCl₄ [@chen2025process] | Commercial [@chen2025process] |
-| Aluminium | 500-700 °C, fluidized bed [@namboothiri2017bauxite] | Condensation; AlCl₃ sublimes at 181 °C | Commercial for chemical AlCl₃; abandoned for metal (Alcoa, 1976-1985) [@oye2019chloride] |
+| Zirconium/hafnium | 1000-1200 °C, fluidized bed [@xu2015production] | Molten salt extractive distillation, KAlCl₄ [@chen2025process] | Commercial [@chen2025process] |
+| Aluminium | 650 °C, bubbling fluidized bed [@namboothiri2017bauxite] | Reductive distillation; AlCl₃ sublimes at 183 °C | Commercial for chemical AlCl₃; abandoned for metal (Alcoa, 1976-1985) [@oye2019chloride] |
 | Magnesium | 425-600 °C for the kinetics; below 1000 °C overall [@gaballah1999chlorination] | Electrolysis of MgCl₂ [@gupta2003chemical] | Historical; last chlorination plant closed 2002 [@gupta2003chemical] |
 | Niobium/tantalum | 500-1000 °C [@gupta1984extractive; @yang1999carbochlorination] | Fractional distillation of the pentachlorides, b.p. 248 and 236 °C [@gupta1984extractive] | Commercial but specialty; most Nb/Ta separation today is solvent extraction [@habashi1997handbook] |
 | **Rare earths** | 600-900 °C | **No demonstrated route** — LnCl₃ do not boil below ≈1,550 °C [@seifert2005melting; @brunetti2000vaporization] | Pilot and laboratory |

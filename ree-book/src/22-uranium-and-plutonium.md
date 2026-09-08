@@ -229,11 +229,13 @@ acrylonitrile (usually with a hydrophilic comonomer such as itaconic acid or
 methacrylic acid), then convert the nitriles to amidoximes with hydroxylamine
 and condition the product with alkali [@das2016alternative]. The result is
 cheap, mechanically robust in seawater, and grafted at high enough density to be
-useful. The US program's reference material, AF1, is made this way, and a
-systematic comparison of graft chemistries found that sodium hydroxide
-conditioning outperforms potassium hydroxide and that process changes of this
-kind cut the projected cost of recovered uranium by 21–30 %
-[@das2016alternative].
+useful. The US program's reference material, AF1, is made this way — acrylonitrile and
+itaconic acid grafted onto high-surface-area polyethylene at Oak Ridge — and a
+systematic comparison of *alkaline conditioning reagents*, tested against both
+uranium-spiked simulated seawater and 56-day exposure in natural seawater at
+Sequim Bay, found that sodium hydroxide outperforms the potassium hydroxide used
+in previous studies on both uptake capacity and cost, cutting the projected cost
+of recovered uranium by 21–30 % [@das2016alternative].
 
 The correction is that "amidoxime sorbent" is a misnomer for the part that does
 the work. Under the alkaline conditioning step, adjacent amidoxime groups

@@ -1191,8 +1191,26 @@ conventional route at about 11 t of hydrochloric acid and 2.4 t of sodium
 hydroxide per tonne of rare earth oxide, discharging some 120 t of wastewater
 carrying 6.8 t of salts, and propose a flowsheet that recycles the intermediate
 acid so that nothing but oxalic acid is consumed. Magnesium and calcium
-saponification are the other alternatives usually named, but no source verified
-for this book establishes how widely either is practised. Whichever is chosen,
+saponification are the other alternatives usually named, and there is now a
+source for their standing: both non-saponification and CaO/MgO saponification
+appear on the list of technologies the Chinese Ministry of Environmental
+Protection recommends for preventing or eliminating ammonium pollution in rare
+earth extraction-separation, alongside sodium saponification and the
+fuzzy/hyperlink extraction arrangements [@qi2018waste]. That is official
+practice guidance rather than a survey of installed capacity, so it establishes
+that the alternatives are endorsed and deployed, not what fraction of plants use
+them.
+
+The same source identifies a second ammonium source that this section's
+stoichiometry does not account for. Where a mixed bastnäsite-monazite concentrate
+is decomposed with sulfuric acid, the water leachate is dilute — around 50 g/L
+REO — and the traditional way to concentrate it and convert the sulfate system to
+a chloride one is to precipitate with ammonium bicarbonate and redissolve the
+carbonate in hydrochloric acid. That step is a large ammonium load in its own
+right, separate from saponification, and the industry's answer has been to
+replace it with *non-saponified* P507 and P204 extraction stripped with
+hydrochloric acid, which performs the same sulfate-to-chloride conversion without
+the ammonium [@qi2018waste]. Whichever is chosen,
 the reagent bill and the effluent are set by the same stoichiometry:
 three equivalents of base per mole of rare earth moved. That stoichiometry is
 also what closed the American industry's books:

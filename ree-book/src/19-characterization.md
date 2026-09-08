@@ -245,10 +245,14 @@ high-throughput route for rare earth determination [@zhang2021high] — the
 throughput argument of [](#high-throughput-and-computational-methods) applies to
 the analysis as much as to the experiment.
 
-Ion {index}`chromatography` with chelating stationary phases — iminodiacetate,
-nitrilotriacetate and carboxyl-functionalized silicas — serves the related
-purpose of separating the rare earths as a group from base metals in geological
-and process materials [@ahmed2020chromatographic].
+Ion {index}`chromatography` serves the related purpose of separating the rare
+earths as a group from base metals in geological and process materials. The
+worked example verified for this chapter uses a mixed-bed column carrying both
+anion- and cation-exchange sites with a chelating eluent, and determines the sum
+of the rare earths alongside individual heavy metals in about twenty minutes
+[@ahmed2020chromatographic]; the separation factors depend on eluent
+concentration and pH, which is the same lever the displacement chromatography of
+[](#technology-comparison) pulls.
 
 ### X-Ray Fluorescence (XRF)
 
@@ -365,8 +369,8 @@ shells. Both properties follow from the same shielding, and both are useful. The
 narrowness means the band positions are characteristic of the ion and are
 transferable enough between compounds that reference libraries covering the
 whole series are worth compiling — one such library records the UV-visible
-absorption spectra of the orthophosphates LnPO₄ from La to Lu
-[@sharma2020library] — so that individual lanthanides can be identified and
+absorption spectra of the orthophosphates LnPO₄ from La to Lu, promethium
+excepted, measured on single crystals [@sharma2020library] — so that individual lanthanides can be identified and
 quantified in a mixture rather than separated first. The weakness means the
 technique is limited to the concentrations a process stream actually carries
 rather than to trace analysis.
@@ -427,12 +431,27 @@ reaction is the one occurring [@fieser2016raman; @chen2019characterization].
 Sensitivity to the metal across the series follows from the same mechanism.
 Vibrational frequencies of a coordinated ligand track the Lewis acidity of the
 metal centre, which rises across the series as the ionic radius contracts. In
-rare earth dinitrogen complexes, for example, the N–N Raman stretching frequency
-changes regularly from Gd to Tm — that is, with *increasing* atomic number,
-decreasing ionic radius, and increasing Lewis acidity [@fieser2016raman]. That
-regularity is the point: a vibrational frequency that varies smoothly with
-lanthanide identity is a probe of the small energetic differences a separation
-has to exploit, and one that can in principle be measured in situ.
+one family of rare earth dinitrogen complexes — the bis(silylamide) series
+Ln₂(μ–η²:η²-N₂) with THF and (Me₃Si)₂N ligands — the N–N Raman stretching
+frequency falls regularly from Gd to Tm, 1447 down to
+1413 cm⁻¹ — that is, with *increasing* atomic number, decreasing ionic radius,
+and increasing Lewis acidity [@fieser2016raman]. A vibrational frequency that
+varies smoothly with lanthanide identity would be a probe of exactly the small
+energetic differences a separation has to exploit, and one that can in principle
+be measured in situ.
+
+The authors' own conclusion is a caution against reading it that way, and it is
+worth carrying rather than dropping. The correlation holds for that ligand set
+and not for the others they measured: praseodymium falls off the trend, two
+further series do not reproduce it, and substituted variants gave trends
+consistent with neither bond distances nor donor numbers. Their summary is that
+"the factors connecting composition and stretching frequency can be quite
+complicated and extrapolating based on a few Raman spectra should be done with
+caution", and that more data are needed to establish whether the stretch is a
+periodic indicator at all or only a fingerprint [@fieser2016raman]. They call the
+result unexpected. The lesson generalises past dinitrogen: a smooth trend in
+one ligand system is not a lanthanide periodicity until it has been reproduced in
+another.
 
 ### NMR Spectroscopy
 

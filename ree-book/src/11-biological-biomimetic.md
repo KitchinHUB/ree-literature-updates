@@ -423,6 +423,16 @@ Ce³⁺ and about 1.8 µM for Nd³⁺ at pH ≈ 5.5. Set those beside the intact
 protein's tens-to-hundreds of picomolar and the cost of cutting the protein down
 to one loop is four to five orders of magnitude of affinity.
 
+Two further results from that paper are worth carrying. The loop is
+sequence-specific, not merely anionic: a scrambled version of the same residues
+binds Ce³⁺ five times more weakly, at 20.59 ± 5.84 µM. And the immobilized
+peptide showed **no measurable affinity for calcium or copper** — which is worth
+setting against @park2017recovery above, where copper was the one non-rare-earth
+the displayed tag could not reject. Whether that difference is the peptide or
+the presentation is not resolved by either paper, but it is the kind of
+discrepancy a process designer would need settled before choosing between
+them.
+
 What survives the cut is the group selectivity, which is the more valuable half.
 Surface-bound LanM1 shows no measurable affinity for calcium or copper even at
 29 µM, and Ce³⁺ stops binding below pH 2, which supplies a pH-swing regeneration
@@ -478,10 +488,11 @@ A foam column is the obvious vehicle and it does not yet exist. The nearest
 thing is a follow-up from the same group showing that glutaraldehyde
 cross-linking of the adsorbed peptide-REE complexes thickens the interfacial
 film and stiffens it in both dilation and shear, which is what a foam needs to
-survive drainage [@ortunomacias2024enhanced]. That work is still pendant-drop
-tensiometry and X-ray reflectivity on a flat interface; it substitutes a
-cross-linker for the polymers, surfactants and particles that usually stabilize
-a froth, and it stops short of reporting a foam separation.
+survive drainage [@ortunomacias2024enhanced]. That work is dilational and shear
+surface rheology with pendant-drop tensiometry on a flat interface — the X-ray
+reflectivity belongs to the group's earlier paper, not this one. It substitutes
+a cross-linker for the polymers, surfactants and particles that usually
+stabilize a froth, and it stops short of reporting a foam separation.
 
 ### Immobilized Peptides and Mineralizing Peptides
 
@@ -875,8 +886,13 @@ pyrroloquinoline quinone, or losing the PQQ-dependent membrane-bound glucose
 dehydrogenase that uses it, nearly eliminates bioleaching --- so the entire
 effect runs through one enzyme. Disrupting the phosphate-specific transport
 genes *enhances* bioleaching, by up to 18 %. Acting on that, the same group
-deleted *pstS* and overexpressed *mgdh*, and the resulting strain improves
-rare-earth extraction by up to 73 % [@schmitz2025high]. A 73 % improvement on a
+deleted *pstS* — which constitutively switches on the phosphate starvation
+response and yields a more acidic biolixiviant, worth up to 30 % on its own —
+and coupled it with overexpression of *mgdh*. That strain drops the biolixiviant
+pH by 0.39 units and improves rare-earth extraction by **73 % at 1 % pulp
+density, falling to 53 % at 10 %** [@schmitz2025high]. The pulp-density
+dependence is the part worth carrying: the gain shrinks as the reactor is
+loaded, which is the direction a process has to go. And a 73 % improvement on a
 process that dissolves milligram-per-litre quantities over weeks
 ([](#hydrometallurgical-leaching)) is a genuine and useful gain that does not
 change the order of magnitude of the result.

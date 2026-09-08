@@ -123,7 +123,10 @@ see below.
 For magnet recycling, dysprosium has been recovered from the nitric-acid leach
 liquor of hard-disk-drive NdFeB scrap at **better than 97% purity and about 94%
 recovery**, using 0.5 M EHEHPA in a hollow-fibre contactor operated in
-non-dispersive mode, at a 1:1 phase ratio and 100 mL/min [@yadav2018ndfeb]. The
+non-dispersive mode, at a 1:1 phase ratio and 100 mL/min [@yadav2018ndfeb]. That
+purity takes **two cycles**, not one: the first raises dysprosium from 20 % to
+83 % of the rare earth content and the second carries it past 97 %. The pair
+being split is Dy against Nd and Pr — heavy against light, not adjacent. The
 distinction matters: this is non-dispersive solvent extraction across a
 membrane contactor, where the organic phase flows and the membrane merely pins
 the interface, not a true supported liquid membrane with a static impregnated
@@ -152,12 +155,12 @@ The numbers are good and they are all group numbers:
 
 | System | Conditions | Result | Source |
 |--------|-----------|--------|--------|
-| NF-300, Nd(III) | with SDS / with EDTA in feed | rejection rises from 86.7% to **99.5%** / **99.4%** | [@murthy2011application] |
-| Desal G10, Gd(III) | 4 bar, pH 1–3, ±0.3 mM DTPA | **<10%** without DTPA; **5–95%** with it, tracking complex formation | [@sorin2005rejection] |
-| NF270, acid mine drainage | H₂SO₄, pH 1.5–3.0 | high rejection of Ca, Al, Zn and the REEs while the acid permeates | [@lopez2018application] |
+| NF-300, Nd(III), synthetic single-element feed | with SDS / with EDTA in feed | rejection rises from 86.74% to **99.45%** / **99.36%**; without either, pH swings it from 46.22% (acidic) to 90.12% (alkaline) | [@murthy2011application] |
+| Desal G10, Gd(III) | 4 bar, ±0.3 mM DTPA, pH swept | **5%** without complexation; **5–95%** with DTPA, tracking Gd/DTPA speciation except below pH 1.5, where the membrane's own surface charge takes over (isoelectric point 3.4) | [@sorin2005rejection] |
+| NF270, **synthetic** AMD supernatant | H₂SO₄, pH 1.5–3.0 | high rejection of Ca, Al, Zn and the REEs while the acid permeates; no real AMD filtered | [@lopez2018application] |
 | UP020 UF (20 kDa), micellar-enhanced | pH 3.5, 3 bar, 8 mM SDS | **97%** REE rejection on synthetic leachate, **71%** on the real one | [@kosemutlu2020separation] |
-| 30 kDa UF, polymer-enhanced | pH 8–9, 30 mg/L polyacrylic acid | **>90%** REE retention | [@duan2015removal] |
-| Ceramic UF (1 kDa), micellar-enhanced | 30 mg/L Y, 2 mg/L Zn, WEEE effluent | **~99%** removal — of Y *and* of Zn | [@innocenzi2018treatment] |
+| 30 kDa UF, polymer-enhanced | pH 7.5, 30 mg/L polyacrylic acid, seawater matrix | **89.2% (La) to 95.8% (Sm)** recovery — an analytical pretreatment for ICP-MS, not a process step | [@duan2015removal] |
+| Ceramic UF (1 kDa), micellar-enhanced | 30 mg/L Y, 2 mg/L Zn, **synthetic** solution simulating a WEEE hydrometallurgical residue | **~99%** removal — of Y *and* of Zn | [@innocenzi2018treatment] |
 
 Read the last two rows together with the third. The Gd result says the rejection
 is a property of the complex, not of the element: the same membrane rejects the
@@ -173,8 +176,15 @@ by response-surface methodology and fed into a cost model; the economic optimum
 was the *low*-pressure corner, 12 bar and pH 3.5, because the extra flux bought
 at 24 bar did not pay for the energy [@kosemutlu2018application]. Acid stability
 is the other design constraint: NF270 exposed to 1 M H₂SO₄ for four weeks
-changes measurably in surface chemistry and morphology, which is the relevant
-time scale when the feed is a sulphuric leach liquor [@lopez2018application].
+changes measurably in surface chemistry and morphology by ATR-FTIR, AFM and XPS,
+and the authors' closing sentence is that ageing accelerates membrane
+instability in acidic solutions — the relevant time scale when the feed is a
+sulphuric leach liquor [@lopez2018application]. The same paper is also worth
+reading for what protonation does to the separation: at pH 1 to 2.5 the
+membrane's carboxylic and piperazine groups are fully protonated, the fixed
+charge turns positive, and HSO₄⁻ is transported preferentially — which is what
+lets the acid through while the metals are held, and is a different mechanism
+from the size exclusion the technique is usually described by.
 
 No nanofiltration or ultrafiltration membrane has separated adjacent
 lanthanides. Poor adjacent-REE selectivity heads the list of open problems in
@@ -535,7 +545,21 @@ light rare earth *nitratometalates*, [Ln(NO₃)₆]³⁻, as supramolecular caps
 held together by intra- and intermolecular hydrogen bonds. The point of the
 design is that the receptor recognises the anionic nitrate complex rather than
 the bare cation, which is why it tolerates an acidic feed: no pH adjustment is
-needed to make the target species, because nitric acid makes it already.
+needed to make the target species, because nitric acid makes it already. The
+acid is not optional, though — below 4 M there is little or no precipitation,
+and the working range is 6 to 8 M.
+
+The paper reports pseudo separation factors, derived from precipitation rather
+than from partition between two phases, and read in this book's terms they fall
+into the usual shape. Against lanthanum, the factors climb steeply across the
+series: **63 for La/Sm and 248 for La/Eu**, with nothing calculable beyond
+europium because precipitation there is zero within experimental error. The
+authors also note that **Nd/Dy is "effectively infinite"** for the same reason —
+dysprosium does not precipitate at all — which is a statement about a zero
+denominator rather than about a perfect separation. And on the pairs that
+decide a cascade, the authors say it themselves: La/Ce, La/Pr and La/Nd come out
+*similar to the state-of-the-art phosphorus acids in solvent extraction*. The
+large numbers are light-over-heavy; the adjacent ones are D2EHPA's.
 
 The application came two years later. @oconnelldanes2024simple report
 single-step, near-quantitative recovery of Nd and Pr directly from the acidic
@@ -618,10 +642,13 @@ better selectivity.
 What @stamberga2020structure did was to attack that constraint directly, by
 systematically varying the substituents around the diglycolamide carbonyl
 oxygens — twelve new ligands beyond the three the literature had been recycling
-— to separate the steric from the electronic contribution to selectivity. The
-resulting ligands hold selectivity in the 2.5–3.1 range while staying
-homogeneous at extractant concentrations high enough to be industrially useful
-[@laboratory2021game]. The technology was licensed to Marshallton Research
+— to separate the steric from the electronic contribution to selectivity. On the
+adjacent pair that matters most, the paper's own figures are SF(Nd/Pr) = 3.2 for
+the best of the new ligands against 2.5 for TODGA, with 2.2 for Eu/Sm, 1.9 for
+Tb/Gd and 2.0 for Er/Ho elsewhere in the series [@stamberga2020structure]. The
+laboratory's own account puts the resulting selectivity in the 2.5–3.1 range
+while staying homogeneous at extractant concentrations high enough to be
+industrially useful [@laboratory2021game]. The technology was licensed to Marshallton Research
 Laboratories in 2021 under an exclusive field-of-use agreement, with the process
 design developed at Idaho National Laboratory.
 
@@ -645,13 +672,19 @@ while leaving the others as solids. The distinction matters and is frequently
 reported backwards: the selectivity lives in the dissolution step, not in the
 precipitation.
 
-What the authors demonstrate is separation within, rather than between,
-subgroups, and they show it working on processed magnet waste at initial rare
-earth concentrations below 5 %, which is the regime where a solvent-extraction
-circuit is at its least economic. No separation factor, purity or stage count
-from this work has been verified for this chapter; it is a four-page
-communication from 2020 out of the Critical Materials Institute, and no
-independent replication or scale demonstration was found.
+What the authors demonstrate is a split between the light subgroup (La–Sm),
+whose oxalates stay solid, and the heavy one (Gd–Lu), which the base carries
+into solution — not a separation within either subgroup, and not an adjacent
+pair. They show it on a recycled Nd–Fe–B motor magnet, taking dysprosium from
+4.68 wt % down to 1.49 wt % of the didymium oxalate in a single 15-minute cycle
+at 68 % extraction efficiency, with a comparative extraction factor for Nd
+against Dy of 38. That factor is a ratio of oxalate solubilities, not an
+equilibrium separation factor. The minor-element regime it works in — a few per
+cent of the heavy element in a light matrix — is the regime where a
+solvent-extraction circuit is at its least economic. The paper reports no product purity and no
+stage count beyond the single cycle; it is a four-page communication from 2020
+out of the Critical Materials Institute, and no independent replication or scale
+demonstration was found.
 
 ## Flash Joule Heating with Chlorination (FJH-Cl₂)
 
@@ -718,9 +751,19 @@ Fluorinated β-diketones — hexafluoroacetylacetone, thenoyltrifluoroacetone an
 their relatives — do the same job by a different route and show a synergistic
 enhancement when TBP is added alongside them [@lin1994supercritical;
 @lin1995supercritical]. Fluorinated organophosphate derivatives of TBP have been
-proposed more recently on the grounds of higher CO₂ solubility
-[@deng2024maximized], though the solubility values themselves could not be
-verified for this chapter and are not quoted here.
+proposed more recently on the grounds of higher CO₂ solubility, and that paper
+has since been read in full [@deng2024maximized]. Its headline is a large one:
+the C8 fluorinated phosphonate extracts lanthanum from a solid matrix at
+**97 ± 2 %** in pure scCO₂ with no water and no cosolvent, against under 10 %
+for the TBP-HNO₃ complex under the same conditions, about 56 % with a little
+water added and 86 % with 5 mol % methanol. Two qualifications travel with it.
+It is a single element — lanthanum — from a solid, so it says nothing about
+separating one lanthanide from another, which is the limitation this section
+opens with. And the authors caution against reading solubility as the whole
+story: amidophosphonates less soluble than their own C6 compound still perform,
+so CO₂-philicity is necessary rather than sufficient. Extractant regeneration
+recovered 60 % of the reagent, which they report as the first such measurement
+for solid/supercritical-fluid metal extraction.
 
 ### Bastnäsite: The One Well-Documented Result
 

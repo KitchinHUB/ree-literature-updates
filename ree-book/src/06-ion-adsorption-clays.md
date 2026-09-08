@@ -234,7 +234,14 @@ of the alternative. Using biosynthetic sodium citrate as the lixiviant at
 earth extraction; oxalic acid then precipitated the rare earths from the leachate
 at 94.5 % yield while carrying only 7.4 % of the aluminium, and — the point of the
 design — the residual solution was regenerated and cycled back as fresh lixiviant.
-Roasting the precipitate gave a concentrate of 96 % REO [@meng2023heap]. That is
+Roasting the precipitate gave a concentrate of 96 % REO [@meng2023heap]. The
+control run in the same study is what makes the aluminium figure meaningful:
+leaching with ammonium sulfate and precipitating with ammonium bicarbonate
+recovered 97.3 % of the rare earths but brought down 98.7 % of the aluminium
+with them, so a separate aluminium-removal step was needed and roughly 10 % of
+the rare earths were lost in it. Citrate complexes the rare earths well enough
+that ammonium bicarbonate cannot precipitate them at all — 3.4 % yield — which
+is why oxalic acid is used instead, and why the aluminium stays behind. That is
 a closed reagent loop demonstrated at a scale well past the bench, and it is the
 strongest available argument that the containment advantage of a heap need not be
 paid for in reagent cost.
@@ -306,7 +313,9 @@ rests on agreeing with experiments it did not perform, and the study its authors
 take as the confirmation is Chen and co-workers, who leached a low-grade
 weathered-crust ore with MgSO₄ to 75.48 % extraction in a single stage and up to
 96.19 % after a second stage — slightly better than ammonium sulfate achieved on
-the same ore — with cerium the worst-leaching element [@chen2018leaching].
+the same ore — with cerium the worst-leaching element [@chen2018leaching]. The
+conditions are mild and worth recording alongside the figure: 3 wt % lixiviant,
+a liquid-to-solid ratio of 3:1, thirty minutes, room temperature.
 
 The limitation of the screening should be stated as plainly as the result. It
 treats one element and one solvent at a time, with no impurities and no kinetics.
@@ -361,9 +370,12 @@ The tailings were pumped to an unlined impoundment, and excess water in the pile
 drained through the underlying soils into the aquifer for decades. Ammonia is what
 drives the active remediation: elevated ammonia in the backwater channels beside
 the pile threatens young-of-year endangered fish [@doe2025moaboverview], among them
-the razorback sucker and Colorado pikeminnow, whose measured chronic values for
-un-ionized ammonia lie below the concentrations found in those backwaters
-[@fairchild2005chronic].
+the razorback sucker and Colorado pikeminnow. Un-ionized ammonia in those
+backwaters frequently exceeds 1.00 mg/L — more than ten times Utah's 30-day
+chronic criterion of 0.07 mg/L — while the chronic values measured for the two
+endangered species in 28-day tests fall between 0.40 and 0.70 mg/L NH₃, so the
+water is above the level at which growth and survival are affected, not merely
+above a regulatory line [@fairchild2005chronic].
 
 Since 2003 DOE has run a groundwater interim action — now eight extraction wells
 and more than thirty freshwater injection wells that dilute what still reaches the
@@ -531,6 +543,17 @@ and clay has it in abundance. Natural clay minerals have been characterised
 explicitly as adsorbents and as an alternative recovery medium for rare earths
 from solution, with the operative parameters mapped [@alshameri2019understanding].
 This is the mechanism the orebody already demonstrates at industrial scale.
+
+That study is also the clearest available measurement of what clay *cannot* do.
+Alshameri and co-workers ran La³⁺ and Yb³⁺ — a light and a heavy, about as far
+apart as the series goes — across kaolinite, montmorillonite, muscovite and
+illite. The adsorption capacities order Mt > Ms > Ilt > Kao, and **the ordering
+is the same for both ions**; the extraction efficiencies track together as well,
+89 % La against 85 % Yb from kaolinite and 63 % against 57 % from muscovite, with
+muscovite's poor showing traced to associated iron oxide rather than to anything
+about the lanthanides. A four-percentage-point spread across the widest pair in
+the series is not a separation. Which clay you have changes how much you adsorb;
+it does not change which rare earth you adsorb.
 
 For **individual-element separation** — resolving adjacent lanthanides — bare clay
 is intrinsically weak, and the reason is the mechanism split of the previous

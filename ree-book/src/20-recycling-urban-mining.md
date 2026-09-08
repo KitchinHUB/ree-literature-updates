@@ -127,7 +127,15 @@ product from the selective route ran 68.1 wt% neodymium, 19.8 wt%
 praseodymium, and 0.31 wt% iron, against 1.20 wt% iron by whole leaching
 [@patcharawit2022comparative]. Sulfation followed by selective roasting and
 water leaching achieves the same separation of iron from rare earths through a
-different intermediate [@onal2015recycling].
+different intermediate, and reports better numbers than either arm of that
+comparison: after converting the powdered magnet completely to a sulfate
+mixture, selective roasting and water leaching gave **95-100 % extraction of Nd,
+Dy, Pr, Gd, Tb and Eu**, left the iron behind as a marketable
+hematite-dominated residue, and produced a leachate of at least **98 % rare
+earth purity** — clean enough, the authors argue, to feed downstream separation
+without an impurity-removal pretreatment [@onal2015recycling]. The route is also
+composition-independent, which matters for a scrap stream that arrives as a
+mixture of magnet grades.
 
 The {index}`oxalate precipitation` and calcination steps
 at the end are the same operations used on primary leach liquors

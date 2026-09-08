@@ -99,6 +99,21 @@ why the photochemical route exists at all, and it is treated with the
 crystallization it enables in
 [](#photochemical-reduction-of-europium).
 
+It is worth knowing what the incumbent chemical route achieves, because it sets
+the bar the alternatives have to clear. Qi describes the industrial operation:
+a chloride liquor at 200 g/L REO and pH 4.5, sulfate raised to 20 g/L with a
+magnesium, sodium or ammonium salt, and 10-15 g/L of zinc powder added at room
+temperature [@qi2018chemical]. Where europium is abundant, over 95 % of the
+Eu(II) precipitates directly as the sulfate. Where it is dilute — which is the
+usual case — precipitation is slow and incomplete, and the fix is to add barium
+chloride at the same time, so that barium sulfate, isostructural with EuSO₄,
+carries the europium down with it. A single coprecipitation of that kind takes a
+feed at **0.2-0.3 % Eu₂O₃ in REO up to a 20-25 % concentrate at 99 % europium
+recovery** — roughly a hundredfold upgrade in one operation. A zinc-particle or
+zinc-amalgam column reduces at 98 %. Those are the numbers a photochemical or
+electrochemical route is competing against, and they are the reason the
+displacement of zinc has been slow.
+
 Samarium and ytterbium have divalent states as well, but they are reached under
 strongly reducing conditions rather than in an aqueous cell; the divalent
 chlorides EuCl₂ and YbCl₂ appear in the halide chemistry of
@@ -120,8 +135,11 @@ Ln-EDTA complexes migrate and the uncomplexed cations do not; the selectivity is
 the selectivity of the EDTA complexation, and the membranes only sort by charge.
 
 @ding2024mathematical built and validated an extended Nernst-Planck model of
-this cell for the separation of Dy from Pr and Nd, and the useful part of the
-result is the shape of the trade-off rather than a separation number. Raising
+this cell for the separation of Dy from Pr and Nd — a *chelation-assisted*
+electrodialysis, in which Na₂EDTA converts the rare earths to anionic complexes
+that migrate through an anion-exchange membrane, so the selectivity is the
+chelate's rather than the membrane's. The useful part of the result is the shape
+of the trade-off rather than a separation number. Raising
 the applied voltage above 8 V speeds the separation and costs disproportionately
 more energy; dropping the rinse-solution concentration below 0.05 mol/L improves
 energy efficiency but depletes the rinse before the separation finishes; and the

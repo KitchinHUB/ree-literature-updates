@@ -102,9 +102,13 @@ else in the chapter was written from CrossRef, OpenAlex and Semantic Scholar
 metadata and from publisher abstracts. Five of its sources had no abstract
 reachable through any of those routes and no open-access copy:
 @zhang2026predicting, @liu2026machine, @zhang2026design,
-@jorjani2008prediction and @gomezflores2022critical. Each is cited for no more
+@jorjani2008prediction and @gomezflores2022critical. Each was cited for no more
 than its title asserts, and the two that bear most directly on the chapter's
 subject are named in the text as papers this book takes no numbers from.
+@zhang2026design and @gomezflores2022critical have since been retrieved and
+read; the chapter now takes β(Tm/Er) = 4.18 and β(Lu/La) up to 3736 from the
+first of those, which is one of the largest adjacent-pair separation factors in
+the book.
 
 Chapter 15 has no source document either, and its exposure is
 different again and smaller. It exists because the sources — and, until it was
@@ -530,8 +534,9 @@ of 0.96 ± 0.09) also comes from that reading.
 sources allow.** A literature check against the current search results for
 automated and learned f-element separations added @lee2025data,
 @augustine2026coupling, @leite2025creation and @yu2026progress. Only the first
-two have released abstracts, and neither has an obtainable full text; the other
-two are cited for existence. @augustine2026coupling matters most, because it
+two had released abstracts, and the other two are cited for existence.
+@lee2025data has since been retrieved and read in full, and it confirms the
+abstract-level reading without changing it. @augustine2026coupling matters most, because it
 forced two of the book's own standing claims to be corrected rather than merely
 extended: the "what has not been demonstrated" list in
 [](#machine-learning-in-rare-earth-separations) had said that no

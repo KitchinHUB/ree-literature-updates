@@ -59,7 +59,15 @@ to lanthanide(III) selectivity in hydrochloric acid, combining extraction
 measurements with computation and solution-structure characterization. Their
 conclusion is the one that makes the problem hard and the modeling worthwhile at
 the same time: subtle changes around the diglycolamide carbonyl oxygens produce
-dramatic shifts in both extraction strength and selectivity.
+dramatic shifts in both extraction strength and selectivity. The size of those
+shifts is worth stating, because this book collects adjacent-pair numbers and
+this paper reports them: the best of the twelve, an unsymmetrical
+N,N-dimethyl-N′,N′-di(n-octyl) diglycolamide, gives **SF(Nd/Pr) = 3.2** against
+2.5 for TODGA on the same pair, and another of them gives 2.2 for Eu/Sm, 1.9 for
+Tb/Gd and 2.0 for Er/Ho. Their explanation is the one a first-coordination-sphere
+descriptor set cannot represent either: the variation comes from electrostatic
+interactions *beyond* the first coordination sphere, in how chloride counterions
+pack between the coordinating ligands.
 
 Three further studies in the same tradition define the shape of the design
 space:
@@ -72,16 +80,31 @@ space:
   never coordinate the metal still shift the distribution ratio, most probably
   through the internal polarity of the molecule. A descriptor set restricted to
   the first coordination sphere cannot represent that effect.
-- @diazgomez2023synthesis made modified diglycolamides differing only in the
-  syn- or anti-orientation of backbone substituents, and found that
-  stereochemistry alone sets affinity and selectivity for tri- and tetravalent
-  metal ions from nitric acid. Stereochemistry is exactly the information that a
-  connectivity fingerprint discards.
+- @diazgomez2023synthesis made diglycolamides in syn- and anti-diastereomer
+  pairs, differing within each pair only in the orientation of backbone
+  substituents, and found the orientation moves extraction on its own: the
+  anti-dipropyl isomers give higher distribution ratios for Pu(IV) than their
+  syn-analogues, and anti-p-TODGA extracts Zr and Mo an order of magnitude
+  better. Stereochemistry is exactly the information that a connectivity
+  fingerprint discards. Read the paper carefully, though, and it also warns
+  against overclaiming: the substitution itself matters more than its
+  orientation — every substituted ligand extracts trivalents *worse* than the
+  unsubstituted parent, on steric grounds — and all the diastereomers converge
+  on the same inverse Am/Cm selectivity, a separation factor of about 1.5. No
+  lanthanide-over-lanthanide separation factor is reported anywhere in the
+  paper.
 - @zhang2026design report a monopyridine amine extractant designed for selective
   heavy rare earth extraction, and @han2024efficient the HPOAc system for
   recovering rare earths from the sulfate leachate of ion-adsorption ore. These
   are conventional extractant-design papers, and they are the kind of result a
-  successful generative model would have to produce.
+  successful generative model would have to produce. The first is worth pausing
+  on for its numbers, which are among the best adjacent-pair figures anywhere in
+  this book: **β(Tm/Er) = 4.18** for the meta-substituted isomer, with 4.04 and
+  3.90 for the ortho and para variants, alongside β(Lu/La) of 1688 to 3736. The
+  design rationale is covalency — the computed Wiberg bond index rises La < Eu <
+  Lu, and extraction efficiency rises with it — which is a mechanistic handle a
+  connectivity fingerprint would not find, and one that took DFT rather than a
+  learned model to identify.
 
 ### Molecular Representation
 
@@ -235,10 +258,13 @@ makes it the natural target when the extraction data runs out.
 
 @chaube2020applied trained six supervised algorithms — random forest,
 k-nearest neighbours, support vector machines, kernel ridge regression,
-multilayer perceptrons and AdaBoost — on thousands of experimental log K₁ values
+multilayer perceptrons and AdaBoost — on **5,266** experimental log K₁ values
 for lanthanide cations with structurally diverse ligands, validated in external
 ten-fold cross-validation, and then ran a feature-importance analysis to
-identify which molecular, metallic and solvent features carry the signal. Their
+identify which molecular, metallic and solvent features carry the signal.
+AdaBoost was the best of the six, at MAE 0.39 log units and R² 0.98 on the test
+set. That 5,266 is the concrete size of the "decades of compiled potentiometry"
+this chapter keeps contrasting against the ~1,200 distribution ratios. Their
 framing of the motivation is the honest one: molecular modelling gives
 structural insight but cannot predict stability constants accurately enough, or
 cheaply enough, to screen a large chemical space.
@@ -247,7 +273,9 @@ cheaply enough, to screen a large chemical space.
 algorithms, found gradient boosting best, reduced 282 ligand, metal and solvent
 descriptors to the fifteen most relevant, and reported R² of 0.98 on training and
 0.93 on test data, with a compact symbolic correlation extracted afterwards by
-SISSO. @kanahashi2022machine built Gaussian process regression models for both
+SISSO. The training set is **454 experimental log K₁ values** — an order of
+magnitude smaller than the lanthanide stability-constant compilation above, and
+a reminder that the actinide side of this literature is data-poorer still. @kanahashi2022machine built Gaussian process regression models for both
 the first and the higher overall stability constants across a wider range of
 cations than earlier work, and found the electronegativities of metal and ligand
 to be the most important features for the first constant.
@@ -412,7 +440,12 @@ recovery from contaminated water using RDKit-derived features, reporting R² of
 0.928 on both training and test sets and identifying the molecular weight of the
 first functional group as the dominant feature. The caution from the
 explainability section applies in full: that is a statement about which column
-the model leans on.
+the model leans on. Two further things are worth knowing before the R² is read
+as performance. The dataset is 225 experimental points harvested from 60 papers
+published between 2005 and 2023 — the compilation problem of the previous
+section, in its usual size. And the target variable is adsorption capacity in
+mg/g, so the model predicts how much an adsorbent takes up, not which rare earth
+it prefers.
 
 **Solvent choice.** @oshima2025machine is methodologically the most transferable
 paper in this section even though it is about gold rather than rare earths. For
@@ -519,7 +552,9 @@ process conditions for a fixed ligand rather than searching over molecules.
 A generative model that proposes a ligand nobody can make has not helped. The
 synthesis-prediction literature is mature enough to be part of the loop:
 @coley2017prediction trained a model on 15,000 reaction records from granted US
-patents to rank candidate products and anticipate reaction outcomes;
+patents to rank candidate products and anticipate reaction outcomes, putting the
+true major product first in 71.8 % of cases and in the top five in 90.8 % —
+useful for triaging a proposed route, not for trusting one unchecked;
 @liu2017retrosynthetic treated retrosynthesis as sequence-to-sequence
 translation on 50,000 patent reactions across ten reaction types and matched a
 rule-based expert system; and @schwaller2021prediction addresses the piece that

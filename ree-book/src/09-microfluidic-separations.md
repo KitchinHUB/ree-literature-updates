@@ -666,11 +666,12 @@ units with an accuracy of 0.09 and a mean squared error of 0.167, alongside
 used carefully, and it is respectable.
 
 The design principles behind selective fluorescent and colorimetric probes for
-lead, cadmium and mercury have been reviewed at length [@kim2012fluorescent]; no
-copy of that review could be obtained, and it is cited here only for the class of
-chemistry it covers. Nothing in it addresses lanthanides, whose f-f transitions
-are weak and shielded and which therefore need either a sensitizing ligand or an
-entirely different readout.
+lead, cadmium and mercury have been reviewed at length [@kim2012fluorescent]. It
+has since been read, and it confirms what the citation was hedged against:
+across the whole review neither lanthanides nor rare earths are mentioned once.
+Their f-f transitions are weak and shielded, so they need either a sensitizing
+ligand or an entirely different readout, and none of this probe chemistry
+transfers.
 
 ## Computer Vision and Machine Learning
 

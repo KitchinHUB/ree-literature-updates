@@ -545,7 +545,10 @@ premium solid fuels and magnetite to carry the economics. Over the project the
 feedstock moved from a Lower Kittanning coal in West Virginia to Fire Clay seam
 rejects in Kentucky, and the report states plainly that none of the efforts
 produced an economically viable venture: the principals elected not to move to a
-pilot plant and did not request funding for one. It is the counterweight to
+pilot plant and did not request funding for one. Its techno-economic chapter is
+blunter still — the process costs exceed the processing revenue in every year of
+the projection, and the circuitry is "too costly to be economically viable
+without government subsidy". It is the counterweight to
 every flowsheet in this chapter that ends at a converged solution. The model can
 close and the project can still not be worth building, and the reason is almost
 never the solvent-extraction train.
@@ -648,12 +651,38 @@ object, and this book found no published example of one for a rare-earth
 separation flowsheet.
 
 **A model validated at steady state is not validated in transients.** This is
-the explicit finding of @lyon2017dynamic and it generalises. Cascades are
+the explicit finding of @lyon2017dynamic and it generalises. Their model
+predicts steady-state concentration profiles across the cascade accurately and
+the transients markedly less well, and they name the cause: the assumption that
+each stage is homogeneous, well-mixed, and at complete equilibrium. Both halves
+of that are what [](#kinetics-and-mass-transfer) spends a chapter dismantling.
+The revision they propose is to carry the variation in mixer-settler holdup
+volumes explicitly. Cascades are
 validated, when they are validated at all, against steady-state profiles,
 because those are what a laboratory train can be held at long enough to sample.
 Start-up, shutdown, feed excursions and the multi-day settling of a hundred-stage
 train after a disturbance are where a plant actually loses product, and they are
-the least tested part of any of these models.
+the least tested part of any of these models in the English-language literature.
+
+They are not untreated everywhere, and the Chinese cascade-theory tradition is
+the exception worth knowing about. @qi2018countercurrent devotes a substantial
+part of its treatment to the *dynamic* problem — how a cascade approaches
+equilibrium from a cold start — and reports that the approach time is a design
+variable rather than a fixed property of the train. Starting the cascade under
+total reflux instead of by the conventional procedure reaches qualified product
+at both outlets far sooner: in the two worked examples the time to steady state
+falls to roughly a sixtieth and a hundred-and-eightieth of the conventional
+figure, and across many simulated multicomponent systems the general result is a
+reduction to a tenth or less. The reason is that total reflux maximises the
+per-stage separation while producing nothing, so the composition profile the
+design predicts is built up before any product is drawn.
+
+That matters here for two reasons. It says the transient is understood well
+enough to be exploited, not merely tolerated, which is a stronger position than
+the English-language modelling literature has reached. And it says the quantity
+a start-up model should be validated against is the *approach trajectory*, which
+depends on the start-up procedure chosen — so a model validated on one procedure
+has not been validated on another.
 
 **Almost none of this has been checked against an operating plant.** The
 validations in the rare-earth literature are against laboratory mixer-settlers

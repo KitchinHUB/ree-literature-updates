@@ -237,7 +237,7 @@ Short peptides can form coacervates and offer advantages of defined sequence, sc
 
 #### Lanthanide Binding Tags (LBTs)
 
-{index}`Lanthanide binding tags <lanthanide binding tags>` are amphiphilic peptide sequences based on the EF-hand metal binding loops of calcium-binding proteins [@ortunomacias2024lanthanide; @schmitz2022lanmodulin]. The EF-hand motif consists of two alpha helices linked by a 12-residue loop that coordinates metal ions through carboxylate-rich sidechains, with the metal held in a pentagonal bipyramidal geometry by residues at loop positions 1, 3, 5, 7, 9 and 12 (conventionally labelled X, Y, Z, -Y, -X, -Z), and the loop itself undergoing a disorder-to-order transition when the lanthanide binds. That the motif binds lanthanides at all is a consequence of their being good Ca²⁺ mimics: the trivalent charge on a similar radius makes an EF-hand site thermodynamically better suited to Ln³⁺ than to the ion it evolved for [@nikolova2023lanthanides].
+{index}`Lanthanide binding tags <lanthanide binding tags>` are amphiphilic peptide sequences based on the EF-hand metal binding loops of calcium-binding proteins [@ortunomacias2024lanthanide; @schmitz2022lanmodulin]. The EF-hand motif consists of two alpha helices linked by a 12-residue loop that coordinates metal ions through carboxylate-rich sidechains, with the metal held in a pentagonal bipyramidal geometry by residues at loop positions 1, 3, 5, 7, 9 and 12 (conventionally labelled X, Y, Z, -Y, -X, -Z), and the loop itself undergoing a disorder-to-order transition when the lanthanide binds. That the motif binds lanthanides at all is a consequence of their being good Ca²⁺ mimics: the trivalent charge on a similar radius can make an EF-hand site thermodynamically better suited to Ln³⁺ than to the ion it evolved for. Whether it does depends on the site: computed across model calcium-signalling and calcium-buffering centres, buried sites at net charge −3 or −4 strongly favour the lanthanide, while sites at −1 still prefer calcium [@nikolova2023lanthanides].
 
 Isolated tags bind far more weakly than the protein they derive from:
 micromolar dissociation constants for immobilized LBTs against picomolar ones
@@ -289,7 +289,7 @@ As stressed above, that \>100-fold figure is a ratio of dimerization affinities 
 
 For an adjacent pair the numbers are smaller still. The same dimerization strategy applied to *Methylorubrum extorquens* LanD — a related periplasmic lanthanide chaperone, not lanmodulin — gives an engineered variant that enriches Pr³⁺ and Nd³⁺ over La³⁺ and Ce³⁺ in an all-aqueous ultrafiltration step, with SF Ce/La = 3.0 ± 0.4, Pr/Ce = 1.7 ± 0.2 and Nd/Pr = 1.4 ± 0.2 [@larrinaga2024modulating] — the best protein-based adjacent-pair figures reported, measured on micromolar solutions at bench scale.
 
-Recent computational studies provide structural insights into REE selectivity in lanmodulin variants, which is the groundwork for rational design of engineered proteins aimed at specific separation challenges [@yao2025computationally]. Wild-type lanmodulin is meanwhile being tested as a sorbent in its own right: crude LanM from *Methylorubrum extorquens* takes up lanthanum from a synthetic acidic leachate at 70 mg La per gram of protein at a 100 mg/L feed, falling to 49.8 mg/g at 50 mg/L, with chemisorption kinetics, an equilibrium time of 90 minutes and an optimum at pH 5 [@chhantyal2025lanmodulin]. That study is single-element (La only), on a synthetic leachate, and is described by its own authors as the first of its kind, so the capacity figure is a first measurement rather than a design basis.
+Recent computational studies provide structural insights into REE selectivity in lanmodulin variants, which is the groundwork for rational design of engineered proteins aimed at specific separation challenges [@yao2025computationally]. Wild-type lanmodulin is meanwhile being tested as a sorbent in its own right: crude LanM from *Methylorubrum extorquens* takes up lanthanum from a synthetic acidic leachate at 70 mg La per gram of protein at a 100 mg/L feed, falling to 49.8 mg/g at 50 mg/L — which is 54 % removal, not exhaustion of the feed — with chemisorption kinetics, an equilibrium time of 90 minutes and an optimum at pH 5 [@chhantyal2025lanmodulin]. That study is single-element (La only), on a synthetic leachate, and is described by its own authors as the first of its kind, so the capacity figure is a first measurement rather than a design basis.
 
 ## Stimuli-Responsive Coacervates
 Stimuli-responsive coacervates undergo phase transitions in response to external triggers, which is what a separation needs if extraction and stripping are to be the same operation run forwards and backwards. This section reviews what has been demonstrated. It is important to be clear at the outset that the demonstrations are of the *switching*, on model systems, and that the metals involved — where there are metals at all — are transition metals rather than rare earths.
@@ -372,7 +372,7 @@ The one demonstration on a real feed follows the same pattern. A one-pot leachin
 
 #### Three-Liquid-Phase Systems (TLPS)
 
-TLPS consisting of salt-rich bottom aqueous phase, polymer-rich middle phase, and organic top phase provide gradients of hydrophobicity for enhanced selectivity [@wang2021strategy]. The {index}`Cyanex272 <Cyanex 272>`/PEG 2000/(NH4)2SO4-H2O system was developed for *stripping* heavy rare earths from a loaded organic phase rather than for extracting them from a leachate, with the separation adjustable through polymer concentration, salt concentration, pH and DTPA addition. It is worth noting that this system is only two-thirds aqueous: the organic top phase is Cyanex 272, so the environmental argument that motivates the rest of the chapter applies to it only partially.
+TLPS consisting of salt-rich bottom aqueous phase, polymer-rich middle phase, and organic top phase provide gradients of hydrophobicity for enhanced selectivity [@wang2021strategy]. The {index}`Cyanex272 <Cyanex 272>`/PEG 2000/(NH4)2SO4-H2O system was developed for *stripping* heavy rare earths from a loaded organic phase rather than for extracting them from a leachate, with the separation adjustable through polymer concentration, salt concentration, pH and DTPA addition. The numbers are adjacent-pair numbers on the heaviest pairs, which is unusual enough to state: with DTPA present, the separation factors between the top and bottom phases reach **2.2 for Tm/Er, 1.80 for Yb/Tm and 2.05 for Lu/Yb**, rising as the aqueous pH falls. Lu/Yb is the hardest pair in the series, and 2.05 is roughly half again the 1.32 the same authors quote for Cyanex 272 in a conventional two-phase system. The headline result is not the selectivity, though — it is that stripping is driven by raising the phase-forming salt concentration instead of by concentrated acid: 25 % ammonium sulfate recovered 89 % of the Er, 90 % Tm, 91 % Yb and 94 % Lu from the polymer-rich phase. It is worth noting that this system is only two-thirds aqueous: the organic top phase is Cyanex 272, so the environmental argument that motivates the rest of the chapter applies to it only partially.
 
 ### Coordination-Enhanced Coacervates
 If selectivity has to come from a ligand, the obvious move is to attach a known
@@ -404,10 +404,16 @@ one another. The largest number belongs to a process that is not a liquid-liquid
 extraction at all: selective dissolution of Nd₂O₃ from a solid Nd/Pr *oxide
 mixture* into an ionic liquid containing the β-diketone
 2-thenoyltrifluoroacetone gives β(Nd/Pr) \> 500, which the authors report as
-277 times the previously published values [@zhang2024remarkably]. That is a
-striking result on a binary oxide feed, and a separation factor measured on
-solid dissolution cannot be compared like-for-like with one measured between
-two liquid phases. Next, PC88A-impregnated surfaces separate Pr+Nd *as a group*
+277 times the previously published values, against a solvent-extraction
+literature baseline they put at 1.29-2.5 [@zhang2024remarkably]. Three things
+qualify it. A separation factor measured on solid dissolution cannot be compared
+like-for-like with one measured between two liquid phases. It takes seventeen
+hours of equilibration. And the feed is a physical mixture of Nd₂O₃ and
+**Pr₆O₁₁** — the two elements enter as oxides of different average oxidation
+state, so what is being exploited is partly the same valence difference that
+makes cerium easy ([](#precipitation-and-selective-crystallization)) rather than
+the lanthanide contraction alone. It is a real and large number; it is not a
+demonstration that Nd and Pr can be told apart as trivalent ions in solution. Next, PC88A-impregnated surfaces separate Pr+Nd *as a group*
 from the heavy rare earths — not from each other — at SF = 171, reaching 92%
 Pr+Nd purity at 96% yield from a 10 mg/L all-REE feed at pH 2.5, a figure the
 authors themselves describe as comparable with solvent extraction

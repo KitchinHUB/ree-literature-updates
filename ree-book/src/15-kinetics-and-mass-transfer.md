@@ -264,10 +264,19 @@ oxidise, obtaining a **single-step separation factor of up to 261 on a 50:50
 yttrium-lutetium mixture**. In follow-up work, @cole2020redox reacted rare earth
 cyclopentadienides with the triradical tris(2-*tert*-butylnitroxyl)benzylamine,
 observed different rates of chelation for an equimolar La:Y mixture, and
-obtained a **separation factor of 26**.
+obtained a **separation factor of 26** (26.4 ± 2.1 over three runs).
 
-Both numbers are large by the standards of [](#technology-comparison). Three
+Both numbers are large by the standards of [](#technology-comparison). Four
 qualifications belong with them.
+
+**The separation factor is not the recovery.** @cole2020redox's 26 is the
+product of a solid enrichment factor of 20.8 and a filtrate enrichment factor of
+only 1.27, and the reason the second is so small is that the reaction does not
+go to completion: **total yttrium recovery in the solid is 19 %**. The yttrium
+that is recovered is 95 % pure, but the lanthanum left in the filtrate is only
+56 % pure. Their own kinetic model, run on the measured rate constants for a
+reaction that did drive to completion, predicts an upper limit above 1800 — the
+gap between 26 and 1800 is conversion, not selectivity.
 
 **The pairs are not the hard ones.** Y/Lu and La/Y are separations across a
 substantial difference in ionic radius, not between adjacent lanthanides. The
@@ -407,7 +416,7 @@ from [](#membranes-mofs-and-emerging-approaches).
 | System | Basis | Pair | Reported result | Medium | Status |
 |----|----|----|----|----|----|
 | RE complexes of a redox-active tripodal nitroxide [@fang2017electrokinetic] | Difference in oxidation rate | Y/Lu, 50:50 | β up to 261, single step | Non-aqueous, organometallic | Bench proof of concept |
-| RE cyclopentadienides + triradical proligand [@cole2020redox] | Difference in chelation rate | La/Y, equimolar | β = 26 | Non-aqueous, organometallic | Bench proof of concept |
+| RE cyclopentadienides + triradical proligand [@cole2020redox] | Difference in chelation rate | La/Y, equimolar | β = 26.4 ± 2.1, but at **19 % yttrium recovery**; Y 95 % pure in the solid, La 56 % pure in the filtrate | Non-aqueous, organometallic | Bench proof of concept |
 | HEHEHP from chloride medium [@cao2021extraction] | Extraction-rate difference | La, Gd, Ho, Lu | **No β is reported.** Rate constants only; the La→Lu spread is 6.3, and the ordering matches the equilibrium ordering | Synthetic chloride/organic | Laboratory |
 | [A336][NO₃]-DTPA push-pull column [@wang2019enhanced] | Extraction kinetics against aqueous complexation | Pr/Nd | β = 21.7 *maximum*, instantaneous and per-fraction, at a 1:4 Pr:Nd feed; 6.2 at equimolar. Controls in the same rig: 1.6-1.8 extractant alone, 3.3 pre-complexed | Synthetic nitrate/organic, column | Laboratory |
 | Specific ion effects [@sui2023kinetic] | Kinetic enhancement | Pr/Nd | β = 8.3 at 60 min, falling to 6.91 at 70 min; 5.8 on a reconstructed magnet raffinate. Conventional stirred control: 1.53 | Synthetic; needs 2.0 M LiNO₃ | Laboratory |

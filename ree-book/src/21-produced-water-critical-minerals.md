@@ -274,7 +274,7 @@ earths varied over three orders of magnitude, with 95 % of measurements between
 Abundance tracked the clay fraction — samples with a major illite phase carried
 about 98 ppm more total rare earths (95 % CI 39-158) — while the degree of
 fractionation tracked the carbonate fraction, samples with major calcite being
-roughly 400 % more fractionated but carrying 6-120 ppm less. The authors are
+54-400 % more fractionated but carrying 6-120 ppm less. The authors are
 explicit that "little is known of the REE occurrence in the Marcellus Shale or
 its produced waters," that structurally bound rare earths in clays may not be
 released at all, and that produced water profiles therefore need not resemble

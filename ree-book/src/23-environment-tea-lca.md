@@ -249,6 +249,14 @@ basis must be stated before any two figures in this section are compared.
 | Product          | RE-hydroxide    |
 | Reagent recovery | 90%             |
 
+Two things qualify that table. The reagent recycling which makes the case is
+itself a cost — the authors are explicit that it raises both capital and
+operating expenditure — and the headline NPV is the *base* case: pushing
+recovery to 99 %, adding by-product sales and assuming 30 % of the solvent
+extraction is tolled out raises NPV and rate of return by a further 74 % and
+143 % respectively, under favourable market conditions the study assumes rather
+than demonstrates [@nili2025reclaiming].
+
 **Electrokinetic mining (2025):** @wang2025industrial cost their 5,000-tonne
 industrial-scale trial against conventional in-situ leaching, and the result is
 more interesting than "economically viable" suggests. On direct production cost

@@ -61,7 +61,8 @@ The same recommendations prefer *lanthanoid* to the far more common
 ion. This book uses *lanthanide* throughout, because that is what the
 separations literature uses and nothing in the chemistry turns on the choice.
 A short free summary of the recommendations is published as an IUPAC technical
-report [@hartshorn2015brief].
+report [@hartshorn2015brief], though that summary covers the nomenclature rules
+rather than the collective element names, which are in the Red Book itself.
 
 (supply-chain-concerns)=
 ## Supply Chain Concerns

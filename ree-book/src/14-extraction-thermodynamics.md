@@ -697,10 +697,14 @@ Lanthanide extraction into **Bumim·Tf₂N** with HTTA:
 
 Key insight: **Endothermic complexation** driven by **favorable entropy** in ionic liquid media.
 
-**Reference:** [@gujar2023complexation]. The four species, the endothermic sign
-convention and the ionic-liquid medium are confirmed against the paper's
-abstract; the individual ΔH° and ΔS° values in the table above have not been
-checked against its tables, because the full text could not be reached.
+**Reference:** [@gujar2023complexation], now read in full: every value in the
+table is confirmed against it. Two things the table cannot carry are worth
+adding. The extraction works by ion exchange — the charge balance in the ionic
+liquid is maintained by one Tf₂N⁻ anion transferring into the aqueous phase — so
+the ionic liquid is a reagent, not a diluent. And of the 42.5 kJ/mol overall, the
+mass transfer of the Ln(TTA)₄⁻ complex into BumimTf₂N accounts for only
+4.6 kJ/mol; almost all of it is the complexation chemistry, not the phase
+transfer.
 
 ### Thermodynamics of Stripping (Reverse Extraction)
 #### General Principles
@@ -727,16 +731,16 @@ For stripping, this balance reverses - breaking organic-phase complexes and rehy
 #### Ion Transfer at Liquid-Liquid Interfaces
 MD simulations reveal:
 
-- **Water/nitrobenzene interface**: Energetic costs include interfacial deformation and co-transfer of hydration waters [@karnes2016geometric]
-- **Free energy profile**: Small local minimum (\~−5.9 kJ/mol) near interface, then monotonic increase into organic phase
+- **Water/nitrobenzene interface**: Energetic costs include interfacial deformation and co-transfer of hydration waters, for a hydrophilic *chloride* ion rather than a rare earth; the computed net free energy of transfer is 12 ± 1 kcal/mol against an experimental estimate of 9.5 ± 0.5 [@karnes2016geometric]
+- **Free energy profile**: a shallow local minimum about 2 Å from the interface, then monotonic increase into the organic phase. The paper describes that minimum only as shallow and gives no depth for it; earlier drafts here quoted −5.9 kJ/mol, which is not in the source and has been withdrawn
 - **SCN⁻ at oil-water**: Transfer driven by **entropy increase** with minimal enthalpic contribution (different from air-water interfaces) [@devlin2022mechanisms]
 - **Water/1,2-dichloroethane**: surface roughness and capillary distortion of the
   interface control the crossing, and transfer is an **activated process rather
   than a diffusive one** [@benjamin1993mechanism]
 
 #### Synergistic Extraction
-- Synergy enhances extraction by increasing **entropy of the extracted ion** (final state)
-- Reciprocal effect of chelation: enhances final entropy while chelation reduces initial entropy
+- Synergy enhances extraction by increasing the **configurational entropy** of the extracted ion
+- The authors' framing is that synergy is the *reciprocal* of chelation: chelation locks an ion into one well-defined complex, whereas a synergistic mixture produces a polydispersity of aggregates that differ in composition but are close in free energy, and it is that variety of accessible states which supplies the entropy
 
 **Reference:** [@spadina2019synergistic]
 

@@ -270,11 +270,13 @@ and a malonamide that the search is what decides whether the predicted trend
 matches experiment.
 
 *{index}`D2EHPA` extractant selectivity.* DFT combined with Born-Haber
-thermodynamics has been used to rationalise the heavy-REE preference of D2EHPA
-[@alizadeh2023deep]. The qualitative argument is the one developed in
-[](#thermodynamics-of-extraction): the smaller, more strongly hydrated ion pays
-more to leave the aqueous phase but gains more on complexation, and for acidic
-organophosphorus extractants the second term wins, so D rises from La to Lu.
+thermodynamics has been used to rationalise why D2EHPA prefers Y(III) to La(III)
+— a two-element comparison rather than a series trend, with the solvent brought
+in through an implicit model [@alizadeh2023deep]. The qualitative argument
+generalises, and is the one developed in [](#thermodynamics-of-extraction): the
+smaller, more strongly hydrated ion pays more to leave the aqueous phase but
+gains more on complexation, and for acidic organophosphorus extractants the
+second term wins, so D rises from La to Lu.
 
 The hydration energies tabulated in that preprint should not be carried
 forward. They are several times smaller than the accepted single-ion values and
@@ -322,15 +324,19 @@ reused for any mixture [@cheng2021theoretical].
 
 **Validated applications:**
 
-- β-diketone extraction of La/Ce
-- {index}`Ionic liquid <ionic liquids>` diluent effects
-- Temperature dependence prediction
-- Multi-component system modeling
+- β-diketone extraction of La/Ce, with and without a synergist
+- {index}`Ionic liquid <ionic liquids>` diluent effects, against kerosene as the
+  conventional control
 
 Theoretical selectivity trends agree closely with experiment in these systems,
-including for the ionic-liquid diluents [@cheng2021theoretical]. Note that the
-agreement is on trends; the caution in [](#the-energy-scale-of-selectivity)
-about absolute free energies applies here as much as to DFT.
+including for the two imidazolium ionic liquids used as diluents
+[@cheng2021theoretical]. Note that the agreement is on trends; the caution in
+[](#the-energy-scale-of-selectivity) about absolute free energies applies here as
+much as to DFT. Note also how narrow the validation is: one adjacent-pair
+system, La/Ce, at a single temperature (293 K), with the extraction stoichiometry
+supplied by experiment rather than predicted. Temperature dependence and
+multicomponent mixtures are things COSMO-RS can in principle deliver, not things
+this study demonstrated.
 
 ### Molecular Dynamics (MD) Simulations
 
