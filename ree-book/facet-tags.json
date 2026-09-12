@@ -1,0 +1,556 @@
+{
+ "abbasalizadeh2017electrochemical": {
+  "topic": [
+   "process",
+   "primary"
+  ]
+ },
+ "abbasi2017development": {
+  "element": [
+   "Gd"
+  ],
+  "topic": [
+   "process",
+   "fundamentals"
+  ]
+ },
+ "abney2017materials": {
+  "topic": [
+   "review",
+   "fundamentals"
+  ]
+ },
+ "abolhasani2023rise": {
+  "topic": [
+   "computational",
+   "review"
+  ]
+ },
+ "adamusaleh2025advancements": {
+  "topic": [
+   "review",
+   "recycling"
+  ]
+ },
+ "afonin2024extraction": {
+  "topic": [
+   "process",
+   "fundamentals"
+  ]
+ },
+ "agarwal2020comparative": {
+  "topic": [
+   "fundamentals"
+  ]
+ },
+ "agrawal2025sustainable": {
+  "topic": [
+   "recycling",
+   "environment"
+  ]
+ },
+ "ahmed2020chromatographic": {
+  "topic": [
+   "characterization"
+  ]
+ },
+ "ahn2020valorization": {
+  "topic": [
+   "recycling",
+   "process"
+  ]
+ },
+ "akcaguler2025comprehensive": {
+  "topic": [
+   "review",
+   "process"
+  ]
+ },
+ "alemrajabi2022separation": {
+  "topic": [
+   "process"
+  ]
+ },
+ "alguacil2023work": {
+  "topic": [
+   "review"
+  ]
+ },
+ "ali2023mineral": {
+  "topic": [
+   "characterization",
+   "review"
+  ]
+ },
+ "alizadeh2023deep": {
+  "topic": [
+   "fundamentals",
+   "computational"
+  ]
+ },
+ "alshameri2019understanding": {
+  "topic": [
+   "fundamentals",
+   "primary"
+  ]
+ },
+ "amaral2010thorium": {
+  "topic": [
+   "process",
+   "primary"
+  ]
+ },
+ "an2024agile": {
+  "topic": [
+   "computational",
+   "fundamentals"
+  ]
+ },
+ "anderson2015investigation": {
+  "topic": [
+   "fundamentals",
+   "primary"
+  ]
+ },
+ "anderson2016chlorination": {
+  "topic": [
+   "primary",
+   "process"
+  ]
+ },
+ "anon1999solvent": {
+  "topic": [
+   "fundamentals"
+  ]
+ },
+ "anon2001hand": {
+  "topic": [
+   "fundamentals"
+  ]
+ },
+ "anon2018direct": {
+  "topic": [
+   "process"
+  ]
+ },
+ "anon2021separationa": {
+  "element": [
+   "Th",
+   "U"
+  ],
+  "topic": [
+   "process"
+  ]
+ },
+ "anon2022ligand": {
+  "topic": [
+   "process",
+   "fundamentals"
+  ]
+ },
+ "anon2024china": {
+  "topic": [
+   "supply"
+  ]
+ },
+ "anon2024environmentally": {
+  "topic": [
+   "process"
+  ]
+ },
+ "anon2024how": {
+  "topic": [
+   "supply"
+  ]
+ },
+ "anon2024mine": {
+  "topic": [
+   "supply"
+  ]
+ },
+ "anon2024mining": {
+  "topic": [
+   "recycling"
+  ]
+ },
+ "anon2025china": {
+  "topic": [
+   "supply"
+  ]
+ },
+ "anon2025consequences": {
+  "topic": [
+   "supply"
+  ]
+ },
+ "anon2025export": {
+  "topic": [
+   "supply"
+  ]
+ },
+ "anon2025losing": {
+  "topic": [
+   "supply"
+  ]
+ },
+ "anon2025water": {
+  "topic": [
+   "recycling"
+  ]
+ },
+ "ansari2006extraction": {
+  "element": [
+   "Th",
+   "U"
+  ],
+  "topic": [
+   "fundamentals"
+  ]
+ },
+ "ansari2011chemistry": {
+  "topic": [
+   "review",
+   "fundamentals"
+  ]
+ },
+ "ansari2016thermodynamics": {
+  "topic": [
+   "fundamentals"
+  ]
+ },
+ "anthony2001handbook": {
+  "topic": [
+   "primary",
+   "characterization"
+  ]
+ },
+ "arellanoruiz2020environmentally": {
+  "element": [
+   "Nd"
+  ],
+  "topic": [
+   "process"
+  ]
+ },
+ "ascani2025molecular": {
+  "topic": [
+   "fundamentals",
+   "computational"
+  ]
+ },
+ "augustine2024advancing": {
+  "topic": [
+   "computational"
+  ]
+ },
+ "augustine2026coupling": {
+  "topic": [
+   "computational"
+  ]
+ },
+ "aziman2021rapid": {
+  "topic": [
+   "process",
+   "environment"
+  ]
+ },
+ "azimi2025technoeconomic": {
+  "topic": [
+   "environment",
+   "process"
+  ]
+ },
+ "bai2025harnessing": {
+  "topic": [
+   "recycling",
+   "review"
+  ]
+ },
+ "bailey2017sustainability": {
+  "element": [
+   "Nd",
+   "Dy"
+  ],
+  "topic": [
+   "environment",
+   "supply"
+  ]
+ },
+ "baker2002rapid": {
+  "topic": [
+   "characterization"
+  ]
+ },
+ "baker2022process": {
+  "topic": [
+   "review",
+   "process"
+  ]
+ },
+ "balaram2019rare": {
+  "topic": [
+   "review"
+  ]
+ },
+ "balomenos2021scandium": {
+  "element": [
+   "Sc"
+  ],
+  "topic": [
+   "recycling",
+   "process"
+  ]
+ },
+ "banda2015separation": {
+  "topic": [
+   "process"
+  ]
+ },
+ "bao2025mxene": {
+  "topic": [
+   "process",
+   "recycling"
+  ]
+ },
+ "bashiri2022rare": {
+  "topic": [
+   "process"
+  ]
+ },
+ "bashiri2024artificial": {
+  "topic": [
+   "computational"
+  ]
+ },
+ "bastos2023isothermal": {
+  "topic": [
+   "characterization"
+  ]
+ },
+ "battsengel2018recovery": {
+  "topic": [
+   "process",
+   "primary"
+  ]
+ },
+ "batzner2022equivariant": {
+  "topic": [
+   "computational"
+  ]
+ },
+ "bediako2022facile": {
+  "topic": [
+   "environment",
+   "fundamentals"
+  ]
+ },
+ "behera2025supramolecular": {
+  "topic": [
+   "fundamentals"
+  ]
+ },
+ "belova2024chromatographic": {
+  "topic": [
+   "review",
+   "process"
+  ]
+ },
+ "beltrami2014recovery": {
+  "topic": [
+   "review",
+   "process"
+  ]
+ },
+ "benetollo2003structural": {
+  "topic": [
+   "fundamentals"
+  ]
+ },
+ "benjamin1993mechanism": {
+  "topic": [
+   "fundamentals",
+   "computational"
+  ]
+ },
+ "biegler2010nonlinear": {
+  "topic": [
+   "process",
+   "computational"
+  ]
+ },
+ "biegler2022dont": {
+  "topic": [
+   "process",
+   "computational"
+  ]
+ },
+ "binnemans2013recycling": {
+  "topic": [
+   "review",
+   "recycling"
+  ]
+ },
+ "binnemans2017solvometallurgy": {
+  "topic": [
+   "review",
+   "process"
+  ]
+ },
+ "binnemans2023ionic": {
+  "topic": [
+   "review",
+   "process"
+  ]
+ },
+ "birkett2005recent": {
+  "element": [
+   "U"
+  ],
+  "topic": [
+   "process"
+  ]
+ },
+ "bishop2024rare": {
+  "topic": [
+   "characterization",
+   "fundamentals"
+  ]
+ },
+ "blondes2020utica": {
+  "topic": [
+   "environment",
+   "characterization"
+  ]
+ },
+ "boiko2023autonomous": {
+  "topic": [
+   "computational"
+  ]
+ },
+ "bonificio2016rare": {
+  "topic": [
+   "fundamentals",
+   "process"
+  ]
+ },
+ "borai2016modified": {
+  "topic": [
+   "process",
+   "primary"
+  ]
+ },
+ "boronski2020rationally": {
+  "topic": [
+   "fundamentals",
+   "process"
+  ]
+ },
+ "borra2016recovery": {
+  "topic": [
+   "review",
+   "recycling"
+  ]
+ },
+ "borst2020adsorption": {
+  "topic": [
+   "fundamentals",
+   "primary"
+  ]
+ },
+ "bradley1966vaterite": {
+  "topic": [
+   "fundamentals",
+   "characterization"
+  ]
+ },
+ "braley2012alternatives": {
+  "topic": [
+   "fundamentals",
+   "process"
+  ]
+ },
+ "bran2024augmenting": {
+  "topic": [
+   "computational"
+  ]
+ },
+ "brangwynne2015polymer": {
+  "topic": [
+   "fundamentals"
+  ]
+ },
+ "breuker2020biosorption": {
+  "topic": [
+   "fundamentals",
+   "process"
+  ]
+ },
+ "brewer2019recovery": {
+  "topic": [
+   "process",
+   "primary"
+  ]
+ },
+ "brisson2015bioleaching": {
+  "topic": [
+   "process",
+   "primary"
+  ]
+ },
+ "browning2017life": {
+  "topic": [
+   "environment"
+  ]
+ },
+ "brunetti2000vaporization": {
+  "topic": [
+   "fundamentals",
+   "characterization"
+  ]
+ },
+ "bulin2025preparation": {
+  "topic": [
+   "fundamentals",
+   "process"
+  ]
+ },
+ "burger2020mobile": {
+  "topic": [
+   "computational"
+  ]
+ },
+ "butler2018machine": {
+  "topic": [
+   "computational",
+   "review"
+  ]
+ },
+ "cai2024lithium": {
+  "topic": [
+   "process",
+   "fundamentals"
+  ]
+ },
+ "campbell2015biogeochemical": {
+  "topic": [
+   "environment",
+   "primary"
+  ]
+ },
+ "canovas2019leaching": {
+  "topic": [
+   "process",
+   "recycling"
+  ]
+ },
+ "cao2021extraction": {
+  "topic": [
+   "fundamentals"
+  ]
+ },
+ "carrott2008oxidation": {
+  "topic": [
+   "fundamentals"
+  ]
+ }
+}

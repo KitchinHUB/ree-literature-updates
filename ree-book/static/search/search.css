@@ -1,0 +1,188 @@
+/* Faceted bibliography search. Loaded only on the Explore page.
+   Colours come from the book theme's CSS variables where it exposes them, with
+   literal fallbacks for the standalone case -- every custom property below is
+   defined on both sides of the prefers-color-scheme split, so nothing is left
+   inheriting a colour from the host when the reader flips the theme. */
+
+#ree-search {
+  --rs-fg: #1a202c;
+  --rs-dim: #5a6472;
+  --rs-bg: #ffffff;
+  --rs-panel: #f7f8fa;
+  --rs-line: #d9dee5;
+  --rs-accent: #0b6bcb;
+  --rs-accent-fg: #ffffff;
+  --rs-lree: #e8f0fb;
+  --rs-lree-line: #9dc0ea;
+  --rs-hree: #eaf4ec;
+  --rs-hree-line: #9ecaa8;
+  --rs-adj: #f6efe4;
+  --rs-adj-line: #d9c49b;
+  --rs-empty: #f1f2f4;
+  color: var(--rs-fg);
+  font-size: 0.95rem;
+  container-type: inline-size;
+}
+
+@media (prefers-color-scheme: dark) {
+  #ree-search {
+    --rs-fg: #e8eaed;
+    --rs-dim: #9aa4b2;
+    --rs-bg: #14171c;
+    --rs-panel: #1b1f26;
+    --rs-line: #333a45;
+    --rs-accent: #4d9de8;
+    --rs-accent-fg: #0b0d10;
+    --rs-lree: #1c2a3d;
+    --rs-lree-line: #2f4a6b;
+    --rs-hree: #1b2b21;
+    --rs-hree-line: #2f5138;
+    --rs-adj: #2d2718;
+    --rs-adj-line: #574a2c;
+    --rs-empty: #1a1d22;
+  }
+}
+
+#ree-search *, #ree-search *::before, #ree-search *::after { box-sizing: border-box; }
+
+/* --- the periodic table ------------------------------------------------- */
+
+.rs-ptable { margin: 0 0 1.25rem; }
+.rs-ptable-row {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(2.6rem, 1fr);
+  gap: 3px;
+  margin-bottom: 3px;
+  align-items: stretch;
+  overflow-x: auto;
+  padding-bottom: 2px;
+  scrollbar-width: thin;
+}
+.rs-ptable-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--rs-dim);
+  margin: 0.6rem 0 0.25rem;
+}
+
+.rs-el {
+  padding: 0.3rem 0.15rem 0.25rem;
+  border: 1px solid var(--rs-line);
+  border-radius: 4px;
+  background: var(--rs-panel);
+  cursor: pointer;
+  text-align: center;
+  font: inherit;
+  color: inherit;
+  line-height: 1.15;
+  transition: transform 80ms ease, box-shadow 80ms ease;
+}
+.rs-el:hover:not(:disabled) { transform: translateY(-1px); box-shadow: 0 2px 6px rgba(0,0,0,.13); }
+.rs-el:focus-visible { outline: 2px solid var(--rs-accent); outline-offset: 1px; }
+
+.rs-el[data-grp="0"] { background: var(--rs-lree); border-color: var(--rs-lree-line); }
+.rs-el[data-grp="1"] { background: var(--rs-hree); border-color: var(--rs-hree-line); }
+.rs-el[data-grp="2"] { background: var(--rs-adj); border-color: var(--rs-adj-line); }
+
+.rs-el-z   { display: block; font-size: 0.6rem; color: var(--rs-dim); }
+.rs-el-sym { display: block; font-size: 1.1rem; font-weight: 650; letter-spacing: -0.01em; }
+.rs-el-n   { display: block; font-size: 0.62rem; color: var(--rs-dim);
+             white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.rs-el-c   { display: block; font-size: 0.66rem; font-variant-numeric: tabular-nums; font-weight: 600; }
+
+.rs-el[aria-pressed="true"] {
+  background: var(--rs-accent);
+  border-color: var(--rs-accent);
+  color: var(--rs-accent-fg);
+}
+.rs-el[aria-pressed="true"] .rs-el-z,
+.rs-el[aria-pressed="true"] .rs-el-n { color: var(--rs-accent-fg); opacity: 0.8; }
+
+.rs-el:disabled { background: var(--rs-empty); border-color: var(--rs-line);
+                  opacity: 0.45; cursor: default; }
+
+/* The f-block is conventionally drawn as its own strip, offset under the main
+   body of the table. Sc and Y sit in group 3 above it, which is the whole
+   reason the strip exists, so they are drawn on their own short row. */
+.rs-ptable-row.rs-narrow { grid-auto-columns: minmax(2.6rem, 5.5rem); justify-content: start; }
+
+/* --- chip facets -------------------------------------------------------- */
+
+.rs-groups { display: grid; gap: 0.9rem; margin-bottom: 1.25rem; }
+@container (min-width: 42rem) { .rs-groups { grid-template-columns: 1fr 1fr; } }
+
+.rs-group { border: 1px solid var(--rs-line); border-radius: 6px; background: var(--rs-panel); }
+.rs-group > summary {
+  padding: 0.45rem 0.7rem;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.85rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+.rs-group > summary::-webkit-details-marker { display: none; }
+.rs-group > summary .rs-group-n { color: var(--rs-dim); font-weight: 400; }
+.rs-chips { display: flex; flex-wrap: wrap; gap: 4px; padding: 0 0.7rem 0.7rem; }
+
+.rs-chip {
+  border: 1px solid var(--rs-line);
+  background: var(--rs-bg);
+  color: inherit;
+  border-radius: 999px;
+  padding: 0.16rem 0.55rem;
+  font: inherit;
+  font-size: 0.8rem;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.rs-chip:hover:not(:disabled) { border-color: var(--rs-accent); }
+.rs-chip:focus-visible { outline: 2px solid var(--rs-accent); outline-offset: 1px; }
+.rs-chip[aria-pressed="true"] {
+  background: var(--rs-accent); border-color: var(--rs-accent); color: var(--rs-accent-fg);
+}
+.rs-chip:disabled { opacity: 0.4; cursor: default; }
+.rs-chip-n { font-variant-numeric: tabular-nums; opacity: 0.65; margin-left: 0.3rem; font-size: 0.9em; }
+
+/* --- controls and results ---------------------------------------------- */
+
+.rs-controls {
+  display: flex; flex-wrap: wrap; gap: 0.6rem; align-items: center;
+  margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid var(--rs-line);
+}
+.rs-q {
+  flex: 1 1 14rem; min-width: 0;
+  padding: 0.4rem 0.6rem; font: inherit; color: inherit;
+  background: var(--rs-bg); border: 1px solid var(--rs-line); border-radius: 5px;
+}
+.rs-q:focus-visible { outline: 2px solid var(--rs-accent); outline-offset: -1px; }
+
+.rs-mode { display: flex; align-items: center; gap: 0.35rem; font-size: 0.8rem; color: var(--rs-dim); }
+.rs-btn {
+  padding: 0.35rem 0.7rem; font: inherit; font-size: 0.82rem; cursor: pointer;
+  background: var(--rs-bg); color: inherit;
+  border: 1px solid var(--rs-line); border-radius: 5px;
+}
+.rs-btn:hover { border-color: var(--rs-accent); }
+.rs-btn:disabled { opacity: 0.4; cursor: default; }
+
+.rs-count { font-size: 0.85rem; color: var(--rs-dim); margin-bottom: 0.6rem; }
+.rs-count strong { color: var(--rs-fg); font-variant-numeric: tabular-nums; }
+
+.rs-results { list-style: none; margin: 0; padding: 0; }
+.rs-hit { padding: 0.6rem 0; border-bottom: 1px solid var(--rs-line); }
+.rs-hit-t { font-weight: 600; line-height: 1.35; }
+.rs-hit-m { font-size: 0.82rem; color: var(--rs-dim); margin-top: 0.15rem; }
+.rs-hit-f { margin-top: 0.3rem; display: flex; flex-wrap: wrap; gap: 3px; }
+.rs-tag {
+  font-size: 0.7rem; padding: 0.05rem 0.4rem; border-radius: 3px;
+  background: var(--rs-panel); border: 1px solid var(--rs-line); color: var(--rs-dim);
+}
+.rs-tag.on { background: var(--rs-accent); border-color: var(--rs-accent); color: var(--rs-accent-fg); }
+.rs-hit a { color: var(--rs-accent); }
+
+.rs-empty-msg { padding: 1.5rem 0; color: var(--rs-dim); }
+.rs-more { margin: 1rem 0; }
+.rs-loading { padding: 2rem 0; color: var(--rs-dim); }

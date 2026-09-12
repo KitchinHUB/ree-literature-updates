@@ -89,6 +89,7 @@ project:
       children:
         - file: src/90-glossary.md
         - file: src/91-index.md
+        - file: src/95-explore.md
         - file: src/92-references.md
         - file: src/93-appendix-provenance.md
         - file: src/94-appendix-further-reading.md
