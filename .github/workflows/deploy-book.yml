@@ -82,6 +82,16 @@ jobs:
         working-directory: ree-book
         run: python3 tools/inject_scholar.py
 
+      # The faceted search on the Explore page. Only the injector runs here:
+      # build_facets.py reads the extracted full texts, which are gitignored,
+      # so rebuilding the index in CI would quietly replace 384 element tags
+      # with the 122 the bibliography metadata alone supports. static/search/
+      # facets.json is committed and is the input; regenerate it locally and
+      # commit it when the bibliography changes.
+      - name: Add the faceted search
+        working-directory: ree-book
+        run: python3 tools/inject_search.py
+
       # Served at <site>/rare-earth-separations.pdf, which is the URL the
       # preface links to.
       - name: Add the PDF to the site
