@@ -5,14 +5,19 @@ title: Explore the Bibliography
 (explore)=
 # Explore the Bibliography
 
+Pick an element, an extractant, a technique, a feedstock, or a kind of work,
+and the bibliography narrows to what matches. Filters combine: any of the tags
+you pick within a group, all of the groups you pick from.
+
+<div id="ree-search">REE-SEARCH-APP needs JavaScript. Without it, use the Bibliography page, which lists the same works in one alphabetical run.</div>
+
+## How to read these filters
+
 The [Bibliography](#bibliography) lists every work this book cites, in one
 alphabetical run. That is the right shape for checking a citation and the wrong
-shape for every other question. This page is the other shape: pick an element,
-an extractant, a technique, a feedstock, or a kind of work, and the
-bibliography narrows to what matches.
-
-It is worth knowing how the tags were made, because it tells you what the
-filters can and cannot be trusted to do.
+shape for every other question. This page is the other shape. It is worth
+knowing how the tags were made, because it tells you what the filters can and
+cannot be trusted to do.
 
 **Extractant, technique and feedstock are matched against text.** A controlled
 vocabulary of about sixty terms — the same one the [Index](#index) is built
@@ -40,8 +45,6 @@ concluding anything — but it is not always a bug in this page either.
 
 Selecting a filter puts it in the page's URL, so a narrowed view can be
 bookmarked or sent to someone.
-
-<div id="ree-search">REE-SEARCH-APP needs JavaScript. Without it, use the Bibliography page, which lists the same works in one alphabetical run.</div>
 
 :::{note}
 The counts are over the 758-entry working bibliography, which covers more

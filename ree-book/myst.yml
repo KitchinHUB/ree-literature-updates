@@ -96,6 +96,14 @@ project:
 
 site:
   template: book-theme
+  # A link in the top bar of every page. The Explore page is a tool, not a
+  # chapter, so it is wanted from wherever the reader happens to be rather than
+  # only from its slot in the back matter. A root-relative url is rewritten
+  # with BASE_URL by the build, so this works both locally and under the
+  # /ree-literature-updates subpath on Pages.
+  nav:
+    - title: Explore the Bibliography
+      url: /src/explore
   options:
     folders: true
     # Draft watermark on every page. Delete this line to remove it.

@@ -425,9 +425,8 @@
     load();
   }
 
-  // Hydration runs from a module script, which is done by the time `load`
-  // fires; two animation frames past that is belt and braces. Everything after
-  // this point is ordinary DOM work on a subtree React has finished with.
+  // Everything past `whenHydrated` is ordinary DOM work on a subtree React has
+  // finished with.
   // The stylesheet is added here rather than as a <link> in the page, because
   // Remix reconciles <body> on hydration and deletes anything injected before
   // </body> -- which is exactly what happened to the first version: the CSS
@@ -444,23 +443,58 @@
     document.head.appendChild(l);
   }
 
-  function whenHydrated(fn) {
-    function go() {
-      var done = false;
-      function once() { if (!done) { done = true; fn(); } }
-      requestAnimationFrame(function () { requestAnimationFrame(once); });
-      setTimeout(once, 60);
+  // React attaches its fiber to a DOM node as it hydrates that node, so the key
+  // appearing on the container is React saying it is done with this subtree --
+  // which is exactly the moment writing into it becomes safe. Ask the element
+  // rather than guess at the clock.
+  //
+  // Guessing is what the previous version did: two animation frames, raced
+  // against a 60 ms timeout so a background tab (where frames never come) would
+  // still mount. On a page heavy enough that hydration took longer than that,
+  // the timeout won, we wrote into a subtree React had not finished, React
+  // reported error #418, threw the tree away, re-rendered it from the server
+  // HTML and left the reader looking at the no-JavaScript fallback. It was
+  // intermittent in the worst way: fine on a fast load, broken on a slow one.
+  //
+  // The cap is a backstop for a React that never hydrates at all -- an unstyled
+  // widget beats no widget, and a mismatch cannot matter if nothing is coming
+  // to mismatch with.
+  var HYDRATION_CAP_MS = 8000;
+
+  function hydrated(node) {
+    for (var k in node) {
+      if (k.indexOf("__reactFiber$") === 0) return true;
     }
-    if (document.readyState === "complete") go();
-    else window.addEventListener("load", go);
+    return false;
+  }
+
+  function whenHydrated(fn) {
+    var started = Date.now();
+    function poll() {
+      var h = findHost();
+      // Every page loads this script; only one has the container. Nothing to
+      // wait for on the others -- `attach` will look, find nothing and stop.
+      if (!h || hydrated(h) || Date.now() - started > HYDRATION_CAP_MS) {
+        fn();
+        return;
+      }
+      setTimeout(poll, 25);
+    }
+    if (document.readyState === "complete") poll();
+    else window.addEventListener("load", poll);
   }
 
   function start() {
     whenHydrated(function () {
       ensureStyles();
       attach();
+      // Watch the <html> element, not <body>. When hydration fails React falls
+      // back to client rendering and replaces <body> outright; an observer
+      // bound to the old <body> is then watching a detached node and goes
+      // silent, which is how a single mismatch used to become permanent
+      // instead of something the next mutation repaired.
       new MutationObserver(function () { attach(); })
-        .observe(document.body, { childList: true, subtree: true });
+        .observe(document.documentElement, { childList: true, subtree: true });
     });
     window.addEventListener("hashchange", function () {
       if (!host || !data) return;
