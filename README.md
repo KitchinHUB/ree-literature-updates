@@ -108,9 +108,9 @@ python scripts/literature_monitor.py --slack-upload
 ```
 rare-earth-project/
 ├── README.md
-├── config.yaml              # Search topics and settings
 ├── scripts/
-│   └── literature_monitor.py  # Main monitoring script
+│   ├── literature_monitor.py  # Search, screening, and report generation
+│   └── weekly_update.sh       # Cron wrapper: run, commit, push, notify
 ├── reports/                 # Generated reports
 │   └── YYYY-MM-DD_literature_update.md
 └── .claude/
@@ -118,39 +118,27 @@ rare-earth-project/
         └── literature-update.md  # Slash command definition
 ```
 
-## Search Topics
+## How Papers Are Selected
 
-The monitor searches for publications on:
+1. **Search.** Three OpenAlex title/abstract queries (`SEARCH_QUERIES` in
+   `literature_monitor.py`) cover rare earth terms, the individual element
+   names, and REE minerals and magnets. Every page of results is fetched, so
+   nothing is cut off by a per-query cap.
+2. **Clean up.** Duplicate records (repository version DOIs, preprint copies)
+   are merged, and works dated after the report window are dropped.
+3. **Prefilter.** The title, abstract, or keywords must name a rare earth
+   (`REE_MENTION_PATTERNS`). Terms match as whole words, and element symbols
+   that double as ordinary words (La, Pr, Er, Y) count only in a chemical
+   context such as `La2O3`, `Eu3+`, or `Nd/Pr`.
+4. **LLM relevance pass.** The `claude` CLI scores every candidate 0-3 for
+   relevance to REE separation and assigns a category. Papers scoring 2 or
+   more go in the report, each with a one-line reason; the rest are listed in
+   a collapsed "Screened Out" section so the screening can be checked. If the
+   pass fails, the run fails instead of publishing an unscreened report
+   (`--no-llm` skips it deliberately).
 
-### Separation Technologies
-- Solvent extraction / liquid-liquid extraction
-- Ion exchange methods
-- Membrane separation
-- Electrochemical separation
-- Precipitation and crystallization
-
-### Materials & Extractants
-- Commercial extractants (D2EHPA, PC88A, Cyanex)
-- Ionic liquids
-- Deep eutectic solvents
-- Novel ligands and chelators
-
-### Recycling & Secondary Sources
-- E-waste processing
-- Permanent magnet recycling
-- Urban mining
-- Industrial waste streams
-
-### Environmental
-- Green chemistry approaches
-- Waste minimization
-- Environmental impact studies
-
-### Supply Chain
-- Policy developments
-- China export restrictions
-- Alternative supply sources
-- Critical minerals initiatives
+Categories: Separation Technologies, Extractants & Materials, Recycling &
+Urban Mining, Environmental & Sustainability, Supply Chain & Policy, Other.
 
 ## Data Sources
 
@@ -158,7 +146,12 @@ The monitor searches for publications on:
 - Free, open scholarly database
 - 250M+ works indexed
 - Comprehensive metadata including abstracts
-- No API key required
+- Set `OPENALEX_API_KEY` for higher rate limits
+
+### Claude Code CLI (Relevance Screening)
+- The `claude` command must be installed and logged in
+- Set `CLAUDE_BIN` if it is not on `PATH`; `--llm-model` picks the model
+  (default `sonnet`)
 
 ### Web Search (News & Developments)
 - Industry news and announcements
@@ -177,12 +170,14 @@ Each report includes:
 2. **Categorized Publications**
    - Title and authors
    - Journal and publication date
+   - Relevance score and the reason for it
    - Abstract (when available)
    - DOI and links
    - Open access indicator
 
 3. **Bibliography**
-   - Formatted citations
+   - Formatted citations, in section order
+   - Screened-out candidates with scores and reasons
    - BibTeX entries for reference managers
 
 ## Setting Up Recurring Monitoring
@@ -201,10 +196,11 @@ Create a workflow that runs weekly and commits reports to the repository.
 
 ## Customization
 
-Edit `config.yaml` to:
-- Add or remove search topics
-- Modify categorization keywords
-- Change default report settings
+Settings live at the top of `scripts/literature_monitor.py`:
+- `SEARCH_QUERIES`: the OpenAlex searches
+- `REE_MENTION_PATTERNS`: the keyword prefilter
+- `LLM_INSTRUCTIONS`: the relevance rubric and category definitions
+- `RELEVANCE_THRESHOLD`, `LLM_MODEL`, `LLM_BATCH_SIZE`: screening settings
 
 ## Example Report
 

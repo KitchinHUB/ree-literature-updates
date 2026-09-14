@@ -2,8 +2,15 @@
 """
 Rare Earth Literature Monitor
 
-Searches OpenAlex and web sources for recent publications and news
-related to rare earth element separation technologies.
+Searches OpenAlex for recent publications that mention rare earth elements,
+screens each candidate for relevance to REE separation with an LLM (the
+`claude` CLI), and writes a categorized markdown report.
+
+Pipeline:
+    1. OpenAlex title/abstract search for REE terms, every page of results
+    2. Drop duplicates (version DOIs, repository copies) and future-dated works
+    3. Keyword prefilter: the title or abstract must name an REE
+    4. LLM relevance pass: score 0-3, assign a category; keep scores >= 2
 
 Usage:
     python literature_monitor.py                    # Last 7 days
@@ -12,8 +19,11 @@ Usage:
     python literature_monitor.py --slack            # Send notification to Slack
     python literature_monitor.py --data-out run.json    # Save works for later
     python literature_monitor.py --slack-from run.json  # Notify from saved works
+    python literature_monitor.py --no-llm           # Skip the relevance pass
 
 Environment Variables:
+    OPENALEX_API_KEY   - Raises the OpenAlex rate limits (optional)
+    CLAUDE_BIN         - Path to the claude CLI (default: found on PATH)
     SLACK_WEBHOOK_URL  - Incoming webhook URL for simple notifications
     SLACK_BOT_TOKEN    - Bot token for file uploads (optional)
     SLACK_CHANNEL      - Channel ID for file uploads (optional)
@@ -24,8 +34,12 @@ import json
 import os
 import random
 import re
+import shutil
+import subprocess
 import sys
+import tempfile
 import time
+from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timedelta
 from pathlib import Path
 from typing import Optional
@@ -33,83 +47,137 @@ import urllib.error
 import urllib.parse
 import urllib.request
 
-# Search topics for rare earth separation research
-SEARCH_TOPICS = [
-    # Core separation technologies
-    "rare earth separation",
-    "rare earth extraction",
-    "lanthanide separation",
-    "REE solvent extraction",
-    "rare earth ion exchange",
-
-    # Specific techniques
-    "rare earth membrane separation",
-    "rare earth electrochemical separation",
-    "rare earth precipitation",
-    "rare earth chromatography",
-
-    # Extractants and materials
-    "rare earth extractant",
-    "ionic liquid rare earth",
-    "deep eutectic solvent rare earth",
-
-    # Applications and sources
-    "rare earth recycling",
-    "rare earth urban mining",
-    "rare earth permanent magnet recycling",
-    "rare earth e-waste",
-
-    # Environmental and sustainability
-    "green rare earth separation",
-    "sustainable rare earth extraction",
-    "rare earth environmental impact",
-
-    # Supply chain and policy
-    "rare earth supply chain",
-    "critical minerals separation",
+# OpenAlex title/abstract searches. Together these cast a wide net: anything
+# that names a rare earth is a candidate, and the LLM pass decides what is
+# relevant. Searching titles and abstracts (not fulltext) keeps out papers
+# that mention a rare earth once in passing.
+SEARCH_QUERIES = [
+    '"rare earth" OR "rare earths" OR "rare-earth" OR lanthanide OR lanthanoid'
+    ' OR lanmodulin OR "f-element"',
+    "lanthanum OR cerium OR praseodymium OR neodymium OR promethium OR samarium"
+    " OR europium OR gadolinium OR terbium OR dysprosium OR holmium OR erbium"
+    " OR thulium OR ytterbium OR lutetium OR scandium OR yttrium",
+    'NdFeB OR "Nd-Fe-B" OR Nd2Fe14B OR monazite OR bastnasite OR bastnäsite'
+    ' OR xenotime OR "ion-adsorption"',
 ]
 
 # GitHub repository for report hosting
 GITHUB_REPO_URL = "https://github.com/KitchinHUB/ree-literature-updates"
 
-# OpenAlex concepts for filtering
-OPENALEX_CONCEPTS = [
-    "C185592680",  # Rare earth element
-    "C41008148",   # Solvent extraction
-    "C108827166",  # Ion exchange
-    "C187320778",  # Hydrometallurgy
-    "C142362112",  # Lanthanide
+_ELEMENT_NAMES = (
+    "lanthanum|cerium|praseodymium|neodymium|promethium|samarium|europium|"
+    "gadolinium|terbium|dysprosium|holmium|erbium|thulium|ytterbium|lutetium|"
+    "scandium|yttrium"
+)
+
+# A candidate must name a rare earth in its title, abstract, or keywords. All
+# matches are whole words: plain substrings let "three" pass as "ree " and
+# "1859 CE" pass as cerium.
+REE_MENTION_PATTERNS = [
+    re.compile(
+        r"\b(rare[- ]earths?|lanthanides?|lanthanoids?|actinides?|lanmodulin|"
+        r"f-elements?|f-block|4f|" + _ELEMENT_NAMES + r"|"
+        r"ndfeb|nd-fe-b|nd2fe14b|monazite|bastn[aä]site|xenotime|ion-adsorption)\b",
+        re.IGNORECASE,
+    ),
+    # Case-sensitive, so "REE" is not "Ree" or "three".
+    re.compile(r"\bREEs?\b"),
+    # Element symbols that are rarely ordinary words, as whole words: "Nd doping",
+    # "Ce(III)", "Dy2Co3Ge5". Case-sensitive, so "CE" (the era) does not count.
+    re.compile(r"(?<![A-Za-z])(Ce|Nd|Pm|Sm|Gd|Tb|Dy|Tm|Yb|Lu)(?![a-z])"),
+    # Symbols that double as words in other languages ("La", "Eu") or English
+    # ("Pr", "Er", "Y") count only in a chemical context: a stoichiometry digit,
+    # a charge or oxidation state, a dopant suffix, or a slash pair like "Nd/Pr".
+    re.compile(
+        r"(?<![A-Za-z])(La|Eu|Pr|Ho|Er|Sc|Y)"
+        r"(?=\s?\d|[³⁺]|\s?\((?:II|III|IV)\)|[2-4]\+|-(?:doped|based|containing)|/[A-Z])"
+    ),
+    re.compile(r"(?<=[/-])(La|Eu|Pr|Ho|Er|Sc|Y)(?![a-z])"),
 ]
 
-# Terms that indicate a paper is relevant to rare earth research
-# Papers must contain at least one of these terms in title, abstract, or concepts
-RELEVANCE_TERMS = [
-    # General terms
-    "rare earth", "rare-earth", "ree ", "rees ", "rees.", "rees,",
-    "lanthanide", "lanthanoid", "actinide",
-    "critical mineral", "critical metal",
+# The LLM relevance pass. Papers scoring at or above the threshold go in the
+# report; the rest are listed, collapsed, at the end so the screening can be
+# audited.
+LLM_MODEL = "sonnet"
+RELEVANCE_THRESHOLD = 2
+LLM_BATCH_SIZE = 25
+LLM_WORKERS = 4
+LLM_TIMEOUT = 600      # seconds per batch
+LLM_ATTEMPTS = 3
+LLM_ABSTRACT_CHARS = 1500
 
-    # Individual elements (lanthanides)
-    "lanthanum", "cerium", "praseodymium", "neodymium", "promethium",
-    "samarium", "europium", "gadolinium", "terbium", "dysprosium",
-    "holmium", "erbium", "thulium", "ytterbium", "lutetium",
-    "scandium", "yttrium",
-
-    # Element symbols with context (to avoid false positives)
-    " la ", " ce ", " pr ", " nd ", " pm ", " sm ", " eu ", " gd ",
-    " tb ", " dy ", " ho ", " er ", " tm ", " yb ", " lu ", " sc ", " y ",
-    "la3+", "ce3+", "ce4+", "nd3+", "eu3+", "gd3+", "tb3+", "dy3+",
-    "la(iii)", "ce(iii)", "nd(iii)", "eu(iii)", "gd(iii)", "dy(iii)",
-
-    # Common REE materials and applications
-    "ndfeb", "nd-fe-b", "nd2fe14b", "neodymium magnet",
-    "bastnäsite", "bastnasite", "monazite", "xenotime", "ion-adsorption",
-    "f-element", "f-block", "4f electron",
-
-    # REE-specific separation terms
-    "lanthanide separation", "ree separation", "ree extraction",
-    "rare earth recycl", "magnet recycl",
+CATEGORIES = [
+    "Separation Technologies",
+    "Extractants & Materials",
+    "Recycling & Urban Mining",
+    "Environmental & Sustainability",
+    "Supply Chain & Policy",
+    "Other",
 ]
+
+LLM_SYSTEM_PROMPT = """\
+You screen new scientific publications for a weekly literature update on rare
+earth element (REE) separation. The readers are a research group working on how
+REEs are extracted, separated, refined, and recycled, and on the supply chain
+around them. Judge each paper only from the metadata given. Be strict: a paper
+that uses a rare earth as a dopant, phosphor, magnet, catalyst, or alloy
+component, without being about obtaining or separating it, is not relevant."""
+
+LLM_INSTRUCTIONS = """\
+Score every paper below for relevance, using this scale:
+
+3 - Directly about REE separation, extraction, leaching, refining, metal
+    production, or recycling, or about designing extractants, ligands, or
+    sorbents for REEs.
+2 - Substantively about REEs in a way that informs separations or supply:
+    lanthanide coordination and selectivity chemistry, actinide-lanthanide
+    separation, REE ore processing or beneficiation, lanthanide biochemistry
+    relevant to biorecovery, REE supply chains, policy, mining, or the
+    environmental impact of REE mining and processing.
+1 - REEs appear only as a component or application (doped materials,
+    phosphors, magnet physics, catalysts, alloys, medical imaging), or the
+    paper is about critical minerals generally with no REE focus.
+0 - Not about rare earths at all.
+
+Assign each paper one category:
+- Separation Technologies: solvent extraction, ion exchange, chromatography,
+  membranes, electrochemical or molten-salt processes, precipitation, leaching.
+- Extractants & Materials: extractants, ligands, sorbents, and the selectivity
+  chemistry behind them, including computational screening.
+- Recycling & Urban Mining: recovery from magnets, e-waste, industrial wastes,
+  tailings, and other secondary sources.
+- Environmental & Sustainability: environmental impact, toxicity, and life
+  cycle of REE mining, processing, and use.
+- Supply Chain & Policy: markets, geopolitics, policy, mining projects.
+- Other: anything else, including every paper scored 0 or 1.
+
+Give a one-sentence reason (at most 25 words) that says what the paper does
+and why that earns its score. Return exactly one entry per paper id.
+
+Papers (JSON lines):
+"""
+
+LLM_SCHEMA = {
+    "type": "object",
+    "properties": {
+        "papers": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "id": {"type": "integer"},
+                    "score": {"type": "integer", "enum": [0, 1, 2, 3]},
+                    "category": {"type": "string", "enum": CATEGORIES},
+                    "reason": {"type": "string"},
+                },
+                "required": ["id", "score", "category", "reason"],
+                "additionalProperties": False,
+            },
+        }
+    },
+    "required": ["papers"],
+    "additionalProperties": False,
+}
 
 
 # Retry policy for the OpenAlex API. It returns 503 during maintenance and
@@ -124,9 +192,10 @@ class OpenAlexQuotaExhausted(OpenAlexUnavailable):
 
 
 MAX_ATTEMPTS = 5
-# Above this share of failed topic queries, the report is too incomplete to
-# publish and the run should fail loudly instead.
-MAX_FAILED_TOPIC_SHARE = 0.25
+# Results per page is capped at 200 by OpenAlex. A week is two or three pages
+# per query; the page cap only guards against a runaway --days value.
+PER_PAGE = 200
+MAX_PAGES_PER_QUERY = 25
 RETRY_BASE_DELAY = 2.0   # seconds; doubles each attempt
 RETRY_MAX_DELAY = 60.0   # cap on an exponential backoff step
 RETRYABLE_STATUS = {429, 500, 502, 503, 504}
@@ -139,8 +208,8 @@ MAX_REQUEST_INTERVAL = 15.0   # ceiling for the widened spacing
 # A 429 whose Retry-After is at most this long is a short-window throttle and
 # is waited out. Anything longer means the daily quota is gone.
 MAX_RATE_LIMIT_WAIT = 600.0
-# Topics that fail on the first pass get one more try after this cooldown.
-FAILED_TOPIC_COOLDOWN = 90.0
+# Queries that fail on the first pass get one more try after this cooldown.
+FAILED_QUERY_COOLDOWN = 90.0
 
 
 class _Throttle:
@@ -174,35 +243,32 @@ def _parse_seconds(value: Optional[str]) -> Optional[float]:
 def query_openalex(
     query: str,
     from_date: str,
-    per_page: int = 25,
+    to_date: str,
     cursor: str = "*",
-    to_date: Optional[str] = None,
+    per_page: int = PER_PAGE,
 ) -> dict:
     """
-    Query OpenAlex API for works matching the search query.
+    Fetch one page of OpenAlex works whose title or abstract matches the query.
 
     Args:
-        query: Search query string
-        from_date: ISO date string (YYYY-MM-DD) for filtering
+        query: Boolean search string (quoted phrases, OR)
+        from_date: ISO date string (YYYY-MM-DD), start of the window
+        to_date: ISO date string, end of the window. Always bounded: publishers
+            post works dated weeks or months ahead, and those belong to the
+            week they are dated in.
+        cursor: Pagination cursor ("*" for the first page)
         per_page: Results per page
-        cursor: Pagination cursor
-        to_date: Optional ISO date string bounding the window at the top.
-            Needed to reconstruct a report for a past week; without it
-            OpenAlex also returns anything published since.
 
     Returns:
         API response as dict
     """
     base_url = "https://api.openalex.org/works"
 
-    date_filter = f"from_publication_date:{from_date}"
-    if to_date:
-        date_filter += f",to_publication_date:{to_date}"
-
     params = {
-        "search": query,
-        "filter": date_filter,
-        "sort": "publication_date:desc",
+        "filter": (
+            f"from_publication_date:{from_date},to_publication_date:{to_date},"
+            f"title_and_abstract.search:{query}"
+        ),
         "per-page": str(per_page),
         "cursor": cursor,
         "mailto": "jkitchin@andrew.cmu.edu",  # Polite pool
@@ -276,62 +342,80 @@ def query_openalex(
     raise OpenAlexUnavailable("exhausted retries")
 
 
-def search_openalex_all_topics(
-    from_date: str, max_per_topic: int = 10, to_date: Optional[str] = None
-) -> list[dict]:
+def search_openalex_all_queries(
+    from_date: str, to_date: str
+) -> tuple[list[dict], list[str]]:
     """
-    Search OpenAlex for all configured topics.
+    Run every search query, following pagination to the last page.
 
-    Returns deduplicated list of works.
+    Returns:
+        Tuple of (works deduplicated by OpenAlex id, queries that failed)
     """
     all_works = {}
 
-    def search(topics: list[str]) -> list[str]:
-        failed = []
-        for topic in topics:
-            print(f"  Searching OpenAlex: {topic}")
-            try:
-                result = query_openalex(
-                    topic, from_date, per_page=max_per_topic, to_date=to_date
-                )
-            except OpenAlexUnavailable as e:
-                print(f"    FAILED: {e}")
-                failed.append(topic)
-                continue
-
+    def fetch_all_pages(query: str) -> None:
+        cursor = "*"
+        for page in range(1, MAX_PAGES_PER_QUERY + 1):
+            result = query_openalex(query, from_date, to_date, cursor=cursor)
             for work in result.get("results", []):
                 work_id = work.get("id", "")
                 if work_id and work_id not in all_works:
                     all_works[work_id] = work
+            cursor = (result.get("meta") or {}).get("next_cursor")
+            if not cursor or not result.get("results"):
+                return
+        count = (result.get("meta") or {}).get("count", "?")
+        print(
+            f"    Warning: stopped after {MAX_PAGES_PER_QUERY} pages "
+            f"({count} matches); narrow the date window to see them all"
+        )
+
+    def search(queries: list[str]) -> list[str]:
+        failed = []
+        for query in queries:
+            print(f"  Searching OpenAlex: {query[:70]}...")
+            before = len(all_works)
+            try:
+                fetch_all_pages(query)
+            except OpenAlexUnavailable as e:
+                # A partly fetched query is still a failed one: its remaining
+                # pages are missing. Works already fetched are kept, and the
+                # retry skips over them.
+                print(f"    FAILED: {e}")
+                failed.append(query)
+                continue
+            print(f"    {len(all_works) - before} new works")
         return failed
 
-    failed_topics = search(SEARCH_TOPICS)
+    failed_queries = search(SEARCH_QUERIES)
 
     # Transient throttling and outages usually clear within a minute or two,
-    # so give failed topics a second pass before counting them as lost.
-    if failed_topics and not _throttle.quota_exhausted:
+    # so give failed queries a second pass before counting them as lost.
+    if failed_queries and not _throttle.quota_exhausted:
         print(
-            f"\n  {len(failed_topics)} topic(s) failed; retrying after "
-            f"{FAILED_TOPIC_COOLDOWN:.0f}s cooldown"
+            f"\n  {len(failed_queries)} query(ies) failed; retrying after "
+            f"{FAILED_QUERY_COOLDOWN:.0f}s cooldown"
         )
-        time.sleep(FAILED_TOPIC_COOLDOWN)
-        failed_topics = search(failed_topics)
+        time.sleep(FAILED_QUERY_COOLDOWN)
+        failed_queries = search(failed_queries)
 
-    return list(all_works.values()), failed_topics
+    return list(all_works.values()), failed_queries
 
 
 def extract_work_info(work: dict) -> dict:
     """Extract relevant information from an OpenAlex work."""
-    # Get authors
+    # Get authors (first 5; author_count says whether there are more)
     authors = []
-    authorships = work.get("authorships") or []
-    for authorship in authorships[:5]:  # Limit to first 5
+    # Some repository records list a placeholder author named "et al.".
+    authorships = [
+        a for a in (work.get("authorships") or [])
+        if ((a.get("author") or {}).get("display_name") or "").strip().lower()
+        not in {"et al.", "et al", "others"}
+    ]
+    for authorship in authorships[:5]:
         author = authorship.get("author") or {}
         name = author.get("display_name") or "Unknown"
         authors.append(name)
-
-    if len(authorships) > 5:
-        authors.append("et al.")
 
     # Get primary source/journal
     source = (work.get("primary_location") or {}).get("source") or {}
@@ -353,9 +437,12 @@ def extract_work_info(work: dict) -> dict:
                 words[pos] = word
         abstract = " ".join(words)
 
-    # Get concepts/topics
-    concepts = [
-        c.get("display_name") or "" for c in (work.get("concepts") or [])[:5]
+    # Keywords are OpenAlex's current tagging. The legacy concepts field it
+    # replaced produced tags like "Mercury (programming language)".
+    keywords = [
+        k.get("display_name") or "" for k in (work.get("keywords") or [])[:5]
+    ] or [
+        t.get("display_name") or "" for t in (work.get("topics") or [])[:3]
     ]
 
     # Use `or` rather than get() defaults: OpenAlex returns these keys with
@@ -366,99 +453,199 @@ def extract_work_info(work: dict) -> dict:
         "id": work_id,
         "title": work.get("title") or "Untitled",
         "authors": authors,
+        "author_count": len(authorships),
         "publication_date": work.get("publication_date") or "",
         "journal": journal,
         "doi": doi,
         "url": work_id.replace("https://openalex.org/", "https://openalex.org/works/"),
-        "abstract": abstract[:500] + "..." if len(abstract) > 500 else abstract,
-        "concepts": concepts,
+        "abstract": abstract,
+        "keywords": keywords,
         "cited_by_count": work.get("cited_by_count") or 0,
         "type": work.get("type") or "unknown",
         "open_access": (work.get("open_access") or {}).get("is_oa", False),
     }
 
 
-def is_relevant_to_ree(work: dict) -> bool:
+def deduplicate_works(works: list[dict]) -> list[dict]:
     """
-    Check if a work is actually relevant to rare earth element research.
+    Collapse records of the same work under different OpenAlex ids.
 
-    Filters out false positives from broad OpenAlex searches by requiring
-    at least one REE-related term in the title, abstract, or concepts.
-
-    Args:
-        work: Processed work dictionary
-
-    Returns:
-        True if the work appears relevant to REE research
+    Repositories mint a DOI per version (figshare ".v1", Zenodo concept and
+    version DOIs), and OpenAlex indexes each. Records match on normalized
+    title; short generic titles ("Editorial", "Preface") also need the same
+    first-author surname. Author names are not compared for long titles
+    because copies spell them differently ("PhD Antonio Pereira" and
+    "Antonio Pereira, PhD"). The kept record prefers a publisher DOI over a
+    repository one, then an unversioned DOI, then one with an abstract.
     """
-    # Combine searchable text fields
-    title = (work.get("title") or "").lower()
-    abstract = (work.get("abstract") or "").lower()
-    concepts = " ".join(work.get("concepts") or []).lower()
+    def key(work: dict) -> tuple[str, str]:
+        title = re.sub(r"[^\w]+", "", work["title"].lower())
+        if len(title) >= 40:
+            return title, ""
+        first = work["authors"][0].split()[-1].lower() if work["authors"] else ""
+        return title, first
 
-    # Add spaces around text to help with word boundary matching
-    searchable_text = f" {title} {abstract} {concepts} "
+    def quality(work: dict) -> tuple[bool, bool, bool, bool]:
+        doi = work["doi"]
+        return (
+            bool(doi) and not re.search(r"10\.(5281/zenodo|6084/m9\.figshare)", doi),
+            bool(doi) and not re.search(r"\.v\d+$", doi),
+            bool(work["abstract"]),
+            bool(doi),
+        )
 
-    # Check for any relevance term
-    for term in RELEVANCE_TERMS:
-        if term.lower() in searchable_text:
-            return True
-
-    return False
-
-
-def filter_relevant_works(works: list[dict]) -> tuple[list[dict], list[dict]]:
-    """
-    Filter works to only include those relevant to REE research.
-
-    Args:
-        works: List of processed work dictionaries
-
-    Returns:
-        Tuple of (relevant_works, filtered_out_works)
-    """
-    relevant = []
-    filtered_out = []
-
+    best: dict[tuple[str, str], dict] = {}
     for work in works:
-        if is_relevant_to_ree(work):
-            relevant.append(work)
-        else:
-            filtered_out.append(work)
+        k = key(work)
+        if k not in best or quality(work) > quality(best[k]):
+            best[k] = work
+    return list(best.values())
 
-    return relevant, filtered_out
+
+def mentions_ree(work: dict) -> bool:
+    """True if the title, abstract, or keywords name a rare earth element."""
+    text = " ".join(
+        [work.get("title") or "", work.get("abstract") or ""]
+        + (work.get("keywords") or [])
+    )
+    return any(pattern.search(text) for pattern in REE_MENTION_PATTERNS)
+
+
+class LLMScreeningError(Exception):
+    """Raised when the relevance pass cannot score every candidate."""
+
+
+def _find_claude() -> str:
+    claude = os.environ.get("CLAUDE_BIN") or shutil.which("claude")
+    if not claude:
+        # Cron's PATH does not include the default install location.
+        fallback = Path.home() / ".local" / "bin" / "claude"
+        if fallback.exists():
+            claude = str(fallback)
+    if not claude:
+        raise LLMScreeningError(
+            "claude CLI not found; set CLAUDE_BIN or pass --no-llm"
+        )
+    return claude
+
+
+def _screen_batch(claude: str, batch: list[tuple[int, dict]], model: str) -> dict:
+    """Score one batch; returns {id: {score, category, reason}}."""
+    lines = []
+    for paper_id, work in batch:
+        abstract = work["abstract"]
+        if len(abstract) > LLM_ABSTRACT_CHARS:
+            abstract = abstract[:LLM_ABSTRACT_CHARS] + "..."
+        lines.append(json.dumps({
+            "id": paper_id,
+            "title": work["title"],
+            "venue": work["journal"],
+            "type": work["type"],
+            "keywords": work["keywords"],
+            "abstract": abstract or "(no abstract)",
+        }, ensure_ascii=False))
+    prompt = LLM_INSTRUCTIONS + "\n".join(lines)
+
+    cmd = [
+        claude, "-p",
+        "--model", model,
+        "--output-format", "json",
+        "--json-schema", json.dumps(LLM_SCHEMA),
+        "--system-prompt", LLM_SYSTEM_PROMPT,
+        # A pure judgment call: no tools, MCP servers, hooks, or saved session.
+        "--tools", "",
+        "--strict-mcp-config",
+        "--setting-sources", "",
+        "--no-session-persistence",
+    ]
+    expected = {paper_id for paper_id, _ in batch}
+    error = "no attempts made"
+
+    for attempt in range(1, LLM_ATTEMPTS + 1):
+        try:
+            # Run outside the project so no CLAUDE.md is picked up.
+            with tempfile.TemporaryDirectory() as cwd:
+                proc = subprocess.run(
+                    cmd, input=prompt, capture_output=True, text=True,
+                    timeout=LLM_TIMEOUT, cwd=cwd,
+                )
+            response = json.loads(proc.stdout)
+            if response.get("is_error"):
+                raise LLMScreeningError(response.get("result") or "claude reported an error")
+            papers = (response.get("structured_output") or {}).get("papers") or []
+            scored = {p["id"]: p for p in papers if p.get("id") in expected}
+            missing = expected - scored.keys()
+            if missing:
+                raise LLMScreeningError(f"no score for {len(missing)} paper(s)")
+            return scored
+        except (subprocess.TimeoutExpired, json.JSONDecodeError, LLMScreeningError) as e:
+            error = str(e) or type(e).__name__
+            print(f"    LLM batch failed ({error}), attempt {attempt}/{LLM_ATTEMPTS}")
+            if attempt < LLM_ATTEMPTS:
+                time.sleep(RETRY_BASE_DELAY * 2 ** attempt)
+
+    raise LLMScreeningError(error)
+
+
+def screen_with_llm(works: list[dict], model: str = LLM_MODEL) -> None:
+    """
+    Score every work for relevance with the claude CLI, in parallel batches.
+
+    Sets "relevance", "category", and "relevance_reason" on each work in place.
+    Raises LLMScreeningError if any batch cannot be scored: an unscreened
+    report is the thing this step exists to prevent.
+    """
+    claude = _find_claude()
+    indexed = list(enumerate(works))
+    batches = [
+        indexed[i:i + LLM_BATCH_SIZE] for i in range(0, len(indexed), LLM_BATCH_SIZE)
+    ]
+    print(
+        f"  Screening {len(works)} candidates with {model} "
+        f"({len(batches)} batches)..."
+    )
+
+    with ThreadPoolExecutor(max_workers=LLM_WORKERS) as pool:
+        results = list(pool.map(lambda b: _screen_batch(claude, b, model), batches))
+
+    for scored in results:
+        for paper_id, verdict in scored.items():
+            work = works[paper_id]
+            work["relevance"] = verdict["score"]
+            work["category"] = verdict["category"] if verdict["score"] >= RELEVANCE_THRESHOLD else "Other"
+            work["relevance_reason"] = verdict["reason"]
+
+
+def _category_keyword_fallback(work: dict) -> str:
+    """Category for unscreened (--no-llm) runs, from title and abstract."""
+    text = f"{work['title']} {work['abstract']}".lower()
+    rules = [
+        ("Recycling & Urban Mining", r"\b(recycl\w*|urban mining|e-waste|end-of-life)"),
+        ("Extractants & Materials", r"\b(extractants?|ionic liquids?|eutectic|ligands?|sorbents?|adsorbents?)\b"),
+        ("Separation Technologies", r"\b(separat\w*|solvent extraction|ion exchange|chromatograph\w*|leach\w*|membranes?)"),
+        ("Supply Chain & Policy", r"\b(supply chains?|polic\w+|geopolitic\w*|export)"),
+        ("Environmental & Sustainability", r"\b(environmental|sustainab\w+|toxic\w*|pollution|life cycle)"),
+    ]
+    for category, pattern in rules:
+        if re.search(pattern, text):
+            return category
+    return "Other"
 
 
 def categorize_works(works: list[dict]) -> dict[str, list[dict]]:
     """
-    Categorize works into topic groups based on title and concepts.
+    Group works by category, most relevant then newest first within each.
+
+    Uses the category from the LLM pass when present.
     """
-    categories = {
-        "Separation Technologies": [],
-        "Extractants & Materials": [],
-        "Recycling & Urban Mining": [],
-        "Environmental & Sustainability": [],
-        "Supply Chain & Policy": [],
-        "Other": [],
-    }
-
+    categories = {name: [] for name in CATEGORIES}
     for work in works:
-        title_lower = work["title"].lower()
-        concepts_lower = " ".join(work["concepts"]).lower()
-        combined = title_lower + " " + concepts_lower
+        category = work.get("category") or _category_keyword_fallback(work)
+        categories.get(category, categories["Other"]).append(work)
 
-        if any(kw in combined for kw in ["recycl", "urban mining", "e-waste", "waste", "secondary"]):
-            categories["Recycling & Urban Mining"].append(work)
-        elif any(kw in combined for kw in ["extractant", "ionic liquid", "eutectic", "ligand", "complexa"]):
-            categories["Extractants & Materials"].append(work)
-        elif any(kw in combined for kw in ["green", "sustainab", "environment", "pollution", "toxic"]):
-            categories["Environmental & Sustainability"].append(work)
-        elif any(kw in combined for kw in ["supply chain", "policy", "critical mineral", "strategic", "china"]):
-            categories["Supply Chain & Policy"].append(work)
-        elif any(kw in combined for kw in ["separat", "extract", "ion exchange", "membrane", "electro"]):
-            categories["Separation Technologies"].append(work)
-        else:
-            categories["Other"].append(work)
+    for cat_works in categories.values():
+        cat_works.sort(key=lambda w: w["publication_date"], reverse=True)
+        cat_works.sort(key=lambda w: w.get("relevance", 0), reverse=True)
 
     # Remove empty categories
     return {k: v for k, v in categories.items() if v}
@@ -638,24 +825,24 @@ def create_slack_summary(
             }
         })
 
-    # Highlight top papers (by citation count or recency)
+    # Highlight top papers: most relevant, then most recent
     if works:
         blocks.append({"type": "divider"})
         blocks.append({
             "type": "section",
             "text": {
                 "type": "mrkdwn",
-                "text": "*📌 Recent Highlights:*"
+                "text": "*📌 Highlights:*"
             }
         })
 
-        # Get top 3 most recent with abstracts
-        highlights = sorted(works, key=lambda x: x["publication_date"], reverse=True)[:3]
+        highlights = sorted(works, key=lambda x: x["publication_date"], reverse=True)
+        highlights = sorted(highlights, key=lambda x: x.get("relevance", 0), reverse=True)[:3]
 
         for work in highlights:
             title = work["title"][:100] + "..." if len(work["title"]) > 100 else work["title"]
             authors = ", ".join(work["authors"][:2])
-            if len(work["authors"]) > 2:
+            if work.get("author_count", len(work["authors"])) > 2:
                 authors += " et al."
 
             text = f"• *{title}*\n  _{authors}_ ({work['journal']})"
@@ -749,7 +936,7 @@ def notify_slack(
 def format_citation(work: dict) -> str:
     """Format a work as a citation string."""
     authors_str = ", ".join(work["authors"][:3])
-    if len(work["authors"]) > 3:
+    if work.get("author_count", len(work["authors"])) > 3:
         authors_str += " et al."
 
     year = work["publication_date"][:4] if work["publication_date"] else "n.d."
@@ -762,36 +949,75 @@ def format_citation(work: dict) -> str:
     return citation
 
 
+# OpenAlex work types that are journal-style articles; everything else
+# (preprints, datasets, theses, repository deposits) is written as @misc.
+ARTICLE_TYPES = {"article", "review", "letter", "editorial", "erratum"}
+
+
 def format_bibtex(work: dict, key: str) -> str:
     """Format a work as a BibTeX entry."""
-    authors_bibtex = " and ".join(work["authors"])
+    authors = list(work["authors"])
+    if work.get("author_count", len(authors)) > len(authors):
+        authors.append("others")
     year = work["publication_date"][:4] if work["publication_date"] else ""
 
     # Clean title for BibTeX
     title = work["title"].replace("{", "").replace("}", "")
 
-    entry = f"""@article{{{key},
-  author = {{{authors_bibtex}}},
-  title = {{{{{title}}}}},
-  journal = {{{work['journal']}}},
-  year = {{{year}}},
-  doi = {{{work['doi'].replace('https://doi.org/', '') if work['doi'] else ''}}},
-  url = {{{work['url']}}},
-}}
-"""
-    return entry
+    if work["type"] in ARTICLE_TYPES:
+        entry_type, venue_field = "article", "journal"
+    else:
+        entry_type, venue_field = "misc", "howpublished"
+
+    fields = [
+        ("author", " and ".join(authors)),
+        ("title", f"{{{title}}}"),
+        (venue_field, work["journal"]),
+        ("year", year),
+        ("doi", work["doi"].replace("https://doi.org/", "")),
+        ("url", work["url"]),
+    ]
+    body = "".join(f"  {name} = {{{value}}},\n" for name, value in fields if value)
+    return f"@{entry_type}{{{key},\n{body}}}\n"
 
 
 def generate_report(
     works: list[dict],
     from_date: str,
     to_date: str,
-    output_path: Path
+    output_path: Path,
+    candidate_count: Optional[int] = None,
+    screened_out: Optional[list[dict]] = None,
+    model: Optional[str] = None,
 ) -> str:
     """
     Generate a markdown report of the literature search results.
+
+    Args:
+        works: Works to report
+        from_date, to_date: Reporting window
+        output_path: Where to write the report
+        candidate_count: Works that went into the LLM pass
+        screened_out: Candidates the LLM pass rejected, listed for auditing
+        model: The LLM that screened the candidates; None for an unscreened run
     """
     categorized = categorize_works(works)
+    screened_out = screened_out or []
+
+    if model:
+        method = (
+            f"Candidates come from OpenAlex title and abstract searches for rare earth\n"
+            f"terms. An LLM ({model}) scored each of the {candidate_count} candidates for\n"
+            f"relevance to REE separation on a 0-3 scale; papers scoring\n"
+            f"{RELEVANCE_THRESHOLD} or higher are listed here, most relevant first. The\n"
+            f"{len(screened_out)} it set aside are listed at the end."
+        )
+    else:
+        method = (
+            "Candidates come from OpenAlex title and abstract searches for rare earth\n"
+            "terms. **This run skipped the LLM relevance pass**, so every paper that\n"
+            "names a rare earth is listed and categories come from keywords."
+        )
 
     report = f"""# Rare Earth Separation Literature Update
 
@@ -803,9 +1029,7 @@ def generate_report(
 
 ## Executive Summary
 
-This report summarizes recent publications related to rare earth element separation
-technologies discovered through OpenAlex database searches. Publications are
-categorized by topic area for easier navigation.
+{method}
 
 ### Publications by Category
 
@@ -822,9 +1046,6 @@ categorized by topic area for easier navigation.
     for category, cat_works in categorized.items():
         report += f"## {category}\n\n"
 
-        # Sort by publication date (newest first)
-        cat_works.sort(key=lambda x: x["publication_date"], reverse=True)
-
         for i, work in enumerate(cat_works, 1):
             oa_badge = "🔓" if work["open_access"] else "🔒"
 
@@ -838,24 +1059,48 @@ categorized by topic area for easier navigation.
             if work["doi"]:
                 report += f"**DOI:** [{work['doi']}]({work['doi']})\n\n"
 
-            if work["abstract"]:
-                report += f"**Abstract:** {work['abstract']}\n\n"
+            if work.get("relevance_reason"):
+                report += (
+                    f"**Relevance ({work['relevance']}/3):** "
+                    f"{work['relevance_reason']}\n\n"
+                )
 
-            if work["concepts"]:
-                report += f"**Topics:** {', '.join(work['concepts'])}\n\n"
+            if work["abstract"]:
+                abstract = work["abstract"]
+                if len(abstract) > 500:
+                    abstract = abstract[:500] + "..."
+                report += f"**Abstract:** {abstract}\n\n"
+
+            if work["keywords"]:
+                report += f"**Keywords:** {', '.join(work['keywords'])}\n\n"
 
             report += "---\n\n"
 
-    # Bibliography section
+    # The bibliography follows the order of the sections above.
+    ordered = [work for cat_works in categorized.values() for work in cat_works]
+
     report += "## Full Bibliography\n\n"
 
-    for i, work in enumerate(works, 1):
+    for i, work in enumerate(ordered, 1):
         report += f"{i}. {format_citation(work)}\n\n"
+
+    if screened_out:
+        report += (
+            f"## Screened Out\n\n<details>\n<summary>{len(screened_out)} candidates "
+            f"scored below {RELEVANCE_THRESHOLD}</summary>\n\n"
+        )
+        for work in sorted(screened_out, key=lambda w: -w["relevance"]):
+            link = work["doi"] or work["url"]
+            report += (
+                f"- ({work['relevance']}) [{work['title']}]({link}): "
+                f"{work['relevance_reason']}\n"
+            )
+        report += "\n</details>\n\n"
 
     # BibTeX section
     report += "\n## BibTeX Entries\n\n```bibtex\n"
 
-    for i, work in enumerate(works, 1):
+    for i, work in enumerate(ordered, 1):
         # Create a key from first author's last name and year
         first_author = work["authors"][0] if work["authors"] else "Unknown"
         last_name = first_author.split()[-1].lower()
@@ -895,8 +1140,12 @@ def main():
         help="Start of the reporting window, YYYY-MM-DD (overrides --days)"
     )
     parser.add_argument(
-        "--max-per-topic", type=int, default=15,
-        help="Maximum results per search topic (default: 15)"
+        "--llm-model", type=str, default=LLM_MODEL,
+        help=f"Model for the relevance pass (default: {LLM_MODEL})"
+    )
+    parser.add_argument(
+        "--no-llm", action="store_true",
+        help="Skip the LLM relevance pass and list every candidate"
     )
     parser.add_argument(
         "--slack", action="store_true",
@@ -952,49 +1201,62 @@ def main():
     to_date_str = to_date.strftime("%Y-%m-%d")
 
     print(f"Searching for publications from {from_date_str} to {to_date_str}")
-    print(f"Searching {len(SEARCH_TOPICS)} topics...")
+    print(f"Running {len(SEARCH_QUERIES)} queries...")
 
     # Search OpenAlex
-    works, failed_topics = search_openalex_all_topics(
-        from_date_str,
-        max_per_topic=args.max_per_topic,
-        to_date=to_date_str if args.to_date else None,
-    )
+    works, failed_queries = search_openalex_all_queries(from_date_str, to_date_str)
 
-    # A report built on mostly-failed queries looks like a quiet week rather
-    # than a broken run, and the weekly cron would commit and push it. Refuse
-    # to write one instead, so the failure is visible.
-    if failed_topics:
-        share = len(failed_topics) / len(SEARCH_TOPICS)
+    # Each query covers a whole family of terms, so losing any one of them
+    # leaves a hole that looks like a quiet week, and the weekly cron would
+    # commit and push it. Refuse to write the report instead.
+    if failed_queries:
         print(
-            f"\nWarning: {len(failed_topics)}/{len(SEARCH_TOPICS)} topic "
-            f"queries failed: {', '.join(failed_topics)}"
+            f"Error: {len(failed_queries)}/{len(SEARCH_QUERIES)} queries failed. "
+            f"Refusing to write an incomplete report.",
+            file=sys.stderr,
         )
-        if share > MAX_FAILED_TOPIC_SHARE:
-            print(
-                f"Error: {share:.0%} of queries failed, exceeding the "
-                f"{MAX_FAILED_TOPIC_SHARE:.0%} threshold. Refusing to write a "
-                f"misleading report.",
-                file=sys.stderr,
-            )
-            return 1
+        return 1
 
     print(f"\nFound {len(works)} unique publications")
 
     # Extract info from works
     processed_works = [extract_work_info(w) for w in works]
 
-    # Filter out works without titles
-    processed_works = [w for w in processed_works if w["title"] != "Untitled"]
+    # Filter out works without titles, and any dated past the window
+    processed_works = [
+        w for w in processed_works
+        if w["title"] != "Untitled" and w["publication_date"] <= to_date_str
+    ]
+    processed_works = deduplicate_works(processed_works)
+    print(f"After removing duplicates: {len(processed_works)} publications")
 
-    print(f"After title filtering: {len(processed_works)} publications")
+    candidates = [w for w in processed_works if mentions_ree(w)]
+    print(
+        f"Naming a rare earth in title or abstract: {len(candidates)} "
+        f"(dropped {len(processed_works) - len(candidates)})"
+    )
 
-    # Apply relevance filtering to remove false positives
-    processed_works, filtered_out = filter_relevant_works(processed_works)
-
-    print(f"After relevance filtering: {len(processed_works)} publications")
-    if filtered_out:
-        print(f"  (Removed {len(filtered_out)} irrelevant papers)")
+    screened_out = []
+    model = None
+    if args.no_llm:
+        processed_works = candidates
+    else:
+        model = args.llm_model
+        try:
+            screen_with_llm(candidates, model=model)
+        except LLMScreeningError as e:
+            print(
+                f"Error: LLM relevance pass failed: {e}. Refusing to write an "
+                f"unscreened report (use --no-llm to skip the pass).",
+                file=sys.stderr,
+            )
+            return 1
+        processed_works = [w for w in candidates if w["relevance"] >= RELEVANCE_THRESHOLD]
+        screened_out = [w for w in candidates if w["relevance"] < RELEVANCE_THRESHOLD]
+        print(
+            f"After LLM relevance pass: {len(processed_works)} publications "
+            f"({len(screened_out)} set aside)"
+        )
 
     # Categorize for reporting and Slack
     categorized = categorize_works(processed_works)
@@ -1006,7 +1268,10 @@ def main():
         output_path = Path("reports") / f"{to_date_str}_literature_update.md"
 
     # Generate report
-    report = generate_report(processed_works, from_date_str, to_date_str, output_path)
+    report = generate_report(
+        processed_works, from_date_str, to_date_str, output_path,
+        candidate_count=len(candidates), screened_out=screened_out, model=model,
+    )
 
     print(f"\nReport saved to: {output_path}")
     print(f"Total publications: {len(processed_works)}")
@@ -1020,6 +1285,7 @@ def main():
             "to_date": to_date_str,
             "report_path": str(output_path),
             "works": processed_works,
+            "screened_out": screened_out,
         }, indent=2))
         print(f"Run data saved to: {data_path}")
 

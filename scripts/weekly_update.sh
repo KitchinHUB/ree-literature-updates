@@ -15,7 +15,7 @@ LOG_FILE="$PROJECT_DIR/logs/weekly_update.log"
 PYTHON="/Users/jkitchin/Dropbox/uv/.venv/bin/python"
 
 # Ensure PATH includes git and other tools for cron
-export PATH="/usr/local/bin:/usr/bin:/bin:/opt/homebrew/bin:$PATH"
+export PATH="/usr/local/bin:/usr/bin:/bin:/opt/homebrew/bin:$HOME/.local/bin:$PATH"
 
 # Source environment variables
 if [ -f "$PROJECT_DIR/.env" ]; then
