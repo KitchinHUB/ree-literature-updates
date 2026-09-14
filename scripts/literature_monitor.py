@@ -119,13 +119,56 @@ class OpenAlexUnavailable(Exception):
     """Raised when a topic query cannot be completed, even after retries."""
 
 
+class OpenAlexQuotaExhausted(OpenAlexUnavailable):
+    """Raised when the daily credit quota is spent; retrying is pointless."""
+
+
 MAX_ATTEMPTS = 5
 # Above this share of failed topic queries, the report is too incomplete to
 # publish and the run should fail loudly instead.
 MAX_FAILED_TOPIC_SHARE = 0.25
-RETRY_BASE_DELAY = 1.0   # seconds; doubles each attempt
-RETRY_MAX_DELAY = 30.0   # cap on any single backoff
+RETRY_BASE_DELAY = 2.0   # seconds; doubles each attempt
+RETRY_MAX_DELAY = 60.0   # cap on an exponential backoff step
 RETRYABLE_STATUS = {429, 500, 502, 503, 504}
+
+# Client-side throttling. Firing the topic queries back to back trips
+# OpenAlex's short-window limit, so space requests out, and widen the spacing
+# whenever the server pushes back with a 429.
+MIN_REQUEST_INTERVAL = 1.5    # seconds between requests
+MAX_REQUEST_INTERVAL = 15.0   # ceiling for the widened spacing
+# A 429 whose Retry-After is at most this long is a short-window throttle and
+# is waited out. Anything longer means the daily quota is gone.
+MAX_RATE_LIMIT_WAIT = 600.0
+# Topics that fail on the first pass get one more try after this cooldown.
+FAILED_TOPIC_COOLDOWN = 90.0
+
+
+class _Throttle:
+    """Keeps a minimum interval between OpenAlex requests."""
+
+    def __init__(self, interval: float):
+        self.interval = interval
+        self._last = 0.0
+        self.quota_exhausted = False
+
+    def wait(self):
+        remaining = self._last + self.interval - time.monotonic()
+        if remaining > 0:
+            time.sleep(remaining)
+        self._last = time.monotonic()
+
+    def back_off(self):
+        self.interval = min(self.interval * 2, MAX_REQUEST_INTERVAL)
+
+
+_throttle = _Throttle(MIN_REQUEST_INTERVAL)
+
+
+def _parse_seconds(value: Optional[str]) -> Optional[float]:
+    try:
+        return float(value) if value is not None else None
+    except ValueError:
+        return None  # Retry-After can be an HTTP date
 
 
 def query_openalex(
@@ -164,32 +207,49 @@ def query_openalex(
         "cursor": cursor,
         "mailto": "jkitchin@andrew.cmu.edu",  # Polite pool
     }
+    # A key raises the limits well above the anonymous pool. Cron has no login
+    # environment, so weekly_update.sh loads it from .env.
+    api_key = os.environ.get("OPENALEX_API_KEY")
+    if api_key:
+        params["api_key"] = api_key
 
     url = f"{base_url}?{urllib.parse.urlencode(params)}"
     req = urllib.request.Request(url, headers={"User-Agent": "LiteratureMonitor/1.0"})
 
+    if _throttle.quota_exhausted:
+        raise OpenAlexQuotaExhausted("daily quota exhausted earlier in this run")
+
     for attempt in range(1, MAX_ATTEMPTS + 1):
         retry_after = None
+        _throttle.wait()
         try:
             with urllib.request.urlopen(req, timeout=30) as response:
+                remaining = _parse_seconds(response.headers.get("X-RateLimit-Remaining"))
+                if remaining is not None and remaining <= 0:
+                    # This request got through, but the next one will not.
+                    _throttle.quota_exhausted = True
                 return json.loads(response.read().decode())
         except urllib.error.HTTPError as e:
             if e.code not in RETRYABLE_STATUS:
                 # 4xx client errors will not fix themselves; fail fast.
                 raise OpenAlexUnavailable(f"HTTP {e.code}") from e
-            retry_after = e.headers.get("Retry-After") if e.headers else None
+            headers = e.headers or {}
+            retry_after = _parse_seconds(headers.get("Retry-After"))
             reason = f"HTTP {e.code}"
-            if e.code == 429 and retry_after:
-                # The daily credit quota is spent; the reset is hours away, so
-                # there is nothing to wait out within a single run.
-                try:
-                    wait = float(retry_after)
-                except ValueError:
-                    wait = None
-                if wait is not None and wait > RETRY_MAX_DELAY:
-                    raise OpenAlexUnavailable(
-                        f"rate limited, quota resets in {wait / 3600:.1f}h"
-                    ) from e
+            if e.code == 429:
+                _throttle.back_off()
+                remaining = _parse_seconds(headers.get("X-RateLimit-Remaining"))
+                # Only a long wait, or the server saying no credits remain,
+                # means the daily quota is spent. A short Retry-After is a
+                # burst throttle and is worth waiting out.
+                if (retry_after is not None and retry_after > MAX_RATE_LIMIT_WAIT) or (
+                    remaining is not None and remaining <= 0
+                ):
+                    _throttle.quota_exhausted = True
+                    reset = _parse_seconds(headers.get("X-RateLimit-Reset")) or retry_after
+                    when = f", resets in {reset / 3600:.1f}h" if reset else ""
+                    raise OpenAlexQuotaExhausted(f"daily quota exhausted{when}") from e
+                reason = "rate limited"
         except (urllib.error.URLError, TimeoutError, json.JSONDecodeError) as e:
             reason = str(e)
 
@@ -198,14 +258,13 @@ def query_openalex(
                 f"{reason} after {MAX_ATTEMPTS} attempts"
             )
 
-        # Exponential backoff with jitter, honoring Retry-After when sent.
-        delay = min(RETRY_BASE_DELAY * (2 ** (attempt - 1)), RETRY_MAX_DELAY)
-        if retry_after:
-            try:
-                delay = min(float(retry_after), RETRY_MAX_DELAY)
-            except ValueError:
-                pass  # Retry-After can be an HTTP date; fall back to backoff
-        delay += random.uniform(0, 0.5)
+        # Honor Retry-After in full when sent (it is bounded above); otherwise
+        # exponential backoff. Jitter either way.
+        if retry_after is not None:
+            delay = retry_after
+        else:
+            delay = min(RETRY_BASE_DELAY * (2 ** (attempt - 1)), RETRY_MAX_DELAY)
+        delay += random.uniform(0, 1.0)
 
         print(
             f"    {reason}, retrying in {delay:.1f}s "
@@ -226,23 +285,37 @@ def search_openalex_all_topics(
     Returns deduplicated list of works.
     """
     all_works = {}
-    failed_topics = []
 
-    for topic in SEARCH_TOPICS:
-        print(f"  Searching OpenAlex: {topic}")
-        try:
-            result = query_openalex(
-                topic, from_date, per_page=max_per_topic, to_date=to_date
-            )
-        except OpenAlexUnavailable as e:
-            print(f"    FAILED: {e}")
-            failed_topics.append(topic)
-            continue
+    def search(topics: list[str]) -> list[str]:
+        failed = []
+        for topic in topics:
+            print(f"  Searching OpenAlex: {topic}")
+            try:
+                result = query_openalex(
+                    topic, from_date, per_page=max_per_topic, to_date=to_date
+                )
+            except OpenAlexUnavailable as e:
+                print(f"    FAILED: {e}")
+                failed.append(topic)
+                continue
 
-        for work in result.get("results", []):
-            work_id = work.get("id", "")
-            if work_id and work_id not in all_works:
-                all_works[work_id] = work
+            for work in result.get("results", []):
+                work_id = work.get("id", "")
+                if work_id and work_id not in all_works:
+                    all_works[work_id] = work
+        return failed
+
+    failed_topics = search(SEARCH_TOPICS)
+
+    # Transient throttling and outages usually clear within a minute or two,
+    # so give failed topics a second pass before counting them as lost.
+    if failed_topics and not _throttle.quota_exhausted:
+        print(
+            f"\n  {len(failed_topics)} topic(s) failed; retrying after "
+            f"{FAILED_TOPIC_COOLDOWN:.0f}s cooldown"
+        )
+        time.sleep(FAILED_TOPIC_COOLDOWN)
+        failed_topics = search(failed_topics)
 
     return list(all_works.values()), failed_topics
 

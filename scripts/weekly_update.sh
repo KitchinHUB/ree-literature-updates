@@ -36,6 +36,20 @@ log() {
     echo "[$(date '+%Y-%m-%d %H:%M:%S')] $1" | tee -a "$LOG_FILE"
 }
 
+# With set -e a failing step ends the script silently, leaving the log to stop
+# mid-run. Record the failure and alert Slack so a missed week is noticed.
+on_error() {
+    local status=$?
+    log "FAILED (exit $status) at line $1: $BASH_COMMAND -- see logs/cron.log"
+    if [ -n "$SLACK_WEBHOOK_URL" ]; then
+        curl -s -o /dev/null -X POST -H 'Content-Type: application/json' \
+            --data "{\"text\": \":warning: Weekly REE literature update failed on $(date '+%Y-%m-%d') (exit $status). See logs/cron.log on the host.\"}" \
+            "$SLACK_WEBHOOK_URL" || true
+    fi
+    exit "$status"
+}
+trap 'on_error $LINENO' ERR
+
 log "Starting weekly literature update (last $DAYS days)"
 
 cd "$PROJECT_DIR"
