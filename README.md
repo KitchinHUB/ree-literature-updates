@@ -18,7 +18,7 @@ This will:
 ### Running the Script Directly
 
 ```bash
-cd /home/user/scratch/rare-earth-project
+cd ree-literature-updates   # the repository root
 
 # Last 7 days (default)
 python scripts/literature_monitor.py
@@ -34,7 +34,16 @@ python scripts/literature_monitor.py --slack
 
 # With Slack file upload
 python scripts/literature_monitor.py --slack-upload
+
+# Rebuild a past week's report
+python scripts/literature_monitor.py --to-date 2026-09-14 --days 7
+
+# Skip the LLM relevance pass (lists every candidate, unscreened)
+python scripts/literature_monitor.py --no-llm
 ```
+
+The script uses only the Python standard library. The relevance pass needs
+the `claude` CLI installed and logged in (see [Data Sources](#data-sources)).
 
 ## Slack Integration
 
@@ -78,41 +87,47 @@ python scripts/literature_monitor.py --slack-upload
 📚 Rare Earth Literature Update
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-47 new publications found from 2024-12-20 to 2024-12-27
+47 new publications found from 2026-09-07 to 2026-09-14
 
-🔬 Separation Technologies: 18
-🧪 Extractants & Materials: 12
-♻️ Recycling & Urban Mining: 8
-🌱 Environmental & Sustainability: 5
-📊 Supply Chain & Policy: 4
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-📌 Recent Highlights:
-
-• Novel ionic liquid system for Nd/Pr separation
-  Zhang, Y. et al. (Separation and Purification Technology)
-  View paper
-
-• Electrochemical recovery of rare earths from NdFeB magnets
-  Smith, J. et al. (Hydrometallurgy)
-  View paper
+🔬 Separation Technologies: 10
+🧪 Extractants & Materials: 11
+♻️ Recycling & Urban Mining: 5
+🌱 Environmental & Sustainability: 10
+📊 Supply Chain & Policy: 10
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-📎 Full report: reports/2024-12-27_literature_update.md
+📌 Highlights:
+
+• Development of a Ca-K-Li-RE-Cl (RE = La, Ce, Pr, Nd) rare-earth molten salt database
+  Nicholas Ury, Brandon Bocklund et al. (Calphad)
+  View paper
+
+• Detoxification of Ion-Adsorption Rare Earth Elements Low-Level Radioactive Residues
+  Qingqing Chang, Fanxin Xie et al. (ACS Sustainable Resource Management)
+  View paper
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📎 Full report: reports/2026-09-14_literature_update.md
 ```
 
 ## Directory Structure
 
 ```
-rare-earth-project/
+ree-literature-updates/
 ├── README.md
+├── .env                          # API keys and Slack settings (not committed)
 ├── scripts/
-│   ├── literature_monitor.py  # Search, screening, and report generation
-│   └── weekly_update.sh       # Cron wrapper: run, commit, push, notify
-├── reports/                 # Generated reports
+│   ├── literature_monitor.py     # Search, screening, and report generation
+│   ├── weekly_update.sh          # Cron wrapper: run, commit, push, notify
+│   └── claude_weekly_update.sh   # Runs /literature-update non-interactively
+├── reports/                      # Generated reports
 │   └── YYYY-MM-DD_literature_update.md
+├── logs/                         # Cron and update logs
+├── ree-book/                     # The REE separation book (MyST)
+├── .github/workflows/
+│   └── deploy-book.yml           # Builds and deploys the book
 └── .claude/
     └── commands/
         └── literature-update.md  # Slash command definition
@@ -182,17 +197,27 @@ Each report includes:
 
 ## Setting Up Recurring Monitoring
 
-### Option 1: Manual Weekly Check
-Run `/literature-update` every Monday
+### Cron Job (Current Setup)
 
-### Option 2: Cron Job (Automated)
+`scripts/weekly_update.sh` runs the monitor, commits and pushes the new
+report, then posts the Slack summary from the same run's saved results
+(`.cache/last_run.json`). If any step fails, it posts a warning to Slack
+instead. It reads `OPENALEX_API_KEY` and the Slack variables from `.env`
+in the repository root, and runs Python from the path set in `PYTHON` at
+the top of the script; edit that for your machine.
+
 ```bash
-# Add to crontab for weekly Monday 8am execution
-0 8 * * 1 cd /home/user/scratch/rare-earth-project && python scripts/literature_monitor.py
+# crontab -e: every Monday at 4am
+0 4 * * 1 /path/to/ree-literature-updates/scripts/weekly_update.sh >> /path/to/ree-literature-updates/logs/cron.log 2>&1
 ```
 
-### Option 3: GitHub Actions
-Create a workflow that runs weekly and commits reports to the repository.
+Cron runs with a minimal `PATH`, so the script adds `~/.local/bin` (the
+default `claude` install location). Do not set `ANTHROPIC_API_KEY` in the
+cron environment unless it is valid: it overrides the CLI's login.
+
+### Manual Check With Claude Code
+Run `/literature-update` in Claude Code. It runs the monitor, then adds web
+news and an executive summary.
 
 ## Customization
 
@@ -207,25 +232,46 @@ Settings live at the top of `scripts/literature_monitor.py`:
 ```markdown
 # Rare Earth Separation Literature Update
 
-**Report Period:** 2024-12-20 to 2024-12-27
+**Report Period:** 2026-09-07 to 2026-09-14
 **Total Publications Found:** 47
 
 ## Separation Technologies
 
-### 1. Novel membrane process for selective Nd/Pr separation
-**Authors:** Zhang, Y., Wang, L., et al.
-**Published:** 2024-12-23 | **Journal:** Separation and Purification Technology
-**DOI:** https://doi.org/10.1016/j.seppur.2024.xxxxx
+### 2. Detoxification of Ion-Adsorption Rare Earth Elements Low-Level Radioactive Residues via Mild Alkali–Carbonate: Uranium Extraction and Multi-Metal Recovery
 
-**Abstract:** A novel supported liquid membrane system utilizing...
+**Authors:** Qingqing Chang, Fanxin Xie, Siyan Mao, Lingsheng Ke, Hailin Zhang
+
+**Published:** 2026-09-12 | **Journal:** ACS Sustainable Resource Management | **Citations:** 0 | **Access:** 🔒
+
+**DOI:** [https://doi.org/10.1021/acssusresmgt.6c00145](https://doi.org/10.1021/acssusresmgt.6c00145)
+
+**Relevance (3/3):** Develops mild alkali-carbonate leaching process to detoxify REE-bearing radioactive residues while enriching REE grade and extracting uranium.
+
+**Abstract:** Abstract Impeded by the harsh high-temperature/pressure conditions...
+
+**Keywords:** Leaching (pedology), Uranium, Detoxification (alternative medicine), Residue (chemistry), Extraction (chemistry)
 
 ---
+
+...
+
+## Screened Out
+
+<details>
+<summary>268 candidates scored below 2</summary>
+
+- (1) [Polymorph Engineering of the Layered Rare-Earth Magnet GdAlGe](https://doi.org/10.48550/arxiv.2609.08601): Materials physics study of a layered Gd-based magnet for spintronics, not about REE extraction or separation.
+...
+</details>
 ```
+
+See `reports/2026-09-14_literature_update.md` for a full report.
 
 ## Tips for Best Results
 
 1. **Run weekly** to catch new publications before they're buried
-2. **Review abstracts** to quickly assess relevance
+2. **Skim the Screened Out list** now and then; if good papers land there,
+   adjust `LLM_INSTRUCTIONS`
 3. **Use BibTeX entries** for easy import into reference managers
 4. **Cross-reference** with your existing literature review
 5. **Track open access** publications for full-text access
